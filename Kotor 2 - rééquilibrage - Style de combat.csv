@@ -4,7 +4,8 @@ dégât mêlée 50% FOR main gauche
 attaque -6/-10
 +2/0 si main gauche balanced","dégât mêlée 100% FOR main droite
 dégât mêlée 50% FOR main gauche
-attaque -6/-10","Atq -6/-6
+attaque -6/-10
++2/0 si main gauche balanced","Atq -6/-6
 +1 CA
 Prérequis : Une arme en main droite et une autre en main gauche équipées","Atq -4/-4
 +2 CA
@@ -31,7 +32,7 @@ crit chance +2
 Prérequis arme à une main ou mains nues","Atq 6
 crit chance +3
 Prérequis arme à une main ou mains nues"
-Arme Double & Repeating Blaster,"dégât mêlée 150% FOR main droite
+Arme haute cadence,"dégât mêlée 150% FOR main droite
 dégât mêlée 50% FOR main gauche
 attaque -6/-10","dégât mêlée 150% FOR main droite
 dégât mêlée 50% FOR main gauche

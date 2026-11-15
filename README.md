@@ -12,7 +12,7 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
 ### A. Les CSV = la couche utilisateur (parcimonie obligatoire)
 * Les fichiers `Kotor 2 - rééquilibrage - *.csv` sont **ce qui est le plus proche de l'utilisateur** : ils constituent la référence de ses décisions de game design (armes, styles de combat, spécialisations, dons de caractéristique, pouvoirs...).
 * **N'y toucher qu'avec parcimonie, et uniquement en rapport direct avec l'utilisateur** (report d'une décision qu'il vient de valider ou de prendre dans la conversation). Ne jamais y reporter un changement de sa propre initiative.
-* Le fichier **`Kotor 2 - rééquilibrage - WIP Feats.csv`** est un fichier d'**agrégation** : il regroupe, pour les dons vanilla et moddés, les informations des autres CSV. Il est généré par [`tools/build_feats_csv.py`](tools/build_feats_csv.py) — pour le modifier, éditer le générateur puis le ré-exécuter, jamais le CSV à la main.
+* Le fichier **`Kotor 2 - rééquilibrage - WIP Feats.csv`** est un fichier d'**agrégation** : il regroupe, pour les dons vanilla et moddés, les informations des autres CSV. **Depuis le 15/11/2026, il est maintenu à la main** (structure restructurée par l'utilisateur : colonne Source supprimée, colonne « Détail technique » ajoutée) — [`tools/build_feats_csv.py`](tools/build_feats_csv.py) n'est plus la source de vérité (bootstrap historique).
 
 ### B. Les fichiers des agents : `decisions_finales.md` & `decisions_annexes.md`
 * Ces deux fichiers appartiennent aux agents :
@@ -23,7 +23,7 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
 ### C. Ordre de propagation d'une décision
 1. Décision prise dans la conversation ou inscrite dans un CSV (référence utilisateur) ;
 2. Report dans `decisions_finales.md` (synthèse) et/ou `decisions_annexes.md` (détails techniques) ;
-3. Si elle concerne les dons : mise à jour de `tools/build_feats_csv.py`, puis régénération du CSV d'agrégation.
+3. Si elle concerne les dons : édition directe du CSV d'agrégation `WIP Feats.csv` (maintenu à la main depuis le 15/11/2026).
 
 ---
 

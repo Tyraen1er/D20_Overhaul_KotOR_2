@@ -14,7 +14,7 @@ Prérequis arme traditionnelle équipée"
 "Spécialisation Arme à Résonance
 (Vibrolame, Vibro-épée, Vibrolame double)","Atq et Dmg +2
 Prérequis arme à résonance équipée","Mutilation (-4 Atq et Dmg) en cas de critique (Reflexe annule).
-DD = 5 + niveau + modif.
+DD = 5 + Niv. attaquant + mod. de la carac. directrice de l'arme
 durée : 1 tour
 Proc possible par coup
 Prérequis arme à résonance équipée","Mutilation empilable : -2 supplémentaires par proc, plafond -8 Atq/Dmg, durée rafraîchie 1 tour
@@ -27,16 +27,16 @@ Prérequis arme laser équipée","Bris de volonté aggravé : Impossible de rés
 Prérequis arme laser équipée"
 "Spécialisation de Tir d'Assaut
 (Pistolet blaster, Carabine blaster, Blaster à répétition)","Atq et Dmg +2
-Prérequis arme laser équipée","Aucun malus en mêlée
+Prérequis arme d'assaut équipée","Aucun malus en mêlée
 Prérequis arme d'assaut équipée","+1 Atq par round main directrice
 Prérequis arme d'assaut équipée"
-"Spécialisation de Tir Lourd
+"Spécialisation de Tir Pénétrant
 (Blaster lourd, Fusil blaster, Arbalète wookie, Blaster lourd à répétition)","Atq et Dmg +2
-Prérequis arme lourde équipée","Repousse l'adversaire de 3m (Vigueur Annule)
-DD = 10 + Niv. attaquant + mod de la carac. directrice de l'arme
-Proc par coup mais 1 fois par round max.
-Prérequis arme lourde équipée","+5 Dmg
-Prérequis arme lourde équipée"
+Prérequis arme pénétrante équipée","Repousse l'adversaire de 3m (Vigueur Annule)
+DD = 5 + Niv. attaquant + mod de la carac. directrice de l'arme
+Sauvegarde par coup qui touche ; l'effet ne s'applique qu'une fois par round, même après plusieurs échecs
+Prérequis arme pénétrante équipée","+5 Dmg
+Prérequis arme pénétrante équipée"
 "Spécialisation de Tir Tactique
 (Pistolet à ions, Fusil à ions, Pistolet sonique, Fusil sonique)","Atq et Dmg +2
 Prérequis arme tactique équipée","Stun 1 tour (Vigueur annule). Proc = plage de menace de l'arme / 20 par coup ; DD = 10 + Niv. attaquant + mod. de la carac. directrice de l'arme

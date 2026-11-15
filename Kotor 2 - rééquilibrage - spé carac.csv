@@ -23,14 +23,11 @@ Grenade x2 damage"
 "Maîtrise Matukai I à III","+1 SAG
 Ajoute SAG à l'atq
 Interdit l'obtention des dons : Raffinement Gamoréen, Techniques Echanis, Voie du dragon Kraith, Chasseur de prime Gand, Héritage de Nomi","+2 SAG
-Remplace la DEX par la SAG pour la CA","+3 SAG
-En cas de critique à mains nues : Vague de Force gratuite — renversement 1 tour, aucun Dmg
-DD Réflexes = 10 + Niv + SAG
-Proc = plage de menace / 20 par coup ; max 1 vague/round ; pas de re-proc sur cible au sol
-Ne stun jamais seul : l'étourdissement vient uniquement de Spé Arme d'Impact L2 (même jet de proc)
-Aucun effet sur les immunisés au renversement"
+Ajoute 1/2 SAG à tous les jets de sauvegarde. Réussir un jet de sauvegarde inflige SAG de Dmg direct à l'attaquant","+3 SAG
+Remplace la DEX par la SAG pour la CA.
+Tout ennemi vous ratant subit SAG de Dmg direct par attaque échouée."
 "Héritage de Nomi I à III","+1 CHA
 Les Compagnons ont 100 % de l'XP
 Interdit l'obtention des dons : Raffinement Gamoréen, Techniques Echanis, Voie du dragon Kraith, Chasseur de prime Gand, Maîtrise Matukai","+2 CHA
 Groupe : jets de sauvegarde + mod. CHA","+3 CHA
-CA + mod. CHA (parallèle à Précognition guerrière : SAG -> CA)"
+Bonus de Défense égal au modificateur de Charisme (cumulable avec Précognition guerrière)"
