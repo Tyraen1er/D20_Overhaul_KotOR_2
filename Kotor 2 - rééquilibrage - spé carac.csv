@@ -18,16 +18,16 @@ All Saves +CON"
 "Chasseur de prime Gand I à III","+1 INT
 Atq distance +DEX/INT (si INT > DEX)
 Interdit l'obtention des dons : Raffinement Gamoréen, Techniques Echanis, Voie du dragon Kraith, Maîtrise Matukai, Héritage de Nomi","+2 INT
-Dégâts distance +DEX/INT (si INT > DEX)","+3 INT
+Dmg distance +DEX/INT (si INT > DEX)","+3 INT
 Grenade x2 damage"
 "Maîtrise Matukai I à III","+1 SAG
 Ajoute SAG à l'atq
 Interdit l'obtention des dons : Raffinement Gamoréen, Techniques Echanis, Voie du dragon Kraith, Chasseur de prime Gand, Héritage de Nomi","+2 SAG
 Remplace la DEX par la SAG pour la CA","+3 SAG
-En cas de critique à mains nues : Vague de Force gratuite — renversement 1 tour, aucun dégât
+En cas de critique à mains nues : Vague de Force gratuite — renversement 1 tour, aucun Dmg
 DD Réflexes = 10 + Niv + SAG
 Proc = plage de menace / 20 par coup ; max 1 vague/round ; pas de re-proc sur cible au sol
-Ne stun jamais seul : l'étourdissement vient uniquement de Spé Arme Contondante L2 (même jet de proc)
+Ne stun jamais seul : l'étourdissement vient uniquement de Spé Arme d'Impact L2 (même jet de proc)
 Aucun effet sur les immunisés au renversement"
 "Héritage de Nomi I à III","+1 CHA
 Les Compagnons ont 100 % de l'XP

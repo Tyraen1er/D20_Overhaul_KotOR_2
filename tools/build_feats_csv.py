@@ -287,7 +287,7 @@ CHG = {
  "159": "Idem : élargir l'accès",
  "160": "Idem : élargir l'accès",
  "161": "Idem : élargir l'accès",
- "32": "Doublon potentiel avec les Spé d'arme custom par famille (Contondante/Primitive/Vibrante/Laser) — arbitrage à faire",
+ "32": "Doublon potentiel avec les Spé d'arme custom par famille (Armes d'impact/Traditionnelle/À résonance/Laser) — arbitrage à faire",
  "33": "Doublon potentiel avec l'arbre Fusil custom — arbitrage à faire",
  "36": "Doublon potentiel avec la Spé Arme Laser custom — arbitrage à faire",
  "37": "Doublon potentiel avec les Spé d'arme custom — arbitrage à faire",
@@ -296,7 +296,7 @@ CHG = {
  "50": "Doublon potentiel avec la Spé Arme Laser custom — arbitrage à faire",
  "51": "Doublon potentiel avec les Spé d'arme custom — arbitrage à faire",
  "190": "Non couvert par l'overhaul — à arbitrer (redondant avec l'Ambidextrie refondue ?)",
- "212": "Socle conservé ; l'identité mains nues passe par la posture Duel (1M) + Spé Arme Contondante + Matukai L3 — l'arbre dédié (Arts Martiaux / Arts Mutaki) est SUPPRIMÉ",
+ "212": "Socle conservé ; l'identité mains nues passe par la posture Duel (1M) + Spé Arme d'Impact + Matukai L3 — l'arbre dédié (Arts Martiaux / Arts Mutaki) est SUPPRIMÉ",
  "193": "À RETIRER du jeu — les remaps d'attaque passent par les Spé carac (Echanis DEX mêlée / Gand INT distance / Matukai SAG)",
  "194": "À RETIRER du jeu — remplacé par les remaps d'attaque des Spé carac (Echanis DEX mêlée / Matukai SAG)",
  "209": "TODO : remplacer le don de la Servante (Brianna) — éviter le cumul avec l'arbre joueur « Techniques Echanis »",
@@ -336,15 +336,15 @@ CUSTOM += [
 S2 = "SPÉCIALISATIONS D'ARME PAR FAMILLE — Spécialisation d'arme.csv"
 NOTE_PROC = "Règle commune : proc = plage de menace de l'arme / 20 par coup (évolue avec la posture Duel) ; DD = 10 + Niv. attaquant + mod. de la carac. directrice de l'arme"
 CUSTOM += [
- (S2, "Spécialisation Arme Contondante I", "MOD_SPEC_BLUNT_1", "Port d'armes mêlée + arme contondante équipée", "+2 Atq et +2 Dégâts (armes contondantes : matraque, bâton, pique de Force)", ""),
- (S2, "Spécialisation Arme Contondante II", "MOD_SPEC_BLUNT_2", "Rang I + arme contondante équipée", "Étourdit 1 tour (Vigueur annule). " + NOTE_PROC, "Stun droïde pour les cibles mécaniques"),
- (S2, "Spécialisation Arme Contondante III", "MOD_SPEC_BLUNT_3", "Rang II", "Stun 2 tours ; cibles immunisées : -2 Atq 1 tour à la place", "Retenu 13/11 (remplace « durée+1 / crit+1 »)"),
- (S2, "Spécialisation Arme Primitive I", "MOD_SPEC_PRIM_1", "Port d'armes mêlée + arme primitive équipée", "+2 Atq et +2 Dégâts (épées, hache, lames doubles primitives)", ""),
- (S2, "Spécialisation Arme Primitive II", "MOD_SPEC_PRIM_2", "Rang I + arme primitive équipée", "Bris d'armure : -4 CA, 1 tour (Vigueur annule). " + NOTE_PROC, ""),
- (S2, "Spécialisation Arme Primitive III", "MOD_SPEC_PRIM_3", "Rang II", "Bris d'armure aggravé : -6 CA, 1 tour", "Retenu 13/11 (variante RD -3 écartée : aucun EffectDamageReductionDecrease en NWScript)"),
- (S2, "Spécialisation Arme Vibrante I", "MOD_SPEC_VIBRO_1", "Port d'armes mêlée + arme vibrante équipée", "+2 Atq et +2 Dégâts (vibrolames, vibro-épées, vibrolames doubles)", ""),
- (S2, "Spécialisation Arme Vibrante II", "MOD_SPEC_VIBRO_2", "Rang I + arme vibrante équipée", "Mutilation : -4 Atq et -4 Dégâts, 1 tour (Vigueur annule). " + NOTE_PROC, ""),
- (S2, "Spécialisation Arme Vibrante III", "MOD_SPEC_VIBRO_3", "Rang II", "Mutilation empilable : -2 supplémentaires par proc, plafond -8, durée rafraîchie 1 tour", "Retenu 13/11 (variante simple possible : -6 fixe)"),
+ (S2, "Spécialisation Arme d'Impact I", "MOD_SPEC_BLUNT_1", "Port d'armes mêlée + arme d'impact équipée", "+2 Atq et +2 Dégâts (armes d'impact : matraque, bâton, pique de Force)", ""),
+ (S2, "Spécialisation Arme d'Impact II", "MOD_SPEC_BLUNT_2", "Rang I + arme d'impact équipée", "Étourdit 1 tour (Vigueur annule). " + NOTE_PROC, "Stun droïde pour les cibles mécaniques"),
+ (S2, "Spécialisation Arme d'Impact III", "MOD_SPEC_BLUNT_3", "Rang II", "Stun 2 tours ; cibles immunisées : -2 Atq 1 tour à la place", "Retenu 13/11 (remplace « durée+1 / crit+1 »)"),
+ (S2, "Spécialisation Arme Traditionnelle I", "MOD_SPEC_PRIM_1", "Port d'armes mêlée + arme traditionnelle équipée", "+2 Atq et +2 Dégâts (épées, hache, lames doubles traditionnelles)", ""),
+ (S2, "Spécialisation Arme Traditionnelle II", "MOD_SPEC_PRIM_2", "Rang I + arme traditionnelle équipée", "Bris d'armure : -4 CA, 1 tour (Vigueur annule). " + NOTE_PROC, ""),
+ (S2, "Spécialisation Arme Traditionnelle III", "MOD_SPEC_PRIM_3", "Rang II", "Bris d'armure aggravé : -6 CA, 1 tour", "Retenu 13/11 (variante RD -3 écartée : aucun EffectDamageReductionDecrease en NWScript)"),
+ (S2, "Spécialisation Arme à Résonance I", "MOD_SPEC_VIBRO_1", "Port d'armes mêlée + arme à résonance équipée", "+2 Atq et +2 Dégâts (vibrolames, vibro-épées, vibrolames doubles)", ""),
+ (S2, "Spécialisation Arme à Résonance II", "MOD_SPEC_VIBRO_2", "Rang I + arme à résonance équipée", "Mutilation : -4 Atq et -4 Dégâts, 1 tour (Vigueur annule). " + NOTE_PROC, ""),
+ (S2, "Spécialisation Arme à Résonance III", "MOD_SPEC_VIBRO_3", "Rang II", "Mutilation empilable : -2 supplémentaires par proc, plafond -8, durée rafraîchie 1 tour", "Retenu 13/11 (variante simple possible : -6 fixe)"),
  (S2, "Spécialisation Arme Laser I", "MOD_SPEC_LASER_1", "Port d'armes sabres + sabre équipé", "+2 Atq et +2 Dégâts (sabres laser)", ""),
  (S2, "Spécialisation Arme Laser II", "MOD_SPEC_LASER_2", "Rang I + sabre équipé", "Bris de volonté : -4 aux sauvegardes, 1 tour (Volonté annule). " + NOTE_PROC, ""),
  (S2, "Spécialisation Arme Laser III", "MOD_SPEC_LASER_3", "Rang II", "Bris de volonté aggravé : -6 sauvegardes et draine 1d6 PF par proc", "Retenu 13/11 — identité anti-caster (EffectDamageForcePoints validé)"),
@@ -369,7 +369,7 @@ CUSTOM += [
  (S3, "Spécialisation Gatling III", "MOD_GATLING_SPEC_3", "Rang II", "Recul -1 ; dégâts à définir", "« Saturation Supérieure » §6 — effets finaux à définir"),
 ]
 # Section MAINS NUES supprimée (13/11) : l'identité mains nues passe par la posture Duel (1M),
-# la Spécialisation Arme Contondante et le rang III de Maîtrise Matukai (cf. Style de combat.csv / spé carac.csv).
+# la Spécialisation Arme d'Impact et le rang III de Maîtrise Matukai (cf. Style de combat.csv / spé carac.csv).
 S5 = "ARMURES — 3 arbres (§8.B, acté)"
 CUSTOM += [
  (S5, "Seconde Peau I (légère)", "MOD_ARMOR_LIGHT_1", "Port d'armure légère + armure légère équipée", "+1 CA", "Identité : le Fugitif Blindé (Mira, Atton)"),
@@ -408,7 +408,7 @@ CUSTOM += [
  (S7, "Chasseur de prime Gand III", "MOD_GAND_3", "Rang II", "+3 INT ; dégâts des grenades ×2", "Implémentation via le chantier Pouvoirs (scripts des sorts d'objet)"),
  (S7, "Maîtrise Matukai I", "MOD_MATUKAI_SAG_1", "À définir", "+1 SAG ; ajoute le mod. de SAG à l'attaque (s'ajoute à la carac directrice) ; interdit les 5 autres arbres", "Exclusivité : colonne exclusion de feat.2da (à tester) + garde-fou script"),
  (S7, "Maîtrise Matukai II", "MOD_MATUKAI_SAG_2", "Rang I", "+2 SAG ; la SAG remplace la DEX pour la CA", "Cumulable avec Précognition guerrière (types de bonus distincts)"),
- (S7, "Maîtrise Matukai III", "MOD_MATUKAI_SAG_3", "Rang II", "+3 SAG ; sur critique à mains nues : Vague de Force gratuite — renversement 1 tour, aucun dégât (DD Réflexes 10 + Niv + SAG ; proc = plage/20/coup ; max 1/round ; pas de re-proc au sol ; stun uniquement via Spé Contondante L2 — même jet de proc ; rien si immunisé)", "Mains nues = arme 1M : cf. Duel dans Style de combat.csv"),
+ (S7, "Maîtrise Matukai III", "MOD_MATUKAI_SAG_3", "Rang II", "+3 SAG ; sur critique à mains nues : Vague de Force gratuite — renversement 1 tour, aucun dégât (DD Réflexes 10 + Niv + SAG ; proc = plage/20/coup ; max 1/round ; pas de re-proc au sol ; stun uniquement via Spé Arme d'Impact L2 — même jet de proc ; rien si immunisé)", "Mains nues = arme 1M : cf. Duel dans Style de combat.csv"),
  (S7, "Héritage de Nomi I", "MOD_NOMI_1", "À définir", "+1 CHA ; les compagnons gagnent 100 % de l'XP ; interdit les 5 autres arbres", ""),
  (S7, "Héritage de Nomi II", "MOD_NOMI_2", "Rang I", "+2 CHA ; groupe : jets de sauvegarde + mod. CHA", ""),
  (S7, "Héritage de Nomi III", "MOD_NOMI_3", "Rang II", "+3 CHA ; CA + mod. CHA", "Cumulable avec Précognition guerrière (types de bonus distincts)"),

@@ -14,6 +14,7 @@ Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les
 | Dons transversaux | 7 dons de Métamagie + *Esquive Totale* (anti-AoE) | §7 |
 | Armures | RD native (Interm. 2 / Lourde 4), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique* révisé | §8 |
 | Contrat mathématique | DPR nets et durées de boss cibles par phase de jeu | §9 |
+| Furtivité | Embuscade : première attaque depuis la furtivité = critique confirmé (simulation scriptée) | §10 |
 
 ---
 
@@ -158,11 +159,25 @@ Avec établi plafonné (`+2/+5/+10`) et RD des boss (`3/7/12`) :
 
 *Ambidextrie : l'Attaque Sournoise sur cible contrôlée double le DPR net. Détail complet (attaques/round, dégâts bruts, précision, DPR sbires) : [`decisions_annexes.md`](decisions_annexes.md#3-contrat-mathématique-détaillé).*
 
+### 10. Furtivité : l'attaque en embuscade est un critique confirmé
+
+**Décision actée (13/11/2026)** — résout l'ancien TODO « Amélioration de la Furtivité » :
+
+- La **première attaque** portée depuis la furtivité est un **critique confirmé** : le multiplicateur de critique de l'arme s'applique automatiquement, sans jet de confirmation.
+- L'attaque brise la furtivité → les attaques suivantes du même round sont normales.
+- Les dés d'**Attaque sournoise** s'appliquent par-dessus (cible prise au dépourvue — comportement vanilla conservé).
+- Les effets sur critique maison (Spé d'arme rang II-III, vague Matukai III) se déclenchent normalement sur cette attaque.
+
+**Notes d'implémentation (faisabilité vérifiée le 13/11/2026)** : le pipeline de résolution d'attaque (menace → confirmation → multiplicateur) est codé en dur et n'expose **ni** fonction « forcer un critique » **ni** indicateur « ce coup était un critique ». La règle s'implémente donc en **simulation scriptée** :
+1. Heartbeat (`k_ai_master`) : tant que `IsStealthed(oCreature)` → poser un drapeau « embuscade armée » (`SetLocalNumber`, index 12-28) ;
+2. Hook **1006** (OnDamage, côté victime) : si `GetLastDamager()` porte le drapeau → infliger `GetTotalDamageDealt() × (multiplicateur de critique de l'arme − 1)` dégâts supplémentaires via `EffectDamage`, déclencher les procs sur critique maison, consommer le drapeau ;
+3. Limites assumées : (a) si l'attaque était déjà un critique naturel (~5-15 % des cas), la simulation sur-multiplie — non détectable ; (b) la part simulée ne déclenche pas les propriétés moteur liées aux critiques (ex. *Critiques massifs*) ; (c) les dégâts scriptés contournent la RD de la cible — pré-soustraire la RD dans la formule si les tests le justifient.
+
 ---
 
 ## Partie 2 : TODOs & Chantiers Ouverts
 
-1. **[TODO Équipement & Loot] :** Revoir les statistiques des équipements et leur distribution dans les tables de loot et chez les marchands (notamment pour soutenir la viabilité des armes Primitives, Contondantes et Vibrantes sur toute la progression Niv. 1 à 30).
+1. **[TODO Équipement & Loot] :** Revoir les statistiques des équipements et leur distribution dans les tables de loot et chez les marchands (notamment pour soutenir la viabilité des armes Traditionnelles, d'Impact et à Résonance sur toute la progression Niv. 1 à 30).
 2. **[TODO Craft & Établi] :** Revoir les équipements craftables à l'établi (`itemcreate.2da` / `.uti`) pour garantir que chaque famille d'arme dispose de recettes viables et cohérentes avec les plafonds d'amélioration fixés.
-3. **[TODO Améliorations par Famille d'Armes] :** Revoir les types d'améliorations accessibles par catégorie d'arme à l'établi (ex. Lame + Garde uniquement pour les armes Primitives sans cellule énergétique ; Lame + Garde + Cellule pour les Vibrantes ; cristaux pour les Lasers).
-4. **[TODO Amélioration de la Furtivité] :** Une attaque en étant furtif est forcément un critique ?
+3. **[TODO Améliorations par Famille d'Armes] :** Revoir les types d'améliorations accessibles par catégorie d'arme à l'établi (ex. Lame + Garde uniquement pour les armes Traditionnelles sans cellule énergétique ; Lame + Garde + Cellule pour les armes à Résonance ; cristaux pour les Lasers).
+4. ~~**[TODO Amélioration de la Furtivité]** : Une attaque en étant furtif est forcément un critique ?~~ **ACTÉ (13/11/2026) → §10.**

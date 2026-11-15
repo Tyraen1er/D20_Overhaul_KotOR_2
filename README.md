@@ -5,6 +5,28 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
 
 ---
 
+## 0. Hiérarchie des Fichiers & Politique de Modification
+
+> **Règle de conduite pour tous les agents** — qui possède quoi, et dans quel ordre toucher les fichiers.
+
+### A. Les CSV = la couche utilisateur (parcimonie obligatoire)
+* Les fichiers `Kotor 2 - rééquilibrage - *.csv` sont **ce qui est le plus proche de l'utilisateur** : ils constituent la référence de ses décisions de game design (armes, styles de combat, spécialisations, dons de caractéristique, pouvoirs...).
+* **N'y toucher qu'avec parcimonie, et uniquement en rapport direct avec l'utilisateur** (report d'une décision qu'il vient de valider ou de prendre dans la conversation). Ne jamais y reporter un changement de sa propre initiative.
+* Le fichier **`Kotor 2 - rééquilibrage - WIP Feats.csv`** est un fichier d'**agrégation** : il regroupe, pour les dons vanilla et moddés, les informations des autres CSV. Il est généré par [`tools/build_feats_csv.py`](tools/build_feats_csv.py) — pour le modifier, éditer le générateur puis le ré-exécuter, jamais le CSV à la main.
+
+### B. Les fichiers des agents : `decisions_finales.md` & `decisions_annexes.md`
+* Ces deux fichiers appartiennent aux agents :
+  * **`decisions_finales.md`** = le contrat de game design (synthèse condensée des décisions actées) ;
+  * **`decisions_annexes.md`** = justifications, recherche, diagnostics et **détails techniques**.
+* On peut y consigner librement les détails d'implémentation et la faisabilité vérifiée, ainsi que toute décision actée **dans les CSV ou à travers la discussion avec l'utilisateur**.
+
+### C. Ordre de propagation d'une décision
+1. Décision prise dans la conversation ou inscrite dans un CSV (référence utilisateur) ;
+2. Report dans `decisions_finales.md` (synthèse) et/ou `decisions_annexes.md` (détails techniques) ;
+3. Si elle concerne les dons : mise à jour de `tools/build_feats_csv.py`, puis régénération du CSV d'agrégation.
+
+---
+
 ## 1. Environnement & Chemins Clés
 
 * **Installation du jeu (Steam) :** `C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II`
