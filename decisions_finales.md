@@ -15,7 +15,7 @@ Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les
 | Spécialisations de caractéristique | 6 arbres exclusifs (FOR, DEX, CON, INT, SAG, CHA) — un par caractéristique, ordre canonique | §5 |
 | Architecture de dons | Posture (3) + famille (3) + spé carac (3) + défenses ; budgets 21/16/13 (socle à réarbitrer) | §6 |
 | Dons transversaux | 7 dons de Métamagie + *Esquive Totale* (anti-AoE) | §7 |
-| Armures | RD native (Interm. 2 / Lourde 4), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique* révisé | §8 |
+| Armures & Défenses | RD native (Interm. 2 / Lourde 4), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique III* supprimé | §8 |
 | Contrat mathématique | DPR nets et durées de boss cibles par phase de jeu (colonnes à remapper sur la nouvelle architecture) | §9 |
 | Furtivité | Embuscade : première attaque depuis la furtivité = critique confirmé (simulation scriptée) | §10 |
 | Conventions & principes | DD (`10+Niv+carac directrice` ; base 10 si proc lié à la plage, 5 sinon), procs `plage/20`, ordre canonique des caracs, « les synergies se trouvent, ne se décrivent pas » | §11 |
@@ -100,7 +100,7 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
 
 ### 6. Architecture de Dons & Budgets
 
-**Nouvelle structure (post-15/11)** : chaque personnage combine **une posture** (3 rangs) + **une famille de Spé d'arme par catégorie d'armes utilisées** (3 rangs chacune) + **un arbre de Spé carac** (3 rangs, exclusif) + **défenses** (Robustesse 3, Condition physique 3 ou arbre d'armure 3) + **Métamagie** (7, profil caster) + dons actifs vanilla conservés (Déluge, Attaque en puissance, Coup critique, Décharge, Tir rapide, Sniper).
+**Nouvelle structure (post-15/11)** : chaque personnage combine **une posture** (3 rangs) + **une famille de Spé d'arme par catégorie d'armes utilisées** (3 rangs chacune) + **un arbre de Spé carac** (3 rangs, exclusif) + **défenses** (Robustesse 3, Condition physique 2 ou arbre d'armure 3) + **Métamagie** (7, profil caster) + dons actifs vanilla conservés (Déluge, Attaque en puissance, Coup critique, Décharge, Tir rapide, Sniper).
 
 **Budgets Niv. 30 (maintenus)** : 21 (Gardien) / 16 (Sentinelle) / 13 (Consulaire).
 **[À réarbitrer]** : la composition du socle 15 dons (ancienne structure 3+3+3+6) doit être revécue avec les nouveaux axes (la Spé carac s'ajoute sans remplacer) — les dons supprimés (Duel/TWF/Finesse/Focus/Spec vanilla) libèrent par ailleurs des emplacements.
@@ -119,11 +119,11 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
 - Réussite du jet de sauvegarde face à une AoE → **0 dégât** ; échec → **dégâts ÷ 2**.
 - Sélectionnable uniquement à partir d'une classe de prestige (Niv. 15+) ; auto Éclaireur niv. 6 (Mira) ; octroyé à tous les Jedi/Sith ennemis 20+ (via `k_inc_force.nss`).
 
-### 8. Armures : RD Native, 3 Arbres de Dons, Dégradé de Pouvoirs, *Condition physique* révisé
+### 8. Armures : RD Native, 3 Arbres de Dons, Dégradé de Pouvoirs, *Condition physique III* supprimé
 
 Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`](decisions_annexes.md#1-armures--recherche-et-justifications) :
 
-**A. RD native des armures (passive, sans don)** — CA et plafonds DEX vanilla inchangés *sauf Techniques Echanis III (§5)* :
+**A. RD native des armures (passive, sans don)** — CA et plafonds DEX vanilla inchangés *sauf Techniques Echanis III (§5)*. **Rappel d'arbitrage (16/11) : RD native lourde = 4 — à appliquer lors du chantier stats d'armures (édition baseitems/UTI).**
 
 | Type | CA base | Plafond DEX | **RD Physique & Énergie native** |
 | :--- | :---: | :---: | :---: |
@@ -131,11 +131,21 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 | Intermédiaire | 6–7 | +2/+3 | **RD 2** |
 | Lourde | 8–9 | +0/+1 | **RD 4** |
 
-**B. Trois arbres de dons** (3 dons chacun) : *Seconde Peau* (légère : CA + Réflexes), *Blindage de Combat* (interm. : RD + Vigueur), *Juggernaut* (lourde : RD + immunisés) — détail §8.B d'origine ; *les cellules du WIP Feats.csv sont en TODO en attente de revalidation*. RD cumulée max : **RD 13**.
+**B. Trois arbres de dons** (3 dons chacun, arbitrage final du 17/11 — source : *spé Armure.csv*) :
+
+| Arbre | Rang I | Rang II | Rang III | Identité |
+| :--- | :--- | :--- | :--- | :--- |
+| **Juggernaut** (lourde) | RD 3, immunité tous dégâts 10 % | RD 4, immunité 20 % | RD 5, immunité 30 % | Encaisser les dégâts |
+| **Blindage de Combat** (intermédiaire) | RD 3, +1 CA, durée des boucliers +100 %, furtivité sans ceinture sous armure moyenne | RD 4, +2 CA, efficacité boucliers ×2, course furtive sous armure moyenne | RD 5, +3 CA, efficacité boucliers ×3 | Spé ingénieur et craft — boucliers & furtivité |
+| **Seconde Peau** (légère) | Esquive +10 %, +1 CA | Esquive +20 %, +2 CA | Esquive +30 %, +3 CA | Esquiver toutes les attaques |
+
+**Slots natifs (acté 16/11)** : les armures intermédiaires portent **2 surcouches + 2 sous-couches** nativement (édition par lot des UTI) — l'arbre de don moyen est articulé sur l'amplification des boucliers et la furtivité.
+
+**RD cumulée max** (Juggernaut III + native lourde 4 + Robustesse II 2) : **RD 11 + 30 % d'immunité** (≈ −53 % sur un coup de 23, ≈ −40 % sur un coup de 68). Cap d'immunité tous dégâts à définir avec les pièces typées (proposition : 40-50 % global).
 
 **C. Dégradé des pouvoirs sous armure** (`forbiditemmask`) : robe = tous ; légère = vanilla + Vaillance I + Résistance ; interm. = vanilla + Résistance ; lourde = vanilla strict.
 
-**D. *Condition physique* révisé** : rang III `+3` toutes sauvegardes **+2 contre les pouvoirs de Force**.
+**D. *Condition physique III* (`MASTER_CONDITIONING`)** : **supprimé** (décision 17/11). Seuls les rangs I (+1) et II (+2) sont conservés en vanilla ; le rang III est supprimé.
 
 ### 9. Contrat Mathématique (DPR nets & durées de boss cibles)
 
@@ -172,7 +182,7 @@ Avec établi plafonné (`+2/+5/+10`) et RD des boss (`3/7/12`) :
 1. **[TODO Tests moteur]** (tracés dans la colonne *Détail technique* du WIP Feats.csv) : **T-exclusion** (colonne `exclusion` de feat.2da, mutualité des 6 arbres carac), **T1** (arme double en main gauche — Colosse), **T2** (`reqfeat0` sur baseitem d'arme), **T3** (détection des ratés — événement 1005), **plafond CA** (cumul Nomi/Matukai + Précognition), **grenades** (scripts moddables — Gand III).
 2. **[TODO Budgets §6]** : recomposer le socle de dons avec les nouveaux axes (posture/famille/carac) suite aux suppressions vanilla.
 3. **[TODO Contrat §9]** : remapper les colonnes DPR sur l'architecture postures × familles dans `k2balance.py`.
-4. **[TODO Arbres d'armures §8.B]** : cellules en TODO dans le WIP Feats.csv — revalider les 9 dons.
+4. **[TODO Arbres d'armures §8.B]** : ~~cellules en TODO dans le WIP Feats.csv — revalider les 9 dons.~~ **ACTÉ (17/11) : 9 dons d'armure intégrés dans WIP Feats.csv.**
 5. **[TODO Servante]** : seul son don « CA via la Sagesse » reste concerné par un éventuel remplacement (les `ECHANI_STRIKE` sont confirmés inchangés).
 6. **[TODO Équipement & Loot]** : revoir statistiques et distribution (viabilité des familles d'armes Niv. 1 à 30) — référence : *WIP armes.csv* et *WIP Améliorations.csv*.
 7. **[TODO Craft & Établi]** : recettes viables par famille, cohérentes avec les plafonds §3 ; types d'améliorations par famille (TODO historique : Lame+Garde primitives / +Cellule vibrantes / cristaux lasers).

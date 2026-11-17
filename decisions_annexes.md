@@ -22,7 +22,7 @@
 
 ### B. Diagnostic de *Condition physique* (consensus communauté)
 
-*Filler feat* typique en vanilla ; sa valeur remonte dans l'overhaul (DD des pouvoirs de boss renforcés, *Esquive Totale* qui rend chaque point de Réflexes rentable) → rang III révisé (§8.D).
+*Filler feat* typique en vanilla ; face aux DD renforcés des boss, le rang III (*Condition physique III* / `MASTER_CONDITIONING`) a d'abord été envisagé avec un bonus contre la Force, puis finalement **supprimé** (décision 17/11, §8.D) pour resserrer l'arbre sur les rangs I et II (+1/+2 sauvegardes).
 
 ### C. Notes d'implémentation (§8)
 
@@ -65,7 +65,7 @@ Détail des hypothèses (attaques/round, dégâts bruts et nets après RD, préc
 
 ## 4. Références de données
 
-- **CSV de référence (couche utilisateur)** : *Style de combat*, *Spécialisation d'arme*, *spé carac*, *WIP Feats* (agrégateur), *WIP armes*, *WIP Améliorations* (226 pièces), *WIP Spé Pouvoirs*, *WIP spé Armure*.
+- **CSV de référence (couche utilisateur)** : *Style de combat*, *Spécialisation d'arme*, *spé carac*, *WIP Feats* (agrégateur), *WIP armes*, *WIP Améliorations* (226 pièces), *WIP Spé Pouvoirs*, *spé Armure*.
 - **Données extraites** : `datas_kotor/` (`equipement_*.md`, `loot_*.md`, `dons_kotor2.md`, `pouvoirs_kotor2.md`, `ennemis_*.md`, `modeles_mathematiques_equilibrage.md`, `armes_kotor2.md`) ; cache `itemdb/` (items.json, loot.json) via `tools/extract_items.py`.
 - **JdR Star Wars d20** : `datas_jdr_SW/`. **Idées brutes** : `idée mods.md`.
 
@@ -154,3 +154,4 @@ L'arbre *Arts Martiaux / Arts Mutaki / Arts Martiaux Supérieurs* (spécificatio
 | 15/11 | utilisateur | Résonance III : empilable, plafond -8, durée rafraîchie ; Résonance II : DD 5 |
 | 15/11 | utilisateur | Matukai L2/L3 : punitions sur sauvegarde réussie et attaque ratée (moine-ronce) |
 | 15/11 | utilisateur | Tests moteur tracés en TODO (colonne Détail technique du WIP Feats.csv) |
+| 17/11 | utilisateur | MASTER_CONDITIONING (Condition physique III) : supprimé au lieu d'être modifié (§8.D) |

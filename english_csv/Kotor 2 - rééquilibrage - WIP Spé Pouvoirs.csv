@@ -1,0 +1,73 @@
+Force Power (WIP),Max Armor Allowed,"Description
+max level",Changes,Acquisition
+Force Aura (LS),Restricted by armor,"Defense +6 and Saving Throws +6
+Duration: 60s",,Power selection
+Force Barrier (LS),Light armor,"Damage Reduction: 15/Physical
+Duration: 60s",,Power selection
+Force Valor (LS),Light armor,"Attributes and Saving Throws +5, Immunity: Poison
+Party - Duration: 20s",,Power selection
+Heal (LS),Medium armor,"Heals 15 Vitality + WIS + CHA + (2 × Level)
+Party 15m radius, cures Poison and Stun",,Power selection
+Revitalize (LS),Medium armor,Revives all fallen party members with 10% of their max Vitality,"10% lvl 1 - closest party member
+20% lvl 2 - two closest party members
+30% lvl 3 - entire party",Power selection
+Stun / Stasis / Stasis Field (LS),Restricted by armor,"Paralyzes all enemies for 12s (10m radius)
+Fortitude negates (slows on save), DC 5 + Level + WIS + CHA",,Power selection
+Stun Droid (LS),Medium armor,"1d6 damage/Level and disables for 12s (6m radius)
+Fortitude half damage and negates disable, DC 5 + Level + WIS + CHA",,Power selection
+Battle Precognition (LS),Restricted by armor,"Adds Wisdom modifier to Defense
+Passive, stacks with DEX (unarmored / robes only)",,Quest
+Force Enlightenment (LS),Medium armor,"Simultaneously activates highest owned tiers of Speed, Armor, and Valor
+Instant cast (Cost: 30 FP)",1d4 / level,Quest / Max Light Side
+Inspire Followers (LS),Heavy armor,"+1 to +6 Attack, Damage, and Will for entire party (ranks I-VI)
+Duration: 45s (non-droids)",,Prestige Jedi Weapon Master
+Affect Mind (neutral),Heavy armor,"Unlocks advanced Force persuasion options in dialogue
+Subdues most humanoid minds (non-droids)",,Dialogue
+Battle Meditation (neutral),Medium armor,"Party: Attack, Damage, and Will +CHA, accelerated Vitality regeneration
+Enemies (15m): -4 Attack, -4 Damage, -4 Will (Will negates), Duration: 20s",,Power selection
+Burst of Speed (neutral),Restricted by armor,"+2 free attacks/round, +4 Defense, Movement speed ×2
+Duration: 36s",,Power selection
+Energy Resistance (neutral),?,"Damage Resistance: 20 against Energy, Fire, Cold, Sonic, Electrical
+Immunity: Poison, entire party, Duration: 120s",,Power selection
+Force Body (neutral),?,"Force point cost reduced: 30% paid with FP and 30% paid with Vitality
+Duration: 30s",,Power selection
+Force Deflection (neutral),Heavy armor,Deflects and redirects blaster bolts without lightsaber equipped (unarmed),,Power selection
+Force Push (neutral),?,"Knocks back 5m, knocks down, stuns 12s, and deals 1.5 × Level damage
+15m radius, Reflex half damage and negates stun",,Power selection
+Force Resistance (neutral),?,"Force Resistance: enemy must roll 1d20 + enemy Level vs DC 15 + Level
+Duration: 60s",,Power selection
+Force Suppression (neutral),?,Dispels and cancels ALL active Force buffs on target,,Power selection
+Mind Trick (neutral),?,"Forces a humanoid enemy to fight for you for 30s
+Will negates, DC 5 + Level + WIS + CHA (non-droid/beast)",,Power selection (Affect Mind upgrade)
+Throw Lightsaber (neutral),Heavy armor,"Guaranteed homing attack (automatic hit) on up to 3 targets
+1d6 damage per 2 Levels",,Power selection
+Beast Trick (neutral),Heavy armor,"Forces a hostile beast to fight for you for 30s
+Will negates, DC 5 + Level + WIS + CHA (beasts only)",,Quest / Dialogue (Kreia on Dxun)
+Breath Control (neutral),?,"Complete immunity to Poisons, toxic gas, and suffocation
+Duration: 240s",,Quest / Dialogue (Kreia before Jekk'Jekk Tarr on Nar Shaddaa)
+Force Camouflage (neutral),?,"Stealth without stealth field generator + bonus +8 Stealth
+Permanent toggle (until deactivated)",,Prestige Sith Assassin / Jedi Watchman
+Force Sight (neutral),Heavy armor,"See through doors/walls, reveals alignment and detects stealth
+Permanent active",,Quest / Dialogue (Visas Marr with high influence)
+Precognition (neutral),Heavy armor,"Text warning to the Jedi in case of great danger or imminent ambush
+Passive contextual trigger",,Quest / Dialogue (Main story with Kreia)
+Drain Force (DS),?,"Drains 30 Force Points from all enemies (10m radius) to recharge pool
+Will half, DC 5 + Level + WIS + CHA",,Power selection
+Drain Life (DS),?,"Drains 1d4 Vitality/Level from all enemies (10m radius) and heals caster
+Fortitude half damage, DC 5 + Level + WIS + CHA (non-droids)",,Power selection
+Fear (DS),?,"Terrifies / paralyzes all enemies for 18s and -4 Defense (10m radius)
+Will negates, DC 5 + Level + WIS + CHA (non-droids)",,Power selection
+Force Scream (DS),Light armor,"7d6 (7-42) sonic damage + penalty -6 to all attributes (10m cone, 30s)
+Will half and negates penalty, DC 10 + Level + WIS + CHA",1d4 / level,Power selection
+Shock (DS),Restricted by armor,"1d6 Vitality damage AND drains 1d6 Force Points per Level (10m radius)
+Will half, DC 5 + Level + WIS + CHA",,Power selection
+Slow (DS),?,"Slows target and drains 12 points in all attributes (-1 pt/s)
+Unstoppable (no saving throw, DC 100, non-droids)",,Power selection
+Wound (DS),Restricted by armor,"Stuns 6s and deals 50% of target max Vitality
+Fortitude reduces to (Level) damage and negates stun (non-droids)",,Power selection
+Crush Opposition (DS),?,"-1 to -6 Attack and Will saves for all enemies (ranks I-VI, 15m radius)
+Will negates, DC 5 + Level + WIS + CHA, Duration: 45s",,Prestige Sith Lord
+Force Crush (DS),?,"Crushes and pins target 6s, deals 1d10 pure damage per character Level
+Fortitude half damage (pin unstoppable), DC 5 + Level + WIS + CHA",,Quest / Max Dark Side
+Fury (DS),?,"+6 STR, +2 attacks/round, +3 Vitality/Level, +3 Fort/Will, Immunity: Stasis/Paralysis, bonus damage on kill
+Penalty -6 Defense, Duration: 60s (does not stack with Speed)",,Prestige Sith Marauder

@@ -9,3 +9,11 @@ Equipement :
 - [TODO] Revoir les statistiques des équipements et leur distribution en loot et chez les marchands (soutenir la viabilité de toutes les familles d'armes : Laser, Arme à résonance, Arme traditionnelle, Arme d'impact du Niv. 1 à 30).
 - [TODO] Revoir les équipements craftables à l'établi (recettes, équilibrage des composants et cohérence avec les plafonds fixés).
 - [TODO] Modifier les aspects améliorables selon la famille d'arme (ex: pas de cellule énergétique pour les armes Traditionnelles, 3 slots complets pour les armes à Résonance).
+
+Armure : 
+
+- légère = meilleure CA avec DEX (upgrade overlay)
+
+- intermédiaire = armure technologique permettant invisibilité sans ceinture ? Concept de défense spécialisée : Meilleure RD sur un seul type par armure. (upgrade overlay and underlay)
+ 
+- lourde = RD et meilleure CA sans dépendre de stats upgrade (upgrade underlay)

@@ -20,7 +20,7 @@
 19,IMPROVED_CRITICAL_STRIKE,Coup critique II,Actif — mêlée,Niv. 4 ; CRITICAL_STRIKE,"Plage ×3 (reste -5 CA, stun)",,
 20,IMPROVED_SNIPER_SHOT,Tir de sniper II,Actif — distance,Niv. 4 ; SNIPER_SHOT,"Plage ×3 (reste -5 CA, stun)",,
 21,IMPROVED_CONDITIONING,Condition physique II,Défense & survie,Niv. 4 ; CONDITIONING,+2 à toutes les sauvegardes,,
-22,MASTER_CONDITIONING,Condition physique III,Défense & survie,Niv. 8 ; CONDITIONING ; IMPROVED_CONDITIONING,+3 à toutes les sauvegardes,,
+22,MASTER_CONDITIONING,Condition physique III,Défense & survie,Niv. 8 ; CONDITIONING ; IMPROVED_CONDITIONING,+3 à toutes les sauvegardes,supprimé,
 24,MASTER_JEDI_DEFENSE,Défense de Jedi III,Défense & survie,Niv. 8 ; JEDI_DEFENSE ; ADVANCED_JEDI_DEFENSE,Bonus de renvoi +6 (auto Jedi),,
 25,XXXX_MASTER_GUARD_STANCE,Posture de garde maître,Caché / interne,,Caché (XXXX) — non utilisé,,
 26,MULTI_SHOT,Tir rapide III,Actif — distance,Niv. 8 ; RAPID_SHOT ; IMPROVED_RAPID_SHOT,"+1 tir ; -1 Atq, -1 CA",,
@@ -152,12 +152,12 @@
 153,INCREASE_COMBAT_DAMAGE_I,Dégâts de combat accrus I,Caché / interne,,Interne PNJ — bonus de dégâts,,
 154,INCREASE_COMBAT_DAMAGE_II,Dégâts de combat accrus II,Caché / interne,INCREASE_COMBAT_DAMAGE_I,Interne PNJ — bonus de dégâts,,
 155,INCREASE_COMBAT_DAMAGE_III,Dégâts de combat accrus III,Caché / interne,INCREASE_COMBAT_DAMAGE_I ; INCREASE_COMBAT_DAMAGE_II,Interne PNJ — bonus de dégâts,,
-156,SUPER_WEAPON_FOCUS_LIGHTSABER_I,Arme de prédilection supérieure : sabres I,Maniement d'arme,WEAPON_SPEC_LIGHTSABER,+1 Atq sabres (prestige martiale),,
-157,SUPER_WEAPON_FOCUS_LIGHTSABER_II,Arme de prédilection supérieure : sabres II,Maniement d'arme,SUPER_WEAPON_FOCUS_LIGHTSABER_I,+2 Atq sabres,,
-158,SUPER_WEAPON_FOCUS_LIGHTSABER_III,Arme de prédilection supérieure : sabres III,Maniement d'arme,SUPER_WEAPON_FOCUS_LIGHTSABER_I ; SUPER_WEAPON_FOCUS_LIGHTSABER_II,+3 Atq sabres,,
-159,SUPER_WEAPON_FOCUS_2_WEAPON_I,Combat à 2 armes supérieur I,Style & posture,TWO_WEAPON_MASTERY,+1 Atq & Dégâts main droite (classes martiales de prestige),,
-160,SUPER_WEAPON_FOCUS_2_WEAPON_II,Combat à 2 armes supérieur II,Style & posture,SUPER_WEAPON_FOCUS_2_WEAPON_I,+2 Atq & Dégâts main droite,,
-161,SUPER_WEAPON_FOCUS_2_WEAPON_III,Combat à 2 armes supérieur III,Style & posture,SUPER_WEAPON_FOCUS_2_WEAPON_I ; SUPER_WEAPON_FOCUS_2_WEAPON_II,+3 Atq & Dégâts main droite,,
+156,SUPER_WEAPON_FOCUS_LIGHTSABER_I,Arme de prédilection supérieure : sabres I,Maniement d'arme,WEAPON_SPEC_LIGHTSABER,+1 Atq sabres (prestige martiale),supprimé,
+157,SUPER_WEAPON_FOCUS_LIGHTSABER_II,Arme de prédilection supérieure : sabres II,Maniement d'arme,SUPER_WEAPON_FOCUS_LIGHTSABER_I,+2 Atq sabres,supprimé,
+158,SUPER_WEAPON_FOCUS_LIGHTSABER_III,Arme de prédilection supérieure : sabres III,Maniement d'arme,SUPER_WEAPON_FOCUS_LIGHTSABER_I ; SUPER_WEAPON_FOCUS_LIGHTSABER_II,+3 Atq sabres,supprimé,
+159,SUPER_WEAPON_FOCUS_2_WEAPON_I,Combat à 2 armes supérieur I,Style & posture,TWO_WEAPON_MASTERY,+1 Atq & Dégâts main droite (classes martiales de prestige),supprimé,
+160,SUPER_WEAPON_FOCUS_2_WEAPON_II,Combat à 2 armes supérieur II,Style & posture,SUPER_WEAPON_FOCUS_2_WEAPON_I,+2 Atq & Dégâts main droite,supprimé,
+161,SUPER_WEAPON_FOCUS_2_WEAPON_III,Combat à 2 armes supérieur III,Style & posture,SUPER_WEAPON_FOCUS_2_WEAPON_I ; SUPER_WEAPON_FOCUS_2_WEAPON_II,+3 Atq & Dégâts main droite,supprimé,
 162,XXXX_INSPIRE_FOLLOWERS_I,Inspirer les fidèles I,Caché — pouvoir de prestige,,"Caché — Maître d'armes (buff de groupe, cf. Spé Pouvoirs.csv)",,
 163,XXXX_INSPIRE_FOLLOWERS_II,Inspirer les fidèles II,Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_I,"Caché — Maître d'armes (buff de groupe, cf. Spé Pouvoirs.csv)",,
 164,XXXX_INSPIRE_FOLLOWERS_III,Inspirer les fidèles III,Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_I ; XXXX_INSPIRE_FOLLOWERS_II,"Caché — Maître d'armes (buff de groupe, cf. Spé Pouvoirs.csv)",,
@@ -282,22 +282,26 @@ nouveau (246+),MOD_SPEC_ASSASSIN_1,Spécialisation de Tir Assassin I,SPÉCIALISA
 nouveau (246+),MOD_SPEC_ASSASSIN_2,Spécialisation de Tir Assassin II,SPÉCIALISATIONS D'ARME PAR FAMILLE,Rang I + arme assassine équipée,CUSTOM — absent du jeu vanilla,Les attaques sournoises gagnent +2d6 de Dégâts. Donne la capacité d'en faire si nécessaire,
 nouveau (246+),MOD_SPEC_ASSASSIN_3,Spécialisation de Tir Assassin III,SPÉCIALISATIONS D'ARME PAR FAMILLE,Rang II + arme assassine équipée,CUSTOM — absent du jeu vanilla,Multiplicateur de critique +1,
 ,,"══ ARMURES — 3 arbres (§8.B, acté) ══",,,,,
-nouveau (246+),MOD_ARMOR_LIGHT_1,Seconde Peau I (légère),ARMURES,Port d'armure légère + armure légère équipée,CUSTOM — absent du jeu vanilla,TODO,
-nouveau (246+),MOD_ARMOR_LIGHT_2,Seconde Peau II,ARMURES,Rang I + armure légère équipée,CUSTOM — absent du jeu vanilla,TODO,
-nouveau (246+),MOD_ARMOR_LIGHT_3,Seconde Peau III,ARMURES,Rang II + armure légère équipée,CUSTOM — absent du jeu vanilla,TODO,
-nouveau (246+),MOD_ARMOR_MED_1,Blindage de Combat I (intermédiaire),ARMURES,Port d'armure interm. + armure interm. équipée,CUSTOM — absent du jeu vanilla,TODO,
-nouveau (246+),MOD_ARMOR_MED_2,Blindage de Combat II,ARMURES,Rang I + armure interm.,CUSTOM — absent du jeu vanilla,TODO,
-nouveau (246+),MOD_ARMOR_MED_3,Blindage de Combat III,ARMURES,Rang II + armure interm.,CUSTOM — absent du jeu vanilla,TODO,
-nouveau (246+),MOD_ARMOR_HEAVY_1,Juggernaut I (lourde),ARMURES,Port d'armure lourde + armure lourde équipée,CUSTOM — absent du jeu vanilla,TODO,
-nouveau (246+),MOD_ARMOR_HEAVY_2,Juggernaut II,ARMURES,Rang I + armure lourde,CUSTOM — absent du jeu vanilla,TODO,
-nouveau (246+),MOD_ARMOR_HEAVY_3,Juggernaut III,ARMURES,Rang II + armure lourde,CUSTOM — absent du jeu vanilla,TODO,
+nouveau (246+),MOD_ARMOR_LIGHT_1,Seconde Peau I (légère),ARMURES,Port d'armure légère + armure légère équipée,CUSTOM — absent du jeu vanilla,"Esquive +10 % ; +1 CA",
+nouveau (246+),MOD_ARMOR_LIGHT_2,Seconde Peau II,ARMURES,Rang I + armure légère équipée,CUSTOM — absent du jeu vanilla,"Esquive +20 % ; +2 CA",
+nouveau (246+),MOD_ARMOR_LIGHT_3,Seconde Peau III,ARMURES,Rang II + armure légère équipée,CUSTOM — absent du jeu vanilla,"Esquive +30 % ; +3 CA",
+nouveau (246+),MOD_ARMOR_MED_1,Blindage de Combat I (intermédiaire),ARMURES,Port d'armure interm. + armure interm. équipée,CUSTOM — absent du jeu vanilla,"RD 3/- ; +1 CA ; durée des boucliers +100 % ; permet de devenir furtif même sans ceinture de camouflage sous armure intermédiaire",
+nouveau (246+),MOD_ARMOR_MED_2,Blindage de Combat II,ARMURES,Rang I + armure interm.,CUSTOM — absent du jeu vanilla,"RD 4/- ; +2 CA ; efficacité des boucliers doublée ; accès à Course furtive sous armure intermédiaire",
+nouveau (246+),MOD_ARMOR_MED_3,Blindage de Combat III,ARMURES,Rang II + armure interm.,CUSTOM — absent du jeu vanilla,"RD 5/- ; +3 CA ; efficacité des boucliers triplée",
+nouveau (246+),MOD_ARMOR_HEAVY_1,Juggernaut I (lourde),ARMURES,Port d'armure lourde + armure lourde équipée,CUSTOM — absent du jeu vanilla,"RD 3/- ; immunité à tous les dégâts +10 %",
+nouveau (246+),MOD_ARMOR_HEAVY_2,Juggernaut II,ARMURES,Rang I + armure lourde,CUSTOM — absent du jeu vanilla,"RD 4/- ; immunité à tous les dégâts +20 %",
+nouveau (246+),MOD_ARMOR_HEAVY_3,Juggernaut III,ARMURES,Rang II + armure lourde,CUSTOM — absent du jeu vanilla,"RD 5/- ; immunité à tous les dégâts +30 %",
 ,,══ MÉTAMAGIE — budget Consulaire) ══,,,,,
 nouveau (246+),MOD_META_EMPOWER_1,Pouvoir Amplifié I,MÉTAMAGIE,Classe Jedi/Sith,,Dégâts des pouvoirs offensifs +15 % ; coût +2 PF,
-nouveau (246+),MOD_META_EMPOWER_2,Pouvoir Amplifié II,MÉTAMAGIE,Rang I,,+30 % ; coût +4 PF,
-nouveau (246+),MOD_META_EMPOWER_3,Pouvoir Amplifié III,MÉTAMAGIE,Rang II,,+50 % ; coût +6 PF,
+nouveau (246+),MOD_META_EMPOWER_2,Pouvoir Amplifié II,MÉTAMAGIE,"Rang I
+Jedi Consulaire / Seigneur Sith / Maitre Jedi",,+30 % ; coût +4 PF,
+nouveau (246+),MOD_META_EMPOWER_3,Pouvoir Amplifié III,MÉTAMAGIE,"Rang II
+Seigneur Sith / Maitre Jedi",,+50 % ; coût +6 PF,
 nouveau (246+),MOD_META_PENETRATE_1,Pouvoir Pénétrant I,MÉTAMAGIE,Classe Jedi/Sith,,+2 au DD des pouvoirs offensifs et de contrôle,
-nouveau (246+),MOD_META_PENETRATE_2,Pouvoir Pénétrant II,MÉTAMAGIE,Rang I,,+4 au DD,
-nouveau (246+),MOD_META_PENETRATE_3,Pouvoir Pénétrant III,MÉTAMAGIE,Rang II,,+6 au DD,
+nouveau (246+),MOD_META_PENETRATE_2,Pouvoir Pénétrant II,MÉTAMAGIE,"Rang I
+Jedi Consulaire / Seigneur Sith / Maitre Jedi",,+4 au DD,
+nouveau (246+),MOD_META_PENETRATE_3,Pouvoir Pénétrant III,MÉTAMAGIE,"Rang II
+Seigneur Sith / Maitre Jedi",,+6 au DD,
 nouveau (246+),MOD_META_EXTEND,Pouvoir Prolongé,MÉTAMAGIE,Classe Jedi/Sith,,Durée de tous les buffs de Force ×2,
 ,,"══ SPÉCIALISATIONS CARACTÉRISTIQUE — spé carac.csv (ordre canonique FOR, DEX, CON, INT, SAG, CHA ; une par caractéristique, arbres exclusifs entre eux) ══",,,,,
 nouveau (246+),MOD_GAMORREAN_1,Raffinement Gamoréen I,SPÉCIALISATIONS CARACTÉRISTIQUE,À définir,,+1 FOR ; + ½ mod. FOR en rangs sur toutes les compétences ; interdit les 5 autres arbres de carac,"TODO test moteur : colonne exclusion de feat.2da — seul précédent vanilla DROID_TRICK/DROID_CONFUSION = 0x01 ; poser le même bit sur les 6 rangs I des arbres carac et vérifier le masquage à la sélection ; garde-fou script en repli (k_ai_master n'applique que la première origine prise)."
@@ -313,8 +317,8 @@ nouveau (246+),MOD_GAND_1,Chasseur de prime Gand I,SPÉCIALISATIONS CARACTÉRIST
 nouveau (246+),MOD_GAND_2,Chasseur de prime Gand II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I,,+2 INT ; dégâts distance : DEX/INT (si INT > DEX),
 nouveau (246+),MOD_GAND_3,Chasseur de prime Gand III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang II,,+3 INT ; dégâts des grenades ×2,"TODO chantier Pouvoirs : vérifier que les formules de grenades passent par des scripts moddables (sorts d'objet de spells.2da) pour appliquer les dégâts x2."
 nouveau (246+),MOD_MATUKAI_SAG_1,Maîtrise Matukai I,SPÉCIALISATIONS CARACTÉRISTIQUE,À définir,,+1 SAG ; ajoute le mod. de SAG à l'attaque (s'ajoute à la carac directrice) ; interdit les 5 autres arbres,"TODO test moteur : colonne exclusion de feat.2da (cf. Raffinement Gamoréen I) — même bit sur les 6 rangs I ; garde-fou script en repli."
-nouveau (246+),MOD_MATUKAI_SAG_2,Maîtrise Matukai II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I,,+2 SAG ; la SAG remplace la DEX pour la CA,"Limitation : punition sur sauvegarde hookable uniquement pour les sauvegardes scriptées (k_inc_force, grenades) ; les saves internes moteur (iprp_onhit, ex. sonique DD 14) n'offrent aucune prise."
-nouveau (246+),MOD_MATUKAI_SAG_3,Maîtrise Matukai III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang II,"","+3 SAG ; sur critique à mains nues : Vague de Force gratuite — renversement 1 tour, aucun dégât (DD Réflexes 10 + Niv + SAG ; proc = plage/20/coup ; max 1/round ; pas de re-proc au sol ; stun uniquement via Spé Arme d'Impact L2 — même jet de proc ; rien si immunisé)","TODO test moteur T3 : détection des ratés — l'événement 1005 (OnAttacked) doit se déclencher à CHAQUE attaque subie (sinon reconstruction impossible) ; punition = compte(1005) - compte(1006) par attaquant, régularisée au 1003 ; ordre des événements non garanti. TODO annexe : vérifier le plafond moteur éventuel des bonus de CA de même type (esquive +20 héritée de NWN) pour le SAG-CA."
+nouveau (246+),MOD_MATUKAI_SAG_2,Maîtrise Matukai II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I,,"+2 SAG ; sauvegardes + ½ mod. SAG ; réussir une sauvegarde inflige le mod. de SAG en dégâts directs à l'attaquant","Limitation : punition sur sauvegarde hookable uniquement pour les sauvegardes scriptées (k_inc_force, grenades) ; les saves internes moteur (iprp_onhit, ex. sonique DD 14) n'offrent aucune prise."
+nouveau (246+),MOD_MATUKAI_SAG_3,Maîtrise Matukai III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang II,,"+3 SAG ; la SAG remplace la DEX pour la CA ; tout ennemi vous ratant subit le mod. de SAG en dégâts directs par attaque échouée","TODO test moteur T3 : détection des ratés — l'événement 1005 (OnAttacked) doit se déclencher à CHAQUE attaque subie (sinon reconstruction impossible) ; punition = compte(1005) - compte(1006) par attaquant, régularisée au 1003 ; ordre des événements non garanti. TODO annexe : vérifier le plafond moteur éventuel des bonus de CA de même type (esquive +20 héritée de NWN) pour le SAG-CA."
 nouveau (246+),MOD_NOMI_1,Héritage de Nomi I,SPÉCIALISATIONS CARACTÉRISTIQUE,À définir,,+1 CHA ; les compagnons gagnent 100 % de l'XP ; interdit les 5 autres arbres,"TODO test moteur : colonne exclusion de feat.2da (cf. Raffinement Gamoréen I) — même bit sur les 6 rangs I ; garde-fou script en repli."
 nouveau (246+),MOD_NOMI_2,Héritage de Nomi II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I,,+2 CHA ; groupe : jets de sauvegarde + mod. CHA,
 nouveau (246+),MOD_NOMI_3,Héritage de Nomi III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang II,,+3 CHA ; CA + mod. CHA,"TODO test moteur : cumul avec Précognition guerrière — vérifier si le moteur plafonne les bonus de CA de même type (esquive +20 héritée de NWN) ; si oui, coder les deux sources avec des types de bonus distincts."

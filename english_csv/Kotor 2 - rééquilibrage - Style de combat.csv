@@ -1,0 +1,50 @@
+,Vanilla baseline,Modded baseline,Feats I,Feats II,Feats III
+"Two-Weapon Fighting
+(Stun Baton, Short Sword, Long Sword, Vibroblade, Short Lightsaber, Lightsaber, Hold Out Blaster, Blaster Pistol, Heavy Blaster, Ion Pistol, Sonic Pistol, Disruptor Pistol)","Melee damage 100% STR main hand
+Melee damage 50% STR off hand
+Attack -6/-10
++2/0 if balanced off hand","Melee damage 100% STR main hand
+Melee damage 50% STR off hand
+Attack -6/-10
++2/0 if balanced off hand","Atk -6/-6
++1 Defense
+Requirement: Main hand and off hand weapon equipped","Atk -4/-4
++2 Defense
+Requirement: Main hand and off hand weapon equipped","Atk -2/-2
++3 Defense
+Requirement: Main hand and off hand weapon equipped"
+"Two-Handed Weapon (2H)
+(Gamorrean Battleaxe, Vibrosword, Force Pike, Blaster Carbine, Blaster Rifle, Bowcaster, Disruptor Rifle, Ion Rifle, Sonic Rifle)",X,"Melee damage 200% STR
+Ranged damage 150% DEX
+Requirement: Two-handed weapon equipped, non-double","Atk +1
+Melee damage 250% STR
+Ranged damage 200% DEX
+Requirement: Two-handed weapon equipped, non-double","Atk +2
+Melee damage 275% STR
+Ranged damage 225% DEX
+Requirement: Two-handed weapon equipped, non-double","Atk +3
+Melee damage 300% STR
+Ranged damage 250% DEX
+Requirement: Two-handed weapon equipped, non-double"
+"Dueling
+(Unarmed, Stun Baton, Short Sword, Long Sword, Vibroblade, Short Lightsaber, Lightsaber, Hold Out Blaster, Blaster Pistol, Heavy Blaster, Ion Pistol, Sonic Pistol, Disruptor Pistol)",Melee damage 150% STR,"Melee damage 150% STR
+Requirement: One-handed weapon or unarmed","Atk +2
+Critical threat +1
+Requirement: One-handed weapon or unarmed","Atk +4
+Critical threat +2
+Requirement: One-handed weapon or unarmed","Atk +6
+Critical threat +3
+Requirement: One-handed weapon or unarmed"
+"Double-Bladed Weapon
+(Quarterstaff, Double-Bladed Sword, Double-Bladed Vibroblade, Wookiee Warblade, Double-Bladed Lightsaber, Repeating Blaster, Heavy Repeating Blaster)","Melee damage 150% STR main hand
+Melee damage 50% STR off hand
+Attack -6/-10","Melee damage 150% STR main hand
+Melee damage 50% STR off hand
+-5 Defense
+Requirement: Double-bladed weapon","Damage +1/+1
+-3 Defense
+Requirement: Double-bladed weapon","Damage +2/+2
+-2 Defense
+Requirement: Double-bladed weapon","Damage +3/+3
+-1 Defense
+Requirement: Double-bladed weapon"

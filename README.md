@@ -42,6 +42,15 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
     ```powershell
     .\.venv\Scripts\python.exe tools\k2mod.py extract <resname> <ext> -o <output_path>
     ```
+* **Checker de DPR (équilibrage) :** [`tools/dpr_check.py`](tools/dpr_check.py) + données [`tools/dpr_data.json`](tools/dpr_data.json)
+  * Simule le DPR d'un **build défini par ses dons** contre les boss étalons du contrat mathématique (§9), en **choisissant automatiquement la meilleure arme / mode de port (1M, 2M, 2 armes, double) / arme de main gauche / attaque active / améliorations** — la meilleure arme change donc selon les dons pris (spé de famille, style, crit…).
+    ```powershell
+    .\.venv\Scripts\python.exe tools\dpr_check.py --feats "Duel 3,Spécialisation Arme Laser 3,Coup critique 3"
+    .\.venv\Scripts\python.exe tools\dpr_check.py --feats "Ambidextrie 3,Tir d'Assaut 3,Tir rapide 3" --char sentinelle
+    ```
+  * Utile : `--armor sans|legere|moyenne|lourde` + `--buffs "Vitesse 3,Talent de Force 3"` — l'armure portée ne donne **aucun bonus simulé** mais **gâte les pouvoirs de Force** (Vitesse interdite sous armure, Talent ≤ légère, Illumination ≤ moyenne qui relance Vitesse+Talent au rang max, Fureur = fallback vanilla toute armure) ; `--upgrades cap|vanilla|none` (plafonds actés +2/+5/+10 ou meilleurs items actuels), `--speed` (override manuel), `--sneak-dice/--sneak-uptime`, `--enemy PV,CA,RD`, `--weapon <filtre>`, `--top N`, `--list-feats`, `--list-weapons`, `--md`.
+  * **Toutes les valeurs d'équilibrage vivent dans `tools/dpr_data.json`** (armes, dons, boss, plafonds) : c'est ce fichier qu'on édite pour tester des ajustements — jamais le moteur. Les pools d'améliorations se régénèrent depuis le CSV utilisateur via `--reingest-upgrades`.
+  * Conventions : toucher `(21-(CA-Atq))/20` borné 5-95 %, critique confirmé (≈ proba de toucher), RD du boss soustraite par coup après multiplication critique, Vitesse = +1/+2 attaques main directrice (auto par phase).
 * **Ressources de référence extraites (`_reference/`) :**
   * `_reference/scripts/` : Contient les 638 scripts `.nss` du jeu (`nwscript.nss`, `k_inc_force.nss`, `k_ai_master.nss`, `k_sp1_generic.nss`, etc.).
   * `_reference/2da/` : Contient les fichiers `.2da` et `.csv` de référence (`feat.2da`, `spells.2da`, `baseitems.2da`, `iprp_damagecost.2da`, `iprp_onhit.2da`).

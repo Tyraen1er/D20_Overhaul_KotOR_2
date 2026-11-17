@@ -1,0 +1,33 @@
+Feats name (WIP),Level 1,Level 2,Level 3
+Gamorrean Refinement I to III,"+1 STR
++ ½ STR mod as ranks in all skills.
+Prevents taking feats: Echani Techniques, Way of the Krayt Dragon, Gand Bounty Hunter, Matukai Mastery, Nomi's Legacy","+2 STR
+Allows wielding all weapons in 1H. Prevents using Double and 2H combat stance feats.","+3 STR
+Immunity: Mind-Affecting"
+Echani Techniques I to III,"+1 DEX
+Melee Atk +STR/DEX (if DEX > STR)
+Prevents taking feats: Gamorrean Refinement, Way of the Krayt Dragon, Gand Bounty Hunter, Matukai Mastery, Nomi's Legacy","+2 DEX
+Melee Dmg +STR/DEX (if DEX > STR)","+3 DEX
+Removes Max Dexterity Bonus limit on armors"
+Way of the Krayt Dragon I to III,"+1 CON
+Adds CON to DR/-
+Prevents taking feats: Gamorrean Refinement, Echani Techniques, Gand Bounty Hunter, Matukai Mastery, Nomi's Legacy","+2 CON
+Every 6s: converts 5% of max Vitality into 5% of max Force if FP < 50%
+Conversion can never drop Vitality below 75%","+3 CON
+All Saves +CON"
+Gand Bounty Hunter I to III,"+1 INT
+Ranged Atk +DEX/INT (if INT > DEX)
+Prevents taking feats: Gamorrean Refinement, Echani Techniques, Way of the Krayt Dragon, Matukai Mastery, Nomi's Legacy","+2 INT
+Ranged Dmg +DEX/INT (if INT > DEX)","+3 INT
+Grenade damage x2"
+Matukai Mastery I to III,"+1 WIS
+Adds WIS to Attack
+Prevents taking feats: Gamorrean Refinement, Echani Techniques, Way of the Krayt Dragon, Gand Bounty Hunter, Nomi's Legacy","+2 WIS
+Adds 1/2 WIS to all saving throws. Succeeding a saving throw inflicts WIS direct Damage to the attacker","+3 WIS
+Replaces DEX with WIS for Defense.
+Any enemy missing you takes WIS direct Damage per missed attack."
+Nomi's Legacy I to III,"+1 CHA
+Companions gain 100% XP
+Prevents taking feats: Gamorrean Refinement, Echani Techniques, Way of the Krayt Dragon, Gand Bounty Hunter, Matukai Mastery","+2 CHA
+Party: saving throws + CHA mod","+3 CHA
+Defense bonus equal to Charisma modifier (stacks with Battle Precognition)"
