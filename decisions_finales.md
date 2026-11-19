@@ -13,7 +13,7 @@ Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les
 | Établi & Boss | Plafonds `+2/+5/+10`, cloisonnement strict des rôles par slot (1 seul slot de dégâts bruts par catégorie), RD boss `3/7/12`, combats 5–10 rounds | §3 |
 | Postures & spécialisations d'armes | 4 postures (Duel, Ambidextrie, Arme Lourde, Arme haute cadence) × 8 familles (4 mêlée + 4 tir) ; dons vanilla Duel/TWF/Finesse/Focus/Spec **supprimés** | §4 |
 | Spécialisations de caractéristique | 6 arbres exclusifs (FOR, DEX, CON, INT, SAG, CHA) — un par caractéristique, ordre canonique | §5 |
-| Architecture de dons | Posture (3) + famille (3) + spé carac (3) + défenses ; budgets 21/16/13 (socle à réarbitrer) | §6 |
+| Architecture de dons | Posture (3) + famille (3) + spé carac (3) + défenses ; budgets Niv. 30 : **22 / 18 / 15** dons (pouvoirs **12 / 16 / 24**), gating par classe/prestige sur Rangs II–III | §6 |
 | Dons transversaux | 7 dons de Métamagie + *Esquive Totale* (anti-AoE) | §7 |
 | Armures & Défenses | RD native (Interm. 2 / Lourde 4), upgrades combinées exclusives aux intermédiaires (`UpgradeLevel`), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique III* supprimé | §8 |
 | Contrat mathématique | DPR nets et durées de boss cibles par phase de jeu (colonnes à remapper sur la nouvelle architecture) | §9 |
@@ -26,13 +26,13 @@ Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les
 
 ### 1. Progression des Classes (`spellgain.2da` & `featgain.2da`)
 
-Symétrie inverse stricte entre Combattants et Mages :
+Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le 19/11 : Consulaire ramené de 31 à 24 pouvoirs pour éliminer les fillers de fin de jeu, et identités protégées par les prérequis de classe/prestige) :
 
 | Famille de Classes | Gain de Pouvoirs | Total Pouvoirs (Niv. 30) | Gain de Dons | Total Dons (Niv. 30) | Identité |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Gardien / Maître d'Armes / Maraudeur Sith** | `1/3` niveaux | ~12 | `2/3` niveaux + 1 don Niv. 1 | **21** | Maître Martial |
-| **Sentinelle / Veilleur / Assassin Sith** | `1/2` niveaux | ~16 | `1/2` niveaux + 1 don Niv. 1 | **16** | Hybride Tactique |
-| **Consulaire / Maître Jedi / Seigneur Sith** | `1/1` niveau | ~31 | `1/2,5` niveaux + 1 don Niv. 1 | **13** | Archimage |
+| **Gardien / Maître d'Armes / Maraudeur Sith** | `1/3` niveaux (+2 Niv. 1) | **12** | `~2/3` niveaux + bonus | **22** | Maître Martial |
+| **Sentinelle / Veilleur / Assassin Sith** | `1/2` niveaux | **16** | `~3/5` niveaux | **18** | Hybride Tactique |
+| **Consulaire / Maître Jedi / Seigneur Sith** | `4/5` niveaux | **24** | `1/2` niveaux | **15** | Archimage |
 
 ### 2. Philosophie des Pouvoirs de la Force
 
@@ -110,8 +110,18 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
 
 **Nouvelle structure (post-15/11)** : chaque personnage combine **une posture** (3 rangs) + **une famille de Spé d'arme par catégorie d'armes utilisées** (3 rangs chacune) + **un arbre de Spé carac** (3 rangs, exclusif) + **défenses** (Robustesse 3, Condition physique 2 ou arbre d'armure 3) + **Métamagie** (7, profil caster) + dons actifs vanilla conservés (Déluge, Attaque en puissance, Coup critique, Décharge, Tir rapide, Sniper).
 
-**Budgets Niv. 30 (maintenus)** : 21 (Gardien) / 16 (Sentinelle) / 13 (Consulaire).
-**[À réarbitrer]** : la composition du socle 15 dons (ancienne structure 3+3+3+6) doit être revécue avec les nouveaux axes (la Spé carac s'ajoute sans remplacer) — les dons supprimés (Duel/TWF/Finesse/Focus/Spec vanilla) libèrent par ailleurs des emplacements.
+**Budgets Niv. 30 (actés le 19/11)** : **22** (Gardien) / **18** (Sentinelle) / **15** (Consulaire), pour **12 / 16 / 24** pouvoirs.
+- Les arbres restent compacts en **3 rangs marquants** (pas de découpage massif en « demi-dons ») ; seul *Blindage de Combat* est candidat à séparer son volet Furtivité en armure.
+- **Gating par classe / classe de prestige** (acté le 19/11 — étend le modèle *Métamagie* aux grands arbres) :
+  - **Métamagie** : R1 tous Jedi/Sith · R2 **Consulaire / Maître Jedi / Seigneur Sith** · R3 **Maître Jedi / Seigneur Sith**.
+  - **Spécialisations d'arme (8 familles)** : R1 tous · R2 **Gardien / Sentinelle** + leurs prestiges · R3 **Maître d'Armes / Maraudeur Sith**.
+  - **Postures** : R1 & R2 tous · R3 *Duel* = tous, *Ambidextrie / Arme Lourde / Haute cadence* = **tous sauf Mages**.
+  - **Armures** : R1 tous (si port) · **Juggernaut** R2 Gardien/prestiges martiaux, R3 **Maître d'Armes / Maraudeur Sith** · **Armure Tactique** R2 Sentinelle/prestiges hybrides, R3 **Veilleur / Assassin Sith** · **Esquive Ballistique** R2 Gardien/Sentinelle + prestiges, R3 **Maître d'Armes / Maraudeur / Veilleur / Assassin**.
+  - **Spécialisations de Caractéristique (6 arbres)** : **ouvertes à toutes les classes**, paliers par niveau (**Niv. 1+ / Niv. 8+ / Niv. 15+**).
+  - **Compagnons (acté le 19/11 — gating par classe + 2 exceptions level-up)** :
+    - Classes **non-Jedi** (`SOL`, `SCT`, `SCD`, `TEC`, `DRC`, `DRX`) : accès aux Rangs III martiaux/armures pertinents dès le **Niveau 15+** (`minattackbonus = 15` dans `feat.2da`, exact grâce à `CLS_ATK_1` `BAB 1.0`) — `SOL` (Spé d'arme III, Juggernaut III, Esquive Ballistique III), `SCT/SCD` (Spé d'arme III, Esquive Ballistique III, Armure Tactique III), `TEC` (Armure Tactique III, Spé d'arme III), `DRC` (Spé d'arme distance III), `DRX` (Spé d'arme distance II). Les compagnons convertis en Jedi suivent les règles normales de leur classe Jedi.
+    - **Exception Kreia (Niv. 15+)** : considérée comme **Maître Jedi** pour les dons sélectionnables en level-up (accès à toute la **Métamagie**, dont Rangs III).
+    - **Exception Visas (Niv. 15+)** : considérée comme **Assassin Sith** pour les dons sélectionnables en level-up (accès aux dons sélectionnables d'Assassin Sith : *Armure Tactique III*, *Esquive Ballistique III*, *Esquive Totale*).
 
 ### 7. Dons Transversaux : Métamagie & Esquive Totale
 
@@ -146,8 +156,8 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 | Arbre | Rang I | Rang II | Rang III | Identité |
 | :--- | :--- | :--- | :--- | :--- |
 | **Juggernaut** (lourde) | RD 3/-, immunité tous dégâts 10 % | RD 4/-, immunité 20 % | RD 5/-, immunité 30 % | Encaisser les dégâts |
-| **Blindage de Combat** (intermédiaire) | RD 3/-, +1 CA, durée des boucliers +100 %, furtivité sans ceinture (armure moyenne portée) | RD 4/-, +2 CA, efficacité boucliers ×2, accès à Course furtive (armure moyenne portée) | RD 5/-, +3 CA, efficacité boucliers ×3 | Spé ingénieur et craft — boucliers & furtivité |
-| **Seconde Peau** (légère) | Esquive +10 %, +1 CA base | Esquive +20 %, +2 CA base | Esquive +30 %, +3 CA base | Esquiver toutes les attaques *(pas d'augmentation de la CA gagnée via caractéristiques)* |
+| **Armure Tactique** *(ex Blindage de Combat)* (interm.) | RD 3/-, +1 CA, durée des boucliers +100 %, furtivité sans ceinture (armure moyenne portée) | RD 4/-, +2 CA, efficacité boucliers ×2, accès à Course furtive (armure moyenne portée) | RD 5/-, +3 CA, efficacité boucliers ×3 | Spé ingénieur et craft — boucliers & furtivité |
+| **Esquive Ballistique** *(ex Seconde Peau)* (légère) | Esquive +10 %, +1 CA base | Esquive +20 %, +2 CA base | Esquive +30 %, +3 CA base | Esquiver toutes les attaques *(pas d'augmentation de la CA gagnée via caractéristiques)* |
 
 **RD cumulée max** (Juggernaut III + native lourde 4 + Robustesse II 2) : **RD 11 + 30 % d'immunité** (≈ −53 % sur un coup de 23, ≈ −40 % sur un coup de 68). Cap d'immunité tous dégâts à définir avec les pièces typées (proposition : 40-50 % global).
 
