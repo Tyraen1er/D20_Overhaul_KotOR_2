@@ -1,58 +1,58 @@
-Vanilla Weapon Type,Damage,Range,Critical Threat,Bonus,Category,Wielding,Changes (mod)
-Blaster rifles,,,,,,,
-Blaster carbines,Energy 1-12,25m,"20-20,x2",,Assault,2H,
-Blaster rifles,Energy 1-12,28m,"19-20,x2",,Heavy,2H,
-Bowcasters,Energy 1-10,28m,"19-20,x3",,Heavy,2H,
-Repeating blasters,Energy 2-12,28m,"20-20,x2",,Assault,Double,
-Heavy repeating blasters,Energy 3-22,28m,"20-20,x2",,Heavy,Double,
-Disruptor rifles,Unstoppable 1-10,28m,"18-20,x2",,Assassin,2H,
-Ion rifles,Ion 1-10,28m,"20-20,x3",Ion: +1-10 vs. Droid,Tactical,2H,
-Sonic rifles,Sonic 1-10,28m,"20-20,x2",On Hit: AD Dex DC 14,Tactical,2H,
-Blaster Rifle (craftable),Energy 1-12,28m,"19-20,x2",,Heavy,2H,
-Repeating Blaster Rifle (craftable),Energy 2-12,28m,"20-20,x2",,Assault,Double,
-Disruptor Rifle (craftable),Unstoppable 1-10,28m,"18-20,x2",,Assassin,2H,
-Blaster pistols,,,,,,,
-Blaster pistols,"Energy, 1-8",23m,"20-20,x2",,Assault,1H,
-Heavy blasters,"Energy, 1-10",23m,"20-20,x2",,Heavy,1H,
-Hold out blasters,"Energy, 1-4",23m,"19-20,x2",Massive Criticals: +1-4,Assassin,1H,
-Disruptor pistols,"Unstoppable, 1-6",23m,"18-20,x2",,Assassin,1H,
-Ion blasters,"Ion, 1-6",17m,"20-20,x3",Ion: +1-10 vs. Droid,Tactical,1H,
-Sonic pistols,"Sonic, 1-4",17m,"20-20,x2",On Hit: AD Dex DC 14,Tactical,1H,
-Blaster Pistol (Craftable),Energy 1-8,23m,"20-20,x2",,Assault,1H,
-Hold Out Blaster (Craftable),Energy 1-4,23m,"19-20,x2",Massive Criticals: +1-4,Assassin,1H,
-Disruptor Pistol (Craftable),Unstoppable 1-6,23m,"18-20,x2",,Assassin,1H,
-Melee Weapons,,,,,,,
-Unarmed,Physical 1-3,,"20-20,x2",,Impact,1H,
-Stun batons,Bludgeoning 1-1,,"20-20,x2",,Impact,1H (balanced),
-Short swords,Piercing 1-6,,"20-20,x2",,Traditional,1H (balanced),
-Vibroblades,Piercing 1-10,,"19-20,x2",,Resonance,1H (balanced),
-Long swords,Slashing 1-12,,"20-20,x2",,Traditional,1H,
-Gamorrean battleaxes,Slashing 1-12,,"20-20,x2",,Traditional,2H,
-Vibroswords,Slashing 2-12,,"19-20,x2",,Resonance,2H,
-Quarterstaffs,Bludgeoning 1-6,,"20-20,x2",,Impact,Double (balanced),
-Force pikes,Bludgeoning 2-12,,"20-20,x2",,Impact,2H,
-Double-Bladed Sword,Slashing 2-12,,"20-20,x2",,Traditional,Double (balanced),
-Vibro double-blades,Slashing 2-16,,"20-20,x2",,Resonance,Double (balanced),
-Wookiee warblades,Slashing 1-10,,"20-20,x2",,Traditional,Double,
-Gaffi sticks,Piercing 1-8,,"20-20,x2",,,,
-Short swords (craftable),Piercing 1-6,,"20-20,x2",,Traditional,,
-Long swords (craftable),Slashing 1-12,,"20-20,x2",,Traditional,,
-Vibroswords (craftable),Slashing 2-12,,"19-20,x2",,Resonance,,
-Vibro double-blades (craftable),Slashing 2-16,,"20-20,x2",,Resonance,,
-Short Lightsaber,Energy 2-16,,"19-20,x2",,Laser,1H (balanced),
-Lightsaber,Energy 2-20,,"19-20,x2",,Laser,1H,
-Double-Bladed Lightsaber,Energy 2-24,,"20-20,x2",,Laser,Double (balanced),
-Wrist launcher & Rockets,,,,,,,
-Wrist launcher,,25m,,,consumable,none,
-Rockets,Varies (20-60),25m,,,consumable,none,
-Grenades,,,,,consumable,none,
-Fragmentation grenades,Physical 20,25m,,DC 15 Refl half,consumable,none,
-Stun grenades,,25m,,Stun 9s (DC 15 Will),consumable,none,
-Thermal detonators,Energy 60,25m,,DC 15 Refl half,consumable,none,
-Poison grenades,Poison,25m,,Poison 12s (DC 15 Fort),consumable,none,
-Flash grenades,,25m,,Blind (DC 15 Refl),consumable,none,
-Sonic grenades,Sonic 20,25m,,AD Dex -6 30s (DC 15 Refl),consumable,none,
-Adhesive grenades,,25m,,Entangle 15s (DC 15 Refl),consumable,none,
-Cryoban grenades,Cold 30,25m,,Freeze 6s (DC 15 Refl half),consumable,none,
-Fire grenades,Fire 40,25m,,DC 15 Refl half,consumable,none,
-Ion grenades,Ion 20,25m,,+40 vs Droid/Shield (DC 15 Refl),consumable,none,
+﻿Vanilla Weapon Type,Damage,Range,Critical Threat,Bonus,Category,Wielding,Possible upgrades,Changes (mod),Baseline game rule (without feats)
+Blaster rifles,,,,,,,,,
+Blaster carbines,Energy 1-12,25m,"20-20,x2",,Assault,2H,"Firing Chamber, Energy Cell, Targeting Scope",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Blaster rifles,Energy 1-12,28m,"19-20,x2",,Heavy,2H,"Firing Chamber, Energy Cell, Targeting Scope",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Bowcasters,Energy 1-10,28m,"19-20,x3",,Heavy,2H,"Firing Chamber, Energy Cell, Targeting Scope",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Repeating blasters,Energy 2-12,28m,"20-20,x2",,Assault,Double,"Firing Chamber, Energy Cell, Targeting Scope",,Repeating blaster: inherent -5 Defense penalty (replaces vanilla dual-wield penalty)
+Heavy repeating blasters,Energy 3-22,28m,"20-20,x2",,Heavy,Double,"Firing Chamber, Energy Cell, Targeting Scope",,Repeating blaster: inherent -5 Defense penalty (replaces vanilla dual-wield penalty)
+Disruptor rifles,Unstoppable 1-10,28m,"18-20,x2",,Assassin,2H,"Firing Chamber, Energy Cell, Targeting Scope",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Ion rifles,Ion 1-10,28m,"20-20,x3",Ion: +1-10 vs. Droid,Tactical,2H,"Firing Chamber, Energy Cell, Targeting Scope",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Sonic rifles,Sonic 1-10,28m,"20-20,x2",On Hit: AD Dex DC 14,Tactical,2H,"Firing Chamber, Energy Cell, Targeting Scope",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Blaster Rifle (craftable),Energy 1-12,28m,"19-20,x2",,Heavy,2H,"Firing Chamber, Energy Cell, Targeting Scope",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Repeating Blaster Rifle (craftable),Energy 2-12,28m,"20-20,x2",,Assault,Double,"Firing Chamber, Energy Cell, Targeting Scope",,Repeating blaster: inherent -5 Defense penalty (replaces vanilla dual-wield penalty)
+Disruptor Rifle (craftable),Unstoppable 1-10,28m,"18-20,x2",,Assassin,2H,"Firing Chamber, Energy Cell, Targeting Scope",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Blaster pistols,,,,,,,,,
+Blaster pistols,"Energy, 1-8",23m,"20-20,x2",,Assault,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Heavy blasters,"Energy, 1-10",23m,"20-20,x2",,Heavy,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Hold out blasters,"Energy, 1-4",23m,"19-20,x2",Massive Criticals: +1-4,Assassin,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Disruptor pistols,"Unstoppable, 1-6",23m,"18-20,x2",,Assassin,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Ion blasters,"Ion, 1-6",17m,"20-20,x3",Ion: +1-10 vs. Droid,Tactical,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Sonic pistols,"Sonic, 1-4",17m,"20-20,x2",On Hit: AD Dex DC 14,Tactical,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Blaster Pistol (Craftable),Energy 1-8,23m,"20-20,x2",,Assault,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Hold Out Blaster (Craftable),Energy 1-4,23m,"19-20,x2",Massive Criticals: +1-4,Assassin,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Disruptor Pistol (Craftable),Unstoppable 1-6,23m,"18-20,x2",,Assassin,1H,"Firing Chamber, Energy Cell, Targeting Scope",,
+Melee Weapons,,,,,,,,,
+Unarmed,Physical 1-3,,"20-20,x2",,Impact,1H,None,,Counts as 1H weapon (benefits from base Dueling stance: 150% STR melee damage)
+Stun batons,Bludgeoning 1-1,,"20-20,x2",,Impact,1H (balanced),"Blade, Grip, Energy Cell",,
+Short swords,Piercing 1-6,,"20-20,x2",,Traditional,1H (balanced),"Blade, Grip, Energy Cell",,
+Vibroblades,Piercing 1-10,,"19-20,x2",,Resonance,1H (balanced),"Blade, Grip, Energy Cell",,
+Long swords,Slashing 1-12,,"20-20,x2",,Traditional,1H,"Blade, Grip, Energy Cell",,
+Gamorrean battleaxes,Slashing 1-12,,"20-20,x2",,Traditional,2H,"Blade, Grip, Energy Cell",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Vibroswords,Slashing 2-12,,"19-20,x2",,Resonance,2H,"Blade, Grip, Energy Cell",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Quarterstaffs,Bludgeoning 1-6,,"20-20,x2",,Impact,Double (balanced),"Blade, Grip, Energy Cell",,Double weapon: inherent -5 Defense penalty (replaces vanilla dual-wield penalty)
+Force pikes,Bludgeoning 2-12,,"20-20,x2",,Impact,2H,"Blade, Grip, Energy Cell",,2H weapon: base 200% STR (melee) or 150% DEX (ranged) without feats
+Double-Bladed Sword,Slashing 2-12,,"20-20,x2",,Traditional,Double (balanced),"Blade, Grip, Energy Cell",,Double weapon: inherent -5 Defense penalty (replaces vanilla dual-wield penalty)
+Vibro double-blades,Slashing 2-16,,"20-20,x2",,Resonance,Double (balanced),"Blade, Grip, Energy Cell",,Double weapon: inherent -5 Defense penalty (replaces vanilla dual-wield penalty)
+Wookiee warblades,Slashing 1-10,,"20-20,x2",,Traditional,Double,"Blade, Grip, Energy Cell",,Double weapon: inherent -5 Defense penalty (replaces vanilla dual-wield penalty)
+Gaffi sticks,Piercing 1-8,,"20-20,x2",,,,"Blade, Grip, Energy Cell",,
+Short swords (craftable),Piercing 1-6,,"20-20,x2",,Traditional,,"Blade, Grip, Energy Cell",,
+Long swords (craftable),Slashing 1-12,,"20-20,x2",,Traditional,,"Blade, Grip, Energy Cell",,
+Vibroswords (craftable),Slashing 2-12,,"19-20,x2",,Resonance,,"Blade, Grip, Energy Cell",,
+Vibro double-blades (craftable),Slashing 2-16,,"20-20,x2",,Resonance,,"Blade, Grip, Energy Cell",,
+Short Lightsaber,Energy 2-16,,"19-20,x2",,Laser,1H (balanced),"Color Crystal, Upgrade Crystal (×2), Emitter, Lens, Energy Cell",,
+Lightsaber,Energy 2-20,,"19-20,x2",,Laser,1H,"Color Crystal, Upgrade Crystal (×2), Emitter, Lens, Energy Cell",,
+Double-Bladed Lightsaber,Energy 2-24,,"20-20,x2",,Laser,Double (balanced),"Color Crystal, Upgrade Crystal (×2), Emitter, Lens, Energy Cell",,Double weapon: inherent -5 Defense penalty (replaces vanilla dual-wield penalty)
+Wrist launcher & Rockets,,,,,,,,,
+Wrist launcher,,25m,,,consumable,none,None,,
+Rockets,Varies (20-60),25m,,,consumable,none,None,,
+Grenades,,,,,consumable,none,,,
+Fragmentation grenades,Physical 20,25m,,DC 15 Refl half,consumable,none,None,,
+Stun grenades,,25m,,Stun 9s (DC 15 Will),consumable,none,None,,
+Thermal detonators,Energy 60,25m,,DC 15 Refl half,consumable,none,None,,
+Poison grenades,Poison,25m,,Poison 12s (DC 15 Fort),consumable,none,None,,
+Flash grenades,,25m,,Blind (DC 15 Refl),consumable,none,None,,
+Sonic grenades,Sonic 20,25m,,AD Dex -6 30s (DC 15 Refl),consumable,none,None,,
+Adhesive grenades,,25m,,Entangle 15s (DC 15 Refl),consumable,none,None,,
+Cryoban grenades,Cold 30,25m,,Freeze 6s (DC 15 Refl half),consumable,none,None,,
+Fire grenades,Fire 40,25m,,DC 15 Refl half,consumable,none,None,,
+Ion grenades,Ion 20,25m,,+40 vs Droid/Shield (DC 15 Refl),consumable,none,None,,

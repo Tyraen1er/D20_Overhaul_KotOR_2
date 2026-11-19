@@ -1,9 +1,6 @@
-,Base vanilla,Base moddé,Feats I,Feats II,Feats III
+,Base vanilla,Feats I,Feats II,Feats III,Règle du jeu de base (sans feats)
 "Ambidextrie
 (Matraque, Épée courte, Épée longue, Vibrolame, Sabre laser court, Sabre laser, Blaster de poche, Pistolet blaster, Blaster lourd, Pistolet à ions, Pistolet sonique, Pistolet disrupteur)","dégât mêlée 100% FOR main droite
-dégât mêlée 50% FOR main gauche
-attaque -6/-10
-+2/0 si main gauche balanced","dégât mêlée 100% FOR main droite
 dégât mêlée 50% FOR main gauche
 attaque -6/-10
 +2/0 si main gauche balanced","Atq -6/-6
@@ -12,11 +9,12 @@ Prérequis : Une arme en main droite et une autre en main gauche équipées","At
 +2 CA
 Prérequis : Une arme en main droite et une autre en main gauche équipées","Atq -2/-2
 +3 CA
-Prérequis : Une arme en main droite et une autre en main gauche équipées"
+Prérequis : Une arme en main droite et une autre en main gauche équipées","dégât mêlée 100% FOR main droite
+dégât mêlée 50% FOR main gauche
+attaque -6/-10
++2/0 si main gauche balanced"
 "Arme lourde (2M)
-(Hache gamorréenne, Vibro-épée, Pique de Force, Carabine blaster, Fusil blaster, Arbalète wookie, Fusil disrupteur, Fusil à ions, Fusil sonique)",X,"dégât mêlée 200% FOR
-dégât dist. 150% DEX
-Prérequis : Arme à deux mains équipée, non double","Atq 1
+(Hache gamorréenne, Vibro-épée, Pique de Force, Carabine blaster, Fusil blaster, Arbalète wookie, Fusil disrupteur, Fusil à ions, Fusil sonique)",X,"Atq 1
 dégât mêlée 250% FOR
 dégât distance 200% DEX
 Prérequis : Arme à deux mains équipée, non double","Atq 2
@@ -25,26 +23,28 @@ dégât distance 225% DEX
 Prérequis : Arme à deux mains équipée, non double","Atq 3
 dégât mêlée 300% FOR
 dégât distance 250% DEX
+Prérequis : Arme à deux mains équipée, non double","dégât mêlée 200% FOR
+dégât dist. 150% DEX
 Prérequis : Arme à deux mains équipée, non double"
 "Duel
-(Mains nues, Matraque, Épée courte, Épée longue, Vibrolame, Sabre laser court, Sabre laser, Blaster de poche, Pistolet blaster, Blaster lourd, Pistolet à ions, Pistolet sonique, Pistolet disrupteur)",dégât mêlée 150% FOR,"dégât mêlée 150% FOR
-Prérequis arme à une main ou mains nues","Atq 2
+(Mains nues, Matraque, Épée courte, Épée longue, Vibrolame, Sabre laser court, Sabre laser, Blaster de poche, Pistolet blaster, Blaster lourd, Pistolet à ions, Pistolet sonique, Pistolet disrupteur)",dégât mêlée 150% FOR,"Atq 2
 crit chance +1
 Prérequis arme à une main ou mains nues","Atq 4
 crit chance +2
 Prérequis arme à une main ou mains nues","Atq 6
 crit chance +3
+Prérequis arme à une main ou mains nues","dégât mêlée 150% FOR
 Prérequis arme à une main ou mains nues"
 "Arme haute cadence
 (Bâton, Épée double, Vibrolame double, Lame de guerre wookie, Double sabre laser, Blaster à répétition, Blaster lourd à répétition)","dégât mêlée 150% FOR main droite
 dégât mêlée 50% FOR main gauche
-attaque -6/-10","dégât mêlée 150% FOR main droite
-dégât mêlée 50% FOR main gauche
--5 CA
-Prérequis : arme double","Dégâts +1/+1
+attaque -6/-10","Dégâts +1/+1
 -3 CA
-Prérequis : arme double","Dégâts +2/+2
+Prérequis : arme double ou blaster à répétition","Dégâts +2/+2
 -2 CA
-Prérequis : arme double","Dégâts +3/+3
+Prérequis : arme double ou blaster à répétition","Dégâts +3/+3
 -1 CA
-Prérequis : arme double"
+Prérequis : arme double ou blaster à répétition","dégât mêlée 150% FOR main droite
+dégât mêlée 50% FOR main gauche
+-5 CA (supprime le malus d'attaque vanilla -6/-10)
+Prérequis : arme double ou blaster à répétition"

@@ -1,8 +1,8 @@
-,Feats I,Feats II,Feats III,Balancing,Rule without feats
+,Feats I,Feats II,Feats III,Balancing,Baseline game rule (without feats)
 Heavy Armor Specialization,"DR 3/-
 +10% all damage immunity","DR 4/-
 +20% all damage immunity","DR 5/-
-+30% all damage immunity","Damage soak specialization",DR 4/- (stacks with feats)
++30% all damage immunity","Damage soak specialization","Inherent DR 4/- (physical & energy, passive without feats, stacks with feats)"
 Medium Armor Specialization,"DR 3/-
 Defense +1
 Shield duration +100%
@@ -11,11 +11,10 @@ Defense +2
 Doubles shield effectiveness
 Grants Stealth Run while wearing medium armor","DR 5/-
 Defense +3
-Triples shield effectiveness","Engineer and crafting spec. Specialization choice via upgrade","Upgrades:
-2 overlays
-2 underlays"
+Triples shield effectiveness","Engineer and crafting spec. Specialization choice via upgrade","Inherent DR 2/- (physical & energy, passive without feats)
+Exclusive access to combined overlays and underlays (dedicated UpgradeLevel simulating 2 overlays & 2 underlays)"
 Light Armor Specialization,"Dodge +10%
 Defense +1","Dodge 20%
 Defense +2","Dodge 30%
 Defense +3","Dodge all attacks specialization
-total = +4 base Defense and +2 DEX Defense",
+total = +4 base Defense and +2 DEX Defense","Inherent DR 0 (base Defense 4-5, max DEX +4/+5)"

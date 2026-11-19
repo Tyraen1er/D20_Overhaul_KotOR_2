@@ -4,7 +4,7 @@ Ce document est le **contrat de game design** : chaque décision actée y figure
 Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les notes d'implémentation sont dans **[`decisions_annexes.md`](decisions_annexes.md)**.
 
 > **Hiérarchie des sources (README §0)** : les CSV `Kotor 2 - rééquilibrage - *.csv` sont la référence opérationnelle côté utilisateur — ce contrat en est la **consolidation**. En cas de divergence, les CSV font foi ; ce document doit alors être resynchronisé.
-> **Dernière grosse consolidation : 15/11/2026** (refonte postures/spé d'arme/spé carac). Journal des arbitrages : annexes §9.
+> **Dernière grosse consolidation : 18/11/2026** (scaling DEX `100 % / 50 %` à distance 1M/D, hiérarchie des slots d'upgrades par famille d'arme, slot unique sur armures légères/lourdes ; arbres d'armures le 17/11 ; refonte postures/spé d'arme/spé carac le 15/11/2026). Journal des arbitrages : annexes §9.
 
 | Domaine | Décision (résumé) | Détail |
 | :--- | :--- | :---: |
@@ -15,7 +15,7 @@ Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les
 | Spécialisations de caractéristique | 6 arbres exclusifs (FOR, DEX, CON, INT, SAG, CHA) — un par caractéristique, ordre canonique | §5 |
 | Architecture de dons | Posture (3) + famille (3) + spé carac (3) + défenses ; budgets 21/16/13 (socle à réarbitrer) | §6 |
 | Dons transversaux | 7 dons de Métamagie + *Esquive Totale* (anti-AoE) | §7 |
-| Armures & Défenses | RD native (Interm. 2 / Lourde 4), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique III* supprimé | §8 |
+| Armures & Défenses | RD native (Interm. 2 / Lourde 4), upgrades combinées exclusives aux intermédiaires (`UpgradeLevel`), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique III* supprimé | §8 |
 | Contrat mathématique | DPR nets et durées de boss cibles par phase de jeu (colonnes à remapper sur la nouvelle architecture) | §9 |
 | Furtivité | Embuscade : première attaque depuis la furtivité = critique confirmé (simulation scriptée) | §10 |
 | Conventions & principes | DD (`10+Niv+carac directrice` ; base 10 si proc lié à la plage, 5 sinon), procs `plage/20`, ordre canonique des caracs, « les synergies se trouvent, ne se décrivent pas » | §11 |
@@ -43,7 +43,11 @@ Symétrie inverse stricte entre Combattants et Mages :
 ### 3. Établi & Boss (Rythme des Combats)
 
 **A. Plafond des améliorations d'armes** (pièces `u_r_*`, `u_m_*`, `u_l_*` retravaillées — inventaire de référence : CSV *WIP Améliorations*, 226 pièces) :
-- Early (Niv. 1–10, Mk I) : max **`+2` dégâts moyens/coup** • Mid (Niv. 11–18, Mk II) : max **`+5`** • Late (Niv. 19+, Mk III) : max **`+10`**
+- Early (Niv. 1–10, Mk I) : max **`+2` dégâts moyens/coup** • Mid (Niv. 11–18, Mk II) : max **`+5`** • Late (Niv. 19+, Mk III) : max **`+10`** *(valeurs max pour une arme disposant de tous ses emplacements d'amélioration).*
+- **Slots autorisés par famille d'arme** (*WIP armes.csv*, via hiérarchie `UpgradeLevel`) :
+  - **Mêlée (`Poignée < Lame < Cellule`)** : *Mains nues* (0 slot) · *Impact* (1 : Poignée) · *Traditionnelle* (2 : Poignée, Lame) · *Résonance* (3 : Poignée, Lame, Cellule) · *Laser* (Cristal de couleur + Cristal d'amélioration + Émetteur + Lentille + Cellule). *Bâton Gaffi* retiré du jeu (héritage KotOR 1).
+  - **Distance (`Viseur < Cellule < Chambrage`)** : *Tir Tactique* (1 : Viseur) · *Tir Assassin* (2 : Viseur, Cellule) · *Tir d'Assaut & Tir Pénétrant* (3 : Viseur, Cellule, Chambrage).
+- **Principe de compensation** : l'absence de `Cellule` / `Chambrage` sur les familles à 1 ou 2 slots plafonne leurs upgrades plus bas à l'établi, en échange de **dégâts de base plus élevés, d'une plage de critique élargie ou d'un multiplicateur de critique supérieur**.
 
 **B. Boss** :
 - **Règle d'or :** aucun boss tué en moins de 4 rounds ; cible **5–10 rounds** (10–15 pour Sion/Traya).
@@ -59,10 +63,10 @@ Symétrie inverse stricte entre Combattants et Mages :
 
 | Posture | Base moddée | Rang I → III | Notes |
 | :--- | :--- | :--- | :--- |
-| **Duel** | Dégâts mêlée 150 % FOR (règle moteur 1M, main gauche vide) | `+2/+4/+6 Atq` et **plage de critique +1/+2/+3** | Prérequis : arme à une main **ou mains nues** ; la plage élargie augmente la fréquence des procs des Spé d'arme (proc = plage/20 par coup) |
-| **Ambidextrie** | Malus 2 armes `-6/-10` (`+2/0` si arme équilibrée en main gauche) | `-6/-6 & +1 CA` → `-4/-4 & +2 CA` → `-2/-2 & +3 CA` | Identité parade/CA ; malus de main gauche remonte mais l'attaque s'achète de la Défense |
-| **Arme Lourde (2M)** | Mêlée 200 % FOR / distance 150 % DEX | `+1/+2/+3 Atq` ; mêlée **250→300 % FOR** ; distance **200→250 % DEX** | Prérequis : arme à deux mains non double — mêlée **et** distance |
-| **Arme haute cadence** (ex « Arme Double & Repeating ») | Dégâts 150 %/50 % FOR (droite/gauche), malus moddé **`-5 CA`** (au lieu de `-6/-10 Atq`) | `+1/+1` & CA `-3` → `+2/+2` & `-2` → `+3/+3` & `-1` | Repeating et lourds à répétition partagent cette posture ; moteur : les repeating **ne sont pas** des armes doubles (`weaponwield 6 ≠ 3`) |
+| **Duel** | Dégâts mêlée `150 % FOR` (règle moteur 1M, main gauche vide) ; **distance 1M `100 % DEX`** | `+2/+4/+6 Atq` et **plage de critique +1/+2/+3** | Prérequis : arme à une main **ou mains nues** ; la plage élargie augmente la fréquence des procs des Spé d'arme (proc = plage/20 par coup) |
+| **Ambidextrie** | Dégâts `100 % / 50 % FOR` (mêlée) ou **`100 % / 50 % DEX` (distance)** ; malus 2 armes `-6/-10` (`+2/0` si arme équilibrée en main gauche) | `-6/-6 & +1 CA` → `-4/-4 & +2 CA` → `-2/-2 & +3 CA` | Identité parade/CA ; malus de main gauche remonte mais l'attaque s'achète de la Défense |
+| **Arme Lourde (2M)** | Mêlée `200 % FOR` / distance `150 % DEX` | `+1/+2/+3 Atq` ; mêlée **250→300 % FOR** ; distance **200→250 % DEX** | Prérequis : arme à deux mains non double — mêlée **et** distance |
+| **Arme haute cadence** (ex « Arme Double & Repeating ») | Dégâts `150 % / 50 % FOR` (arme double mêlée) ou **`100 % / 50 % DEX` (répétition distance)**, malus moddé **`-5 CA`** (au lieu de `-6/-10 Atq`) | `+1/+1` & CA `-3` → `+2/+2` & `-2` → `+3/+3` & `-1` | Repeating et lourds à répétition partagent cette posture ; moteur : les repeating **ne sont pas** des armes doubles (`weaponwield 6 ≠ 3`) |
 
 **B. Les 8 familles de spécialisation** (*Spécialisation d'arme.csv* — rang I : `+2 Atq & +2 Dégâts` partout) :
 
@@ -81,7 +85,7 @@ Symétrie inverse stricte entre Combattants et Mages :
 
 **C. Mains nues** (décision 14/11) : la branche dédiée (*Arts Martiaux / Arts Mutaki*) est **supprimée**. L'identité mains nues passe par la **posture Duel** (les poings comptent comme arme 1M) + la chaîne vanilla *Spécialiste mains nues* I-VIII + les Spé de caractéristique (Matukai). Les poings n'appartiennent à aucune famille de Spé d'arme.
 
-**D. L'axe distance/mêlée** : parité de viabilité, asymétrie de coûts — chaque posture/famille distance atteint les cibles DPR du §9 par son propre chemin (DEX % via Arme Lourde, utilitaires via les familles de tir) ; la mêlée paie en défense et approche, la distance paie en contreurs (boucliers d'énergie, déflexion). Équilibrage fin par le chantier ennemis.
+**D. L'axe distance/mêlée** : parité de viabilité, asymétrie de coûts — chaque posture/famille distance atteint les cibles DPR du §9 par son propre chemin (`100 % / 50 % DEX` en `1M`/`D`, `150 % → 250 % DEX` via Arme Lourde `2M`, `INT` via Gand II, utilitaires via les familles de tir) ; la mêlée paie en défense et approche, la distance paie en contreurs (boucliers d'énergie, déflexion). Équilibrage fin par le chantier ennemis.
 
 ### 5. Spécialisations de Caractéristique (refonte 13–14/11)
 
@@ -123,23 +127,23 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
 
 Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`](decisions_annexes.md#1-armures--recherche-et-justifications) :
 
-**A. RD native des armures (passive, sans don)** — CA et plafonds DEX vanilla inchangés *sauf Techniques Echanis III (§5)*. **Rappel d'arbitrage (16/11) : RD native lourde = 4 — à appliquer lors du chantier stats d'armures (édition baseitems/UTI).**
+**A. Règles natives sans don (par catégorie d'armure)** — CA base et plafonds DEX vanilla *sauf Armure Lourde portée à CA base `10` (calibrage 18/11) et Techniques Echanis III (§5)*. **RD native lourde = `4/-`, intermédiaire = `2/-` ; refonte des 30 sur-couches et 30 sous-couches en 18 standards (`01..18`) + 12 combinées (`19..30`, exclusives intermédiaires via `UpgradeLevel`).**
 
-| Type | CA base | Plafond DEX | **RD Physique & Énergie native** |
-| :--- | :---: | :---: | :---: |
-| Légère | 4–5 | +4/+5 | **0** |
-| Intermédiaire | 6–7 | +2/+3 | **RD 2** |
-| Lourde | 8–9 | +0/+1 | **RD 4** |
+| Type | CA base | Plafond DEX | **RD Physique & Énergie native** | **Accès Établi (cible refonte upgrades)** |
+| :--- | :---: | :---: | :---: | :--- |
+| Légère | 4–5 | +4/+5 | **0** | **1 seul slot** : Sur-couche (*overlay*) standard uniquement (`01..18`) |
+| Intermédiaire | 6–7 | +2/+3 | **RD 2** | **2 slots exclusifs** : **Upgrades combinées** (1 sur-couche + 1 sous-couche combinant chacune 2 upgrades communes, `19..30`, via `UpgradeLevel` dédié, sans don requis) |
+| Lourde | **10** | +0/+1 | **RD 4** | **1 seul slot** : Sous-couche (*underlay*) standard uniquement (`01..18`) |
 
-**B. Trois arbres de dons** (3 dons chacun, arbitrage final du 17/11 — source : *spé Armure.csv*) :
+*Note technique (17–18/11)* : `swkotor2.exe` limite en dur les armures à **1 slot sur-couche + 1 slot sous-couche** (impossible d'ajouter des slots séparés sans patch binaire). Attribuer le `UpgradeLevel` maximal uniquement aux `.uti` d'armures intermédiaires et aux pièces combinées réserve nativement ces dernières aux armures intermédiaires sur simple critère de type d'armure ; à l'inverse, le slot non autorisé des armures légères (sous-couche) et lourdes (sur-couche) est verrouillé pour n'offrir qu'**1 seul emplacement d'upgrade** sur chacune.
+
+**B. Trois arbres de dons** (3 dons chacun, arbitrage du 17/11 — source : *WIP spé Armure.csv*) :
 
 | Arbre | Rang I | Rang II | Rang III | Identité |
 | :--- | :--- | :--- | :--- | :--- |
-| **Juggernaut** (lourde) | RD 3, immunité tous dégâts 10 % | RD 4, immunité 20 % | RD 5, immunité 30 % | Encaisser les dégâts |
-| **Blindage de Combat** (intermédiaire) | RD 3, +1 CA, durée des boucliers +100 %, furtivité sans ceinture sous armure moyenne | RD 4, +2 CA, efficacité boucliers ×2, course furtive sous armure moyenne | RD 5, +3 CA, efficacité boucliers ×3 | Spé ingénieur et craft — boucliers & furtivité |
-| **Seconde Peau** (légère) | Esquive +10 %, +1 CA | Esquive +20 %, +2 CA | Esquive +30 %, +3 CA | Esquiver toutes les attaques |
-
-**Slots natifs (acté 16/11)** : les armures intermédiaires portent **2 surcouches + 2 sous-couches** nativement (édition par lot des UTI) — l'arbre de don moyen est articulé sur l'amplification des boucliers et la furtivité.
+| **Juggernaut** (lourde) | RD 3/-, immunité tous dégâts 10 % | RD 4/-, immunité 20 % | RD 5/-, immunité 30 % | Encaisser les dégâts |
+| **Blindage de Combat** (intermédiaire) | RD 3/-, +1 CA, durée des boucliers +100 %, furtivité sans ceinture (armure moyenne portée) | RD 4/-, +2 CA, efficacité boucliers ×2, accès à Course furtive (armure moyenne portée) | RD 5/-, +3 CA, efficacité boucliers ×3 | Spé ingénieur et craft — boucliers & furtivité |
+| **Seconde Peau** (légère) | Esquive +10 %, +1 CA base | Esquive +20 %, +2 CA base | Esquive +30 %, +3 CA base | Esquiver toutes les attaques *(pas d'augmentation de la CA gagnée via caractéristiques)* |
 
 **RD cumulée max** (Juggernaut III + native lourde 4 + Robustesse II 2) : **RD 11 + 30 % d'immunité** (≈ −53 % sur un coup de 23, ≈ −40 % sur un coup de 68). Cap d'immunité tous dégâts à définir avec les pièces typées (proposition : 40-50 % global).
 
@@ -149,15 +153,15 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 
 ### 9. Contrat Mathématique (DPR nets & durées de boss cibles)
 
-Avec établi plafonné (`+2/+5/+10`) et RD des boss (`3/7/12`) :
+Avec établi plafonné (`+2/+5/+10` pondéré par slots de famille), scaling distance `100 % / 50 % DEX` et RD des boss (`3/7/12`) — remappage postures × familles vérifié sous `tools/dpr_check.py` (rangs de dons I/II/III par phase) :
 
-| Phase (Boss étalon) | Gatling / Lame Double | 2 Pistolets / 2 Armes | Fusil / Duel 1M |
-| :--- | :--- | :--- | :--- |
-| **EARLY** — Niv. 8 (120 PV, CA 20, RD 3) | 16,5 DPR — 7,2 rounds | 11,7 DPR — 6–10 rounds | 19,5 DPR — 6,1 rounds |
-| **MID** — Niv. 16 (280 PV, CA 29, RD 7) | 39,0 DPR — 7,2 rounds | 25,2 DPR — 6–11 rounds | 58,6 DPR — 4,8 rounds |
-| **LATE** — Niv. 26 (650 PV, CA 44, RD 12) | 57,6 DPR — 11,2 rounds | 45,5 DPR — 7–14 rounds | 122–128 DPR — 5,1 rounds |
+| Phase (Boss étalon) | Duel (`1M`) | Ambidextrie (`2 armes`) | Arme Lourde (`2M`) | Haute Cadence (`D`) |
+| :--- | :---: | :---: | :---: | :---: |
+| **EARLY** — Niv. 8 (120 PV, CA 20, RD 3) | 14–24 DPR (5–9 rds) | 13–17 DPR (7–9 rds) | 18–24 DPR (5–7 rds) | 23–30 DPR (4–5 rds) |
+| **MID** — Niv. 16 (280 PV, CA 29, RD 7) | 30–62 DPR (4–9 rds) | 31–46 DPR (6–9 rds) | 49–65 DPR (4–6 rds) | 45–64 DPR (4–6 rds) |
+| **LATE** — Niv. 26 (650 PV, CA 44, RD 12) | 61–128 DPR (5–11 rds) | 74–132 DPR (5–9 rds) | 116–161 DPR (4–6 rds) | 104–154 DPR (4–6 rds) |
 
-**[À remapper]** : les colonnes « triangle Pistolet/Fusil/Gatling » (§4 d'origine, abrogé le 15/11) doivent être réexprimées en **postures × familles** lors du chantier équilibrage (`tools/k2balance.py`) ; les cibles de DPR/TTK restent la référence.
+*(Note : en `Tactique` 1M, le DPR pur plus bas `61–82` est compensé par les procs de Stun 1–2 tours sur `plage/20`. Côté survie, la cible TTD `5–10+ rounds` est vérifiée de Légère à Lourde, la Bure restant fragile en solo pur à `~4 rounds` sans Nomi/Matukai/contrôle.)*
 
 ### 10. Furtivité : l'attaque en embuscade est un critique confirmé
 
@@ -181,9 +185,9 @@ Avec établi plafonné (`+2/+5/+10`) et RD des boss (`3/7/12`) :
 
 1. **[TODO Tests moteur]** (tracés dans la colonne *Détail technique* du WIP Feats.csv) : **T-exclusion** (colonne `exclusion` de feat.2da, mutualité des 6 arbres carac), **T1** (arme double en main gauche — Colosse), **T2** (`reqfeat0` sur baseitem d'arme), **T3** (détection des ratés — événement 1005), **plafond CA** (cumul Nomi/Matukai + Précognition), **grenades** (scripts moddables — Gand III).
 2. **[TODO Budgets §6]** : recomposer le socle de dons avec les nouveaux axes (posture/famille/carac) suite aux suppressions vanilla.
-3. **[TODO Contrat §9]** : remapper les colonnes DPR sur l'architecture postures × familles dans `k2balance.py`.
+3. **[TODO Contrat §9]** : ~~remapper les colonnes DPR sur l'architecture postures × familles.~~ **ACTÉ (18/11) dans `dpr_check.py` / `dpr_data.json` (remappage à répercuter si besoin dans `k2balance.py`).**
 4. **[TODO Arbres d'armures §8.B]** : ~~cellules en TODO dans le WIP Feats.csv — revalider les 9 dons.~~ **ACTÉ (17/11) : 9 dons d'armure intégrés dans WIP Feats.csv.**
 5. **[TODO Servante]** : seul son don « CA via la Sagesse » reste concerné par un éventuel remplacement (les `ECHANI_STRIKE` sont confirmés inchangés).
 6. **[TODO Équipement & Loot]** : revoir statistiques et distribution (viabilité des familles d'armes Niv. 1 à 30) — référence : *WIP armes.csv* et *WIP Améliorations.csv*.
-7. **[TODO Craft & Établi]** : recettes viables par famille, cohérentes avec les plafonds §3 ; types d'améliorations par famille (TODO historique : Lame+Garde primitives / +Cellule vibrantes / cristaux lasers).
+7. **[TODO Craft & Établi]** : refonte totale de toutes les améliorations d'équipement (recettes viables par famille, cohérentes avec les plafonds §3 ; types d'améliorations par famille : Lame+Garde primitives / +Cellule vibrantes / cristaux lasers ; création des sur-couches et sous-couches combinées exclusives aux armures intermédiaires via `UpgradeLevel`).
 8. **[TODO Amélioration de la Furtivité]** : ~~une attaque furtive est-elle un critique ?~~ **ACTÉ (13/11) → §10.**

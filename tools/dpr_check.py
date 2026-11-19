@@ -11,12 +11,12 @@ en sélectionnant automatiquement la MEILLEURE CONFIGURATION possible :
   • meilleur mode de port (1M / 2M / deux armes / arme double) ;
   • meilleure arme de main gauche (si Ambidextrie) ;
   • meilleure attaque active (Déluge / Puissance / Critique ou aucun) ;
-  • meilleures améliorations d'établi (mode plafonné §3.A `+2/+5/+10`,
-    ou mode vanilla depuis WIP Améliorations.csv, ou aucune) ;
-  • pouvoirs de la Force ACTIFS selon l'armure portée (`--armor`) : Vitesse et
-    Talent de Force sont bloqués par une armure trop lourde (logique forbiditemmask
-    du WIP Spé Pouvoirs.csv), ce qui change radicalement le DPR — Illumination
-    (≤ moyenne) relance Vitesse+Talent au rang max, Fureur remplace Vitesse.
+  • meilleures améliorations d'établi (mode plafonné §3.A `+2/+5/+10` pondéré par les
+    emplacements autorisés par famille d'arme, ou mode vanilla depuis WIP Améliorations.csv, ou aucune) ;
+  • pouvoirs de la Force ACTIFS selon l'armure portée (`--armor`) : Vitesse, Armure de Force,
+    Barrière et Talent de Force sont filtrés par armure max (logique forbiditemmask du WIP Spé Pouvoirs.csv) ;
+  • défense et survie du build (CA, RD, Immunité %, Esquive %, PV + Bouclier, DTPS subi et
+    TTD en rounds contre le boss `Set_5` et l'escouade d'élites `3× Set_3`).
 
 Toutes les VALEURS (armes, dons, améliorations, boss) vivent dans
 `tools/dpr_data.json` : c'est LE fichier à éditer pour équilibrer — le moteur
@@ -123,6 +123,7 @@ class Weapon:
     balanced: bool = False
     upgrade_pool: str | None = None
     slots: int = 0
+    allowed_slots: list[str] = field(default_factory=list)
     massive_avg: float = 0.0
 
 
@@ -155,7 +156,7 @@ class Data:
     def alias_index(self) -> dict[str, tuple[str, str, int]]:
         """Retourne {alias_norm -> (catégorie, clé, max_rank)} pour toutes les entrées."""
         idx: dict[str, tuple[str, str, int]] = {}
-        for cat in ("styles", "familles", "caracs", "actives"):
+        for cat in ("styles", "familles", "caracs", "armures", "actives"):
             for key, feat in self.feats.get(cat, {}).items():
                 idx[norm(feat["label"])] = (cat, key, feat.get("max", 3))
                 idx.setdefault(norm(feat["label"].split("(")[0]), (cat, key, feat.get("max", 3)))
@@ -173,6 +174,7 @@ class Feats:
     styles: dict[str, int] = field(default_factory=dict)
     familles: dict[str, int] = field(default_factory=dict)
     caracs: dict[str, int] = field(default_factory=dict)
+    armures: dict[str, int] = field(default_factory=dict)
     actives: dict[str, int] = field(default_factory=dict)
     unknown: list[str] = field(default_factory=list)
 
@@ -271,7 +273,7 @@ def resolve_buffs(data: Data, buff_ranks: dict[str, int], armor_tier: str,
                   phase: dict, speed_mode: str) -> dict:
     """Détermine les effets de buffs FINALEMENT actifs selon l'armure portée.
 
-    Retourne {attacks, mod_all, for_add, active[], blocked[], notes[]}.
+    Retourne {attacks, mod_all, for_add, speed_ac, armor_ac, barrier_rd, active[], blocked[], notes[]}.
     Vitesse/Fureur non cumulables → on garde le meilleur nombre d'attaques
     (la Fureur l'emporte en cas d'égalité pour son bonus de FOR).
     --speed ≠ auto = override manuel qui bypass le gating (tests rapides).
@@ -281,24 +283,39 @@ def resolve_buffs(data: Data, buff_ranks: dict[str, int], armor_tier: str,
     blocked: list[str] = []
     notes: list[str] = []
 
-    # Illumination : accorde Vitesse + Talent au rang max (≈3) si elle-même autorisée
+    lvl = phase.get("level", 30)
+    if lvl < 9:
+        max_r, max_af, allow_illum = 1, 2, False
+    elif lvl < 19:
+        max_r, max_af, allow_illum = 2, 3, True
+    else:
+        max_r, max_af, allow_illum = 3, 3, True
+
+    # Illumination : accorde Vitesse + Talent (et Armure si défini) plafonnés au palier de la phase
     granted: dict[str, int] = {}
     if "illumination" in buff_ranks:
-        if buff_allowed(data, "illumination", armor_tier):
-            granted = dict(fb["illumination"]["grants"])
-            active.append(f"Illumination (lance Vitesse {granted.get('vitesse', 0)} + "
-                          f"Talent {granted.get('valor', 0)} au rang max)")
+        if not allow_illum:
+            notes.append("Illumination (Niv. 15+ requis)")
+        elif buff_allowed(data, "illumination", armor_tier):
+            granted = {
+                k: min(v, max_af if k == "armure_force" else max_r)
+                for k, v in fb["illumination"]["grants"].items()
+            }
+            parts = [f"Vitesse {granted.get('vitesse', 0)}", f"Talent {granted.get('valor', 0)}"]
+            if granted.get("armure_force"):
+                parts.append(f"Armure {granted['armure_force']}")
+            active.append(f"Illumination (lance {' + '.join(parts)} au rang max)")
         else:
             blocked.append("Illumination")
 
-    # Vitesse / Talent : un effet ne s'applique que si au moins une source AUTORISÉE
-    # (possédée + armure OK, ou accordée par Illumination elle-même autorisée)
+    # Vitesse / Talent / Armure de Force : actifs s'ils ont au moins une source autorisée
     vit_att = 0
+    vit_ac = 0
     vit_rank = 0
     src = []
     if buff_ranks.get("vitesse"):
         if buff_allowed(data, "vitesse", armor_tier):
-            vit_rank = buff_ranks["vitesse"]
+            vit_rank = min(buff_ranks["vitesse"], max_r)
             src.append(f"Vitesse {vit_rank}")
         else:
             blocked.append(f"Vitesse (armure max : {fb['vitesse']['armor_max']})")
@@ -307,14 +324,15 @@ def resolve_buffs(data: Data, buff_ranks: dict[str, int], armor_tier: str,
         src.append(f"Vitesse {granted['vitesse']} via Illumination")
     if vit_rank:
         vit_att = fb["vitesse"]["attacks_by_rank"][str(vit_rank)]
-        active.append(f"{' + '.join(src)} (+{vit_att} att/rd)")
+        vit_ac = fb["vitesse"].get("ac_by_rank", {}).get(str(vit_rank), 0)
+        active.append(f"{' + '.join(src)} (+{vit_att} att/rd, +{vit_ac} CA)")
 
     mod_all = 0
     val_rank = 0
     src = []
     if buff_ranks.get("valor"):
         if buff_allowed(data, "valor", armor_tier):
-            val_rank = buff_ranks["valor"]
+            val_rank = min(buff_ranks["valor"], max_r)
             src.append(f"Talent de Force {val_rank}")
         else:
             blocked.append(f"Talent de Force (armure max : {fb['valor']['armor_max']})")
@@ -325,11 +343,36 @@ def resolve_buffs(data: Data, buff_ranks: dict[str, int], armor_tier: str,
         mod_all = fb["valor"]["mod_by_rank"][str(val_rank)]
         active.append(f"{' + '.join(src)} (+{mod_all} à tous les mod.)")
 
+    armor_ac = 0
+    af_rank = 0
+    src = []
+    if buff_ranks.get("armure_force"):
+        if buff_allowed(data, "armure_force", armor_tier):
+            af_rank = min(buff_ranks["armure_force"], max_af)
+            src.append(f"Armure de Force {af_rank}")
+        else:
+            blocked.append(f"Armure de Force (armure max : {fb['armure_force']['armor_max']})")
+    if granted.get("armure_force"):
+        af_rank = max(af_rank, granted["armure_force"])
+        src.append(f"Armure {granted['armure_force']} via Illumination")
+    if af_rank:
+        armor_ac = fb["armure_force"]["ac_by_rank"][str(af_rank)]
+        active.append(f"{' + '.join(src)} (+{armor_ac} CA)")
+
+    barrier_rd = 0
+    if buff_ranks.get("barriere") and "barriere" in fb:
+        if buff_allowed(data, "barriere", armor_tier):
+            r = min(buff_ranks["barriere"], max_r)
+            barrier_rd = fb["barriere"]["rd_by_rank"][str(r)]
+            active.append(f"Barrière de Force {r} (RD {barrier_rd})")
+        else:
+            blocked.append(f"Barrière de Force (armure max : {fb['barriere']['armor_max']})")
+
     # Fureur (non cumulable avec Vitesse)
     fur_att, fur_for, fury_used = 0, 0, False
     if "fureur" in buff_ranks:
         if buff_allowed(data, "fureur", armor_tier):
-            r = buff_ranks["fureur"]
+            r = min(buff_ranks["fureur"], max_r)
             fur_att = fb["fureur"]["attacks_by_rank"][str(r)]
             fur_for = fb["fureur"]["for_mod_by_rank"][str(r)]
             if fur_att >= vit_att and fur_att > 0:
@@ -342,27 +385,38 @@ def resolve_buffs(data: Data, buff_ranks: dict[str, int], armor_tier: str,
         else:
             blocked.append(f"Fureur (armure max : {fb['fureur']['armor_max']})")
 
-    # Attaques bonus finales
+    # Attaques & CA bonus finales
     if speed_mode == "auto":
         if fury_used:
-            attacks = fur_att
+            attacks, speed_ac = fur_att, 0
         elif vit_att:
-            attacks = vit_att
+            attacks, speed_ac = vit_att, vit_ac
         elif buff_allowed(data, "vitesse", armor_tier):
             attacks = phase["speed_attacks"]
+            impl_rank = "2" if attacks == 1 else "3"
+            speed_ac = fb["vitesse"].get("ac_by_rank", {}).get(impl_rank, 0) if attacks > 0 else 0
             if attacks:
-                notes.append(f"Vitesse implicite au palier de phase (+{attacks} att/rd)")
+                notes.append(f"Vitesse implicite au palier de phase (+{attacks} att/rd, +{speed_ac} CA)")
         else:
-            attacks = 0
+            attacks, speed_ac = 0, 0
             if phase["speed_attacks"]:
                 notes.append("Vitesse indisponible sous cette armure → bonus de phase ignoré")
     else:
         attacks = {"none": 0, "knight": 1, "master": 2}[speed_mode]
+        speed_ac = 0 if speed_mode == "none" else fb["vitesse"].get("ac_by_rank", {}).get("2" if speed_mode == "knight" else "3", 0)
         notes.append(f"--speed {speed_mode} : override manuel (bypass armure)")
 
-    return {"attacks": attacks, "mod_all": mod_all,
-            "for_add": fur_for if fury_used else 0,
-            "active": active, "blocked": blocked, "notes": notes}
+    return {
+        "attacks": attacks,
+        "mod_all": mod_all,
+        "for_add": fur_for if fury_used else 0,
+        "speed_ac": speed_ac,
+        "armor_ac": armor_ac,
+        "barrier_rd": barrier_rd,
+        "active": active,
+        "blocked": blocked,
+        "notes": notes,
+    }
 
 
 # ============================================================================
@@ -374,21 +428,29 @@ def best_upgrades(data: Data, weapon: Weapon, level: int, mode: str, phase: dict
         return Upgrades()
 
     pools: dict[str, list[dict]] = data.raw["upgrade_pools"].get(weapon.upgrade_pool, {})
-    # pools = {slot_label: [items]} ; on garde les `slots` meilleurs emplacements distincts
+    allowed = set(weapon.allowed_slots) if weapon.allowed_slots else None
     avail: dict[str, list[dict]] = {}
     for slot, items in pools.items():
+        if allowed is not None and slot not in allowed:
+            continue
         avail[slot] = [it for it in items if it.get("level_req", 99) <= level]
 
     if mode == "cap":
-        # Plafond acté §3.A : total dégâts moyens/coup issu des améliorations = cap.
+        # Plafond acté §3.A pondéré selon les slots autorisés par famille d'arme.
         up = Upgrades()
-        up.damage = float(phase["upgrade_cap"])
-        # les bonus d'Attaque (sans dégâts) restent autorisés : meilleur par emplacement
+        weights = data.raw.get("slot_damage_weights", {}).get(weapon.upgrade_pool, {})
+        if allowed is not None and weights:
+            ratio = min(1.0, sum(weights.get(s, 0.0) for s in allowed))
+        else:
+            ratio = 1.0
+        up.damage = round(float(phase["upgrade_cap"]) * ratio, 2)
+        # les bonus d'Attaque (sans dégâts) restent autorisés sur les slots actifs : meilleur par emplacement
         for slot, items in avail.items():
             pure = [it for it in items if it["damage"] == 0 and it["onhit"] == 0]
             if pure:
                 up.attack += max(it["attack"] for it in pure)
-        up.detail = f"cap §3.A (+{phase['upgrade_cap']:g} dég)"
+        slot_txt = f", {weapon.slots} slot{'s' if weapon.slots > 1 else ''}" if allowed is not None else ""
+        up.detail = f"cap §3.A (+{up.damage:g} dég{slot_txt})"
         return up
 
     # mode "vanilla" : meilleur objet par emplacement (score dégâts > attaque > acéré)
@@ -433,7 +495,8 @@ def reingest_upgrades(csv_path: Path) -> dict:
     for row in rows[1:]:
         if len(row) < 6 or not row[0].startswith("u_"):
             continue
-        resref, _name, empl, _tier, effects, loot = row[0], row[1], row[2], row[3], row[4], row[5]
+        resref, _name, empl, _tier, effects_van, loot = row[0], row[1], row[2], row[3], row[4], row[5]
+        effects = row[6].strip() if len(row) > 6 and row[6].strip() else effects_van
         pool = slot = None
         for needle, p, s in slot_map:
             if needle.lower() in empl.lower():
@@ -442,6 +505,8 @@ def reingest_upgrades(csv_path: Path) -> dict:
         if pool is None:  # surcouches / sous-couches armures, cristaux de couleur, uniques
             continue
         effects_n = norm(effects)
+        if effects_n.startswith("—") or "aucun effet" in effects_n:
+            effects_n = ""
         dmg = sum(avg_dice(m) for m in re.findall(r"bonus aux degats \([^)]*\) \+(\d+d\d+|\d+)", effects_n))
         atk = sum(int(m) for m in re.findall(r"bonus d attaque \+(-?\d+)", effects_n))
         onhit = sum(float(m) for m in re.findall(r"en cas de coup au but \+(\d+)", effects_n))
@@ -516,6 +581,11 @@ class Enemy:
     defense: int
     rd: int
     fort_save: int
+    attack: int = 0
+    dmg_hit: float = 0.0
+    attacks: int = 1
+    will_save: int = 0
+    ref_save: int = 0
 
 
 def enemy_fort_save(data: Data, level: int) -> int:
@@ -530,9 +600,15 @@ class Char:
     bab: int
     stats: dict[str, int]
     speed_attacks: int
+    vp_per_level: int = 10
+    class_ac: int = 0
+    armor_tier: str = "sans"
+    buff_ac: int = 0
+    buff_rd: int = 0
 
 
-def build_char(data: Data, phase_key: str, preset: str, overrides: dict[str, int], speed_mode: str) -> Char:
+def build_char(data: Data, phase_key: str, preset: str, overrides: dict[str, int],
+               speed_mode: str, armor_tier: str = "sans") -> Char:
     phase = data.phases[phase_key]
     pr = data.presets[preset]
     stats = dict(pr["stats"][phase_key])
@@ -543,7 +619,16 @@ def build_char(data: Data, phase_key: str, preset: str, overrides: dict[str, int
         sp = phase["speed_attacks"]
     else:
         sp = {"none": 0, "knight": 1, "master": 2}[speed_mode]
-    return Char(preset=preset, level=level, bab=bab, stats=stats, speed_attacks=sp)
+    return Char(
+        preset=preset,
+        level=level,
+        bab=bab,
+        stats=stats,
+        speed_attacks=sp,
+        vp_per_level=pr.get("vp_per_level", 10),
+        class_ac=pr.get("class_ac", {}).get(phase_key, 0),
+        armor_tier=armor_tier,
+    )
 
 
 # ============================================================================
@@ -615,13 +700,29 @@ def spec_rank_for(feats: Feats, weapon: Weapon, data: Data) -> int:
     return feats.rank("familles", fam)
 
 
+def effective_stats(data: Data, feats: Feats, base_stats: dict[str, int]) -> dict[str, int]:
+    """Applique aux modificateurs de base les bonus des arbres de Spé caractéristique."""
+    stats = dict(base_stats)
+    for carac_key, rank in feats.caracs.items():
+        if rank > 0:
+            cdef = data.feats["caracs"].get(carac_key, {})
+            sname = cdef.get("stat")
+            inc = cdef.get("stat_mod_by_rank", {}).get(str(rank), 0)
+            if sname and inc:
+                stats[sname] = stats.get(sname, 0) + inc
+    return stats
+
+
 def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
-             enemy: Enemy, up_mode: str, sneak_dice: int, sneak_uptime: float) -> dict:
+             enemy: Enemy, up_mode: str, sneak_dice: int, sneak_uptime: float,
+             squad: dict | None = None) -> dict:
     w = data.weapon_by_key[cfg.main]
     off_w = data.weapon_by_key[cfg.off] if cfg.off else None
     phase = data.phases[phase_key]
-    F, D = char.stats.get("FOR", 0), char.stats.get("DEX", 0)
-    I, S = char.stats.get("INT", 0), char.stats.get("SAG", 0)
+    stats = effective_stats(data, feats, char.stats)
+    F, D = stats.get("FOR", 0), stats.get("DEX", 0)
+    C, I = stats.get("CON", 0), stats.get("INT", 0)
+    S, CH = stats.get("SAG", 0), stats.get("CHA", 0)
 
     echani = feats.rank("caracs", "echani")
     gand = feats.rank("caracs", "gand")
@@ -637,12 +738,8 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
         if off_w and off_w.balanced:
             mal[0] += data.model["balanced_bonus"][0]
             mal[1] += data.model["balanced_bonus"][1]
-    elif cfg.mode == "double":
-        mal = data.feats["styles"]["ambidextrie"]["malus_by_rank"]["0"][:]
-        if w.balanced:
-            mal[0] += data.model["balanced_bonus"][0]
-            mal[1] += data.model["balanced_bonus"][1]
     else:
+        # En mode double (Arme haute cadence), le -5/-3/-2/-1 CA remplace le -6/-10 Atq vanilla.
         mal = [0, 0]
 
     # ---- attaque --------------------------------------------------------------
@@ -660,11 +757,15 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
     if matukai >= 1:
         attr_atk += S
 
-    active = {"attacks": 0, "attack": 0, "damage": 0, "range_mult": 1}
+    active = {"attacks": 0, "attack": 0, "damage": 0, "range_mult": 1, "ac": 0}
     if cfg.active != "none":
         active.update(data.feats["actives"][cfg.active]["by_rank"][str(feats.rank("actives", cfg.active))])
-    power_doubled = cfg.active == "power" and cfg.mode in ("dual", "double") \
+    power_doubled = (
+        cfg.active == "power"
+        and not w.ranged
+        and cfg.mode in ("dual", "double")
         and data.feats["actives"]["power"].get("dual_double_doubled", False)
+    )
     power_dmg = active["damage"] * (2 if power_doubled else 1)
     if data.model.get("power_attack_cap"):
         power_dmg = min(power_dmg, data.model["power_attack_cap"])
@@ -682,12 +783,13 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
         dmg = weapon.dmg_avg + up.per_hit
         # multiplicateur de caractéristique
         if weapon.ranged:
+            attr = I if (gand >= 2 and I > D) else D
             if cfg.mode == "twohand":
                 mult = data.feats["styles"]["arme_lourde"]["ranged_mult_by_rank"][str(heavy_r)]
-                attr = (I if (gand >= 2 and I > D) else D)
-                dmg += attr * mult
-            elif gand >= 2:
-                dmg += (I if I > D else D)
+            else:
+                r_mults = data.model.get("ranged_1m_d_mult", [1.0, 0.5])
+                mult = r_mults[1 if is_off else 0]
+            dmg += attr * mult
         else:
             if cfg.mode == "twohand":
                 mult = data.feats["styles"]["arme_lourde"]["melee_mult_by_rank"][str(heavy_r)]
@@ -697,7 +799,7 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
                 mult = 1.0 if not is_off else 0.5
             else:
                 mult = 1.5
-            attr = (D if (echani >= 2 and D > F) else F)
+            attr = D if (echani >= 2 and D > F) else F
             dmg += attr * mult
         # arme haute cadence : +N dégâts par bout
         if cfg.mode == "double" and hc_r:
@@ -773,22 +875,130 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
 
     e_main = expected(d_main, atq_m, rng_m, mult_m, massive_m, sn_m)
     e_off = expected(d_off, atq_o, rng_o, mult_o, massive_o, sn_o) if off_w else 0.0
+    dpr_weapons = n_main * e_main + n_off * e_off
 
-    dpr = n_main * e_main + n_off * e_off
+    # ---- procs de contrôle (Impact / Tactique) et Mutilation (Résonance) ------
+    p_no_ctrl = 1.0
+    ctrl_dur = 0
+    ctrl_dc = 10 + char.level + attr_atk
+    p_fail_fort = save_fail_probability(ctrl_dc, enemy.fort_save)
+    for hw, h_atq, h_rng, h_cnt in ((w, atq_m, rng_m, n_main), (off_w, atq_o, rng_o, n_off)):
+        if hw and hw.family in ("impact", "tactique") and spec_rank_for(feats, hw, data) >= 2 and h_cnt > 0:
+            dur = 1 + (spec_rank_for(feats, hw, data) >= 3)
+            ctrl_dur = max(ctrl_dur, dur)
+            p_one = hit_probability(h_atq, def_eff) * (h_rng / 20.0) * p_fail_fort
+            p_no_ctrl *= (1.0 - p_one) ** h_cnt
+    p_ctrl = 1.0 - p_no_ctrl
+    ctrl_uptime = (1.0 - (1.0 - p_ctrl) ** 2) if ctrl_dur >= 2 else (p_ctrl if ctrl_dur == 1 else 0.0)
+
+    mut_debuff = 0.0
+    p_no_mut = 1.0
+    mut_rank = 0
+    mut_dc = 5 + char.level + attr_atk
+    p_fail_ref = save_fail_probability(mut_dc, enemy.ref_save)
+    for hw, h_atq, h_cnt in ((w, atq_m, n_main), (off_w, atq_o, n_off)):
+        if hw and hw.family == "resonance" and spec_rank_for(feats, hw, data) >= 2 and h_cnt > 0:
+            mut_rank = max(mut_rank, spec_rank_for(feats, hw, data))
+            p_one = hit_probability(h_atq, def_eff) * p_fail_ref
+            p_no_mut *= (1.0 - p_one) ** h_cnt
+    if mut_rank >= 2:
+        p_mut_round = 1.0 - p_no_mut
+        max_pen = 4.0 if mut_rank == 2 else 8.0
+        mut_debuff = min(max_pen, max_pen * p_mut_round)
+
+    # ---- défense et survie du build (CA, RD, Immunité, Esquive, TTD) ----------
+    armor_tier = char.armor_tier
+    armor_def = data.raw["armor_stats"][armor_tier]
+    item_ac = armor_def["item_ac_by_phase"].get(phase_key, 0)
+    upg_ac = armor_def.get("upg_ac_by_phase", {}).get(phase_key, 0)
+    upg_rd = armor_def.get("upg_rd_by_phase", {}).get(phase_key, 0)
+    upg_imm = armor_def.get("upg_imm_by_phase", {}).get(phase_key, 0.0)
+
+    dex_for_ac = S if matukai >= 3 else D
+    ac_dex = dex_for_ac if echani >= 3 else min(dex_for_ac, armor_def["max_dex"])
+
+    style_ac = 0
+    if cfg.mode == "dual":
+        style_ac = data.feats["styles"]["ambidextrie"].get("ac_by_rank", {}).get(str(amb_r), 0)
+    elif cfg.mode == "double":
+        style_ac = data.feats["styles"]["haute_cadence"].get("ac_by_rank", {}).get(str(hc_r), -5)
+
+    active_ac = active.get("ac", 0)
+
+    jugg_r = feats.rank("armures", "juggernaut")
+    blind_r = feats.rank("armures", "blindage")
+    peau_r = feats.rank("armures", "seconde_peau")
+    tough_r = feats.rank("armures", "robustesse")
+
+    armor_feat_ac = 0
+    armor_feat_rd = 0
+    armor_feat_imm = 0.0
+    player_dodge = 0.0
+    shield_mult = 1.0
+
+    if armor_tier == "lourde" and jugg_r > 0:
+        j_def = data.feats["armures"]["juggernaut"]
+        armor_feat_rd = j_def["rd_by_rank"].get(str(jugg_r), 0)
+        armor_feat_imm = j_def["immunity_by_rank"].get(str(jugg_r), 0.0)
+    elif armor_tier == "moyenne" and blind_r > 0:
+        b_def = data.feats["armures"]["blindage"]
+        armor_feat_rd = b_def["rd_by_rank"].get(str(blind_r), 0)
+        armor_feat_ac = b_def["ac_by_rank"].get(str(blind_r), 0)
+        shield_mult = b_def["shield_mult_by_rank"].get(str(blind_r), 1.0)
+    elif armor_tier == "legere" and peau_r > 0:
+        p_def = data.feats["armures"]["seconde_peau"]
+        armor_feat_ac = p_def["ac_by_rank"].get(str(peau_r), 0)
+        player_dodge = p_def["dodge_by_rank"].get(str(peau_r), 0.0)
+
+    nomi_ac = max(0, CH) if feats.rank("caracs", "nomi") >= 3 else 0
+    kraith_rd = max(0, C) if feats.rank("caracs", "kraith") >= 1 else 0
+    tough_rd = data.feats["armures"]["robustesse"]["rd_by_rank"].get(str(tough_r), 0) if tough_r > 0 else 0
+    tough_hp = data.feats["armures"]["robustesse"]["hp_per_level_by_rank"].get(str(tough_r), 0) if tough_r > 0 else 0
+
+    player_ac = (
+        10 + char.class_ac + armor_def["base_ac"] + item_ac + upg_ac
+        + ac_dex + style_ac + active_ac + armor_feat_ac + nomi_ac + char.buff_ac
+    )
+    player_rd = armor_def["native_rd"] + upg_rd + armor_feat_rd + tough_rd + kraith_rd + char.buff_rd
+    imm_cap = data.model.get("immunity_cap", 0.50)
+    player_imm = min(imm_cap, upg_imm + armor_feat_imm)
+
+    player_hp = max(1, (char.vp_per_level + C + tough_hp) * char.level)
+    shield_hp = armor_def.get("shield_hp_by_phase", {}).get(phase_key, 0) * shield_mult
+    player_ehp = player_hp + shield_hp
+
+    def survival_vs(att_attack: int, att_dmg_hit: float, att_attacks: int, allow_ctrl: bool = True) -> dict:
+        if att_attacks <= 0 or att_dmg_hit <= 0:
+            return {"p_enemy_hit": 0.0, "dtps": 0.0, "ttd": float("inf"), "p_miss": 0.0, "active_frac": 1.0}
+        debuff = mut_debuff if allow_ctrl else 0.0
+        eff_atk = att_attack - debuff
+        eff_dmg = max(0.0, att_dmg_hit - debuff)
+        p_e_hit = hit_probability(eff_atk, player_ac)
+        active_frac = (1.0 - ctrl_uptime) if allow_ctrl else 1.0
+        dmg_after = max(0.0, eff_dmg * (1.0 - player_imm) - player_rd)
+        dtps = att_attacks * active_frac * p_e_hit * (1.0 - player_dodge) * dmg_after
+        p_e_miss = 1.0 - p_e_hit * (1.0 - player_dodge)
+        ttd = player_ehp / dtps if dtps > 0 else float("inf")
+        return {"p_enemy_hit": p_e_hit, "dtps": dtps, "ttd": ttd, "p_miss": p_e_miss, "active_frac": active_frac}
+
+    boss_surv = survival_vs(enemy.attack, enemy.dmg_hit, enemy.attacks, allow_ctrl=True)
+    sq_src = squad or data.raw.get("squad_enemies", {}).get(phase_key, {})
+    squad_surv = survival_vs(sq_src.get("attack", 0), sq_src.get("dmg_hit", 0.0), sq_src.get("attacks", 0), allow_ctrl=False)
+
+    thorn_dpr = enemy.attacks * boss_surv["active_frac"] * boss_surv["p_miss"] * max(0, S) if matukai >= 3 else 0.0
+    dpr = dpr_weapons + thorn_dpr
     ttk = enemy.hp / dpr if dpr > 0 else float("inf")
 
-    # ---- procs de contrôle (affichage seulement) --------------------------------
-    proc_txt = ""
-    ctrl_fams = [hw.family for hw in (w, off_w) if hw and hw.family in ("impact", "tactique") and spec_rank_for(feats, hw, data) >= 2]
-    if ctrl_fams:
-        dc = 10 + char.level + attr_atk
-        p_fail = save_fail_probability(dc, enemy.fort_save)
-        p_proc = 1.0 - (1.0 - hit_probability(atq_m, def_eff) * (w.crit_range / 20.0) * p_fail) ** (n_main + n_off)
-        dur = 1 + (spec_rank_for(feats, w, data) >= 3)
-        proc_txt = f"proc contrôle ~{p_proc * 100:.0f}%/rd (DD Vigueur {dc}, {dur} tour(s)) → sournoise possible"
-
+    # ---- texte effets secondaires ---------------------------------------------
+    procs: list[str] = []
+    if ctrl_dur > 0:
+        procs.append(f"proc contrôle ~{p_ctrl * 100:.0f}%/rd (DD Vigueur {ctrl_dc}, {ctrl_dur} tour(s), uptime {ctrl_uptime * 100:.0f}%) → sournoise possible")
     if brk:
-        proc_txt = (proc_txt + " ; " if proc_txt else "") + f"bris d'armure −{brk:g} CA soutenu"
+        procs.append(f"bris d'armure −{brk:g} CA soutenu")
+    if mut_debuff > 0:
+        procs.append(f"Mutilation −{mut_debuff:.1f} Atq/Dég ennemi")
+    if thorn_dpr > 0:
+        procs.append(f"riposte Matukai +{thorn_dpr:.1f} DPR")
 
     return {
         "cfg": cfg,
@@ -798,10 +1008,24 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
         "p_hit": hit_probability(atq_m, def_eff),
         "attacks": n_main + n_off,
         "dmg_hit_net": round(max(d_main - enemy.rd, 0.0) + sn_m, 1),
+        "dpr_weapons": round(dpr_weapons, 1),
+        "dpr_thorns": round(thorn_dpr, 1),
         "dpr": round(dpr, 1),
         "ttk": ttk,
+        "player_ac": player_ac,
+        "player_rd": player_rd,
+        "player_imm": player_imm,
+        "player_dodge": player_dodge,
+        "player_hp": player_hp,
+        "shield_hp": shield_hp,
+        "boss_hit_pct": boss_surv["p_enemy_hit"] * 100,
+        "boss_dtps": boss_surv["dtps"],
+        "boss_ttd": boss_surv["ttd"],
+        "squad_hit_pct": squad_surv["p_enemy_hit"] * 100,
+        "squad_dtps": squad_surv["dtps"],
+        "squad_ttd": squad_surv["ttd"],
         "upgrades": f"main: {up_main.detail}" + (f" | off: {up_off.detail}" if cfg.off else ""),
-        "procs": proc_txt,
+        "procs": " ; ".join(procs),
     }
 
 
@@ -817,6 +1041,20 @@ def verdict(ttk: float) -> str:
     if ttk <= 15:
         return "long (10-15)"
     return "TROP LONG (>15)"
+
+
+def verdict_ttd(ttd: float) -> str:
+    if ttd == float("inf"):
+        return "INVULNÉRABLE (0 subi)"
+    if ttd < 4:
+        return "MORT TROP VITE (<4 rds)"
+    if ttd < 5:
+        return "fragile (4-5)"
+    if ttd <= 10:
+        return "CIBLE ✓ (5-10)"
+    if ttd <= 15:
+        return "solide (10-15)"
+    return "TANKY (>15)"
 
 
 # ============================================================================
@@ -835,11 +1073,12 @@ def run_report(data: Data, feats: Feats, args) -> None:
     buff_ranks, buff_unknown = parse_buffs(data, args.buffs)
     buffs = resolve_buffs(data, buff_ranks, armor_tier, data.phases["late"], args.speed)
     armor_label = data.raw["armor_tiers"][armor_tier]
+    armor_def = data.raw["armor_stats"][armor_tier]
 
     phase_keys = list(data.phases.keys()) if args.phases == "all" else [p.strip() for p in args.phases.split(",")]
 
     print()
-    print("=" * 118)
+    print("=" * 124)
     print(f" DPR CHECK — dons : {args.feats or '(aucun)'}")
     if feats.unknown:
         print(f" ⚠ Dons non reconnus (ignorés) : {', '.join(feats.unknown)}")
@@ -848,7 +1087,8 @@ def run_report(data: Data, feats: Feats, args) -> None:
         print(f" ⚠ Pouvoirs non reconnus (ignorés) : {', '.join(buff_unknown)}")
     print(f" Perso : {data.presets[preset]['label']} | améliorations : {args.upgrades} | "
           f"sournoise : {args.sneak_dice}d6 à {int(args.sneak_uptime * 100)}% des rounds")
-    print(f" Armure portée : {armor_label} (aucun bonus d'armure simulé — sert uniquement à gater les pouvoirs)")
+    print(f" Armure portée : {armor_label} (CA base {armor_def['base_ac']}, DEX max +{armor_def['max_dex']}, "
+          f"RD native {armor_def['native_rd']}, {armor_def['slots']} slot(s) — gâte aussi les pouvoirs)")
     if args.buffs:
         print(f" Pouvoirs demandés : {args.buffs}")
     if buffs["active"]:
@@ -857,33 +1097,53 @@ def run_report(data: Data, feats: Feats, args) -> None:
         print(f" ✗ Bloqués  : {' ; '.join(buffs['blocked'])}  → armure {armor_tier} trop lourde")
     for note in buffs["notes"]:
         print(f" ℹ {note}")
-    print("=" * 118)
+    print("=" * 124)
 
     md_lines: list[str] = []
     for pk in phase_keys:
         phase = data.phases[pk]
-        enemy_raw = data.enemies.get(pk)
+        enemy_raw = data.enemies.get(pk, {})
+        squad_raw = data.raw.get("squad_enemies", {}).get(pk, {})
         if args.enemy:
-            hp, ca, rd = (int(x) for x in args.enemy.split(","))
-            enemy = Enemy("boss custom", hp, ca, rd, enemy_fort_save(data, args.level or phase["level"]))
+            parts = [float(x) for x in args.enemy.split(",")]
+            hp, ca, rd = int(parts[0]), int(parts[1]), int(parts[2])
+            enemy = Enemy(
+                "boss custom", hp, ca, rd,
+                enemy_fort_save(data, args.level or phase["level"]),
+                attack=int(parts[3]) if len(parts) > 3 else enemy_raw.get("attack", 0),
+                dmg_hit=float(parts[4]) if len(parts) > 4 else enemy_raw.get("dmg_hit", 0.0),
+                attacks=int(parts[5]) if len(parts) > 5 else enemy_raw.get("attacks", 1),
+                will_save=enemy_raw.get("will_save", 0),
+                ref_save=enemy_raw.get("ref_save", 0),
+            )
         else:
-            enemy = Enemy("", enemy_raw["hp"], enemy_raw["defense"], enemy_raw["rd"],
-                          enemy_fort_save(data, phase["level"]))
-        char = build_char(data, pk, preset, overrides, "auto")
-        # application des buffs autorisés par l'armure (résolus une fois, hors --speed manuel)
+            enemy = Enemy(
+                "", enemy_raw["hp"], enemy_raw["defense"], enemy_raw["rd"],
+                enemy_fort_save(data, phase["level"]),
+                attack=enemy_raw.get("attack", 0),
+                dmg_hit=enemy_raw.get("dmg_hit", 0.0),
+                attacks=enemy_raw.get("attacks", 1),
+                will_save=enemy_raw.get("will_save", 0),
+                ref_save=enemy_raw.get("ref_save", 0),
+            )
+        char = build_char(data, pk, preset, overrides, "auto", armor_tier=armor_tier)
+        # application des buffs autorisés par l'armure
         buffs = resolve_buffs(data, buff_ranks, armor_tier, phase, args.speed)
         for k in char.stats:
             char.stats[k] += buffs["mod_all"]
         char.stats["FOR"] += buffs["for_add"]
         char.speed_attacks = buffs["attacks"]
+        char.buff_ac = buffs["speed_ac"] + buffs["armor_ac"]
+        char.buff_rd = buffs["barrier_rd"]
         if args.level:
             char.level = args.level
 
+        eff_stats = effective_stats(data, feats, char.stats)
         configs = enumerate_configs(data, feats, args.weapon)
         results = []
         for cfg in configs:
             r = evaluate(cfg, data, feats, char, pk, enemy, args.upgrades,
-                         args.sneak_dice, args.sneak_uptime)
+                         args.sneak_dice, args.sneak_uptime, squad=squad_raw)
             results.append(r)
         results.sort(key=lambda r: r["dpr"], reverse=True)
         if not results:
@@ -892,36 +1152,47 @@ def run_report(data: Data, feats: Feats, args) -> None:
 
         best = results[0]
         tgt = f", {enemy.name}" if enemy.name else " (boss étalon §9)"
-        header = (f" {pk.upper()} (Niv. {char.level}{tgt} : {enemy.hp} PV / CA {enemy.defense} / RD {enemy.rd}) "
-                  f"— BAB {char.bab} | stats " + " ".join(f"{k}{v:+d}" for k, v in char.stats.items() if v))
+        header = (f" {pk.upper()} (Niv. {char.level}{tgt} : {enemy.hp} PV / CA {enemy.defense} / RD {enemy.rd} / "
+                  f"Atq {enemy.attack:+d}, {enemy.attacks}×{enemy.dmg_hit:g}) — BAB {char.bab} | stats "
+                  + " ".join(f"{k}{v:+d}" for k, v in eff_stats.items() if v))
         print("\n" + header)
         print("-" * len(header))
         print(f" 🏆 MEILLEURE CONFIG : {best['label']} | active : {best['active']} | {best['attacks']} att/rd | "
               f"Atq {best['attack_main']:+d} | toucher {best['p_hit'] * 100:.0f}% | "
               f"{best['dmg_hit_net']} dég nets/coup | DPR {best['dpr']} | {best['ttk']:.1f} rounds → {verdict(best['ttk'])}")
+        print(f" 🛡 SURVIE (Boss)    : CA {best['player_ac']} | RD {best['player_rd']} | "
+              f"Imm {best['player_imm'] * 100:.0f}% | Esq {best['player_dodge'] * 100:.0f}% | "
+              f"EHP {best['player_hp']:.0f}+{best['shield_hp']:.0f} | "
+              f"subi {best['boss_dtps']:.1f}/rd ({best['boss_hit_pct']:.0f}% hit) → TTD {best['boss_ttd']:.1f} rds ({verdict_ttd(best['boss_ttd'])})")
+        if squad_raw:
+            print(f" ⚔ SURVIE (3×Set_3) : subi {best['squad_dtps']:.1f}/rd ({best['squad_hit_pct']:.0f}% hit) → TTD {best['squad_ttd']:.1f} rds")
         print(f"    améliorations : {best['upgrades']}")
         if best["procs"]:
             print(f"    effets : {best['procs']}")
 
-        cols = f" {'#':>2} | {'arme [mode]':<42} | {'active':<10} | {'Atq':>4} | {'%':>4} | {'att':>3} | {'dég/hit':>7} | {'DPR':>7} | {'rds':>6} | verdict"
+        cols = f" {'#':>2} | {'arme [mode]':<36} | {'active':<10} | {'Atq':>4} | {'%':>4} | {'att':>3} | {'dég/hit':>7} | {'DPR':>6} | {'TTK':>5} | {'CA':>3} | {'TTD':>5} | verdict"
         print(cols)
         print("-" * len(cols))
         for i, r in enumerate(results[: args.top], 1):
-            print(f" {i:>2} | {r['label'][:42]:<42} | {r['active']:<10} | {r['attack_main']:>+4d} | "
-                  f"{r['p_hit'] * 100:>3.0f}% | {r['attacks']:>3} | {r['dmg_hit_net']:>7.1f} | {r['dpr']:>7.1f} | "
-                  f"{r['ttk']:>6.1f} | {verdict(r['ttk'])}")
+            ttd_s = "  inf" if r["boss_ttd"] == float("inf") else f"{r['boss_ttd']:>5.1f}"
+            print(f" {i:>2} | {r['label'][:36]:<36} | {r['active']:<10} | {r['attack_main']:>+4d} | "
+                  f"{r['p_hit'] * 100:>3.0f}% | {r['attacks']:>3} | {r['dmg_hit_net']:>7.1f} | {r['dpr']:>6.1f} | "
+                  f"{r['ttk']:>5.1f} | {r['player_ac']:>3} | {ttd_s} | {verdict(r['ttk'])}")
 
+        ttd_md = "∞" if best["boss_ttd"] == float("inf") else f"{best['boss_ttd']:.1f}"
         md_lines.append(f"### {pk.upper()} — {best['label']} ({best['active']}) : "
-                        f"**DPR {best['dpr']}** → {best['ttk']:.1f} rounds ({verdict(best['ttk'])})")
+                        f"**DPR {best['dpr']}** → TTK {best['ttk']:.1f} rds ({verdict(best['ttk'])}) | "
+                        f"CA {best['player_ac']} / RD {best['player_rd']} / TTD {ttd_md} rds")
 
-    print("\n" + "-" * 118)
+    print("\n" + "-" * 124)
     print(" Hypothèses : critique confirmé (≈ proba toucher) ; RD boss soustraite par coup après mult ; "
           "Vitesse = attaques main directrice ;")
     print(" 'crit chance +N' du Duel = +N de plage ; Duel = mêlée/mains nues ; arme équilibrée = "
-          f"{data.model['balanced_bonus']} Atq ; mains nues = famille Impact.")
-    print(" Armure : ne donne aucun bonus (CA/RD ignorés), gâte seulement les pouvoirs "
-          "(source WIP Spé Pouvoirs.csv + fallback vanilla — éditable dans dpr_data.json → force_buffs).")
-    print(" Valeurs éditables : tools/dpr_data.json (armes, dons, boss, plafonds, pouvoirs). "
+          f"{data.model['balanced_bonus']} Atq ; mains nues = famille Impact ;")
+    print(" Distance 1M/D = +100% / +50% DEX (ou INT via Gand II) ; plafonds d'upgrades pondérés par slots autorisés.")
+    print(" Armure & Défenses : CA, plafond DEX, RD native, 1/2/1 slots, arbres d'armure, Boucliers & pouvoirs gatés "
+          "(dpr_data.json → armor_stats, force_buffs).")
+    print(" Valeurs éditables : tools/dpr_data.json (armes, dons, armures, boss, plafonds, pouvoirs). "
           "Resync après édition des CSV : --reingest-upgrades / --reingest-pouvoirs.")
     if args.md:
         print("\n## Synthèse (markdown)")
@@ -934,7 +1205,8 @@ def run_report(data: Data, feats: Feats, args) -> None:
 
 def list_feats(data: Data) -> None:
     print("\nDons reconnus (catégorie — nom — alias) :")
-    for cat, cat_fr in (("styles", "Styles"), ("familles", "Spécialisations"), ("caracs", "Caractéristique"), ("actives", "Actives")):
+    for cat, cat_fr in (("styles", "Styles"), ("familles", "Spécialisations"), ("caracs", "Caractéristique"),
+                        ("armures", "Armures & Défenses"), ("actives", "Actives")):
         print(f"\n[{cat_fr}]")
         for key, feat in data.feats.get(cat, {}).items():
             aliases = ", ".join(feat.get("aliases", []))
@@ -954,6 +1226,7 @@ def selftest() -> None:
     assert abs(hit_probability(0, 20) - 0.05) < 1e-9
     assert avg_dice("2d6") == 7.0 and avg_dice("5") == 5.0
     data = Data(json.loads(DATA_FILE.read_text(encoding="utf-8")))
+    assert "gaffi" not in data.weapon_by_key
     feats = parse_feats(data, "Duel III, Spécialisation Arme Laser 3, Coup critique 2, MOD_AMBIDEXTRY_3, Tir rapide")
     assert feats.rank("styles", "duel") == 3
     assert feats.rank("familles", "laser") == 3
@@ -965,6 +1238,28 @@ def selftest() -> None:
     enemy = Enemy("t", 120, 20, 3, 19)
     res = evaluate(Config("lightsaber", None, "single", "none"), data, feats, char, "early", enemy, "cap", 0, 0.0)
     assert res["dpr"] > 0
+    # --- slots d'upgrades par famille ------------------------------------------
+    up_imp = best_upgrades(data, data.weapon_by_key["force_pike"], 26, "cap", data.phases["late"])
+    up_trad = best_upgrades(data, data.weapon_by_key["long_sword"], 26, "cap", data.phases["late"])
+    up_res = best_upgrades(data, data.weapon_by_key["vibroblade"], 26, "cap", data.phases["late"])
+    assert abs(up_imp.damage - 1.5) < 1e-6, up_imp
+    assert abs(up_trad.damage - 5.0) < 1e-6, up_trad
+    assert abs(up_res.damage - 10.0) < 1e-6, up_res
+    # --- distance +100% / +50% DEX (et INT avec Gand II) ----------------------
+    c_sen = build_char(data, "late", "sentinelle", {}, "auto")  # DEX +9, INT +3
+    f_none = parse_feats(data, "")
+    pistol_dmg = data.weapon_by_key["blaster_pistol"].dmg_avg
+    rep_dmg = data.weapon_by_key["repeating"].dmg_avg
+    r_pistol = evaluate(Config("blaster_pistol", None, "single", "none"), data, f_none, c_sen, "late", enemy, "none", 0, 0.0)
+    assert r_pistol["dmg_hit_net"] == round(pistol_dmg + 9.0 - 3, 1), r_pistol
+    r_rep = evaluate(Config("repeating", None, "double", "none"), data, f_none, c_sen, "late", enemy, "none", 0, 0.0)
+    assert r_rep["dmg_hit_net"] == round(rep_dmg + 9.0 - 3, 1), r_rep
+    # En mode double (Arme haute cadence), malus attaque = [0, 0] (plus de -6/-10 vanilla)
+    assert r_rep["attack_main"] == c_sen.bab + 9, r_rep
+    c_int = build_char(data, "late", "sentinelle", {"DEX": 2, "INT": 8}, "auto")
+    f_gand = parse_feats(data, "Chasseur de prime Gand 2")
+    r_gand = evaluate(Config("blaster_pistol", None, "single", "none"), data, f_gand, c_int, "late", enemy, "none", 0, 0.0)
+    assert r_gand["dmg_hit_net"] == round(pistol_dmg + (8 + 1) - 3, 1), r_gand  # +1 mod INT rang II
     # --- armure & buffs -------------------------------------------------------
     assert parse_armor("Robe") == "sans" and parse_armor("lourde") == "lourde"
     ranks, unk = parse_buffs(data, "Vitesse 3, Talent de Force 2, Illumination")
@@ -980,9 +1275,33 @@ def selftest() -> None:
     # illumination ≤ moyenne accorde vitesse+valor malgré le blocage de Vitesse seule
     r2 = resolve_buffs(data, {"illumination": 1}, "moyenne", data.phases["late"], "auto")
     assert r2["attacks"] == 2 and r2["mod_all"] == 3 and not r2["blocked"], r2
+    # plafonnement des rangs en phase early (Illumination bloquée avant Niv. 15, Vitesse max 1)
+    r_early = resolve_buffs(data, {"vitesse": 3, "illumination": 1}, "sans", data.phases["early"], "auto")
+    assert r_early["attacks"] == 1 and r_early["speed_ac"] == 2, r_early
     # fureur ≥ vitesse → retenue (bonus FOR)
     r3 = resolve_buffs(data, {"vitesse": 3, "fureur": 3}, "sans", data.phases["late"], "auto")
-    assert r3["attacks"] == 2 and r3["for_add"] == 3, r3
+    assert r3["attacks"] == 2 and r3["for_add"] == 3 and r3["speed_ac"] == 0, r3
+    # --- arbres d'armures, spé carac défensives & TTD -------------------------
+    e_late = data.enemies["late"]
+    boss_late = Enemy("boss", e_late["hp"], e_late["defense"], e_late["rd"],
+                      enemy_fort_save(data, 26), e_late["attack"], e_late["dmg_hit"], e_late["attacks"],
+                      e_late["will_save"], e_late["ref_save"])
+    c_heavy = build_char(data, "late", "gardien", {}, "auto", armor_tier="lourde")
+    f_jugg = parse_feats(data, "Juggernaut 3, Robustesse 2, Voie du dragon Kraith 1")
+    r_jugg = evaluate(Config("lightsaber", None, "single", "none"), data, f_jugg, c_heavy, "late", boss_late, "cap", 0, 0.0)
+    assert r_jugg["player_rd"] == 4 + 3 + 5 + 2 + 6, r_jugg
+    assert abs(r_jugg["player_imm"] - 0.45) < 1e-9, r_jugg
+    assert r_jugg["boss_ttd"] > 0, r_jugg
+    c_light = build_char(data, "late", "sentinelle", {}, "auto", armor_tier="legere")
+    f_peau = parse_feats(data, "Seconde Peau 3, Techniques Echanis 3")
+    r_peau = evaluate(Config("lightsaber", None, "single", "none"), data, f_peau, c_light, "late", boss_late, "cap", 0, 0.0)
+    assert abs(r_peau["player_dodge"] - 0.30) < 1e-9, r_peau
+    # Echani III supprime le plafond DEX (+9 + 1 = +10 vs max_dex +4)
+    assert r_peau["player_ac"] == 10 + 10 + 5 + 4 + 3 + (9 + 1) + 3, r_peau
+    c_med = build_char(data, "late", "sentinelle", {}, "auto", armor_tier="moyenne")
+    f_med = parse_feats(data, "Blindage de Combat 3")
+    r_med = evaluate(Config("lightsaber", None, "single", "none"), data, f_med, c_med, "late", boss_late, "cap", 0, 0.0)
+    assert r_med["shield_hp"] == 180 and r_med["player_rd"] == 2 + 2 + 5, r_med
     print("selftest OK")
 
 
@@ -995,10 +1314,10 @@ def main() -> None:
     ap.add_argument("--stats", help="Override de modificateurs, ex. \"FOR=5,DEX=9,SAG=7\"")
     ap.add_argument("--phases", default="all", help="early,mid,late ou all")
     ap.add_argument("--level", type=int, help="Niveau perso alternatif (remplace celui de la phase pour les paliers d'améliorations)")
-    ap.add_argument("--enemy", help="Boss custom \"PV,CA,RD\" (ex. 200,26,5)")
+    ap.add_argument("--enemy", help="Boss custom \"PV,CA,RD[,ATQ,DMG,ATT]\" (ex. 200,26,5)")
     ap.add_argument("--armor", default="sans",
                     help="Armure portée : sans | legere | moyenne | lourde (défaut : sans = robe Jedi). "
-                         "Aucun bonus d'armure simulé — gâte seulement les pouvoirs de la Force utilisables")
+                         "Gâte les pouvoirs de la Force et simule CA, plafond DEX, RD native, boucliers et arbres d'armure")
     ap.add_argument("--buffs", default="",
                     help="Pouvoirs de la Force du build, ex. \"Vitesse 3,Talent de Force 2,Illumination\" — "
                          "appliqués uniquement si l'armure les autorise (voir dpr_data.json → force_buffs)")
@@ -1007,7 +1326,7 @@ def main() -> None:
                          "(0/1/2, comme le contrat §9) ou rang du buff Vitesse/Fureur ; "
                          "none/knight/master : override manuel qui bypass le gating d'armure")
     ap.add_argument("--upgrades", default="cap", choices=["cap", "vanilla", "none"],
-                    help="cap : plafonds actés +2/+5/+10 ; vanilla : meilleurs items du CSV ; none")
+                    help="cap : plafonds actés +2/+5/+10 pondérés par slots ; vanilla : meilleurs items du CSV ; none")
     ap.add_argument("--sneak-dice", type=int, default=0, help="Dés d'Attaque sournoise de classe (ex. 4 pour 4d6)")
     ap.add_argument("--sneak-uptime", type=float, default=0.0, metavar="FRAC",
                     help="Fraction des rounds où la sournoise s'applique (0..1, ex. 0.3 cible contrôlée)")
@@ -1032,9 +1351,10 @@ def main() -> None:
         return
     if args.list_weapons:
         for w in data.weapons:
+            slots_str = f"slots={w.slots}" + (f"({','.join(w.allowed_slots)})" if w.allowed_slots else "")
             print(f"  {w.key:<18} {w.name:<32} famille={w.family or '—':<15} port={w.wield:<3} "
-                  f"{'dist' if w.ranged else 'mêlée'} dég={w.dmg_avg:>4} plage={w.crit_range} x{w.crit_mult}"
-                  f"{' équilibrée' if w.balanced else ''}")
+                  f"{'dist' if w.ranged else 'mêlée'} dég={w.dmg_avg:>4} plage={w.crit_range} x{w.crit_mult} "
+                  f"{slots_str}{' équilibrée' if w.balanced else ''}")
         return
     if args.reingest_upgrades is not None:
         path = Path(args.reingest_upgrades)

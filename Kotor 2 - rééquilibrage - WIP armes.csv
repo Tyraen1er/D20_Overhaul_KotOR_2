@@ -1,58 +1,61 @@
-Vanilla type d'arme,Damage,Range,Critical Threat,Bonus,Catégorie,Maniement,Changement (mod)
-Blaster rifle,,,,,,,
-Blaster carbines,Energy 1-12,25m,"20-20,x2",,Assaut,2M,
-Blaster rifles,Energy 1-12,28m,"19-20,x2",,Lourde,2M,
-Bowcasters,Energy 1-10,28m,"19-20,x3",,Lourde,2M,
-Repeating blasters,Energy 2-12,28m,"20-20,x2",,Assaut,D,
-Lourde repeating blasters,Energy 3-22,28m,"20-20,x2",,Lourde,D,
-Disruptor rifles,Unstoppable 1-10,28m,"18-20,x2",,Assassin,2M,
-Ion rifles,Ion 1-10,28m,"20-20,x3",Ion: +1-10 vs. Droid,Tactique,2M,
-Sonic rifles,Sonic 1-10,28m,"20-20,x2",On Hit: AD Dex DC 14,Tactique,2M,
-Blaster Rifle (craftable),Energy 1-12,28m,"19-20,x2",,Lourde,2M,
-Repeating Blaster Rifle (craftable),Energy 2-12,28m,"20-20,x2",,Assaut,D,
-Disruptor Rifle (craftable),Unstoppable 1-10,28m,"18-20,x2",,Assassin,2M,
-Blaster pistol,,,,,,,
-Blaster pistols,"Energy, 1-8",23m,"20-20,x2",,Assaut,1M,
-Lourde blasters,"Energy, 1-10",23m,"20-20,x2",,Lourde,1M,
-Hold out blasters,"Energy, 1-4",23m,"19-20,x2",Massive Criticals: +1-4,Assassin,1M,
-Disruptor pistols,"Unstoppable, 1-6",23m,"18-20,x2",,Assassin,1M,
-Ion blasters,"Ion, 1-6",17m,"20-20,x3",Ion: +1-10 vs. Droid,Tactique,1M,
-Sonic pistols,"Sonic, 1-4",17m,"20-20,x2",On Hit: AD Dex DC 14,Tactique,1M,
-Blaster Pistol (Craftable),Energy 1-8,23m,"20-20,x2",,Assaut,1M,
-Hold Out Blaster (Craftable),Energy 1-4,23m,"19-20,x2",Massive Criticals: +1-4,Assassin,1M,
-Disruptor Pistol (Craftable),Unstoppable 1-6,23m,"18-20,x2",,Assassin,1M,
-Melee Weapon,,,,,,,
-Unarmed,Physical 1-3,,"20-20,x2",,Armes d'impact,1M,
-Stun batons,Bludgeoning 1-1,,"20-20,x2",,Armes d'impact,1M (balanced),
-Short swords,Piercing 1-6,,"20-20,x2",,Traditionnelle,1M (balanced),
-Vibroblades,Piercing 1-10,,"19-20,x2",,Arme à résonance,1M (balanced),
-Long swords,Slashing 1-12,,"20-20,x2",,Traditionnelle,1M,
-Gamorrean battleaxes,Slashing 1-12,,"20-20,x2",,Traditionnelle,2M,
-Vibroswords,Slashing 2-12,,"19-20,x2",,Arme à résonance,2M,
-Quarterstaffs,Bludgeoning 1-6,,"20-20,x2",,Armes d'impact,D (balanced),
-Force pikes,Bludgeoning 2-12,,"20-20,x2",,Armes d'impact,2M,
-Double-Bladed Sword,Slashing 2-12,,"20-20,x2",,Traditionnelle,D (balanced),
-Vibro double-blades,Slashing 2-16,,"20-20,x2",,Arme à résonance,D (balanced),
-Wookie warblades,Slashing 1-10,,"20-20,x2",,Traditionnelle,D,
-Gaffi sticks,Piercing 1-8,,"20-20,x2",,,,
-Short swords (craftable),Piercing 1-6,,"20-20,x2",,Traditionnelle,,
-Long swords (craftable),Slashing 1-12,,"20-20,x2",,Traditionnelle,,
-Vibroswords (craftable),Slashing 2-12,,"19-20,x2",,Arme à résonance,,
-Vibro double-blades (craftable),Slashing 2-16,,"20-20,x2",,Arme à résonance,,
-Short light Saber,Energy 2-16,,"19-20,x2",,Laser,1M (balanced),
-Light Saber,Energy 2-20,,"19-20,x2",,Laser,1M,
-Double Light Saber,Energy 2-24,,"20-20,x2",,Laser,D (balanced),
-Wrist launcher & Rockets,,,,,,,
-Wrist launcher,,25m,,,consumable,none,
-Rockets,Varies (20-60),25m,,,consumable,none,
-Grenades,,,,,consumable,none,
-Fragmentation grenades,Physical 20,25m,,DC 15 Refl half,consumable,none,
-Stun grenades,,25m,,Stun 9s (DC 15 Will),consumable,none,
-Thermal detonators,Energy 60,25m,,DC 15 Refl half,consumable,none,
-Poison grenades,Poison,25m,,Poison 12s (DC 15 Fort),consumable,none,
-Flash grenades,,25m,,Blind (DC 15 Refl),consumable,none,
-Sonic grenades,Sonic 20,25m,,AD Dex -6 30s (DC 15 Refl),consumable,none,
-Adhesive grenades,,25m,,Entangle 15s (DC 15 Refl),consumable,none,
-Cryoban grenades,Cold 30,25m,,Freeze 6s (DC 15 Refl half),consumable,none,
-Fire grenades,Fire 40,25m,,DC 15 Refl half,consumable,none,
-Ion grenades,Ion 20,25m,,+40 vs Droid/Shield (DC 15 Refl),consumable,none,
+﻿Vanilla type d'arme,Damage,Range,Critical Threat,Bonus,Catégorie,Maniement,Upgrade possible (vanilla),Changement (mod),Règle du jeu de base (sans feats)
+Blaster rifle,-,-,-,-,-,-,-,Viseur < Cellule < Chambrage,-
+Blaster carbines,Energy 1-10,25m,"20-20,x2",,Assaut,2M,Aucune,"améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 1-10 (5.5), 20-20 x2",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Blaster rifles,Energy 1-12,28m,"19-20,x2",,Pénétrant,2M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 1-12 (6.5), 19-20 x2",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Bowcasters,Energy 1-10,28m,"20-20,x3",,Pénétrant,2M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 1-10 (5.5), 20-20 x3",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Repeating blasters,Energy 2-13,28m,"20-20,x2",,Assaut,D,"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 2-13 (7.5), 20-20 x2","Arme à répétition : +100 %/+50 % DEX, malus natif de -5 CA (supprime le malus d'attaque à 2 armes vanilla)"
+Lourde repeating blasters,Energy 2-16,28m,"20-20,x2",,Pénétrant,D,"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 2-16 (9.0), 20-20 x2","Arme à répétition : +100 %/+50 % DEX, malus natif de -5 CA (supprime le malus d'attaque à 2 armes vanilla)"
+Disruptor rifles,Unstoppable 1-10,28m,"19-20,x2",,Assassin,2M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur, Cellule d'énergie | Calibrage : Unstoppable 1-10 (5.5), 19-20 x2",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Ion rifles,Ion 1-12,28m,"19-20,x3",Ion: +1-10 vs. Droid,Tactique,2M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur | Calibrage : Ion 1-12 (6.5), 19-20 x3",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Sonic rifles,Sonic 2-12,28m,"18-20,x2",On Hit: AD Dex DC 14,Tactique,2M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur | Calibrage : Sonic 2-12 (7.0), 18-20 x2",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Blaster Rifle (craftable),Energy 1-12,28m,"19-20,x2",,Pénétrant,2M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 1-12 (6.5), 19-20 x2",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Repeating Blaster Rifle (craftable),Energy 2-13,28m,"20-20,x2",,Assaut,D,"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 2-13 (7.5), 20-20 x2","Arme à répétition : +100 %/+50 % DEX, malus natif de -5 CA (supprime le malus d'attaque à 2 armes vanilla)"
+Disruptor Rifle (craftable),Unstoppable 1-10,28m,"19-20,x2",,Assassin,2M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur, Cellule d'énergie | Calibrage : Unstoppable 1-10 (5.5), 19-20 x2",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Blaster pistol,-,-,-,-,-,-,-,Viseur < Cellule < Chambrage,-
+Blaster pistols,"Energy, 1-12",23m,"19-20,x2",,Assaut,1M (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 1-12 (6.5), 19-20 x2, balanced",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Lourde blasters,"Energy, 2-16",23m,"19-20,x2",,Pénétrant,1M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 2-16 (9.0), 19-20 x2",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Hold out blasters,"Energy, 1-12",23m,"19-20,x2",Massive Criticals: +1-8,Assassin,1M (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur, Cellule d'énergie | Calibrage : Energy 1-12 (6.5), 19-20 x2, Massive +1d8, balanced",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Disruptor pistols,"Unstoppable, 2-13",23m,"18-20,x2",,Assassin,1M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur, Cellule d'énergie | Calibrage : Unstoppable 2-13 (7.5), 18-20 x2",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Ion blasters,"Ion, 2-16",17m,"19-20,x3",Ion: +1-10 vs. Droid,Tactique,1M (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur | Calibrage : Ion 2-16 (9.0), 19-20 x3, balanced",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Sonic pistols,"Sonic, 2-18",17m,"18-20,x2",On Hit: AD Dex DC 14,Tactique,1M (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur | Calibrage : Sonic 2-18 (10.0), 18-20 x2, balanced",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Blaster Pistol (Craftable),Energy 1-12,23m,"19-20,x2",,Assaut,1M (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Chambrage, Cellule d'énergie, Viseur | Calibrage : Energy 1-12 (6.5), 19-20 x2, balanced",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Hold Out Blaster (Craftable),Energy 1-12,23m,"19-20,x2",Massive Criticals: +1-8,Assassin,1M (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur, Cellule d'énergie | Calibrage : Energy 1-12 (6.5), 19-20 x2, Massive +1d8, balanced",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Disruptor Pistol (Craftable),Unstoppable 2-13,23m,"18-20,x2",,Assassin,1M,"Chambrage, Cellule d'énergie, Viseur","améliorable : Viseur, Cellule d'énergie | Calibrage : Unstoppable 2-13 (7.5), 18-20 x2",Arme 1M distance : +100 % DEX (+50 % main gauche)
+Melee Weapon,-,-,-,-,-,-,-,Poignée < Lame < Cellule,-
+Unarmed,Physical 1-10,,"19-20,x2",,Armes d'impact,1M,Aucune,"Calibrage : Physical 1-10 (5.5 avec progression Spé mains nues), 19-20 x2",Compte comme une arme 1M (bénéficie de la posture Duel de base : dégâts mêlée 150 % FOR)
+Stun batons,Bludgeoning 1-12,,"19-20,x2",,Armes d'impact,1M (balanced),Aucune,"améliorable : Poignée | Calibrage : Bludgeoning 1-12 (6.5), 19-20 x2, balanced",
+Short swords (craftable),Piercing 1-10,,"19-20,x2",,Traditionnelle,1M (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Lame, Poignée | Calibrage : Piercing 1-10 (5.5), 19-20 x2, balanced",
+Vibroblades,Piercing 1-10,,"19-20,x2",,Arme à résonance,1M (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Lame, Poignée, Cellule d'énergie | Calibrage : Piercing 1-10 (5.5), 19-20 x2, balanced",
+Long swords (craftable),Slashing 2-13,,"19-20,x2",,Traditionnelle,1M,"Lame, Poignée, Cellule d'énergie","améliorable : Lame, Poignée | Calibrage : Slashing 2-13 (7.5), 19-20 x2",
+Gamorrean battleaxes,Slashing 2-14,,"20-20,x3",,Traditionnelle,2M,Aucune,"améliorable : Lame, Poignée | Calibrage : Slashing 2-14 (8.0), 20-20 x3",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Vibroswords (craftable),Slashing 2-12,,"19-20,x2",,Arme à résonance,2M,"Lame, Poignée, Cellule d'énergie","améliorable : Lame, Poignée, Cellule d'énergie | Calibrage : Slashing 2-12 (7.0), 19-20 x2",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Quarterstaffs,Bludgeoning 1-10,,"19-20,x2",,Armes d'impact,D (balanced),Aucune,"améliorable : Poignée | Calibrage : Bludgeoning 1-10 (5.5), 19-20 x2, balanced",Arme double : malus natif de -5 CA (supprime le malus d'attaque à 2 armes vanilla)
+Force pikes,Bludgeoning 2-13,,"19-20,x2",,Armes d'impact,2M,Aucune,"améliorable : Poignée | Calibrage : Bludgeoning 2-13 (7.5), 19-20 x2",Arme 2M : dégâts de base 200 % FOR (mêlée) ou 150 % DEX (distance) sans don
+Double-Bladed Sword,Slashing 1-10,,"20-20,x2",,Traditionnelle,D (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Lame, Poignée | Calibrage : Slashing 1-10 (5.5), 20-20 x2, balanced",Arme double : malus natif de -5 CA (supprime le malus d'attaque à 2 armes vanilla)
+Vibro double-blades (craftable),Slashing 1-12,,"20-20,x2",,Arme à résonance,D (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Lame, Poignée, Cellule d'énergie | Calibrage : Slashing 1-12 (6.5), 20-20 x2, balanced",Arme double : malus natif de -5 CA (supprime le malus d'attaque à 2 armes vanilla)
+Wookie warblades,Slashing 1-12,,"20-20,x2",,Traditionnelle,D,Aucune,"améliorable : Lame, Poignée | Calibrage : Slashing 1-12 (6.5), 20-20 x2",Arme double : malus natif de -5 CA (supprime le malus d'attaque à 2 armes vanilla)
+Gaffi sticks,"héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu","","héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu",""
+Short light Saber,Energy 1-12,,"19-20,x2",,Laser,1M (balanced),"Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie","améliorable : Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie | Calibrage : Energy 1-12 (6.5), 19-20 x2, balanced",
+Light Saber,Energy 2-15,,"19-20,x2",,Laser,1M,"Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie","améliorable : Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie | Calibrage : Energy 2-15 (8.5), 19-20 x2",
+Double Light Saber,Energy 2-12,,"20-20,x2",,Laser,D (balanced),"Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie","améliorable : Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie | Calibrage : Energy 2-12 (7.0), 20-20 x2, balanced",Arme double : malus natif de -5 CA (supprime le malus d'attaque à 2 armes vanilla)
+Wrist launcher & Rockets,-,-,-,-,-,-,-,-,-
+Wrist launcher,,25m,,,consumable,none,Aucune,,
+Rockets,Varies (20-60),25m,,,consumable,none,Aucune,,
+Grenades,,,,,consumable,none,,,
+Fragmentation grenades,Physical 20,25m,,DC 15 Refl half,consumable,none,Aucune,,
+Stun grenades,,25m,,Stun 9s (DC 15 Will),consumable,none,Aucune,,
+Thermal detonators,Energy 60,25m,,DC 15 Refl half,consumable,none,Aucune,,
+Poison grenades,Poison,25m,,Poison 12s (DC 15 Fort),consumable,none,Aucune,,
+Flash grenades,,25m,,Blind (DC 15 Refl),consumable,none,Aucune,,
+Sonic grenades,Sonic 20,25m,,AD Dex -6 30s (DC 15 Refl),consumable,none,Aucune,,
+Adhesive grenades,,25m,,Entangle 15s (DC 15 Refl),consumable,none,Aucune,,
+Cryoban grenades,Cold 30,25m,,Freeze 6s (DC 15 Refl half),consumable,none,Aucune,,
+Fire grenades,Fire 40,25m,,DC 15 Refl half,consumable,none,Aucune,,
+Ion grenades,Ion 20,25m,,+40 vs Droid/Shield (DC 15 Refl),consumable,none,Aucune,,
