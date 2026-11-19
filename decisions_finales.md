@@ -4,13 +4,13 @@ Ce document est le **contrat de game design** : chaque décision actée y figure
 Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les notes d'implémentation sont dans **[`decisions_annexes.md`](decisions_annexes.md)**.
 
 > **Hiérarchie des sources (README §0)** : les CSV `Kotor 2 - rééquilibrage - *.csv` sont la référence opérationnelle côté utilisateur — ce contrat en est la **consolidation**. En cas de divergence, les CSV font foi ; ce document doit alors être resynchronisé.
-> **Dernière grosse consolidation : 18/11/2026** (scaling DEX `100 % / 50 %` à distance 1M/D, hiérarchie des slots d'upgrades par famille d'arme, slot unique sur armures légères/lourdes ; arbres d'armures le 17/11 ; refonte postures/spé d'arme/spé carac le 15/11/2026). Journal des arbitrages : annexes §9.
+> **Dernière grosse consolidation : 19/11/2026** (cloisonnement strict des rôles par slot d'amélioration d'arme, *Tir d'Assaut* verrouillé à 2 slots, scaling des DD fixes grenades/fléchettes/armes ; scaling DEX `100 % / 50 %` et armures le 18/11 ; arbres d'armures le 17/11 ; refonte postures/spé d'arme/spé carac le 15/11/2026). Journal des arbitrages : annexes §9.
 
 | Domaine | Décision (résumé) | Détail |
 | :--- | :--- | :---: |
 | Progression des classes | Symétrie inverse Combattants ↔ Mages (dons ↔ pouvoirs) | §1 |
 | Pouvoirs de la Force | Aucun ajout ; nerf du haut du panier, buff des alternatives, restauration via Métamagie | §2 |
-| Établi & Boss | Plafonds d'amélioration `+2/+5/+10`, RD des boss `3/7/12`, combats de 5–10 rounds | §3 |
+| Établi & Boss | Plafonds `+2/+5/+10`, cloisonnement strict des rôles par slot (1 seul slot de dégâts bruts par catégorie), RD boss `3/7/12`, combats 5–10 rounds | §3 |
 | Postures & spécialisations d'armes | 4 postures (Duel, Ambidextrie, Arme Lourde, Arme haute cadence) × 8 familles (4 mêlée + 4 tir) ; dons vanilla Duel/TWF/Finesse/Focus/Spec **supprimés** | §4 |
 | Spécialisations de caractéristique | 6 arbres exclusifs (FOR, DEX, CON, INT, SAG, CHA) — un par caractéristique, ordre canonique | §5 |
 | Architecture de dons | Posture (3) + famille (3) + spé carac (3) + défenses ; budgets 21/16/13 (socle à réarbitrer) | §6 |
@@ -45,8 +45,12 @@ Symétrie inverse stricte entre Combattants et Mages :
 **A. Plafond des améliorations d'armes** (pièces `u_r_*`, `u_m_*`, `u_l_*` retravaillées — inventaire de référence : CSV *WIP Améliorations*, 226 pièces) :
 - Early (Niv. 1–10, Mk I) : max **`+2` dégâts moyens/coup** • Mid (Niv. 11–18, Mk II) : max **`+5`** • Late (Niv. 19+, Mk III) : max **`+10`** *(valeurs max pour une arme disposant de tous ses emplacements d'amélioration).*
 - **Slots autorisés par famille d'arme** (*WIP armes.csv*, via hiérarchie `UpgradeLevel`) :
-  - **Mêlée (`Poignée < Lame < Cellule`)** : *Mains nues* (0 slot) · *Impact* (1 : Poignée) · *Traditionnelle* (2 : Poignée, Lame) · *Résonance* (3 : Poignée, Lame, Cellule) · *Laser* (Cristal de couleur + Cristal d'amélioration + Émetteur + Lentille + Cellule). *Bâton Gaffi* retiré du jeu (héritage KotOR 1).
-  - **Distance (`Viseur < Cellule < Chambrage`)** : *Tir Tactique* (1 : Viseur) · *Tir Assassin* (2 : Viseur, Cellule) · *Tir d'Assaut & Tir Pénétrant* (3 : Viseur, Cellule, Chambrage).
+  - **Mêlée (`Poignée < Lame < Cellule`)** : *Mains nues* (0 slot) · *Impact* (1 : Poignée) · *Traditionnelle* (2 : Poignée, Lame) · *Résonance* (3 : Poignée, Lame, Cellule) · *Laser* (Cristal de couleur + 2 Cristaux d'amélioration + Émetteur + Lentille + Cellule). *Bâton Gaffi* retiré du jeu (héritage KotOR 1).
+  - **Distance (`Lunette < Pack d'énergie < Chambrage`)** : *Tir Tactique* (1 : Lunette) · ***Tir d'Assaut* & *Tir Assassin*** (2 : Lunette, Pack) · *Tir Pénétrant* (3 : Lunette, Pack, Chambrage). *(Tir d'Assaut verrouillé à 2 slots le 19/11 : combiné au `+1 Atq/round` de Spé III, le Chambrage écraserait Tir Pénétrant.)*
+- **Cloisonnement strict des rôles par emplacement** (acté le 19/11 — interdit le cumul de dégâts bruts sur plusieurs slots et amplifie l'identité de chaque famille d'armes) :
+  - **Mêlée** : **Poignée** = `+Attaque` / `+CA` uniquement (0 dégât) · **Lame** = `Acéré`, `Critiques massifs`, *On-Hit* scalés, `vs Droïdes` (0 dégât brut régulier) · **Cellule** *(Résonance seule)* = **seul slot à dégâts réguliers** (physiques/élémentaires).
+  - **Distance** : **Lunette** = `+Attaque`, `Acéré`, ***On-Hit* scalés** (réintroduits sur les lunettes, 0 dégât) · **Pack d'énergie** = `Critiques massifs`, `Ion / vs Droïdes & Boucliers`, ou léger bonus constant (`+1..+3` max) · **Chambrage** *(Tir Pénétrant seul)* = **seul slot à gros dégâts bruts**.
+  - **Sabre Laser** : **Émetteur** = `+CA`, `Parade de blasters`, ***On-Hit* scalés** (réintroduits sur les émetteurs, 0 dégât) · **Lentille** = `+Attaque`, `Acéré`, `Critiques massifs` (0 dégât régulier) · **Cellule** = **seul slot à dégâts réguliers du sabre** · **Cristaux (×2 + Cristal personnel)** = `+Caractéristiques` (plafonnées), `Régénération PV/PF`, `+Attaque`, `Parade`, `vs Alignement/Droïdes` (0 dégât brut générique).
 - **Principe de compensation** : l'absence de `Cellule` / `Chambrage` sur les familles à 1 ou 2 slots plafonne leurs upgrades plus bas à l'établi, en échange de **dégâts de base plus élevés, d'une plage de critique élargie ou d'un multiplicateur de critique supérieur**.
 
 **B. Boss** :
