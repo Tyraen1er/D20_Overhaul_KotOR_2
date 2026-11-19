@@ -10,7 +10,7 @@ Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les
 | :--- | :--- | :---: |
 | Progression des classes | Symétrie inverse Combattants ↔ Mages (dons ↔ pouvoirs) | §1 |
 | Pouvoirs de la Force | Aucun ajout ; nerf du haut du panier, buff des alternatives, restauration via Métamagie | §2 |
-| Établi & Boss | Plafonds `+2/+5/+10`, cloisonnement strict des rôles par slot (1 seul slot de dégâts bruts par catégorie), RD boss `3/7/12`, combats 5–10 rounds | §3 |
+| Établi & Boss | Plafonds `+2/+5/+10`, cloisonnement strict des rôles par slot (1 seul slot de dégâts bruts par catégorie), RD boss **`2/5/8`**, combats 5–10 rounds | §3 |
 | Postures & spécialisations d'armes | 4 postures (Duel, Ambidextrie, Arme Lourde, Arme haute cadence) × 8 familles (4 mêlée + 4 tir) ; dons vanilla Duel/TWF/Finesse/Focus/Spec **supprimés** | §4 |
 | Spécialisations de caractéristique | 6 arbres exclusifs (FOR, DEX, CON, INT, SAG, CHA) — un par caractéristique, ordre canonique | §5 |
 | Architecture de dons | Posture (3) + famille (3) + spé carac (3) + défenses ; budgets Niv. 30 : **22 / 18 / 15** dons (pouvoirs **12 / 16 / 24**), gating par classe/prestige sur Rangs II–III | §6 |
@@ -55,7 +55,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 **B. Boss** :
 - **Règle d'or :** aucun boss tué en moins de 4 rounds ; cible **5–10 rounds** (10–15 pour Sion/Traya).
-- **RD passive** des Sous-Boss/Boss (`Set_4`/`Set_5`) : `RD 3` (Early) / `RD 7` (Mid) / `RD 12` (Late).
+- **RD passive** des Sous-Boss/Boss (`Set_4`/`Set_5`) : **`RD 2`** (Early) / **`RD 5`** (Mid) / **`RD 8`** (Late) *(recalibrée le 19/11 pour débloquer les builds multi-coups et les armures sans toucher aux PV des boss)*.
 - **`damagemult` des boss réduit** (`autobalance.2da`) pour que le joueur tienne aussi 5–10 rounds.
 
 ### 4. Postures & Spécialisations d'armes (refonte 13–15/11)
@@ -67,10 +67,10 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 | Posture | Base moddée | Rang I → III | Notes |
 | :--- | :--- | :--- | :--- |
-| **Duel** | Dégâts mêlée `150 % FOR` (règle moteur 1M, main gauche vide) ; **distance 1M `100 % DEX`** | `+2/+4/+6 Atq` et **plage de critique +1/+2/+3** | Prérequis : arme à une main **ou mains nues** ; la plage élargie augmente la fréquence des procs des Spé d'arme (proc = plage/20 par coup) |
+| **Duel** | Dégâts mêlée `150 % FOR` (règle moteur 1M, main gauche vide) ; **distance 1M `150 % DEX`** | `+2/+4/+6 Atq` et **plage de critique +1/+2/+3** | Prérequis : arme à une main **ou mains nues** ; la plage élargie augmente la fréquence des procs des Spé d'arme (proc = plage/20 par coup) |
 | **Ambidextrie** | Dégâts `100 % / 50 % FOR` (mêlée) ou **`100 % / 50 % DEX` (distance)** ; malus 2 armes `-6/-10` (`+2/0` si arme équilibrée en main gauche) | `-6/-6 & +1 CA` → `-4/-4 & +2 CA` → `-2/-2 & +3 CA` | Identité parade/CA ; malus de main gauche remonte mais l'attaque s'achète de la Défense |
-| **Arme Lourde (2M)** | Mêlée `200 % FOR` / distance `150 % DEX` | `+1/+2/+3 Atq` ; mêlée **250→300 % FOR** ; distance **200→250 % DEX** | Prérequis : arme à deux mains non double — mêlée **et** distance |
-| **Arme haute cadence** (ex « Arme Double & Repeating ») | Dégâts `150 % / 50 % FOR` (arme double mêlée) ou **`100 % / 50 % DEX` (répétition distance)**, malus moddé **`-5 CA`** (au lieu de `-6/-10 Atq`) ; **toutes les armes `D` sont équilibrées (`balanced`)** | `+1/+1` & CA `-3` → `+2/+2` & `-2` → `+3/+3` & `-1` | Repeating et lourds à répétition partagent cette posture ; moteur : les repeating **ne sont pas** des armes doubles (`weaponwield 6 ≠ 3`) |
+| **Arme Lourde (2M)** | Mêlée `200 % FOR` / distance `150 % DEX` | `+1/+2/+3 Atq` ; mêlée **`215→235→250 % FOR`** ; distance **`165→185→200 % DEX`** | Prérequis : arme à deux mains non double — mêlée **et** distance |
+| **Arme haute cadence** (ex « Arme Double & Repeating ») | Dégâts `150 % / 50 % FOR` (arme double mêlée) ou **`150 % / 50 % DEX` (répétition distance)**, malus moddé **`-5 CA`** (au lieu de `-6/-10 Atq`) ; **toutes les armes `D` sont équilibrées (`balanced`)** | `+1/+1` & CA `-3` → `+2/+2` & `-2` → `+3/+3` & `-1` | Repeating et lourds à répétition partagent cette posture ; moteur : les repeating **ne sont pas** des armes doubles (`weaponwield 6 ≠ 3`) |
 
 **B. Les 8 familles de spécialisation** (*Spécialisation d'arme.csv* — rang I : `+2 Atq & +2 Dégâts` partout) :
 
@@ -167,15 +167,15 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 
 ### 9. Contrat Mathématique (DPR nets & durées de boss cibles)
 
-Avec établi plafonné (`+2/+5/+10` pondéré par slots de famille), scaling distance `100 % / 50 % DEX` et RD des boss (`3/7/12`) — remappage postures × familles vérifié sous `tools/dpr_check.py` (rangs de dons I/II/III par phase) :
+Avec upgrades cloisonnées (`WIP Améliorations.csv`), armes d20 (`WIP armes.csv`), parité distance (`150 % DEX` en Duel 1M et `150 %/50 %` en `D`) et RD des boss recalibrée (**`2/5/8`**) — vérifié sous `tools/dpr_check.py` le 19/11 :
 
 | Phase (Boss étalon) | Duel (`1M`) | Ambidextrie (`2 armes`) | Arme Lourde (`2M`) | Haute Cadence (`D`) |
 | :--- | :---: | :---: | :---: | :---: |
-| **EARLY** — Niv. 8 (120 PV, CA 20, RD 3) | 14–24 DPR (5–9 rds) | 13–17 DPR (7–9 rds) | 18–24 DPR (5–7 rds) | 23–30 DPR (4–5 rds) |
-| **MID** — Niv. 16 (280 PV, CA 29, RD 7) | 30–62 DPR (4–9 rds) | 31–46 DPR (6–9 rds) | 49–65 DPR (4–6 rds) | 45–64 DPR (4–6 rds) |
-| **LATE** — Niv. 26 (650 PV, CA 44, RD 12) | 61–128 DPR (5–11 rds) | 74–132 DPR (5–9 rds) | 116–161 DPR (4–6 rds) | 104–154 DPR (4–6 rds) |
+| **EARLY** — Niv. 8 (120 PV, CA 20, **RD 2**) | 11–23 DPR (5–11 rds) | 9–18 DPR (7–14 rds) | 14–26 DPR (5–8 rds) | 17–30 DPR (4–7 rds) |
+| **MID** — Niv. 16 (280 PV, CA 29, **RD 5**) | 26–67 DPR (4–11 rds) | 23–65 DPR (4–12 rds) | 36–66 DPR (4–8 rds) | 36–81 DPR (3,5–8 rds) |
+| **LATE** — Niv. 26 (650 PV, CA 44, **RD 8**) | 55–140 DPR (5–12 rds) | 49–150 DPR (4–13 rds) | 86–186 DPR (3,5–8 rds) | 61–170 DPR (4–11 rds) |
 
-*(Note : en `Tactique` 1M, le DPR pur plus bas `61–82` est compensé par les procs de Stun 1–2 tours sur `plage/20`. Côté survie, la cible TTD `5–10+ rounds` est vérifiée de Légère à Lourde, la Bure restant fragile en solo pur à `~4 rounds` sans Nomi/Matukai/contrôle.)*
+*(Survie Late vérifiée sur les 4 armures avec `Déluge de coups 3` + `Robustesse 3` : **Bure** `TTD/TTK = 1,51×` [8,0r / 5,3r], **Légère + Esq. Ballistique** `1,51×` [14,3r / 9,5r], **Moyenne + Armure Tactique** `1,17×` sur 1 bouclier 100×3 [`1,55×` sur 2 boucliers], **Lourde + Juggernaut** `1,54×` [17,2r / 11,2r] et indestructible vs escouades.)*
 
 ### 10. Furtivité : l'attaque en embuscade est un critique confirmé
 

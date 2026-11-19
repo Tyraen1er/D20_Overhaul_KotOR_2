@@ -33,7 +33,7 @@
     "early": {
       "hp": 120,
       "defense": 20,
-      "rd": 3,
+      "rd": 2,
       "attack": 19,
       "dmg_hit": 16.0,
       "attacks": 2,
@@ -43,7 +43,7 @@
     "mid": {
       "hp": 280,
       "defense": 29,
-      "rd": 7,
+      "rd": 5,
       "attack": 28,
       "dmg_hit": 28.0,
       "attacks": 3,
@@ -53,7 +53,7 @@
     "late": {
       "hp": 650,
       "defense": 44,
-      "rd": 12,
+      "rd": 8,
       "attack": 39,
       "dmg_hit": 45.0,
       "attacks": 3,
@@ -212,7 +212,7 @@
       "family": "impact",
       "wield": "1M",
       "ranged": false,
-      "dmg_avg": 5.5,
+      "dmg_avg": 3.5,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": false,
@@ -226,8 +226,8 @@
       "family": "impact",
       "wield": "1M",
       "ranged": false,
-      "dmg_avg": 6.5,
-      "crit_range": 2,
+      "dmg_avg": 4.5,
+      "crit_range": 3,
       "crit_mult": 2,
       "balanced": true,
       "upgrade_pool": "melee",
@@ -242,7 +242,7 @@
       "family": "impact",
       "wield": "D",
       "ranged": false,
-      "dmg_avg": 5.5,
+      "dmg_avg": 4.5,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": true,
@@ -258,9 +258,9 @@
       "family": "impact",
       "wield": "2M",
       "ranged": false,
-      "dmg_avg": 7.5,
-      "crit_range": 2,
-      "crit_mult": 2,
+      "dmg_avg": 9.0,
+      "crit_range": 1,
+      "crit_mult": 3,
       "balanced": false,
       "upgrade_pool": "melee",
       "slots": 1,
@@ -274,8 +274,8 @@
       "family": "traditionnelle",
       "wield": "1M",
       "ranged": false,
-      "dmg_avg": 5.5,
-      "crit_range": 2,
+      "dmg_avg": 4.5,
+      "crit_range": 3,
       "crit_mult": 2,
       "balanced": true,
       "upgrade_pool": "melee",
@@ -291,7 +291,7 @@
       "family": "traditionnelle",
       "wield": "1M",
       "ranged": false,
-      "dmg_avg": 7.5,
+      "dmg_avg": 6.5,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": false,
@@ -308,7 +308,7 @@
       "family": "traditionnelle",
       "wield": "2M",
       "ranged": false,
-      "dmg_avg": 8.0,
+      "dmg_avg": 9.0,
       "crit_range": 1,
       "crit_mult": 3,
       "balanced": false,
@@ -325,8 +325,8 @@
       "family": "traditionnelle",
       "wield": "D",
       "ranged": false,
-      "dmg_avg": 5.5,
-      "crit_range": 1,
+      "dmg_avg": 4.5,
+      "crit_range": 2,
       "crit_mult": 2,
       "balanced": true,
       "upgrade_pool": "melee",
@@ -342,10 +342,10 @@
       "family": "traditionnelle",
       "wield": "D",
       "ranged": false,
-      "dmg_avg": 6.5,
+      "dmg_avg": 5.5,
       "crit_range": 1,
-      "crit_mult": 2,
-      "balanced": false,
+      "crit_mult": 3,
+      "balanced": true,
       "upgrade_pool": "melee",
       "slots": 2,
       "allowed_slots": [
@@ -359,7 +359,7 @@
       "family": "resonance",
       "wield": "1M",
       "ranged": false,
-      "dmg_avg": 5.5,
+      "dmg_avg": 3.5,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": true,
@@ -377,7 +377,7 @@
       "family": "resonance",
       "wield": "2M",
       "ranged": false,
-      "dmg_avg": 7.0,
+      "dmg_avg": 5.5,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": false,
@@ -395,7 +395,7 @@
       "family": "resonance",
       "wield": "D",
       "ranged": false,
-      "dmg_avg": 6.5,
+      "dmg_avg": 4.5,
       "crit_range": 1,
       "crit_mult": 2,
       "balanced": true,
@@ -413,7 +413,7 @@
       "family": "laser",
       "wield": "1M",
       "ranged": false,
-      "dmg_avg": 6.5,
+      "dmg_avg": 7.0,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": true,
@@ -432,7 +432,7 @@
       "family": "laser",
       "wield": "1M",
       "ranged": false,
-      "dmg_avg": 8.5,
+      "dmg_avg": 9.0,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": false,
@@ -451,7 +451,7 @@
       "family": "laser",
       "wield": "D",
       "ranged": false,
-      "dmg_avg": 7.0,
+      "dmg_avg": 9.0,
       "crit_range": 1,
       "crit_mult": 2,
       "balanced": true,
@@ -470,16 +470,15 @@
       "family": "assaut",
       "wield": "1M",
       "ranged": true,
-      "dmg_avg": 6.5,
+      "dmg_avg": 5.5,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": true,
       "upgrade_pool": "ranged",
-      "slots": 3,
+      "slots": 2,
       "allowed_slots": [
         "Lunette",
-        "Pack",
-        "Chambre"
+        "Pack"
       ]
     },
     {
@@ -488,7 +487,7 @@
       "family": "penetrant",
       "wield": "1M",
       "ranged": true,
-      "dmg_avg": 9.0,
+      "dmg_avg": 5.5,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": false,
@@ -506,7 +505,7 @@
       "family": "assassin",
       "wield": "1M",
       "ranged": true,
-      "dmg_avg": 6.5,
+      "dmg_avg": 4.5,
       "crit_range": 2,
       "crit_mult": 2,
       "balanced": true,
@@ -524,7 +523,7 @@
       "family": "assassin",
       "wield": "1M",
       "ranged": true,
-      "dmg_avg": 7.5,
+      "dmg_avg": 5.5,
       "crit_range": 3,
       "crit_mult": 2,
       "balanced": false,
@@ -541,7 +540,7 @@
       "family": "tactique",
       "wield": "1M",
       "ranged": true,
-      "dmg_avg": 9.0,
+      "dmg_avg": 5.5,
       "crit_range": 2,
       "crit_mult": 3,
       "balanced": true,
@@ -557,7 +556,7 @@
       "family": "tactique",
       "wield": "1M",
       "ranged": true,
-      "dmg_avg": 10.0,
+      "dmg_avg": 5.5,
       "crit_range": 3,
       "crit_mult": 2,
       "balanced": true,
@@ -573,16 +572,15 @@
       "family": "assaut",
       "wield": "2M",
       "ranged": true,
-      "dmg_avg": 5.5,
-      "crit_range": 1,
+      "dmg_avg": 6.5,
+      "crit_range": 2,
       "crit_mult": 2,
       "balanced": false,
       "upgrade_pool": "ranged",
-      "slots": 3,
+      "slots": 2,
       "allowed_slots": [
         "Lunette",
-        "Pack",
-        "Chambre"
+        "Pack"
       ]
     },
     {
@@ -627,16 +625,15 @@
       "family": "assaut",
       "wield": "D",
       "ranged": true,
-      "dmg_avg": 7.5,
+      "dmg_avg": 7.0,
       "crit_range": 1,
       "crit_mult": 2,
-      "balanced": false,
+      "balanced": true,
       "upgrade_pool": "ranged",
-      "slots": 3,
+      "slots": 2,
       "allowed_slots": [
         "Lunette",
-        "Pack",
-        "Chambre"
+        "Pack"
       ]
     },
     {
@@ -645,10 +642,10 @@
       "family": "penetrant",
       "wield": "D",
       "ranged": true,
-      "dmg_avg": 9.0,
+      "dmg_avg": 7.0,
       "crit_range": 1,
       "crit_mult": 2,
-      "balanced": false,
+      "balanced": true,
       "upgrade_pool": "ranged",
       "slots": 3,
       "allowed_slots": [
@@ -663,9 +660,9 @@
       "family": "assassin",
       "wield": "2M",
       "ranged": true,
-      "dmg_avg": 5.5,
-      "crit_range": 2,
-      "crit_mult": 2,
+      "dmg_avg": 6.5,
+      "crit_range": 3,
+      "crit_mult": 3,
       "balanced": false,
       "upgrade_pool": "ranged",
       "slots": 2,
@@ -680,7 +677,7 @@
       "family": "tactique",
       "wield": "2M",
       "ranged": true,
-      "dmg_avg": 6.5,
+      "dmg_avg": 7.0,
       "crit_range": 2,
       "crit_mult": 3,
       "balanced": false,
@@ -761,15 +758,15 @@
         "attack_per_rank": 1,
         "melee_mult_by_rank": {
           "0": 2.0,
-          "1": 2.5,
-          "2": 2.75,
-          "3": 3.0
+          "1": 2.15,
+          "2": 2.35,
+          "3": 2.5
         },
         "ranged_mult_by_rank": {
           "0": 1.5,
-          "1": 2.0,
-          "2": 2.25,
-          "3": 2.5
+          "1": 1.65,
+          "2": 1.85,
+          "3": 2.0
         },
         "aliases": [
           "maniement d arme lourde",
@@ -1092,7 +1089,7 @@
         ]
       },
       "blindage": {
-        "label": "Blindage de Combat (Spécialisation Armure moyenne)",
+        "label": "Armure Tactique (Spécialisation Armure moyenne)",
         "max": 3,
         "armor_req": "moyenne",
         "rd_by_rank": {
@@ -1111,6 +1108,7 @@
           "3": 3.0
         },
         "aliases": [
+          "armure tactique",
           "blindage de combat",
           "blindage",
           "specialisation armure moyenne",
@@ -1120,7 +1118,7 @@
         ]
       },
       "seconde_peau": {
-        "label": "Seconde Peau (Spécialisation Armure légère)",
+        "label": "Esquive Ballistique (Spécialisation Armure légère)",
         "max": 3,
         "armor_req": "legere",
         "ac_by_rank": {
@@ -1134,6 +1132,7 @@
           "3": 0.3
         },
         "aliases": [
+          "esquive ballistique",
           "seconde peau",
           "specialisation armure legere",
           "spe armure legere",
@@ -1329,13 +1328,13 @@
       },
       "upg_ac_by_phase": {
         "early": 1,
-        "mid": 1,
-        "late": 2
+        "mid": 2,
+        "late": 3
       },
       "upg_imm_by_phase": {
-        "early": 0.05,
-        "mid": 0.1,
-        "late": 0.15
+        "early": 0.1,
+        "mid": 0.2,
+        "late": 0.3
       },
       "upg_rd_by_phase": {
         "early": 1,
@@ -1343,9 +1342,9 @@
         "late": 2
       },
       "shield_hp_by_phase": {
-        "early": 20,
-        "mid": 35,
-        "late": 60
+        "early": 50,
+        "mid": 50,
+        "late": 100
       }
     },
     "lourde": {
@@ -1556,7 +1555,7 @@
         {
           "resref": "u_m_edge_02",
           "name": "Cellule à décharge sonique T3 (mêlée)",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1576,7 +1575,7 @@
         {
           "resref": "u_m_edge_04",
           "name": "Tranchant en neutronium de base",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1586,7 +1585,7 @@
         {
           "resref": "u_m_edge_05",
           "name": "Tranchant dévaronien modéré",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1596,7 +1595,7 @@
         {
           "resref": "u_m_edge_06",
           "name": "Tranchant en ionite amélioré",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1606,27 +1605,27 @@
         {
           "resref": "u_m_edge_07",
           "name": "Tranchant en mullinine amélioré",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": true,
-          "massive": 0,
+          "massive": 2.5,
           "level_req": 18
         },
         {
           "resref": "u_m_edge_08",
           "name": "Tranchant en neutronium amélioré",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 0,
+          "massive": 2.5,
           "level_req": 20
         },
         {
           "resref": "u_m_edge_09",
           "name": "Tranchant dévaronien important",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1636,7 +1635,7 @@
         {
           "resref": "u_m_edge_10",
           "name": "Tranchant en ionite supérieur",
-          "damage": 3.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1646,17 +1645,17 @@
         {
           "resref": "u_m_edge_11",
           "name": "Tranchant supérieur en mullinine",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": true,
-          "massive": 0,
+          "massive": 3.5,
           "level_req": 26
         },
         {
           "resref": "u_m_edge_12",
           "name": "Tranchant supérieur en neutronium",
-          "damage": 3.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1666,7 +1665,7 @@
         {
           "resref": "u_m_edge_13",
           "name": "Tranchant mortel dévaronien",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1676,7 +1675,7 @@
         {
           "resref": "u_m_edge_14",
           "name": "Tranchant en quadranium",
-          "damage": 3.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1686,7 +1685,7 @@
         {
           "resref": "u_m_edge_15",
           "name": "Tranchant en ostrine",
-          "damage": 2.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": true,
@@ -1850,7 +1849,7 @@
         {
           "resref": "u_m_grip_01",
           "name": "Poignée en agrinium",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1872,7 +1871,7 @@
           "name": "Poignée zabrak",
           "damage": 0,
           "onhit": 0,
-          "attack": 1,
+          "attack": 2,
           "keen": false,
           "massive": 0,
           "level_req": 10
@@ -1900,7 +1899,7 @@
         {
           "resref": "u_m_grip_06",
           "name": "Poignée en agrinium améliorée",
-          "damage": 1.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1920,9 +1919,9 @@
         {
           "resref": "u_m_grip_08",
           "name": "Poignée zabrak améliorée",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 1,
+          "attack": 3,
           "keen": false,
           "massive": 0,
           "level_req": 20
@@ -1950,7 +1949,7 @@
         {
           "resref": "u_m_grip_11",
           "name": "Poignée supérieure en agrinium",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -1970,9 +1969,9 @@
         {
           "resref": "u_m_grip_13",
           "name": "Poignée zabrak supérieure",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 2,
+          "attack": 4,
           "keen": false,
           "massive": 0,
           "level_req": 30
@@ -2196,7 +2195,7 @@
         {
           "resref": "u_r_powe_05",
           "name": "Générateur d'impulsions T2",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2226,7 +2225,7 @@
         {
           "resref": "u_r_powe_08",
           "name": "Générateur d'impulsions T3",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2256,7 +2255,7 @@
         {
           "resref": "u_r_powe_11",
           "name": "Générateur d'impulsions T4",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2266,7 +2265,7 @@
         {
           "resref": "u_r_powe_12",
           "name": "Cellule d'énergie supérieure au rylith",
-          "damage": 3.0,
+          "damage": 2.5,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2276,7 +2275,7 @@
         {
           "resref": "u_r_powe_13",
           "name": "Chargeur d'ions T5",
-          "damage": 3.5,
+          "damage": 3.0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2286,7 +2285,7 @@
         {
           "resref": "u_r_powe_14",
           "name": "Générateur d'impulsions T5",
-          "damage": 3.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2296,7 +2295,7 @@
         {
           "resref": "u_r_powe_15",
           "name": "Cellule d'énergie pure au rylith",
-          "damage": 3.5,
+          "damage": 3.0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2330,7 +2329,7 @@
           "name": "Lunette de visée T1",
           "damage": 0,
           "onhit": 0,
-          "attack": 1,
+          "attack": 0,
           "keen": false,
           "massive": 0,
           "level_req": 10
@@ -2338,11 +2337,11 @@
         {
           "resref": "u_r_targ_04",
           "name": "Lunette de mutilation T1",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 2.5,
+          "massive": 0,
           "level_req": 12
         },
         {
@@ -2352,7 +2351,7 @@
           "onhit": 0,
           "attack": 0,
           "keen": true,
-          "massive": 2.5,
+          "massive": 0,
           "level_req": 14
         },
         {
@@ -2368,7 +2367,7 @@
         {
           "resref": "u_r_targ_07",
           "name": "Lunette de visée T2",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 1,
           "keen": false,
@@ -2378,11 +2377,11 @@
         {
           "resref": "u_r_targ_08",
           "name": "Lunette de mutilation T2",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 0,
+          "attack": 1,
           "keen": false,
-          "massive": 3.5,
+          "massive": 0,
           "level_req": 20
         },
         {
@@ -2392,7 +2391,7 @@
           "onhit": 0,
           "attack": 1,
           "keen": true,
-          "massive": 3.5,
+          "massive": 0,
           "level_req": 22
         },
         {
@@ -2408,7 +2407,7 @@
         {
           "resref": "u_r_targ_11",
           "name": "Lunette de visée T3",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 2,
           "keen": false,
@@ -2418,11 +2417,11 @@
         {
           "resref": "u_r_targ_12",
           "name": "Lunette de mutilation T3",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 0,
+          "attack": 1,
           "keen": false,
-          "massive": 4.5,
+          "massive": 0,
           "level_req": 28
         },
         {
@@ -2430,9 +2429,9 @@
           "name": "Lunette de sniper T4",
           "damage": 0,
           "onhit": 0,
-          "attack": 2,
+          "attack": 1,
           "keen": true,
-          "massive": 4.5,
+          "massive": 0,
           "level_req": 30
         },
         {
@@ -2448,7 +2447,7 @@
         {
           "resref": "u_r_targ_15",
           "name": "Lunette de visée T4",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 2,
           "keen": false,
@@ -2472,7 +2471,7 @@
         {
           "resref": "u_l_emit_02",
           "name": "Émetteur de désordre nerveux",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2482,17 +2481,17 @@
         {
           "resref": "u_l_emit_03",
           "name": "Émetteur au phobium brut",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 2.5,
+          "massive": 0,
           "level_req": 16
         },
         {
           "resref": "u_l_emit_04",
           "name": "Émetteur de parade",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2512,7 +2511,7 @@
         {
           "resref": "u_l_emit_06",
           "name": "Émetteur de désordre nerveux amélioré",
-          "damage": 1.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2522,17 +2521,17 @@
         {
           "resref": "u_l_emit_07",
           "name": "Émetteur au phobium synthétisé",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 3.5,
+          "massive": 0,
           "level_req": 24
         },
         {
           "resref": "u_l_emit_08",
           "name": "Émetteur de parade amélioré",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2552,7 +2551,7 @@
         {
           "resref": "u_l_emit_10",
           "name": "Émetteur de désordre nerveux hightech",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2562,17 +2561,17 @@
         {
           "resref": "u_l_emit_11",
           "name": "Émetteur à alliage au phobium",
-          "damage": 1.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 4.5,
+          "massive": 0,
           "level_req": 30
         },
         {
           "resref": "u_l_emit_12",
           "name": "Émetteur de parade haut de gamme",
-          "damage": 1.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2582,11 +2581,11 @@
         {
           "resref": "u_l_emit_13",
           "name": "Émetteur au phobium raffiné",
-          "damage": 1.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 7.0,
+          "massive": 0,
           "level_req": 30
         }
       ],
@@ -2604,19 +2603,19 @@
         {
           "resref": "u_l_lens_02",
           "name": "Lentille de dragite",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 0,
+          "massive": 2.5,
           "level_req": 14
         },
         {
           "resref": "u_l_lens_03",
           "name": "Lentille de byrhotse",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 1,
+          "attack": 2,
           "keen": false,
           "massive": 0,
           "level_req": 16
@@ -2624,7 +2623,7 @@
         {
           "resref": "u_l_lens_04",
           "name": "Lentille de gemme à rayon",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": true,
@@ -2634,11 +2633,11 @@
         {
           "resref": "u_l_lens_05",
           "name": "Lentille vibratoire",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 0,
+          "massive": 4.5,
           "level_req": 20
         },
         {
@@ -2654,19 +2653,19 @@
         {
           "resref": "u_l_lens_07",
           "name": "Lentille d'adegan",
-          "damage": 2.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 0,
+          "massive": 3.5,
           "level_req": 24
         },
         {
           "resref": "u_l_lens_08",
           "name": "Lentille de byrhotse pur",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 2,
+          "attack": 3,
           "keen": false,
           "massive": 0,
           "level_req": 26
@@ -2674,7 +2673,7 @@
         {
           "resref": "u_l_lens_09",
           "name": "Lentille de gemme à rayon améliorée",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 1,
           "keen": true,
@@ -2684,11 +2683,11 @@
         {
           "resref": "u_l_lens_10",
           "name": "Lentille vibratoire améliorée",
-          "damage": 3.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 0,
+          "massive": 7.0,
           "level_req": 30
         },
         {
@@ -2704,19 +2703,19 @@
         {
           "resref": "u_l_lens_12",
           "name": "Lentille de pontite",
-          "damage": 3.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 1,
           "keen": false,
-          "massive": 0,
+          "massive": 4.5,
           "level_req": 30
         },
         {
           "resref": "u_l_lens_13",
           "name": "Lentille de byrhotse améliorée",
-          "damage": 3.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 2,
+          "attack": 4,
           "keen": false,
           "massive": 0,
           "level_req": 30
@@ -2858,9 +2857,9 @@
         {
           "resref": "u_l_crys_01",
           "name": "Cristal, adegan",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 0,
+          "attack": 1,
           "keen": false,
           "massive": 0,
           "level_req": 10
@@ -2868,7 +2867,7 @@
         {
           "resref": "u_l_crys_02",
           "name": "Cristal, rubat",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 1,
           "keen": false,
@@ -2898,7 +2897,7 @@
         {
           "resref": "u_l_crys_05",
           "name": "Cristal, dragite",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2918,9 +2917,9 @@
         {
           "resref": "u_l_crys_07",
           "name": "Cristal, phond",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 0,
+          "attack": 1,
           "keen": false,
           "massive": 0,
           "level_req": 16
@@ -2928,11 +2927,11 @@
         {
           "resref": "u_l_crys_08",
           "name": "Cristal, bondar",
-          "damage": 1.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
-          "massive": 2.0,
+          "massive": 0,
           "level_req": 17
         },
         {
@@ -2948,9 +2947,9 @@
         {
           "resref": "u_l_crys_10",
           "name": "Cristal, sigil",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 1,
+          "attack": 2,
           "keen": false,
           "massive": 0,
           "level_req": 19
@@ -2958,7 +2957,7 @@
         {
           "resref": "u_l_crys_11",
           "name": "Cristal, jenruax",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -2978,17 +2977,17 @@
         {
           "resref": "u_l_crys_13",
           "name": "Cristal, opila",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
-          "attack": 0,
-          "keen": false,
-          "massive": 3.5,
+          "attack": 1,
+          "keen": true,
+          "massive": 0,
           "level_req": 22
         },
         {
           "resref": "u_l_crys_14",
           "name": "Cristal, éralam",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 2,
           "keen": false,
@@ -3018,7 +3017,7 @@
         {
           "resref": "u_l_crys_17",
           "name": "Cristal, sapith",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 2,
           "keen": false,
@@ -3028,7 +3027,7 @@
         {
           "resref": "u_l_crys_18",
           "name": "Cristal, pontite",
-          "damage": 2.0,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -3038,9 +3037,9 @@
         {
           "resref": "u_l_crys_19",
           "name": "Cristal, upari",
-          "damage": 2.5,
+          "damage": 0,
           "onhit": 0,
-          "attack": 2,
+          "attack": 3,
           "keen": false,
           "massive": 0,
           "level_req": 28
@@ -3048,17 +3047,17 @@
         {
           "resref": "u_l_crys_20",
           "name": "Ultima-perle",
-          "damage": 2.5,
+          "damage": 0,
           "onhit": 0,
-          "attack": 2,
+          "attack": 3,
           "keen": false,
-          "massive": 2.5,
+          "massive": 0,
           "level_req": 29
         },
         {
           "resref": "u_l_crys_21",
           "name": "Cristal, solari",
-          "damage": 2.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 2,
           "keen": false,
@@ -3078,7 +3077,7 @@
         {
           "resref": "u_l_crys_23",
           "name": "Lingot de minerai de Barab",
-          "damage": 2.5,
+          "damage": 0,
           "onhit": 0,
           "attack": 0,
           "keen": false,
@@ -3104,6 +3103,26 @@
           "keen": false,
           "massive": 0,
           "level_req": 30
+        },
+        {
+          "resref": "u_l_crys_21x",
+          "name": "Cristal, qixoni",
+          "damage": 0,
+          "onhit": 0,
+          "attack": 0,
+          "keen": false,
+          "massive": 0,
+          "level_req": 99
+        },
+        {
+          "resref": "u_l_crys_x23",
+          "name": "Cristal, Hurrikaine",
+          "damage": 0,
+          "onhit": 0,
+          "attack": 2,
+          "keen": false,
+          "massive": 0,
+          "level_req": 99
         }
       ]
     }

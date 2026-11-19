@@ -786,9 +786,13 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
             attr = I if (gand >= 2 and I > D) else D
             if cfg.mode == "twohand":
                 mult = data.feats["styles"]["arme_lourde"]["ranged_mult_by_rank"][str(heavy_r)]
-            else:
+            elif cfg.mode == "double":
+                mult = 1.5 if not is_off else 0.5
+            elif cfg.mode == "dual":
                 r_mults = data.model.get("ranged_1m_d_mult", [1.0, 0.5])
                 mult = r_mults[1 if is_off else 0]
+            else:
+                mult = data.model.get("ranged_1m_duel_mult", 1.5)
             dmg += attr * mult
         else:
             if cfg.mode == "twohand":
