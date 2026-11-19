@@ -18,7 +18,7 @@ Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les
 | Armures & Défenses | RD native (Interm. 2 / Lourde 4), upgrades combinées exclusives aux intermédiaires (`UpgradeLevel`), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique III* supprimé | §8 |
 | Contrat mathématique | DPR nets et durées de boss cibles par phase de jeu (colonnes à remapper sur la nouvelle architecture) | §9 |
 | Furtivité | Embuscade : première attaque depuis la furtivité = critique confirmé (simulation scriptée) | §10 |
-| Conventions & principes | DD (`10+Niv+carac directrice` ; base 10 si proc lié à la plage, 5 sinon), procs `plage/20`, ordre canonique des caracs, « les synergies se trouvent, ne se décrivent pas » | §11 |
+| Conventions & principes | DD Spé d'arme (`10`/`5` + Niv + carac), grenades (`10` + Niv + INT), fléchettes/roquettes (`12` + Niv + INT), *On-Hit* armes (`3/5/7/9` + Niv + carac à définir), procs `plage/20`, ordre canonique, « les synergies se trouvent » | §11 |
 
 ---
 
@@ -173,11 +173,15 @@ Avec établi plafonné (`+2/+5/+10` pondéré par slots de famille), scaling dis
 
 ### 11. Conventions & principes transverses
 
-1. **DD des effets sur coup** : `DD = 10 + Niveau attaquant + mod. de la caractéristique directrice de l'arme` — **base 10 si le proc dépend de la plage de menace, base 5 s'il en est indépendant** (règle générale posée le 15/11).
-2. **Procs sur coup** : `chance = plage de menace de l'arme / 20 par coup` (évolue avec la posture Duel) ; ou sauvegarde par coup touché selon la famille.
-3. **Ordre canonique des caractéristiques** : FOR, DEX, CON, INT, SAG, CHA — dans l'ordre des dons comme dans les descriptions.
-4. **« Les synergies doivent être trouvées, pas décrites »** (14/11) : un don dont le texte doit citer les rangs d'un autre don est défectueux par construction ; les descriptions joueurs ne référencent jamais un autre don.
-5. **CSV = couche utilisateur** (parcimonie obligatoire), `decisions_*.md` = couche agents (README §0).
+1. **DD des effets sur coup (Spé d'arme)** : `DD = 10 + Niveau attaquant + mod. de la caractéristique directrice de l'arme` — **base 10 si le proc dépend de la plage de menace, base 5 s'il en est indépendant** (règle générale posée le 15/11).
+2. **DD des consommables & effets *On-Hit* d'armes** (acté le 19/11 — contre l'autobalance `savemult 0,80–1,05`) :
+   - **Grenades** (toutes, dont Poison via sauvegarde scriptée dans `k_sup_grenade.nss`) : **`10 + Niveau + Mod INT`** (cible : ≥ 40 % sur la Vigueur d'un élite `Set_3` à INT 14).
+   - **Fléchettes & Roquettes spécialisées** : **`12 + Niveau + Mod INT`**.
+   - **Effets *On-Hit* des armes** (anciens DD fixes `10 / 14 / 18 / 22`, migrés en script hook `1006`) : table graduée **`3 / 5 / 7 / 9 + Niveau + Mod Carac`** *(caractéristique à définir, probablement au cas par cas lors du rééquilibrage des armes)*.
+3. **Procs sur coup** : `chance = plage de menace de l'arme / 20 par coup` (évolue avec la posture Duel) ; ou sauvegarde par coup touché selon la famille.
+4. **Ordre canonique des caractéristiques** : FOR, DEX, CON, INT, SAG, CHA — dans l'ordre des dons comme dans les descriptions.
+5. **« Les synergies doivent être trouvées, pas décrites »** (14/11) : un don dont le texte doit citer les rangs d'un autre don est défectueux par construction ; les descriptions joueurs ne référencent jamais un autre don.
+6. **CSV = couche utilisateur** (parcimonie obligatoire), `decisions_*.md` = couche agents (README §0).
 
 ---
 
