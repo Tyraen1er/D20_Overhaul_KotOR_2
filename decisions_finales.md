@@ -159,7 +159,7 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 | **Armure Tactique** *(ex Blindage de Combat)* (interm.) | RD 3/-, +1 CA, durée des boucliers +100 %, furtivité sans ceinture (armure moyenne portée) | RD 4/-, +2 CA, efficacité boucliers ×2, accès à Course furtive (armure moyenne portée) | RD 5/-, +3 CA, efficacité boucliers ×3 | Spé ingénieur et craft — boucliers & furtivité |
 | **Esquive Ballistique** *(ex Seconde Peau)* (légère) | Esquive +10 %, +1 CA base | Esquive +20 %, +2 CA base | Esquive +30 %, +3 CA base | Esquiver toutes les attaques *(pas d'augmentation de la CA gagnée via caractéristiques)* |
 
-**RD cumulée max** (Juggernaut III + native lourde 4 + Robustesse II 2) : **RD 11 + 30 % d'immunité** (≈ −53 % sur un coup de 23, ≈ −40 % sur un coup de 68). Cap d'immunité tous dégâts à définir avec les pièces typées (proposition : 40-50 % global).
+**RD cumulée max** (Juggernaut III + native lourde 4 + Robustesse II 2) : **RD 11 + 30 % d'immunité** (≈ −53 % sur un coup de 23, ≈ −40 % sur un coup de 68). **Pas de cap global d'immunité** (acté le 19/11 ; révisable ultérieurement selon les retours joueurs).
 
 **C. Dégradé des pouvoirs sous armure** (`forbiditemmask`) : robe = tous ; légère = vanilla + Vaillance I + Résistance ; interm. = vanilla + Résistance ; lourde = vanilla strict.
 
@@ -201,11 +201,12 @@ Avec upgrades cloisonnées (`WIP Améliorations.csv`), armes d20 (`WIP armes.csv
 
 ## Partie 2 : TODOs & Chantiers Ouverts
 
-1. **[TODO Tests moteur]** (tracés dans la colonne *Détail technique* du WIP Feats.csv) : **T-exclusion** (colonne `exclusion` de feat.2da, mutualité des 6 arbres carac), **T1** (arme double en main gauche — Colosse), **T2** (`reqfeat0` sur baseitem d'arme), **T3** (détection des ratés — événement 1005), **plafond CA** (cumul Nomi/Matukai + Précognition), **grenades** (scripts moddables — Gand III).
-2. **[TODO Budgets §6]** : recomposer le socle de dons avec les nouveaux axes (posture/famille/carac) suite aux suppressions vanilla.
-3. **[TODO Contrat §9]** : ~~remapper les colonnes DPR sur l'architecture postures × familles.~~ **ACTÉ (18/11) dans `dpr_check.py` / `dpr_data.json` (remappage à répercuter si besoin dans `k2balance.py`).**
-4. **[TODO Arbres d'armures §8.B]** : ~~cellules en TODO dans le WIP Feats.csv — revalider les 9 dons.~~ **ACTÉ (17/11) : 9 dons d'armure intégrés dans WIP Feats.csv.**
-5. **[TODO Servante]** : seul son don « CA via la Sagesse » reste concerné par un éventuel remplacement (les `ECHANI_STRIKE` sont confirmés inchangés).
-6. **[TODO Équipement & Loot]** : revoir statistiques et distribution (viabilité des familles d'armes Niv. 1 à 30) — référence : *WIP armes.csv* et *WIP Améliorations.csv*.
-7. **[TODO Craft & Établi]** : refonte totale de toutes les améliorations d'équipement (recettes viables par famille, cohérentes avec les plafonds §3 ; types d'améliorations par famille : Lame+Garde primitives / +Cellule vibrantes / cristaux lasers ; création des sur-couches et sous-couches combinées exclusives aux armures intermédiaires via `UpgradeLevel`).
-8. **[TODO Amélioration de la Furtivité]** : ~~une attaque furtive est-elle un critique ?~~ **ACTÉ (13/11) → §10.**
+1. **[TODO Tests moteur]** (tracés dans la colonne *Détail technique* du `WIP Feats.csv`) : **T-exclusion** (colonne `exclusion` de `feat.2da`, mutualité des 6 arbres carac), **T1** (arme double en main gauche — Gamoréen II), **T2** (`reqfeat0` sur baseitem d'arme), **T3** (détection des ratés — événement 1005), **plafond CA** (cumul Nomi/Matukai). *(Note : ~~grenades scriptables~~ **VÉRIFIÉ** dans `k_sup_grenade.nss`.)*
+2. **[TODO Budgets §6]** : ~~recomposer le socle de dons avec les nouveaux axes.~~ **ACTÉ (19/11) : budgets `22 / 18 / 15` dons (`12 / 16 / 24` pouvoirs) + gating Classe / Prestige / Compagnons.**
+3. **[TODO Contrat §9]** : ~~remapper les colonnes DPR sur l'architecture postures × familles.~~ **ACTÉ (18–19/11) dans `dpr_check.py` / `dpr_data.json`.**
+4. **[TODO Arbres d'armures §8.B]** : ~~revalider les 9 dons.~~ **ACTÉ (17–19/11) : *Juggernaut*, *Armure Tactique*, *Esquive Ballistique* intégrés dans `WIP Feats.csv`.**
+5. **[TODO Servante]** : ~~remplacer son don d'histoire *Prémonition du combat*.~~ **ACTÉ (19/11) : *Prémonition du combat* remplacé par `+10 %` d'esquive en mêlée.**
+6. **[TODO Équipement & Loot]** : ~~calibrage des armes & upgrades cloisonnées.~~ **ACTÉ (19/11) dans `armes.csv` et `Améliorations.csv`.** Reste : définir la stat de scaling des *On-Hit* d'armes au cas par cas + plafonner le Cristal personnel (`qcrystal_1..8`).
+7. **[TODO Craft & Établi]** : ~~recalibrer les seuils de niveau + ajouter armes de base & 24 upgrades doubles.~~ **ACTÉ (19/11) dans `Craft.csv`** : toutes les armes de base non-laser craftables (hors Sabres Laser), 24 upgrades doubles intermédiaires ajoutées, et verrou de niveau `itemcreate.2da` (**`Mk I = Niv. 1 / Mk II = Niv. 10 / Mk III = Niv. 15 / Mk IV-T5 = Niv. 20`**, `1 / 10 / 18` sur lignées 3 tiers ; test moteur de la colonne `level` à confirmer). Reste : nettoyer les anciens tags `[Combinée Interm.]` sur `u_a_over_19..30` / `u_a_unde_19..30`.
+8. **[TODO Ennemis]** : trancher les 4 décisions D1–D4 dans `equilibrage_ennemis.md` (profils défensifs par famille, boucliers ennemis, soins, phases de boss).
+9. **[TODO Pouvoirs]** : ~~valider *Camouflage par la Force* et rééquilibrer les pouvoirs.~~ **ACTÉ (19–20/11) dans `Spé Pouvoirs.csv`** (aucun cap en L3, hiérarchie offensive par armure, Tempête `1d4/Niv` sans drain PF, Mise à mort `1d6/Niv` sans 50 % PV max, Lancer de sabre `1d4/Niv` + Renversement Vig en L1 / ignore RD en L2, Peste sans DD 100, Barrière `3/6/10`, Résistance Énergie `4/8/12` + Poison, Talent `+2/+3/+4`, buffs des pouvoirs faibles).

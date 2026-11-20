@@ -1,223 +1,267 @@
 ﻿ResRef,Nom (FR),Station,Catégorie (groupe 2DA),Compétence (vanilla),Seuil compétence (vanilla),Niveau requis (vanilla),Alignement (vanilla),Coût base .uti,Changement (mod)
 ÉTABLI — ARMURES (SUR/SOUS-COUCHES),,,,,,,,,
-u_a_over_01,Protection contre la chaleur T1,Établi,Armures (sur/sous-couches),Réparation,2,—,—,20,
-u_a_unde_01,Sous-couche anti-environnement T1,Établi,Armures (sur/sous-couches),Démolition,2,—,—,30,
-u_a_over_02,Revêtement 'Armure' T1,Établi,Armures (sur/sous-couches),Réparation,3,—,—,40,
-u_a_unde_02,Sous-couche bio-restaurative T1,Établi,Armures (sur/sous-couches),Premiers secours,3,—,—,55,
-u_a_over_03,Sur-couche atténuatrice T1,Établi,Armures (sur/sous-couches),Discrétion,4,—,—,60,
-u_a_unde_03,Sous-couche fortificatrice T1,Établi,Armures (sur/sous-couches),Sécurité,4,—,—,85,
-u_a_over_04,Revêtement ablatif T1,Établi,Armures (sur/sous-couches),Réparation,5,—,—,85,
-u_a_unde_04,Sous-couche renforçante T1,Établi,Armures (sur/sous-couches),Premiers secours,5,—,—,110,
-u_a_over_05,Protection contre l'énergie T1,Établi,Armures (sur/sous-couches),Démolition,6,—,—,175,
-u_a_unde_05,Sous-couche flexible T1,Établi,Armures (sur/sous-couches),Discrétion,6,—,—,225,
-u_a_over_06,Protection antibalistique T1,Établi,Armures (sur/sous-couches),Démolition,7,—,—,275,
-u_a_unde_06,Sous-couche en duracier T1,Établi,Armures (sur/sous-couches),Vigilance,7,—,—,350,
-u_a_over_07,Plaques liées T1,Établi,Armures (sur/sous-couches),Réparation,8,—,—,475,
-u_a_unde_07,Sous-couche anti-environnement T2,Établi,Armures (sur/sous-couches),Démolition,8,—,—,600,
-u_a_over_08,Plaques lourdes liées T1,Établi,Armures (sur/sous-couches),Réparation,9,—,—,650,
-u_a_unde_08,Sous-couche bio-restaurative T2,Établi,Armures (sur/sous-couches),Premiers secours,9,—,—,750,
-u_a_over_09,Protection contre la chaleur T2,Établi,Armures (sur/sous-couches),Réparation,10,—,—,850,
-u_a_unde_09,Sous-couche fortificatrice T2,Établi,Armures (sur/sous-couches),Sécurité,10,—,—,1000,
-u_a_over_10,Revêtement 'Armure' T2,Établi,Armures (sur/sous-couches),Réparation,11,—,—,1000,
-u_a_unde_10,Sous-couche renforçante T2,Établi,Armures (sur/sous-couches),Premiers secours,11,—,—,1250,
-u_a_over_11,Sur-couche atténuatrice T2,Établi,Armures (sur/sous-couches),Discrétion,12,—,—,1125,
-u_a_unde_11,Sous-couche flexible T2,Établi,Armures (sur/sous-couches),Discrétion,12,—,—,1475,
-u_a_over_12,Revêtement ablatif T2,Établi,Armures (sur/sous-couches),Réparation,13,—,—,1500,
-u_a_unde_12,Sous-couche en duracier T2,Établi,Armures (sur/sous-couches),Vigilance,13,—,—,1950,
-u_a_over_13,Protection contre l'énergie T2,Établi,Armures (sur/sous-couches),Démolition,14,—,—,2000,
-u_a_unde_13,Sous-couche anti-environnement T3,Établi,Armures (sur/sous-couches),Démolition,14,—,—,2650,
-u_a_over_14,Protection antibalistique T2,Établi,Armures (sur/sous-couches),Démolition,15,—,—,2750,
-u_a_unde_14,Sous-couche bio-restaurative T3,Établi,Armures (sur/sous-couches),Premiers secours,15,—,—,3125,
-u_a_over_15,Plaques liées T2,Établi,Armures (sur/sous-couches),Réparation,16,—,—,3500,
-u_a_unde_15,Sous-couche fortificatrice T3,Établi,Armures (sur/sous-couches),Sécurité,16,—,—,4025,
-u_a_over_16,Plaques lourdes liées T2,Établi,Armures (sur/sous-couches),Réparation,17,—,—,4500,
-u_a_unde_16,Sous-couche renforçante T3,Établi,Armures (sur/sous-couches),Premiers secours,17,—,—,5900,
-u_a_over_17,Protection contre la chaleur T3,Établi,Armures (sur/sous-couches),Réparation,18,—,—,6000,
-u_a_unde_17,Sous-couche flexible T3,Établi,Armures (sur/sous-couches),Discrétion,18,—,—,6550,
-u_a_over_18,Revêtement 'Armure' T3,Établi,Armures (sur/sous-couches),Réparation,19,—,—,7500,
-u_a_unde_18,Sous-couche en duracier T3,Établi,Armures (sur/sous-couches),Vigilance,19,—,—,8750,
-u_a_over_19,Sur-couche atténuatrice T3,Établi,Armures (sur/sous-couches),Discrétion,20,—,—,9000,
-u_a_unde_19,Sous-couche anti-environnement T4,Établi,Armures (sur/sous-couches),Démolition,20,—,—,9925,
-u_a_over_20,Revêtement ablatif T3,Établi,Armures (sur/sous-couches),Réparation,21,—,—,10125,
-u_a_unde_20,Sous-couche bio-restaurative T4,Établi,Armures (sur/sous-couches),Premiers secours,21,—,—,11785,
-u_a_over_21,Protection contre l'énergie T3,Établi,Armures (sur/sous-couches),Démolition,22,—,—,12250,
-u_a_unde_21,Sous-couche fortificatrice T4,Établi,Armures (sur/sous-couches),Sécurité,22,—,—,13750,
-u_a_over_22,Protection antibalistique T3,Établi,Armures (sur/sous-couches),Démolition,23,—,—,14250,
-u_a_unde_22,Sous-couche renforçante T4,Établi,Armures (sur/sous-couches),Premiers secours,23,—,—,15750,
-u_a_over_23,Plaques liées T3,Établi,Armures (sur/sous-couches),Réparation,24,—,—,5400,
-u_a_unde_23,Sous-couche flexible T4,Établi,Armures (sur/sous-couches),Discrétion,24,—,—,17555,
-u_a_over_24,Plaques lourdes liées T3,Établi,Armures (sur/sous-couches),Réparation,25,—,—,6100,
-u_a_unde_24,Sous-couche en duracier T4,Établi,Armures (sur/sous-couches),Vigilance,25,—,—,19685,
-u_a_over_25,Protection contre la chaleur T4,Établi,Armures (sur/sous-couches),Réparation,26,—,—,19250,
-u_a_unde_25,Sous-couche anti-environnement T5,Établi,Armures (sur/sous-couches),Démolition,26,—,—,20995,
-u_a_over_26,Revêtement 'Armure' T4,Établi,Armures (sur/sous-couches),Réparation,27,—,—,21250,
-u_a_unde_26,Sous-couche bio-restaurative T5,Établi,Armures (sur/sous-couches),Premiers secours,27,—,—,22755,
-u_a_over_27,Sur-couche atténuatrice T4,Établi,Armures (sur/sous-couches),Discrétion,28,—,—,22500,
-u_a_unde_27,Sous-couche fortificatrice T5,Établi,Armures (sur/sous-couches),Sécurité,28,—,—,24450,
-u_a_over_28,Revêtement ablatif T4,Établi,Armures (sur/sous-couches),Réparation,29,—,—,24500,
-u_a_unde_28,Sous-couche renforçante T5,Établi,Armures (sur/sous-couches),Premiers secours,29,—,—,26560,
-u_a_over_29,Protection contre l'énergie T4,Établi,Armures (sur/sous-couches),Démolition,30,—,—,25500,
-u_a_unde_29,Sous-couche flexible T5,Établi,Armures (sur/sous-couches),Discrétion,30,—,—,28950,
-u_a_over_30,Plaques liées T4,Établi,Armures (sur/sous-couches),Réparation,31,—,—,28850,
-u_a_unde_30,Sous-couche en duracier T5,Établi,Armures (sur/sous-couches),Vigilance,31,—,—,29950,
+u_a_over_01,Protection contre la chaleur T1,Établi,Armures (sur/sous-couches),Réparation,2,—,—,20,Niv. 1 (Mk I)
+u_a_unde_01,Sous-couche anti-environnement T1,Établi,Armures (sur/sous-couches),Démolition,2,—,—,30,Niv. 1 (Mk I)
+u_a_over_02,Revêtement 'Armure' T1,Établi,Armures (sur/sous-couches),Réparation,3,—,—,40,Niv. 1 (Mk I)
+u_a_unde_02,Sous-couche bio-restaurative T1,Établi,Armures (sur/sous-couches),Premiers secours,3,—,—,55,Niv. 1 (Mk I)
+u_a_over_03,Sur-couche atténuatrice T1,Établi,Armures (sur/sous-couches),Discrétion,4,—,—,60,Niv. 1 (Mk I)
+u_a_unde_03,Sous-couche fortificatrice T1,Établi,Armures (sur/sous-couches),Sécurité,4,—,—,85,Niv. 1 (Mk I)
+u_a_over_04,Revêtement ablatif T1,Établi,Armures (sur/sous-couches),Réparation,5,—,—,85,Niv. 1 (Mk I)
+u_a_unde_04,Sous-couche renforçante T1,Établi,Armures (sur/sous-couches),Premiers secours,5,—,—,110,Niv. 1 (Mk I)
+u_a_over_05,Protection contre l'énergie T1,Établi,Armures (sur/sous-couches),Démolition,6,—,—,175,Niv. 1 (Mk I)
+u_a_unde_05,Sous-couche flexible T1,Établi,Armures (sur/sous-couches),Discrétion,6,—,—,225,Niv. 1 (Mk I)
+u_a_over_06,Protection antibalistique T1,Établi,Armures (sur/sous-couches),Démolition,7,—,—,275,Niv. 1 (Mk I)
+u_a_unde_06,Sous-couche en duracier T1,Établi,Armures (sur/sous-couches),Vigilance,7,—,—,350,Niv. 1 (Mk I)
+u_a_over_07,Plaques liées T1,Établi,Armures (sur/sous-couches),Réparation,8,—,—,475,Niv. 1 (Mk I)
+u_a_unde_07,Sous-couche anti-environnement T2,Établi,Armures (sur/sous-couches),Démolition,8,—,—,600,Niv. 10 (Mk II)
+u_a_over_08,Plaques lourdes liées T1,Établi,Armures (sur/sous-couches),Réparation,9,—,—,650,Niv. 1 (Mk I)
+u_a_unde_08,Sous-couche bio-restaurative T2,Établi,Armures (sur/sous-couches),Premiers secours,9,—,—,750,Niv. 10 (Mk II)
+u_a_over_09,Protection contre la chaleur T2,Établi,Armures (sur/sous-couches),Réparation,10,—,—,850,Niv. 10 (Mk II)
+u_a_unde_09,Sous-couche fortificatrice T2,Établi,Armures (sur/sous-couches),Sécurité,10,—,—,1000,Niv. 10 (Mk II)
+u_a_over_10,Revêtement 'Armure' T2,Établi,Armures (sur/sous-couches),Réparation,11,—,—,1000,Niv. 10 (Mk II)
+u_a_unde_10,Sous-couche renforçante T2,Établi,Armures (sur/sous-couches),Premiers secours,11,—,—,1250,Niv. 10 (Mk II)
+u_a_over_11,Sur-couche atténuatrice T2,Établi,Armures (sur/sous-couches),Discrétion,12,—,—,1125,Niv. 10 (Mk II)
+u_a_unde_11,Sous-couche flexible T2,Établi,Armures (sur/sous-couches),Discrétion,12,—,—,1475,Niv. 10 (Mk II)
+u_a_over_12,Revêtement ablatif T2,Établi,Armures (sur/sous-couches),Réparation,13,—,—,1500,Niv. 10 (Mk II)
+u_a_unde_12,Sous-couche en duracier T2,Établi,Armures (sur/sous-couches),Vigilance,13,—,—,1950,Niv. 10 (Mk II)
+u_a_over_13,Protection contre l'énergie T2,Établi,Armures (sur/sous-couches),Démolition,14,—,—,2000,Niv. 10 (Mk II)
+u_a_unde_13,Sous-couche anti-environnement T3,Établi,Armures (sur/sous-couches),Démolition,14,—,—,2650,Niv. 15 (Mk III)
+u_a_over_14,Protection antibalistique T2,Établi,Armures (sur/sous-couches),Démolition,15,—,—,2750,Niv. 10 (Mk II)
+u_a_unde_14,Sous-couche bio-restaurative T3,Établi,Armures (sur/sous-couches),Premiers secours,15,—,—,3125,Niv. 15 (Mk III)
+u_a_over_15,Plaques liées T2,Établi,Armures (sur/sous-couches),Réparation,16,—,—,3500,Niv. 10 (Mk II)
+u_a_unde_15,Sous-couche fortificatrice T3,Établi,Armures (sur/sous-couches),Sécurité,16,—,—,4025,Niv. 15 (Mk III)
+u_a_over_16,Plaques lourdes liées T2,Établi,Armures (sur/sous-couches),Réparation,17,—,—,4500,Niv. 10 (Mk II)
+u_a_unde_16,Sous-couche renforçante T3,Établi,Armures (sur/sous-couches),Premiers secours,17,—,—,5900,Niv. 15 (Mk III)
+u_a_over_17,Protection contre la chaleur T3,Établi,Armures (sur/sous-couches),Réparation,18,—,—,6000,Niv. 15 (Mk III)
+u_a_unde_17,Sous-couche flexible T3,Établi,Armures (sur/sous-couches),Discrétion,18,—,—,6550,Niv. 15 (Mk III)
+u_a_over_18,Revêtement 'Armure' T3,Établi,Armures (sur/sous-couches),Réparation,19,—,—,7500,Niv. 15 (Mk III)
+u_a_unde_18,Sous-couche en duracier T3,Établi,Armures (sur/sous-couches),Vigilance,19,—,—,8750,Niv. 15 (Mk III)
+u_a_over_19,Sur-couche atténuatrice T3,Établi,Armures (sur/sous-couches),Discrétion,20,—,—,9000,Niv. 15 (Mk III)
+u_a_unde_19,Sous-couche anti-environnement T4,Établi,Armures (sur/sous-couches),Démolition,20,—,—,9925,Niv. 20 (Mk IV/T5)
+u_a_over_20,Revêtement ablatif T3,Établi,Armures (sur/sous-couches),Réparation,21,—,—,10125,Niv. 15 (Mk III)
+u_a_unde_20,Sous-couche bio-restaurative T4,Établi,Armures (sur/sous-couches),Premiers secours,21,—,—,11785,Niv. 20 (Mk IV/T5)
+u_a_over_21,Protection contre l'énergie T3,Établi,Armures (sur/sous-couches),Démolition,22,—,—,12250,Niv. 15 (Mk III)
+u_a_unde_21,Sous-couche fortificatrice T4,Établi,Armures (sur/sous-couches),Sécurité,22,—,—,13750,Niv. 20 (Mk IV/T5)
+u_a_over_22,Protection antibalistique T3,Établi,Armures (sur/sous-couches),Démolition,23,—,—,14250,Niv. 15 (Mk III)
+u_a_unde_22,Sous-couche renforçante T4,Établi,Armures (sur/sous-couches),Premiers secours,23,—,—,15750,Niv. 20 (Mk IV/T5)
+u_a_over_23,Plaques liées T3,Établi,Armures (sur/sous-couches),Réparation,24,—,—,5400,Niv. 15 (Mk III)
+u_a_unde_23,Sous-couche flexible T4,Établi,Armures (sur/sous-couches),Discrétion,24,—,—,17555,Niv. 20 (Mk IV/T5)
+u_a_over_24,Plaques lourdes liées T3,Établi,Armures (sur/sous-couches),Réparation,25,—,—,6100,Niv. 15 (Mk III)
+u_a_unde_24,Sous-couche en duracier T4,Établi,Armures (sur/sous-couches),Vigilance,25,—,—,19685,Niv. 20 (Mk IV/T5)
+u_a_over_25,Protection contre la chaleur T4,Établi,Armures (sur/sous-couches),Réparation,26,—,—,19250,Niv. 20 (Mk IV)
+u_a_unde_25,Sous-couche anti-environnement T5,Établi,Armures (sur/sous-couches),Démolition,26,—,—,20995,Niv. 20 (Mk IV/T5)
+u_a_over_26,Revêtement 'Armure' T4,Établi,Armures (sur/sous-couches),Réparation,27,—,—,21250,Niv. 20 (Mk IV)
+u_a_unde_26,Sous-couche bio-restaurative T5,Établi,Armures (sur/sous-couches),Premiers secours,27,—,—,22755,Niv. 20 (Mk IV/T5)
+u_a_over_27,Sur-couche atténuatrice T4,Établi,Armures (sur/sous-couches),Discrétion,28,—,—,22500,Niv. 20 (Mk IV)
+u_a_unde_27,Sous-couche fortificatrice T5,Établi,Armures (sur/sous-couches),Sécurité,28,—,—,24450,Niv. 20 (Mk IV/T5)
+u_a_over_28,Revêtement ablatif T4,Établi,Armures (sur/sous-couches),Réparation,29,—,—,24500,Niv. 20 (Mk IV)
+u_a_unde_28,Sous-couche renforçante T5,Établi,Armures (sur/sous-couches),Premiers secours,29,—,—,26560,Niv. 20 (Mk IV/T5)
+u_a_over_29,Protection contre l'énergie T4,Établi,Armures (sur/sous-couches),Démolition,30,—,—,25500,Niv. 20 (Mk IV)
+u_a_unde_29,Sous-couche flexible T5,Établi,Armures (sur/sous-couches),Discrétion,30,—,—,28950,Niv. 20 (Mk IV/T5)
+u_a_over_30,Plaques liées T4,Établi,Armures (sur/sous-couches),Réparation,31,—,—,28850,Niv. 20 (Mk IV)
+u_a_unde_30,Sous-couche en duracier T5,Établi,Armures (sur/sous-couches),Vigilance,31,—,—,29950,Niv. 20 (Mk IV/T5)
 ÉTABLI — ARMES À DISTANCE (UPGRADES),,,,,,,,,
-u_r_firi_01,Chambre d'élargissement T1,Établi,Armes à distance (upgrades),Réparation,4,—,—,55,
-u_r_powe_01,Chargeur d'ions T1,Établi,Armes à distance (upgrades),Sécurité,4,—,—,40,
-u_r_targ_01,Lunette de sniper T1,Établi,Armes à distance (upgrades),Vigilance,4,—,—,50,
-u_r_firi_02,Chambre d'amplification T1,Établi,Armes à distance (upgrades),Démolition,6,—,—,110,
-u_r_powe_02,Générateur d'impulsions T1,Établi,Armes à distance (upgrades),Informatique,6,—,—,90,
-u_r_targ_02,Lunette de précision T1,Établi,Armes à distance (upgrades),Vigilance,6,—,—,100,
-u_r_firi_03,Chambre de précision T1,Établi,Armes à distance (upgrades),Sécurité,8,—,—,320,
-u_r_powe_03,Cellule d'énergie de base au rylith,Établi,Armes à distance (upgrades),Sécurité,8,—,—,280,
-u_r_targ_03,Lunette de visée T1,Établi,Armes à distance (upgrades),Discrétion,8,—,—,100,
-u_r_firi_04,Séparateur de rayon T1,Établi,Armes à distance (upgrades),Informatique,10,—,—,740,
-u_r_powe_04,Chargeur d'ions T2,Établi,Armes à distance (upgrades),Sécurité,10,—,—,690,
-u_r_targ_04,Lunette de mutilation T1,Établi,Armes à distance (upgrades),Discrétion,10,—,—,700,
-u_r_firi_05,Chambre mand. T1,Établi,Armes à distance (upgrades),Réparation,12,—,—,1230,
-u_r_powe_05,Générateur d'impulsions T2,Établi,Armes à distance (upgrades),Informatique,12,—,—,1035,
-u_r_targ_05,Lunette de sniper T2,Établi,Armes à distance (upgrades),Vigilance,12,—,—,1100,
-u_r_firi_06,Chambre d'élargissement T2,Établi,Armes à distance (upgrades),Réparation,14,—,—,1775,
-u_r_powe_06,Cellule d'énergie au rylith classique,Établi,Armes à distance (upgrades),Sécurité,14,—,—,1635,
-u_r_targ_06,Lunette de précision T2,Établi,Armes à distance (upgrades),Vigilance,14,—,—,1700,
-u_r_firi_07,Chambre d'amplification T2,Établi,Armes à distance (upgrades),Démolition,16,—,—,3000,
-u_r_powe_07,Chargeur d'ions T3,Établi,Armes à distance (upgrades),Sécurité,16,—,—,2780,
-u_r_targ_07,Lunette de visée T2,Établi,Armes à distance (upgrades),Discrétion,16,—,—,2900,
-u_r_firi_08,Chambre de précision T2,Établi,Armes à distance (upgrades),Sécurité,18,—,—,4780,
-u_r_powe_08,Générateur d'impulsions T3,Établi,Armes à distance (upgrades),Informatique,18,—,—,4645,
-u_r_targ_08,Lunette de mutilation T2,Établi,Armes à distance (upgrades),Discrétion,18,—,—,4700,
-u_r_firi_09,Séparateur de rayon T2,Établi,Armes à distance (upgrades),Informatique,20,—,—,7800,
-u_r_powe_09,Cellule d'énergie alcaline au rylith,Établi,Armes à distance (upgrades),Sécurité,20,—,—,7560,
-u_r_targ_09,Lunette de sniper T3,Établi,Armes à distance (upgrades),Vigilance,20,—,—,7600,
-u_r_firi_10,Chambre mand. T2,Établi,Armes à distance (upgrades),Réparation,22,—,—,11265,
-u_r_powe_10,Chargeur d'ions T4,Établi,Armes à distance (upgrades),Sécurité,22,—,—,10185,
-u_r_targ_10,Lunette de précision T3,Établi,Armes à distance (upgrades),Vigilance,22,—,—,11000,
-u_r_firi_11,Chambre d'élargissement T3,Établi,Armes à distance (upgrades),Réparation,24,—,—,14665,
-u_r_powe_11,Générateur d'impulsions T4,Établi,Armes à distance (upgrades),Informatique,24,—,—,13995,
-u_r_targ_11,Lunette de visée T3,Établi,Armes à distance (upgrades),Discrétion,24,—,—,14600,
-u_r_firi_12,Chambre d'amplification T3,Établi,Armes à distance (upgrades),Démolition,26,—,—,6050,
-u_r_powe_12,Cellule d'énergie supérieure au rylith,Établi,Armes à distance (upgrades),Sécurité,26,—,—,17500,
-u_r_targ_12,Lunette de mutilation T3,Établi,Armes à distance (upgrades),Discrétion,26,—,—,18200,
-u_r_firi_13,Chambre de précision T3,Établi,Armes à distance (upgrades),Sécurité,28,—,—,22305,
-u_r_powe_13,Chargeur d'ions T5,Établi,Armes à distance (upgrades),Sécurité,28,—,—,21635,
-u_r_targ_13,Lunette de sniper T4,Établi,Armes à distance (upgrades),Vigilance,28,—,—,21800,
-u_r_firi_14,Séparateur de rayon T3,Établi,Armes à distance (upgrades),Informatique,30,—,—,26950,
-u_r_powe_14,Générateur d'impulsions T5,Établi,Armes à distance (upgrades),Informatique,30,—,—,25345,
-u_r_firi_15,Chambre mand. T3,Établi,Armes à distance (upgrades),Réparation,32,—,—,29650,
-u_r_powe_15,Cellule d'énergie pure au rylith,Établi,Armes à distance (upgrades),Sécurité,32,—,—,28965,
-u_r_targ_15,Lunette de visée T4,Établi,Armes à distance (upgrades),Discrétion,32,—,—,29000,
+u_r_firi_01,Chambre d'élargissement T1,Établi,Armes à distance (upgrades),Réparation,4,—,—,55,Niv. 1 (Mk I)
+u_r_powe_01,Chargeur d'ions T1,Établi,Armes à distance (upgrades),Sécurité,4,—,—,40,Niv. 1 (Mk I)
+u_r_targ_01,Lunette de sniper T1,Établi,Armes à distance (upgrades),Vigilance,4,—,—,50,Niv. 1 (Mk I)
+u_r_firi_02,Chambre d'amplification T1,Établi,Armes à distance (upgrades),Démolition,6,—,—,110,Niv. 1 (Mk I)
+u_r_powe_02,Générateur d'impulsions T1,Établi,Armes à distance (upgrades),Informatique,6,—,—,90,Niv. 1 (Mk I)
+u_r_targ_02,Lunette de précision T1,Établi,Armes à distance (upgrades),Vigilance,6,—,—,100,Niv. 1 (Mk I)
+u_r_firi_03,Chambre de précision T1,Établi,Armes à distance (upgrades),Sécurité,8,—,—,320,Niv. 1 (Mk I)
+u_r_powe_03,Cellule d'énergie de base au rylith,Établi,Armes à distance (upgrades),Sécurité,8,—,—,280,Niv. 1 (Mk I)
+u_r_targ_03,Lunette de visée T1,Établi,Armes à distance (upgrades),Discrétion,8,—,—,100,Niv. 1 (Mk I)
+u_r_firi_04,Séparateur de rayon T1,Établi,Armes à distance (upgrades),Informatique,10,—,—,740,Niv. 1 (Mk I)
+u_r_powe_04,Chargeur d'ions T2,Établi,Armes à distance (upgrades),Sécurité,10,—,—,690,Niv. 1 (Mk I)
+u_r_targ_04,Lunette de mutilation T1,Établi,Armes à distance (upgrades),Discrétion,10,—,—,700,Niv. 1 (Mk I)
+u_r_firi_05,Chambre mand. T1,Établi,Armes à distance (upgrades),Réparation,12,—,—,1230,Niv. 1 (Mk I)
+u_r_powe_05,Générateur d'impulsions T2,Établi,Armes à distance (upgrades),Informatique,12,—,—,1035,Niv. 10 (Mk II)
+u_r_targ_05,Lunette de sniper T2,Établi,Armes à distance (upgrades),Vigilance,12,—,—,1100,Niv. 10 (Mk II)
+u_r_firi_06,Chambre d'élargissement T2,Établi,Armes à distance (upgrades),Réparation,14,—,—,1775,Niv. 10 (Mk II)
+u_r_powe_06,Cellule d'énergie au rylith classique,Établi,Armes à distance (upgrades),Sécurité,14,—,—,1635,Niv. 10 (Mk II)
+u_r_targ_06,Lunette de précision T2,Établi,Armes à distance (upgrades),Vigilance,14,—,—,1700,Niv. 10 (Mk II)
+u_r_firi_07,Chambre d'amplification T2,Établi,Armes à distance (upgrades),Démolition,16,—,—,3000,Niv. 10 (Mk II)
+u_r_powe_07,Chargeur d'ions T3,Établi,Armes à distance (upgrades),Sécurité,16,—,—,2780,Niv. 10 (Mk II)
+u_r_targ_07,Lunette de visée T2,Établi,Armes à distance (upgrades),Discrétion,16,—,—,2900,Niv. 10 (Mk II)
+u_r_firi_08,Chambre de précision T2,Établi,Armes à distance (upgrades),Sécurité,18,—,—,4780,Niv. 10 (Mk II)
+u_r_powe_08,Générateur d'impulsions T3,Établi,Armes à distance (upgrades),Informatique,18,—,—,4645,Niv. 10 (Mk II)
+u_r_targ_08,Lunette de mutilation T2,Établi,Armes à distance (upgrades),Discrétion,18,—,—,4700,Niv. 10 (Mk II)
+u_r_firi_09,Séparateur de rayon T2,Établi,Armes à distance (upgrades),Informatique,20,—,—,7800,Niv. 10 (Mk II)
+u_r_powe_09,Cellule d'énergie alcaline au rylith,Établi,Armes à distance (upgrades),Sécurité,20,—,—,7560,Niv. 15 (Mk III)
+u_r_targ_09,Lunette de sniper T3,Établi,Armes à distance (upgrades),Vigilance,20,—,—,7600,Niv. 15 (Mk III)
+u_r_firi_10,Chambre mand. T2,Établi,Armes à distance (upgrades),Réparation,22,—,—,11265,Niv. 10 (Mk II)
+u_r_powe_10,Chargeur d'ions T4,Établi,Armes à distance (upgrades),Sécurité,22,—,—,10185,Niv. 15 (Mk III)
+u_r_targ_10,Lunette de précision T3,Établi,Armes à distance (upgrades),Vigilance,22,—,—,11000,Niv. 15 (Mk III)
+u_r_firi_11,Chambre d'élargissement T3,Établi,Armes à distance (upgrades),Réparation,24,—,—,14665,Niv. 18 (Mk III)
+u_r_powe_11,Générateur d'impulsions T4,Établi,Armes à distance (upgrades),Informatique,24,—,—,13995,Niv. 15 (Mk III)
+u_r_targ_11,Lunette de visée T3,Établi,Armes à distance (upgrades),Discrétion,24,—,—,14600,Niv. 15 (Mk III)
+u_r_firi_12,Chambre d'amplification T3,Établi,Armes à distance (upgrades),Démolition,26,—,—,6050,Niv. 18 (Mk III)
+u_r_powe_12,Cellule d'énergie supérieure au rylith,Établi,Armes à distance (upgrades),Sécurité,26,—,—,17500,Niv. 15 (Mk III)
+u_r_targ_12,Lunette de mutilation T3,Établi,Armes à distance (upgrades),Discrétion,26,—,—,18200,Niv. 15 (Mk III)
+u_r_firi_13,Chambre de précision T3,Établi,Armes à distance (upgrades),Sécurité,28,—,—,22305,Niv. 18 (Mk III)
+u_r_powe_13,Chargeur d'ions T5,Établi,Armes à distance (upgrades),Sécurité,28,—,—,21635,Niv. 20 (Mk IV/T5)
+u_r_targ_13,Lunette de sniper T4,Établi,Armes à distance (upgrades),Vigilance,28,—,—,21800,Niv. 20 (Mk IV/T5)
+u_r_firi_14,Séparateur de rayon T3,Établi,Armes à distance (upgrades),Informatique,30,—,—,26950,Niv. 18 (Mk III)
+u_r_powe_14,Générateur d'impulsions T5,Établi,Armes à distance (upgrades),Informatique,30,—,—,25345,Niv. 20 (Mk IV/T5)
+u_r_firi_15,Chambre mand. T3,Établi,Armes à distance (upgrades),Réparation,32,—,—,29650,Niv. 18 (Mk III)
+u_r_powe_15,Cellule d'énergie pure au rylith,Établi,Armes à distance (upgrades),Sécurité,32,—,—,28965,Niv. 20 (Mk IV/T5)
+u_r_targ_15,Lunette de visée T4,Établi,Armes à distance (upgrades),Discrétion,32,—,—,29000,Niv. 20 (Mk IV/T5)
 ÉTABLI — ARMES DE MÊLÉE (UPGRADES),,,,,,,,,
-u_m_cell_01,Cellule à ions,Établi,Armes de mêlée (upgrades),Sécurité,4,—,—,50,
-u_m_edge_01,Tranchant dévaronien modéré,Établi,Armes de mêlée (upgrades),Discrétion,4,—,—,43,
-u_m_grip_01,Poignée en agrinium,Établi,Armes de mêlée (upgrades),Réparation,4,—,—,58,
-u_m_cell_02,Cellule à vibrations,Établi,Armes de mêlée (upgrades),Informatique,6,—,—,100,
-u_m_edge_02,Cellule à décharge sonique T3 (mêlée),Établi,Armes de mêlée (upgrades),Sécurité,6,—,—,90,
-u_m_grip_02,Poignée galbée,Établi,Armes de mêlée (upgrades),Réparation,6,—,—,105,
-u_m_cell_03,Cellule d'énergie alcaline,Établi,Armes de mêlée (upgrades),Informatique,8,—,—,300,
-u_m_edge_03,Tranchant en mullinine de base,Établi,Armes de mêlée (upgrades),Réparation,8,—,—,285,
-u_m_grip_03,Poignée zabrak,Établi,Armes de mêlée (upgrades),Réparation,8,—,—,330,
-u_m_cell_04,Cellule à décharge sonique,Établi,Armes de mêlée (upgrades),Discrétion,10,—,—,700,
-u_m_edge_04,Tranchant en neutronium de base,Établi,Armes de mêlée (upgrades),Réparation,10,—,—,665,
-u_m_grip_04,Poignée à garde,Établi,Armes de mêlée (upgrades),Réparation,10,—,—,765,
-u_m_cell_05,Cellule à ions T2,Établi,Armes de mêlée (upgrades),Sécurité,12,—,—,1100,
-u_m_edge_05,Tranchant dévaronien modéré,Établi,Armes de mêlée (upgrades),Discrétion,12,—,—,1025,
-u_m_grip_05,Poignée nagai,Établi,Armes de mêlée (upgrades),Discrétion,12,—,—,1250,
-u_m_cell_06,Cellule à vibrations T2,Établi,Armes de mêlée (upgrades),Informatique,14,—,—,650,
-u_m_edge_06,Tranchant en ionite amélioré,Établi,Armes de mêlée (upgrades),Sécurité,14,—,—,1550,
-u_m_grip_06,Poignée en agrinium améliorée,Établi,Armes de mêlée (upgrades),Réparation,14,—,—,1800,
-u_m_cell_07,Cellule d'énergie alcaline T2,Établi,Armes de mêlée (upgrades),Informatique,16,—,—,2900,
-u_m_edge_07,Tranchant en mullinine amélioré,Établi,Armes de mêlée (upgrades),Réparation,16,—,—,2850,
-u_m_grip_07,Poignée galbée améliorée,Établi,Armes de mêlée (upgrades),Réparation,16,—,—,3000,
-u_m_cell_08,Cellule à décharge sonique T2,Établi,Armes de mêlée (upgrades),Discrétion,18,—,—,4700,
-u_m_edge_08,Tranchant en neutronium amélioré,Établi,Armes de mêlée (upgrades),Réparation,18,—,—,4625,
-u_m_grip_08,Poignée zabrak améliorée,Établi,Armes de mêlée (upgrades),Réparation,18,—,—,4850,
-u_m_cell_09,Cellule à ions T3,Établi,Armes de mêlée (upgrades),Sécurité,20,—,—,7600,
-u_m_edge_09,Tranchant dévaronien important,Établi,Armes de mêlée (upgrades),Discrétion,20,—,—,7550,
-u_m_grip_09,Poignée à garde améliorée,Établi,Armes de mêlée (upgrades),Réparation,20,—,—,7765,
-u_m_cell_10,Cellule à vibrations T3,Établi,Armes de mêlée (upgrades),Informatique,22,—,—,11000,
-u_m_edge_10,Tranchant en ionite supérieur,Établi,Armes de mêlée (upgrades),Sécurité,22,—,—,10085,
-u_m_grip_10,Poignée nagai améliorée,Établi,Armes de mêlée (upgrades),Discrétion,22,—,—,11125,
-u_m_cell_11,Cellule d'énergie alcaline T3,Établi,Armes de mêlée (upgrades),Informatique,24,—,—,14600,
-u_m_edge_11,Tranchant supérieur en mullinine,Établi,Armes de mêlée (upgrades),Réparation,24,—,—,14500,
-u_m_grip_11,Poignée supérieure en agrinium,Établi,Armes de mêlée (upgrades),Réparation,24,—,—,14850,
-u_m_cell_12,Cellule à décharge sonique T3,Établi,Armes de mêlée (upgrades),Discrétion,26,—,—,18200,
-u_m_edge_12,Tranchant supérieur en neutronium,Établi,Armes de mêlée (upgrades),Réparation,26,—,—,18075,
-u_m_grip_12,Poignée galbée supérieure,Établi,Armes de mêlée (upgrades),Réparation,26,—,—,19850,
-u_m_cell_13,Cellule à ions T4,Établi,Armes de mêlée (upgrades),Sécurité,28,—,—,21800,
-u_m_edge_13,Tranchant mortel dévaronien,Établi,Armes de mêlée (upgrades),Discrétion,28,—,—,21650,
-u_m_grip_13,Poignée zabrak supérieure,Établi,Armes de mêlée (upgrades),Réparation,28,—,—,22250,
-u_m_cell_14,Cellule à vibrations T4,Établi,Armes de mêlée (upgrades),Informatique,30,—,—,25400,
-u_m_edge_14,Tranchant en quadranium,Établi,Armes de mêlée (upgrades),Sécurité,30,—,—,25225,
-u_m_grip_14,Poignée à garde supérieure,Établi,Armes de mêlée (upgrades),Réparation,30,—,—,26000,
-u_m_cell_15,Cellule d'énergie alcaline T4,Établi,Armes de mêlée (upgrades),Informatique,32,—,—,29000,
-u_m_edge_15,Tranchant en ostrine,Établi,Armes de mêlée (upgrades),Réparation,32,—,—,28850,
-u_m_grip_15,Poignée nagai supérieure,Établi,Armes de mêlée (upgrades),Discrétion,32,—,—,29650,
+u_m_cell_01,Cellule à ions,Établi,Armes de mêlée (upgrades),Sécurité,4,—,—,50,Niv. 1 (Mk I)
+u_m_edge_01,Tranchant dévaronien modéré,Établi,Armes de mêlée (upgrades),Discrétion,4,—,—,43,Niv. 1 (Mk I)
+u_m_grip_01,Poignée en agrinium,Établi,Armes de mêlée (upgrades),Réparation,4,—,—,58,Niv. 1 (Mk I)
+u_m_cell_02,Cellule à vibrations,Établi,Armes de mêlée (upgrades),Informatique,6,—,—,100,Niv. 1 (Mk I)
+u_m_edge_02,Cellule à décharge sonique T3 (mêlée),Établi,Armes de mêlée (upgrades),Sécurité,6,—,—,90,Niv. 1 (Mk I)
+u_m_grip_02,Poignée galbée,Établi,Armes de mêlée (upgrades),Réparation,6,—,—,105,Niv. 1 (Mk I)
+u_m_cell_03,Cellule d'énergie alcaline,Établi,Armes de mêlée (upgrades),Informatique,8,—,—,300,Niv. 1 (Mk I)
+u_m_edge_03,Tranchant en mullinine de base,Établi,Armes de mêlée (upgrades),Réparation,8,—,—,285,Niv. 1 (Mk I)
+u_m_grip_03,Poignée zabrak,Établi,Armes de mêlée (upgrades),Réparation,8,—,—,330,Niv. 1 (Mk I)
+u_m_cell_04,Cellule à décharge sonique,Établi,Armes de mêlée (upgrades),Discrétion,10,—,—,700,Niv. 1 (Mk I)
+u_m_edge_04,Tranchant en neutronium de base,Établi,Armes de mêlée (upgrades),Réparation,10,—,—,665,Niv. 1 (Mk I)
+u_m_grip_04,Poignée à garde,Établi,Armes de mêlée (upgrades),Réparation,10,—,—,765,Niv. 1 (Mk I)
+u_m_cell_05,Cellule à ions T2,Établi,Armes de mêlée (upgrades),Sécurité,12,—,—,1100,Niv. 10 (Mk II)
+u_m_edge_05,Tranchant dévaronien modéré,Établi,Armes de mêlée (upgrades),Discrétion,12,—,—,1025,Niv. 10 (Mk II)
+u_m_grip_05,Poignée nagai,Établi,Armes de mêlée (upgrades),Discrétion,12,—,—,1250,Niv. 1 (Mk I)
+u_m_cell_06,Cellule à vibrations T2,Établi,Armes de mêlée (upgrades),Informatique,14,—,—,650,Niv. 10 (Mk II)
+u_m_edge_06,Tranchant en ionite amélioré,Établi,Armes de mêlée (upgrades),Sécurité,14,—,—,1550,Niv. 10 (Mk II)
+u_m_grip_06,Poignée en agrinium améliorée,Établi,Armes de mêlée (upgrades),Réparation,14,—,—,1800,Niv. 10 (Mk II)
+u_m_cell_07,Cellule d'énergie alcaline T2,Établi,Armes de mêlée (upgrades),Informatique,16,—,—,2900,Niv. 10 (Mk II)
+u_m_edge_07,Tranchant en mullinine amélioré,Établi,Armes de mêlée (upgrades),Réparation,16,—,—,2850,Niv. 10 (Mk II)
+u_m_grip_07,Poignée galbée améliorée,Établi,Armes de mêlée (upgrades),Réparation,16,—,—,3000,Niv. 10 (Mk II)
+u_m_cell_08,Cellule à décharge sonique T2,Établi,Armes de mêlée (upgrades),Discrétion,18,—,—,4700,Niv. 10 (Mk II)
+u_m_edge_08,Tranchant en neutronium amélioré,Établi,Armes de mêlée (upgrades),Réparation,18,—,—,4625,Niv. 10 (Mk II)
+u_m_grip_08,Poignée zabrak améliorée,Établi,Armes de mêlée (upgrades),Réparation,18,—,—,4850,Niv. 10 (Mk II)
+u_m_cell_09,Cellule à ions T3,Établi,Armes de mêlée (upgrades),Sécurité,20,—,—,7600,Niv. 15 (Mk III)
+u_m_edge_09,Tranchant dévaronien important,Établi,Armes de mêlée (upgrades),Discrétion,20,—,—,7550,Niv. 15 (Mk III)
+u_m_grip_09,Poignée à garde améliorée,Établi,Armes de mêlée (upgrades),Réparation,20,—,—,7765,Niv. 10 (Mk II)
+u_m_cell_10,Cellule à vibrations T3,Établi,Armes de mêlée (upgrades),Informatique,22,—,—,11000,Niv. 15 (Mk III)
+u_m_edge_10,Tranchant en ionite supérieur,Établi,Armes de mêlée (upgrades),Sécurité,22,—,—,10085,Niv. 15 (Mk III)
+u_m_grip_10,Poignée nagai améliorée,Établi,Armes de mêlée (upgrades),Discrétion,22,—,—,11125,Niv. 10 (Mk II)
+u_m_cell_11,Cellule d'énergie alcaline T3,Établi,Armes de mêlée (upgrades),Informatique,24,—,—,14600,Niv. 15 (Mk III)
+u_m_edge_11,Tranchant supérieur en mullinine,Établi,Armes de mêlée (upgrades),Réparation,24,—,—,14500,Niv. 15 (Mk III)
+u_m_grip_11,Poignée supérieure en agrinium,Établi,Armes de mêlée (upgrades),Réparation,24,—,—,14850,Niv. 18 (Mk III)
+u_m_cell_12,Cellule à décharge sonique T3,Établi,Armes de mêlée (upgrades),Discrétion,26,—,—,18200,Niv. 15 (Mk III)
+u_m_edge_12,Tranchant supérieur en neutronium,Établi,Armes de mêlée (upgrades),Réparation,26,—,—,18075,Niv. 15 (Mk III)
+u_m_grip_12,Poignée galbée supérieure,Établi,Armes de mêlée (upgrades),Réparation,26,—,—,19850,Niv. 18 (Mk III)
+u_m_cell_13,Cellule à ions T4,Établi,Armes de mêlée (upgrades),Sécurité,28,—,—,21800,Niv. 20 (Mk IV/T5)
+u_m_edge_13,Tranchant mortel dévaronien,Établi,Armes de mêlée (upgrades),Discrétion,28,—,—,21650,Niv. 20 (Mk IV/T5)
+u_m_grip_13,Poignée zabrak supérieure,Établi,Armes de mêlée (upgrades),Réparation,28,—,—,22250,Niv. 18 (Mk III)
+u_m_cell_14,Cellule à vibrations T4,Établi,Armes de mêlée (upgrades),Informatique,30,—,—,25400,Niv. 20 (Mk IV/T5)
+u_m_edge_14,Tranchant en quadranium,Établi,Armes de mêlée (upgrades),Sécurité,30,—,—,25225,Niv. 20 (Mk IV/T5)
+u_m_grip_14,Poignée à garde supérieure,Établi,Armes de mêlée (upgrades),Réparation,30,—,—,26000,Niv. 18 (Mk III)
+u_m_cell_15,Cellule d'énergie alcaline T4,Établi,Armes de mêlée (upgrades),Informatique,32,—,—,29000,Niv. 20 (Mk IV/T5)
+u_m_edge_15,Tranchant en ostrine,Établi,Armes de mêlée (upgrades),Réparation,32,—,—,28850,Niv. 20 (Mk IV/T5)
+u_m_grip_15,Poignée nagai supérieure,Établi,Armes de mêlée (upgrades),Discrétion,32,—,—,29650,Niv. 18 (Mk III)
 ÉTABLI — SABRES LASER (UPGRADES),,,,,,,,,
-u_l_cell_01,Cellule d'énergie à décharge,Établi,Sabres laser (upgrades),Démolition,5,—,—,305,
-u_l_emit_01,Émetteur de parade,Établi,Sabres laser (upgrades),Réparation,5,—,—,295,
-u_l_lens_01,Lentille de kunda synthétisé,Établi,Sabres laser (upgrades),Premiers secours,5,—,—,300,
-u_l_cell_02,Cellule d'énergie au diatum,Établi,Sabres laser (upgrades),Informatique,7,—,—,775,
-u_l_emit_02,Émetteur de désordre nerveux,Établi,Sabres laser (upgrades),Réparation,7,—,—,665,
-u_l_lens_02,Lentille de dragite,Établi,Sabres laser (upgrades),Vigilance,7,—,—,700,
-u_l_cell_03,Cellule d'énergie à ions,Établi,Sabres laser (upgrades),Sécurité,9,—,—,1120,
-u_l_emit_03,Émetteur au phobium brut,Établi,Sabres laser (upgrades),Réparation,9,—,—,1085,
-u_l_lens_03,Lentille de byrhotse,Établi,Sabres laser (upgrades),Vigilance,9,—,—,1100,
-u_l_cell_04,Cellule à décharge de Telgorn T1,Établi,Sabres laser (upgrades),Démolition,11,—,—,2125,
-u_l_emit_04,Émetteur de parade,Établi,Sabres laser (upgrades),Réparation,11,—,—,1665,
-u_l_lens_04,Lentille de gemme à rayon,Établi,Sabres laser (upgrades),Informatique,11,—,—,1700,
-u_l_cell_05,Cellule d'énergie à décharge améliorée,Établi,Sabres laser (upgrades),Démolition,13,—,—,3275,
-u_l_emit_05,Émetteur de parade amélioré,Établi,Sabres laser (upgrades),Réparation,13,—,—,2885,
-u_l_lens_05,Lentille vibratoire,Établi,Sabres laser (upgrades),Informatique,13,—,—,2900,
-u_l_cell_06,Cellule d'énergie au diatum améliorée,Établi,Sabres laser (upgrades),Informatique,15,—,—,4985,
-u_l_emit_06,Émetteur de désordre nerveux amélioré,Établi,Sabres laser (upgrades),Réparation,15,—,—,4665,
-u_l_lens_06,Lentille de kunda pur,Établi,Sabres laser (upgrades),Premiers secours,15,—,—,4700,
-u_l_cell_07,Cellule d'énergie à ions améliorée,Établi,Sabres laser (upgrades),Sécurité,17,—,—,8950,
-u_l_emit_07,Émetteur au phobium synthétisé,Établi,Sabres laser (upgrades),Réparation,17,—,—,7555,
-u_l_lens_07,Lentille d'adegan,Établi,Sabres laser (upgrades),Vigilance,17,—,—,7600,
-u_l_cell_08,Cellule à décharge de Telgorn T2,Établi,Sabres laser (upgrades),Démolition,19,—,—,11335,
-u_l_emit_08,Émetteur de parade amélioré,Établi,Sabres laser (upgrades),Réparation,19,—,—,10115,
-u_l_lens_08,Lentille de byrhotse pur,Établi,Sabres laser (upgrades),Vigilance,19,—,—,11000,
-u_l_cell_09,Cellule d'énergie à grande décharge,Établi,Sabres laser (upgrades),Démolition,21,—,—,14995,
-u_l_emit_09,Émetteur de parade haut de gamme,Établi,Sabres laser (upgrades),Réparation,21,—,—,13555,
-u_l_lens_09,Lentille de gemme à rayon améliorée,Établi,Sabres laser (upgrades),Informatique,21,—,—,14600,
-u_l_cell_10,Cellule d'énergie supérieure au diatium,Établi,Sabres laser (upgrades),Informatique,23,—,—,19750,
-u_l_emit_10,Émetteur de désordre nerveux hightech,Établi,Sabres laser (upgrades),Réparation,23,—,—,17775,
-u_l_lens_10,Lentille vibratoire améliorée,Établi,Sabres laser (upgrades),Informatique,23,—,—,18200,
-u_l_cell_11,Cellule d'énergie à ions supérieure,Établi,Sabres laser (upgrades),Sécurité,25,—,—,20365,
-u_l_emit_11,Émetteur à alliage au phobium,Établi,Sabres laser (upgrades),Réparation,25,—,—,20225,
-u_l_lens_11,Lentille de duel d'Ossus,Établi,Sabres laser (upgrades),Premiers secours,25,—,—,21800,
-u_l_cell_12,Cellule à décharge de Telgorn T3,Établi,Sabres laser (upgrades),Démolition,27,—,—,26000,
-u_l_emit_12,Émetteur de parade haut de gamme,Établi,Sabres laser (upgrades),Réparation,27,—,—,24450,
-u_l_lens_12,Lentille de pontite,Établi,Sabres laser (upgrades),Vigilance,27,—,—,25400,
-u_l_cell_13,Cellule d'énergie au diatum ultime,Établi,Sabres laser (upgrades),Informatique,29,—,—,29850,
-u_l_emit_13,Émetteur au phobium raffiné,Établi,Sabres laser (upgrades),Réparation,29,—,—,28885,
-u_l_lens_13,Lentille de byrhotse améliorée,Établi,Sabres laser (upgrades),Vigilance,29,—,—,29000,
+u_l_cell_01,Cellule d'énergie à décharge,Établi,Sabres laser (upgrades),Démolition,5,—,—,305,Niv. 1 (Mk I)
+u_l_emit_01,Émetteur de parade,Établi,Sabres laser (upgrades),Réparation,5,—,—,295,Niv. 1 (Mk I)
+u_l_lens_01,Lentille de kunda synthétisé,Établi,Sabres laser (upgrades),Premiers secours,5,—,—,300,Niv. 1 (Mk I)
+u_l_cell_02,Cellule d'énergie au diatum,Établi,Sabres laser (upgrades),Informatique,7,—,—,775,Niv. 1 (Mk I)
+u_l_emit_02,Émetteur de désordre nerveux,Établi,Sabres laser (upgrades),Réparation,7,—,—,665,Niv. 1 (Mk I)
+u_l_lens_02,Lentille de dragite,Établi,Sabres laser (upgrades),Vigilance,7,—,—,700,Niv. 1 (Mk I)
+u_l_cell_03,Cellule d'énergie à ions,Établi,Sabres laser (upgrades),Sécurité,9,—,—,1120,Niv. 1 (Mk I)
+u_l_emit_03,Émetteur au phobium brut,Établi,Sabres laser (upgrades),Réparation,9,—,—,1085,Niv. 1 (Mk I)
+u_l_lens_03,Lentille de byrhotse,Établi,Sabres laser (upgrades),Vigilance,9,—,—,1100,Niv. 1 (Mk I)
+u_l_cell_04,Cellule à décharge de Telgorn T1,Établi,Sabres laser (upgrades),Démolition,11,—,—,2125,Niv. 1 (Mk I)
+u_l_emit_04,Émetteur de parade,Établi,Sabres laser (upgrades),Réparation,11,—,—,1665,Niv. 1 (Mk I)
+u_l_lens_04,Lentille de gemme à rayon,Établi,Sabres laser (upgrades),Informatique,11,—,—,1700,Niv. 1 (Mk I)
+u_l_cell_05,Cellule d'énergie à décharge améliorée,Établi,Sabres laser (upgrades),Démolition,13,—,—,3275,Niv. 10 (Mk II)
+u_l_emit_05,Émetteur de parade amélioré,Établi,Sabres laser (upgrades),Réparation,13,—,—,2885,Niv. 10 (Mk II)
+u_l_lens_05,Lentille vibratoire,Établi,Sabres laser (upgrades),Informatique,13,—,—,2900,Niv. 10 (Mk II)
+u_l_cell_06,Cellule d'énergie au diatum améliorée,Établi,Sabres laser (upgrades),Informatique,15,—,—,4985,Niv. 10 (Mk II)
+u_l_emit_06,Émetteur de désordre nerveux amélioré,Établi,Sabres laser (upgrades),Réparation,15,—,—,4665,Niv. 10 (Mk II)
+u_l_lens_06,Lentille de kunda pur,Établi,Sabres laser (upgrades),Premiers secours,15,—,—,4700,Niv. 10 (Mk II)
+u_l_cell_07,Cellule d'énergie à ions améliorée,Établi,Sabres laser (upgrades),Sécurité,17,—,—,8950,Niv. 10 (Mk II)
+u_l_emit_07,Émetteur au phobium synthétisé,Établi,Sabres laser (upgrades),Réparation,17,—,—,7555,Niv. 10 (Mk II)
+u_l_lens_07,Lentille d'adegan,Établi,Sabres laser (upgrades),Vigilance,17,—,—,7600,Niv. 10 (Mk II)
+u_l_cell_08,Cellule à décharge de Telgorn T2,Établi,Sabres laser (upgrades),Démolition,19,—,—,11335,Niv. 10 (Mk II)
+u_l_emit_08,Émetteur de parade amélioré,Établi,Sabres laser (upgrades),Réparation,19,—,—,10115,Niv. 10 (Mk II)
+u_l_lens_08,Lentille de byrhotse pur,Établi,Sabres laser (upgrades),Vigilance,19,—,—,11000,Niv. 10 (Mk II)
+u_l_cell_09,Cellule d'énergie à grande décharge,Établi,Sabres laser (upgrades),Démolition,21,—,—,14995,Niv. 15 (Mk III)
+u_l_emit_09,Émetteur de parade haut de gamme,Établi,Sabres laser (upgrades),Réparation,21,—,—,13555,Niv. 15 (Mk III)
+u_l_lens_09,Lentille de gemme à rayon améliorée,Établi,Sabres laser (upgrades),Informatique,21,—,—,14600,Niv. 15 (Mk III)
+u_l_cell_10,Cellule d'énergie supérieure au diatium,Établi,Sabres laser (upgrades),Informatique,23,—,—,19750,Niv. 15 (Mk III)
+u_l_emit_10,Émetteur de désordre nerveux hightech,Établi,Sabres laser (upgrades),Réparation,23,—,—,17775,Niv. 15 (Mk III)
+u_l_lens_10,Lentille vibratoire améliorée,Établi,Sabres laser (upgrades),Informatique,23,—,—,18200,Niv. 15 (Mk III)
+u_l_cell_11,Cellule d'énergie à ions supérieure,Établi,Sabres laser (upgrades),Sécurité,25,—,—,20365,Niv. 15 (Mk III)
+u_l_emit_11,Émetteur à alliage au phobium,Établi,Sabres laser (upgrades),Réparation,25,—,—,20225,Niv. 15 (Mk III)
+u_l_lens_11,Lentille de duel d'Ossus,Établi,Sabres laser (upgrades),Premiers secours,25,—,—,21800,Niv. 15 (Mk III)
+u_l_cell_12,Cellule à décharge de Telgorn T3,Établi,Sabres laser (upgrades),Démolition,27,—,—,26000,Niv. 20 (Mk IV)
+u_l_emit_12,Émetteur de parade haut de gamme,Établi,Sabres laser (upgrades),Réparation,27,—,—,24450,Niv. 20 (Mk IV)
+u_l_lens_12,Lentille de pontite,Établi,Sabres laser (upgrades),Vigilance,27,—,—,25400,Niv. 20 (Mk IV)
+u_l_cell_13,Cellule d'énergie au diatum ultime,Établi,Sabres laser (upgrades),Informatique,29,—,—,29850,Niv. 20 (Mk IV)
+u_l_emit_13,Émetteur au phobium raffiné,Établi,Sabres laser (upgrades),Réparation,29,—,—,28885,Niv. 20 (Mk IV)
+u_l_lens_13,Lentille de byrhotse améliorée,Établi,Sabres laser (upgrades),Vigilance,29,—,—,29000,Niv. 20 (Mk IV)
 "ÉTABLI — UTILITAIRES, ARMES & ROQUETTES",,,,,,,,,
-a_shield_01,Bouclier d'énergie,Établi,"Utilitaires, armes & roquettes",Sécurité,1,—,—,30,
+a_shield_01,Bouclier d'énergie,Établi,"Utilitaires, armes & roquettes",Sécurité,1,—,—,30,Niv. 1
 G_I_DRDREPEQP001,Trousse de réparation,Établi,"Utilitaires, armes & roquettes",Réparation,1,—,—,25,
-w_melee_02,Epée longue,Établi,"Utilitaires, armes & roquettes",Réparation,1,—,—,50,
-w_blaste_03,Pistolet de survie,Établi,"Utilitaires, armes & roquettes",Réparation,2,—,—,60,
-a_shield_02,Bouclier de mêlée mand.,Établi,"Utilitaires, armes & roquettes",Sécurité,5,—,—,60,
+w_melee_02,Epée longue,Établi,"Utilitaires, armes & roquettes",Réparation,1,—,—,50,Niv. 1 (arme de base craftable)
+w_blaste_03,Pistolet de survie,Établi,"Utilitaires, armes & roquettes",Réparation,2,—,—,60,Niv. 1 (arme de base craftable)
+a_shield_02,Bouclier de mêlée mand.,Établi,"Utilitaires, armes & roquettes",Sécurité,5,—,—,60,Niv. 1
 g_i_parts01,Pièces détachées,Établi,"Utilitaires, armes & roquettes",Réparation,5,—,—,200,
 g_i_progspike01,"Programme d'intrusion, ordinateur",Établi,"Utilitaires, armes & roquettes",Informatique,5,—,—,250,
 g_i_secspike01,Programme de sécurité,Établi,"Utilitaires, armes & roquettes",Sécurité,5,—,—,100,
-w_brifle_04,Fusil blaster,Établi,"Utilitaires, armes & roquettes",Réparation,7,—,—,100,
+w_brifle_04,Fusil blaster,Établi,"Utilitaires, armes & roquettes",Réparation,7,—,—,100,Niv. 1 (arme de base craftable)
 G_I_DRDREPEQP002,Trousse de réparation améliorée,Établi,"Utilitaires, armes & roquettes",Réparation,10,—,—,50,
-w_melee_06,Vibro-épée,Établi,"Utilitaires, armes & roquettes",Réparation,10,—,—,285,
-a_shield_04,Bouclier Echani,Établi,"Utilitaires, armes & roquettes",Sécurité,11,—,—,125,
-w_blaste_07,Pistolet d'éclaireur,Établi,"Utilitaires, armes & roquettes",Réparation,11,—,—,500,
-w_brifle_10,Fusil blaster à répétition,Établi,"Utilitaires, armes & roquettes",Réparation,13,—,—,1750,
-w_brifle_13,Fusil désintégrateur,Établi,"Utilitaires, armes & roquettes",Réparation,16,—,—,2535,
-a_shield_06,Bouclier de duel Echani,Établi,"Utilitaires, armes & roquettes",Sécurité,19,—,—,400,
-w_melee_15,Vibro-double-lame,Établi,"Utilitaires, armes & roquettes",Réparation,19,—,—,3585,
+w_melee_06,Vibro-épée,Établi,"Utilitaires, armes & roquettes",Réparation,10,—,—,285,Niv. 1 (arme de base craftable)
+a_shield_04,Bouclier Echani,Établi,"Utilitaires, armes & roquettes",Sécurité,11,—,—,125,Niv. 10
+w_blaste_07,Pistolet d'éclaireur,Établi,"Utilitaires, armes & roquettes",Réparation,11,—,—,500,Niv. 1 (arme de base craftable)
+w_brifle_10,Fusil blaster à répétition,Établi,"Utilitaires, armes & roquettes",Réparation,13,—,—,1750,Niv. 1 (arme de base craftable)
+w_brifle_13,Fusil désintégrateur,Établi,"Utilitaires, armes & roquettes",Réparation,16,—,—,2535,Niv. 1 (arme de base craftable)
+a_shield_06,Bouclier de duel Echani,Établi,"Utilitaires, armes & roquettes",Sécurité,19,—,—,400,Niv. 15
+w_melee_15,Vibro-double-lame,Établi,"Utilitaires, armes & roquettes",Réparation,19,—,—,3585,Niv. 1 (arme de base craftable)
 G_I_DRDREPEQP003,Trousse de reconstruction,Établi,"Utilitaires, armes & roquettes",Réparation,20,—,—,100,
-w_blaste_18,Blaster de vigile,Établi,"Utilitaires, armes & roquettes",Réparation,22,—,—,7600,
-w_melee_19,Epée de Ryyk,Établi,"Utilitaires, armes & roquettes",Réparation,23,—,—,9000,
-a_shield_07,Prototype de bouclier verpine,Établi,"Utilitaires, armes & roquettes",Sécurité,29,—,—,625,
-w_rocket_01,Roquette explosive,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,5,—,—,75,
-w_rocket_02,Fléchette tranquillisante,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,10,—,—,125,
-w_rocket_03,Roquette perforante,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,15,—,—,275,
-w_rocket_04,Fléchette de Kyber,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,20,—,—,350,
-w_rocket_05,Roquette à plasma,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,25,—,—,490,
+w_blaste_18,Blaster de vigile,Établi,"Utilitaires, armes & roquettes",Réparation,22,—,—,7600,Niv. 1 (arme de base craftable)
+w_melee_19,Epée de Ryyk,Établi,"Utilitaires, armes & roquettes",Réparation,23,—,—,9000,Niv. 1 (arme de base craftable)
+a_shield_07,Prototype de bouclier verpine,Établi,"Utilitaires, armes & roquettes",Sécurité,29,—,—,625,Niv. 20
+w_rocket_01,Roquette explosive,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,5,—,—,75,Niv. 1
+w_rocket_02,Fléchette tranquillisante,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,10,—,—,125,Niv. 10
+w_rocket_03,Roquette perforante,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,15,—,—,275,Niv. 15
+w_rocket_04,Fléchette de Kyber,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,20,—,—,350,Niv. 20
+w_rocket_05,Roquette à plasma,Établi (Mira),"Utilitaires, armes & roquettes",Réparation,25,—,—,490,Niv. 20
+ÉTABLI — ARMES DE BASE NON-LASER (AJOUTS MOD),,,,,,,,,
+w_melee_01,Epée courte,Établi,Armes de base (ajouts mod),Réparation,2,—,—,25,Ajout mod — Niv. 1 (seuil Réparation 2)
+w_melee_03,Matraque à énergie,Établi,Armes de base (ajouts mod),Réparation,3,—,—,75,Ajout mod — Niv. 1 (seuil Réparation 3)
+w_melee_04,Bâton,Établi,Armes de base (ajouts mod),Réparation,2,—,—,100,Ajout mod — Niv. 1 (seuil Réparation 2)
+w_melee_05,Vibro-lame,Établi,Armes de base (ajouts mod),Réparation,4,—,—,190,Ajout mod — Niv. 1 (seuil Réparation 4)
+w_melee_07,Double-lame,Établi,Armes de base (ajouts mod),Réparation,5,—,—,475,Ajout mod — Niv. 1 (seuil Réparation 5)
+w_melee_09,Hache de guerre gamorréenne,Établi,Armes de base (ajouts mod),Réparation,6,—,—,800,Ajout mod — Niv. 1 (seuil Réparation 6)
+w_melee_14,Pique de Force,Établi,Armes de base (ajouts mod),Réparation,6,—,—,3000,Ajout mod — Niv. 1 (seuil Réparation 6)
+w_melee_ww_base,Lame de guerre wookie (base mod),Établi,Armes de base (ajouts mod),Réparation,6,—,—,100,Ajout mod — Niv. 1 (seuil Réparation 6)
+w_blaste_01,Pistolet blaster,Établi,Armes de base (ajouts mod),Réparation,2,—,—,25,Ajout mod — Niv. 1 (seuil Réparation 2)
+w_blaste_02,Blaster à ions,Établi,Armes de base (ajouts mod),Réparation,4,—,—,50,Ajout mod — Niv. 1 (seuil Réparation 4)
+w_blaste_04,Pistolet sonique,Établi,Armes de base (ajouts mod),Réparation,4,—,—,100,Ajout mod — Niv. 1 (seuil Réparation 4)
+w_blaste_05,Pistolet désintégrateur,Établi,Armes de base (ajouts mod),Réparation,6,—,—,200,Ajout mod — Niv. 1 (seuil Réparation 6)
+w_blaste_06,Blaster lourd,Établi,Armes de base (ajouts mod),Réparation,5,—,—,300,Ajout mod — Niv. 1 (seuil Réparation 5)
+w_brifle_01,Fusil blaster automatique,Établi,Armes de base (ajouts mod),Réparation,4,—,—,35,Ajout mod — Niv. 1 (seuil Réparation 4)
+w_brifle_02,Fusil automatique à ions,Établi,Armes de base (ajouts mod),Réparation,5,—,—,65,Ajout mod — Niv. 1 (seuil Réparation 5)
+w_brifle_03,Fusil automatique sonique,Établi,Armes de base (ajouts mod),Réparation,5,—,—,95,Ajout mod — Niv. 1 (seuil Réparation 5)
+w_brifle_05,Arbalète laser,Établi,Armes de base (ajouts mod),Réparation,6,—,—,250,Ajout mod — Niv. 1 (seuil Réparation 6)
+w_brifle_hr_base,Blaster lourd à répétition (base mod),Établi,Armes de base (ajouts mod),Réparation,8,—,—,100,Ajout mod — Niv. 1 (seuil Réparation 8)
+ÉTABLI — ARMURES INTERMÉDIAIRES DOUBLES (AJOUTS MOD),,,,,,,,,
+u_a_over_c01,Sur-couche double ablative Mk I,Établi,Overlay double (armure interm.),Réparation,6,—,—,—,Ajout mod — Niv. 1 (Mk I) (seuil Réparation 6)
+u_a_over_c02,Sur-couche double balistique Mk I,Établi,Overlay double (armure interm.),Réparation,6,—,—,—,Ajout mod — Niv. 1 (Mk I) (seuil Réparation 6)
+u_a_over_c03,Sur-couche double tactique Mk I,Établi,Overlay double (armure interm.),Réparation,6,—,—,—,Ajout mod — Niv. 1 (Mk I) (seuil Réparation 6)
+u_a_over_c04,Sur-couche double environnementale Mk I,Établi,Overlay double (armure interm.),Réparation,6,—,—,—,Ajout mod — Niv. 1 (Mk I) (seuil Réparation 6)
+u_a_over_c05,Sur-couche double ablative Mk II,Établi,Overlay double (armure interm.),Réparation,14,—,—,—,Ajout mod — Niv. 10 (Mk II) (seuil Réparation 14)
+u_a_over_c06,Sur-couche double balistique Mk II,Établi,Overlay double (armure interm.),Réparation,14,—,—,—,Ajout mod — Niv. 10 (Mk II) (seuil Réparation 14)
+u_a_over_c07,Sur-couche double tactique Mk II,Établi,Overlay double (armure interm.),Réparation,14,—,—,—,Ajout mod — Niv. 10 (Mk II) (seuil Réparation 14)
+u_a_over_c08,Sur-couche double environnementale Mk II,Établi,Overlay double (armure interm.),Réparation,14,—,—,—,Ajout mod — Niv. 10 (Mk II) (seuil Réparation 14)
+u_a_over_c09,Sur-couche double ablative Mk III,Établi,Overlay double (armure interm.),Réparation,22,—,—,—,Ajout mod — Niv. 18 (Mk III) (seuil Réparation 22)
+u_a_over_c10,Sur-couche double balistique Mk III,Établi,Overlay double (armure interm.),Réparation,22,—,—,—,Ajout mod — Niv. 18 (Mk III) (seuil Réparation 22)
+u_a_over_c11,Sur-couche double tactique Mk III,Établi,Overlay double (armure interm.),Réparation,22,—,—,—,Ajout mod — Niv. 18 (Mk III) (seuil Réparation 22)
+u_a_over_c12,Sur-couche double environnementale Mk III,Établi,Overlay double (armure interm.),Réparation,22,—,—,—,Ajout mod — Niv. 18 (Mk III) (seuil Réparation 22)
+u_a_unde_c01,Sous-couche double bio-renforcée Mk I,Établi,Underlay double (armure interm.),Premiers secours,6,—,—,—,Ajout mod — Niv. 1 (Mk I) (seuil Premiers secours 6)
+u_a_unde_c02,Sous-couche double duracier fortifié Mk I,Établi,Underlay double (armure interm.),Premiers secours,6,—,—,—,Ajout mod — Niv. 1 (Mk I) (seuil Premiers secours 6)
+u_a_unde_c03,Sous-couche double articulations tactiques Mk I,Établi,Underlay double (armure interm.),Premiers secours,6,—,—,—,Ajout mod — Niv. 1 (Mk I) (seuil Premiers secours 6)
+u_a_unde_c04,Sous-couche double bio-environnementale Mk I,Établi,Underlay double (armure interm.),Premiers secours,6,—,—,—,Ajout mod — Niv. 1 (Mk I) (seuil Premiers secours 6)
+u_a_unde_c05,Sous-couche double bio-renforcée Mk II,Établi,Underlay double (armure interm.),Premiers secours,14,—,—,—,Ajout mod — Niv. 10 (Mk II) (seuil Premiers secours 14)
+u_a_unde_c06,Sous-couche double duracier fortifié Mk II,Établi,Underlay double (armure interm.),Premiers secours,14,—,—,—,Ajout mod — Niv. 10 (Mk II) (seuil Premiers secours 14)
+u_a_unde_c07,Sous-couche double articulations tactiques Mk II,Établi,Underlay double (armure interm.),Premiers secours,14,—,—,—,Ajout mod — Niv. 10 (Mk II) (seuil Premiers secours 14)
+u_a_unde_c08,Sous-couche double bio-environnementale Mk II,Établi,Underlay double (armure interm.),Premiers secours,14,—,—,—,Ajout mod — Niv. 10 (Mk II) (seuil Premiers secours 14)
+u_a_unde_c09,Sous-couche double bio-renforcée Mk III,Établi,Underlay double (armure interm.),Premiers secours,22,—,—,—,Ajout mod — Niv. 18 (Mk III) (seuil Premiers secours 22)
+u_a_unde_c10,Sous-couche double duracier fortifié Mk III,Établi,Underlay double (armure interm.),Premiers secours,22,—,—,—,Ajout mod — Niv. 18 (Mk III) (seuil Premiers secours 22)
+u_a_unde_c11,Sous-couche double articulations tactiques Mk III,Établi,Underlay double (armure interm.),Premiers secours,22,—,—,—,Ajout mod — Niv. 18 (Mk III) (seuil Premiers secours 22)
+u_a_unde_c12,Sous-couche double bio-environnementale Mk III,Établi,Underlay double (armure interm.),Premiers secours,22,—,—,—,Ajout mod — Niv. 18 (Mk III) (seuil Premiers secours 22)
 LABORATOIRE — MÉDIPACS & IMPLANTS,,,,,,,,,
 g_i_medeqpmnt01,Trousse de soins,Laboratoire,Médipacs & Implants,Premiers secours,1,—,—,40,
 e_imp2_01,Implant de combat rétinien,Laboratoire,Médipacs & Implants,Premiers secours,5,—,—,75,

@@ -1,4 +1,4 @@
-Pouvoir de la Force (VO / VF),Armure max autorisée,Effets par niveau (extraits du jeu),Changement,Obtention,Règle du jeu de base (sans feats)
+﻿Pouvoir de la Force (VO / VF),Armure max autorisée,Effets par niveau (extraits du jeu),Changement,Obtention,Règle du jeu de base (sans feats)
 "Force Aura / Force Shield / Force Armor (LS)
 Aura de Force / Bouclier de Force / Armure de Force",Armure interdite,"L1 : +2 Défense et sauvegardes, 20 s
 L2 : +4 Défense et sauvegardes, 20 s (Niv. 6)
@@ -6,11 +6,11 @@ L3 : +6 Défense et sauvegardes, 20 s (Niv. 12)",,Power selection,
 "Force Barrier / Improved / Master (LS)
 Barrière de Force / améliorée / de maître",Armure légère,"L1 : RD 4 physique (tranchant, contondant, perforant), 30 s (Niv. 6)
 L2 : RD 8 physique, 45 s (Niv. 9)
-L3 : RD 15 physique, 60 s (Niv. 15)",,Power selection,
+L3 : RD 15 physique, 60 s (Niv. 15)",RD 3 / 6 / 10 physique (30 / 45 / 60 s),Power selection,
 "Force Valor / Knight Valor / Master Valor (LS)
 Talent de Force / Talent de chevalier / Talent de maître",Armure légère,"L1 : +2 caracs physiques et sauvegardes, groupe, 20 s
 L2 : +3 et immunité Poison, groupe, 20 s (Niv. 9)
-L3 : +5 et immunité Poison, groupe, 20 s (Niv. 15)",,Power selection,
+L3 : +5 et immunité Poison, groupe, 20 s (Niv. 15)",+2 / +3 / +4 aux 6 caractéristiques (groupe) + immunité Poison (L2/L3),Power selection,
 "Cure / Heal / Master Heal (LS)
 Guérison / Soins améliorés / Soins de maître",Armure moyenne,"L1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6)
 L2 : 15 PV + mods, neutralise le Poison (Niv. 12)
@@ -30,9 +30,9 @@ L3 : tous les ennemis à 10 m de la cible, 12 s (Niv. 15)",,Power selection,
 L2 : tous les droïdes à 5 m de la cible, 12 s, dégâts = Niveau (Niv. 6)
 L3 : tous les droïdes à 6 m, 1-6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)",,Power selection,
 "Battle Precognition (LS)
-Prémonition du combat",?,Unique : ajoute le modificateur de Sagesse à la Défense (passif),Supprimé / TODO (SAG-CA reportée sur Matukai II / Nomi III),Quete,
+Prémonition du combat",?,Unique : ajoute le modificateur de Sagesse à la Défense (passif),Remplacé par +10 % d'esquive en mêlée (récompense Echani),Quete,
 "Force Enlightenment (LS)
-Grâce du côté Lumineux",Armure moyenne,"Unique : active simultanément Vitesse, Armure et Talent de Force au rang max possédé, à coût réduit",Lancer instantané (coût 30 PF) ; 1d4 / niveau,Quete / Lumineux max,
+Grâce du côté Lumineux",Armure moyenne,"Unique : active simultanément Vitesse, Armure et Talent de Force au rang max possédé, à coût réduit",Lancer instantané (coût 30 PF) ; triple buff filtré par l'armure portée,Quete / Lumineux max,
 "Inspire Followers I-VI (LS)
 Inspiration des disciples I-VI",Armure lourde,"L1 : +1 Attaque, Dégâts et Volonté (groupe, 45 s, hors droïdes)
 L2 : +2 (Maître Jedi niv. 5)
@@ -46,7 +46,7 @@ L2 : Domination : version renforcée, résistance rare (Niv. 6)",,Dialogue,
 "Battle Meditation / Improved / Master (neutre)
 Méditation de combat / améliorée / de maître",Armure moyenne,"L1 : groupe +2 Attaque, Dégâts et Volonté + régén. PV accélérée, 20 s (Niv. 6)
 L2 : + ennemis à 10 m : malus (Volonté annule) (Niv. 12)
-L3 : groupe +4 ; ennemis à 15 m (Niv. 18)",Bonus et malus indexés sur le mod. de CHA ; malus ennemis -4 (WIP),Power selection,
+L3 : groupe +4 ; ennemis à 15 m (Niv. 18)",Bonus et malus indexés sur le mod. de CHA (plafond ±2 / ±4 / ±6),Power selection,
 "Burst of Speed / Knight Speed / Master Speed (neutre)
 Pointe de vitesse / Vitesse de chevalier / Vitesse de maître",Armure interdite,"L1 : vitesse de déplacement ×2, +2 Défense, 36 s
 L2 : +4 Défense et +1 attaque/round (Niv. 9)
@@ -54,14 +54,14 @@ L3 : +4 Défense et +2 attaques/round (Niv. 15)",,Power selection,
 "Energy Resistance / Improved / Master (neutre)
 Résistance à l'énergie / améliorée / de maître",Armure légère,"L1 : RD 6 (énergie, sonique, feu, froid, électricité), 120 s
 L2 : RD 12 (Niv. 9)
-L3 : RD 20, tout le groupe (Niv. 17)",Immunité Poison ajoutée (WIP),Power selection,
+L3 : RD 20, tout le groupe (Niv. 17)",RD 4 / 8 / 12 (groupe au L3) + Immunité Poison au L3,Power selection,
 "Force Body / Improved / Master (neutre)
 Corps de Force / amélioré / de maître",Armure lourde,"L1 : coûts payés 50 % PF / 50 % PV, 30 s
 L2 : 40 % / 40 % (Niv. 9)
-L3 : 30 % / 30 % (Niv. 15)",,Power selection,
+L3 : 30 % / 30 % (Niv. 15)",Coût 50/40/30 % PV + +2 / +4 / +6 au DD des pouvoirs utilisables sous armure,Power selection,
 "Force Deflection / Force Redirection (neutre)
 Parade grâce à la Force / Renvoi grâce à la Force",Armure lourde,"L1 : pare les tirs de blaster sans sabre (permanent) (Niv. 6)
-L2 : pare et renvoie les tirs, +3 aux jets de parade (Niv. 12)",,Power selection,
+L2 : pare et renvoie les tirs, +3 aux jets de parade (Niv. 12)",Pare/renvoie sans sabre + +2 / +4 Défense contre les attaques à distance,Power selection,
 "Force Push / Force Whirlwind / Force Wave (neutre)
 Poussée de Force / Tourbillon de Force / Vague de Force",Armure moyenne,"L1 : 1 cible repoussée 5 m, jetée au sol, étourdie 3 s, dégâts = Niveau (Réflexes : pas d'étourdissement, ½ dégâts)
 L2 : 1 cible immobilisée 12 s, dégâts 1/3 Niveau / 2 s (Réflexes annule tout) (Niv. 9)
@@ -74,19 +74,21 @@ Suppression de Force / Destruction de Force",Armure légère,"L1 : dissipe les e
 L2 : Destruction de Force : dissipe tous les effets de soutien (Niv. 15)",,Power selection,
 "Mind Trick / Confusion (neutre)
 Subterfuge / Confusion",Armure moyenne,"L1 : distrait une cible 30 s (passe inaperçu à côté d'elle)
-L2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)",,Power selection (évolution d'Affect Mind),
+L2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)","L1 : distrait (-4 Atq 18 s) ; L2 : zone 6 m (jusqu'à 3 cibles combattent pour vous 15 s, Vol annule)",Power selection (évolution d'Affect Mind),
 "Throw Lightsaber / Advanced (neutre)
 Lancer de sabre laser / amélioré",Armure lourde,"L1 : 1 cible à 5 m+, touche automatiquement, 1-6 dégâts / 2 Niveaux (sabre requis)
-L2 : jusqu'à 3 cibles en chaîne (5 m entre elles) (Niv. 9)",,Power selection,
+L2 : jusqu'à 3 cibles en chaîne (5 m entre elles) (Niv. 9)","L1 : touche auto, 1d4/Niv + Renversement 1 tour (Vigueur annule) ; L2 : 3 cibles en chaîne, 1d4/Niv + ignore la RD",Power selection,
 "Beast Trick / Beast Confusion (neutre)
 Subterfuge contre les bêtes / Confusion des bêtes",Armure lourde,"L1 : distrait une bête féroce 30 s
 L2 : la bête combat pour vous 30 s (prestige)",,Quête / Dialogue (Kreia sur Dxun),
 "Breath Control (neutre)
 Contrôle de la respiration",Armure lourde,"Unique : immunité au Poison et aux gaz toxiques, 240 s",,Quête / Dialogue (Kreia avant le Jekk'Jekk Tarr sur Nar Shaddaa),
 "Force Camouflage / Improved / Master (neutre)
-Camouflage par la Force / Science / Maîtrise du camouflage",?,"L1 : Discrétion sans générateur de camouflage (permanent)
+Camouflage par la Force / Science / Maîtrise du camouflage",Armure moyenne,"L1 : Discrétion sans générateur de camouflage (permanent)
 L2 : +4 en Discrétion (Niv. 7)
-L3 : +8 en Discrétion (Niv. 13)",TODO à booster,Prestige Assassin / Jedi Protecteur,
+L3 : +8 en Discrétion (Niv. 13)","L1 : Furtivité sans ceinture + Course furtive auto + +4 Discrétion
+L2 : +8 Discrétion + embuscade (sortie de furtivité) inflige +2d6 dégâts et Étourdit 1 tour (Vig annule, DD 10 + Niv + Carac)
+L3 : +12 Discrétion + chaque kill donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)",Prestige Assassin / Jedi Protecteur,
 "Force Sight (neutre)
 Vision de Force",Armure lourde,"Unique : voit à travers certains obstacles, détection des êtres et camouflages (permanent)",,Quête / Dialogue (Visas Marr avec haute influence),
 "Precognition (neutre)
@@ -94,30 +96,30 @@ Prémonition",Armure lourde,"Unique : alerte le Jedi en cas de grand danger immi
 "Drain Force / Improved / Master (DS)
 Absorption de Force / améliorée / de maître",Armure lourde,"L1 : 1 cible perd 10 PF, récupérés par le Jedi (Volonté ½)
 L2 : 20 PF (Niv. 9)
-L3 : zone 10 m : tous les ennemis perdent 30 PF (Niv. 15)",,Power selection,
+L3 : zone 10 m : tous les ennemis perdent 30 PF (Niv. 15)",Draine 15 / 30 / 45 + Niveau PF et inflige la moitié en dégâts directs aux utilisateurs de Force,Power selection,
 "Drain Life / Death Field (DS)
 Absorption de vie / Champ de mort",Armure interdite,"L1 : 1 cible : 1-4 PV / Niveau absorbés et soignent le Jedi (Vigueur ½) (Niv. 9)
-L2 : Champ de mort : zone 10 m (Niv. 18)",,Power selection,
+L2 : Champ de mort : zone 10 m (Niv. 18)","1d4/Niv sans cap en L2 (soigne le lanceur, Vig ½)",Power selection,
 "Fear / Horror / Insanity (DS)
 Terreur / Horreur / Insanité",Armure légère,"L1 : 1 cible s'enfuit 6 s (Volonté annule)
 L2 : ennemis à 5 m de la cible tétanisés 12 s (Niv. 6)
-L3 : ennemis à 10 m tétanisés 18 s (Niv. 12)",-4 Défense aux cibles (WIP),Power selection,
+L3 : ennemis à 10 m tétanisés 18 s (Niv. 12)",-4 Défense aux cibles tétanisées,Power selection,
 "Force Scream / Improved / Master (DS)
 Cri de Force / amélioré / de maître",Armure légère,"L1 : 3d6 dégâts soniques + -2 caracs, cône 10 m, 30 s (Volonté : ½ et annule le malus, DD 10 + Niv + SAG + CHA)
 L2 : 5d6 + -4 caracs (Niv. 9)
-L3 : 7d6 + -6 caracs (Niv. 15)",1D4 / niveau,Power selection,
+L3 : 7d6 + -6 caracs (Niv. 15)",L1 : 1d3/Niv (-2 caracs) ; L2 : 1d4/Niv (-4 caracs) ; L3 : 1d4/Niv sans cap (-6 caracs),Power selection,
 "Shock / Force Lightning / Force Storm (DS)
 Choc / Foudre / Tempête de Force",Armure interdite,"L1 : 1 cible : 1-6 dégâts / Niveau (Volonté ½)
 L2 : Foudre : cône 16 m, 1-6/Niveau, max 10-60 (Niv. 9)
-L3 : Tempête : zone 10 m + draine 1-6 PF / Niveau (Niv. 18)",,Power selection,
+L3 : Tempête : zone 10 m + draine 1-6 PF / Niveau (Niv. 18)","1d4/Niv sans cap en L3 (L1 cible, L2 cône, L3 zone 10 m) ; suppression du drain de PF ennemi",Power selection,
 "Slow / Affliction / Plague (DS)
 Lenteur / Affliction / Peste",Armure moyenne,"L1 : 1 action partielle/round, -2 Défense, Attaque, Dégâts et Réflexes, 30 s (Volonté annule)
 L2 : Affliction : -7 caracs (1 pt/3 s, 21 s) + ralenti (Vigueur DD 20) (Niv. 6)
-L3 : Peste : -12 toutes caracs (1 pt/s, 12 s) + ralenti, DD 100 impassable (Niv. 12)",,Power selection,
+L3 : Peste : -12 toutes caracs (1 pt/s, 12 s) + ralenti, DD 100 impassable (Niv. 12)","L2 : -4 caracs + ralenti 18 s (Vig annule, DD normal) ; L3 : -6 caracs + ralenti 24 s (Vig réduit à -3 sans ralenti, DD normal +4 ; suppression du DD 100 impassable)",Power selection,
 "Wound / Choke / Kill (DS)
 Blessure / Etouffement / Mise à mort",Armure interdite,"L1 : dégâts 2/3 Niveau / 2 s pendant 6 s (Vigueur annule)
 L2 : Etouffement : cible étourdie 6 s + dégâts 2/3 Niveau / 2 s (Niv. 9)
-L3 : Mise à mort : cible étouffe 6 s et perd 50 % de ses PV max (Vigueur : dégâts réduits au Niveau, pas d'étouffement) (Niv. 12)",,Power selection,
+L3 : Mise à mort : cible étouffe 6 s et perd 50 % de ses PV max (Vigueur : dégâts réduits au Niveau, pas d'étouffement) (Niv. 12)",Suppression du 50 % PV max ; L1 : 1d4/Niv ; L2 : 1d6/Niv + stun 6 s ; L3 : 1d6/Niv sans cap + stun 6 s (Vig ½ et annule stun),Power selection,
 "Crush Opposition I-VI (DS)
 Annihilation de l'opposition I-VI",Armure lourde,"L1 : -1 Attaque et Volonté, ennemis zone 15 m, 45 s (Volonté annule)
 L2 : -2 (Seigneur Sith niv. 5)
@@ -126,8 +128,8 @@ L4 : -4 (niv. 13)
 L5 : -5 (niv. 17)
 L6 : -6 (niv. 21)",,Prestige Seigneur Sith,
 "Force Crush (DS)
-Ecrasement de Force",Armure légère,"Unique : 1-10 dégâts purs / Niveau, la plupart des défenses inopérantes (Vigueur ½)",,Quete / Obscur max,
+Ecrasement de Force",Armure légère,"Unique : 1-10 dégâts purs / Niveau, la plupart des défenses inopérantes (Vigueur ½)",1d6/Niv sans cap + immobilisation 6 s (Vigueur ½ dégâts et annule immobilisation),Quete / Obscur max,
 "Fury / Improved / Master (DS)
 Fureur / améliorée / de maître",Armure interdite,"L1 : +2 FOR, +1 PV/Niveau, +1 Vigueur et Volonté, immunisé Stase et Paralysie, les kills alimentent la Fureur
 L2 : +4 FOR, +2 PV/Niveau, +2 Vig/Vol (Maraudeur niv. 5)
-L3 : +6 FOR, +3 PV/Niveau, +3 Vig/Vol (niv. 9)",Malus -6 Défense ; non cumulable avec Vitesse (WIP),Prestige Sith Maraudeur,
+L3 : +6 FOR, +3 PV/Niveau, +3 Vig/Vol (niv. 9)",Malus -6 Défense ; non cumulable avec Vitesse,Prestige Sith Maraudeur,
