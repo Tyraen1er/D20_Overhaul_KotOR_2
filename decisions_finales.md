@@ -31,7 +31,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 | Famille de Classes | Gain de Pouvoirs | Total Pouvoirs (Niv. 30) | Gain de Dons | Total Dons (Niv. 30) | Identité |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Gardien / Maître d'Armes / Maraudeur Sith** | `1/3` niveaux (+2 Niv. 1) | **12** | `~2/3` niveaux + bonus | **22** | Maître Martial |
-| **Sentinelle / Veilleur / Assassin Sith** | `1/2` niveaux | **16** | `~3/5` niveaux | **18** | Hybride Tactique |
+| **Sentinelle / Jedi protecteur / Assassin Sith** | `1/2` niveaux | **16** | `~3/5` niveaux | **18** | Hybride Tactique |
 | **Consulaire / Maître Jedi / Seigneur Sith** | `4/5` niveaux | **24** | `1/2` niveaux | **15** | Archimage |
 
 ### 2. Philosophie des Pouvoirs de la Force
@@ -116,7 +116,7 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
   - **Métamagie** : R1 tous Jedi/Sith · R2 **Consulaire / Maître Jedi / Seigneur Sith** · R3 **Maître Jedi / Seigneur Sith**.
   - **Spécialisations d'arme (8 familles)** : R1 tous · R2 **Gardien / Sentinelle** + leurs prestiges · R3 **Maître d'Armes / Maraudeur Sith**.
   - **Postures** : R1 & R2 tous · R3 *Duel* = tous, *Ambidextrie / Arme Lourde / Haute cadence* = **tous sauf Mages**.
-  - **Armures** : R1 tous (si port) · **Juggernaut** R2 Gardien/prestiges martiaux, R3 **Maître d'Armes / Maraudeur Sith** · **Armure Tactique** R2 Sentinelle/prestiges hybrides, R3 **Veilleur / Assassin Sith** · **Esquive Ballistique** R2 Gardien/Sentinelle + prestiges, R3 **Maître d'Armes / Maraudeur / Veilleur / Assassin**.
+  - **Armures** : R1 tous (si port) · **Juggernaut** R2 Gardien/prestiges martiaux, R3 **Maître d'Armes / Maraudeur Sith** · **Armure Tactique** R2 Sentinelle/prestiges hybrides, R3 **Jedi protecteur / Assassin Sith** · **Esquive Ballistique** R2 Gardien/Sentinelle + prestiges, R3 **Maître d'Armes / Maraudeur / Jedi protecteur / Assassin**.
   - **Spécialisations de Caractéristique (6 arbres)** : **ouvertes à toutes les classes**, paliers par niveau (**Niv. 1+ / Niv. 8+ / Niv. 15+**).
   - **Compagnons (acté le 19/11 — gating par classe + 2 exceptions level-up)** :
     - Classes **non-Jedi** (`SOL`, `SCT`, `SCD`, `TEC`, `DRC`, `DRX`) : accès aux Rangs III martiaux/armures pertinents dès le **Niveau 15+** (`minattackbonus = 15` dans `feat.2da`, exact grâce à `CLS_ATK_1` `BAB 1.0`) — `SOL` (Spé d'arme III, Juggernaut III, Esquive Ballistique III), `SCT/SCD` (Spé d'arme III, Esquive Ballistique III, Armure Tactique III), `TEC` (Armure Tactique III, Spé d'arme III), `DRC` (Spé d'arme distance III), `DRX` (Spé d'arme distance II). Les compagnons convertis en Jedi suivent les règles normales de leur classe Jedi.
@@ -196,6 +196,7 @@ Avec upgrades cloisonnées (`WIP Améliorations.csv`), armes d20 (`WIP armes.csv
 4. **Ordre canonique des caractéristiques** : FOR, DEX, CON, INT, SAG, CHA — dans l'ordre des dons comme dans les descriptions.
 5. **« Les synergies doivent être trouvées, pas décrites »** (14/11) : un don dont le texte doit citer les rangs d'un autre don est défectueux par construction ; les descriptions joueurs ne référencent jamais un autre don.
 6. **CSV = couche utilisateur** (parcimonie obligatoire), `decisions_*.md` = couche agents (README §0).
+7. **Notation des dégâts en dés d20** (acté le 21/11) : toutes les descriptions du mod (CSV colonnes mod + textes en jeu `dialog.tlk` pour armes, pouvoirs, dons et améliorations) utilisent systématiquement la notation en dés (`1d6`, `2d8`, etc.) à la place des plages vanilla (`1-6`, `2-16`).
 
 ---
 
@@ -215,7 +216,7 @@ Avec upgrades cloisonnées (`WIP Améliorations.csv`), armes d20 (`WIP armes.csv
      - **Maraudeur Sith — *Stigmate de Force I–III*** *(ex Fureur Sith, `Armure lourde`, 30 s)* : `+2/+4/+6` FOR & DEX, immunité Stase/Paralysie, **`+1 atq/rd` dès L1** (non cumulable *Vitesse*), coût `-5 %` PV max/round (arrêt auto ≤ `25 %` PV max).
      - **Maître d'armes Jedi — *Cicatrice de Force I–III*** (`Armure lourde`, 30 s, nouveau) : soin `+2/+4/+6 %` PV max/round + `+1/+2/+3` sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3).
      - **Assassin Sith — *Spectre de la Force I–III*** *(ex Camouflage par la Force, `Armure moyenne`, passif, exclusif Assassin)* : furtivité sans ceinture + course furtive, embuscade `+2d6`/Stun 1t, L3 kill → crit confirmé + `+25 %` esquive 2t.
-     - **Guetteur Jedi — *Affranchi de la Force I–III*** (`Armure lourde`, passif, nouveau) : `+1` tous les 8 rangs combinés sur 4 paires (`Informatique+Sécurité` → Atq, `Démolition+Réparation` → Dég, `Vigilance+Discrétion` → CA, `Persuasion+Premiers soins` → Saves ; plafond `+3/+5/+7`) + L2 `+25 %` efficacité objets profanes + L3 Résistance à la Force passive (`15 + Niv`).
+     - **Jedi protecteur — *Affranchi de la Force I–III*** (`Armure lourde`, passif, nouveau) : `+1` tous les 8 rangs combinés sur 4 paires (`Informatique+Sécurité` → Atq, `Démolition+Réparation` → Dég, `Vigilance+Discrétion` → CA, `Persuasion+Premiers soins` → Saves ; plafond `+3/+5/+7`) + L2 `+25 %` efficacité objets profanes + L3 Résistance à la Force passive (`15 + Niv`).
      - **Seigneur Sith — *Déchirure de la Force I–III*** *(ex Annihilation de l'opposition, `Armure lourde`, 45 s)* : `-2/-4/-6` Atq, Sauvegardes et CA en zone 15 m (`Volonté` annule).
      - **Maître Jedi — *Écho des Liens I–III*** *(ex Inspiration des disciples, `Armure lourde`)* : L1 (30 s) partage buffs personnels avec l'allié le plus proche ; L2 (45 s) tout le groupe ; L3 (60 s) buffs personnels + soins partagés avec tout le groupe (sans restriction d'armure sur les alliés, comme Kreia).
      - **Alignement** : *Grâce du côté Lumineux* (`Armure moyenne`, lancer instantané 50 PF, *Vitesse* plafonnée à `+1 atq/rd` si armure portée) ; *Écrasement de Force* (`Armure légère`, `1d8/Niv` dégâts purs sans cap + immo 6 s, Vig ½ et annule).

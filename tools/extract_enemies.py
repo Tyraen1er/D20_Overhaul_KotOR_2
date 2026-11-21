@@ -481,7 +481,7 @@ def phase3():
         "JediGuardian": "Gardien Jedi", "JediConsular": "Consulaire", "JediSentinel": "Sentinelle",
         "CombatDroid": "Droïde de combat", "ExpertDroid": "Droïde expert", "Minion": "Sbire",
         "TechSpecialist": "Technicien", "JediWeaponmaster": "Maître d'Armes", "JediMaster": "Maître Jedi",
-        "JediWatchman": "Veilleur", "SithMarauder": "Maraudeur Sith", "SithLord": "Seigneur Sith",
+        "JediWatchman": "Jedi protecteur", "SithMarauder": "Maraudeur Sith", "SithLord": "Seigneur Sith",
         "SithAssassin": "Assassin Sith",
     }
     AB_FR = {"Str": "FOR", "Dex": "DEX", "Con": "CON", "Int": "INT", "Wis": "SAG", "Cha": "CHA"}

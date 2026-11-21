@@ -281,7 +281,7 @@ CHG = {
  "5":  "§8 ACTÉ : RD native ajoutée par type d'armure (légère 0 / interm. 2 / lourde 4) — le don lui-même est inchangé",
  "6":  "§8 ACTÉ : RD native 2 (don inchangé)",
  "4":  "§8 ACTÉ : RD native 4 (don inchangé)",
- "156": "Annexes §5.B : ouvrir l'accès des dons Supérieurs aux classes hybrides (comble les dons vides de la Sentinelle/Veilleur, diagnostic §6.B)",
+ "156": "Annexes §5.B : ouvrir l'accès des dons Supérieurs aux classes hybrides (comble les dons vides de la Sentinelle/Jedi protecteur, diagnostic §6.B)",
  "157": "Idem : élargir l'accès",
  "158": "Idem : élargir l'accès",
  "159": "Idem : élargir l'accès",
