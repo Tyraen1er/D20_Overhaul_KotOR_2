@@ -15,14 +15,14 @@ attaque -6/-10
 +2/0 si main gauche balanced"
 "Arme lourde (2M)
 (Hache gamorréenne, Vibro-épée, Pique de Force, Carabine blaster, Fusil blaster, Arbalète wookie, Fusil disrupteur, Fusil à ions, Fusil sonique)",X,"Atq 1
+dégât mêlée 215% FOR
+dégât distance 165% DEX
+Prérequis : Arme à deux mains équipée, non double","Atq 2
+dégât mêlée 235% FOR
+dégât distance 185% DEX
+Prérequis : Arme à deux mains équipée, non double","Atq 3
 dégât mêlée 250% FOR
 dégât distance 200% DEX
-Prérequis : Arme à deux mains équipée, non double","Atq 2
-dégât mêlée 275% FOR
-dégât distance 225% DEX
-Prérequis : Arme à deux mains équipée, non double","Atq 3
-dégât mêlée 300% FOR
-dégât distance 250% DEX
 Prérequis : Arme à deux mains équipée, non double","dégât mêlée 200% FOR
 dégât dist. 150% DEX
 Prérequis : Arme à deux mains équipée, non double"

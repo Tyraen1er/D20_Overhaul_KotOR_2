@@ -209,7 +209,7 @@
     {
       "key": "unarmed",
       "name": "Mains nues",
-      "family": "impact",
+      "family": "",
       "wield": "1M",
       "ranged": false,
       "dmg_avg": 3.5,
@@ -1012,10 +1012,9 @@
           "mod_gand",
           "gand"
         ],
-        "rank1": {
-          "ranged_attack_int": true
-        },
+        "rank1": {},
         "rank2": {
+          "ranged_attack_int": true,
           "ranged_damage_int": true
         },
         "rank3": {}
@@ -1441,9 +1440,9 @@
         "barriere"
       ],
       "rd_by_rank": {
-        "1": 4,
-        "2": 8,
-        "3": 15
+        "1": 3,
+        "2": 6,
+        "3": 10
       }
     },
     "valor": {
@@ -1460,28 +1459,36 @@
       ],
       "mod_by_rank": {
         "1": 1,
-        "2": 2,
-        "3": 3
+        "2": 1,
+        "3": 2
       }
     },
     "fureur": {
-      "label": "Fureur (Sith Maraudeur)",
-      "armor_max": "sans",
+      "label": "Stigmate de Force / Fureur (Maraudeur Sith)",
+      "armor_max": "lourde",
       "csv_key": "Fury",
       "aliases": [
-        "fury"
+        "fury",
+        "fureur",
+        "stigmate",
+        "stigmate de force"
       ],
       "attacks_by_rank": {
         "1": 1,
-        "2": 2,
-        "3": 2
+        "2": 1,
+        "3": 1
       },
       "for_mod_by_rank": {
         "1": 1,
         "2": 2,
         "3": 3
       },
-      "_doc": "Resynchronisé depuis WIP Spé Pouvoirs.csv via --reingest-pouvoirs."
+      "dex_mod_by_rank": {
+        "1": 1,
+        "2": 2,
+        "3": 3
+      },
+      "_doc": "Resynchronisé depuis Spé Pouvoirs.csv (20/11) : Armure lourde, +1 atq/rd dès L1, +2/+4/+6 FOR & DEX."
     },
     "illumination": {
       "label": "Illumination de Force (Maître Jedi)",
@@ -1493,24 +1500,26 @@
       ],
       "grants": {
         "vitesse": 3,
-        "valor": 3
+        "valor": 3,
+        "armure_force": 3
       },
-      "_doc": "Si autorisée (≤ moyenne), lance Vitesse et Talent au rang 3 (plafonné au palier de phase) même si l'armure bloque Vitesse seule."
+      "armor_speed_cap": 1,
+      "_doc": "Si autorisée (≤ moyenne), lance Vitesse + Talent + Armure de Force au rang max (Vitesse plafonnée à +1 atq/rd sous armure, +2 en Robe)."
     }
   },
   "_model_doc": [
     "Hypothèses de modélisation (à ajuster pour tester d'autres lectures des dons) :",
     "duel_crit_mode=range_ext : 'crit chance +N' du style Duel = +N à la plage de menace.",
     "duel_applies_ranged=false : le Duel s'applique mêlée/mains nues uniquement.",
-    "unarmed_counts_as_impact=true : mains nues bénéficient de la Spé Arme d'Impact (WIP armes.csv les y classe).",
+    "unarmed_counts_as_impact=false : mains nues sont hors famille (armes.csv & decisions_finales.md §4.C).",
     "balanced_bonus=[2,0] : arme équilibrée en main gauche / arme double → +2 Atq main directrice, +0 seconde.",
     "ranged_1m_d_mult=[1.0,0.5] : +100 % DEX/INT main directrice, +50 % main gauche / 2e tir en 1M/D distance.",
-    "immunity_cap=0.50 : plafond d'immunité tous dégâts cumulés.",
+    "immunity_cap=null : aucun cap global d'immunité (acté 19/11, decisions_finales.md §8.B).",
     "power_attack_cap=None : plafond optionnel du bonus d'Attaque en puissance par coup."
   ],
   "duel_crit_mode": "range_ext",
   "duel_applies_ranged": false,
-  "unarmed_counts_as_impact": true,
+  "unarmed_counts_as_impact": false,
   "balanced_bonus": [
     2,
     0
@@ -1519,7 +1528,7 @@
     1.0,
     0.5
   ],
-  "immunity_cap": 0.5,
+  "immunity_cap": null,
   "power_attack_cap": null,
   "slot_damage_weights": {
     "melee": {

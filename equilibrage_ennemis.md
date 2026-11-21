@@ -112,13 +112,13 @@
 | **Droïdes** | **Statu quo binaire** (esprit/poison/drain) + peaux existantes | Ion, *Destruction de droïde*, sabres | Inchangé — c'est le modèle qui fonctionne | Aucun changement |
 | **Assassins / Traqueurs** | *Esquive instinctive* + camouflage + **25 % d'esquive** (`EffectMissChance`) vs distance | Faible en mêlée rapprochée, AoE | Les coincer au corps-à-corps ou les arroser en zone | Dons UTC + peau |
 | **Élites / Sous-boss (`Set_4`)** | **Une mécanique signature** choisie dans le menu §6-D4 | — | Variable | Scripts OnSpawn / userd |
-| **Boss majeurs (`Set_5`)** | RD `3/7/12` (**acté**) + **phases scriptées** (§6-D4) + profil familial | — | S'adapter en cours de combat | Scripts + peaux |
+| **Boss majeurs (`Set_5`)** | RD `2/5/8` (**acté**) + **phases scriptées** (§6-D4) + profil familial | — | S'adapter en cours de combat | Scripts + peaux |
 
 ---
 
 ## 5. Interactions avec les décisions déjà actées (cadre de cohérence)
 
-- RD des boss `3/7/12` et combats de **5–10 rounds** — actés (`decisions_finales.md` §3).
+- RD des boss `2/5/8` et combats de **5–10 rounds** — actés (`decisions_finales.md` §3).
 - `damagemult` des boss réduit — acté (§3).
 - ***Esquive Totale*** pour les Jedi/Sith ennemis 20+ — actée (§7) : premier profil « anti-AoE » déjà en place.
 - Établi plafonné `+2/+5/+10` — acté (§3) : les résistances ci-dessus se calculent sur des dégâts joueurs déjà assainis.

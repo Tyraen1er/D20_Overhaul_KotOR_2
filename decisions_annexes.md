@@ -157,7 +157,7 @@ L'arbre *Arts Martiaux / Arts Mutaki / Arts Martiaux Supérieurs* (spécificatio
 | 13/11 | utilisateur | Une seule série de dons par caractéristique (6 arbres exclusifs) ; validation Gand + Echanis I-II + Nomi |
 | 13/11 | utilisateur | Mains nues via Spé Contondante + Duel ; branche dédiée supprimée |
 | 13/11 | utilisateur | Kraith L2 : 5 % PV max → 5 % PF max (jamais sous 75 % PV) |
-| 13/11 | utilisateur | Matukai L1 : la SAG **s'ajoute** à l'attaque ; L2/L3 SAG→CA cumulable avec Précognition |
+| 13/11 | utilisateur | Matukai L1 : la SAG **s'ajoute** à l'attaque ; L2/L3 SAG→CA |
 | 13/11 | utilisateur | Embuscade furtive = critique confirmé (§10) |
 | 14/11 | utilisateur | Refonte des Spé d'arme : renommages (Impact/Traditionnelle/Résonance) + **4 familles de tir** ; Feats.csv restructuré à la main (colonne Source supprimée, colonne « Détail technique » ajoutée) |
 | 14/11 | utilisateur | L'ordre canonique des caracs est FOR, DEX, CON, INT, SAG, CHA (dons et descriptions) |
