@@ -1432,7 +1432,7 @@
     },
     "barriere": {
       "label": "Barrière de Force",
-      "armor_max": "legere",
+      "armor_max": "moyenne",
       "csv_key": "Force Barrier",
       "aliases": [
         "force barrier",
@@ -1440,9 +1440,9 @@
         "barriere"
       ],
       "rd_by_rank": {
-        "1": 3,
-        "2": 6,
-        "3": 10
+        "1": 4,
+        "2": 8,
+        "3": 12
       }
     },
     "valor": {

@@ -1301,9 +1301,9 @@ def selftest() -> None:
     # Stigmate de Force en armure lourde → +1 atq, +3 FOR, +3 DEX
     r3 = resolve_buffs(data, {"fureur": 3}, "lourde", data.phases["late"], "auto")
     assert r3["attacks"] == 1 and r3["for_add"] == 3 and r3["dex_add"] == 3 and r3["speed_ac"] == 0, r3
-    # Barrière de Force 3 → RD 10
-    r_bar = resolve_buffs(data, {"barriere": 3}, "legere", data.phases["late"], "auto")
-    assert r_bar["barrier_rd"] == 10, r_bar
+    # Barrière de Force 3 (Armure moyenne) → RD 12
+    r_bar = resolve_buffs(data, {"barriere": 3}, "moyenne", data.phases["late"], "auto")
+    assert r_bar["barrier_rd"] == 12, r_bar
     # --- arbres d'armures, spé carac défensives & TTD -------------------------
     e_late = data.enemies["late"]
     boss_late = Enemy("boss", e_late["hp"], e_late["defense"], e_late["rd"],
