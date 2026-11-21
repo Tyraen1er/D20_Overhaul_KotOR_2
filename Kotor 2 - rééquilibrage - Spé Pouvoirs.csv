@@ -30,16 +30,16 @@ L3 : tous les ennemis à 10 m de la cible, 12 s (Niv. 15)",,Power selection,
 L2 : tous les droïdes à 5 m de la cible, 12 s, dégâts = Niveau (Niv. 6)
 L3 : tous les droïdes à 6 m, 1-6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)",,Power selection,
 "Battle Precognition (LS)
-Prémonition du combat",?,Unique : ajoute le modificateur de Sagesse à la Défense (passif),Remplacé par +10 % d'esquive en mêlée (récompense Echani),Quete,
+Prémonition du combat",Armure lourde,Unique : ajoute le modificateur de Sagesse à la Défense (passif),Remplacé par +10 % d'esquive en mêlée (récompense Echani),Quete,
 "Force Enlightenment (LS)
-Grâce du côté Lumineux",Armure moyenne,"Unique : active simultanément Vitesse, Armure et Talent de Force au rang max possédé, à coût réduit",Lancer instantané (coût 30 PF) ; triple buff filtré par l'armure portée,Quete / Lumineux max,
+Grâce du côté Lumineux",Armure moyenne,"Unique : active simultanément Vitesse, Armure et Talent de Force au rang max possédé, à coût réduit","Lancer instantané (coût 30 PF) ; lance les 3 buffs au rang max possédé (+1 cran d'armure en ultime), avec Vitesse plafonnée à +1 atq/round si une armure est portée (+2 atq/round uniquement en Robe)",Quete / Lumineux max,
 "Inspire Followers I-VI (LS)
 Inspiration des disciples I-VI",Armure lourde,"L1 : +1 Attaque, Dégâts et Volonté (groupe, 45 s, hors droïdes)
 L2 : +2 (Maître Jedi niv. 5)
 L3 : +3 (niv. 9)
 L4 : +4 (niv. 13)
 L5 : +5 (niv. 17)
-L6 : +6 (niv. 21)",,Prestige Maitre d'arme,
+L6 : +6 (niv. 21)","Refondu en « Écho des Liens I–III » (niv. 1/5/9 de prestige) : L1 (30 s) partage les buffs personnels du Maître Jedi avec l'allié le plus proche ; L2 (45 s) avec tout le groupe ; L3 (60 s) buffs personnels + soins (pouvoirs/medpacs/régén.) partagés avec tout le groupe (sans restriction d'armure sur les alliés, comme Kreia)",Prestige Maître Jedi,
 "Affect Mind / Domination (neutre)
 Influence / Domination",Armure lourde,"L1 : options de persuasion supplémentaires en dialogue (hors droïdes)
 L2 : Domination : version renforcée, résistance rare (Niv. 6)",,Dialogue,
@@ -86,9 +86,10 @@ Contrôle de la respiration",Armure lourde,"Unique : immunité au Poison et aux 
 "Force Camouflage / Improved / Master (neutre)
 Camouflage par la Force / Science / Maîtrise du camouflage",Armure moyenne,"L1 : Discrétion sans générateur de camouflage (permanent)
 L2 : +4 en Discrétion (Niv. 7)
-L3 : +8 en Discrétion (Niv. 13)","L1 : Furtivité sans ceinture + Course furtive auto + +4 Discrétion
+L3 : +8 en Discrétion (Niv. 13)","Renommé « Spectre de la Force I–III » (exclusif Assassin Sith) :
+L1 : Furtivité sans ceinture + Course furtive auto + +4 Discrétion
 L2 : +8 Discrétion + embuscade (sortie de furtivité) inflige +2d6 dégâts et Étourdit 1 tour (Vig annule, DD 10 + Niv + Carac)
-L3 : +12 Discrétion + chaque kill donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)",Prestige Assassin / Jedi Protecteur,
+L3 : +12 Discrétion + chaque kill donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)",Prestige Assassin Sith,
 "Force Sight (neutre)
 Vision de Force",Armure lourde,"Unique : voit à travers certains obstacles, détection des êtres et camouflages (permanent)",,Quête / Dialogue (Visas Marr avec haute influence),
 "Precognition (neutre)
@@ -111,7 +112,7 @@ L3 : 7d6 + -6 caracs (Niv. 15)",L1 : 1d3/Niv (-2 caracs) ; L2 : 1d4/Niv (-4 cara
 "Shock / Force Lightning / Force Storm (DS)
 Choc / Foudre / Tempête de Force",Armure interdite,"L1 : 1 cible : 1-6 dégâts / Niveau (Volonté ½)
 L2 : Foudre : cône 16 m, 1-6/Niveau, max 10-60 (Niv. 9)
-L3 : Tempête : zone 10 m + draine 1-6 PF / Niveau (Niv. 18)","1d4/Niv sans cap en L3 (L1 cible, L2 cône, L3 zone 10 m) ; suppression du drain de PF ennemi",Power selection,
+L3 : Tempête : zone 10 m + draine 1-6 PF / Niveau (Niv. 18)","1d6/Niv sans cap en L3 (L1 cible, L2 cône, L3 zone 10 m) ; suppression du drain de PF ennemi ; sauvegarde passée de Volonté à Réflexes (½ dégâts, Esquive Totale s'applique)",Power selection,
 "Slow / Affliction / Plague (DS)
 Lenteur / Affliction / Peste",Armure moyenne,"L1 : 1 action partielle/round, -2 Défense, Attaque, Dégâts et Réflexes, 30 s (Volonté annule)
 L2 : Affliction : -7 caracs (1 pt/3 s, 21 s) + ralenti (Vigueur DD 20) (Niv. 6)
@@ -119,17 +120,21 @@ L3 : Peste : -12 toutes caracs (1 pt/s, 12 s) + ralenti, DD 100 impassable (Niv.
 "Wound / Choke / Kill (DS)
 Blessure / Etouffement / Mise à mort",Armure interdite,"L1 : dégâts 2/3 Niveau / 2 s pendant 6 s (Vigueur annule)
 L2 : Etouffement : cible étourdie 6 s + dégâts 2/3 Niveau / 2 s (Niv. 9)
-L3 : Mise à mort : cible étouffe 6 s et perd 50 % de ses PV max (Vigueur : dégâts réduits au Niveau, pas d'étouffement) (Niv. 12)",Suppression du 50 % PV max ; L1 : 1d4/Niv ; L2 : 1d6/Niv + stun 6 s ; L3 : 1d6/Niv sans cap + stun 6 s (Vig ½ et annule stun),Power selection,
+L3 : Mise à mort : cible étouffe 6 s et perd 50 % de ses PV max (Vigueur : dégâts réduits au Niveau, pas d'étouffement) (Niv. 12)",Suppression du 50 % PV max ; L1 : 1d4/Niv ; L2 : 1d6/Niv + stun 6 s ; L3 : 1d8/Niv sans cap + stun 6 s (Vig ½ et annule stun),Power selection,
 "Crush Opposition I-VI (DS)
 Annihilation de l'opposition I-VI",Armure lourde,"L1 : -1 Attaque et Volonté, ennemis zone 15 m, 45 s (Volonté annule)
 L2 : -2 (Seigneur Sith niv. 5)
 L3 : -3 (niv. 9)
 L4 : -4 (niv. 13)
 L5 : -5 (niv. 17)
-L6 : -6 (niv. 21)",,Prestige Seigneur Sith,
+L6 : -6 (niv. 21)","Renommé « Déchirure de la Force I–III » et uniformisé en L3 max (niv. 1/5/9 de prestige) : -2 / -4 / -6 Attaque, Sauvegardes et Défense aux ennemis en zone 15 m pendant 45 s (Volonté annule)",Prestige Seigneur Sith,
 "Force Crush (DS)
-Ecrasement de Force",Armure légère,"Unique : 1-10 dégâts purs / Niveau, la plupart des défenses inopérantes (Vigueur ½)",1d6/Niv sans cap + immobilisation 6 s (Vigueur ½ dégâts et annule immobilisation),Quete / Obscur max,
+Ecrasement de Force",Armure légère,"Unique : 1-10 dégâts purs / Niveau, la plupart des défenses inopérantes (Vigueur ½)",1d8/Niv dégâts purs sans cap (ignore RD et résistances élémentaires) + immobilisation 6 s (Vigueur ½ dégâts et annule immobilisation),Quete / Obscur max,
 "Fury / Improved / Master (DS)
-Fureur / améliorée / de maître",Armure interdite,"L1 : +2 FOR, +1 PV/Niveau, +1 Vigueur et Volonté, immunisé Stase et Paralysie, les kills alimentent la Fureur
+Fureur / améliorée / de maître",Armure lourde,"L1 : +2 FOR, +1 PV/Niveau, +1 Vigueur et Volonté, immunisé Stase et Paralysie, les kills alimentent la Fureur
 L2 : +4 FOR, +2 PV/Niveau, +2 Vig/Vol (Maraudeur niv. 5)
-L3 : +6 FOR, +3 PV/Niveau, +3 Vig/Vol (niv. 9)",Malus -6 Défense ; non cumulable avec Vitesse,Prestige Sith Maraudeur,
+L3 : +6 FOR, +3 PV/Niveau, +3 Vig/Vol (niv. 9)","Renommé « Stigmate de Force I–III » et uniformisé L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : +2/+4/+6 FOR et DEX, immunité Stase/Paralysie, +1 atq/round dès L1 (non cumulable avec Vitesse) ; coût -5 % PV max/round (arrêt auto à ≤ 25 % PV max)",Prestige Maraudeur Sith,
+"Force Scar I-III (LS)
+Cicatrice de Force I-III",Armure lourde,(Nouveau pouvoir de prestige — miroir de Fureur Sith),"L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : soin +2 % / +4 % / +6 % PV max par round + +1/+2/+3 aux sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3)",Prestige Maître d'armes Jedi,
+"Unbound from the Force I-III (LS)
+Affranchi de la Force I-III",Armure lourde,(Nouveau passif de prestige — remplace Spectre de la Force pour le Guetteur Jedi),"Passif L1/L2/L3 (niv. 1/5/9 de prestige, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond par axe +3 (L1) / +5 (L2) / +7 (L3) ; L2 : +25 % efficacité des objets profanes (medpacs, grenades, mines, boucliers) ; L3 : Résistance à la Force passive (15 + Niveau)",Prestige Guetteur Jedi,
