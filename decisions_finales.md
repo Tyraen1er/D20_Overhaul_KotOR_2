@@ -128,6 +128,9 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
 
 **Budgets Niv. 30 (actés le 19/11)** : **22** (Gardien) / **18** (Sentinelle) / **15** (Consulaire), pour **12 / 16 / 24** pouvoirs.
 - Les arbres restent compacts en **3 rangs marquants** (pas de découpage massif en « demi-dons ») ; seul *Blindage de Combat* est candidat à séparer son volet Furtivité en armure.
+- **Paliers de niveau minimum (`mincharlevel`, actés le 22/11)** :
+  - **Dons martiaux de base** (Actifs vanilla, Robustesse, **4 Postures**) : **`Niv. 1+ / 4+ / 8+`**.
+  - **Grands arbres de spécialisation** (**Spé Carac**, **Spé d'arme**, **Armures**, **Métamagie** Amplifié/Pénétrant) : **`Niv. 1+ / 8+ / 15+`** *(Pouvoir Prolongé = `Niv. 1+`)*.
 - **Gating par classe / classe de prestige** (acté le 19/11 — étend le modèle *Métamagie* aux grands arbres) :
   - **Métamagie** : R1 tous Jedi/Sith · R2 **Consulaire / Maître Jedi / Seigneur Sith** · R3 **Maître Jedi / Seigneur Sith**.
   - **Spécialisations d'arme (8 familles)** : R1 tous · R2 **Gardien / Sentinelle** + leurs prestiges · R3 **Maître d'Armes / Maraudeur Sith**.
@@ -157,13 +160,13 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
 
 Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`](decisions_annexes.md#1-armures--recherche-et-justifications) :
 
-**A. Règles natives sans don (par catégorie d'armure)** — CA base et plafonds DEX vanilla *sauf Armure Lourde portée à CA base `10` (calibrage 18/11) et Techniques Echanis III (§5)*. **RD native lourde = `4/-`, intermédiaire = `2/-` ; refonte des 30 sur-couches et 30 sous-couches en 18 standards (`01..18`) + 12 combinées (`19..30`, exclusives intermédiaires via `UpgradeLevel`).**
+**A. Règles natives sans don (par catégorie d'armure)** — recalibrage CA & plafonds DEX du 22/11 (source : *Armures.csv*) : **Légère `6–7` (DEX `7–10`)**, **Intermédiaire `5–6` (DEX `3–6`)**, **Lourde `7–8` (DEX `0–2`)** *(hors Techniques Echanis III §5 qui supprime le plafond)*. **RD native lourde = `4/-`, intermédiaire = `2/-` ; refonte des 30 sur-couches et 30 sous-couches en 18 standards (`01..18`) + 12 combinées (`19..30`, exclusives intermédiaires via `UpgradeLevel`).**
 
 | Type | CA base | Plafond DEX | **RD Physique & Énergie native** | **Accès Établi (cible refonte upgrades)** |
 | :--- | :---: | :---: | :---: | :--- |
-| Légère | 4–5 | +4/+5 | **0** | **1 seul slot** : Sur-couche (*overlay*) standard uniquement (`01..18`) |
-| Intermédiaire | 6–7 | +2/+3 | **RD 2** | **2 slots exclusifs** : **Upgrades combinées** (1 sur-couche + 1 sous-couche combinant chacune 2 upgrades communes, `19..30`, via `UpgradeLevel` dédié, sans don requis) |
-| Lourde | **10** | +0/+1 | **RD 4** | **1 seul slot** : Sous-couche (*underlay*) standard uniquement (`01..18`) |
+| Légère | **6–7** | **+7 à +10** | **0** | **1 seul slot** : Sur-couche (*overlay*) standard uniquement (`01..18`) |
+| Intermédiaire | **5–6** | **+3 à +6** | **RD 2** | **2 slots exclusifs** : **Upgrades combinées** (1 sur-couche + 1 sous-couche combinant chacune 2 upgrades communes, `19..30`, via `UpgradeLevel` dédié, sans don requis) |
+| Lourde | **7–8** | **+0 à +2** | **RD 4** | **1 seul slot** : Sous-couche (*underlay*) standard uniquement (`01..18`) |
 
 *Note technique (17–18/11)* : `swkotor2.exe` limite en dur les armures à **1 slot sur-couche + 1 slot sous-couche** (impossible d'ajouter des slots séparés sans patch binaire). Attribuer le `UpgradeLevel` maximal uniquement aux `.uti` d'armures intermédiaires et aux pièces combinées réserve nativement ces dernières aux armures intermédiaires sur simple critère de type d'armure ; à l'inverse, le slot non autorisé des armures légères (sous-couche) et lourdes (sur-couche) est verrouillé pour n'offrir qu'**1 seul emplacement d'upgrade** sur chacune.
 
@@ -223,7 +226,7 @@ Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), pari
 3. **[TODO Contrat §9]** : ~~remapper les colonnes DPR sur l'architecture postures × familles.~~ **ACTÉ (18–19/11) dans `dpr_check.py` / `dpr_data.json`.**
 4. **[TODO Arbres d'armures §8.B]** : ~~revalider les 9 dons.~~ **ACTÉ (17–19/11) : *Juggernaut*, *Armure Tactique*, *Esquive Ballistique* intégrés dans `Feats.csv`.**
 5. **[TODO Servante]** : ~~remplacer son don d'histoire *Prémonition du combat*.~~ **ACTÉ (19/11) : *Prémonition du combat* remplacé par `+10 %` d'esquive en mêlée.**
-6. **[TODO Équipement & Loot]** : ~~calibrage des armes & upgrades cloisonnées + refonte du Cristal personnel + stat *On-Hit*.~~ **ACTÉ (19–22/11)** dans `Armes.csv`, `Améliorations.csv`, §3.A (Cristal personnel 3 paliers auto + Kreia + 2 effets classe de base/prestige) et §11.2 (*On-Hit* = `3/5/7/9 + Niv + Carac directrice de l'arme`). **Chantier Équipement clos.**
+6. **[TODO Équipement & Loot]** : ~~calibrage des armes & upgrades cloisonnées + refonte du Cristal personnel + stat *On-Hit*.~~ **ACTÉ (19–22/11)** dans `Armes.csv`, `Améliorations.csv`, `Armures.csv`, les 6 CSV d'équipement (`Casques`, `Implants`, `Gants`, `Ceintures`, `Brassards`, `Armures items` — plafond strict **`+1/+2`**, max **`+3`** légendaire sur une stat unique, couverture des **6 stats** sur les 5 slots majeurs, respect du lore ; suppression des 4 CSV redondants de dons mineurs), §3.A (Cristal personnel 3 paliers auto + Kreia + 2 effets classe de base/prestige) et §11.2 (*On-Hit* = `3/5/7/9 + Niv + Carac directrice de l'arme`). **Chantier Équipement clos.**
 7. **[TODO Craft & Établi]** : ~~recalibrer les seuils de niveau + ajouter armes de base & 24 upgrades doubles.~~ **ACTÉ (19/11) dans `Craft.csv`** : toutes les armes de base non-laser craftables (hors Sabres Laser), 24 upgrades doubles intermédiaires ajoutées, et verrou de niveau `itemcreate.2da` (**`Mk I = Niv. 1 / Mk II = Niv. 10 / Mk III = Niv. 15 / Mk IV-T5 = Niv. 20`**, `1 / 10 / 18` sur lignées 3 tiers ; test moteur de la colonne `level` à confirmer). *(Nettoyage des anciens tags `[Combinée Interm.]` effectué.)*
 8. **[TODO Ennemis]** : trancher les 4 décisions D1–D4 dans `equilibrage_ennemis.md` (profils défensifs par famille, boucliers ennemis, soins, phases de boss).
 9. **[TODO Pouvoirs]** : ~~valider *Camouflage par la Force* et rééquilibrer les pouvoirs.~~ **ACTÉ (19–21/11) dans `Spé Pouvoirs.csv`** :

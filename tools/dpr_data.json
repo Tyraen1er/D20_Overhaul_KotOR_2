@@ -1283,8 +1283,8 @@
       }
     },
     "legere": {
-      "base_ac": 5,
-      "max_dex": 4,
+      "base_ac": 7,
+      "max_dex": 8,
       "native_rd": 0,
       "slots": 1,
       "slot_type": "overlay",
@@ -1315,8 +1315,8 @@
       }
     },
     "moyenne": {
-      "base_ac": 7,
-      "max_dex": 2,
+      "base_ac": 6,
+      "max_dex": 4,
       "native_rd": 2,
       "slots": 2,
       "slot_type": "combined",
@@ -1347,7 +1347,7 @@
       }
     },
     "lourde": {
-      "base_ac": 10,
+      "base_ac": 8,
       "max_dex": 0,
       "native_rd": 4,
       "slots": 1,

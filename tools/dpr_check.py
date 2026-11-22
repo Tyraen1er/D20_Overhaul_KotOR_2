@@ -1319,8 +1319,8 @@ def selftest() -> None:
     f_peau = parse_feats(data, "Seconde Peau 3, Techniques Echanis 3")
     r_peau = evaluate(Config("lightsaber", None, "single", "none"), data, f_peau, c_light, "late", boss_late, "cap", 0, 0.0)
     assert abs(r_peau["player_dodge"] - 0.30) < 1e-9, r_peau
-    # Echani III supprime le plafond DEX (+9 + 1 = +10 vs max_dex +4)
-    assert r_peau["player_ac"] == 10 + 10 + 5 + 4 + 3 + (9 + 1) + 3, r_peau
+    # Echani III supprime le plafond DEX (+9 + 1 = +10 vs max_dex +4) ; base_ac légère = 7
+    assert r_peau["player_ac"] == 10 + 10 + 7 + 4 + 3 + (9 + 1) + 3, r_peau
     c_med = build_char(data, "late", "sentinelle", {}, "auto", armor_tier="moyenne")
     f_med = parse_feats(data, "Armure Tactique 3")
     r_med = evaluate(Config("lightsaber", None, "single", "none"), data, f_med, c_med, "late", boss_late, "cap", 0, 0.0)
