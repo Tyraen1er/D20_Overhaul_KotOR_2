@@ -115,7 +115,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 | :--- | :--- | :--- | :--- |
 | **Raffinement Gamoréen** (FOR) | +1 FOR ; + ½ mod. FOR en rangs sur **toutes** les compétences | +2 FOR ; **tient toutes les armes à 1M** (mêlée et distance) ; postures autorisées : **Duel et Ambidextrie uniquement** | +3 FOR ; immunité au mental |
 | **Techniques Echanis** (DEX) | +1 DEX ; attaque mêlée : FOR/DEX (si DEX > FOR) | +2 DEX ; dégâts mêlée : FOR/DEX | +3 DEX ; **supprime le plafond de DEX des armures** |
-| **Voie du dragon Kraith** (CON) | +1 CON ; RD + mod. CON | +2 CON ; **transfusion** : toutes les 6 s, 5 % PV max → 5 % PF max si PF < 50 % (jamais sous 75 % PV) | +3 CON ; toutes sauvegardes + mod. CON |
+| **Voie du dragon Kraith** (CON) | +1 CON ; RD + ½ mod. CON (arrondi sup.) | +2 CON ; **transfusion** : toutes les 6 s, 5 % PV max → 5 % PF max si PF < 50 % (jamais sous 75 % PV) | +3 CON ; toutes sauvegardes + mod. CON |
 | **Chasseur de prime Gand** (INT) | +1 INT ; **grenades `+5 %` dégâts / rang total de Démolition** | +2 INT ; attaque & dégâts distance : DEX/INT (si INT > DEX) | +3 INT ; **Maître Artificier** : rayon grenades `4→6 m`, perce *Esquive Totale*, `50 %` de non-consommation |
 | **Maîtrise Matukai** (SAG) | +1 SAG ; **ajoute** le mod. de SAG à l'attaque (par-dessus la carac directrice) | +2 SAG ; sauvegardes + ½ SAG ; **réussir une sauvegarde inflige SAG dégâts à l'attaquant** | +3 SAG ; **SAG remplace DEX pour la CA** ; tout ennemi vous ratant subit SAG dégâts par attaque échouée |
 | **Héritage de Nomi** (CHA) | +1 CHA ; compagnons 100 % de l'XP | +2 CHA ; groupe : sauvegardes + mod. CHA | +3 CHA ; **Défense + mod. CHA** |

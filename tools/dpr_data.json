@@ -992,7 +992,7 @@
           "mod_kraith"
         ],
         "rank1": {
-          "rd_con_mod": true
+          "rd_half_con_mod": true
         },
         "rank2": {},
         "rank3": {
@@ -1277,9 +1277,9 @@
         "late": 0
       },
       "shield_hp_by_phase": {
-        "early": 20,
-        "mid": 40,
-        "late": 60
+        "early": 50,
+        "mid": 50,
+        "late": 100
       }
     },
     "legere": {
@@ -1309,9 +1309,9 @@
         "late": 0
       },
       "shield_hp_by_phase": {
-        "early": 20,
-        "mid": 40,
-        "late": 60
+        "early": 50,
+        "mid": 50,
+        "late": 100
       }
     },
     "moyenne": {
@@ -1373,9 +1373,9 @@
         "late": 3
       },
       "shield_hp_by_phase": {
-        "early": 20,
-        "mid": 40,
-        "late": 60
+        "early": 50,
+        "mid": 50,
+        "late": 100
       }
     }
   },
@@ -3134,6 +3134,3262 @@
           "level_req": 99
         }
       ]
+    }
+  },
+  "gear_pools": {
+    "helmet": [
+      {
+        "resref": "100_mask01",
+        "name": "Casque de repérage",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_01",
+        "name": "Serre-tête neural",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_02",
+        "name": "Masque respirateur",
+        "level_req": 3,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_03",
+        "name": "Serre-tête de Rakata",
+        "level_req": 5,
+        "con_req": 0,
+        "stats": {
+          "SAG": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_04",
+        "name": "Augmentateur de discrétion",
+        "level_req": 7,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_05",
+        "name": "Visière de perception bothan",
+        "level_req": 9,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_06",
+        "name": "Bloquants soniques",
+        "level_req": 11,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_07",
+        "name": "Serre-tête d'interface",
+        "level_req": 13,
+        "con_req": 0,
+        "stats": {
+          "INT": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_08",
+        "name": "Visière de visée",
+        "level_req": 15,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 1,
+        "attack": 1,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_09",
+        "name": "Visière de protection",
+        "level_req": 17,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_10",
+        "name": "Capteur de pilote spatial",
+        "level_req": 19,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_11",
+        "name": "Visière royale",
+        "level_req": 21,
+        "con_req": 0,
+        "stats": {
+          "CHA": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_12",
+        "name": "Serre-tête de méditation",
+        "level_req": 23,
+        "con_req": 0,
+        "stats": {
+          "SAG": 1
+        },
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_13",
+        "name": "Visière sensorielle bothan",
+        "level_req": 25,
+        "con_req": 0,
+        "stats": {
+          "INT": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_14",
+        "name": "Aveuglants arkaniens",
+        "level_req": 27,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_15",
+        "name": "Capteur de combat",
+        "level_req": 29,
+        "con_req": 0,
+        "stats": {
+          "DEX": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_16",
+        "name": "Analyseur de visée multispectral",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 2,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_17",
+        "name": "Casque de conscience",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CON": 2
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_18",
+        "name": "Respirateur",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_19",
+        "name": "Masque de chasse de Das'skar",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 1,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_21",
+        "name": "Masque Sith",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_22",
+        "name": "Masque stabilisant",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_23",
+        "name": "Serre-tête de méditation Mutaki",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "SAG": 2
+        },
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_24",
+        "name": "Evaluateur de cible",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 2,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_25",
+        "name": "Serre-tête de Saresh",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "SAG": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_26",
+        "name": "Serre-tête de Bindo",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CHA": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_27",
+        "name": "Visière de protection améliorée",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_29",
+        "name": "Visière d'absorption",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_helmet_30",
+        "name": "Visière de Force",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "SAG": 2,
+          "CHA": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "mandaloriantacti",
+        "name": "HUD tactique de Mandalore",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {
+          "INT": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "onderonmotiongog",
+        "name": "Visière de détection de mouvement d'Ondéron",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      }
+    ],
+    "implant": [
+      {
+        "resref": "e_imp1_01",
+        "name": "Pack de réflexes",
+        "level_req": 2,
+        "con_req": 12,
+        "stats": {},
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_02",
+        "name": "Pack de phéromones",
+        "level_req": 5,
+        "con_req": 12,
+        "stats": {
+          "CHA": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_03",
+        "name": "Pack cardio-vasculaire",
+        "level_req": 8,
+        "con_req": 12,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_04",
+        "name": "Pack de force",
+        "level_req": 11,
+        "con_req": 12,
+        "stats": {
+          "FOR": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_05",
+        "name": "Pack réaction",
+        "level_req": 14,
+        "con_req": 12,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_06",
+        "name": "Pack de condition physique",
+        "level_req": 17,
+        "con_req": 12,
+        "stats": {
+          "FOR": 1,
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_07",
+        "name": "Pack de compétences",
+        "level_req": 20,
+        "con_req": 12,
+        "stats": {
+          "INT": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_08",
+        "name": "Pack de santé",
+        "level_req": 23,
+        "con_req": 12,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_09",
+        "name": "Pack d'augmentation phys.",
+        "level_req": 26,
+        "con_req": 12,
+        "stats": {
+          "FOR": 1,
+          "DEX": 1,
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp1_10",
+        "name": "Pack d'augmentation mentale",
+        "level_req": 29,
+        "con_req": 12,
+        "stats": {
+          "INT": 1,
+          "SAG": 1,
+          "CHA": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_01",
+        "name": "Implant de combat rétinien",
+        "level_req": 2,
+        "con_req": 14,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_02",
+        "name": "Implant lornan",
+        "level_req": 5,
+        "con_req": 14,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_03",
+        "name": "Implant biotech.",
+        "level_req": 8,
+        "con_req": 14,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_04",
+        "name": "Implant de puissance",
+        "level_req": 11,
+        "con_req": 14,
+        "stats": {
+          "FOR": 2
+        },
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_05",
+        "name": "Implant de promptitude",
+        "level_req": 14,
+        "con_req": 14,
+        "stats": {
+          "DEX": 2
+        },
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_06",
+        "name": "Implant de perspicacité",
+        "level_req": 17,
+        "con_req": 14,
+        "stats": {
+          "SAG": 2
+        },
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_07",
+        "name": "Implant de compétences",
+        "level_req": 20,
+        "con_req": 14,
+        "stats": {
+          "INT": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_08",
+        "name": "Implant de durabilité",
+        "level_req": 23,
+        "con_req": 14,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_09",
+        "name": "Implant d'augmentation phys.",
+        "level_req": 26,
+        "con_req": 14,
+        "stats": {
+          "FOR": 2,
+          "DEX": 2,
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp2_10",
+        "name": "Implant d'augmentation mentale",
+        "level_req": 29,
+        "con_req": 14,
+        "stats": {
+          "INT": 1,
+          "SAG": 2,
+          "CHA": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_01",
+        "name": "Système de bio-antidote",
+        "level_req": 2,
+        "con_req": 16,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_02",
+        "name": "Système de régulation nerveuse",
+        "level_req": 5,
+        "con_req": 16,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_03",
+        "name": "Système de réaction",
+        "level_req": 8,
+        "con_req": 16,
+        "stats": {
+          "DEX": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_04",
+        "name": "Système de combat amélioré",
+        "level_req": 11,
+        "con_req": 16,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 1,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_05",
+        "name": "Système de force de Bavakar",
+        "level_req": 14,
+        "con_req": 16,
+        "stats": {
+          "FOR": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_06",
+        "name": "Système de puissance cardiaque",
+        "level_req": 17,
+        "con_req": 16,
+        "stats": {
+          "CON": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_07",
+        "name": "Système de compétences",
+        "level_req": 20,
+        "con_req": 16,
+        "stats": {
+          "INT": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_08",
+        "name": "Système d'atténuation de sensations",
+        "level_req": 23,
+        "con_req": 16,
+        "stats": {
+          "CON": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 2
+      },
+      {
+        "resref": "e_imp3_09",
+        "name": "Système d'augmentation phys.",
+        "level_req": 26,
+        "con_req": 16,
+        "stats": {
+          "FOR": 2,
+          "DEX": 2,
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp3_10",
+        "name": "Système d'augmentation mentale",
+        "level_req": 29,
+        "con_req": 16,
+        "stats": {
+          "INT": 2,
+          "SAG": 2,
+          "CHA": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_01",
+        "name": "Pack-D de force",
+        "level_req": 2,
+        "con_req": 18,
+        "stats": {
+          "FOR": 1,
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_02",
+        "name": "Pack-D d'immunité",
+        "level_req": 5,
+        "con_req": 18,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_03",
+        "name": "Pack-D de perception",
+        "level_req": 8,
+        "con_req": 18,
+        "stats": {
+          "SAG": 2,
+          "CHA": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_04",
+        "name": "Pack-D d'augmentation",
+        "level_req": 11,
+        "con_req": 18,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_05",
+        "name": "Pack-D d'immortalité",
+        "level_req": 14,
+        "con_req": 18,
+        "stats": {
+          "CON": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_06",
+        "name": "Pack-D de rapidité",
+        "level_req": 17,
+        "con_req": 18,
+        "stats": {
+          "DEX": 3
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_07",
+        "name": "Pack-D de compétences",
+        "level_req": 20,
+        "con_req": 18,
+        "stats": {
+          "INT": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_08",
+        "name": "Pack-D universel",
+        "level_req": 23,
+        "con_req": 18,
+        "stats": {
+          "FOR": 1,
+          "DEX": 1,
+          "CON": 1,
+          "INT": 1,
+          "SAG": 1,
+          "CHA": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_09",
+        "name": "Pack-D d'augmentation phys.",
+        "level_req": 26,
+        "con_req": 18,
+        "stats": {
+          "FOR": 2,
+          "DEX": 2,
+          "CON": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "e_imp4_10",
+        "name": "Pack-D d'augmentation mentale",
+        "level_req": 29,
+        "con_req": 18,
+        "stats": {
+          "INT": 2,
+          "SAG": 2,
+          "CHA": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      }
+    ],
+    "gloves": [
+      {
+        "resref": "a_gloves_01",
+        "name": "Gants isolants",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_02",
+        "name": "Gants de l'Echange",
+        "level_req": 3,
+        "con_req": 0,
+        "stats": {
+          "INT": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_04",
+        "name": "Gants de survie de Taris",
+        "level_req": 7,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_05",
+        "name": "Gants de précision",
+        "level_req": 9,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_06",
+        "name": "Gantelets gamorréens",
+        "level_req": 11,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": -1,
+        "melee_dmg": 2.0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_07",
+        "name": "Gants de travail de l'Echange",
+        "level_req": 13,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_08",
+        "name": "Gantelets de défense de la Czerka",
+        "level_req": 15,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_09",
+        "name": "Gants détonateurs",
+        "level_req": 17,
+        "con_req": 0,
+        "stats": {
+          "INT": 2
+        },
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_10",
+        "name": "Gants de précision sans arme",
+        "level_req": 19,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 1,
+        "attack": 1,
+        "melee_dmg": 2.0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_11",
+        "name": "Gants d'infiltrateur",
+        "level_req": 21,
+        "con_req": 0,
+        "stats": {
+          "DEX": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_12",
+        "name": "Gants de perception de Jal Shey",
+        "level_req": 23,
+        "con_req": 0,
+        "stats": {
+          "CHA": 1,
+          "SAG": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_13",
+        "name": "Gants de guerre gamorréens",
+        "level_req": 25,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_14",
+        "name": "Ampli. force physique ériadu",
+        "level_req": 27,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_15",
+        "name": "Gantelets de Karakan",
+        "level_req": 29,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 3,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_16",
+        "name": "Gants de précision bothans",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_17",
+        "name": "Gantelets de puissance Sith",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_18",
+        "name": "Gantelets de puissance gamorréens",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 2.0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_19",
+        "name": "Gants de combat nagai",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_20",
+        "name": "Gants de voyou kubaz",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_21",
+        "name": "Gants d'automatisme",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "INT": 2,
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_22",
+        "name": "Gants de méditation de Jal Shey",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CHA": 2,
+          "SAG": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_23",
+        "name": "Gants de précision Echani",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 1,
+        "melee_dmg": 3.0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_24",
+        "name": "Gants de Zeison Sha",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CON": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_25",
+        "name": "Gantelets de dominateur",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_26",
+        "name": "Gants de soldat nikto",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2,
+          "DEX": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_27",
+        "name": "Gants d'Ossluk",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2,
+          "DEX": 1,
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_28",
+        "name": "Gants de désintégration",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 3.5,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_29",
+        "name": "Gants d'automatisme améliorés",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 2,
+          "INT": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_gloves_30",
+        "name": "Gants de foudre",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 1,
+        "melee_dmg": 3.5,
+        "rd": 0
+      },
+      {
+        "resref": "ancientsithgaunt",
+        "name": "Vieux gantelet Sith",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {
+          "FOR": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      }
+    ],
+    "belt": [
+      {
+        "resref": "100_belt01",
+        "name": "Harnais de sécurité",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_01",
+        "name": "Amplificateur d'adrénaline",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_02",
+        "name": "Cardio-régulateur",
+        "level_req": 3,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_04",
+        "name": "Ceinture multifonction de la Czerka",
+        "level_req": 7,
+        "con_req": 0,
+        "stats": {
+          "INT": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_05",
+        "name": "Ampli. d'adrénaline amélioré",
+        "level_req": 9,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 3,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_07",
+        "name": "Augmentateur de force",
+        "level_req": 13,
+        "con_req": 0,
+        "stats": {
+          "FOR": 1
+        },
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_08",
+        "name": "Cardio-régulateur Systech",
+        "level_req": 15,
+        "con_req": 0,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_09",
+        "name": "Hyper-amplificateur d'adrénaline",
+        "level_req": 17,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 3,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_11",
+        "name": "Inhibiteur d'inertie",
+        "level_req": 21,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_12",
+        "name": "Bouclier de capacitance",
+        "level_req": 23,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_13",
+        "name": "Générateur de bouclier thermique",
+        "level_req": 25,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_15",
+        "name": "Augmentateur de force CNS",
+        "level_req": 29,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2
+        },
+        "ac": 0,
+        "saves": 2,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_16",
+        "name": "Ceinture multifonction de l'Echange",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "INT": 1,
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_17",
+        "name": "Ceinture d'immunité",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": -1,
+        "melee_dmg": 0,
+        "rd": 2
+      },
+      {
+        "resref": "a_belt_18",
+        "name": "Stimulateur d'adrénaline",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 2
+        },
+        "ac": 0,
+        "saves": 3,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_19",
+        "name": "Ceinture d'amplification nerveuse",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "SAG": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_20",
+        "name": "Ceinture Jal Shey",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CHA": 1,
+          "SAG": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_21",
+        "name": "Générateur de boucliers multiples",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_24",
+        "name": "Ceinture de spécialiste en technologie",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "INT": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_25",
+        "name": "Cardio-régulateur Aratech",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CON": 3
+        },
+        "ac": 0,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_26",
+        "name": "Augmentateur de force GNS",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_27",
+        "name": "Ceinture de Qel-Droma",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CHA": 2,
+          "SAG": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_28",
+        "name": "Ceinture d'immortalité",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": -2,
+        "melee_dmg": 0,
+        "rd": 3
+      },
+      {
+        "resref": "a_belt_30",
+        "name": "Ceinture de mentor Jal Shey",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CHA": 2,
+          "SAG": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "mandalorianutili",
+        "name": "Ceinture multifonction de mand.",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 3,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_03",
+        "name": "Générateur de champ de camouflage",
+        "level_req": 5,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_06",
+        "name": "Ceinture d'atténuation Aratech",
+        "level_req": 11,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_10",
+        "name": "Diffuseur d'ombres de l'Echange",
+        "level_req": 19,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_14",
+        "name": "Générateur de camouflage ériadu",
+        "level_req": 27,
+        "con_req": 0,
+        "stats": {
+          "DEX": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_22",
+        "name": "Caméléon defel",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_23",
+        "name": "Ceinture d'éclaireur frozian",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 3
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_belt_29",
+        "name": "Ceinture d'échos Aratech",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 3
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      }
+    ],
+    "bracer": [
+      {
+        "resref": "100_fore01",
+        "name": "Bouclier de mineur de Télos",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_band_c01",
+        "name": "Brassard de <FullName>",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_band_x01",
+        "name": "Brassard de Nomi",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_band_x02",
+        "name": "Brassard de Vao",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_band_x03",
+        "name": "Epée de guerre de Ludo Kressh",
+        "level_req": 16,
+        "con_req": 0,
+        "stats": {
+          "FOR": 1
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_shield_01",
+        "name": "Bouclier d'énergie",
+        "level_req": 16,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_shield_02",
+        "name": "Bouclier de mêlée mand.",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_shield_03",
+        "name": "Bouclier à énergie arkanien",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_shield_04",
+        "name": "Bouclier Echani",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_shield_05",
+        "name": "Bouclier multifonction mand.",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_shield_06",
+        "name": "Bouclier de duel Echani",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "a_shield_07",
+        "name": "Prototype de bouclier verpine",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "g_i_cermshield",
+        "name": "Bouclier de cérémonie",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 3,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      },
+      {
+        "resref": "ith_shield",
+        "name": "Prototype de bouclier",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0
+      }
+    ],
+    "armor": [
+      {
+        "resref": "a_light_01",
+        "name": "Combinaison de combat légère",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": -1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_02",
+        "name": "Combinaison de combat",
+        "level_req": 3,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_04",
+        "name": "Combinaison de combat mand.",
+        "level_req": 7,
+        "con_req": 0,
+        "stats": {},
+        "ac": -1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_05",
+        "name": "Combinaison de combat zabrak",
+        "level_req": 9,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_07",
+        "name": "Armure légère Echani",
+        "level_req": 13,
+        "con_req": 0,
+        "stats": {
+          "DEX": 1
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_08",
+        "name": "Armure de cérémonie massassi",
+        "level_req": 15,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_09",
+        "name": "Combinaison lourde mand.",
+        "level_req": 17,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_x08",
+        "name": "Armure de mailles électrique",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "beastriderflight",
+        "name": "Armure de vol de bestiaire",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "onderonmilitarya",
+        "name": "Armure militaire d'Ondéron",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_03",
+        "name": "Combinaison de combat lourde",
+        "level_req": 5,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_06",
+        "name": "Combinaison de alliage Bonadan",
+        "level_req": 11,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_10",
+        "name": "Armure de combat zabrak",
+        "level_req": 19,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_12",
+        "name": "Combinaison-bouclier Echani",
+        "level_req": 23,
+        "con_req": 0,
+        "stats": {
+          "DEX": 2
+        },
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_13",
+        "name": "Armure de fibre renforcée",
+        "level_req": 25,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_14",
+        "name": "Armure de guerre zabrak",
+        "level_req": 27,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_light_15",
+        "name": "Combinaison de mailles d'Ulic Qel Droma",
+        "level_req": 29,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "beasthidearmor",
+        "name": "Armure en peau de bête",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "a_khoonda",
+        "name": "Armure de milicien de Khoonda",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_01",
+        "name": "Combinaison militaire",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_03",
+        "name": "Armure de combat Echani",
+        "level_req": 5,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_04",
+        "name": "Armure de guerre de Cinnagar",
+        "level_req": 7,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_05",
+        "name": "Combinaison de combat Sith",
+        "level_req": 9,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_07",
+        "name": "Maille en fibre verpine",
+        "level_req": 13,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_11",
+        "name": "Armure de guerre légère d'Exar Kun",
+        "level_req": 21,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_12",
+        "name": "Armure de guerre lourde de Cinnagar",
+        "level_req": 23,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_13",
+        "name": "Ultramaille de fibre verpine",
+        "level_req": 25,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_02",
+        "name": "Armure de combat légère",
+        "level_req": 3,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_06",
+        "name": "Armure de combat légère en bronzium",
+        "level_req": 11,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_08",
+        "name": "Armure lourde krath",
+        "level_req": 15,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_09",
+        "name": "Armure de combat légère à servomoteurs",
+        "level_req": 17,
+        "con_req": 0,
+        "stats": {
+          "FOR": 1
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_10",
+        "name": "Armure de guerre sacrée de Krath",
+        "level_req": 19,
+        "con_req": 0,
+        "stats": {
+          "INT": 2
+        },
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_14",
+        "name": "Armure de mailles électriques",
+        "level_req": 27,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_medium_15",
+        "name": "Armure de combat de Jamoh Hogra",
+        "level_req": 29,
+        "con_req": 0,
+        "stats": {
+          "FOR": 1
+        },
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "moyenne"
+      },
+      {
+        "resref": "a_heavy_01",
+        "name": "Armure de combat",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_03",
+        "name": "Armure lourde Echani",
+        "level_req": 5,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_05",
+        "name": "Armure de combat à servomoteurs",
+        "level_req": 9,
+        "con_req": 0,
+        "stats": {
+          "FOR": 1
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_09",
+        "name": "Maille verpine en alliage zal",
+        "level_req": 17,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_11",
+        "name": "Combinaison de puissance de Corellia",
+        "level_req": 21,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2
+        },
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_12",
+        "name": "M'uhk'gfa",
+        "level_req": 23,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 3,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_13",
+        "name": "Armure-exosquelette Iotran",
+        "level_req": 25,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_02",
+        "name": "Armure de combat lourde",
+        "level_req": 3,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_04",
+        "name": "Armure lourde en duracier",
+        "level_req": 7,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_06",
+        "name": "Armure lourde flexible",
+        "level_req": 11,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_07",
+        "name": "Armure de combat mand.",
+        "level_req": 13,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_08",
+        "name": "Armure lourde mand.",
+        "level_req": 15,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_10",
+        "name": "Armure d'assaut mand.",
+        "level_req": 19,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_14",
+        "name": "Armure de Félénar",
+        "level_req": 27,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_15",
+        "name": "Armure matrice",
+        "level_req": 29,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_heavy_x01",
+        "name": "Armure de Mandalore",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "lourde"
+      },
+      {
+        "resref": "a_light_11",
+        "name": "Combinaison anti-environnement ubèse",
+        "level_req": 21,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "legere"
+      },
+      {
+        "resref": "g_a_armrdfsuit",
+        "name": "Armure de guerre blindée",
+        "level_req": 1,
+        "con_req": 0,
+        "stats": {},
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_06",
+        "name": "Armure d'initié Zeison Sha",
+        "level_req": 11,
+        "con_req": 0,
+        "stats": {
+          "CON": 1
+        },
+        "ac": 1,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_07",
+        "name": "Armure de néophyte Jal Shey",
+        "level_req": 13,
+        "con_req": 0,
+        "stats": {
+          "CHA": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_11",
+        "name": "Armure de conseiller Jal Shey",
+        "level_req": 21,
+        "con_req": 0,
+        "stats": {
+          "SAG": 1,
+          "CHA": 2
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_16",
+        "name": "Armure de guerrier Zeison Sha",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CON": 2
+        },
+        "ac": 2,
+        "saves": 1,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_20",
+        "name": "Armure de mentor Jal Shey",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CHA": 3,
+          "SAG": 1
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_26",
+        "name": "Armure de Dark Malak",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 1
+        },
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_02",
+        "name": "Bure de padawan",
+        "level_req": 3,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_03",
+        "name": "Bure de padawan Obscur",
+        "level_req": 5,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_04",
+        "name": "Bure de novice Baran Do",
+        "level_req": 7,
+        "con_req": 0,
+        "stats": {
+          "SAG": 1
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_08",
+        "name": "Bure de Jedi",
+        "level_req": 15,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_09",
+        "name": "Bure de Jedi Obscur",
+        "level_req": 17,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_10",
+        "name": "Bure de Norris",
+        "level_req": 19,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_19",
+        "name": "Bure de sage Baran Do",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "SAG": 3
+        },
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_21",
+        "name": "Bure de gardien d'Ossus",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "INT": 3,
+          "SAG": 2
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_27",
+        "name": "Bure de Jolee",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "CHA": 3
+        },
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "masterarcasrobes",
+        "name": "Bures de maître Arca",
+        "level_req": 10,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2,
+          "SAG": 2
+        },
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "rcm_robe_99",
+        "name": "*(rcm_robe_99)*",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {},
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_x01",
+        "name": "Bure de la Servante",
+        "level_req": 99,
+        "con_req": 0,
+        "stats": {
+          "CHA": 2
+        },
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_05",
+        "name": "Bure d'apprenti Mutaki",
+        "level_req": 9,
+        "con_req": 0,
+        "stats": {
+          "FOR": 1,
+          "DEX": 1,
+          "CON": 1
+        },
+        "ac": 0,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_12",
+        "name": "Bure de Jedi gris",
+        "level_req": 23,
+        "con_req": 0,
+        "stats": {
+          "CHA": 2
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_13",
+        "name": "Bure de chevalier Jedi",
+        "level_req": 25,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_14",
+        "name": "Bure de chevalier Jedi Obscur",
+        "level_req": 27,
+        "con_req": 0,
+        "stats": {},
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_15",
+        "name": "Bure d'adepte Mutaki",
+        "level_req": 29,
+        "con_req": 0,
+        "stats": {
+          "FOR": 2,
+          "DEX": 1,
+          "CON": 2
+        },
+        "ac": 1,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_17",
+        "name": "Bure de maître Jedi",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_18",
+        "name": "Bure de maître Jedi Obscur",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_22",
+        "name": "Foulard de Natth",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 3
+        },
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_23",
+        "name": "Bure d'Arca Jeth",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "SAG": 2
+        },
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_24",
+        "name": "Bure d'Aleema Keto",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "SAG": 3,
+          "FOR": 1
+        },
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_25",
+        "name": "Bure de Sylvar",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "DEX": 2
+        },
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_28",
+        "name": "Bure de Thon",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {},
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_29",
+        "name": "Bure de Crado",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "FOR": 3
+        },
+        "ac": 2,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      },
+      {
+        "resref": "a_robe_30",
+        "name": "Bure de Nomi",
+        "level_req": 30,
+        "con_req": 0,
+        "stats": {
+          "SAG": 3
+        },
+        "ac": 3,
+        "saves": 0,
+        "attack": 0,
+        "melee_dmg": 0,
+        "rd": 0,
+        "armor_tier": "sans"
+      }
+    ]
+  },
+  "personal_crystal": {
+    "early": {
+      "primary": 2,
+      "secondary": 0,
+      "other": 0
+    },
+    "mid": {
+      "primary": 4,
+      "secondary": 2,
+      "other": 1
+    },
+    "late": {
+      "primary": 6,
+      "secondary": 4,
+      "other": 2
+    }
+  },
+  "base_char_scores": {
+    "gardien": {
+      "early": {
+        "FOR": 18,
+        "DEX": 14,
+        "CON": 14,
+        "INT": 10,
+        "SAG": 12,
+        "CHA": 10
+      },
+      "mid": {
+        "FOR": 20,
+        "DEX": 14,
+        "CON": 14,
+        "INT": 10,
+        "SAG": 12,
+        "CHA": 10
+      },
+      "late": {
+        "FOR": 22,
+        "DEX": 14,
+        "CON": 14,
+        "INT": 10,
+        "SAG": 12,
+        "CHA": 10
+      }
+    },
+    "sentinelle": {
+      "early": {
+        "FOR": 12,
+        "DEX": 18,
+        "CON": 14,
+        "INT": 14,
+        "SAG": 12,
+        "CHA": 10
+      },
+      "mid": {
+        "FOR": 12,
+        "DEX": 20,
+        "CON": 14,
+        "INT": 14,
+        "SAG": 12,
+        "CHA": 10
+      },
+      "late": {
+        "FOR": 12,
+        "DEX": 22,
+        "CON": 14,
+        "INT": 14,
+        "SAG": 12,
+        "CHA": 10
+      }
+    },
+    "consulaire": {
+      "early": {
+        "FOR": 10,
+        "DEX": 14,
+        "CON": 14,
+        "INT": 12,
+        "SAG": 18,
+        "CHA": 14
+      },
+      "mid": {
+        "FOR": 10,
+        "DEX": 14,
+        "CON": 14,
+        "INT": 12,
+        "SAG": 20,
+        "CHA": 14
+      },
+      "late": {
+        "FOR": 10,
+        "DEX": 14,
+        "CON": 14,
+        "INT": 12,
+        "SAG": 22,
+        "CHA": 14
+      }
     }
   }
 }

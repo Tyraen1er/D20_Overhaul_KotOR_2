@@ -575,6 +575,271 @@ def reingest_pouvoirs(csv_path: Path) -> list[str]:
     return updates
 
 
+GEAR_CSVS = [
+    ("helmet",  "Kotor 2 - rééquilibrage - Casques.csv"),
+    ("implant", "Kotor 2 - rééquilibrage - Implants.csv"),
+    ("gloves",  "Kotor 2 - rééquilibrage - Gants.csv"),
+    ("belt",    "Kotor 2 - rééquilibrage - Ceintures.csv"),
+    ("bracer",  "Kotor 2 - rééquilibrage - Brassards.csv"),
+    ("armor",   "Kotor 2 - rééquilibrage - Armures items.csv"),
+]
+STAT_KEYS = ("FOR", "DEX", "CON", "INT", "SAG", "CHA")
+STAT_EN_TO_FR = {
+    "strength": "FOR", "dexterity": "DEX", "constitution": "CON",
+    "intelligence": "INT", "wisdom": "SAG", "charisma": "CHA",
+}
+
+
+def _parse_level_req(lvl_txt: str, locs: str) -> int:
+    s = lvl_txt.strip()
+    m_rare = re.search(r"rare\s+(\d+)\+", s, re.I)
+    if m_rare:
+        return int(m_rare.group(1))
+    m_niv = re.search(r"Niv\.\s*(\d+)\+", s, re.I)
+    if m_niv:
+        return int(m_niv.group(1))
+    if "Loot fixe" in s or "Quête" in s:
+        if any(k in locs for k in ("Péragus", "Harbinger", "Télos", "Citadelle")):
+            return 1
+        if any(k in locs for k in ("Korriban", "Malachor", "Ondéron")):
+            return 16
+        return 10
+    return 99
+
+
+def _parse_stat_pairs(txt: str) -> dict[str, int]:
+    out: dict[str, int] = {}
+    for k, v in re.findall(r"\b(FOR|DEX|CON|INT|SAG|CHA)\s*([+-]\d+)", txt):
+        out[k] = out.get(k, 0) + int(v)
+    return out
+
+
+def _armor_tier_from_type(type_col: str, resref: str) -> str:
+    t = norm(type_col)
+    r = resref.lower()
+    if "robe" in t or "cloth" in t or r.startswith("a_robe"):
+        return "sans"
+    if any(k in t for k in ("armor class 4", "armor class 5")) or r.startswith("a_light"):
+        return "legere"
+    if any(k in t for k in ("armor class 6", "armor class 7")) or r.startswith("a_medium"):
+        return "moyenne"
+    if any(k in t for k in ("armor class 8", "armor class 9")) or r.startswith("a_heavy"):
+        return "lourde"
+    return "sans"
+
+
+def reingest_gear(root: Path = ROOT) -> int:
+    """Ingère les 6 CSV d'équipement (Casques, Implants, Gants, Ceintures, Brassards, Armures items)
+    dans dpr_data.json['gear_pools'], en appliquant systématiquement la colonne 'Changement (mod)'."""
+    pools: dict[str, list[dict]] = {}
+    total = 0
+    for slot, fname in GEAR_CSVS:
+        path = root / fname
+        if not path.exists():
+            continue
+        items: list[dict] = []
+        with open(path, encoding="utf-8-sig", newline="") as fh:
+            rows = list(csv.reader(fh))
+        header = [h.strip() for h in rows[0]]
+        idx = {h: i for i, h in enumerate(header)}
+        for row in rows[1:]:
+            if not row or not row[0].strip():
+                continue
+            resref = row[idx["ResRef"]].strip()
+            name = row[idx["Nom"]].strip()
+            lvl_txt = row[idx["Niv. min obtention"]].strip()
+            prereq = row[idx["Prérequis"]].strip()
+            carac_sum = row[idx["Bonus Carac (résumé)"]].strip()
+            props = row[idx["Propriétés (vanilla)"]].strip()
+            locs = row[idx["Lieux sûrs"]].strip()
+            mod_txt = row[idx["Changement (mod)"]].strip() if "Changement (mod)" in idx and len(row) > idx["Changement (mod)"] else ""
+
+            # Exclure objets compagnon-uniques (ex. Mandalore) ou malus carac sévères (-4/-6)
+            if resref.lower().startswith("mandalores") or "Malus de caractéristique +-4" in props or "Malus de caractéristique +-6" in props:
+                continue
+
+            # Stats : base = Bonus Carac (résumé), puis appliquer Changement (mod)
+            stats = _parse_stat_pairs(carac_sum)
+            if mod_txt:
+                if "→" in mod_txt:
+                    rhs = mod_txt.split("→", 1)[1]
+                    if "+1 aux 6 caracs" in rhs:
+                        stats = {k: 1 for k in STAT_KEYS}
+                    else:
+                        parsed = _parse_stat_pairs(rhs)
+                        if parsed:
+                            stats = parsed
+                elif norm(mod_txt).startswith("ajout"):
+                    for k, v in _parse_stat_pairs(mod_txt).items():
+                        stats[k] = stats.get(k, 0) + v
+
+            props_n = norm(props)
+            ac = sum(int(m) for m in re.findall(r"bonus defense \+(\d+)", props_n))
+            ac -= sum(int(m) for m in re.findall(r"malus de defense \+-(\d+)", props_n))
+            saves = sum(int(m) for m in re.findall(r"jets de sauvegarde ameliores \+(\d+)", props_n))
+            atk = sum(int(m) for m in re.findall(r"bonus d attaque \+(\d+)", props_n))
+            atk -= sum(int(m) for m in re.findall(r"malus a l attaque \+-(\d+)", props_n))
+            melee_dmg = sum(avg_dice(m) for m in re.findall(r"bonus aux degats \([^)]*\) \+(\d+d\d+|\d+)", props_n))
+            # RD physique/universelle (uniquement si couvre les 3 types physiques)
+            rd = 0
+            if all(t in props_n for t in ("bludgeoning", "piercing", "slashing")):
+                m_rd = re.search(r"resistance aux degats \(bludgeoning\) \+(\d+)/-", props_n)
+                if m_rd:
+                    rd = int(m_rd.group(1))
+
+            # Appliquer les plafonnements secondaires de Changement (mod)
+            if mod_txt:
+                mod_n = norm(mod_txt)
+                m_ac = re.search(r"ca \+\d+ → ca \+(\d+)", mod_n)
+                if m_ac:
+                    ac = int(m_ac.group(1))
+                m_sv = re.search(r"saves \+\d+ → saves \+(\d+)", mod_n)
+                if m_sv:
+                    saves = int(m_sv.group(1))
+                m_at = re.search(r"atq \+\d+ → atq \+(\d+)", mod_n)
+                if m_at:
+                    atk = int(m_at.group(1))
+                m_dg = re.search(r"degats \+(?:\d+d\d+|\d+) → \+(\d+d\d+|\d+)", mod_n)
+                if m_dg:
+                    melee_dmg = avg_dice(m_dg.group(1))
+                m_rd_mod = re.search(r"rd \+\d+/- → rd \+(\d+)/-", mod_n)
+                if m_rd_mod and rd > 0:
+                    rd = int(m_rd_mod.group(1))
+
+            con_req = 0
+            m_con = re.search(r"≥\s*(\d+)", prereq)
+            if m_con:
+                con_req = int(m_con.group(1))
+
+            entry = {
+                "resref": resref,
+                "name": name,
+                "level_req": _parse_level_req(lvl_txt, locs),
+                "con_req": con_req,
+                "stats": stats,
+                "ac": ac,
+                "saves": saves,
+                "attack": atk,
+                "melee_dmg": round(melee_dmg, 1),
+                "rd": rd,
+            }
+            if slot == "armor":
+                entry["armor_tier"] = _armor_tier_from_type(row[idx["Type (2DA)"]], resref)
+            items.append(entry)
+            total += 1
+        pools[slot] = items
+
+    data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    data["gear_pools"] = pools
+    data["personal_crystal"] = {
+        "early": {"primary": 2, "secondary": 0, "other": 0},
+        "mid":   {"primary": 4, "secondary": 2, "other": 1},
+        "late":  {"primary": 6, "secondary": 4, "other": 2},
+    }
+    data["base_char_scores"] = {
+        "gardien": {
+            "early": {"FOR": 18, "DEX": 14, "CON": 14, "INT": 10, "SAG": 12, "CHA": 10},
+            "mid":   {"FOR": 20, "DEX": 14, "CON": 14, "INT": 10, "SAG": 12, "CHA": 10},
+            "late":  {"FOR": 22, "DEX": 14, "CON": 14, "INT": 10, "SAG": 12, "CHA": 10},
+        },
+        "sentinelle": {
+            "early": {"FOR": 12, "DEX": 18, "CON": 14, "INT": 14, "SAG": 12, "CHA": 10},
+            "mid":   {"FOR": 12, "DEX": 20, "CON": 14, "INT": 14, "SAG": 12, "CHA": 10},
+            "late":  {"FOR": 12, "DEX": 22, "CON": 14, "INT": 14, "SAG": 12, "CHA": 10},
+        },
+        "consulaire": {
+            "early": {"FOR": 10, "DEX": 14, "CON": 14, "INT": 12, "SAG": 18, "CHA": 14},
+            "mid":   {"FOR": 10, "DEX": 14, "CON": 14, "INT": 12, "SAG": 20, "CHA": 14},
+            "late":  {"FOR": 10, "DEX": 14, "CON": 14, "INT": 12, "SAG": 22, "CHA": 14},
+        },
+    }
+    DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return total
+
+
+def equip_best_gear(
+    data: Data,
+    phase_key: str,
+    preset: str,
+    armor_tier: str,
+    primary_stat: str,
+    secondary_stat: str,
+    is_melee: bool = True,
+    is_saber: bool = True,
+    base_overrides: dict[str, int] | None = None,
+) -> dict:
+    """Équipe le meilleur set d'objets légaux (6 CSV + Cristal personnel) pour une phase et un build."""
+    phase = data.phases[phase_key]
+    level = phase["level"]
+    scores = dict(data.raw["base_char_scores"][preset][phase_key])
+    if base_overrides:
+        scores.update(base_overrides)
+
+    # Cristal personnel de l'Exilé (actif sur sabre laser uniquement)
+    if is_saber:
+        pc = data.raw["personal_crystal"][phase_key]
+        scores[primary_stat] += pc["primary"]
+        if secondary_stat != primary_stat:
+            scores[secondary_stat] += pc["secondary"]
+        for k in STAT_KEYS:
+            if k not in (primary_stat, secondary_stat):
+                scores[k] += pc["other"]
+
+    base_con = scores["CON"]
+    pools = data.raw.get("gear_pools", {})
+    equipped: dict[str, str] = {}
+    gear_ac = gear_saves = gear_atk = gear_rd = 0
+    gear_melee_dmg = 0.0
+
+    def score_item(it: dict, slot: str) -> float:
+        s = 0.0
+        st = it.get("stats", {})
+        s += st.get(primary_stat, 0) * 3.0
+        s += st.get(secondary_stat, 0) * 1.6
+        for k, v in st.items():
+            if k not in (primary_stat, secondary_stat):
+                s += v * 0.4
+        s += it.get("attack", 0) * 2.5
+        if is_melee:
+            s += it.get("melee_dmg", 0.0) * 1.4
+        s += it.get("ac", 0) * 2.0
+        s += it.get("saves", 0) * 0.8
+        s += it.get("rd", 0) * 1.0
+        return s
+
+    for slot in ("helmet", "implant", "gloves", "belt", "bracer", "armor"):
+        cands = [it for it in pools.get(slot, []) if it.get("level_req", 99) <= level]
+        if slot == "implant":
+            cands = [it for it in cands if it.get("con_req", 0) <= base_con]
+        elif slot == "armor":
+            cands = [it for it in cands if it.get("armor_tier") == armor_tier]
+        if not cands:
+            continue
+        best = max(cands, key=lambda it: score_item(it, slot))
+        if score_item(best, slot) <= 0:
+            continue
+        equipped[slot] = best["name"]
+        for k, v in best.get("stats", {}).items():
+            scores[k] = scores.get(k, 10) + v
+        gear_ac += best.get("ac", 0)
+        gear_saves += best.get("saves", 0)
+        gear_atk += best.get("attack", 0)
+        gear_melee_dmg += best.get("melee_dmg", 0.0)
+        gear_rd += best.get("rd", 0)
+
+    mods = {k: (scores[k] - 10) // 2 for k in STAT_KEYS}
+    return {
+        "scores": scores,
+        "mods": mods,
+        "gear_ac": gear_ac,
+        "gear_saves": gear_saves,
+        "gear_attack": gear_atk,
+        "gear_melee_dmg": round(gear_melee_dmg, 1),
+        "gear_rd": gear_rd,
+        "equipped": equipped,
+    }
+
+
 # ============================================================================
 # Personnage & cible
 # ============================================================================
@@ -610,6 +875,13 @@ class Char:
     armor_tier: str = "sans"
     buff_ac: int = 0
     buff_rd: int = 0
+    use_gear: bool = False
+    gear_ac: int = 0
+    gear_saves: int = 0
+    gear_attack: int = 0
+    gear_melee_dmg: float = 0.0
+    gear_rd: int = 0
+    gear_equipped: dict[str, str] = field(default_factory=dict)
 
 
 def build_char(data: Data, phase_key: str, preset: str, overrides: dict[str, int],
@@ -810,6 +1082,8 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
                 mult = 1.5
             attr = D if (echani >= 2 and D > F) else F
             dmg += attr * mult
+            if char.use_gear and char.gear_melee_dmg > 0:
+                dmg += char.gear_melee_dmg
         # arme haute cadence : +N dégâts par bout
         if cfg.mode == "double" and hc_r:
             dmg += hc_r * data.feats["styles"]["haute_cadence"]["dmg_per_rank_per_hand"]
@@ -860,7 +1134,7 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
     n_off = 1 if cfg.mode in ("dual", "double") else 0
 
     # ---- attaque totale par main ----------------------------------------------
-    atq_common = char.bab + attr_atk + style_atq + active["attack"]
+    atq_common = char.bab + attr_atk + style_atq + active["attack"] + (char.gear_attack if char.use_gear else 0)
     atq_m = atq_common + mal[0] + up_main.attack + (spec_rank_for(feats, w, data) >= 1) * 2
     atq_o = atq_common + mal[1] + up_off.attack + ((spec_rank_for(feats, off_w, data) >= 1) * 2 if off_w else 0)
 
@@ -918,7 +1192,7 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
     # ---- défense et survie du build (CA, RD, Immunité, Esquive, TTD) ----------
     armor_tier = char.armor_tier
     armor_def = data.raw["armor_stats"][armor_tier]
-    item_ac = armor_def["item_ac_by_phase"].get(phase_key, 0)
+    item_ac = char.gear_ac if char.use_gear else armor_def["item_ac_by_phase"].get(phase_key, 0)
     upg_ac = armor_def.get("upg_ac_by_phase", {}).get(phase_key, 0)
     upg_rd = armor_def.get("upg_rd_by_phase", {}).get(phase_key, 0)
     upg_imm = armor_def.get("upg_imm_by_phase", {}).get(phase_key, 0.0)
@@ -960,7 +1234,7 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
         player_dodge = p_def["dodge_by_rank"].get(str(peau_r), 0.0)
 
     nomi_ac = max(0, CH) if feats.rank("caracs", "nomi") >= 3 else 0
-    kraith_rd = max(0, C) if feats.rank("caracs", "kraith") >= 1 else 0
+    kraith_rd = (max(0, C) + 1) // 2 if feats.rank("caracs", "kraith") >= 1 else 0
     tough_rd = data.feats["armures"]["robustesse"]["rd_by_rank"].get(str(tough_r), 0) if tough_r > 0 else 0
     tough_hp = data.feats["armures"]["robustesse"]["hp_per_level_by_rank"].get(str(tough_r), 0) if tough_r > 0 else 0
 
@@ -968,9 +1242,28 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
         10 + char.class_ac + armor_def["base_ac"] + item_ac + upg_ac
         + ac_dex + style_ac + active_ac + armor_feat_ac + nomi_ac + char.buff_ac
     )
-    player_rd = armor_def["native_rd"] + upg_rd + armor_feat_rd + tough_rd + kraith_rd + char.buff_rd
+    player_rd = armor_def["native_rd"] + upg_rd + armor_feat_rd + tough_rd + kraith_rd + char.buff_rd + (char.gear_rd if char.use_gear else 0)
     imm_cap = data.model.get("immunity_cap")
     player_imm = min(imm_cap, upg_imm + armor_feat_imm) if imm_cap is not None else min(1.0, upg_imm + armor_feat_imm)
+
+    # ---- sauvegardes joueur (Vig / Réf / Vol) ---------------------------------
+    good_save = 2 + char.level // 2
+    poor_save = char.level // 3
+    if char.preset == "gardien":
+        b_vig, b_ref, b_vol = good_save, good_save, poor_save
+    elif char.preset == "sentinelle":
+        b_vig, b_ref, b_vol = poor_save, good_save, good_save
+    else:
+        b_vig, b_ref, b_vol = good_save, poor_save, good_save
+    feat_save_all = (
+        (max(0, C) if feats.rank("caracs", "kraith") >= 3 else 0)
+        + (max(0, S) // 2 if feats.rank("caracs", "matukai") >= 2 else 0)
+        + (max(0, CH) if feats.rank("caracs", "nomi") >= 2 else 0)
+        + (char.gear_saves if char.use_gear else 0)
+    )
+    save_vig = b_vig + C + feat_save_all
+    save_ref = b_ref + D + feat_save_all
+    save_vol = b_vol + S + feat_save_all
 
     player_hp = max(1, (char.vp_per_level + C + tough_hp) * char.level)
     shield_hp = armor_def.get("shield_hp_by_phase", {}).get(phase_key, 0) * shield_mult
@@ -1027,6 +1320,9 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
         "player_dodge": player_dodge,
         "player_hp": player_hp,
         "shield_hp": shield_hp,
+        "save_vig": save_vig,
+        "save_ref": save_ref,
+        "save_vol": save_vol,
         "boss_hit_pct": boss_surv["p_enemy_hit"] * 100,
         "boss_dtps": boss_surv["dtps"],
         "boss_ttd": boss_surv["ttd"],
@@ -1312,7 +1608,7 @@ def selftest() -> None:
     c_heavy = build_char(data, "late", "gardien", {}, "auto", armor_tier="lourde")
     f_jugg = parse_feats(data, "Juggernaut 3, Robustesse 2, Voie du dragon Kraith 1")
     r_jugg = evaluate(Config("lightsaber", None, "single", "none"), data, f_jugg, c_heavy, "late", boss_late, "cap", 0, 0.0)
-    assert r_jugg["player_rd"] == 4 + 3 + 5 + 2 + 6, r_jugg
+    assert r_jugg["player_rd"] == 4 + 3 + 5 + 2 + 3, r_jugg
     assert abs(r_jugg["player_imm"] - 0.45) < 1e-9, r_jugg
     assert r_jugg["boss_ttd"] > 0, r_jugg
     c_light = build_char(data, "late", "sentinelle", {}, "auto", armor_tier="legere")
@@ -1362,6 +1658,8 @@ def main() -> None:
                     help="Régénère upgrade_pools depuis le CSV Améliorations (chemin optionnel)")
     ap.add_argument("--reingest-pouvoirs", nargs="?", const=str(ROOT / "Kotor 2 - rééquilibrage - Spé Pouvoirs.csv"), type=str,
                     help="Resynchronise les armures max de force_buffs depuis le CSV Spé Pouvoirs")
+    ap.add_argument("--reingest-gear", action="store_true",
+                    help="Ingère les 6 CSV d'équipement (Casques/Implants/Gants/Ceintures/Brassards/Armures items) dans dpr_data.json")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -1393,6 +1691,10 @@ def main() -> None:
         for line in reingest_pouvoirs(path):
             print(f"  • {line}")
         print(f"force_buffs resynchronisés → {DATA_FILE}")
+        return
+    if args.reingest_gear:
+        n = reingest_gear(ROOT)
+        print(f"gear_pools régénérés ({n} objets depuis les 6 CSV d'équipement) → {DATA_FILE}")
         return
 
     feats = parse_feats(data, args.feats)

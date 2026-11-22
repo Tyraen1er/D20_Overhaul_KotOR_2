@@ -3,29 +3,29 @@ a_gloves_01,Gants isolants,Gauntlets,Niv. 6+ (rare 1+),—,,"Immunité contre d�
 a_gloves_02,Gants de l'Echange,Gauntlets,Niv. 8+ (rare 3+),—,,"Bonus de compétence +1, Bonus de compétence +2, Bonus de compétence +2",palier 2 niv. 8+ (rare dès 3),—,Ajout : INT +1 (gants techniques de l'Échange)
 a_gloves_04,Gants de survie de Taris,Gauntlets,Niv. 12+ (rare 7+),—,,Jets de sauvegarde améliorés +1,palier 4 niv. 12+ (rare dès 7),—,
 a_gloves_05,Gants de précision,Gauntlets,Niv. 14+ (rare 9+),—,,"Dons en bonus, Dons en bonus",palier 5 niv. 14+ (rare dès 9),—,
-a_gloves_06,Gantelets gamorréens,Gauntlets,Niv. 16+ (rare 11+),—,,"Malus à l'attaque +-1, Bonus aux dégâts (Bludgeoning) +4",palier 6 niv. 16+ (rare dès 11),—,
+a_gloves_06,Gantelets gamorréens,Gauntlets,Niv. 16+ (rare 11+),—,,"Malus à l'attaque +-1, Bonus aux dégâts (Bludgeoning) +4",palier 6 niv. 16+ (rare dès 11),—,Plafonnement : Dégâts +4 → +2
 a_gloves_07,Gants de travail de l'Echange,Gauntlets,Niv. 18+ (rare 13+),—,DEX +1,"Bonus de caractéristique (Dexterity) +1, Bonus de compétence +1, Bonus de compétence +3, Bonus de compétence +3",palier 7 niv. 18+ (rare dès 13),—,
 a_gloves_08,Gantelets de défense de la Czerka,Gauntlets,Niv. 20+ (rare 15+),—,,"Bonus défense +1, Don requis",palier 8 niv. 20+ (rare dès 15),—,
 a_gloves_09,Gants détonateurs,Gauntlets,Niv. 22+ (rare 17+),—,,"Immunité contre dégâts +25%, Immunité contre dégâts +10%, Jets de sauvegarde améliorés +2, Bonus de compétence +3",palier 9 niv. 22+ (rare dès 17),401dxn,Ajout : INT +2 (gants de démolition/détonateurs)
 a_gloves_10,Gants de précision sans arme,Gauntlets,Niv. 24+ (rare 19+),—,,"Bonus d'attaque +1, Bonus aux dégâts (Bludgeoning) +2, Jets de sauvegarde améliorés +1",palier 10 niv. 24+ (rare dès 19),—,
 a_gloves_11,Gants d'infiltrateur,Gauntlets,Niv. 26+ (rare 21+),—,DEX +2,"Bonus de caractéristique (Dexterity) +2, Bonus de compétence +4, Bonus de compétence +4",palier 11 niv. 26+ (rare dès 21),"Ondéron - Palais royal, Ondéron - Palais royal",
 a_gloves_12,Gants de perception de Jal Shey,Gauntlets,Niv. 28+ (rare 23+),—,"DEX +1, SAG +1","Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Wisdom) +1, Bonus de compétence +1",palier 12 niv. 28+ (rare dès 23),—,"Rééquilibrage lore Jal Shey : DEX +1, SAG +1 → CHA +1, SAG +1"
-a_gloves_13,Gants de guerre gamorréens,Gauntlets,Niv. 30+ (rare 25+),—,,"Malus de caractéristique +-2, Bonus défense +3, Don requis",palier 13 niv. 30+ (rare dès 25),—,
+a_gloves_13,Gants de guerre gamorréens,Gauntlets,Niv. 30+ (rare 25+),—,,"Malus de caractéristique +-2, Bonus défense +3, Don requis",palier 13 niv. 30+ (rare dès 25),—,Plafonnement : CA +3 → CA +2
 a_gloves_14,Ampli. force physique ériadu,Gauntlets,Niv. 30+ (rare 27+),—,FOR +2,Bonus de caractéristique (Strength) +2,palier 14 niv. 30+ (rare dès 27),—,
 a_gloves_15,Gantelets de Karakan,Gauntlets,Niv. 30+ (rare 29+),—,DEX +1,"Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +3",palier 15 niv. 30+ (rare dès 29),—,
 a_gloves_16,Gants de précision bothans,Gauntlets,Niv. 30+,—,DEX +1,"Bonus de caractéristique (Dexterity) +1, Immunité contre dégâts +25%, Immunité contre dégâts +15%, Résistance aux dégâts (Fire) +5/-, Jets de sauvegarde améliorés +2, Bonus de compétence +6",palier 16 niv. 30+,—,
 a_gloves_17,Gantelets de puissance Sith,Gauntlets,Niv. 30+,—,FOR +3,Bonus de caractéristique (Strength) +3,palier 17 niv. 30+,—,
 a_gloves_18,Gantelets de puissance gamorréens,Gauntlets,Niv. 30+,—,FOR +2,"Bonus de caractéristique (Strength) +2, Bonus aux dégâts (Bludgeoning) +2, Bonus défense +1, Don requis, Don requis, En cas de coup au but +14",palier 18 niv. 30+,—,
-a_gloves_19,Gants de combat nagai,Gauntlets,Niv. 30+,—,,"Résistance aux dégâts (Energy) +5/-, Jets de sauvegarde améliorés +2",palier 19 niv. 30+,—,
+a_gloves_19,Gants de combat nagai,Gauntlets,Niv. 30+,—,,"Résistance aux dégâts (Energy) +5/-, Jets de sauvegarde améliorés +2",palier 19 niv. 30+,—,Plafonnement : RD +5/- → RD +2/- (Énergie)
 a_gloves_20,Gants de voyou kubaz,Gauntlets,Niv. 30+,—,DEX +5,"Bonus de caractéristique (Dexterity) +5, Restriction de classe, Bonus de compétence +6, Bonus de compétence +6",palier 20 niv. 30+,—,Plafonnement : DEX +5 → DEX +3
 a_gloves_21,Gants d'automatisme,Gauntlets,Niv. 30+,—,DEX +3,"Bonus de caractéristique (Dexterity) +3, Bonus de compétence +4, Bonus de compétence +2",palier 21 niv. 30+,—,"Rééquilibrage lore automatisme : DEX +3 → INT +2, DEX +1"
 a_gloves_22,Gants de méditation de Jal Shey,Gauntlets,Niv. 30+,—,"DEX +2, SAG +2","Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Wisdom) +2, Bonus de compétence +2",palier 22 niv. 30+,—,"Rééquilibrage lore Jal Shey : DEX +2, SAG +2 → CHA +2, SAG +2"
-a_gloves_23,Gants de précision Echani,Gauntlets,Niv. 30+,—,DEX +1,"Bonus d'attaque +1, Bonus de caractéristique (Dexterity) +1, Bonus aux dégâts (Bludgeoning) +5",palier 23 niv. 30+,—,
+a_gloves_23,Gants de précision Echani,Gauntlets,Niv. 30+,—,DEX +1,"Bonus d'attaque +1, Bonus de caractéristique (Dexterity) +1, Bonus aux dégâts (Bludgeoning) +5",palier 23 niv. 30+,—,Plafonnement : Dégâts +5 → +3
 a_gloves_24,Gants de Zeison Sha,Gauntlets,Niv. 30+,—,CON +2,"Bonus de caractéristique (Constitution) +2, Régénération +1",palier 24 niv. 30+,—,
 a_gloves_25,Gantelets de dominateur,Gauntlets,Niv. 30+,—,FOR +5,Bonus de caractéristique (Strength) +5,palier 25 niv. 30+,—,Plafonnement : FOR +5 → FOR +3
 a_gloves_26,Gants de soldat nikto,Gauntlets,Niv. 30+,—,"FOR +3, DEX +2","Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +3, Restriction de classe",palier 26 niv. 30+,—,"Plafonnement : FOR +3, DEX +2 → FOR +2, DEX +2"
 a_gloves_27,Gants d'Ossluk,Gauntlets,Niv. 30+,—,"FOR +2, DEX +1, CON +1","Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +2",palier 27 niv. 30+,—,
-a_gloves_28,Gants de désintégration,Gauntlets,Niv. 30+,—,,Bonus aux dégâts (Unstoppable) +1d10,palier 28 niv. 30+,—,
+a_gloves_28,Gants de désintégration,Gauntlets,Niv. 30+,—,,Bonus aux dégâts (Unstoppable) +1d10,palier 28 niv. 30+,—,Plafonnement : Dégâts +1d10 → +1d6
 a_gloves_29,Gants d'automatisme améliorés,Gauntlets,Niv. 30+,—,DEX +5,"Bonus de caractéristique (Dexterity) +5, Bonus de compétence +6, Bonus de compétence +4",palier 29 niv. 30+,—,"Plafonnement & lore automatisme : DEX +5 → DEX +2, INT +2"
-a_gloves_30,Gants de foudre,Gauntlets,Niv. 30+,—,,"Bonus d'attaque +1, Bonus aux dégâts (Electrical) +2d6, Résistance aux dégâts (Electrical) +10/-",palier 30 niv. 30+,—,
+a_gloves_30,Gants de foudre,Gauntlets,Niv. 30+,—,,"Bonus d'attaque +1, Bonus aux dégâts (Electrical) +2d6, Résistance aux dégâts (Electrical) +10/-",palier 30 niv. 30+,—,Plafonnement : Dégâts +2d6 → +1d6
 ancientsithgaunt,Vieux gantelet Sith,Gauntlets,Loot fixe / Quête,Alignement,FOR +4,"Restriction d'alignement, Bonus de caractéristique (Strength) +4, Immunité (Critical_Hits)",—,401dxn,Plafonnement : FOR +4 → FOR +3

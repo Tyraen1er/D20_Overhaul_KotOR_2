@@ -11,5 +11,5 @@ a_shield_04,Bouclier Echani,Forearm Bands,—,—,,Activer objet +1_Charge/Use,�
 a_shield_05,Bouclier multifonction mand.,Forearm Bands,Loot fixe / Quête,—,,Activer objet +1_Charge/Use,—,"Dxun - Ruines mandalorie… ×2, Dxun - Ruines mandalorie… ×2, Citadelle - Quartier rés…, Citadelle - Quartier rés…",
 a_shield_06,Bouclier de duel Echani,Forearm Bands,—,—,,Activer objet +1_Charge/Use,—,—,
 a_shield_07,Prototype de bouclier verpine,Forearm Bands,—,—,,Activer objet +1_Charge/Use,—,—,
-g_i_cermshield,Bouclier de cérémonie,Forearm Bands,Loot fixe / Quête,—,,"Résistance aux dégâts (Dark_Side) +10/-, Jets de sauvegarde améliorés +4",—,"Dxun - Tombeau Sith, Dxun - Tombeau Sith",
+g_i_cermshield,Bouclier de cérémonie,Forearm Bands,Loot fixe / Quête,—,,"Résistance aux dégâts (Dark_Side) +10/-, Jets de sauvegarde améliorés +4",—,"Dxun - Tombeau Sith, Dxun - Tombeau Sith","Plafonnement : RD +10/- → RD +3/- (Obscur), Saves +4 → Saves +3"
 ith_shield,Prototype de bouclier,Forearm Bands,—,—,,—,—,—,
