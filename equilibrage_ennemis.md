@@ -1,7 +1,6 @@
 # Chantier d'Équilibrage — Ennemis : Profils Défensifs & Adaptation de Combat
 
-> **Statut : EN DISCUSSION** — ce fichier est la grille de décision du chantier « Ennemis ».
-> Rien ici n'est acté tant que le feu vert n'est pas donné pour report dans [`decisions_finales.md`](decisions_finales.md).
+> **Statut : ACTÉ (22/11/2026)** — décisions D1–D8 et matrice familiale validées et reportées dans [`decisions_finales.md`](decisions_finales.md). Chantier Ennemis clos (design prêt pour implémentation).
 >
 > **Sources :** [`datas_kotor/ennemis_defenses_etat_des_lieux.md`](datas_kotor/ennemis_defenses_etat_des_lieux.md) (constats chiffrés),
 > [`datas_kotor/ennemis_reference_kotor2.md`](datas_kotor/ennemis_reference_kotor2.md) (autobalance, PV/CA des boss),
@@ -103,16 +102,15 @@
 
 > Valeurs indicatives à chiffrer ensuite ; phases **E**arly (niv. 1–10) / **M**id (11–18) / **L**ate (19+).
 
-| Famille | Résistance signature (proposition) | Faiblesse assumée | Réponse attendue du joueur | Levier technique |
+| Famille | Résistance signature (actée 22/11) | Faiblesse assumée | Réponse attendue du joueur | Levier technique |
 | :--- | :--- | :--- | :--- | :--- |
-| **Sith / Jedi obscurs** | Immunité mentale partielle (`25/50/75 %` selon rang) dès Mid + *Résistance à la Force* ; *Esquive Totale* déjà actée à 20+ | Volonté moyenne, RD nulle | Dégâts bruts / sabre plutôt que contrôle mental ; *Brèche de Force* pour retirer leurs buffs | Peau de créature + dons auto (feat.2da) + `EffectForceResistanceIncrease` |
-| **Soldats / Mercenaires** | Armure **réellement portée** (CA conforme à leur don) + **boucliers énergétiques** activés (Mid+) sur 1 élite sur 3 | Bouclier ≠ mêlée : les vibro-armes et sabres traversent | Alterner distance/mêlée, ou *Décharge* anti-bouclier | Équipement UTC + peau de créature (shield simulé par RD Énergie) ou item bouclier équipé |
-| **Mandaloriens** | Armure lourde + **RD physique** (`2/4/6` selon phase) + stim de combat scripté (Mid+) | **Aucune résistance à la Force** — contrôle mental fonctionne à fond | Renverser la logique Jedi : ici, la Force est la bonne réponse | Peau (`Résist %` physique) + OnSpawn stim |
-| **Bêtes** | **RD physique** (`3/5/7`) + haute Vigueur + immunité *Peur* | Volonté basse, aucune défense vs énergie/Force | Éclair, sabre, blasters — la technologie contre la nature | Peaux `g_i_crhide*` (mécanisme existant des droïdes) |
-| **Droïdes** | **Statu quo binaire** (esprit/poison/drain) + peaux existantes | Ion, *Destruction de droïde*, sabres | Inchangé — c'est le modèle qui fonctionne | Aucun changement |
-| **Assassins / Traqueurs** | *Esquive instinctive* + camouflage + **25 % d'esquive** (`EffectMissChance`) vs distance | Faible en mêlée rapprochée, AoE | Les coincer au corps-à-corps ou les arroser en zone | Dons UTC + peau |
-| **Élites / Sous-boss (`Set_4`)** | **Une mécanique signature** choisie dans le menu §6-D4 | — | Variable | Scripts OnSpawn / userd |
-| **Boss majeurs (`Set_5`)** | RD `2/5/8` (**acté**) + **phases scriptées** (§6-D4) + profil familial | — | S'adapter en cours de combat | Scripts + peaux |
+| **Sith / Jedi obscurs** | **Robes réelles** équipées + Résistance à la Force (`15+Niv` Chevaliers / `20+Niv` Maîtres) + bonus Volonté (`+2/+4/+6` Apprenti/Chevalier/Maître) + ***Esquive Totale*** (20+) + **Drain de Force prioritaire si `PF < 30 %`** *(se soignent déjà nativement via Drain de vie / Champ de mort)* ; ***Guérison*** (`1×/combat` `< 30 % PV`) réservée aux **Maîtres Jedi en duel (Vrook, Kavar, Zez-Kai Ell, Atris)** | RD nulle (en robe), Vigueur moyenne | Dégâts bruts / sabre, *Peste* (Vig), *Brèche de Force* / *Pouvoir Pénétrant* | Équipement UTC + peau + dons auto + `k_inc_generic` (`GetCurrentForcePoints`) |
+| **Soldats / Mercenaires** | **Armures légères/moyennes** réellement portées (CA + `RD 2/-` Moyenne) + **boucliers d'énergie** (`50/100 PV`) sur ~1 élite sur 3 (Mid+, lootables) + grenades existantes | Volonté basse, boucliers traversés par la mêlée | Mêlée/sabre, *Disrupteur*, *Insanité* / *Tourbillon* | Équipement UTC (armures + items boucliers, activés auto par l'IA) |
+| **Mandaloriens** | **Armure lourde** (`RD 4/-` native, 6/8 templates) + **résistance Laser (Énergie) & Feu `25 %` (Mid) / `35 %` (Late)** + boucliers élites + stim `OnSpawn` (`+2 FOR/CON`) | **Aucune résistance à la Force**, Volonté & Réflexes bas, vulnérables au physique/ion/sonique | Force (*Tempête*, *Insanité*, *Stase*), armes physiques/vibro/bris d'armure (*Traditionnelle* `-6 CA`) | Peau (`Résist %` Énergie/Feu) + équipement UTC + `OnSpawn` stim |
+| **Bêtes** | **RD physique/énergie légère** (`2/4/6/-` E/M/L sur grosses bêtes) + haute Vigueur + immunité *Peur* (apex) + régén lente hors combat | Volonté très basse (`-3` à `+2`), aucune résistance Énergie/Électrique/Feu | *Éclairs*, sabres, blasters, grenades incendiaires, contrôles mentaux | Peaux `g_i_crhide*` |
+| **Droïdes** | **Statu quo binaire** (esprit/poison/drain, 82 peaux) + **déflecteurs droïdes** (`50–60 PV`) sur ~1/3 des droïdes de guerre/assaut élites (Mid+) | Ion, *Destruction de droïde*, Électrique | Armes/grenades ioniques, pouvoirs anti-droïdes | Peaux existantes + items déflecteurs UTC |
+| **Assassins Sith / Traqueurs** | Furtivité + *Esquive instinctive* + Réflexes élevés + **esquive à distance `20–25 %`** (Mid/Late) | PV faibles, RD nulle, Vigueur basse | Corps-à-corps direct, *Peste* / *Stase* (Vig) | Dons UTC + peau |
+| **Boss majeurs (`Set_5`)** | **Aucune phase scriptée supplémentaire (D4)** — profil familial + `RD 2/5/8` actée + rehausse PV Mid (`~380–420 PV` Niv. 16) | Selon famille | S'appuie sur l'existant TSLRCM sans conflit | `autobalance.2da` + profils familiaux |
 
 ---
 
