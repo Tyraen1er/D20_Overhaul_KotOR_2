@@ -15,7 +15,7 @@ Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les
 | Spécialisations de caractéristique | 6 arbres exclusifs (FOR, DEX, CON, INT, SAG, CHA) — un par caractéristique, ordre canonique | §5 |
 | Architecture de dons | Posture (3) + famille (3) + spé carac (3) + défenses ; budgets Niv. 30 : **22 / 18 / 15** dons (pouvoirs **12 / 16 / 24**), gating par classe/prestige sur Rangs II–III | §6 |
 | Dons transversaux | 7 dons de Métamagie + *Esquive Totale* (anti-AoE) | §7 |
-| Armures & Défenses | RD native (Interm. 2 / Lourde 4), upgrades combinées exclusives aux intermédiaires (`UpgradeLevel`), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique III* supprimé | §8 |
+| Armures & Défenses | RD native (Interm. 2 / Lourde 4), upgrades combinées exclusives aux intermédiaires (`UpgradeLevel`), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique I–III* conservé vanilla | §8 |
 | Contrat mathématique | DPR nets et durées de boss cibles par phase de jeu (colonnes à remapper sur la nouvelle architecture) | §9 |
 | Furtivité | Embuscade : première attaque depuis la furtivité = critique confirmé (simulation scriptée) | §10 |
 | Conventions & principes | DD Spé d'arme (`10`/`5` + Niv + carac), grenades (`10` + Niv + INT), fléchettes/roquettes (`12` + Niv + INT), *On-Hit* armes (`3/5/7/9` + Niv + carac à définir), procs `plage/20`, ordre canonique, « les synergies se trouvent » | §11 |
@@ -124,7 +124,7 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
 
 ### 6. Architecture de Dons & Budgets
 
-**Nouvelle structure (post-15/11)** : chaque personnage combine **une posture** (3 rangs) + **une famille de Spé d'arme par catégorie d'armes utilisées** (3 rangs chacune) + **un arbre de Spé carac** (3 rangs, exclusif) + **défenses** (Robustesse 3, Condition physique 2 ou arbre d'armure 3) + **Métamagie** (7, profil caster) + dons actifs vanilla conservés (Déluge, Attaque en puissance, Coup critique, Décharge, Tir rapide, Sniper).
+**Nouvelle structure (post-15/11)** : chaque personnage combine **une posture** (3 rangs) + **une famille de Spé d'arme par catégorie d'armes utilisées** (3 rangs chacune) + **un arbre de Spé carac** (3 rangs, exclusif) + **défenses** (Robustesse 3, Condition physique 3 ou arbre d'armure 3) + **Métamagie** (7, profil caster) + dons actifs vanilla conservés (Déluge, Attaque en puissance, Coup critique, Décharge, Tir rapide, Sniper).
 
 **Budgets Niv. 30 (actés le 19/11)** : **22** (Gardien) / **18** (Sentinelle) / **15** (Consulaire), pour **12 / 16 / 24** pouvoirs.
 - Les arbres restent compacts en **3 rangs marquants** (pas de découpage massif en « demi-dons ») ; seul *Blindage de Combat* est candidat à séparer son volet Furtivité en armure.
@@ -156,7 +156,7 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
 - Réussite du jet de sauvegarde face à une AoE → **0 dégât** ; échec → **dégâts ÷ 2**.
 - Sélectionnable uniquement à partir d'une classe de prestige (Niv. 15+) ; auto Éclaireur niv. 6 (Mira) ; octroyé à tous les Jedi/Sith ennemis 20+ (via `k_inc_force.nss`).
 
-### 8. Armures : RD Native, 3 Arbres de Dons, Dégradé de Pouvoirs, *Condition physique III* supprimé
+### 8. Armures : RD Native, 3 Arbres de Dons, Dégradé de Pouvoirs
 
 Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`](decisions_annexes.md#1-armures--recherche-et-justifications) :
 
@@ -182,7 +182,7 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 
 **C. Dégradé des pouvoirs sous armure** (`forbiditemmask`) : robe = tous ; légère = vanilla + Vaillance I + Résistance ; interm. = vanilla + Résistance ; lourde = vanilla strict.
 
-**D. *Condition physique III* (`MASTER_CONDITIONING`)** : **supprimé** (décision 17/11). Seuls les rangs I (+1) et II (+2) sont conservés en vanilla ; le rang III est supprimé.
+**D. *Condition physique I–III* (`CONDITIONING` / `IMPROVED` / `MASTER`)** : **conservé en vanilla** (décision révisée le 23/11 : les 3 rangs `+1/+2/+3` aux sauvegardes restent intacts).
 
 ### 9. Contrat Mathématique (DPR nets & durées de boss cibles)
 
