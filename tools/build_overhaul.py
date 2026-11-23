@@ -357,7 +357,10 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         if min_lvl > 1:
             entry["mincharlevel"] = str(min_lvl)
 
-        # Chaînage automatique Rang I -> successor Rang II -> successor Rang III (et prereqfeat1)
+        # Chaînage exact vanilla KotOR 2 :
+        #   Rang I  : pre1="", pre2="", succ=Rang II
+        #   Rang II : pre1=Rang I, pre2="", succ=Rang III
+        #   Rang III: pre1=Rang I, pre2=Rang II, succ="" (obligatoire pour l'affichage UI!)
         if label.endswith("_1") and (label[:-2] + "_2") in feat_ids:
             entry["successor"] = str(feat_ids[label[:-2] + "_2"])
             entry["pips"] = "1"
@@ -367,7 +370,11 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
                 entry["successor"] = str(feat_ids[label[:-2] + "_3"])
             entry["pips"] = "2"
         elif label.endswith("_3") and (label[:-2] + "_2") in feat_ids:
-            entry["prereqfeat1"] = str(feat_ids[label[:-2] + "_2"])
+            if (label[:-2] + "_1") in feat_ids:
+                entry["prereqfeat1"] = str(feat_ids[label[:-2] + "_1"])
+                entry["prereqfeat2"] = str(feat_ids[label[:-2] + "_2"])
+            else:
+                entry["prereqfeat1"] = str(feat_ids[label[:-2] + "_2"])
             entry["pips"] = "3"
         else:
             entry["pips"] = "1"
