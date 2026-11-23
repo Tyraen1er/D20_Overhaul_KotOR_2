@@ -112,12 +112,12 @@ int Ov_GetActiveCaracTree(object oTarget)
 {{
     int nTree = GetLocalNumber(oTarget, 22);
     if (nTree > 0) return nTree;
-    if (GetHasFeat(OV_GAM_1, oTarget)) nTree = 1;
-    else if (GetHasFeat(OV_ECH_1, oTarget)) nTree = 2;
-    else if (GetHasFeat(OV_KRA_1, oTarget)) nTree = 3;
-    else if (GetHasFeat(OV_GAN_1, oTarget)) nTree = 4;
-    else if (GetHasFeat(OV_MAT_1, oTarget)) nTree = 5;
-    else if (GetHasFeat(OV_NOM_1, oTarget)) nTree = 6;
+    if (GetHasFeat(OV_GAM_1, oTarget) || GetHasFeat(OV_GAM_2, oTarget) || GetHasFeat(OV_GAM_3, oTarget)) nTree = 1;
+    else if (GetHasFeat(OV_ECH_1, oTarget) || GetHasFeat(OV_ECH_2, oTarget) || GetHasFeat(OV_ECH_3, oTarget)) nTree = 2;
+    else if (GetHasFeat(OV_KRA_1, oTarget) || GetHasFeat(OV_KRA_2, oTarget) || GetHasFeat(OV_KRA_3, oTarget)) nTree = 3;
+    else if (GetHasFeat(OV_GAN_1, oTarget) || GetHasFeat(OV_GAN_2, oTarget) || GetHasFeat(OV_GAN_3, oTarget)) nTree = 4;
+    else if (GetHasFeat(OV_MAT_1, oTarget) || GetHasFeat(OV_MAT_2, oTarget) || GetHasFeat(OV_MAT_3, oTarget)) nTree = 5;
+    else if (GetHasFeat(OV_NOM_1, oTarget) || GetHasFeat(OV_NOM_2, oTarget) || GetHasFeat(OV_NOM_3, oTarget)) nTree = 6;
     if (nTree > 0) SetLocalNumber(oTarget, 22, nTree);
     return nTree;
 }}
@@ -340,11 +340,9 @@ def build_grenades(fids: dict[str, int]) -> None:
     """Patch k_sup_grenade.nss : DD = 10 + Niv + Mod INT (12 + Niv + INT pour roquettes/flechettes)
     + Gand I (+5% degats / rang de Demolition)."""
     src = (REF_SCRIPTS / "k_sup_grenade.nss").read_text(encoding="latin1")
-    # Remplacer `nDC = 15;` (et autres DD fixes de grenades) par la formule scalee INT
-    scaled_dc = "nDC = 10 + GetHitDice(OBJECT_SELF) + GetAbilityModifier(ABILITY_INTELLIGENCE, OBJECT_SELF) + ((nSpell >= 246) ? 2 : 0);"
-    # NWScript n'a pas d'operateur ternaire ?: -> utiliser un if propre !
+    # Ne remplacer que les assignations `nDC = 15;` (etc.), JAMAIS `int nDC = 0;` dans GR_GetGrenadeDC()!
     scaled_dc_nw = "nDC = 10 + GetHitDice(OBJECT_SELF) + GetAbilityModifier(ABILITY_INTELLIGENCE, OBJECT_SELF); if (GetSpellId() >= 246) { nDC += 2; }"
-    src_patched = re.sub(r"\bnDC\s*=\s*\d+\s*;", scaled_dc_nw, src)
+    src_patched = re.sub(r"(?<!int\s)\bnDC\s*=\s*[1-9]\d*\s*;", scaled_dc_nw, src)
     # Bonus Gand I (+5% degats / rang total de Demolition)
     gand1 = fids["MOD_GAND_1"]
     gand_snippet = f"if (GetHasFeat({gand1}, OBJECT_SELF)) {{ nDamage = nDamage + (nDamage * GetSkillRank(SKILL_DEMOLITIONS, OBJECT_SELF) * 5) / 100; }}"
@@ -419,6 +417,7 @@ int Ov_IsRobeOnlyPower(int nSp)
             int nBI = GetBaseItemType(oArm);
             if ((nBI == 98 || nBI == 102) && Ov_IsRobeOnlyPower(GetSpellId()))
             {
+                ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHealForcePoints(30), OBJECT_SELF);
                 return;
             }
         }

@@ -357,9 +357,14 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         if min_lvl > 1:
             entry["mincharlevel"] = str(min_lvl)
 
-        # Chaînage automatique Rang II -> Rang I et Rang III -> Rang II
-        if label.endswith("_2") and (label[:-2] + "_1") in feat_ids:
+        # Chaînage automatique Rang I -> successor Rang II -> successor Rang III (et prereqfeat1)
+        if label.endswith("_1") and (label[:-2] + "_2") in feat_ids:
+            entry["successor"] = str(feat_ids[label[:-2] + "_2"])
+            entry["pips"] = "1"
+        elif label.endswith("_2") and (label[:-2] + "_1") in feat_ids:
             entry["prereqfeat1"] = str(feat_ids[label[:-2] + "_1"])
+            if (label[:-2] + "_3") in feat_ids:
+                entry["successor"] = str(feat_ids[label[:-2] + "_3"])
             entry["pips"] = "2"
         elif label.endswith("_3") and (label[:-2] + "_2") in feat_ids:
             entry["prereqfeat1"] = str(feat_ids[label[:-2] + "_2"])
@@ -495,7 +500,8 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
         new_lbl = f"{lbl}_1M"
         new_dict["label"] = new_lbl
         new_dict["equipableslots"] = "0x00030"
-        new_dict["weaponwield"] = "2" if new_dict.get("rangedweapon", "0") == "0" else "5"
+        is_ranged = new_dict.get("rangedweapon") == "1"
+        new_dict["weaponwield"] = "5" if is_ranged else "2"
         new_dict["weaponsize"] = "3"
         new_dict["reqfeat0"] = str(gam2_id)
         new_idx = len(bi)
