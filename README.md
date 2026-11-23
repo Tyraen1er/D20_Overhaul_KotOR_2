@@ -99,6 +99,16 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
 * **Cause :** La liste `ScriptParam` de `PlayPazaak` omettait le premier paramètre `int nOpponentPazaakDeck`, décalant tous les arguments suivants.
 * **Correctif appliqué :** Ajout de `ScriptParam(DataType.INT, "nOpponentPazaakDeck", None)` en tête de liste des paramètres pour K1 et K2.
 
+### Bug #6 : Cellules vides dans `pykotor.TwoDA` (`""` obligatoire, JAMAIS `"****"`)
+* **Symptôme en jeu :** Un don ajouté dans `feat.2da` n'apparaît pas du tout dans la liste au passage de niveau (ou un prérequis est rejeté).
+* **Cause :** Dans `pykotor`, une cellule vide d'un `.2da` doit être la chaîne vide **`""`** (que `write_2da` sérialise correctement en `****` au format binaire). Écrire la chaîne littérale **`"****"`** stocke les 4 caractères `"****"`, que le moteur lit comme un entier/prérequis invalide et masque la ligne.
+* **Règle stricte :** Toujours initialiser les cellules vides avec **`""`** (ou cloner une ligne fonctionnelle existante) — jamais `"****"`.
+
+### Bug #7 : Corruption des gros scripts vanilla par le compilateur NCS de `pykotor` (`k_ai_master.ncs`)
+* **Symptôme en jeu :** Recompiler `k_ai_master.nss` (`~24 471` instructions) avec `pykotor` gèle complètement l'IA du jeu (ennemis figés, impossible de cliquer pour attaquer, coups qui ne touchent plus).
+* **Cause :** Le compilateur Python intégré de `pykotor` génère un bytecode défectueux sur les très gros scripts à `switch` imbriqués comme `k_ai_master.nss`.
+* **Solution propre validée en jeu (23/11/2026) :** **Ne JAMAIS recompiler `k_ai_master.ncs`** (laisser le `k_ai_master.ncs` vanilla 100 % intact). Placer tous les hooks custom dans les **petits scripts wrappers** (`k_def_heartbt01`, `k_hen_heartbt01`, `k_hen_attacked01`, `k_hen_damage01`, `k_def_attacked01`, `k_def_damage01` — `~140–214` instructions chacun) qui exécutent notre logique puis appellent `ExecuteScript("k_ai_master", OBJECT_SELF, ...);`.
+
 ---
 
 ## 3. Règles et Pièges Spécifiques au Moteur de KotOR 2 (Odyssey Engine)
@@ -110,10 +120,12 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
 2. **Où coder l'effet d'un nouveau don passif ?**
    * Les dons vanilla ont leurs effets codés en dur dans `swkotor2.exe`.
    * Pour un nouveau don (ex: ID `245`), il faut vérifier `GetHasFeat(245, oTarget)` dans un script exécuté régulièrement.
-   * **Point d'entrée universel :** Le joueur (`pc.utc`), les compagnons (`p_*.utc`) et les PNJ ont tous un script `ScriptHeartbeat` (`k_hen_heartbt01` ou `k_def_heartbt01`) qui appelle `ExecuteScript("k_ai_master", OBJECT_SELF, ...)`.
-   * Placer une vérification au début de `void main()` dans `k_ai_master.nss` sur `OBJECT_SELF` et `GetFirstPC()` garantit que le bonus passif est appliqué automatiquement toutes les 6 secondes (et à chaque round de combat).
+   * **Point d'entrée universel (validé 23/11 — voir Bug #7) :** Le joueur (`pc.utc`), les compagnons (`p_*.utc`) et les PNJ ont tous des petits scripts wrappers (`k_hen_heartbt01`, `k_def_heartbt01`, `k_hen_attacked01`, `k_hen_damage01`, `k_def_attacked01`, `k_def_damage01`) qui appellent `ExecuteScript("k_ai_master", OBJECT_SELF, ...)`.
+   * **Toujours placer les hooks custom dans ces petits wrappers** (jamais en recompilant `k_ai_master.nss`), en laissant l'appel `ExecuteScript("k_ai_master", ...)` intact juste après.
 3. **Éviter le cumul infini des bonus passifs :**
-   * Avant d'appliquer un effet `DURATION_TYPE_PERMANENT` + `ExtraordinaryEffect(eLink)` dans `k_ai_master`, **toujours parcourir `GetFirstEffect(oTarget)` / `GetNextEffect(oTarget)`** pour vérifier si l'effet (`EFFECT_TYPE_*` avec `SUBTYPE_EXTRAORDINARY` et `DURATION_TYPE_PERMANENT`) n'est pas déjà présent sur la créature.
+   * Avant d'appliquer un effet `DURATION_TYPE_PERMANENT` + `ExtraordinaryEffect(eLink)` dans le wrapper heartbeat, **toujours parcourir `GetFirstEffect(oTarget)` / `GetNextEffect(oTarget)`** pour vérifier si l'effet (`EFFECT_TYPE_*` avec `SUBTYPE_EXTRAORDINARY` et `DURATION_TYPE_PERMANENT`) n'est pas déjà présent sur la créature.
+4. **Ne jamais supprimer de lignes vanilla dans `feat.2da` :**
+   * Supprimer ou décaler des index vanilla dans `feat.2da` rend les sauvegardes existantes incompatibles. Toujours **ajouter** les nouveaux dons à la fin (`245+`) et masquer les dons retirés en mettant leurs colonnes `*_list` à `""` (vide) plutôt qu'en supprimant la ligne.
 
 ### B. Fonctionnement de `EffectDamageIncrease` vs `DAMAGE_BONUS_*`
 * **Piège classique :** Dans `nwscript.nss`, le commentaire au-dessus de `EffectDamageIncrease(int nBonus, ...)` mentionne `DAMAGE_BONUS_*` (qui sont les constantes de la table `iprp_damagecost.2da` où `1..5` = `+1..+5`, `6` = `1d4`, `10` = `2d6`).
@@ -125,4 +137,13 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
 * Le jeu n'exécute **que** les fichiers compilés `.ncs` présents dans `Override/` (ou dans les modules `.mod`/`.rim`).
 * Les fichiers `k_inc_*.nss` (comme `k_inc_force.nss` ou `k_inc_combat.nss`) sont des bibliothèques (`#include`) sans fonction `main()`. Si vous modifiez `k_inc_force.nss` (par exemple pour rééquilibrer le pouvoir de Vitesse), vous devez compiler **`k_sp1_generic.nss` ➔ `k_sp1_generic.ncs`** et placer `k_sp1_generic.ncs` dans `Override/`.
 * ⚠️ Pièges NWScript K2 (constatés le 13/11/2026) : **`GetLocalInt`/`SetLocalInt` n'existent pas** — utiliser `Get/SetLocalNumber(oObject, nIndex)` (index 12 à 28, valeur 0-255 ; idem `Get/SetLocalBoolean`). **Pendant le prologue, `GetFirstPC()` = T3-M4, pas l'Exilé** — distinguer avec `GetIsPlayerMadeCharacter()` (commande 876) ; un script qui déclenche une action intrusive sur `GetFirstPC()` pendant la cinématique du prologue fige le module (écran noir, audio en fond). `GrantFeat(nFeat, oCreature)` (commande 786, ajout K2) octroie un don par script sans tenir compte des prérequis ; pas d'événement `OnLevelUp` (polling heartbeat). La séquence d'écrans de la création de perso et ses validations sont codées en dur dans l'exe (non moddables ; pas de mécanisme de « liste de dons bonus » en K2 — colonnes `*_bon` de `featgain.2da` inutilisées).
+
+### D. Vérifications Moteur Actées en Jeu (Jalon 0 — 23/11/2026)
+* **`feat.2da` colonne `exclusion` = KO pour les dons sélectionnables :** mettre le même bit `exclusion` (ex. `0x02`) sur deux dons **n'empêche pas** de prendre les deux au level-up. La mutualité des 6 arbres de Spé Carac doit donc passer par un **garde-fou scripté** (premier arbre acquis enregistré en `LocalNumber`, les autres ignorés).
+* **`EffectACIncrease` ne se cumule PAS entre effets séparés :** même en utilisant des types différents (`AC_DODGE_BONUS`, `AC_DEFLECTION_BONUS`, `AC_NATURAL_BONUS`), KotOR 2 ne conserve que la valeur la plus élevée (`+5`, pas `+15`). **Règle obligatoire :** additionner tous les bonus de CA custom (Nomi III, Matukai III, Esquive Ballistique, Armure Tactique) en **une seule variable `nTotalAC`** et appliquer **un seul `EffectACIncrease(nTotalAC, AC_DODGE_BONUS)`** (en retirant/remplaçant l'ancien effet si `nTotalAC` change).
+* **`baseitems.2da` pour armes 2M/Doubles tenues à 1M (Gamoréen II) :** il faut modifier **les 3 colonnes ensemble** : `equipableslots = 0x00030` + `weaponwield = 2` + **`weaponsize = 3`** (si `weaponsize` reste à `4`, l'emplacement main gauche reste grisé même avec `weaponwield = 2`).
+* **`baseitems.2da` colonne `reqfeat0` = OK :** bloque réellement l'équipement d'une arme tant que le personnage ne possède pas le don indiqué (permet de réserver les variantes `.uti` 1M à Gamoréen II).
+* **`itemcreate.2da` colonne `level` = OK :** masque et verrouille nativement les recettes à l'établi tant que le niveau du personnage est inférieur à `level`.
+* **`AurPostString` en jeu :** n'affiche rien si le mode debug n'est pas activé dans `swkotor2.ini` ; privilégier un VFX ou un effet visible sur la fiche de perso pour les tests rapides.
+* **Compatibilité TSLRCM :** `Override/` contient déjà des fichiers `feat.2da` et `itemcreate.2da` modifiés (TSLRCM). Tout générateur doit partir de ces fichiers (ou de leur backup propre) plutôt que d'écraser avec du vanilla pur.
 
