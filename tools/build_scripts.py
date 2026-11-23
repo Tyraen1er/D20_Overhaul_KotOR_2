@@ -135,6 +135,46 @@ void Ov_RemoveOldPassives(object oTarget)
     }}
 }}
 
+void Ov_EnforceArmorUpgradeRules(object oTarget, int nTier)
+{{
+    if (nTier != 1 && nTier != 3) return;
+    object oArmor = GetItemInSlot(INVENTORY_SLOT_BODY, oTarget);
+    if (!GetIsObjectValid(oArmor)) return;
+    itemproperty ip = GetFirstItemProperty(oArmor);
+    int bStripped = FALSE;
+    while (GetIsItemPropertyValid(ip))
+    {{
+        int nType = GetItemPropertyType(ip);
+        int nSub = GetItemPropertySubType(ip);
+        // Armure Legere (nTier==1) : interdit les sous-couches de RD physique (Bludg=0, Pierc=1, Slash=2)
+        if (nTier == 1 && nType == ITEM_PROPERTY_DAMAGE_RESISTANCE && (nSub == 0 || nSub == 1 || nSub == 2))
+        {{
+            RemoveItemProperty(oArmor, ip);
+            bStripped = TRUE;
+        }}
+        // Armure Lourde (nTier==3) : interdit les upgrades DEX (sub=1) ou Discretion (sub=2)
+        else if (nTier == 3 && ((nType == ITEM_PROPERTY_ABILITY_BONUS && nSub == 1) || (nType == ITEM_PROPERTY_SKILL_BONUS && nSub == 2)))
+        {{
+            RemoveItemProperty(oArmor, ip);
+            bStripped = TRUE;
+        }}
+        ip = GetNextItemProperty(oArmor);
+    }}
+    if (bStripped)
+    {{
+        ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_DISPEL), oTarget);
+    }}
+}}
+
+void Ov_PollStealth()
+{{
+    object oPC = GetFirstPC();
+    if (GetIsObjectValid(oPC) && IsStealthed(oPC))
+    {{
+        SetLocalNumber(oPC, 25, 1);
+    }}
+}}
+
 void Ov_RefreshPassives(object oTarget)
 {{
     if (!GetIsObjectValid(oTarget) || GetIsDead(oTarget)) return;
@@ -147,6 +187,7 @@ void Ov_RefreshPassives(object oTarget)
     }}
 
     int nTier = Ov_GetArmorTier(oTarget);
+    Ov_EnforceArmorUpgradeRules(oTarget, nTier);
     int nTree = Ov_GetActiveCaracTree(oTarget);
 
     int nTotalAC = 0;
@@ -327,7 +368,7 @@ void Ov_SithDrainForceCheck()
 '''
     wrappers = {
         "k_hen_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    Ov_RefreshPassives(GetFirstPC());\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_HEARTBEAT);\n}\n',
-        "k_def_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\n' + drain_hook + '\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    if (IsStealthed(GetFirstPC())) SetLocalNumber(GetFirstPC(), 25, 1);\n    Ov_SithDrainForceCheck();\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_HEARTBEAT);\n}\n',
+        "k_def_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\n' + drain_hook + '\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    Ov_RefreshPassives(GetFirstPC());\n    Ov_PollStealth();\n    DelayCommand(1.0, Ov_PollStealth());\n    DelayCommand(2.0, Ov_PollStealth());\n    DelayCommand(3.0, Ov_PollStealth());\n    DelayCommand(4.0, Ov_PollStealth());\n    DelayCommand(5.0, Ov_PollStealth());\n    Ov_SithDrainForceCheck();\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_HEARTBEAT);\n}\n',
         "k_hen_damage01":  '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_OnDamageHook(OBJECT_SELF);\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_DAMAGE);\n}\n',
         "k_def_damage01":  '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_OnDamageHook(OBJECT_SELF);\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_DAMAGE);\n}\n',
         "k_hen_attacked01": '#include "k_inc_switch"\nvoid main() {\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_ATTACKED);\n}\n',
