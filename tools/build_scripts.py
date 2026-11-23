@@ -280,9 +280,27 @@ void Ov_OnDamageHook(object oVictim)
 
 
 def build_wrappers() -> None:
+    drain_hook = '''
+void Ov_SithDrainForceCheck()
+{
+    if (!GetIsInCombat(OBJECT_SELF) || GetIsPC(OBJECT_SELF)) return;
+    int nMaxFP = GetMaxForcePoints(OBJECT_SELF);
+    if (nMaxFP <= 0) return;
+    if (GetCurrentForcePoints(OBJECT_SELF) < ((nMaxFP * 30) / 100))
+    {
+        object oTarget = GetNearestCreature(CREATURE_TYPE_REPUTATION, REPUTATION_TYPE_ENEMY, OBJECT_SELF, 1, CREATURE_TYPE_PERCEPTION, PERCEPTION_SEEN);
+        if (GetIsObjectValid(oTarget))
+        {
+            if (GetHasSpell(FORCE_POWER_MASTER_DRAIN_FORCE)) ActionCastSpellAtObject(FORCE_POWER_MASTER_DRAIN_FORCE, oTarget);
+            else if (GetHasSpell(FORCE_POWER_IMPROVED_DRAIN_FORCE)) ActionCastSpellAtObject(FORCE_POWER_IMPROVED_DRAIN_FORCE, oTarget);
+            else if (GetHasSpell(FORCE_POWER_DRAIN_FORCE)) ActionCastSpellAtObject(FORCE_POWER_DRAIN_FORCE, oTarget);
+        }
+    }
+}
+'''
     wrappers = {
         "k_hen_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    Ov_RefreshPassives(GetFirstPC());\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_HEARTBEAT);\n}\n',
-        "k_def_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_HEARTBEAT);\n}\n',
+        "k_def_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\n' + drain_hook + '\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    Ov_SithDrainForceCheck();\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_HEARTBEAT);\n}\n',
         "k_hen_damage01":  '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_OnDamageHook(OBJECT_SELF);\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_DAMAGE);\n}\n',
         "k_def_damage01":  '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_OnDamageHook(OBJECT_SELF);\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_DAMAGE);\n}\n',
         "k_hen_attacked01": '#include "k_inc_switch"\nvoid main() {\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_ATTACKED);\n}\n',
