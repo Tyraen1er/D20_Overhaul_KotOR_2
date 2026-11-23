@@ -50,14 +50,17 @@ def compile_script(name: str, code: str) -> int:
     src_path.write_text(code, encoding="latin1")
     _prepare_stage()
     stage_src.write_text(code, encoding="latin1")
+    if out_path.exists():
+        out_path.unlink()
     res = subprocess.run(
         [str(STAGE_DIR / "nwnnsscomp.exe"), "-c", f"{name}.nss", "-o", str(out_path)],
         cwd=str(STAGE_DIR),
         capture_output=True,
         text=True,
     )
-    if res.returncode != 0 or not out_path.exists():
-        raise RuntimeError(f"nwnnsscomp failed on {name}.nss:\n{res.stdout}\n{res.stderr}")
+    out_txt = (res.stdout or "") + "\n" + (res.stderr or "")
+    if res.returncode != 0 or "Error:" in out_txt or "aborted" in out_txt.lower() or not out_path.exists():
+        raise RuntimeError(f"nwnnsscomp failed on {name}.nss:\n{out_txt}")
     size = out_path.stat().st_size
     print(f"[OK] {name}.ncs ({size} octets, compilé via nwnnsscomp.exe C++)")
     return size
@@ -135,37 +138,6 @@ void Ov_RemoveOldPassives(object oTarget)
     }}
 }}
 
-void Ov_EnforceArmorUpgradeRules(object oTarget, int nTier)
-{{
-    if (nTier != 1 && nTier != 3) return;
-    object oArmor = GetItemInSlot(INVENTORY_SLOT_BODY, oTarget);
-    if (!GetIsObjectValid(oArmor)) return;
-    itemproperty ip = GetFirstItemProperty(oArmor);
-    int bStripped = FALSE;
-    while (GetIsItemPropertyValid(ip))
-    {{
-        int nType = GetItemPropertyType(ip);
-        int nSub = GetItemPropertySubType(ip);
-        // Armure Legere (nTier==1) : interdit les sous-couches de RD physique (Bludg=0, Pierc=1, Slash=2)
-        if (nTier == 1 && nType == ITEM_PROPERTY_DAMAGE_RESISTANCE && (nSub == 0 || nSub == 1 || nSub == 2))
-        {{
-            RemoveItemProperty(oArmor, ip);
-            bStripped = TRUE;
-        }}
-        // Armure Lourde (nTier==3) : interdit les upgrades DEX (sub=1) ou Discretion (sub=2)
-        else if (nTier == 3 && ((nType == ITEM_PROPERTY_ABILITY_BONUS && nSub == 1) || (nType == ITEM_PROPERTY_SKILL_BONUS && nSub == 2)))
-        {{
-            RemoveItemProperty(oArmor, ip);
-            bStripped = TRUE;
-        }}
-        ip = GetNextItemProperty(oArmor);
-    }}
-    if (bStripped)
-    {{
-        ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_DISPEL), oTarget);
-    }}
-}}
-
 void Ov_PollStealth()
 {{
     object oPC = GetFirstPC();
@@ -187,7 +159,6 @@ void Ov_RefreshPassives(object oTarget)
     }}
 
     int nTier = Ov_GetArmorTier(oTarget);
-    Ov_EnforceArmorUpgradeRules(oTarget, nTier);
     int nTree = Ov_GetActiveCaracTree(oTarget);
 
     int nTotalAC = 0;
@@ -337,7 +308,7 @@ void Ov_OnDamageHook(object oVictim)
         int nDealt = GetTotalDamageDealt();
         if (nDealt > 0)
         {{
-            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_SPARKS), oVictim);
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_STUN), oVictim);
             ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDealt, DAMAGE_TYPE_UNIVERSAL), oVictim);
         }}
     }}
