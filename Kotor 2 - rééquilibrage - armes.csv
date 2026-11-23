@@ -24,6 +24,7 @@ Disruptor Pistol (Craftable),Unstoppable 1d10,23m,"18-20,x2",,Assassin,1M,"Chamb
 Melee Weapon,-,-,-,-,-,-,-,Poignée < Lame < Cellule,-
 Unarmed,Physical 1d6,,"19-20,x2",,Hors famille,1M,Aucune,"Calibrage : Physical 1d6 (progresse via Spé mains nues), 19-20 x2",Compte comme une arme 1M (bénéficie de la posture Duel de base : dégâts mêlée 150 % FOR)
 Stun batons,Bludgeoning 1d8,,"18-20,x2",,Armes d'impact,1M (balanced),Aucune,"améliorable : Poignée | Calibrage : Bludgeoning 1d8 (4.5), 18-20 x2, balanced",
+Plasma Torch (Torche à plasma),Bludgeoning 1d1,,"20-20,x2",Fire: +1d6,Armes d'impact,1M (balanced),Aucune,"Baseitem dédié Plasma_Torch (valeurs vanilla conservées : 1d1 + 1d6 Feu, 20-20 x2, non améliorable)",
 Short swords (craftable),Piercing 1d8,,"18-20,x2",,Traditionnelle,1M (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame | Calibrage : Piercing 1d8 (4.5), 18-20 x2, balanced",
 Vibroblades,Piercing 1d6,,"19-20,x2",,Arme à résonance,1M (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame, Cellule d'énergie | Calibrage : Piercing 1d6 (3.5), 19-20 x2, balanced",
 Long swords (craftable),Slashing 1d12,,"19-20,x2",,Traditionnelle,1M,"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame | Calibrage : Slashing 1d12 (6.5), 19-20 x2",
