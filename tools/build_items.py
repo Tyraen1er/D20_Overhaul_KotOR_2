@@ -182,7 +182,7 @@ def apply_mod_to_uti(uti, mod_txt: str) -> bool:
 
 def build_gear_utis(inst: Installation) -> tuple[int, int]:
     modified_items = 0
-    medium_armors = 0
+    tiered_armors = 0
     for fname in GEAR_CSVS:
         path = ROOT / fname
         with open(path, encoding="utf-8-sig", newline="") as fh:
@@ -195,13 +195,19 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
                 continue
             resref = r[h["ResRef"]].strip().lower()
             mod_txt = r[h["Changement (mod)"]].strip() if "Changement (mod)" in h and len(r) > h["Changement (mod)"] else ""
-            needs_med_upgrade = False
+            target_ulvl: int | None = None
             if is_armor_csv:
                 tcol = r[h["Type (2DA)"]].strip()
-                if tcol in ("Armor Class 6", "Armor Class 7"):
-                    needs_med_upgrade = True
+                if tcol in ("Armor Class 4", "Armor Class 5", "Armor_Armd_Flight_Suit", "Armor_Zeison_Sha"):
+                    target_ulvl = 1  # Légère : 1 slot (sous-couches Légère level=1 uniquement)
+                elif tcol in ("Armor Class 8", "Armor Class 9"):
+                    target_ulvl = 2  # Lourde : 1 slot (sous-couches Lourde level=2 + Légère level=1)
+                elif tcol in ("Armor Class 6", "Armor Class 7"):
+                    target_ulvl = 6  # Intermédiaire : 2 slots + 24 combinées (level=6)
+                elif any(k in tcol for k in ("Robe", "Clothing", "Revan")):
+                    target_ulvl = 0  # Robes : 0 slot
 
-            if not mod_txt and not needs_med_upgrade:
+            if not mod_txt and target_ulvl is None:
                 continue
 
             res = inst.resource(resref, ResourceType.UTI)
@@ -209,14 +215,43 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
                 continue
             uti = read_uti(res.data)
             dirty = apply_mod_to_uti(uti, mod_txt)
-            if needs_med_upgrade and uti.upgrade_level < 6:
-                uti.upgrade_level = 6
+            if target_ulvl is not None and uti.upgrade_level != target_ulvl:
+                uti.upgrade_level = target_ulvl
                 dirty = True
-                medium_armors += 1
+                tiered_armors += 1
             if dirty:
                 write_uti(uti, OVR_DIR / f"{resref}.uti")
                 modified_items += 1
-    return modified_items, medium_armors
+    return modified_items, tiered_armors
+
+
+# Sous-couches standard réservées aux Armures Lourdes (RD/blindage/CON -> level=2, bloquées sur Légère level=1)
+HEAVY_ONLY_UNDERLAYS = {4, 5, 10, 11, 16, 17}
+
+
+def build_standard_armor_upgrades_partition(inst: Installation) -> int:
+    """Cloisonne les 36 upgrades d'armure standard (u_a_over_01..18, u_a_unde_01..18) :
+      - u_a_over_01..18 -> upgrade_level = 6 (exclusif Intermédiaires : 0 sur-couche sur Légère/Lourde)
+      - u_a_unde_01..18 -> upgrade_level = 2 pour RD/blindage Lourde, 1 pour Légère."""
+    count = 0
+    for n in range(1, 19):
+        # Sur-couches -> réservées Intermédiaires (level = 6)
+        rr_o = f"u_a_over_{n:02d}"
+        res_o = inst.resource(rr_o, ResourceType.UTI)
+        if res_o:
+            u = read_uti(res_o.data)
+            u.upgrade_level = 6
+            write_uti(u, OVR_DIR / f"{rr_o}.uti")
+            count += 1
+        # Sous-couches -> 2 (Lourde) ou 1 (Légère)
+        rr_u = f"u_a_unde_{n:02d}"
+        res_u = inst.resource(rr_u, ResourceType.UTI)
+        if res_u:
+            u = read_uti(res_u.data)
+            u.upgrade_level = 2 if n in HEAVY_ONLY_UNDERLAYS else 1
+            write_uti(u, OVR_DIR / f"{rr_u}.uti")
+            count += 1
+    return count
 
 
 def build_combined_armor_upgrades(inst: Installation) -> int:
@@ -270,13 +305,15 @@ def main() -> None:
     OVR_DIR.mkdir(parents=True, exist_ok=True)
     inst = Installation(GAME_PATH)
     print(f"=== Build Jalon 2 (items .uti) -> {OVR_DIR} ===")
-    n_gear, n_med = build_gear_utis(inst)
-    print(f"[OK] Équipement (6 CSV) : {n_gear} fichiers .uti générés (dont {n_med} armures intermédiaires upgrade_level=6)")
+    n_gear, n_arm = build_gear_utis(inst)
+    print(f"[OK] Équipement (6 CSV) : {n_gear} fichiers .uti générés (dont {n_arm} armures cloisonnées level 0/1/2/6)")
+    n_std = build_standard_armor_upgrades_partition(inst)
+    print(f"[OK] Upgrades d'armures standard cloisonnées : {n_std} fichiers .uti (over=6, unde Lourde=2, unde Légère=1)")
     n_comb = build_combined_armor_upgrades(inst)
     print(f"[OK] Upgrades combinées intermédiaires : {n_comb} fichiers .uti (u_a_over_19..30, u_a_unde_19..30)")
     n_gam = build_gamorrean_1m_utis(inst)
     print(f"[OK] Variantes 1M Gamoréen II : {n_gam} fichiers .uti (m_w_*_1m.uti)")
-    print(f"=== Jalon 2 BUILD OK ({n_gear + n_comb + n_gam} .uti générés) ===")
+    print(f"=== Jalon 2 BUILD OK ({n_gear + n_std + n_comb + n_gam} .uti générés) ===")
 
 
 if __name__ == "__main__":
