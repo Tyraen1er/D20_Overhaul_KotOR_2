@@ -190,6 +190,10 @@ def _allowed_classes_for_new_feat(label: str, cat: str, prereq_txt: str) -> tupl
     p_n = norm(prereq_txt)
     rank = 3 if lbl.endswith("_3") else (2 if lbl.endswith("_2") else 1)
 
+    # Affranchi de la Force (pouvoir passif exclusif Jedi protecteur)
+    if "UNBOUND_FORCE" in lbl:
+        return ["jwa_list"], 0
+
     # Spécialisations de caractéristique : ouvertes à toutes les classes (paliers Niv. 1 / 8 / 15)
     if "caracteristique" in c_n:
         return ALL_LIST_COLS, 0
@@ -241,25 +245,67 @@ def _allowed_classes_for_new_feat(label: str, cat: str, prereq_txt: str) -> tupl
     return ALL_LIST_COLS, 0
 
 
+def _pick_real_icon(label: str, cat: str) -> str:
+    """Choisit une vraie icône vanilla existante (évite carré gris en jeu et crash KSE TPC.pm)."""
+    lbl = label.upper()
+    rank = "03" if lbl.endswith("_3") else ("02" if lbl.endswith("_2") else "01")
+    if "AMBIDEXTRY" in lbl or "DOUBLE_WEAPON" in lbl:
+        return f"if_2weap{rank}"
+    if "DUEL" in lbl:
+        return f"if_duel{rank}"
+    if "HEAVY_WEAPON" in lbl:
+        return f"if_pattack{rank}"
+    if "SPEC_LASER" in lbl:
+        return f"if_jedidef{rank}"
+    if any(k in lbl for k in ("SPEC_ASSAULT", "SPEC_HEAVY", "SPEC_TAC", "SPEC_ASSASSIN")):
+        return f"if_preshot{rank}"
+    if "SPEC_" in lbl:
+        return f"if_pattack{rank}"
+    if "ARMOR_" in lbl:
+        return f"if_armprof{rank}"
+    if "META_EMPOWER" in lbl:
+        return "if_focalter"
+    if "META_PENETRATE" in lbl:
+        return "if_focmaster"
+    if "META_EXTEND" in lbl:
+        return "if_foccontr"
+    if "ECHANI" in lbl:
+        return "if_finesse02" if rank != "01" else "if_finesse01"
+    if "GAMORREAN" in lbl:
+        return f"if_pattack{rank}"
+    if "KRAITH" in lbl:
+        return "if_focboost"
+    if "GAND" in lbl:
+        return "if_focdemo"
+    if "MATUKAI" in lbl:
+        return "if_focsense"
+    if "NOMI" in lbl:
+        return "if_battlemed"
+    if "UNBOUND_FORCE" in lbl:
+        return "if_focaware"
+    return f"if_duel{rank}"
+
+
 def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
     feat = read_2da(REF_2DA / "feat_tslrcm.2da")
     tlk = read_tlk(BASE_TLK)
     rows = read_csv_rows(CSV_FEATS)
 
-    # Template de ligne propre (copié sur FINESSE_MELEE_WEAPONS #194 ou POWER_ATTACK, cellules vides = "")
+    # Template de ligne propre (cellules vides = "", *_list = "4" = NON DISPONIBLE par défaut, allclassescanuse = "0")
     tmpl = {h: "" for h in feat.get_headers()}
-    tmpl["icon"] = "ifeat_dueling"
+    tmpl["icon"] = "if_duel01"
     tmpl["gainmultiple"] = "0"
     tmpl["effectsstack"] = "0"
-    tmpl["allclassescanuse"] = "1"
+    tmpl["allclassescanuse"] = "0"
     tmpl["toolscategories"] = "6"
     tmpl["hostilefeat"] = "0"
     tmpl["exclusion"] = "0x00"
     tmpl["pips"] = "1"
     for c in ALL_LIST_COLS:
-        tmpl[c] = ""
+        tmpl[c] = "4"
 
-    # 1. Masquer les 29 dons supprimés SANS supprimer leurs lignes (compatibilité sauvegardes !)
+    # 1. Masquer les 28 dons supprimés SANS supprimer leurs lignes (compatibilité sauvegardes !)
+    # En KotOR 2 feat.2da : *_list = "4" + allclassescanuse = "0" masque complètement le don.
     hidden_count = 0
     for r in rows[1:]:
         if len(r) < 7 or not r[0].strip().isdigit():
@@ -268,7 +314,10 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         mod_txt = r[6].strip().lower()
         if "supprim" in mod_txt and fid < len(feat):
             frow = feat.get_row(fid)
-            for c in ALL_LIST_COLS + ALL_GRANT_COLS:
+            for c in ALL_LIST_COLS:
+                if c in feat.get_headers():
+                    frow.set_string(c, "4")
+            for c in ALL_GRANT_COLS:
                 if c in feat.get_headers():
                     frow.set_string(c, "")
             frow.set_string("allclassescanuse", "0")
@@ -302,6 +351,7 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         entry["label"] = label
         entry["name"] = str(name_ref)
         entry["description"] = str(desc_ref)
+        entry["icon"] = _pick_real_icon(label, cat)
 
         min_lvl = _parse_min_level(prereq)
         if min_lvl > 1:

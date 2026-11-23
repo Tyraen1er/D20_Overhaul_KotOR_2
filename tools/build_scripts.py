@@ -14,27 +14,53 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
+import subprocess
 from pathlib import Path
-
-from pykotor.common.misc import Game
-from pykotor.resource.formats.ncs import compile_nss, write_ncs
 
 ROOT = Path(__file__).resolve().parent.parent
 REF_SCRIPTS = ROOT / "_reference" / "scripts"
+NWNNSSCOMP = ROOT / "_reference" / "autres_mods" / "Content Pack-57-1-67-1616632489" / "tslpatchdata" / "nwnnsscomp.exe"
 OUT_DIR = ROOT / "mods" / "overhaul"
 SRC_DIR = OUT_DIR / "src"
+STAGE_DIR = OUT_DIR / "_compile_stage"
 OVR_DIR = OUT_DIR / "Override"
 FEAT_IDS_FILE = OUT_DIR / "feat_ids.json"
 
 
+def _prepare_stage() -> None:
+    """Prépare un répertoire de compilation contenant nwnnsscomp.exe, nwscript.nss et tous les includes."""
+    STAGE_DIR.mkdir(parents=True, exist_ok=True)
+    if not (STAGE_DIR / "nwnnsscomp.exe").exists():
+        shutil.copy2(NWNNSSCOMP, STAGE_DIR / "nwnnsscomp.exe")
+    # Copier tous les includes de _reference/scripts/ une seule fois
+    for inc in REF_SCRIPTS.glob("*.nss"):
+        dst = STAGE_DIR / inc.name
+        if not dst.exists():
+            shutil.copy2(inc, dst)
+    # Écraser avec nos propres sources modifiées (ov_inc_core.nss, k_inc_force.nss, etc.)
+    for src in SRC_DIR.glob("*.nss"):
+        shutil.copy2(src, STAGE_DIR / src.name)
+
+
 def compile_script(name: str, code: str) -> int:
     src_path = SRC_DIR / f"{name}.nss"
+    stage_src = STAGE_DIR / f"{name}.nss"
     out_path = OVR_DIR / f"{name}.ncs"
     src_path.write_text(code, encoding="latin1")
-    ncs = compile_nss(code, Game.K2, library_lookup=[SRC_DIR, REF_SCRIPTS])
-    write_ncs(ncs, out_path)
-    print(f"[OK] {name}.ncs ({len(ncs.instructions)} instructions)")
-    return len(ncs.instructions)
+    _prepare_stage()
+    stage_src.write_text(code, encoding="latin1")
+    res = subprocess.run(
+        [str(STAGE_DIR / "nwnnsscomp.exe"), "-c", f"{name}.nss", "-o", str(out_path)],
+        cwd=str(STAGE_DIR),
+        capture_output=True,
+        text=True,
+    )
+    if res.returncode != 0 or not out_path.exists():
+        raise RuntimeError(f"nwnnsscomp failed on {name}.nss:\n{res.stdout}\n{res.stderr}")
+    size = out_path.stat().st_size
+    print(f"[OK] {name}.ncs ({size} octets, compilé via nwnnsscomp.exe C++)")
+    return size
 
 
 def build_ov_inc_core(fids: dict[str, int]) -> str:

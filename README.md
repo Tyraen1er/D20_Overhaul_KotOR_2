@@ -104,10 +104,13 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
 * **Cause :** Dans `pykotor`, une cellule vide d'un `.2da` doit être la chaîne vide **`""`** (que `write_2da` sérialise correctement en `****` au format binaire). Écrire la chaîne littérale **`"****"`** stocke les 4 caractères `"****"`, que le moteur lit comme un entier/prérequis invalide et masque la ligne.
 * **Règle stricte :** Toujours initialiser les cellules vides avec **`""`** (ou cloner une ligne fonctionnelle existante) — jamais `"****"`.
 
-### Bug #7 : Corruption des gros scripts vanilla par le compilateur NCS de `pykotor` (`k_ai_master.ncs`)
-* **Symptôme en jeu :** Recompiler `k_ai_master.nss` (`~24 471` instructions) avec `pykotor` gèle complètement l'IA du jeu (ennemis figés, impossible de cliquer pour attaquer, coups qui ne touchent plus).
-* **Cause :** Le compilateur Python intégré de `pykotor` génère un bytecode défectueux sur les très gros scripts à `switch` imbriqués comme `k_ai_master.nss`.
-* **Solution propre validée en jeu (23/11/2026) :** **Ne JAMAIS recompiler `k_ai_master.ncs`** (laisser le `k_ai_master.ncs` vanilla 100 % intact). Placer tous les hooks custom dans les **petits scripts wrappers** (`k_def_heartbt01`, `k_hen_heartbt01`, `k_hen_attacked01`, `k_hen_damage01`, `k_def_attacked01`, `k_def_damage01` — `~140–214` instructions chacun) qui exécutent notre logique puis appellent `ExecuteScript("k_ai_master", OBJECT_SELF, ...);`.
+### Bug #7 : Corruption des gros scripts vanilla par le compilateur NCS de `pykotor` (`k_ai_master.ncs`, `k_sp1_generic.ncs`, `k_sup_grenade.ncs`)
+* **Symptôme en jeu :** Recompiler un gros script (> 15k instructions) avec le compilateur Python de `pykotor` corrompt le bytecode (`k_ai_master.ncs` gèle toute l'IA ; `k_sp1_generic.ncs` fait que les pouvoirs ne lancent plus que l'animation ; `k_sup_grenade.ncs` empêche les grenades d'exploser).
+* **Solution définitive validée (23/11/2026) :** Utiliser le **vrai compilateur C++ `nwnnsscomp.exe`** présent dans `_reference/autres_mods/Content Pack-57-1-67-1616632489/tslpatchdata/nwnnsscomp.exe` (déjà intégré automatiquement dans [`tools/build_scripts.py`](tools/build_scripts.py) via dossier staging). Continuer par ailleurs à ne jamais recompiler `k_ai_master.ncs` et à passer par les petits wrappers `k_def_*` / `k_hen_*`.
+
+### Bug #8 : `feat.2da` — Masquage (`*_list = "4"`) et Icônes réelles (crash KSE `Bioware/TPC.pm`)
+* **Masquer un don (supprimé ou interdit à une classe) :** mettre **`allclassescanuse = "0"`** ET **`*_list = "4"`** (et **NON** `""`, qui laisse le don visible au level-up !). Seules les classes autorisées reçoivent `"1"`.
+* **Icônes obligatoires :** toute icône inexistante (ex. `"ifeat_dueling"`) affiche un **carré gris** en jeu ET fait **crasher KSE** (`Can't use an undefined value as an ARRAY reference at Bioware/TPC.pm line 190`). Toujours utiliser un vrai nom d'icône vanilla de `feat.2da` (`if_duel01..03`, `if_2weap01..03`, `if_armprof01..03`, `if_pattack01..03`, `if_preshot01..03`, `if_jedidef01..03`, `if_finesse01/02`, `if_focalter`, `if_focmaster`, `if_foccontr`, `if_focboost`, `if_focdemo`, `if_focsense`, `if_battlemed`, `if_focaware`).
 
 ---
 
