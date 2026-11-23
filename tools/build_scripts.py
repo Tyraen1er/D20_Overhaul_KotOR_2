@@ -140,10 +140,10 @@ void Ov_RefreshPassives(object oTarget)
     if (!GetIsObjectValid(oTarget) || GetIsDead(oTarget)) return;
     if (oTarget == GetFirstPC() && !GetIsPlayerMadeCharacter(oTarget)) return;
 
-    // Embuscade furtive (drapeau LocalBoolean 24)
+    // Embuscade furtive (drapeau LocalNumber 25 - jamais touche par vanilla)
     if (IsStealthed(oTarget))
     {{
-        SetLocalBoolean(oTarget, 24, TRUE);
+        SetLocalNumber(oTarget, 25, 1);
     }}
 
     int nTier = Ov_GetArmorTier(oTarget);
@@ -290,12 +290,13 @@ void Ov_OnDamageHook(object oVictim)
     object oAtk = GetLastDamager();
     if (!GetIsObjectValid(oAtk)) return;
     // Embuscade furtive : premiere attaque depuis la furtivite = critique confirme (x2)
-    if (GetLocalBoolean(oAtk, 24))
+    if (GetLocalNumber(oAtk, 25) == 1 || IsStealthed(oAtk))
     {{
-        SetLocalBoolean(oAtk, 24, FALSE);
+        SetLocalNumber(oAtk, 25, 0);
         int nDealt = GetTotalDamageDealt();
         if (nDealt > 0)
         {{
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_SPARKS), oVictim);
             ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDealt, DAMAGE_TYPE_UNIVERSAL), oVictim);
         }}
     }}
@@ -326,11 +327,11 @@ void Ov_SithDrainForceCheck()
 '''
     wrappers = {
         "k_hen_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    Ov_RefreshPassives(GetFirstPC());\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_HEARTBEAT);\n}\n',
-        "k_def_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\n' + drain_hook + '\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    Ov_SithDrainForceCheck();\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_HEARTBEAT);\n}\n',
+        "k_def_heartbt01": '#include "k_inc_switch"\n#include "ov_inc_core"\n' + drain_hook + '\nvoid main() {\n    Ov_RefreshPassives(OBJECT_SELF);\n    if (IsStealthed(GetFirstPC())) SetLocalNumber(GetFirstPC(), 25, 1);\n    Ov_SithDrainForceCheck();\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_HEARTBEAT);\n}\n',
         "k_hen_damage01":  '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_OnDamageHook(OBJECT_SELF);\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_DAMAGE);\n}\n',
         "k_def_damage01":  '#include "k_inc_switch"\n#include "ov_inc_core"\nvoid main() {\n    Ov_OnDamageHook(OBJECT_SELF);\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_DAMAGE);\n}\n',
         "k_hen_attacked01": '#include "k_inc_switch"\nvoid main() {\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_HENCH_EVENT_ON_ATTACKED);\n}\n',
-        "k_def_attacked01": '#include "k_inc_switch"\nvoid main() {\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_ATTACKED);\n}\n',
+        "k_def_attacked01": '#include "k_inc_switch"\nvoid main() {\n    if (IsStealthed(GetFirstPC())) SetLocalNumber(GetFirstPC(), 25, 1);\n    ExecuteScript("k_ai_master", OBJECT_SELF, KOTOR_DEFAULT_EVENT_ON_ATTACKED);\n}\n',
     }
     for name, code in wrappers.items():
         compile_script(name, code)
