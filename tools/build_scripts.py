@@ -252,6 +252,12 @@ void Ov_RefreshPassives(object oTarget)
     int nForceRes = 0;
     int bMindImm = FALSE;
 
+    // Bonus Embuscade furtive : +50 Atq garanti tant que furtif / en sortie de furtivite (consomme au 1er coup)
+    if (IsStealthed(oTarget) || GetLocalNumber(oTarget, 25) == 1)
+    {{
+        nTotalAtk += 50;
+    }}
+
     // 1. RD native d'armure (Moyenne = 2/-, Lourde = 4/-)
     if (nTier == 2) nTotalRD += 2;
     else if (nTier == 3) nTotalRD += 4;
@@ -585,6 +591,7 @@ void Ov_OnDamageHook(object oVictim)
     {{
         SetLocalNumber(oAtk, 25, 0);
         if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 0);
+        Ov_RefreshPassives(oAtk);
         int nDealt = GetTotalDamageDealt();
         if (nDealt > 0)
         {{
