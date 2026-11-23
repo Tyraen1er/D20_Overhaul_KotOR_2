@@ -180,7 +180,7 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 
 **RD cumulée max** (Juggernaut III + native lourde 4 + Robustesse II 2) : **RD 11 + 30 % d'immunité** (≈ −53 % sur un coup de 23, ≈ −40 % sur un coup de 68). **Pas de cap global d'immunité** (acté le 19/11 ; révisable ultérieurement selon les retours joueurs).
 
-**C. Dégradé des pouvoirs sous armure** (`forbiditemmask`) : robe = tous ; légère = vanilla + Vaillance I + Résistance ; interm. = vanilla + Résistance ; lourde = vanilla strict.
+**C. Dégradé des pouvoirs sous armure** (`forbiditemmask`) : robe = tous ; légère = vanilla + Vaillance I + Résistance *(aucune exception Force-friendly sur Ubese / Zeison Sha, décision 23/11)* ; interm. = vanilla + Résistance ; lourde = vanilla strict.
 
 **D. *Condition physique I–III* (`CONDITIONING` / `IMPROVED` / `MASTER`)** : **conservé en vanilla** (décision révisée le 23/11 : les 3 rangs `+1/+2/+3` aux sauvegardes restent intacts).
 

@@ -351,6 +351,36 @@ def build_force_powers(fids: dict[str, int]) -> None:
 
     (SRC_DIR / "k_inc_force.nss").write_text(inc, encoding="latin1")
     sp1 = (REF_SCRIPTS / "k_sp1_generic.nss").read_text(encoding="latin1")
+    # Garde-fou armures legeres speciales (baseitem 98 Ubese / 102 Zeison Sha, Jal Shey, Malak) :
+    # aucune exception aux restrictions de pouvoirs (bloque tous les pouvoirs 0x003f Robe uniquement).
+    zs_guard = '''
+int Ov_IsRobeOnlyPower(int nSp)
+{
+    if (nSp == 8 || nSp == 28 || nSp == 46) return TRUE; // Vitesse (Burst/Knight/Master)
+    if (nSp == 17 || nSp == 18 || nSp == 24) return TRUE; // Aura/Bouclier/Armure de Force
+    if (nSp == 36 || nSp == 22 || nSp == 48) return TRUE; // Choc/Foudre/Tempete
+    if (nSp == 15 || nSp == 11) return TRUE; // Drain de vie / Champ de mort
+    if (nSp == 42 || nSp == 9 || nSp == 27) return TRUE; // Blessure/Etouffement/Mise a mort
+    if (nSp == 38 || nSp == 37 || nSp == 47) return TRUE; // Etourdissement/Stase/Champ de stase
+    return FALSE;
+}
+'''
+    m_main = re.search(r"void\s+main\s*\(\s*\)\s*\{", sp1)
+    assert m_main, "main() not found in k_sp1_generic.nss"
+    guard_call = '''
+    {
+        object oArm = GetItemInSlot(INVENTORY_SLOT_BODY, OBJECT_SELF);
+        if (GetIsObjectValid(oArm))
+        {
+            int nBI = GetBaseItemType(oArm);
+            if ((nBI == 98 || nBI == 102) && Ov_IsRobeOnlyPower(GetSpellId()))
+            {
+                return;
+            }
+        }
+    }
+'''
+    sp1 = sp1[:m_main.start()] + zs_guard + "\n" + sp1[m_main.start():m_main.end()] + guard_call + sp1[m_main.end():]
     compile_script("k_sp1_generic", sp1)
 
 
