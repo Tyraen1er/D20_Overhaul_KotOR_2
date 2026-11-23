@@ -403,7 +403,7 @@ void Ov_RefreshPassives(object oTarget)
                 int nFpGain = nMaxFP / 20;
                 if (nHpCost < 1) nHpCost = 1;
                 if (nFpGain < 1) nFpGain = 1;
-                ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nHpCost, DAMAGE_TYPE_UNIVERSAL), oTarget);
+                ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nHpCost, DAMAGE_TYPE_DARK_SIDE), oTarget);
                 ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHealForcePoints(nFpGain), oTarget);
             }}
         }}
@@ -616,8 +616,8 @@ void Ov_OnDamageHook(object oVictim)
         int nDealt = GetTotalDamageDealt();
         if (nDealt > 0 && !GetIsDead(oVictim))
         {{
-            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_STUN), oVictim);
-            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDealt, DAMAGE_TYPE_UNIVERSAL), oVictim);
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_FORCE_PUSH), oVictim);
+            AssignCommand(oAtk, ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDealt, DAMAGE_TYPE_PIERCING), oVictim));
         }}
     }}
 
@@ -708,7 +708,7 @@ void Ov_OnDamageHook(object oVictim)
     {{
         if (bAmbush || Ov_IsIncapacitated(oVictim))
         {{
-            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(d6(2), DAMAGE_TYPE_UNIVERSAL), oVictim);
+            AssignCommand(oAtk, ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(d6(2), DAMAGE_TYPE_PIERCING), oVictim));
         }}
     }}
 
@@ -731,7 +731,7 @@ void Ov_OnDamageHook(object oVictim)
         }}
         if (GetLevelByClass(CLASS_TYPE_SITHASSASSIN, oAtk) > 0 && (bAmbush || Ov_IsIncapacitated(oVictim)))
         {{
-            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(d6(2), DAMAGE_TYPE_UNIVERSAL), oVictim);
+            AssignCommand(oAtk, ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(d6(2), DAMAGE_TYPE_PIERCING), oVictim));
         }}
     }}
 }}
@@ -748,7 +748,7 @@ void Ov_OnAttackedHook(object oDefender)
             int nWis = GetAbilityModifier(ABILITY_WISDOM, oDefender);
             if (nWis > 0)
             {{
-                ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nWis, DAMAGE_TYPE_UNIVERSAL), oAttacker);
+                AssignCommand(oDefender, ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nWis, DAMAGE_TYPE_BLUDGEONING), oAttacker));
             }}
         }}
     }}
@@ -891,7 +891,7 @@ void Ov_StigmateTick(object oCaster, int nTicksLeft)
     if (nCurHP <= (nMaxHP / 4)) return; // Arret auto <= 25% PV max
     int nDrain = nMaxHP / 20;
     if (nDrain < 1) nDrain = 1;
-    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDrain, DAMAGE_TYPE_UNIVERSAL), oCaster);
+    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDrain, DAMAGE_TYPE_DARK_SIDE), oCaster);
     if (nTicksLeft > 1)
     {{
         DelayCommand(6.0, Ov_StigmateTick(oCaster, nTicksLeft - 1));
@@ -1119,7 +1119,7 @@ int Ov_HandleCustomPower(int nSpell)
             int nDmg = Sp_CalcDamage(oTarget, nLevel, 8);
             int bSaved = FortitudeSave(oTarget, nDC, SAVING_THROW_TYPE_NONE, oCaster);
             if (bSaved) nDmg = nDmg / 2;
-            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg, DAMAGE_TYPE_UNIVERSAL), oTarget);
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg, DAMAGE_TYPE_BLUDGEONING), oTarget);
             if (!bSaved) ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectParalyze(), oTarget, 6.0);
         }}
         return TRUE;
