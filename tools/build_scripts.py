@@ -365,6 +365,347 @@ def build_grenades(fids: dict[str, int]) -> None:
     compile_script("k_sup_grenade", src_patched)
 
 
+def build_ov_inc_powers(fids: dict[str, int]) -> str:
+    """Genere ov_inc_powers.nss : refontes mecaniques des pouvoirs actees dans Spe Pouvoirs.csv.
+    Appele au debut de k_sp1_generic.nss ; herite automatiquement de Sp_CalcDamage/Sp_CalcDuration/Ov_GetSpellDC (Metamagie)."""
+    pen1, pen2, pen3 = fids["MOD_META_PENETRATE_1"], fids["MOD_META_PENETRATE_2"], fids["MOD_META_PENETRATE_3"]
+    code = f'''//:: ov_inc_powers - Refontes des pouvoirs de la Force (KotOR 2 Overhaul)
+
+int Ov_GetSpellDC(object oCaster)
+{{
+    int nDC = Sp_GetJediDCSave();
+    if (GetHasFeat({pen3}, oCaster)) nDC += 6;
+    else if (GetHasFeat({pen2}, oCaster)) nDC += 4;
+    else if (GetHasFeat({pen1}, oCaster)) nDC += 2;
+    return nDC;
+}}
+
+void Ov_MentalDotTick(object oTarget, int nDmg, int nTicksLeft)
+{{
+    if (!GetIsObjectValid(oTarget) || GetIsDead(oTarget) || nTicksLeft <= 0) return;
+    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg, DAMAGE_TYPE_DARK_SIDE), oTarget);
+    if (nTicksLeft > 1)
+    {{
+        DelayCommand(6.0, Ov_MentalDotTick(oTarget, nDmg, nTicksLeft - 1));
+    }}
+}}
+
+void Ov_PlagueTick(object oCaster, object oTarget, int nTier, int nTicksLeft)
+{{
+    if (!GetIsObjectValid(oTarget) || nTicksLeft <= 0) return;
+    if (GetIsDead(oTarget))
+    {{
+        // Propagation 5m a la mort de la cible
+        object oNear = GetFirstObjectInShape(SHAPE_SPHERE, 5.0, GetLocation(oTarget), FALSE, OBJECT_TYPE_CREATURE);
+        while (GetIsObjectValid(oNear))
+        {{
+            if (GetIsEnemy(oNear, oCaster) && !GetIsDead(oNear) && GetLocalNumber(oNear, 26) == 0)
+            {{
+                SetLocalNumber(oNear, 26, 1);
+                DelayCommand(0.5, Ov_PlagueTick(oCaster, oNear, nTier, nTicksLeft));
+            }}
+            oNear = GetNextObjectInShape(SHAPE_SPHERE, 5.0, GetLocation(oTarget), FALSE, OBJECT_TYPE_CREATURE);
+        }}
+        return;
+    }}
+    int nLevel = GetHitDice(oCaster);
+    int nDC = Ov_GetSpellDC(oCaster) + ((nTier - 1) * 4);
+    if (FortitudeSave(oTarget, nDC, SAVING_THROW_TYPE_POISON, oCaster))
+    {{
+        SetLocalNumber(oTarget, 26, 0);
+        return;
+    }}
+    int nTickDmg = nLevel / 2;
+    if (nTickDmg < 1) nTickDmg = 1;
+    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nTickDmg, DAMAGE_TYPE_DARK_SIDE), oTarget);
+    int nPen = nTier * 3;
+    effect eDeb = EffectLinkEffects(EffectAbilityDecrease(ABILITY_STRENGTH, nPen), EffectAbilityDecrease(ABILITY_DEXTERITY, nPen));
+    eDeb = EffectLinkEffects(eDeb, EffectAbilityDecrease(ABILITY_CONSTITUTION, nPen));
+    eDeb = EffectLinkEffects(eDeb, EffectAbilityDecrease(ABILITY_INTELLIGENCE, nPen));
+    eDeb = EffectLinkEffects(eDeb, EffectAbilityDecrease(ABILITY_WISDOM, nPen));
+    eDeb = EffectLinkEffects(eDeb, EffectAbilityDecrease(ABILITY_CHARISMA, nPen));
+    eDeb = EffectLinkEffects(eDeb, EffectMovementSpeedDecrease(50));
+    ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eDeb, oTarget, 6.0);
+    if (nTicksLeft > 1)
+    {{
+        DelayCommand(6.0, Ov_PlagueTick(oCaster, oTarget, nTier, nTicksLeft - 1));
+    }}
+    else
+    {{
+        SetLocalNumber(oTarget, 26, 0);
+    }}
+}}
+
+void Ov_StigmateTick(object oCaster, int nTicksLeft)
+{{
+    if (!GetIsObjectValid(oCaster) || GetIsDead(oCaster) || nTicksLeft <= 0) return;
+    int nMaxHP = GetMaxHitPoints(oCaster);
+    int nCurHP = GetCurrentHitPoints(oCaster);
+    if (nCurHP <= (nMaxHP / 4)) return; // Arret auto <= 25% PV max
+    int nDrain = nMaxHP / 20;
+    if (nDrain < 1) nDrain = 1;
+    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDrain, DAMAGE_TYPE_UNIVERSAL), oCaster);
+    if (nTicksLeft > 1)
+    {{
+        DelayCommand(6.0, Ov_StigmateTick(oCaster, nTicksLeft - 1));
+    }}
+}}
+
+int Ov_HandleCustomPower(int nSpell)
+{{
+    object oCaster = OBJECT_SELF;
+    object oTarget = GetSpellTargetObject();
+    int nLevel = GetHitDice(oCaster);
+    if (nLevel < 1) nLevel = 1;
+    int nDC = Ov_GetSpellDC(oCaster);
+
+    // 1. CHOC / FOUDRE / TEMPETE DE FORCE (1d6/Niv sans cap, Reflexes 1/2, sans drain PF, Esquive Totale)
+    if (nSpell == FORCE_POWER_SHOCK || nSpell == FORCE_POWER_LIGHTNING || nSpell == FORCE_POWER_FORCE_STORM)
+    {{
+        float fRadius = 0.0;
+        if (nSpell == FORCE_POWER_LIGHTNING) fRadius = 6.0;
+        else if (nSpell == FORCE_POWER_FORCE_STORM) fRadius = 10.0;
+
+        object oCur = (fRadius > 0.0)
+            ? GetFirstObjectInShape(SHAPE_SPHERE, fRadius, GetSpellTargetLocation(), FALSE, OBJECT_TYPE_CREATURE)
+            : oTarget;
+        while (GetIsObjectValid(oCur))
+        {{
+            if (GetIsEnemy(oCur, oCaster) && !GetIsDead(oCur))
+            {{
+                SignalEvent(oCur, EventSpellCastAt(oCaster, nSpell, TRUE));
+                int nDmg = Sp_CalcDamage(oCur, nLevel, 6);
+                int bSaved = ReflexSave(oCur, nDC, SAVING_THROW_TYPE_ELECTRICAL, oCaster);
+                if (bSaved)
+                {{
+                    if (GetHasFeat(FEAT_EVASION, oCur)) nDmg = 0;
+                    else nDmg = nDmg / 2;
+                }}
+                ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectBeam(VFX_BEAM_LIGHTNING_DARK_L, oCaster, BODY_NODE_HAND), oCur, 1.0);
+                ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_PRO_LIGHTNING_L), oCur);
+                if (nDmg > 0) ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg, DAMAGE_TYPE_ELECTRICAL), oCur);
+            }}
+            if (fRadius <= 0.0) break;
+            oCur = GetNextObjectInShape(SHAPE_SPHERE, fRadius, GetSpellTargetLocation(), FALSE, OBJECT_TYPE_CREATURE);
+        }}
+        return TRUE;
+    }}
+
+    // 2. TERREUR / HORREUR / INSANITE (DoT mental Niv/rd + -4/-6/-8 Atq, sans stun, 24s echec / 6s reussite Vol)
+    if (nSpell == FORCE_POWER_FEAR || nSpell == FORCE_POWER_HORROR || nSpell == FORCE_POWER_INSANITY)
+    {{
+        int nPen = 4;
+        float fRad = 0.0;
+        if (nSpell == FORCE_POWER_HORROR) {{ nPen = 6; fRad = 5.0; }}
+        else if (nSpell == FORCE_POWER_INSANITY) {{ nPen = 8; fRad = 10.0; }}
+
+        object oCur = (fRad > 0.0)
+            ? GetFirstObjectInShape(SHAPE_SPHERE, fRad, GetSpellTargetLocation(), FALSE, OBJECT_TYPE_CREATURE)
+            : oTarget;
+        while (GetIsObjectValid(oCur))
+        {{
+            if (GetIsEnemy(oCur, oCaster) && !GetIsDead(oCur))
+            {{
+                SignalEvent(oCur, EventSpellCastAt(oCaster, nSpell, TRUE));
+                int bSaved = WillSave(oCur, nDC, SAVING_THROW_TYPE_MIND_AFFECTING, oCaster);
+                int nTicks = bSaved ? 1 : 4;
+                float fDur = Sp_CalcDuration(IntToFloat(nTicks * 6));
+                ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectAttackDecrease(nPen), oCur, fDur);
+                Ov_MentalDotTick(oCur, Sp_CalcDamage(oCur, 0, 0, nLevel), nTicks);
+            }}
+            if (fRad <= 0.0) break;
+            oCur = GetNextObjectInShape(SHAPE_SPHERE, fRad, GetSpellTargetLocation(), FALSE, OBJECT_TYPE_CREATURE);
+        }}
+        return TRUE;
+    }}
+
+    // 3. BLESSURE / ETOUFFEMENT / MISE A MORT (1d4 / 1d6+stun / 1d8+stun sans 50% PV max, Vig 1/2 & annule stun)
+    if (nSpell == FORCE_POWER_WOUND || nSpell == FORCE_POWER_CHOKE || nSpell == FORCE_POWER_KILL)
+    {{
+        if (GetIsObjectValid(oTarget) && !GetIsDead(oTarget))
+        {{
+            SignalEvent(oTarget, EventSpellCastAt(oCaster, nSpell, TRUE));
+            int nDie = (nSpell == FORCE_POWER_WOUND) ? 4 : ((nSpell == FORCE_POWER_CHOKE) ? 6 : 8);
+            int nDmg = Sp_CalcDamage(oTarget, nLevel, nDie);
+            int bSaved = FortitudeSave(oTarget, nDC, SAVING_THROW_TYPE_NONE, oCaster);
+            if (bSaved) nDmg = nDmg / 2;
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_CHOKE), oTarget);
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg, DAMAGE_TYPE_DARK_SIDE), oTarget);
+            if (!bSaved && (nSpell == FORCE_POWER_CHOKE || nSpell == FORCE_POWER_KILL))
+            {{
+                ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectStunned(), oTarget, 6.0);
+            }}
+        }}
+        return TRUE;
+    }}
+
+    // 4. ABSORPTION DE VIE / CHAMP DE MORT / FESTIN DE MORT (1d3/Niv, 100% soin, L3 Niv>=18 PV temp 24s)
+    if (nSpell == FORCE_POWER_DRAIN_LIFE || nSpell == FORCE_POWER_DEATH_FIELD)
+    {{
+        float fRad = (nSpell == FORCE_POWER_DEATH_FIELD) ? 10.0 : 0.0;
+        int nTotalHeal = 0;
+        object oCur = (fRad > 0.0)
+            ? GetFirstObjectInShape(SHAPE_SPHERE, fRad, GetSpellTargetLocation(), FALSE, OBJECT_TYPE_CREATURE)
+            : oTarget;
+        while (GetIsObjectValid(oCur))
+        {{
+            if (GetIsEnemy(oCur, oCaster) && !GetIsDead(oCur) && GetRacialType(oCur) != RACIAL_TYPE_DROID)
+            {{
+                SignalEvent(oCur, EventSpellCastAt(oCaster, nSpell, TRUE));
+                int nDmg = Sp_CalcDamage(oCur, nLevel, 3);
+                if (FortitudeSave(oCur, nDC, SAVING_THROW_TYPE_NONE, oCaster)) nDmg = nDmg / 2;
+                ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg, DAMAGE_TYPE_DARK_SIDE), oCur);
+                nTotalHeal += nDmg;
+            }}
+            if (fRad <= 0.0) break;
+            oCur = GetNextObjectInShape(SHAPE_SPHERE, fRad, GetSpellTargetLocation(), FALSE, OBJECT_TYPE_CREATURE);
+        }}
+        if (nTotalHeal > 0)
+        {{
+            int nMissing = GetMaxHitPoints(oCaster) - GetCurrentHitPoints(oCaster);
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(nTotalHeal), oCaster);
+            if (nSpell == FORCE_POWER_DEATH_FIELD && nLevel >= 18 && nTotalHeal > nMissing)
+            {{
+                int nOver = nTotalHeal - nMissing;
+                ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectTemporaryHitpoints(nOver), oCaster, Sp_CalcDuration(24.0));
+            }}
+        }}
+        return TRUE;
+    }}
+
+    // 5. LENTEUR / AFFLICTION / PESTE (Maladie contagieuse 42s, tick 6s, -3/-6/-9 caracs, propagation 5m)
+    if (nSpell == FORCE_POWER_SLOW || nSpell == FORCE_POWER_AFFLICTION || nSpell == FORCE_POWER_PLAGUE)
+    {{
+        int nTier = (nSpell == FORCE_POWER_SLOW) ? 1 : ((nSpell == FORCE_POWER_AFFLICTION) ? 2 : 3);
+        if (GetIsObjectValid(oTarget) && !GetIsDead(oTarget))
+        {{
+            SignalEvent(oTarget, EventSpellCastAt(oCaster, nSpell, TRUE));
+            SetLocalNumber(oTarget, 26, 1);
+            Ov_PlagueTick(oCaster, oTarget, nTier, 7);
+        }}
+        return TRUE;
+    }}
+
+    // 6. VAGUE DE FORCE -> TOURBILLON AoE 6m / 12s
+    if (nSpell == FORCE_POWER_FORCE_WAVE)
+    {{
+        object oCur = GetFirstObjectInShape(SHAPE_SPHERE, 6.0, GetSpellTargetLocation(), FALSE, OBJECT_TYPE_CREATURE);
+        while (GetIsObjectValid(oCur))
+        {{
+            if (GetIsEnemy(oCur, oCaster) && !GetIsDead(oCur))
+            {{
+                SignalEvent(oCur, EventSpellCastAt(oCaster, nSpell, TRUE));
+                int nDmg = Sp_CalcDamage(oCur, 0, 0, nLevel);
+                if (ReflexSave(oCur, nDC, SAVING_THROW_TYPE_NONE, oCaster))
+                {{
+                    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg / 2, DAMAGE_TYPE_BLUDGEONING), oCur);
+                }}
+                else
+                {{
+                    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg, DAMAGE_TYPE_BLUDGEONING), oCur);
+                    effect eWhirl = EffectLinkEffects(EffectWhirlWind(), EffectVisualEffect(VFX_IMP_FORCE_WHIRLWIND));
+                    ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eWhirl, oCur, Sp_CalcDuration(12.0));
+                }}
+            }}
+            oCur = GetNextObjectInShape(SHAPE_SPHERE, 6.0, GetSpellTargetLocation(), FALSE, OBJECT_TYPE_CREATURE);
+        }}
+        return TRUE;
+    }}
+
+    // 7. BARRIERE DE FORCE & RESISTANCE A L'ENERGIE (RD 4/8/12, personnel, 60s)
+    if (nSpell == FORCE_POWER_FORCE_BARRIER || nSpell == FORCE_POWER_IMPROVED_FORCE_BARRIER || nSpell == FORCE_POWER_MASTER_FORCE_BARRIER)
+    {{
+        int nRD = (nSpell == FORCE_POWER_FORCE_BARRIER) ? 4 : ((nSpell == FORCE_POWER_IMPROVED_FORCE_BARRIER) ? 8 : 12);
+        effect eB = EffectLinkEffects(EffectDamageResistance(DAMAGE_TYPE_BLUDGEONING, nRD), EffectDamageResistance(DAMAGE_TYPE_PIERCING, nRD));
+        eB = EffectLinkEffects(eB, EffectDamageResistance(DAMAGE_TYPE_SLASHING, nRD));
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eB, oCaster, Sp_CalcDuration(60.0));
+        return TRUE;
+    }}
+    if (nSpell == FORCE_POWER_RESIST_COLD_HEAT_ENERGY || nSpell == FORCE_POWER_RESIST_POISON_DISEASE_SONIC || nSpell == FORCE_POWER_MASTER_ENERGY_RESISTANCE)
+    {{
+        int nRD = (nSpell == FORCE_POWER_RESIST_COLD_HEAT_ENERGY) ? 4 : ((nSpell == FORCE_POWER_RESIST_POISON_DISEASE_SONIC) ? 8 : 12);
+        effect eE = EffectLinkEffects(EffectDamageResistance(DAMAGE_TYPE_BLASTER, nRD), EffectDamageResistance(DAMAGE_TYPE_FIRE, nRD));
+        eE = EffectLinkEffects(eE, EffectDamageResistance(DAMAGE_TYPE_COLD, nRD));
+        eE = EffectLinkEffects(eE, EffectDamageResistance(DAMAGE_TYPE_ELECTRICAL, nRD));
+        eE = EffectLinkEffects(eE, EffectDamageResistance(DAMAGE_TYPE_SONIC, nRD));
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eE, oCaster, Sp_CalcDuration(60.0));
+        return TRUE;
+    }}
+
+    // 8. TALENT DE FORCE (+2/+3/+4 aux 6 caracs groupe + immunite Poison L2/L3)
+    if (nSpell == FORCE_POWER_FORCE_MIND || nSpell == FORCE_POWER_KNIGHT_MIND || nSpell == FORCE_POWER_MIND_MASTERY)
+    {{
+        int nBon = (nSpell == FORCE_POWER_FORCE_MIND) ? 2 : ((nSpell == FORCE_POWER_KNIGHT_MIND) ? 3 : 4);
+        effect eV = EffectLinkEffects(EffectAbilityIncrease(ABILITY_STRENGTH, nBon), EffectAbilityIncrease(ABILITY_DEXTERITY, nBon));
+        eV = EffectLinkEffects(eV, EffectAbilityIncrease(ABILITY_CONSTITUTION, nBon));
+        eV = EffectLinkEffects(eV, EffectAbilityIncrease(ABILITY_INTELLIGENCE, nBon));
+        eV = EffectLinkEffects(eV, EffectAbilityIncrease(ABILITY_WISDOM, nBon));
+        eV = EffectLinkEffects(eV, EffectAbilityIncrease(ABILITY_CHARISMA, nBon));
+        if (nBon >= 3) eV = EffectLinkEffects(eV, EffectImmunity(IMMUNITY_TYPE_POISON));
+        float fDur = Sp_CalcDuration(20.0);
+        int i = 0;
+        while (i < 3)
+        {{
+            object oPM = GetPartyMemberByIndex(i);
+            if (GetIsObjectValid(oPM) && !GetIsDead(oPM)) ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eV, oPM, fDur);
+            i += 1;
+        }}
+        return TRUE;
+    }}
+
+    // 9. ULTIMES : STIGMATE (FURY I-III), ECRASEMENT (FORCE_CRUSH), DECHIRURE (CRUSH_OPPOSITION I-III)
+    if (nSpell == FORCE_POWER_FURY || nSpell == FORCE_POWER_IMPROVED_FURY || nSpell == FORCE_POWER_MASTER_FURY)
+    {{
+        int nBon = (nSpell == FORCE_POWER_FURY) ? 2 : ((nSpell == FORCE_POWER_IMPROVED_FURY) ? 4 : 6);
+        effect eF = EffectLinkEffects(EffectAbilityIncrease(ABILITY_STRENGTH, nBon), EffectAbilityIncrease(ABILITY_DEXTERITY, nBon));
+        eF = EffectLinkEffects(eF, EffectModifyAttacks(1));
+        eF = EffectLinkEffects(eF, EffectImmunity(IMMUNITY_TYPE_PARALYSIS));
+        ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eF, oCaster, Sp_CalcDuration(30.0));
+        DelayCommand(6.0, Ov_StigmateTick(oCaster, 5));
+        return TRUE;
+    }}
+    if (nSpell == FORCE_POWER_FORCE_CRUSH)
+    {{
+        if (GetIsObjectValid(oTarget) && !GetIsDead(oTarget))
+        {{
+            SignalEvent(oTarget, EventSpellCastAt(oCaster, nSpell, TRUE));
+            int nDmg = Sp_CalcDamage(oTarget, nLevel, 8);
+            int bSaved = FortitudeSave(oTarget, nDC, SAVING_THROW_TYPE_NONE, oCaster);
+            if (bSaved) nDmg = nDmg / 2;
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDmg, DAMAGE_TYPE_UNIVERSAL), oTarget);
+            if (!bSaved) ApplyEffectToObject(DURATION_TYPE_TEMPORARY, EffectParalyze(), oTarget, 6.0);
+        }}
+        return TRUE;
+    }}
+    if (nSpell == FORCE_POWER_CRUSH_OPPOSITION_I || nSpell == FORCE_POWER_CRUSH_OPPOSITION_II || nSpell == FORCE_POWER_CRUSH_OPPOSITION_III)
+    {{
+        int nPen = (nSpell == FORCE_POWER_CRUSH_OPPOSITION_I) ? 2 : ((nSpell == FORCE_POWER_CRUSH_OPPOSITION_II) ? 4 : 6);
+        effect eD = EffectLinkEffects(EffectAttackDecrease(nPen), EffectACDecrease(nPen));
+        eD = EffectLinkEffects(eD, EffectSavingThrowDecrease(SAVING_THROW_ALL, nPen));
+        float fDur = Sp_CalcDuration(45.0);
+        object oCur = GetFirstObjectInShape(SHAPE_SPHERE, 15.0, GetLocation(oCaster), FALSE, OBJECT_TYPE_CREATURE);
+        while (GetIsObjectValid(oCur))
+        {{
+            if (GetIsEnemy(oCur, oCaster) && !GetIsDead(oCur))
+            {{
+                SignalEvent(oCur, EventSpellCastAt(oCaster, nSpell, TRUE));
+                if (!WillSave(oCur, nDC, SAVING_THROW_TYPE_MIND_AFFECTING, oCaster))
+                {{
+                    ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eD, oCur, fDur);
+                }}
+            }}
+            oCur = GetNextObjectInShape(SHAPE_SPHERE, 15.0, GetLocation(oCaster), FALSE, OBJECT_TYPE_CREATURE);
+        }}
+        return TRUE;
+    }}
+
+    return FALSE;
+}}
+'''
+    (SRC_DIR / "ov_inc_powers.nss").write_text(code, encoding="latin1")
+    return code
+
+
 def build_force_powers(fids: dict[str, int]) -> None:
     """Patch k_inc_force.nss (Metamagie: Amplifie +15/30/50%, Penetrant +2/4/6 DD, Prolonge x2)
     et compile k_sp1_generic.nss -> k_sp1_generic.ncs."""
@@ -405,18 +746,25 @@ def build_force_powers(fids: dict[str, int]) -> None:
     inc = inc.replace(dc_anchor, pen_code, 1)
 
     (SRC_DIR / "k_inc_force.nss").write_text(inc, encoding="latin1")
+    build_ov_inc_powers(fids)
     sp1 = (REF_SCRIPTS / "k_sp1_generic.nss").read_text(encoding="latin1")
+    # Inclure ov_inc_powers apres k_inc_force
+    sp1 = sp1.replace('#include "k_inc_force"', '#include "k_inc_force"\n#include "ov_inc_powers"', 1)
     # Garde-fou armures legeres speciales (baseitem 98 Ubese / 102 Zeison Sha, Jal Shey, Malak) :
     # aucune exception aux restrictions de pouvoirs (bloque tous les pouvoirs 0x003f Robe uniquement).
     zs_guard = '''
 int Ov_IsRobeOnlyPower(int nSp)
 {
-    if (nSp == 8 || nSp == 28 || nSp == 46) return TRUE; // Vitesse (Burst/Knight/Master)
-    if (nSp == 17 || nSp == 18 || nSp == 24) return TRUE; // Aura/Bouclier/Armure de Force
-    if (nSp == 36 || nSp == 22 || nSp == 48) return TRUE; // Choc/Foudre/Tempete
-    if (nSp == 15 || nSp == 11) return TRUE; // Drain de vie / Champ de mort
-    if (nSp == 42 || nSp == 9 || nSp == 27) return TRUE; // Blessure/Etouffement/Mise a mort
-    if (nSp == 38 || nSp == 37 || nSp == 47) return TRUE; // Etourdissement/Stase/Champ de stase
+    if (nSp == FORCE_POWER_SPEED_BURST || nSp == FORCE_POWER_KNIGHT_SPEED || nSp == FORCE_POWER_SPEED_MASTERY) return TRUE;
+    if (nSp == FORCE_POWER_FORCE_AURA || nSp == FORCE_POWER_FORCE_SHIELD || nSp == FORCE_POWER_FORCE_ARMOR) return TRUE;
+    if (nSp == FORCE_POWER_SHOCK || nSp == FORCE_POWER_LIGHTNING || nSp == FORCE_POWER_FORCE_STORM) return TRUE;
+    if (nSp == FORCE_POWER_DRAIN_LIFE || nSp == FORCE_POWER_DEATH_FIELD) return TRUE;
+    if (nSp == FORCE_POWER_WOUND || nSp == FORCE_POWER_CHOKE || nSp == FORCE_POWER_KILL) return TRUE;
+    if (nSp == FORCE_POWER_STUN || nSp == FORCE_POWER_HOLD || nSp == FORCE_POWER_SLEEP) return TRUE;
+    if (nSp == FORCE_POWER_RESIST_FORCE || nSp == FORCE_POWER_SUPRESS_FORCE) return TRUE;
+    if (nSp == FORCE_POWER_BATTLE_MEDITATION_PC || nSp == FORCE_POWER_IMPROVED_BATTLE_MEDITATION_PC || nSp == FORCE_POWER_MASTER_BATTLE_MEDITATION_PC) return TRUE;
+    if (nSp == FORCE_POWER_FORCE_CAMOUFLAGE || nSp == FORCE_POWER_IMPROVED_FORCE_CAMOUFLAGE || nSp == FORCE_POWER_MASTER_FORCE_CAMOUFLAGE) return TRUE;
+    if (nSp == FORCE_POWER_BATTLE_PRECOGNITION) return TRUE;
     return FALSE;
 }
 '''
@@ -433,6 +781,10 @@ int Ov_IsRobeOnlyPower(int nSp)
                 ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHealForcePoints(30), OBJECT_SELF);
                 return;
             }
+        }
+        if (Ov_HandleCustomPower(GetSpellId()))
+        {
+            return;
         }
     }
 '''
