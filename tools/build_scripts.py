@@ -431,6 +431,28 @@ void Ov_RefreshPassives(object oTarget)
         if (GetHasFeat(OV_UNB_3, oTarget)) nForceRes = 15 + GetHitDice(oTarget);
     }}
 
+    // 6. Cristal personnel de l'Exile : effets de classe de base + prestige quand sabre equipe
+    int nSkillAll = 0;
+    if (oTarget == oPC && nFam == 4 && GetGlobalNumber("000_Quest_Crystal") > 0)
+    {{
+        if (GetLevelByClass(CLASS_TYPE_JEDIGUARDIAN, oPC) > 0)
+        {{
+            nTotalAtk += 1;
+        }}
+        else if (GetLevelByClass(CLASS_TYPE_JEDISENTINEL, oPC) > 0)
+        {{
+            nTotalAtk += 1; nTotalAC += 1; nTotalSaves += 1;
+        }}
+        if (GetLevelByClass(CLASS_TYPE_JEDIWATCHMAN, oPC) > 0)
+        {{
+            nSkillAll += 3;
+        }}
+        if (GetLevelByClass(CLASS_TYPE_SITHLORD, oPC) > 0)
+        {{
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHealForcePoints(3), oPC);
+        }}
+    }}
+
     // Reconstruire proprement le bundle permanent (regle T4 : UN SEUL EffectACIncrease!)
     Ov_RemoveOldPassives(oTarget);
     int bHasAny = FALSE;
@@ -501,6 +523,17 @@ void Ov_RefreshPassives(object oTarget)
         effect eFr = EffectForceResistanceIncrease(nForceRes);
         if (bHasAny) eBundle = EffectLinkEffects(eBundle, eFr); else eBundle = eFr;
         bHasAny = TRUE;
+    }}
+    if (nSkillAll > 0)
+    {{
+        int nSk = 0;
+        while (nSk < 8)
+        {{
+            effect eSk = EffectSkillIncrease(nSk, nSkillAll);
+            if (bHasAny) eBundle = EffectLinkEffects(eBundle, eSk); else eBundle = eSk;
+            bHasAny = TRUE;
+            nSk += 1;
+        }}
     }}
     if (bMindImm)
     {{
@@ -648,6 +681,29 @@ void Ov_OnDamageHook(object oVictim)
             ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(d6(2), DAMAGE_TYPE_UNIVERSAL), oVictim);
         }}
     }}
+
+    // 3. Cristal personnel de l'Exile : procs On-Hit de prestige (sabre equipe)
+    if (oAtk == GetFirstPC() && nFam == 4 && GetGlobalNumber("000_Quest_Crystal") > 0)
+    {{
+        if (GetLevelByClass(CLASS_TYPE_JEDIWEAPONMASTER, oAtk) > 0)
+        {{
+            int nSt = GetLocalNumber(oAtk, 29) + 1;
+            if (nSt > 5) nSt = 5;
+            SetLocalNumber(oAtk, 29, nSt);
+            effect eWM = EffectLinkEffects(EffectAttackIncrease(nSt), EffectACIncrease(nSt, AC_DODGE_BONUS));
+            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eWM, oAtk, 12.0);
+        }}
+        if (GetLevelByClass(CLASS_TYPE_SITHMARAUDER, oAtk) > 0)
+        {{
+            int nH = GetMaxHitPoints(oAtk) / 100;
+            if (nH < 1) nH = 1;
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectHeal(nH), oAtk);
+        }}
+        if (GetLevelByClass(CLASS_TYPE_SITHASSASSIN, oAtk) > 0 && (bAmbush || Ov_IsIncapacitated(oVictim)))
+        {{
+            ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(d6(2), DAMAGE_TYPE_UNIVERSAL), oVictim);
+        }}
+    }}
 }}
 
 void Ov_OnAttackedHook(object oDefender)
@@ -731,6 +787,13 @@ int Ov_GetSpellDC(object oCaster)
     if (GetHasFeat({pen3}, oCaster)) nDC += 6;
     else if (GetHasFeat({pen2}, oCaster)) nDC += 4;
     else if (GetHasFeat({pen1}, oCaster)) nDC += 2;
+    if (oCaster == GetFirstPC() && GetGlobalNumber("000_Quest_Crystal") > 0)
+    {{
+        if (GetLevelByClass(CLASS_TYPE_JEDIMASTER, oCaster) > 0 || GetLevelByClass(CLASS_TYPE_SITHLORD, oCaster) > 0)
+        {{
+            nDC += 2;
+        }}
+    }}
     return nDC;
 }}
 
@@ -1146,6 +1209,66 @@ int Ov_IsRobeOnlyPower(int nSp)
     compile_script("k_sp1_generic", sp1)
 
 
+def build_personal_crystal_script() -> None:
+    """Compile a_q_cryst_change.ncs : attribue automatiquement le Cristal personnel 3 paliers
+    (ov_crys_<tier>_<s1><s2>) selon les 2 meilleures caracs de base et le niveau de l'Exile."""
+    code = '''//:: a_q_cryst_change - Cristal personnel de l'Exile 3 paliers (KotOR 2 Overhaul)
+void main()
+{
+    object oPC = GetFirstPC();
+    if (!GetIsObjectValid(oPC)) return;
+
+    int nLvl = GetHitDice(oPC);
+    int nTier = 1;
+    if (nLvl >= 22) nTier = 3;
+    else if (nLvl >= 15) nTier = 2;
+
+    // Trouver les 2 meilleures caracteristiques de base (0=FOR..5=CHA)
+    int nBest1 = 0;
+    int nVal1 = -1;
+    int i = 0;
+    while (i < 6)
+    {
+        int v = GetAbilityScore(oPC, i);
+        if (v > nVal1) { nVal1 = v; nBest1 = i; }
+        i += 1;
+    }
+    int nBest2 = (nBest1 == 0) ? 1 : 0;
+    int nVal2 = -1;
+    i = 0;
+    while (i < 6)
+    {
+        if (i != nBest1)
+        {
+            int v2 = GetAbilityScore(oPC, i);
+            if (v2 > nVal2) { nVal2 = v2; nBest2 = i; }
+        }
+        i += 1;
+    }
+
+    // Retirer l'ancien cristal personnel (vanilla ou overhaul)
+    int nOld = GetGlobalNumber("000_Quest_Crystal");
+    if (nOld > 0)
+    {
+        string sOld = IntToString(nOld);
+        object oOld1 = GetItemPossessedBy(oPC, "qcrystal_" + GetStringLeft(sOld, 1) + "_" + GetStringRight(sOld, 1));
+        if (GetIsObjectValid(oOld1)) DestroyObject(oOld1);
+        int t = nOld / 100;
+        int rem = nOld - (t * 100);
+        int a1 = rem / 10;
+        int a2 = rem - (a1 * 10);
+        object oOld2 = GetItemPossessedBy(oPC, "ov_crys_" + IntToString(t) + "_" + IntToString(a1) + IntToString(a2));
+        if (GetIsObjectValid(oOld2)) DestroyObject(oOld2);
+    }
+
+    string sRes = "ov_crys_" + IntToString(nTier) + "_" + IntToString(nBest1) + IntToString(nBest2);
+    SetGlobalNumber("000_Quest_Crystal", (nTier * 100) + (nBest1 * 10) + nBest2);
+    CreateItemOnObject(sRes, oPC, 1);
+}
+'''
+    compile_script("a_q_cryst_change", code)
+
+
 def main() -> None:
     SRC_DIR.mkdir(parents=True, exist_ok=True)
     OVR_DIR.mkdir(parents=True, exist_ok=True)
@@ -1155,6 +1278,7 @@ def main() -> None:
     build_wrappers()
     build_grenades(fids)
     build_force_powers(fids)
+    build_personal_crystal_script()
     print("=== Jalon 3 BUILD OK (tous les scripts compilés sans erreur) ===")
 
 

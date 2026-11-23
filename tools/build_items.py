@@ -41,7 +41,22 @@ GEAR_CSVS = [
 CSV_UPGRADES = ROOT / "Kotor 2 - rééquilibrage - Améliorations.csv"
 
 STAT_TO_SUB = {"FOR": 0, "DEX": 1, "CON": 2, "INT": 3, "SAG": 4, "CHA": 5}
-DMG_COST_MAP = {"1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "1d4": 6, "1d6": 7, "1d8": 8, "1d10": 9, "2d6": 10}
+DMG_COST_MAP = {
+    "1": 1, "2": 2, "3": 3, "4": 4, "5": 5,
+    "1d2": 14, "1d3": 14, "1d4": 6, "1d6": 7, "1d8": 8, "1d10": 9,
+    "2d6": 10, "1d12": 11, "2d8": 12, "2d10": 13,
+}
+DMG_TYPE_SUB = {
+    "slashing": 2, "cold": 5, "electrical": 7, "fire": 8,
+    "sonic": 10, "ion": 11, "energy": 12,
+}
+ABILITY_EN_SUB = {
+    "strength": 0, "dexterity": 1, "constitution": 2,
+    "intelligence": 3, "wisdom": 4, "charisma": 5,
+}
+ONHIT_FR_SUB = {
+    "etourdissement": 1, "paralysie": 2, "horreur": 4, "lenteur": 5,
+}
 IMM_COST_MAP = {5: 1, 10: 2, 15: 8, 20: 9, 25: 3, 30: 10}
 # iprp_resistcost.2da : 1=5/-, 2=10/-, 3=15/- (paliers natifs moteur)
 RD_TO_COST = {2: 1, 3: 1, 5: 1, 10: 2, 12: 2, 15: 3}
@@ -301,6 +316,153 @@ def build_gamorrean_1m_utis(inst: Installation) -> int:
     return count
 
 
+def _parse_upgrade_props(mod_txt: str, old_props: list[UTIProperty]) -> list[UTIProperty]:
+    """Convertit la colonne `Changement (mod)` de `Améliorations.csv` en liste UTIProperty."""
+    old_skill_sub = next((p.subtype for p in old_props if p.property_name == 36), 0)
+    out: list[UTIProperty] = []
+    for raw in [s.strip() for s in mod_txt.split(",") if s.strip()]:
+        s = norm(raw)
+        if s == "acere":
+            out.append(make_prop(28, 0, 0, 0))
+            continue
+        m = re.match(r"bonus aux degats \((\w+)\) \+(\d+d\d+|\d+)", s)
+        if m:
+            sub = DMG_TYPE_SUB.get(m.group(1), 12)
+            cv = DMG_COST_MAP.get(m.group(2), 1)
+            out.append(make_prop(11, sub, 4, cv))
+            continue
+        m = re.match(r"bonus aux degats contre (?:droides|race) \+(\d+d\d+|\d+)", s)
+        if m:
+            p = make_prop(13, 5, 4, DMG_COST_MAP.get(m.group(1), 6))
+            p.param1, p.param1_value = 0, 11
+            out.append(p)
+            continue
+        m = re.match(r"bonus aux degats contre cote obscur \+(\d+d\d+|\d+)", s)
+        if m:
+            p = make_prop(12, 3, 4, DMG_COST_MAP.get(m.group(1), 8))
+            p.param1, p.param1_value = 0, 0
+            out.append(p)
+            continue
+        m = re.match(r"coups critiques plus importants \+(\d+d\d+|\d+)", s)
+        if m:
+            out.append(make_prop(49, 0, 4, DMG_COST_MAP.get(m.group(1), 6)))
+            continue
+        m = re.match(r"bonus d attaque \+(\d+)", s)
+        if m:
+            out.append(make_prop(38, 0, 2, int(m.group(1))))
+            continue
+        m = re.match(r"malus a l attaque -(\d+)", s)
+        if m:
+            out.append(make_prop(8, 0, 20, int(m.group(1))))
+            continue
+        m = re.match(r"bonus defense \+(\d+)", s)
+        if m:
+            out.append(make_prop(1, 0, 2, int(m.group(1))))
+            continue
+        m = re.match(r"malus de defense -(\d+)", s)
+        if m:
+            out.append(make_prop(20, 0, 20, int(m.group(1))))
+            continue
+        m = re.match(r"jets de sauvegarde ameliores \+(\d+)", s)
+        if m:
+            out.append(make_prop(27, 0, 2, int(m.group(1))))
+            continue
+        m = re.match(r"parade tirs de blaster \+(\d+)", s)
+        if m:
+            out.append(make_prop(55, 0, 1, int(m.group(1))))
+            continue
+        m = re.match(r"bonus de caracteristique \((\w+)\) \+(\d+)", s)
+        if m:
+            out.append(make_prop(0, ABILITY_EN_SUB.get(m.group(1), 0), 1, int(m.group(2))))
+            continue
+        m = re.match(r"bonus de competence \+(\d+)", s)
+        if m:
+            out.append(make_prop(36, old_skill_sub, 1, int(m.group(1))))
+            continue
+        m = re.match(r"regeneration de points de force \+(\d+)", s)
+        if m:
+            out.append(make_prop(54, 0, 2, int(m.group(1))))
+            continue
+        m = re.match(r"regeneration \+(\d+)", s)
+        if m:
+            out.append(make_prop(35, 0, 2, int(m.group(1))))
+            continue
+        m = re.match(r"resistance aux degats \((\w+)\) \+(\d+)/-", s)
+        if m:
+            out.append(make_prop(17, DMG_TYPE_SUB.get(m.group(1), 8), 7, RD_TO_COST.get(int(m.group(2)), 1)))
+            continue
+        if "restriction d alignement (lumineux)" in s:
+            out.append(make_prop(43, 2, 0, 0))
+            continue
+        if "restriction d alignement (obscur)" in s:
+            out.append(make_prop(43, 3, 0, 0))
+            continue
+        m = re.match(r"en cas de coup au but \((\w+)\s*:\s*dd\s*(\d+)", s)
+        if m:
+            sub = ONHIT_FR_SUB.get(m.group(1), 1)
+            base_dc = int(m.group(2))
+            cv = 1 if base_dc <= 4 else (2 if base_dc <= 6 else 4)
+            p = make_prop(32, sub, 25, cv)
+            p.param1, p.param1_value = 1, 0
+            out.append(p)
+            continue
+    return out
+
+
+def build_weapon_upgrades(inst: Installation) -> int:
+    """Applique le cloisonnement et le calibrage des 156 améliorations d'armes/sabres (`Améliorations.csv`)."""
+    if not CSV_UPGRADES.exists():
+        return 0
+    with open(CSV_UPGRADES, encoding="utf-8-sig", newline="") as fh:
+        rows = list(csv.reader(fh))
+    count = 0
+    for r in rows:
+        if len(r) < 7:
+            continue
+        rr = r[0].strip().lower()
+        mod_txt = r[6].strip()
+        if not rr.startswith(("u_m_", "u_r_", "u_l_")) or not mod_txt or norm(mod_txt) == "inchange":
+            continue
+        res = inst.resource(rr, ResourceType.UTI)
+        if not res:
+            continue
+        uti = read_uti(res.data)
+        new_props = _parse_upgrade_props(mod_txt, uti.properties)
+        if new_props:
+            uti.properties = new_props
+            write_uti(uti, OVR_DIR / f"{rr}.uti")
+            count += 1
+    return count
+
+
+def build_personal_crystals(inst: Installation) -> int:
+    """Génère les 90 variantes .uti du Cristal personnel de l'Exilé (3 paliers × 30 paires de stats) :
+    ov_crys_<tier>_<s1><s2>.uti (tier 1: +2/+1/0 ; tier 2: +4/+2/+1 ; tier 3: +6/+4/+2)."""
+    res_base = inst.resource("qcrystal_1_2", ResourceType.UTI)
+    if not res_base:
+        return 0
+    tier_bonuses = {1: (2, 1, 0), 2: (4, 2, 1), 3: (6, 4, 2)}
+    count = 0
+    for tier, (b1, b2, b_other) in tier_bonuses.items():
+        for s1 in range(6):
+            for s2 in range(6):
+                if s1 == s2:
+                    continue
+                rr = f"ov_crys_{tier}_{s1}{s2}"
+                uti = read_uti(res_base.data)
+                uti.resref.set_data(rr)
+                uti.tag = rr
+                props = [make_prop(62, 0, 0, 0)]  # Personal Crystal flag
+                for st in range(6):
+                    val = b1 if st == s1 else (b2 if st == s2 else b_other)
+                    if val > 0:
+                        props.append(make_prop(0, st, 1, val))
+                uti.properties = props
+                write_uti(uti, OVR_DIR / f"{rr}.uti")
+                count += 1
+    return count
+
+
 def main() -> None:
     OVR_DIR.mkdir(parents=True, exist_ok=True)
     inst = Installation(GAME_PATH)
@@ -313,7 +475,12 @@ def main() -> None:
     print(f"[OK] Upgrades combinées intermédiaires : {n_comb} fichiers .uti (u_a_over_19..30, u_a_unde_19..30)")
     n_gam = build_gamorrean_1m_utis(inst)
     print(f"[OK] Variantes 1M Gamoréen II : {n_gam} fichiers .uti (m_w_*_1m.uti)")
-    print(f"=== Jalon 2 BUILD OK ({n_gear + n_std + n_comb + n_gam} .uti générés) ===")
+    n_wup = build_weapon_upgrades(inst)
+    print(f"[OK] Améliorations d'armes & sabres (Améliorations.csv) : {n_wup} fichiers .uti générés")
+    n_crys = build_personal_crystals(inst)
+    print(f"[OK] Cristal personnel de l'Exilé (3 paliers × 30 paires) : {n_crys} fichiers .uti (ov_crys_*.uti)")
+    total = n_gear + n_std + n_comb + n_gam + n_wup + n_crys
+    print(f"=== Jalon 2 BUILD OK ({total} .uti générés) ===")
 
 
 if __name__ == "__main__":
