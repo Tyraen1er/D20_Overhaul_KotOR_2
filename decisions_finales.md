@@ -113,7 +113,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 | Arbre (carac) | Rang I | Rang II | Rang III (signature) |
 | :--- | :--- | :--- | :--- |
-| **Raffinement Gamoréen** (FOR) | +1 FOR ; + ½ mod. FOR en rangs sur **toutes** les compétences | +2 FOR ; **tient toutes les armes à 1M** (mêlée et distance) ; postures autorisées : **Duel et Ambidextrie uniquement** | +3 FOR ; immunité au mental |
+| **Raffinement Gamoréen** (FOR) | +1 FOR ; + ½ mod. FOR en rangs sur **toutes** les compétences | +2 FOR ; **tient toutes les armes à 1M** (mêlée et distance) ; interdit définitivement les postures **Arme Lourde et Haute cadence** | +3 FOR ; immunité au mental |
 | **Techniques Echanis** (DEX) | +1 DEX ; attaque mêlée : FOR/DEX (si DEX > FOR) | +2 DEX ; dégâts mêlée : FOR/DEX | +3 DEX ; **supprime le plafond de DEX des armures** |
 | **Voie du dragon Kraith** (CON) | +1 CON ; RD + ½ mod. CON (arrondi sup.) | +2 CON ; **transfusion** : toutes les 6 s, 5 % PV max → 5 % PF max si PF < 50 % (jamais sous 75 % PV) | +3 CON ; toutes sauvegardes + mod. CON |
 | **Chasseur de prime Gand** (INT) | +1 INT ; **grenades `+5 %` dégâts / rang total de Démolition** | +2 INT ; attaque & dégâts distance : DEX/INT (si INT > DEX) | +3 INT ; **Maître Artificier** : rayon grenades `4→6 m`, perce *Esquive Totale*, `50 %` de non-consommation |
@@ -202,7 +202,7 @@ Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), pari
 
 - La **première attaque** portée depuis la furtivité est un **critique confirmé** (multiplicateur de l'arme, sans jet de confirmation). L'attaque brise la furtivité.
 - Les dés d'**Attaque sournoise** s'appliquent par-dessus (comportement vanilla) ; les effets sur critique maison (Spé d'arme) se déclenchent.
-- **Implémentation** : simulation scriptée (le pipeline d'attaque est fermé) — drapeau « embuscade armée » posé par heartbeat tant que `IsStealthed()`, consommé par le hook 1006 de la victime, dégâts `GetTotalDamageDealt() × (multiplicateur − 1)`. Limites documentées en annexes §5.
+- **Implémentation (validée en jeu le 23/11/2026)** : simulation scriptée dans `ov_inc_core.nss` ([`tools/build_scripts.py`](tools/build_scripts.py)) — tant que `IsStealthed(oPM)` est vrai, un buff moteur **`SupernaturalEffect(EffectAttackIncrease(50))`** de durée **`6,0 s`** est rafraîchi (garantit la touche sur la 1re attaque et expire automatiquement à `6,0 s` après sortie de furtivité sans race condition multi-PNJ). À l'impact dans `Ov_OnDamageHook` (`k_def_damage01` / `k_hen_damage01`), `Ov_ConsumeStealthAmbush(oAtk)` retire immédiatement ce buff (même sur one-shot) et déclenche `VFX_IMP_FORCE_PUSH` + `AssignCommand(oAtk, EffectDamage(GetTotalDamageDealt(), DAMAGE_TYPE_PIERCING))` (2e ligne de dégâts dans le journal de combat). Détails techniques dans [`README.md`](README.md) §3.D.
 
 ### 11. Conventions & principes transverses
 
