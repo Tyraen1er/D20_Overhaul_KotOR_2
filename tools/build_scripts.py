@@ -210,17 +210,38 @@ void Ov_RemoveOldPassives(object oTarget)
     }}
 }}
 
+void Ov_RefreshPassives(object oTarget);
+
 void Ov_PollStealth()
 {{
     int i = 0;
     while (i < 3)
     {{
         object oPM = GetPartyMemberByIndex(i);
-        if (GetIsObjectValid(oPM) && IsStealthed(oPM))
+        if (GetIsObjectValid(oPM))
         {{
-            SetLocalNumber(oPM, 25, 1);
             object oArea = GetArea(oPM);
-            if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 1);
+            if (IsStealthed(oPM))
+            {{
+                int nPrev = GetLocalNumber(oPM, 25);
+                SetLocalNumber(oPM, 25, 6);
+                if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 6);
+                if (nPrev == 0) Ov_RefreshPassives(oPM);
+            }}
+            else
+            {{
+                int nCur = GetLocalNumber(oPM, 25);
+                if (nCur > 0)
+                {{
+                    nCur -= 1;
+                    SetLocalNumber(oPM, 25, nCur);
+                    if (nCur == 0)
+                    {{
+                        if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 0);
+                        Ov_RefreshPassives(oPM);
+                    }}
+                }}
+            }}
         }}
         i += 1;
     }}
@@ -233,9 +254,9 @@ void Ov_RefreshPassives(object oTarget)
 
     if (IsStealthed(oTarget))
     {{
-        SetLocalNumber(oTarget, 25, 1);
+        SetLocalNumber(oTarget, 25, 6);
         object oArea = GetArea(oTarget);
-        if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 1);
+        if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 6);
     }}
 
     int nTier = Ov_GetArmorTier(oTarget);
@@ -252,8 +273,8 @@ void Ov_RefreshPassives(object oTarget)
     int nForceRes = 0;
     int bMindImm = FALSE;
 
-    // Bonus Embuscade furtive : +50 Atq garanti tant que furtif / en sortie de furtivite (consomme au 1er coup)
-    if (IsStealthed(oTarget) || GetLocalNumber(oTarget, 25) == 1)
+    // Bonus Embuscade furtive : +50 Atq garanti tant que furtif ou 6s max apres sortie (consomme au 1er coup)
+    if (IsStealthed(oTarget) || GetLocalNumber(oTarget, 25) > 0)
     {{
         nTotalAtk += 50;
     }}
@@ -582,23 +603,25 @@ void Ov_ResetMutilate(object oVictim)
 void Ov_OnDamageHook(object oVictim)
 {{
     object oAtk = GetLastDamager();
-    if (!GetIsObjectValid(oAtk) || GetIsDead(oVictim)) return;
+    if (!GetIsObjectValid(oAtk)) return;
 
     // 1. Embuscade furtive : premiere attaque depuis la furtivite = critique confirme (x2)
     object oArea = GetArea(oAtk);
-    int bAmbush = (GetLocalNumber(oAtk, 25) == 1 || IsStealthed(oAtk) || (GetIsObjectValid(oArea) && GetLocalNumber(oArea, 25) == 1 && (oAtk == GetFirstPC() || GetPartyMemberByIndex(1) == oAtk || GetPartyMemberByIndex(2) == oAtk)));
+    int bAmbush = (GetLocalNumber(oAtk, 25) > 0 || IsStealthed(oAtk) || (GetIsObjectValid(oArea) && GetLocalNumber(oArea, 25) > 0 && (oAtk == GetFirstPC() || GetPartyMemberByIndex(1) == oAtk || GetPartyMemberByIndex(2) == oAtk)));
     if (bAmbush)
     {{
         SetLocalNumber(oAtk, 25, 0);
         if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 0);
         Ov_RefreshPassives(oAtk);
         int nDealt = GetTotalDamageDealt();
-        if (nDealt > 0)
+        if (nDealt > 0 && !GetIsDead(oVictim))
         {{
             ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_STUN), oVictim);
             ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(nDealt, DAMAGE_TYPE_UNIVERSAL), oVictim);
         }}
     }}
+
+    if (GetIsDead(oVictim)) return;
 
     // 2. Procs des 8 Specialisations d'arme (Rangs II & III)
     object oW = GetItemInSlot(INVENTORY_SLOT_RIGHTWEAPON, oAtk);
