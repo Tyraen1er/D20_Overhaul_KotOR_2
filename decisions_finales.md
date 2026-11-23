@@ -221,7 +221,13 @@ Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), pari
 
 ## Partie 2 : TODOs & Chantiers Ouverts
 
-1. **[TODO Tests moteur]** (tracés dans la colonne *Détail technique* du `Feats.csv`) : **T-exclusion** (colonne `exclusion` de `feat.2da`, mutualité des 6 arbres carac), **T1** (arme double en main gauche — Gamoréen II), **T2** (`reqfeat0` sur baseitem d'arme), **T3** (détection des ratés — événement 1005), **plafond CA** (cumul Nomi/Matukai). *(Note : ~~grenades scriptables~~ **VÉRIFIÉ** dans `k_sup_grenade.nss`.)*
+1. **[TODO Tests moteur]** : ~~à tester en jeu.~~ **VÉRIFIÉ EN JEU (23/11 — `mods/04-engine-tests/`)** :
+   - **T-excl (`exclusion` dans `feat.2da`)** : **KO** (ne bloque pas au level-up) → mutualité des 6 Spé Carac gérée par **garde-fou scripté** (premier arbre pris prioritaire).
+   - **T1 (Gamoréen II)** : **OK** (`equipableslots=0x00030` + `weaponwield=2` + `weaponsize=3` → double-maniement 1M propre, +100 % / +50 % FOR, 1 att/main, sans crash).
+   - **T2 (`reqfeat0` sur `baseitems.2da`)** : **OK** (bloque réellement l'équipement sans le don → permet de réserver les variantes 1M Gamoréen II).
+   - **T4 (cumul `EffectACIncrease`)** : **non cumulable entre effets séparés** (seul le max s'applique : `+5` au lieu de `+15`) → **sommer tous les bonus de CA custom en un seul `EffectACIncrease(nTotalAC)`** dans le heartbeat.
+   - **T5 (`level` dans `itemcreate.2da`)** : **OK** (verrouille nativement les recettes à l'établi par niveau de personnage — valide toute la grille `Craft.csv`).
+   - **Architecture scripts (`pykotor`)** : ne jamais recompiler le gros `k_ai_master.ncs` vanilla ; toujours passer par les **petits wrappers `k_def_*` / `k_hen_*`** (`~140–214` instructions) qui appellent ensuite le vrai `k_ai_master` vanilla. *(T3 détection fine des ratés Matukai à confirmer par VFX/log au Jalon 3.)*
 2. **[TODO Budgets §6]** : ~~recomposer le socle de dons avec les nouveaux axes.~~ **ACTÉ (19/11) : budgets `22 / 18 / 15` dons (`12 / 16 / 24` pouvoirs) + gating Classe / Prestige / Compagnons.**
 3. **[TODO Contrat §9]** : ~~remapper les colonnes DPR sur l'architecture postures × familles.~~ **ACTÉ (18–19/11) dans `dpr_check.py` / `dpr_data.json`.**
 4. **[TODO Arbres d'armures §8.B]** : ~~revalider les 9 dons.~~ **ACTÉ (17–19/11) : *Juggernaut*, *Armure Tactique*, *Esquive Ballistique* intégrés dans `Feats.csv`.**
