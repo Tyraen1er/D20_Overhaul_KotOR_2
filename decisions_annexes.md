@@ -22,7 +22,7 @@
 
 ### B. Diagnostic de *Condition physique* (consensus communauté)
 
-*Filler feat* typique en vanilla ; face aux DD renforcés des boss, le rang III (*Condition physique III* / `MASTER_CONDITIONING`) a d'abord été envisagé avec un bonus contre la Force, puis finalement **supprimé** (décision 17/11, §8.D) pour resserrer l'arbre sur les rangs I et II (+1/+2 sauvegardes).
+*Filler feat* typique en vanilla ; le rang III (*Condition physique III* / `MASTER_CONDITIONING`) avait d'abord été envisagé avec un bonus contre la Force, puis supprimé (17/11), et finalement **rétabli en vanilla** (décision 23/11, §8.D : les 3 rangs `+1/+2/+3` sont conservés tels quels).
 
 ### C. Notes d'implémentation (§8)
 
@@ -44,9 +44,9 @@
   - *Piste archivée (non retenue pour les armures intermédiaires)* : `ShowUpgradeScreen(..., sOverride2DA)` dans `k_workbench.nss` (précédent `k_workbench_bdm.nss` → `"itemcreatemira"`) et les lignes inutilisées `CRAFT` / `MASTERCRAFT_WEAPONS_I..III` / `MASTERCRAFT_ARMOR_I..III` (`175–181` de `feat.2da`) permettent de conditionner des recettes `itemcreate*.2da` à un don, mais exigent un don plutôt que le type d'armure.
 - **`forbiditemmask` — mapping confirmé (09/11)** : `0x01` = AC4 (38, légère) · `0x02` = AC5 (39) · `0x04` = AC6 (40, interm.) · `0x08` = AC7 (41) · `0x10` = AC8 (42, lourde) · `0x20` = AC9 (43). Un pouvoir est bloqué si `(masque ET bits de l'armure portée) ≠ 0`.
 - **Les bits viennent de l'identité de ligne, pas des stats** (constaté 14/11) : les lignes 98 (*Combinaison ubese*, `baseac 5`) et 102 (*Zeison Sha*) échappent à **tous** les masques alors que la ligne 39 a le même `baseac` — preuve que les bits dérivent de l'appartenance au bloc 38–43.
-- **Exception « Force-friendly »** : lignes 98/102 + robes 35-37 échappent à tous les masques — assumées rares et universelles (le prix Matukai, abandonné, aurait été des lignes lourdes sans bits ; design rejeté 14/11).
+- **Aucune exception « Force-friendly » (décision 23/11)** : les lignes 98 (*Combinaison ubese*) et 102 (*Zeison Sha / Jal Shey*) ne bénéficient d'aucune exception — elles suivent les mêmes restrictions de pouvoirs que les armures légères standard (à aligner côté `baseitems.2da` / `.uti` lors de l'implémentation). Seules les robes 35–37 autorisent tous les pouvoirs.
 - **`requireitemmask`** (inverse) : permet des pouvoirs exclusifs aux armures — piste de compensation Juggernaut.
-- **`feat.2da`** : *Condition physique* = lignes 13/21/22 (*22 supprimée le 17/11*) ; *Esquive* = ligne 125 ; *Course furtive* = ligne 197 ; *Bouclier de camouflage personnel* = ligne 201 ; *Création / Maître armes & armures* (inutilisés) = lignes 175–181.
+- **`feat.2da`** : *Condition physique* = lignes 13/21/22 (*conservées vanilla, 23/11*) ; *Esquive* = ligne 125 ; *Course furtive* = ligne 197 ; *Bouclier de camouflage personnel* = ligne 201 ; *Création / Maître armes & armures* (inutilisés) = lignes 175–181.
 
 ### D. Budget détaillé par build (§6/§8) — *ancienne structure, à réarbitrer (voir §9-J)*
 
