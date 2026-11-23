@@ -515,6 +515,19 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
         bi.add_row(str(new_idx), new_dict)
         mirror_map[lbl] = new_idx
 
+    # 4. Baseitem dédié pour la Torche à plasma (dégâts vanilla 1d1 + 1d6 Feu de l'UTI, sans toucher aux Matraques 1d8)
+    if "Stun_Baton" in by_label:
+        src_row = bi.get_row(by_label["Stun_Baton"])
+        pt_dict = {h: src_row.get_string(h) for h in bi.get_headers()}
+        pt_dict["label"] = "Plasma_Torch"
+        pt_dict["numdice"] = "1"
+        pt_dict["dietoroll"] = "1"
+        pt_dict["critthreat"] = "1"
+        pt_dict["crithitmult"] = "2"
+        pt_idx = len(bi)
+        bi.add_row(str(pt_idx), pt_dict)
+        mirror_map["Plasma_Torch"] = pt_idx
+
     assert_no_literal_stars(bi, "baseitems.2da")
     write_2da(bi, OVR_DIR / "baseitems.2da")
     (OUT_DIR / "baseitem_1m_map.json").write_text(json.dumps(mirror_map, indent=2) + "\n", encoding="utf-8")

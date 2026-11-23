@@ -463,6 +463,29 @@ def build_personal_crystals(inst: Installation) -> int:
     return count
 
 
+def build_plasma_torch_vanilla() -> int:
+    """Restaure les dégâts vanilla (1d1 + 1d6 Feu) de la Torche à plasma (plasmatorch.uti)
+    via le baseitem dédié Plasma_Torch (sans affecter les Matraques 1d8)."""
+    if not MIRROR_MAP_FILE.exists():
+        return 0
+    mirror_map: dict[str, int] = json.loads(MIRROR_MAP_FILE.read_text(encoding="utf-8"))
+    pt_bi = mirror_map.get("Plasma_Torch")
+    if pt_bi is None:
+        return 0
+    from pykotor.resource.formats.erf import read_erf
+    mod_path = GAME_PATH / "Modules" / "101per.mod"
+    if not mod_path.exists():
+        return 0
+    erf = read_erf(mod_path)
+    for res in erf:
+        if res.restype == ResourceType.UTI and str(res.resref).lower() == "plasmatorch":
+            uti = read_uti(res.data)
+            uti.base_item = pt_bi
+            write_uti(uti, OVR_DIR / "plasmatorch.uti")
+            return 1
+    return 0
+
+
 def main() -> None:
     OVR_DIR.mkdir(parents=True, exist_ok=True)
     inst = Installation(GAME_PATH)
@@ -479,7 +502,9 @@ def main() -> None:
     print(f"[OK] Améliorations d'armes & sabres (Améliorations.csv) : {n_wup} fichiers .uti générés")
     n_crys = build_personal_crystals(inst)
     print(f"[OK] Cristal personnel de l'Exilé (3 paliers × 30 paires) : {n_crys} fichiers .uti (ov_crys_*.uti)")
-    total = n_gear + n_std + n_comb + n_gam + n_wup + n_crys
+    n_pt = build_plasma_torch_vanilla()
+    print(f"[OK] Torche à plasma vanilla (1d1 + 1d6 Feu) : {n_pt} fichier .uti (plasmatorch.uti)")
+    total = n_gear + n_std + n_comb + n_gam + n_wup + n_crys + n_pt
     print(f"=== Jalon 2 BUILD OK ({total} .uti générés) ===")
 
 
