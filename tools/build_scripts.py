@@ -210,7 +210,27 @@ void Ov_RemoveOldPassives(object oTarget)
     }}
 }}
 
-void Ov_RefreshPassives(object oTarget);
+int Ov_ConsumeStealthAmbush(object oTarget)
+{{
+    int bFound = FALSE;
+    effect e = GetFirstEffect(oTarget);
+    while (GetIsEffectValid(e))
+    {{
+        if (GetEffectSubType(e) == SUBTYPE_SUPERNATURAL && GetEffectType(e) == EFFECT_TYPE_ATTACK_INCREASE)
+        {{
+            RemoveEffect(oTarget, e);
+            bFound = TRUE;
+        }}
+        e = GetNextEffect(oTarget);
+    }}
+    return bFound;
+}}
+
+void Ov_ApplyStealthAmbush(object oTarget)
+{{
+    Ov_ConsumeStealthAmbush(oTarget);
+    ApplyEffectToObject(DURATION_TYPE_TEMPORARY, SupernaturalEffect(EffectAttackIncrease(50)), oTarget, 6.0);
+}}
 
 void Ov_PollStealth()
 {{
@@ -218,30 +238,9 @@ void Ov_PollStealth()
     while (i < 3)
     {{
         object oPM = GetPartyMemberByIndex(i);
-        if (GetIsObjectValid(oPM))
+        if (GetIsObjectValid(oPM) && IsStealthed(oPM))
         {{
-            object oArea = GetArea(oPM);
-            if (IsStealthed(oPM))
-            {{
-                int nPrev = GetLocalNumber(oPM, 25);
-                SetLocalNumber(oPM, 25, 6);
-                if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 6);
-                if (nPrev == 0) Ov_RefreshPassives(oPM);
-            }}
-            else
-            {{
-                int nCur = GetLocalNumber(oPM, 25);
-                if (nCur > 0)
-                {{
-                    nCur -= 1;
-                    SetLocalNumber(oPM, 25, nCur);
-                    if (nCur == 0)
-                    {{
-                        if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 0);
-                        Ov_RefreshPassives(oPM);
-                    }}
-                }}
-            }}
+            Ov_ApplyStealthAmbush(oPM);
         }}
         i += 1;
     }}
@@ -254,9 +253,7 @@ void Ov_RefreshPassives(object oTarget)
 
     if (IsStealthed(oTarget))
     {{
-        SetLocalNumber(oTarget, 25, 6);
-        object oArea = GetArea(oTarget);
-        if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 6);
+        Ov_ApplyStealthAmbush(oTarget);
     }}
 
     int nTier = Ov_GetArmorTier(oTarget);
@@ -272,12 +269,6 @@ void Ov_RefreshPassives(object oTarget)
     int nExtraAttacks = 0;
     int nForceRes = 0;
     int bMindImm = FALSE;
-
-    // Bonus Embuscade furtive : +50 Atq garanti tant que furtif ou 6s max apres sortie (consomme au 1er coup)
-    if (IsStealthed(oTarget) || GetLocalNumber(oTarget, 25) > 0)
-    {{
-        nTotalAtk += 50;
-    }}
 
     // 1. RD native d'armure (Moyenne = 2/-, Lourde = 4/-)
     if (nTier == 2) nTotalRD += 2;
@@ -606,13 +597,9 @@ void Ov_OnDamageHook(object oVictim)
     if (!GetIsObjectValid(oAtk)) return;
 
     // 1. Embuscade furtive : premiere attaque depuis la furtivite = critique confirme (x2)
-    object oArea = GetArea(oAtk);
-    int bAmbush = (GetLocalNumber(oAtk, 25) > 0 || IsStealthed(oAtk) || (GetIsObjectValid(oArea) && GetLocalNumber(oArea, 25) > 0 && (oAtk == GetFirstPC() || GetPartyMemberByIndex(1) == oAtk || GetPartyMemberByIndex(2) == oAtk)));
+    int bAmbush = (Ov_ConsumeStealthAmbush(oAtk) || IsStealthed(oAtk));
     if (bAmbush)
     {{
-        SetLocalNumber(oAtk, 25, 0);
-        if (GetIsObjectValid(oArea)) SetLocalNumber(oArea, 25, 0);
-        Ov_RefreshPassives(oAtk);
         int nDealt = GetTotalDamageDealt();
         if (nDealt > 0 && !GetIsDead(oVictim))
         {{
