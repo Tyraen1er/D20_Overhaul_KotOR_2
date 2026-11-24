@@ -225,7 +225,7 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
             target_ulvl: int | None = None
             if is_armor_csv:
                 tcol = r[h["Type (2DA)"]].strip()
-                if tcol in ("Armor Class 4", "Armor Class 5", "Armor_Armd_Flight_Suit", "Armor_Zeison_Sha"):
+                if tcol in ("Armor Class 4", "Armor Class 5", "Armor Armd Flight Suit", "Armor Zeison Sha"):
                     target_ulvl = 1  # Légère : 1 slot (sous-couches Légère level=1 uniquement)
                 elif tcol in ("Armor Class 8", "Armor Class 9"):
                     target_ulvl = 2  # Lourde : 1 slot (sous-couches Lourde level=2 + Légère level=1)
