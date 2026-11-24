@@ -203,51 +203,60 @@ FEAT_LORE_BY_PREFIX = {
         "Charisme, inspirant les alliés et déviant les coups par la seule force de conviction."
     ),
     "MOD_UNBOUND_FORCE": (
-        "Ceux qui refusent de s'appuyer sur la Force développent une débrouillardise et une discipline "
-        "hors norme, tirant parti de toutes leurs compétences techniques et tactiques au combat."
+        "Selon les enseignements de Kreia, s'abandonner à la Force revient à lui céder sa propre volonté. "
+        "L'Exilé, qui a survécu à la coupure de Malachor V, sait mieux que quiconque que la véritable "
+        "force naît de la discipline, de l'ingéniosité et de la maîtrise de soi plutôt que de la dépendance "
+        "aux courants de la Force."
     ),
 }
 
 VANILLA_FEAT_LORE = {
     "EVASION": (
-        "Grâce à des réflexes aiguisés par l'entraînement ou la Force, le personnage anticipe les "
-        "explosions et décharges de zone pour se mettre hors d'atteinte au dernier instant."
+        "Grâce à des réflexes aiguisés par l'entraînement ou la Force, ce don permet d'anticiper les "
+        "explosions et décharges de zone pour s'en extraire au dernier instant."
     ),
     "XXXFORCE_CAMOFLAGE": (
-        "Art secret des Assassins Sith permettant de courber la lumière et d'étouffer sa présence "
-        "dans la Force pour frapper depuis les ombres."
+        "Kreia a enseigné que ce qui est né du vide de Malachor V peut apprendre à s'effacer du regard "
+        "de la Force elle-même. Ce don permet à l'Exilé de se dissimuler sans générateur de camouflage "
+        "et de se déplacer en silence dans les ombres."
     ),
     "XXXIMPROVED_FORCE_CAMOUFLAGE": (
-        "En approfondissant sa fusion avec les ombres de la Force, l'Assassin Sith porte des embuscades "
-        "foudroyantes capables de neutraliser instantanément une cible prise au dépourvu."
+        "En approfondissant les leçons de Kreia sur le silence et la dissimulation dans la Force, l'Exilé "
+        "fait de sa propre absence un piège mortel. Ses embuscades frappent avec une violence soudaine "
+        "qui peut étourdir sur place une cible prise au dépourvu."
     ),
     "XXXMASTER_FORCE_CAMOUFLAGE": (
-        "Sommet de l'art des Assassins Sith : chaque ennemi abattu nourrit l'élan meurtrier du chasseur, "
-        "qui enchaîne les frappes critiques tout en glissant hors de portée des ripostes."
+        "À l'apogée de cet enseignement, l'écho laissé par l'Exilé dans la Force se referme sur chaque "
+        "victime abattue. Chaque élimination nourrit instantanément son élan meurtrier, garantissant un "
+        "coup critique sur la frappe suivante tout en le rendant presque insaisissable."
     ),
     "XXXX_CRUSH_OPPOSITION_I": (
-        "Un Seigneur Sith irradie une fissure dans la Force qui sape la combativité et la résilience "
-        "de tous les adversaires à portée."
+        "Comme Kreia l'a révélé, l'Exilé porte en lui une blessure béante dans la Force. En laissant "
+        "cet écho se propager autour de lui, il ébranle la résolution de ses adversaires et affaiblit "
+        "leur précision, leur garde et leurs défenses."
     ),
     "XXXX_CRUSH_OPPOSITION_II": (
-        "La déchirure provoquée par le Seigneur Sith s'élargit, brisant davantage la garde, la précision "
-        "et les défenses de ses ennemis."
+        "En amplifiant délibérément l'écho de Malachor V selon les préceptes de Kreia, l'Exilé fissure "
+        "plus profondément la Force autour de lui, sapant gravement les attaques, la défense et les "
+        "sauvegardes de tous les ennemis proches."
     ),
     "XXXX_CRUSH_OPPOSITION_III": (
-        "À son apogée, la présence du Seigneur Sith écrase la volonté adverse sur le champ de bataille, "
-        "affaiblissant gravement quiconque ose lui faire face."
+        "L'Exilé ouvre pleinement la blessure qu'il porte dans la Force. L'onde silencieuse qui en "
+        "émane écrase la combativité de ses adversaires à portée, réduisant lourdement leur précision, "
+        "leur garde et leur résistance."
     ),
     "XXXX_INSPIRE_FOLLOWERS_I": (
-        "Par un lien profond dans la Force, le Maître Jedi projette ses propres protections et "
-        "améliorations sur l'ensemble de ses compagnons."
+        "Kreia fut la première à remarquer la faculté singulière de l'Exilé à tisser inconsciemment des "
+        "Liens de Force avec ceux qui le suivent. En canalisant cet écho, il partage ses propres "
+        "protections et améliorations avec l'ensemble de ses compagnons."
     ),
     "XXXX_INSPIRE_FOLLOWERS_II": (
-        "Le lien du Maître Jedi se renforce, prolongeant la résonance de ses pouvoirs partagés avec "
-        "tout le groupe au cœur de la bataille."
+        "Les Liens de Force tissés par l'Exilé gagnent en profondeur et en clarté. L'écho de ses "
+        "pouvoirs personnels résonne plus longtemps à travers tout le groupe au cœur du combat."
     ),
     "XXXX_INSPIRE_FOLLOWERS_III": (
-        "En parfaite harmonie avec ses alliés, le Maître Jedi partage ses améliorations personnelles "
-        "sur la durée tout en galvanisant leur esprit et leur défense."
+        "En pleine maîtrise des Liens de Force évoqués par Kreia, l'Exilé projette durablement ses "
+        "améliorations personnelles sur ses compagnons tout en élevant leur défense et leur résistance."
     ),
 }
 
@@ -388,21 +397,17 @@ def populate_feats_csv() -> int:
                     lore = text
                     break
             eff_body = clean_changelog_prefix(mod_txt or (r[5].strip() if len(r) > 5 else ""))
-            eff_lines = "\n".join(f"• {s.strip()}" for s in eff_body.split(";") if s.strip())
-            parts = [HEADER_TAG]
+            parts = [HEADER_TAG, f"Effets : {eff_body}"]
             if lore:
                 parts.append(lore)
-            parts.append(f"Effets :\n{eff_lines}")
             r[desc_idx] = "\n\n".join(parts)
             updated += 1
         elif id_col.isdigit() and mod_txt and "supprim" not in mod_txt.lower() and mod_txt.lower() not in ("inchangé", "inchange", "-"):
             lore = VANILLA_FEAT_LORE.get(label, "")
             eff_body = clean_changelog_prefix(mod_txt)
-            eff_lines = "\n".join(f"• {s.strip()}" for s in eff_body.split(";") if s.strip())
-            parts = [HEADER_TAG]
+            parts = [HEADER_TAG, f"Effets : {eff_body}"]
             if lore:
                 parts.append(lore)
-            parts.append(f"Effets :\n{eff_lines}")
             r[desc_idx] = "\n\n".join(parts)
             updated += 1
 
@@ -420,8 +425,8 @@ POWER_LORE_HINTS = [
     ("stun / stasis", "Le Jedi fige le système nerveux de ses adversaires dans un champ de stase qui entrave tout mouvement."),
     ("stun droid", "Une impulsion de Force perturbe les circuits internes et surchage les processeurs des unités droïdes."),
     ("battle precognition", "Une perception intuitive des intentions adverses guide la garde du Jedi au cœur de la mêlée."),
-    ("force enlightenment", "Dans un état de grâce totale, le Jedi éveille instantanément ses protections les plus élevées du côté Lumineux."),
-    ("inspire followers", "Par la puissance de ses liens dans la Force, le Maître Jedi partage ses propres protections avec tous ses compagnons."),
+    ("force enlightenment", "Inspiré par les leçons de Kreia sur l'équilibre intérieur et la maîtrise de sa propre nature dans la Force, ce pouvoir éveille instantanément les protections lumineuses les plus élevées de l'Exilé."),
+    ("inspire followers", "Kreia fut la première à déceler la faculté singulière de l'Exilé à forger des Liens de Force profonds. Ce pouvoir fait résonner ces liens pour projeter ses propres protections sur l'ensemble du groupe."),
     ("affect mind", "Une subtile inflexion de la Force oriente la pensée des esprits faibles lors des échanges."),
     ("battle meditation", "Art rare de coordination mentale qui galvanise la précision et le moral des alliés tout en sapant ceux de l'ennemi."),
     ("burst of speed", "La Force accélère les réflexes et la vélocité du Jedi bien au-delà des limites biologiques normales."),
@@ -435,7 +440,7 @@ POWER_LORE_HINTS = [
     ("throw lightsaber", "Guidé par la Force, le sabre laser décrit un arc mortel à distance avant de revenir dans la main de son porteur."),
     ("beast trick", "Le Jedi apaise ou détourne l'instinct primaire des créatures sauvages."),
     ("breath control", "Une maîtrise métabolique complète neutralise les toxines et gaz nocifs dans l'organisme."),
-    ("force camouflage", "L'utilisateur courbe la lumière et efface sa signature dans la Force pour se mouvoir sans être détecté."),
+    ("force camouflage", "Né des enseignements de Kreia sur le vide que l'Exilé porte depuis Malachor V, ce pouvoir efface sa signature dans la Force et lui permet de frapper depuis les ombres sans générateur."),
     ("force sight", "La vision à travers la Force révèle l'alignement et la présence des êtres vivants au-delà des obstacles."),
     ("precognition", "Des éclairs de prescience avertissent le porteur des dangers imminents."),
     ("drain force", "Le côté Obscur arrache l'énergie spirituelle des adversaires pour réalimenter la réserve du lanceur."),
@@ -445,11 +450,11 @@ POWER_LORE_HINTS = [
     ("shock / force", "Des arcs d'éclairs du côté Obscur foudroient les ennemis avec une violence électrique croissante."),
     ("slow / affliction", "Une corruption sournoise affaiblit progressivement le corps de la cible et se propage aux ennemis proches."),
     ("wound / choke", "La télékinésie sombre comprime les organes internes de la cible, lui infligeant une douleur paralysante."),
-    ("crush opposition", "Une déchirure dans la Force affaiblit simultanément la précision, la garde et la résistance des ennemis proches."),
-    ("force crush", "Une étreinte télékinétique implacable broie la cible sur place et la paralyse sous la pression de la Force."),
-    ("fury / improved", "Le côté Obscur déchaîne une frénésie martiale qui décuple la puissance au prix de sa propre vitalité."),
-    ("force scar", "Une cicatrice dans la Force déverse une rage brûlante qui accroît la puissance au détriment de l'endurance."),
-    ("unbound from", "L'affranchissement des flux de la Force forge une résilience et une polyvalence tactique hors du commun."),
+    ("crush opposition", "Comme Kreia l'a enseigné, la blessure que l'Exilé porte dans la Force peut être projetée vers l'extérieur. Cet écho silencieux sape la précision, la garde et les défenses de tous les ennemis proches."),
+    ("force crush", "L'Exilé concentre tout le poids de la blessure de Malachor V sur un unique adversaire, le broyant par télékinésie et le paralysant sous une pression implacable."),
+    ("fury / improved", "Guidé par les leçons de Kreia sur la douleur comme source de lucidité, l'Exilé ouvre son propre stigmate dans la Force, décuplant sa puissance martiale au prix de sa propre vitalité."),
+    ("force scar", "Héritage direct de la blessure laissée par Malachor V et des enseignements de Kreia, cette cicatrice dans la Force embrase les réflexes et la force de l'Exilé tout en consumant lentement son endurance."),
+    ("unbound from", "Écho le plus pur de la philosophie de Kreia : ayant survécu à l'exil hors de la Force, l'Exilé choisit de s'en affranchir et transforme son autonomie et ses compétences en véritable rempart."),
 ]
 
 
@@ -484,19 +489,17 @@ def populate_powers_csv() -> int:
         body_clean = re.sub(r"Suppression de la perte de 50 % des PV max\s*\.?\s*", "", body_clean, flags=re.IGNORECASE)
         body_clean = body_clean.strip()
 
-        meta = []
+        hdr_lines = [HEADER_TAG]
         if arm:
-            meta.append(f"• Armure maximale : {arm}")
+            hdr_lines.append(f"Armure maximale : {arm}")
         if pf:
-            meta.append(f"• Coût en Points de Force (R1 / R2 / R3) : {pf}")
+            hdr_lines.append(f"Coût en Points de Force : {pf}")
 
-        parts = [HEADER_TAG]
+        parts = ["\n".join(hdr_lines)]
         if lore:
             parts.append(lore)
-        if meta:
-            parts.append("\n".join(meta))
         if body_clean:
-            parts.append(f"Effets :\n{body_clean}")
+            parts.append(body_clean)
         r[desc_idx] = "\n\n".join(parts)
         updated += 1
 
