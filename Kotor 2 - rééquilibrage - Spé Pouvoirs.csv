@@ -233,7 +233,7 @@ Coût en Points de Force : 0
 
 Né des enseignements de Kreia sur le vide que l'Exilé porte depuis Malachor V, ce pouvoir efface sa signature dans la Force et lui permet de frapper depuis les ombres sans générateur.
 
-Renommé « Spectre de la Force I–III » (exclusif Assassin Sith, niv. 1/5/9 de prestige) : L1 : +4 Discrétion + furtivité sans ceinture + Course furtive auto L2 : +8 Discrétion + embuscade (sortie de furtivité) inflige +2d6 dégâts et Étourdit 1 tour (Vig annule, DD 10 + Niv + Carac) L3 : +12 Discrétion + chaque élimination donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)"
+L1 : +4 Discrétion + furtivité sans ceinture + Course furtive auto L2 : +8 Discrétion + embuscade (sortie de furtivité) inflige +2d6 dégâts et Étourdit 1 tour (Vig annule, DD 10 + Niv + Carac) L3 : +12 Discrétion + chaque élimination donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)"
 "Force Sight (neutre)
 Vision de Force",Armure lourde,10,"Unique : voit à travers certains obstacles, détection des êtres et camouflages (permanent)",,Quête / Dialogue (Visas Marr avec haute influence),,"[Mod D20-Overhaul]
 Armure maximale : Armure lourde
@@ -331,7 +331,7 @@ Coût en Points de Force : 25 / 35 / 45
 
 Comme Kreia l'a enseigné, la blessure que l'Exilé porte dans la Force peut être projetée vers l'extérieur. Cet écho silencieux sape la précision, la garde et les défenses de tous les ennemis proches.
 
-Renommé « Déchirure de la Force I–III » et uniformisé en L3 max (niv. 1/5/9 de prestige) : -2 / -4 / -6 Attaque, Sauvegardes et Défense aux ennemis en zone 15 m pendant 45 s (Volonté annule)"
+-2 / -4 / -6 Attaque, Sauvegardes et Défense aux ennemis en zone 15 m pendant 45 s (Volonté annule)"
 "Force Crush (DS)
 Ecrasement de Force",Armure légère,60,"Unique : 1-10 dégâts purs / Niveau, la plupart des défenses inopérantes (Vigueur ½)",1d8/Niv dégâts purs sans cap (ignore RD et résistances élémentaires) + immobilisation 6 s (Vigueur ½ dégâts et annule immobilisation),Quete / Obscur max,,"[Mod D20-Overhaul]
 Armure maximale : Armure légère
@@ -349,7 +349,7 @@ Coût en Points de Force : 20 / 30 / 40
 
 Guidé par les leçons de Kreia sur la douleur comme source de lucidité, l'Exilé ouvre son propre stigmate dans la Force, décuplant sa puissance martiale au prix de sa propre vitalité.
 
-Renommé « Stigmate de Force I–III » et uniformisé L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : +2/+4/+6 FOR et DEX, immunité Stase/Paralysie, +1 atq/round dès L1 (non cumulable avec Vitesse) ; coût -5 % PV max/round (arrêt auto à ≤ 25 % PV max)"
++2/+4/+6 FOR et DEX, immunité Stase/Paralysie, +1 atq/round dès L1 (non cumulable avec Vitesse) ; coût -5 % PV max/round (arrêt auto à ≤ 25 % PV max)"
 "Force Scar I-III (LS)
 Cicatrice de Force I-III",Armure lourde,20 / 30 / 40,(Nouveau pouvoir de prestige — miroir de Fureur Sith),"L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : soin +2 % / +4 % / +6 % PV max par round + +1/+2/+3 aux sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3)",Prestige Maître d'armes Jedi,,"[Mod D20-Overhaul]
 Armure maximale : Armure lourde

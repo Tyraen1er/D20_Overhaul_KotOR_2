@@ -262,8 +262,8 @@ VANILLA_FEAT_LORE = {
 
 
 def clean_changelog_prefix(txt: str) -> str:
-    """Supprime les préfixes de type changelog ('Refondu en « ... » (...) :')."""
-    s = re.sub(r"^Refondu en\s*«[^»]+»\s*(?:\([^)]*\))?\s*:\s*", "", txt.strip())
+    """Supprime les préfixes de type changelog ('Refondu en ... :', 'Renommé ... :')."""
+    s = re.sub(r"^(?:Refondu en|Renommé)\s*«[^»]+»[^:]*:\s*", "", txt.strip())
     s = re.sub(r"\(base moddée[^)]*\)", "", s)
     s = re.sub(r"\(ouvert à tous\)", "", s)
     s = re.sub(r"Remplace le malus de 5 de CA d\"utilisation des armes doubles par\s*:\s*", "", s)
