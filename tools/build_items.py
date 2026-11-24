@@ -525,6 +525,30 @@ def build_plasma_torch_vanilla() -> int:
     return 0
 
 
+def build_mining_lasers_k2cp(inst: Installation) -> int:
+    """Aligne mininglaser.uti (1d7) et advancedminingla.uti (1d11) sur les baseitems dédiés
+    Mining_Laser (104) et Adv_Mining_Laser (105), 100 % compatibles avec K2CP v1.6.3."""
+    if not MIRROR_MAP_FILE.exists():
+        return 0
+    mirror_map: dict[str, int] = json.loads(MIRROR_MAP_FILE.read_text(encoding="utf-8"))
+    targets = [
+        ("mininglaser", mirror_map.get("Mining_Laser")),
+        ("advancedminingla", mirror_map.get("Adv_Mining_Laser")),
+    ]
+    count = 0
+    for rr, bi_idx in targets:
+        if bi_idx is None:
+            continue
+        res = inst.resource(rr, ResourceType.UTI)
+        if res is None:
+            continue
+        uti = read_uti(res.data)
+        uti.base_item = bi_idx
+        write_uti(uti, OVR_DIR / f"{rr}.uti")
+        count += 1
+    return count
+
+
 def main() -> None:
     OVR_DIR.mkdir(parents=True, exist_ok=True)
     inst = Installation(GAME_PATH)
@@ -543,7 +567,9 @@ def main() -> None:
     print(f"[OK] Cristal personnel de l'Exilé (3 paliers × 30 paires) : {n_crys} fichiers .uti (ov_crys_*.uti)")
     n_pt = build_plasma_torch_vanilla()
     print(f"[OK] Torche à plasma vanilla (1d1 + 1d6 Feu) : {n_pt} fichier .uti (plasmatorch.uti)")
-    total = n_gear + n_std + n_comb + n_gam + n_wup + n_crys + n_pt
+    n_ml = build_mining_lasers_k2cp(inst)
+    print(f"[OK] Lasers miniers K2CP (1d7 / 1d11) : {n_ml} fichiers .uti (mininglaser.uti, advancedminingla.uti)")
+    total = n_gear + n_std + n_comb + n_gam + n_wup + n_crys + n_pt + n_ml
     print(f"=== Jalon 2 BUILD OK ({total} .uti générés) ===")
 
 

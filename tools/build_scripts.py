@@ -153,15 +153,16 @@ int Ov_GetArmorTier(object oTarget)
 }}
 
 // Famille d'arme : 1=Impact (inclut mains nues), 2=Trad, 3=Resonance, 4=Laser, 5=Assaut, 6=Penetrant, 7=Tactique, 8=Assassin
+// Index baseitems custom : 104=Mining_Laser, 105=Adv_Mining_Laser, 106..116=Variantes 1M Gamoreen II, 117=Plasma_Torch
 int Ov_GetWeaponFamily(int nBI)
 {{
-    if (nBI == -1 || nBI == 0 || nBI == 1 || nBI == 78 || nBI == 93 || nBI == 104 || nBI == 115) return 1;
-    if (nBI == 2 || nBI == 4 || nBI == 6 || nBI == 79 || nBI == 80 || nBI == 105) return 2;
-    if (nBI == 3 || nBI == 5 || nBI == 7 || nBI == 106) return 3;
-    if (nBI == 8 || nBI == 9 || nBI == 10 || nBI == 107) return 4;
-    if (nBI == 12 || nBI == 20 || nBI == 23 || nBI == 109 || nBI == 110) return 5;
-    if (nBI == 13 || nBI == 19 || nBI == 24 || nBI == 77 || nBI == 108 || nBI == 111 || nBI == 114) return 6;
-    if (nBI == 15 || nBI == 17 || nBI == 18 || nBI == 22 || nBI == 112 || nBI == 113) return 7;
+    if (nBI == -1 || nBI == 0 || nBI == 1 || nBI == 78 || nBI == 93 || nBI == 106 || nBI == 117) return 1;
+    if (nBI == 2 || nBI == 4 || nBI == 6 || nBI == 79 || nBI == 80 || nBI == 107) return 2;
+    if (nBI == 3 || nBI == 5 || nBI == 7 || nBI == 108) return 3;
+    if (nBI == 8 || nBI == 9 || nBI == 10 || nBI == 109) return 4;
+    if (nBI == 12 || nBI == 20 || nBI == 23 || nBI == 104 || nBI == 111 || nBI == 112) return 5;
+    if (nBI == 13 || nBI == 19 || nBI == 24 || nBI == 77 || nBI == 105 || nBI == 110 || nBI == 113 || nBI == 116) return 6;
+    if (nBI == 15 || nBI == 17 || nBI == 18 || nBI == 22 || nBI == 114 || nBI == 115) return 7;
     if (nBI == 14 || nBI == 16 || nBI == 21) return 8;
     return 0;
 }}
@@ -179,7 +180,7 @@ int Ov_IsDoubleBaseItem(int nBI)
 
 int Ov_IsHeavy2HBaseItem(int nBI)
 {{
-    return (nBI == 18 || nBI == 19 || nBI == 20 || nBI == 21 || nBI == 22 || nBI == 77 || nBI == 79);
+    return (nBI == 18 || nBI == 19 || nBI == 20 || nBI == 21 || nBI == 22 || nBI == 77 || nBI == 79 || nBI == 105);
 }}
 
 // Garde-fou de mutualite des 6 Spe Carac (LocalNumber 22 : 1=GAM, 2=ECH, 3=KRA, 4=GAN, 5=MAT, 6=NOM)
