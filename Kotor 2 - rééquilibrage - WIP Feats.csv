@@ -95,9 +95,9 @@
 96,BLASTER_INTEGRATION,Intégration blaster,Compagnon / PNJ,,Interne HK-47,,,
 97,XXXFORCE_CAMOFLAGE,Camouflage de Force I,Caché — pouvoir de prestige,,"Caché — Assassin Sith / Protecteur (discrétion sans générateur, cf. Spé Pouvoirs.csv)",Refondu en « Spectre de la Force I » (exclusif Assassin Sith) : +4 Discrétion + furtivité sans ceinture + Course furtive auto (cf. Spé Pouvoirs.csv ; Protecteur migré vers Affranchi de la Force),,"[Mod D20-Overhaul]
 
-Effets : +4 Discrétion + furtivité sans ceinture + Course furtive auto (cf. Spé Pouvoirs.csv ; Protecteur migré vers Affranchi de la Force)
+Effets : +4 Discrétion, furtivité sans ceinture et Course furtive automatique.
 
-L'Exilé, dans sa nature de plaie béante de la Force, devient tel un spectre aux yeux des Jedi et du commun des mortels, capable de s'effacer dans l'ombre sans aucun générateur."
+Par sa nature de plaie béante dans la Force, l'Exilé constitue un angle mort dans la trame qui relie toute chose vivante. En laissant ce vide s'interposer entre lui et le monde, il devient tel un spectre aux yeux des Jedi comme du commun des mortels : nul instinct ne l'annonce, nul générateur n'est nécessaire pour effacer sa course. Frapper depuis cette absence sidère brutalement sa proie ; et chaque vie qu'il éteint creuse un peu plus l'écho de son vide, troublant la perception de ses adversaires tandis que sa lame trouve infailliblement la faille suivante."
 98,FORCE_IMMUNITY_FEAR,Immunité de la Force : Peur,Classe (auto),,Immunité à la Peur (auto Sentinelle),,,
 99,FORCE_IMMUNITY_STUN,Immunité de la Force : Étourdissement,Classe (auto),FORCE_IMMUNITY_FEAR,Immunité à l'Étourdissement,,,
 100,FORCE_IMMUNITY_PARALYSIS,Immunité de la Force : Paralysie,Classe (auto),FORCE_IMMUNITY_FEAR ; FORCE_IMMUNITY_STUN,Immunité à la Paralysie,,,
@@ -147,26 +147,30 @@ Grâce à des réflexes aiguisés par l'entraînement ou la Force, ce don permet
 140,IMPROVED_CLOSE_COMBAT,Combat rapproché II,Actif — distance,Niv. 8 ; CLOSE_COMBAT,Réduit de 4 la pénalité de -10 CA au tir au contact,,,
 141,XXXIMPROVED_FORCE_CAMOUFLAGE,Camouflage de Force II,Caché — pouvoir de prestige,XXXFORCE_CAMOFLAGE,"Caché — Assassin Sith / Protecteur (discrétion sans générateur, cf. Spé Pouvoirs.csv)","Refondu en « Spectre de la Force II » (exclusif Assassin Sith) : +8 Discrétion + embuscade +2d6 dégâts et Stun 1 tour (Vig annule, DD 10 + Niv + Carac)",,"[Mod D20-Overhaul]
 
-Effets : +8 Discrétion + embuscade +2d6 dégâts et Étourdissement 1 tour (Vig annule, DD 10 + Niv + Carac)"
+Effets : +8 Discrétion, toute embuscade en sortie de furtivité inflige +2d6 dégâts et Étourdit 1 tour (Vigueur annule, DD 10 + Niv + Carac).
+
+Par sa nature de plaie béante dans la Force, l'Exilé constitue un angle mort dans la trame qui relie toute chose vivante. En laissant ce vide s'interposer entre lui et le monde, il devient tel un spectre aux yeux des Jedi comme du commun des mortels : nul instinct ne l'annonce, nul générateur n'est nécessaire pour effacer sa course. Frapper depuis cette absence sidère brutalement sa proie ; et chaque vie qu'il éteint creuse un peu plus l'écho de son vide, troublant la perception de ses adversaires tandis que sa lame trouve infailliblement la faille suivante."
 142,XXXMASTER_FORCE_CAMOUFLAGE,Camouflage de Force III,Caché — pouvoir de prestige,XXXFORCE_CAMOFLAGE ; XXXIMPROVED_FORCE_CAMOUFLAGE,"Caché — Assassin Sith / Protecteur (discrétion sans générateur, cf. Spé Pouvoirs.csv)",Refondu en « Spectre de la Force III » (exclusif Assassin Sith) : +12 Discrétion + chaque kill donne prochain coup critique confirmé (2 rounds) et +25 % esquive 2 rounds,,"[Mod D20-Overhaul]
 
-Effets : +12 Discrétion + chaque élimination donne prochain coup critique confirmé (2 rounds) et +25 % esquive 2 rounds"
+Effets : +12 Discrétion, chaque élimination rend la prochaine attaque critique confirmé (dans les 2 rounds / 12 s) et octroie +25 % d'esquive pendant 2 rounds.
+
+Par sa nature de plaie béante dans la Force, l'Exilé constitue un angle mort dans la trame qui relie toute chose vivante. En laissant ce vide s'interposer entre lui et le monde, il devient tel un spectre aux yeux des Jedi comme du commun des mortels : nul instinct ne l'annonce, nul générateur n'est nécessaire pour effacer sa course. Frapper depuis cette absence sidère brutalement sa proie ; et chaque vie qu'il éteint creuse un peu plus l'écho de son vide, troublant la perception de ses adversaires tandis que sa lame trouve infailliblement la faille suivante."
 143,REGENERATE_FORCE_POINTS,Régénération de Force,Classe (auto),Niv. 4,Régénère des PF avec le temps (interne),,,
 144,XXXX_CRUSH_OPPOSITION_I,Écraser l'opposition I,Caché — pouvoir de prestige,,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)","Refondu en « Déchirure de la Force I » (Seigneur Sith, niv. 1) : -2 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
 
-Effets : -2 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)
+Effets (45 s, zone 15 m) : inflige -2 en Attaque, Sauvegardes et Défense (CA) à tous les ennemis à portée (Volonté annule).
 
-L'Exilé laisse l'écho de la plaie qu'il porte dans la Force se propager autour de lui, ébranlant la précision, la garde et la résistance des adversaires à portée."
+Même ceux qui ignorent la Force s'appuient sur elle à chaque battement de cœur, comme sur un sol invisible dont ils ne soupçonnent pas l'existence. En cessant de contenir l'écho de sa propre coupure, l'Exilé projette autour de lui la sourde réalité de son vide et déchire brièvement la trame qui soutient le champ de bataille. Plongés dans une absence qu'ils n'ont jamais appris à endurer, ses ennemis sentent leur instinct se dérober : leurs frappes perdent leur justesse, leur garde s'effondre et leur esprit vacille. Seule une volonté capable de se tenir debout par elle-même peut résister à ce silence."
 145,XXXX_CRUSH_OPPOSITION_II,Écraser l'opposition II,Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_I,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)","Refondu en « Déchirure de la Force II » (Seigneur Sith, niv. 5) : -4 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
 
-Effets : -4 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)
+Effets (45 s, zone 15 m) : inflige -4 en Attaque, Sauvegardes et Défense (CA) à tous les ennemis à portée (Volonté annule).
 
-L'écho silencieux qui émane de l'Exilé s'amplifie et fissure la Force autour de lui, sapant gravement les attaques, la défense et les sauvegardes de ses ennemis."
+Même ceux qui ignorent la Force s'appuient sur elle à chaque battement de cœur, comme sur un sol invisible dont ils ne soupçonnent pas l'existence. En cessant de contenir l'écho de sa propre coupure, l'Exilé projette autour de lui la sourde réalité de son vide et déchire brièvement la trame qui soutient le champ de bataille. Plongés dans une absence qu'ils n'ont jamais appris à endurer, ses ennemis sentent leur instinct se dérober : leurs frappes perdent leur justesse, leur garde s'effondre et leur esprit vacille. Seule une volonté capable de se tenir debout par elle-même peut résister à ce silence."
 146,XXXX_CRUSH_OPPOSITION_III,Écraser l'opposition III,Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_I ; XXXX_CRUSH_OPPOSITION_II,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)","Refondu en « Déchirure de la Force III » (Seigneur Sith, niv. 9) : -6 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
 
-Effets : -6 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)
+Effets (45 s, zone 15 m) : inflige -6 en Attaque, Sauvegardes et Défense (CA) à tous les ennemis à portée (Volonté annule).
 
-En ouvrant pleinement sa blessure dans la Force, l'Exilé écrase la combativité de tous les adversaires proches, réduisant lourdement leur précision, leur garde et leur résilience."
+Même ceux qui ignorent la Force s'appuient sur elle à chaque battement de cœur, comme sur un sol invisible dont ils ne soupçonnent pas l'existence. En cessant de contenir l'écho de sa propre coupure, l'Exilé projette autour de lui la sourde réalité de son vide et déchire brièvement la trame qui soutient le champ de bataille. Plongés dans une absence qu'ils n'ont jamais appris à endurer, ses ennemis sentent leur instinct se dérober : leurs frappes perdent leur justesse, leur garde s'effondre et leur esprit vacille. Seule une volonté capable de se tenir debout par elle-même peut résister à ce silence."
 147,XXXX_CRUSH_OPPOSITION_IV,Écraser l'opposition IV,Caché — pouvoir de prestige,,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)",supprimé / inutilisé (Déchirure de la Force uniformisé en 3 rangs max),,
 148,XXXX_CRUSH_OPPOSITION_V,Écraser l'opposition V,Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_IV,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)",supprimé / inutilisé (Déchirure de la Force uniformisé en 3 rangs max),,
 149,DARK_SIDE_CORRUPTION,Corruption du Côté Obscur,Caché / interne,,Interne — corruption,,,
@@ -184,19 +188,19 @@ En ouvrant pleinement sa blessure dans la Force, l'Exilé écrase la combativit�
 161,SUPER_WEAPON_FOCUS_2_WEAPON_III,Combat à 2 armes supérieur III,Style & posture,SUPER_WEAPON_FOCUS_2_WEAPON_I ; SUPER_WEAPON_FOCUS_2_WEAPON_II,+3 Atq & Dégâts main droite,supprimé,,
 162,XXXX_INSPIRE_FOLLOWERS_I,Inspirer les fidèles I,Caché — pouvoir de prestige,,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)","Refondu en « Écho des Liens I » (Maître Jedi, niv. 1, 30 s) : partage les buffs personnels avec l'allié le plus proche",,"[Mod D20-Overhaul]
 
-Effets : partage les améliorations personnels avec l'allié le plus proche
+Effets (30 s) : partage vos améliorations personnelles avec l'allié le plus proche (sans restriction d'armure).
 
-Par sa faculté singulière à tisser des Liens de Force profonds avec ceux qui le suivent, l'Exilé fait résonner ses propres protections à travers l'ensemble de ses compagnons."
+Le vide que porte l'Exilé agit sur la Force comme une gravité silencieuse : tous ceux qui marchent dans son sillage finissent par se lier à lui, captifs de son écho. Là où un prédateur s'en servirait pour les vider de leur essence, l'Exilé inverse la polarité de ces Liens et fait de son absence une caisse de résonance. Chaque protection, chaque discipline et jusqu'à la guérison de sa propre chair se répercutent en ceux qui lui sont attachés — non par les courants ordinaires de la Force, mais par le Lien lui-même, franchissant ainsi toute entrave d'armure. Sans jamais commander, sa seule existence devient la mesure de ceux qui le suivent."
 163,XXXX_INSPIRE_FOLLOWERS_II,Inspirer les fidèles II,Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_I,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)","Refondu en « Écho des Liens II » (Maître Jedi, niv. 5, 45 s) : partage les buffs personnels avec tout le groupe",,"[Mod D20-Overhaul]
 
-Effets : partage les améliorations personnels avec tout le groupe
+Effets (45 s) : partage vos améliorations personnelles avec tout le groupe (sans restriction d'armure).
 
-Les Liens de Force qui unissent l'Exilé à ses compagnons gagnent en profondeur, prolongeant l'écho de ses pouvoirs personnels sur tout le groupe au cœur du combat."
+Le vide que porte l'Exilé agit sur la Force comme une gravité silencieuse : tous ceux qui marchent dans son sillage finissent par se lier à lui, captifs de son écho. Là où un prédateur s'en servirait pour les vider de leur essence, l'Exilé inverse la polarité de ces Liens et fait de son absence une caisse de résonance. Chaque protection, chaque discipline et jusqu'à la guérison de sa propre chair se répercutent en ceux qui lui sont attachés — non par les courants ordinaires de la Force, mais par le Lien lui-même, franchissant ainsi toute entrave d'armure. Sans jamais commander, sa seule existence devient la mesure de ceux qui le suivent."
 164,XXXX_INSPIRE_FOLLOWERS_III,Inspirer les fidèles III,Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_I ; XXXX_INSPIRE_FOLLOWERS_II,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)","Refondu en « Écho des Liens III » (Maître Jedi, niv. 9, 60 s) : partage buffs personnels + soins avec tout le groupe (sans restriction d'armure)",,"[Mod D20-Overhaul]
 
-Effets : partage améliorations personnels + soins avec tout le groupe (sans restriction d'armure)
+Effets (60 s) : partage vos améliorations personnelles et vos soins (pouvoirs, médipacs, régénération) avec tout le groupe (sans restriction d'armure).
 
-En parfaite résonance avec les liens qu'il a forgés dans la Force, l'Exilé projette durablement ses protections personnelles sur ses alliés tout en élevant leur défense."
+Le vide que porte l'Exilé agit sur la Force comme une gravité silencieuse : tous ceux qui marchent dans son sillage finissent par se lier à lui, captifs de son écho. Là où un prédateur s'en servirait pour les vider de leur essence, l'Exilé inverse la polarité de ces Liens et fait de son absence une caisse de résonance. Chaque protection, chaque discipline et jusqu'à la guérison de sa propre chair se répercutent en ceux qui lui sont attachés — non par les courants ordinaires de la Force, mais par le Lien lui-même, franchissant ainsi toute entrave d'armure. Sans jamais commander, sa seule existence devient la mesure de ceux qui le suivent."
 165,XXXX_INSPIRE_FOLLOWERS_IV,Inspirer les fidèles IV,Caché — pouvoir de prestige,,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)",supprimé / inutilisé (Écho des Liens uniformisé en 3 rangs max),,
 166,XXXX_INSPIRE_FOLLOWERS_V,Inspirer les fidèles V,Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_IV,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)",supprimé / inutilisé (Écho des Liens uniformisé en 3 rangs max),,
 167,LIGHT_SIDE_ENLIGHTENMENT,Illumination (LS),Caché — pouvoir de prestige,,"Caché — Maître Jedi, débloque Illumination de Force (cf. Spé Pouvoirs.csv)",,,
@@ -641,16 +645,16 @@ Inspirée de la légendaire Maître Jedi Nomi Sunrider, cette voie rayonne par l
 ,,══ PASSIFS DE PRESTIGE — Spé Pouvoirs.csv ══,,,,,,
 nouveau (246+),MOD_UNBOUND_FORCE_1,Affranchi de la Force I,Caché — pouvoir de prestige,Jedi Protecteur (auto niv. 1 de prestige),CUSTOM — absent du jeu vanilla,"Passif toutes armures : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond +3/axe",Remplace Camouflage de Force pour le Jedi Protecteur (cf. Spé Pouvoirs.csv).,"[Mod D20-Overhaul]
 
-Effets : Passif toutes armures : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond +3/axe
+Effets (Passif, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires de compétences — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond +3/axe.
 
-Ayant survécu à la coupure absolue d'avec la Force, l'Exilé refuse de s'abandonner à ses courants. Sa véritable puissance naît de sa discipline, de son ingéniosité et de sa seule volonté."
+Ayant survécu à l'arrachement de la Force, l'Exilé est la preuve vivante que celle-ci n'est pas la vie, mais une béquille qui atrophie ceux qui s'y abandonnent. Plutôt que de réparer sa coupure, il l'érige en souveraineté : en se retirant volontairement du murmure qui dicte les pas des Jedi comme des Sith, il rend toute sa rigueur à l'esprit lucide. La technique, l'observation, la ruse et l'usage des outils matériels deviennent le prolongement direct de son combat ; et à mesure qu'il renonce à l'emprise invisible qui lie la galaxie, le silence qu'il entretient en lui finit par rendre la Force presque impuissante à l'atteindre."
 nouveau (246+),MOD_UNBOUND_FORCE_2,Affranchi de la Force II,Caché — pouvoir de prestige,Jedi Protecteur (auto niv. 5 de prestige),CUSTOM — absent du jeu vanilla,"Plafond +5/axe ; +25 % efficacité des consommables (medpacs, grenades, mines, boucliers)",,"[Mod D20-Overhaul]
 
-Effets : Plafond +5/axe ; +25 % efficacité des consommables (medpacs, grenades, mines, boucliers)
+Effets (Passif) : plafond porté à +5/axe ; +25 % d'efficacité des consommables (médipacs, grenades, mines, boucliers).
 
-Ayant survécu à la coupure absolue d'avec la Force, l'Exilé refuse de s'abandonner à ses courants. Sa véritable puissance naît de sa discipline, de son ingéniosité et de sa seule volonté."
+Ayant survécu à l'arrachement de la Force, l'Exilé est la preuve vivante que celle-ci n'est pas la vie, mais une béquille qui atrophie ceux qui s'y abandonnent. Plutôt que de réparer sa coupure, il l'érige en souveraineté : en se retirant volontairement du murmure qui dicte les pas des Jedi comme des Sith, il rend toute sa rigueur à l'esprit lucide. La technique, l'observation, la ruse et l'usage des outils matériels deviennent le prolongement direct de son combat ; et à mesure qu'il renonce à l'emprise invisible qui lie la galaxie, le silence qu'il entretient en lui finit par rendre la Force presque impuissante à l'atteindre."
 nouveau (246+),MOD_UNBOUND_FORCE_3,Affranchi de la Force III,Caché — pouvoir de prestige,Jedi Protecteur (auto niv. 9 de prestige),CUSTOM — absent du jeu vanilla,Plafond +7/axe ; Résistance à la Force passive (15 + Niveau),,"[Mod D20-Overhaul]
 
-Effets : Plafond +7/axe ; Résistance à la Force passive (15 + Niveau)
+Effets (Passif) : plafond porté à +7/axe ; Résistance à la Force passive (15 + Niveau).
 
-Ayant survécu à la coupure absolue d'avec la Force, l'Exilé refuse de s'abandonner à ses courants. Sa véritable puissance naît de sa discipline, de son ingéniosité et de sa seule volonté."
+Ayant survécu à l'arrachement de la Force, l'Exilé est la preuve vivante que celle-ci n'est pas la vie, mais une béquille qui atrophie ceux qui s'y abandonnent. Plutôt que de réparer sa coupure, il l'érige en souveraineté : en se retirant volontairement du murmure qui dicte les pas des Jedi comme des Sith, il rend toute sa rigueur à l'esprit lucide. La technique, l'observation, la ruse et l'usage des outils matériels deviennent le prolongement direct de son combat ; et à mesure qu'il renonce à l'emprise invisible qui lie la galaxie, le silence qu'il entretient en lui finit par rendre la Force presque impuissante à l'atteindre."

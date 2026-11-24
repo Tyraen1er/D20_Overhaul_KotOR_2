@@ -97,9 +97,9 @@ L6 : +6 (niv. 21)","Refondu en « Écho des Liens I–III » (niv. 1/5/9 de pres
 Armure maximale : Armure lourde
 Coût en Points de Force : 25 / 35 / 45
 
-Par sa faculté singulière à forger des Liens de Force profonds, l'Exilé fait résonner ses propres protections sur l'ensemble de ses compagnons.
+Le vide que porte l'Exilé agit sur la Force comme une gravité silencieuse : tous ceux qui marchent dans son sillage finissent par se lier à lui, captifs de son écho. Là où un prédateur s'en servirait pour les vider de leur essence, l'Exilé inverse la polarité de ces Liens et fait de son absence une caisse de résonance. Chaque protection, chaque discipline et jusqu'à la guérison de sa propre chair se répercutent en ceux qui lui sont attachés — non par les courants ordinaires de la Force, mais par le Lien lui-même, franchissant ainsi toute entrave d'armure. Sans jamais commander, sa seule existence devient la mesure de ceux qui le suivent.
 
-L1 (30 s) partage les améliorations personnels du Maître Jedi avec l'allié le plus proche ; L2 (45 s) avec tout le groupe ; L3 (60 s) améliorations personnels + soins (pouvoirs/medpacs/régén.) partagés avec tout le groupe (sans restriction d'armure sur les alliés, comme Kreia)"
+Effets : R1 (30 s) partage vos améliorations personnelles avec l'allié le plus proche ; R2 (45 s) avec tout le groupe ; R3 (60 s) partage vos améliorations personnelles et vos soins (pouvoirs, médipacs, régénération) avec tout le groupe, sans restriction d'armure sur vos alliés."
 "Affect Mind / Domination (neutre)
 Influence / Domination",Armure lourde,0,"L1 : options de persuasion supplémentaires en dialogue (hors droïdes)
 L2 : Domination : version renforcée, résistance rare (Niv. 6)",,Dialogue,,"[Mod D20-Overhaul]
@@ -231,9 +231,9 @@ L3 : +12 Discrétion + chaque kill donne : prochaine attaque = critique confirm�
 Armure maximale : Armure intermédiaire
 Coût en Points de Force : 0
 
-L'Exilé, dans sa nature de plaie béante de la Force, devient tel un spectre aux yeux des Jedi et du commun des mortels, se dissimulant dans l'ombre sans l'aide de générateur de camouflage.
+Par sa nature de plaie béante dans la Force, l'Exilé constitue un angle mort dans la trame qui relie toute chose vivante. En laissant ce vide s'interposer entre lui et le monde, il devient tel un spectre aux yeux des Jedi comme du commun des mortels : nul instinct ne l'annonce, nul générateur n'est nécessaire pour effacer sa course. Frapper depuis cette absence sidère brutalement sa proie ; et chaque vie qu'il éteint creuse un peu plus l'écho de son vide, troublant la perception de ses adversaires tandis que sa lame trouve infailliblement la faille suivante.
 
-L1 : +4 Discrétion + furtivité sans ceinture + Course furtive auto L2 : +8 Discrétion + embuscade (sortie de furtivité) inflige +2d6 dégâts et Étourdit 1 tour (Vig annule, DD 10 + Niv + Carac) L3 : +12 Discrétion + chaque élimination donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)"
+Effets (Passif) : R1 : +4 Discrétion, furtivité sans ceinture et Course furtive automatique. R2 : +8 Discrétion, toute embuscade en sortie de furtivité inflige +2d6 dégâts et Étourdit 1 tour (Vigueur annule, DD 10 + Niv + Carac). R3 : +12 Discrétion, chaque élimination rend la prochaine attaque critique confirmé (dans les 2 rounds / 12 s) et octroie +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)."
 "Force Sight (neutre)
 Vision de Force",Armure lourde,10,"Unique : voit à travers certains obstacles, détection des êtres et camouflages (permanent)",,Quête / Dialogue (Visas Marr avec haute influence),,"[Mod D20-Overhaul]
 Armure maximale : Armure lourde
@@ -329,9 +329,9 @@ L6 : -6 (niv. 21)","Renommé « Déchirure de la Force I–III » et uniformisé
 Armure maximale : Armure lourde
 Coût en Points de Force : 25 / 35 / 45
 
-L'Exilé projette autour de lui l'écho silencieux de la plaie qu'il porte dans la Force, sapant la précision, la garde et les défenses de tous les ennemis proches.
+Même ceux qui ignorent la Force s'appuient sur elle à chaque battement de cœur, comme sur un sol invisible dont ils ne soupçonnent pas l'existence. En cessant de contenir l'écho de sa propre coupure, l'Exilé projette autour de lui la sourde réalité de son vide et déchire brièvement la trame qui soutient le champ de bataille. Plongés dans une absence qu'ils n'ont jamais appris à endurer, ses ennemis sentent leur instinct se dérober : leurs frappes perdent leur justesse, leur garde s'effondre et leur esprit vacille. Seule une volonté capable de se tenir debout par elle-même peut résister à ce silence.
 
--2 / -4 / -6 Attaque, Sauvegardes et Défense aux ennemis en zone 15 m pendant 45 s (Volonté annule)"
+Effets (45 s, zone 15 m) : inflige -2 / -4 / -6 en Attaque, Sauvegardes et Défense (CA) à tous les ennemis à portée (Volonté annule)."
 "Force Crush (DS)
 Ecrasement de Force",Armure légère,60,"Unique : 1-10 dégâts purs / Niveau, la plupart des défenses inopérantes (Vigueur ½)",1d8/Niv dégâts purs sans cap (ignore RD et résistances élémentaires) + immobilisation 6 s (Vigueur ½ dégâts et annule immobilisation),Quete / Obscur max,,"[Mod D20-Overhaul]
 Armure maximale : Armure légère
@@ -347,22 +347,22 @@ L3 : +6 FOR, +3 PV/Niveau, +3 Vig/Vol (niv. 9)","Renommé « Stigmate de Force I
 Armure maximale : Armure lourde
 Coût en Points de Force : 20 / 30 / 40
 
-L'Exilé ouvre son propre stigmate dans la Force, déchaînant une frénésie martiale qui décuple sa puissance au prix de sa propre vitalité.
+Plutôt que de contenir le vide qui le traverse, l'Exilé en écarte délibérément les bords pour faire de son être un siphon. La dépression qu'il ouvre dans la Force aspire violemment l'énergie qui l'entoure — ainsi que sa propre substance vitale — pour la convertir en vigueur et en vélocité brutes, brisant au passage toute stase ou entrave qui prétendrait le figer. Contrairement à ceux que leur faim finit par posséder, l'Exilé demeure souverain face à l'abîme : il accepte que la faille ronge sa chair pour arracher la victoire, et la referme de lui-même avant qu'elle ne l'efface.
 
-+2/+4/+6 FOR et DEX, immunité Stase/Paralysie, +1 atq/round dès L1 (non cumulable avec Vitesse) ; coût -5 % PV max/round (arrêt auto à ≤ 25 % PV max)"
+Effets (30 s) : +2 / +4 / +6 FOR et DEX, immunité Stase & Paralysie, +1 attaque/round dès le R1 (non cumulable avec Vitesse) ; consomme -5 % PV max par round (arrêt automatique à ≤ 25 % PV)."
 "Force Scar I-III (LS)
 Cicatrice de Force I-III",Armure lourde,20 / 30 / 40,(Nouveau pouvoir de prestige — miroir de Fureur Sith),"L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : soin +2 % / +4 % / +6 % PV max par round + +1/+2/+3 aux sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3)",Prestige Maître d'armes Jedi,,"[Mod D20-Overhaul]
 Armure maximale : Armure lourde
 Coût en Points de Force : 20 / 30 / 40
 
-Cette cicatrice béante dans la Force embrase les réflexes et la force de l'Exilé, mais consume peu à peu son endurance à mesure que le combat se prolonge.
+La Force a horreur du vide : partout où subsiste l'absence que porte l'Exilé, ses courants affluent sans cesse pour tenter de la combler. En scellant sa blessure plutôt qu'en s'y noyant, l'Exilé transforme cette pression constante en rempart vivant. Le flux qui se brise contre son silence intérieur referme sa chair à chaque instant, tandis que le néant qu'il maîtrise engloutit la peur, le choc et la paralysie avant qu'ils n'atteignent son esprit. Il ne demande rien à la Force : il contraint jusqu'à son propre manque à le préserver.
 
-L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : soin +2 % / +4 % / +6 % PV max par round + +1/+2/+3 aux sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3)"
+Effets (30 s) : soigne +2 % / +4 % / +6 % PV max par round, +1 / +2 / +3 à toutes les sauvegardes, immunité Peur & Étourdissement (R2) et Paralysie (R3)."
 "Unbound from the Force I-III (LS)
 Affranchi de la Force I-III",Armure lourde,0,(Nouveau passif de prestige — remplace Spectre de la Force pour le Jedi protecteur),"Passif L1/L2/L3 (niv. 1/5/9 de prestige, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond par axe +3 (L1) / +5 (L2) / +7 (L3) ; L2 : +25 % efficacité des consommables (medpacs, grenades, mines, boucliers) ; L3 : Résistance à la Force passive (15 + Niveau)",Prestige Jedi protecteur,,"[Mod D20-Overhaul]
 Armure maximale : Armure lourde
 Coût en Points de Force : 0
 
-Ayant survécu à la coupure absolue d'avec la Force, l'Exilé choisit de s'en affranchir et transforme son autonomie et ses compétences en véritable rempart.
+Ayant survécu à l'arrachement de la Force, l'Exilé est la preuve vivante que celle-ci n'est pas la vie, mais une béquille qui atrophie ceux qui s'y abandonnent. Plutôt que de réparer sa coupure, il l'érige en souveraineté : en se retirant volontairement du murmure qui dicte les pas des Jedi comme des Sith, il rend toute sa rigueur à l'esprit lucide. La technique, l'observation, la ruse et l'usage des outils matériels deviennent le prolongement direct de son combat ; et à mesure qu'il renonce à l'emprise invisible qui lie la galaxie, le silence qu'il entretient en lui finit par rendre la Force presque impuissante à l'atteindre.
 
-Passif L1/L2/L3 (niv. 1/5/9 de prestige, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond par axe +3 (L1) / +5 (L2) / +7 (L3) ; L2 : +25 % efficacité des consommables (medpacs, grenades, mines, boucliers) ; L3 : Résistance à la Force passive (15 + Niveau)"
+Effets (Passif, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires de compétences — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) — plafond +3 (R1) / +5 (R2) / +7 (R3). R2 : +25 % d'efficacité des consommables (médipacs, grenades, mines, boucliers). R3 : Résistance à la Force passive (15 + Niveau)."
