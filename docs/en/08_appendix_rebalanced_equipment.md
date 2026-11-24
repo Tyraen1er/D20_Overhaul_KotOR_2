@@ -7,7 +7,7 @@
 ## Rebalanced Accessories, Armors & Robes
 In vanilla KotOR 2, certain endgame items handed out inflated bonuses (`+5/+6` attributes, `75–90%` damage immunity, `DR +10/-` on a belt), while **Intelligence** and **Charisma** had very little dedicated gear.
 
-**Overhaul principles:**
+**D20 Overhaul principles:**
 - Accessory bonuses are capped around **`+1 / +2`** (**`+3` max** on single-stat legendary items).
 - Added lore-fitting **INT**, **CHA**, **DEX**, **CON**, and **STR** bonuses (e.g., tactical visors → INT, Jal Shey / Qel-Droma gear → CHA, Zeison Sha armor → CON).
 - Any item **not listed below** keeps its exact vanilla stats.

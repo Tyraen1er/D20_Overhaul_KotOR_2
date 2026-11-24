@@ -1,6 +1,6 @@
-# KotOR 2 Modding Workspace — Guide & Pièges Techniques (Pour Agents IA & Développeurs)
+# KotOR 2 Modding Workspace (*D20 Overhaul*) — Guide & Pièges Techniques (Pour Agents IA & Développeurs)
 
-Ce dépôt contient l'environnement de développement CLI/Python pour créer des mods **Star Wars: Knights of the Old Republic II (TSL)**.
+Ce dépôt contient l'environnement de développement CLI/Python pour le mod **D20 Overhaul** de **Star Wars: Knights of the Old Republic II (TSL)**.
 Ce document répertorie l'architecture de l'espace de travail ainsi que les **découvertes critiques et correctifs appliqués à `pykotor`** afin qu'aucun agent ne reproduise les bugs rencontrés lors de la mise en place.
 
 ---

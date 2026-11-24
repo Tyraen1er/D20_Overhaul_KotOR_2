@@ -1,6 +1,6 @@
-# Guide du Joueur — *KotOR 2 Overhaul*
+# Guide du Joueur — *D20 Overhaul*
 
-Bienvenue dans la documentation francophone du mod de rééquilibrage de **Star Wars: Knights of the Old Republic II — The Sith Lords**.
+Bienvenue dans la documentation francophone de **D20 Overhaul**, le mod de rééquilibrage de **Star Wars: Knights of the Old Republic II — The Sith Lords**.
 
 Ce guide a été conçu pour les **joueurs habituels de KotOR 2** : il ne contient aucun jargon technique ni détail de programmation. Il présente, **point par point**, tout ce que le mod change par rapport au jeu de base afin de vous aider à planifier vos personnages, choisir vos équipements et adapter vos tactiques de combat.
 
@@ -42,7 +42,7 @@ Si vous n'avez pas joué depuis longtemps, voici les abréviations que vous croi
 
 ## Résumé express des plus gros changements
 
-| Domaine | Dans le jeu de base | Avec le mod |
+| Domaine | Dans le jeu de base | Avec D20 Overhaul |
 | :--- | :--- | :--- |
 | **Classes (Niv. 30)** | Les combattants ont presque autant de pouvoirs que les Consulaires | Symétrie claire : **22 dons / 12 pouvoirs** (Gardien), **18 / 16** (Sentinelle), **15 / 24** (Consulaire) |
 | **Styles de combat** | *Duel* et *Combat à 2 armes* dominent tout | Anciens dons remplacés par **4 postures** (*Duel*, *Ambidextrie*, *Arme Lourde*, *Haute cadence*) |

@@ -15,7 +15,7 @@
 3. Les boss ne doivent leur résistance qu'aux **chiffres de l'autobalance** — jamais à une mécanique à contourner.
 4. Conséquence : la réponse optimale du joueur est **identique de Péragus à Malachor** (même pouvoir, même type de dégâts).
 
-**Objectif du chantier :** chaque grande famille d'ennemis doit imposer une **réponse différente** (et lisible) du joueur, sans ré-introduire la surpuissance que l'overhaul corrige par ailleurs.
+**Objectif du chantier :** chaque grande famille d'ennemis doit imposer une **réponse différente** (et lisible) du joueur, sans ré-introduire la surpuissance que **D20 Overhaul** corrige par ailleurs.
 
 ---
 

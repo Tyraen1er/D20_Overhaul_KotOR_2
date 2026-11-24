@@ -8,7 +8,7 @@
 
 1. **Ranged weapons now add your Dexterity (DEX) to damage!**
    - In vanilla KotOR 2, DEX added zero damage to blasters.
-   - In the overhaul, ranged weapons scale with DEX: **`150% DEX`** with a single one-handed pistol (Dueling) or a two-handed rifle, **`100% / 50% DEX`** when dual-wielding (Ambidexterity), and **`150% / 50% DEX`** on repeating blasters. *(Or **INT** with **Gand Findsman II**).*
+   - In **D20 Overhaul**, ranged weapons scale with DEX: **`150% DEX`** with a single one-handed pistol (Dueling) or a two-handed rifle, **`100% / 50% DEX`** when dual-wielding (Ambidexterity), and **`150% / 50% DEX`** on repeating blasters. *(Or **INT** with **Gand Findsman II**).*
 2. **New Category: Two-Handed Weapons (2H)**
    - Heavy weapons (e.g., *Vibrosword*, *Gamorrean Battleaxe*, *Force Pike*, *Blaster Rifles*, *Bowcaster*, *Disruptor Rifle*…) are now true Two-Handed weapons: no extra off-hand attack, but base damage scales at **`200% STR`** in melee or **`150% DEX`** at range (up to `250% STR` / `200% DEX` with *Heavy Weapon Handling*).
 3. **Double-Bladed Weapons & Repeating Blasters (`D`)**
@@ -74,7 +74,7 @@ In vanilla, grenades and weapon status effects had fixed DCs (such as DC 15) tha
 
 In vanilla, stacking flat damage bonuses across every upgrade slot broke combat pacing. Now, **only one slot per weapon category adds regular flat damage**, and total upgrade damage is capped by game phase (**max `+2` avg damage Early, `+5` Mid, `+10` Late**).
 
-| Category | Upgrade Slot | Strict Role in the Overhaul |
+| Category | Upgrade Slot | Strict Role in D20 Overhaul |
 | :--- | :--- | :--- |
 | **Melee** | **Grip** | `+Attack`, `+AC`, or `+Saves` *(zero flat damage)* |
 | **Melee** | **Edge** | `Keen` (doubles crit threat), `Massive Criticals`, **On-Hit effects** (Slow, Stun, Paralysis), `vs Droids` *(zero regular damage)* |

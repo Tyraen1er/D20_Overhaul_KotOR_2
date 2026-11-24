@@ -1,20 +1,20 @@
-# Player Guide — *KotOR 2 Overhaul*
+# Player Guide — *D20 Overhaul*
 
-Welcome to the English player documentation for the **Star Wars: Knights of the Old Republic II — The Sith Lords** rebalancing overhaul mod.
+Welcome to the English player documentation for **D20 Overhaul**, the rebalancing mod for **Star Wars: Knights of the Old Republic II — The Sith Lords**.
 
 This guide is written specifically for **regular KotOR 2 players**: it contains zero programming jargon or technical clutter. It walks you **point by point** through every change introduced by the mod so you can plan your builds, pick your gear, and adapt your combat tactics.
 
-> **Author's note:** I developed this overhaul system solo, so all feedback is warmly appreciated to help keep improving it. The entire project is publicly available on my GitHub ([github.com/Tyraen1er/Kotor-2--Remastered-Tyr](https://github.com/Tyraen1er/Kotor-2--Remastered-Tyr)): anyone is welcome to use my work (for non-commercial purposes), fork it, or submit Pull Requests (PRs).
+> **Author's note:** I developed **D20 Overhaul** solo, so all feedback is warmly appreciated to help keep improving it. The entire project is publicly available on my GitHub ([github.com/Tyraen1er/Kotor-2--Remastered-Tyr](https://github.com/Tyraen1er/Kotor-2--Remastered-Tyr)): anyone is welcome to use my work (for non-commercial purposes), fork it, or submit Pull Requests (PRs).
 
 ---
 
 ## Why This Mod? (Design Philosophy)
 
-This overhaul addresses **two core issues** in the vanilla game:
+**D20 Overhaul** addresses **two core issues** in the vanilla game:
 1. **Absurd damage spikes that let certain builds one-shot bosses**: between unchecked workbench stacking and a handful of broken synergies, optimized builds melt major bosses in 1 or 2 rounds, removing all tension from the game's biggest fights.
 2. **A severe lack of build diversity**: Jedi robes, lightsabers, and a few dominant powers (*Force Storm*, *Insanity*, *Master Speed*) overshadow every alternative. Armor, ranged weapons, non-lightsaber melee weapons, and several attributes quickly fall behind — made worse by the fact that half of all organic enemies have no defensive profile at all, so the exact same tactic works from Peragus to Malachor V.
 
-**The goal of this overhaul** is to restore **tense, tactical combat** while making **every playstyle viable, distinct, and rewarding** from level 1 to level 30:
+**The goal of D20 Overhaul** is to restore **tense, tactical combat** while making **every playstyle viable, distinct, and rewarding** from level 1 to level 30:
 - **Clearly defined class identities** (martial specialist, tactical hybrid, Force master).
 - **Meaningful, specialized armor** (evasion in light, shields & tech in medium, pure tanking in heavy).
 - **8 weapon families** and **4 combat stances** that feel genuinely different in both melee and ranged combat.
@@ -41,7 +41,7 @@ This overhaul addresses **two core issues** in the vanilla game:
 
 ## Quick Summary of Major Changes
 
-| Area | Vanilla Game | With the Overhaul |
+| Area | Vanilla Game | With D20 Overhaul |
 | :--- | :--- | :--- |
 | **Classes (Lvl 30)** | Martial classes get nearly as many powers as Consulars | Clear inverse symmetry: **22 feats / 12 powers** (Guardian), **18 / 16** (Sentinel), **15 / 24** (Consular) |
 | **Combat Styles** | *Dueling* and *Two-Weapon Fighting* dominate everything | Old feats replaced by **4 stances** (*Dueling*, *Ambidexterity*, *Heavy Weapon*, *High-Rate Weapon*) |
@@ -58,7 +58,7 @@ This overhaul addresses **two core issues** in the vanilla game:
 
 ## Modified Core Rules (Active from Level 1, Without Feats)
 
-Even before picking a single feat or Force power, the overhaul changes several foundational combat and equipment rules compared to vanilla KotOR 2:
+Even before picking a single feat or Force power, **D20 Overhaul** changes several foundational combat and equipment rules compared to vanilla KotOR 2:
 
 - **New Two-Handed Weapons (`2H`)**: heavy melee weapons (*Vibrosword*, *Gamorrean Battleaxe*, *Force Pike*) and rifles/bowcasters now occupy both hands with no extra off-hand attack, dealing **`200% STR`** in melee and **`150% DEX`** at range by default.
 - **Ranged Weapons Scale with Dexterity (`DEX`)**: unlike vanilla where DEX added zero damage to blasters, ranged attacks now add your DEX modifier to damage (**`150% DEX`** with a single 1H pistol or 2H rifle, **`100% / 50% DEX`** dual-wielding, **`150% / 50% DEX`** with repeating blasters).

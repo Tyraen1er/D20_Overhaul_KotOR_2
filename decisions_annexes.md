@@ -18,7 +18,7 @@
 | **SW Saga (SWSE)** | Remplace le niveau dans la Défense Réflexe | Talents *Armored Defense* | *Juggernaut*, *Armor Mastery* | Talents d'arbre *Armor Specialist* |
 | **KotOR 2 Vanilla** | CA `4-5`, DEX max `+5/+4` | CA `6-7`, DEX max `+3/+2` | CA `8-9`, DEX max `+1/+0` | Aucune identité : blocage uniforme des pouvoirs → Tier F Jedi |
 
-**Conclusion design :** KotOR 2 a hérité de la CA de D&D 3.0 *sans* les dons de spécialisation de D&D 5e *ni* la RD du JdR SW. L'overhaul restaure les deux leviers.
+**Conclusion design :** KotOR 2 a hérité de la CA de D&D 3.0 *sans* les dons de spécialisation de D&D 5e *ni* la RD du JdR SW. **D20 Overhaul** restaure les deux leviers.
 
 ### B. Diagnostic de *Condition physique* (consensus communauté)
 
@@ -116,7 +116,7 @@ Détail des mesures simulées dans [`tools/dpr_check.py`](tools/dpr_check.py) (m
 
 ## 6. Diagnostic des Archétypes Vanilla (Niv. 28–30)
 
-Analyse comparative historique (pré-overhaul) :
+Analyse comparative historique (pré-D20 Overhaul) :
 
 | Archétype / Classe | Total Dons | Budget Vanilla | Total Pouvoirs | Budget Pouvoirs |
 | :--- | :---: | :---: | :---: | :---: |

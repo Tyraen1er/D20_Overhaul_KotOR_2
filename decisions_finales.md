@@ -1,4 +1,4 @@
-# Décisions Finales d'Équilibrage — Synthèse (*KotOR 2 Overhaul*)
+# Décisions Finales d'Équilibrage — Synthèse (*D20 Overhaul*)
 
 Ce document est le **contrat de game design** : chaque décision actée y figure sous forme condensée.
 Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les notes d'implémentation sont dans **[`decisions_annexes.md`](decisions_annexes.md)**.

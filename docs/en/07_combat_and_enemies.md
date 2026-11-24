@@ -22,7 +22,7 @@ Global combat balance follows one golden rule: **a boss fight should feel like a
 
 ## Tactical Guide to the 6 Enemy Families
 
-In vanilla, nearly all organic enemies fought "naked" (no real armor or resistances), making combat feel the same everywhere. The overhaul gives **each major enemy family** a readable defensive profile and a **clear weakness** to reward tactical adaptation.
+In vanilla, nearly all organic enemies fought "naked" (no real armor or resistances), making combat feel the same everywhere. **D20 Overhaul** gives **each major enemy family** a readable defensive profile and a **clear weakness** to reward tactical adaptation.
 
 > **Golden rule:** organic enemy resistances are **partial** (`25%`, `50%`, `75%`) so mismatched tactics are penalized without ever hard-locking a build. Total 100% immunities remain reserved for droids.
 

@@ -97,7 +97,7 @@ Designed to give Consulars, Jedi Masters, and Sith Lords meaningful feat investm
 
 ### Total Evasion (Overhaul of *Evasion*)
 - **Vanilla:** exclusive to Mira (Scout Lvl 6); a successful Reflex save vs. an AoE dealt 0 damage, but a failed save dealt full (100%) damage.
-- **Overhaul:**
+- **D20 Overhaul:**
   - **Successful** Reflex save against an AoE (grenade, *Force Storm*, *Force Wave*…): **0 damage**.
   - **Failed** Reflex save: **half damage only**.
 - **Who gets it?**

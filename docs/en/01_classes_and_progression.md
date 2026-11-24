@@ -8,7 +8,7 @@
 
 In vanilla KotOR 2, a Jedi Guardian or Sith Marauder ended up with nearly 30 Force powers (almost as many as a Consular), while a Consular drowned in ~40 powers, half of which were filler.
 
-The overhaul establishes a **clean inverse symmetry** across the three Jedi and Sith class archetypes, calibrated up to **level 30**:
+**D20 Overhaul** establishes a **clean inverse symmetry** across the three Jedi and Sith class archetypes, calibrated up to **level 30**:
 
 | Class Family | Power Gain Rate | Total Powers (Lvl 30) | Feat Gain Rate | Total Feats (Lvl 30) | Primary Role |
 | :--- | :---: | :---: | :---: | :---: | :--- |

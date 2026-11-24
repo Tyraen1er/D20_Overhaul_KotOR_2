@@ -8,7 +8,7 @@
 
 In vanilla KotOR 2, wearing armor as a Jedi was almost always a trap: it blocked most Force powers while providing less Defense than simple robes with high Dexterity.
 
-The overhaul gives **every armor category** a distinct role through **native Damage Reduction (DR)**, updated Defense and Max DEX caps, tailored workbench slots, and **three dedicated armor feat trees**.
+**D20 Overhaul** gives **every armor category** a distinct role through **native Damage Reduction (DR)**, updated Defense and Max DEX caps, tailored workbench slots, and **three dedicated armor feat trees**.
 
 | Category | Base AC *(before → after)* | Max DEX *(before → after)* | Native DR *(Physical & Energy)* | Workbench Upgrade Slots | Allowed Force Powers |
 | :--- | :---: | :---: | :---: | :--- | :--- |
