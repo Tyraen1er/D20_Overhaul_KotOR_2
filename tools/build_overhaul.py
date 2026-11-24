@@ -431,7 +431,7 @@ GAMORREAN_MIRROR_LABELS = [
     "Blaster_Carbine",
     "Repeating_Blaster",
     "Heavy_Repeating_Blaster",
-    "Disruptor_Rifle",
+    "Disrupter_Rifle",
     "Sonic_Rifle",
     "Ion_Rifle",
     "Bowcaster",
@@ -444,26 +444,26 @@ WEAPON_CSV_TO_BASEITEM = {
     "bowcasters": "Bowcaster",
     "repeating blasters": "Repeating_Blaster",
     "lourde repeating blasters": "Heavy_Repeating_Blaster",
-    "disruptor rifles": "Disruptor_Rifle",
+    "disruptor rifles": "Disrupter_Rifle",
     "ion rifles": "Ion_Rifle",
     "sonic rifles": "Sonic_Rifle",
     "blaster pistols": "Blaster_Pistol",
     "lourde blasters": "Heavy_Blaster",
     "hold out blasters": "Hold_Out_Blaster",
-    "disruptor pistols": "Disruptor_Pistol",
+    "disruptor pistols": "Disrupter_Pistol",
     "ion blasters": "Ion_Blaster",
     "sonic pistols": "Sonic_Pistol",
     "stun batons": "Stun_Baton",
     "short swords (craftable)": "Short_Sword",
     "vibroblades": "Vibro_Blade",
     "long swords (craftable)": "Long_Sword",
-    "gamorrean battleaxes": "Gamorrean_Battleaxe",
+    "gamorrean battleaxes": "Gammorean_Battleaxe",
     "vibroswords (craftable)": "Vibro_Sword",
     "quarterstaffs": "Quarter_Staff",
     "force pikes": "Force_Pike",
     "double-bladed sword": "Double_Bladed_Sword",
     "vibro double-blades (craftable)": "Vibro_Double_Blade",
-    "wookie warblades": "Wookiee_Warblade",
+    "wookie warblades": "Wookie_Warblade",
     "short light saber": "Short_Lightsaber",
     "light saber": "Lightsaber",
     "double light saber": "Double_Bladed_Lightsaber",
@@ -509,10 +509,51 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
             brow.set_string("crithitmult", m_crit.group(2))
         weap_updated += 1
 
+    # 2b. Compatibilité K2CP : Creature_Item_Slash (row 81) + Mining_Laser (row 104) & Adv_Mining_Laser (row 105)
+    # Placés AVANT nos variantes 1M afin que leurs index (104, 105) coïncident exactement avec K2CP v1.6.3.
+    if len(bi) > 81:
+        bi.get_row(81).set_string("droidorhuman", "0")
+
+    mirror_map: dict[str, int] = {}
+    if "Blaster_Pistol" in by_label:
+        src_row = bi.get_row(by_label["Blaster_Pistol"])
+        ml_dict = {h: src_row.get_string(h) for h in bi.get_headers()}
+        ml_dict.update({
+            "name": "74505",
+            "label": "Mining_Laser",
+            "defaulticon": "iw_gun",
+            "numdice": "1",
+            "dietoroll": "7",
+            "critthreat": "1",
+            "crithitmult": "2",
+            "basecost": "0.2",
+            "storepanelsort": "40",
+        })
+        ml_idx = len(bi)
+        bi.add_row(str(ml_idx), ml_dict)
+        mirror_map["Mining_Laser"] = ml_idx
+
+    if "Blaster_Rifle" in by_label:
+        src_row = bi.get_row(by_label["Blaster_Rifle"])
+        aml_dict = {h: src_row.get_string(h) for h in bi.get_headers()}
+        aml_dict.update({
+            "name": "74333",
+            "label": "Adv_Mining_Laser",
+            "defaulticon": "iw_gun",
+            "numdice": "1",
+            "dietoroll": "11",
+            "critthreat": "2",
+            "crithitmult": "2",
+            "basecost": "0.2",
+            "storepanelsort": "45",
+        })
+        aml_idx = len(bi)
+        bi.add_row(str(aml_idx), aml_dict)
+        mirror_map["Adv_Mining_Laser"] = aml_idx
+
     # 3. Variantes miroirs 1M pour Gamoréen II (validé T1 + T2)
     gam2_id = feat_ids.get("MOD_GAMORREAN_2") or feat_ids.get("MOD_GAMORRAN_2")
     assert gam2_id is not None, f"MOD_GAMORREAN_2 introuvable dans {list(feat_ids.keys())[:10]}"
-    mirror_map: dict[str, int] = {}
     for lbl in GAMORREAN_MIRROR_LABELS:
         if lbl not in by_label:
             continue
