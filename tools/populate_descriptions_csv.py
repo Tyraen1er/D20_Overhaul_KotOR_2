@@ -203,10 +203,9 @@ FEAT_LORE_BY_PREFIX = {
         "Charisme, inspirant les alliés et déviant les coups par la seule force de conviction."
     ),
     "MOD_UNBOUND_FORCE": (
-        "Selon les enseignements de Kreia, s'abandonner à la Force revient à lui céder sa propre volonté. "
-        "L'Exilé, qui a survécu à la coupure de Malachor V, sait mieux que quiconque que la véritable "
-        "force naît de la discipline, de l'ingéniosité et de la maîtrise de soi plutôt que de la dépendance "
-        "aux courants de la Force."
+        "Ayant survécu à la coupure absolue d'avec la Force, l'Exilé refuse de s'abandonner à ses "
+        "courants. Sa véritable puissance naît de sa discipline, de son ingéniosité et de sa seule "
+        "volonté."
     ),
 }
 
@@ -216,47 +215,42 @@ VANILLA_FEAT_LORE = {
         "explosions et décharges de zone pour s'en extraire au dernier instant."
     ),
     "XXXFORCE_CAMOFLAGE": (
-        "Kreia a enseigné que ce qui est né du vide de Malachor V peut apprendre à s'effacer du regard "
-        "de la Force elle-même. Ce don permet à l'Exilé de se dissimuler sans générateur de camouflage "
-        "et de se déplacer en silence dans les ombres."
+        "L'Exilé, dans sa nature de plaie béante de la Force, devient tel un spectre aux yeux des Jedi "
+        "et du commun des mortels, capable de s'effacer dans l'ombre sans aucun générateur."
     ),
-    "XXXIMPROVED_FORCE_CAMOUFLAGE": (
-        "En approfondissant les leçons de Kreia sur le silence et la dissimulation dans la Force, l'Exilé "
-        "fait de sa propre absence un piège mortel. Ses embuscades frappent avec une violence soudaine "
-        "qui peut étourdir sur place une cible prise au dépourvu."
+    "XXXIMPROVED_FORCE_CAMOFLAGE": (
+        "En s'enfonçant plus profondément dans ce silence de la Force, l'Exilé fait de son absence un "
+        "piège mortel. Ses embuscades frappent d'une violence soudaine capable d'étourdir sur place "
+        "une proie prise au dépourvu."
     ),
-    "XXXMASTER_FORCE_CAMOUFLAGE": (
-        "À l'apogée de cet enseignement, l'écho laissé par l'Exilé dans la Force se referme sur chaque "
-        "victime abattue. Chaque élimination nourrit instantanément son élan meurtrier, garantissant un "
-        "coup critique sur la frappe suivante tout en le rendant presque insaisissable."
+    "XXXMASTER_FORCE_CAMOFLAGE": (
+        "Tel un spectre insaisissable, l'Exilé absorbe l'élan de chaque adversaire abattu. Chaque "
+        "élimination aiguise la frappe suivante en coup critique imparable tout en le dérobant aux "
+        "ripostes."
     ),
     "XXXX_CRUSH_OPPOSITION_I": (
-        "Comme Kreia l'a révélé, l'Exilé porte en lui une blessure béante dans la Force. En laissant "
-        "cet écho se propager autour de lui, il ébranle la résolution de ses adversaires et affaiblit "
-        "leur précision, leur garde et leurs défenses."
+        "L'Exilé laisse l'écho de la plaie qu'il porte dans la Force se propager autour de lui, "
+        "ébranlant la précision, la garde et la résistance des adversaires à portée."
     ),
     "XXXX_CRUSH_OPPOSITION_II": (
-        "En amplifiant délibérément l'écho de Malachor V selon les préceptes de Kreia, l'Exilé fissure "
-        "plus profondément la Force autour de lui, sapant gravement les attaques, la défense et les "
-        "sauvegardes de tous les ennemis proches."
+        "L'écho silencieux qui émane de l'Exilé s'amplifie et fissure la Force autour de lui, sapant "
+        "gravement les attaques, la défense et les sauvegardes de ses ennemis."
     ),
     "XXXX_CRUSH_OPPOSITION_III": (
-        "L'Exilé ouvre pleinement la blessure qu'il porte dans la Force. L'onde silencieuse qui en "
-        "émane écrase la combativité de ses adversaires à portée, réduisant lourdement leur précision, "
-        "leur garde et leur résistance."
+        "En ouvrant pleinement sa blessure dans la Force, l'Exilé écrase la combativité de tous les "
+        "adversaires proches, réduisant lourdement leur précision, leur garde et leur résilience."
     ),
     "XXXX_INSPIRE_FOLLOWERS_I": (
-        "Kreia fut la première à remarquer la faculté singulière de l'Exilé à tisser inconsciemment des "
-        "Liens de Force avec ceux qui le suivent. En canalisant cet écho, il partage ses propres "
-        "protections et améliorations avec l'ensemble de ses compagnons."
+        "Par sa faculté singulière à tisser des Liens de Force profonds avec ceux qui le suivent, "
+        "l'Exilé fait résonner ses propres protections à travers l'ensemble de ses compagnons."
     ),
     "XXXX_INSPIRE_FOLLOWERS_II": (
-        "Les Liens de Force tissés par l'Exilé gagnent en profondeur et en clarté. L'écho de ses "
-        "pouvoirs personnels résonne plus longtemps à travers tout le groupe au cœur du combat."
+        "Les Liens de Force qui unissent l'Exilé à ses compagnons gagnent en profondeur, prolongeant "
+        "l'écho de ses pouvoirs personnels sur tout le groupe au cœur du combat."
     ),
     "XXXX_INSPIRE_FOLLOWERS_III": (
-        "En pleine maîtrise des Liens de Force évoqués par Kreia, l'Exilé projette durablement ses "
-        "améliorations personnelles sur ses compagnons tout en élevant leur défense et leur résistance."
+        "En parfaite résonance avec les liens qu'il a forgés dans la Force, l'Exilé projette "
+        "durablement ses protections personnelles sur ses alliés tout en élevant leur défense."
     ),
 }
 
@@ -425,8 +419,8 @@ POWER_LORE_HINTS = [
     ("stun / stasis", "Le Jedi fige le système nerveux de ses adversaires dans un champ de stase qui entrave tout mouvement."),
     ("stun droid", "Une impulsion de Force perturbe les circuits internes et surchage les processeurs des unités droïdes."),
     ("battle precognition", "Une perception intuitive des intentions adverses guide la garde du Jedi au cœur de la mêlée."),
-    ("force enlightenment", "Inspiré par les leçons de Kreia sur l'équilibre intérieur et la maîtrise de sa propre nature dans la Force, ce pouvoir éveille instantanément les protections lumineuses les plus élevées de l'Exilé."),
-    ("inspire followers", "Kreia fut la première à déceler la faculté singulière de l'Exilé à forger des Liens de Force profonds. Ce pouvoir fait résonner ces liens pour projeter ses propres protections sur l'ensemble du groupe."),
+    ("force enlightenment", "Dans un instant de lucidité absolue au cœur de la Force, l'Exilé éveille simultanément ses protections lumineuses les plus élevées."),
+    ("inspire followers", "Par sa faculté singulière à forger des Liens de Force profonds, l'Exilé fait résonner ses propres protections sur l'ensemble de ses compagnons."),
     ("affect mind", "Une subtile inflexion de la Force oriente la pensée des esprits faibles lors des échanges."),
     ("battle meditation", "Art rare de coordination mentale qui galvanise la précision et le moral des alliés tout en sapant ceux de l'ennemi."),
     ("burst of speed", "La Force accélère les réflexes et la vélocité du Jedi bien au-delà des limites biologiques normales."),
@@ -440,7 +434,7 @@ POWER_LORE_HINTS = [
     ("throw lightsaber", "Guidé par la Force, le sabre laser décrit un arc mortel à distance avant de revenir dans la main de son porteur."),
     ("beast trick", "Le Jedi apaise ou détourne l'instinct primaire des créatures sauvages."),
     ("breath control", "Une maîtrise métabolique complète neutralise les toxines et gaz nocifs dans l'organisme."),
-    ("force camouflage", "Né des enseignements de Kreia sur le vide que l'Exilé porte depuis Malachor V, ce pouvoir efface sa signature dans la Force et lui permet de frapper depuis les ombres sans générateur."),
+    ("force camouflage", "L'Exilé, dans sa nature de plaie béante de la Force, devient tel un spectre aux yeux des Jedi et du commun des mortels, se dissimulant dans l'ombre sans générateur."),
     ("force sight", "La vision à travers la Force révèle l'alignement et la présence des êtres vivants au-delà des obstacles."),
     ("precognition", "Des éclairs de prescience avertissent le porteur des dangers imminents."),
     ("drain force", "Le côté Obscur arrache l'énergie spirituelle des adversaires pour réalimenter la réserve du lanceur."),
@@ -450,11 +444,11 @@ POWER_LORE_HINTS = [
     ("shock / force", "Des arcs d'éclairs du côté Obscur foudroient les ennemis avec une violence électrique croissante."),
     ("slow / affliction", "Une corruption sournoise affaiblit progressivement le corps de la cible et se propage aux ennemis proches."),
     ("wound / choke", "La télékinésie sombre comprime les organes internes de la cible, lui infligeant une douleur paralysante."),
-    ("crush opposition", "Comme Kreia l'a enseigné, la blessure que l'Exilé porte dans la Force peut être projetée vers l'extérieur. Cet écho silencieux sape la précision, la garde et les défenses de tous les ennemis proches."),
-    ("force crush", "L'Exilé concentre tout le poids de la blessure de Malachor V sur un unique adversaire, le broyant par télékinésie et le paralysant sous une pression implacable."),
-    ("fury / improved", "Guidé par les leçons de Kreia sur la douleur comme source de lucidité, l'Exilé ouvre son propre stigmate dans la Force, décuplant sa puissance martiale au prix de sa propre vitalité."),
-    ("force scar", "Héritage direct de la blessure laissée par Malachor V et des enseignements de Kreia, cette cicatrice dans la Force embrase les réflexes et la force de l'Exilé tout en consumant lentement son endurance."),
-    ("unbound from", "Écho le plus pur de la philosophie de Kreia : ayant survécu à l'exil hors de la Force, l'Exilé choisit de s'en affranchir et transforme son autonomie et ses compétences en véritable rempart."),
+    ("crush opposition", "L'Exilé projette autour de lui l'écho silencieux de la plaie qu'il porte dans la Force, sapant la précision, la garde et les défenses de tous les ennemis proches."),
+    ("force crush", "L'Exilé concentre tout le poids de sa blessure dans la Force sur un unique adversaire, le broyant par télékinésie et le paralysant sous une pression implacable."),
+    ("fury / improved", "L'Exilé ouvre son propre stigmate dans la Force, déchaînant une frénésie martiale qui décuple sa puissance au prix de sa propre vitalité."),
+    ("force scar", "Cette cicatrice béante dans la Force embrase les réflexes et la force de l'Exilé, mais consume peu à peu son endurance à mesure que le combat se prolonge."),
+    ("unbound from", "Ayant survécu à la coupure absolue d'avec la Force, l'Exilé choisit de s'en affranchir et transforme son autonomie et ses compétences en véritable rempart."),
 ]
 
 

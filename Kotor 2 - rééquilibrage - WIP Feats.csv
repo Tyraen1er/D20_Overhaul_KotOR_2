@@ -97,7 +97,7 @@
 
 Effets : +4 Discrétion + furtivité sans ceinture + Course furtive auto (cf. Spé Pouvoirs.csv ; Protecteur migré vers Affranchi de la Force)
 
-Kreia a enseigné que ce qui est né du vide de Malachor V peut apprendre à s'effacer du regard de la Force elle-même. Ce don permet à l'Exilé de se dissimuler sans générateur de camouflage et de se déplacer en silence dans les ombres."
+L'Exilé, dans sa nature de plaie béante de la Force, devient tel un spectre aux yeux des Jedi et du commun des mortels, capable de s'effacer dans l'ombre sans aucun générateur."
 98,FORCE_IMMUNITY_FEAR,Immunité de la Force : Peur,Classe (auto),,Immunité à la Peur (auto Sentinelle),,,
 99,FORCE_IMMUNITY_STUN,Immunité de la Force : Étourdissement,Classe (auto),FORCE_IMMUNITY_FEAR,Immunité à l'Étourdissement,,,
 100,FORCE_IMMUNITY_PARALYSIS,Immunité de la Force : Paralysie,Classe (auto),FORCE_IMMUNITY_FEAR ; FORCE_IMMUNITY_STUN,Immunité à la Paralysie,,,
@@ -147,30 +147,26 @@ Grâce à des réflexes aiguisés par l'entraînement ou la Force, ce don permet
 140,IMPROVED_CLOSE_COMBAT,Combat rapproché II,Actif — distance,Niv. 8 ; CLOSE_COMBAT,Réduit de 4 la pénalité de -10 CA au tir au contact,,,
 141,XXXIMPROVED_FORCE_CAMOUFLAGE,Camouflage de Force II,Caché — pouvoir de prestige,XXXFORCE_CAMOFLAGE,"Caché — Assassin Sith / Protecteur (discrétion sans générateur, cf. Spé Pouvoirs.csv)","Refondu en « Spectre de la Force II » (exclusif Assassin Sith) : +8 Discrétion + embuscade +2d6 dégâts et Stun 1 tour (Vig annule, DD 10 + Niv + Carac)",,"[Mod D20-Overhaul]
 
-Effets : +8 Discrétion + embuscade +2d6 dégâts et Étourdissement 1 tour (Vig annule, DD 10 + Niv + Carac)
-
-En approfondissant les leçons de Kreia sur le silence et la dissimulation dans la Force, l'Exilé fait de sa propre absence un piège mortel. Ses embuscades frappent avec une violence soudaine qui peut étourdir sur place une cible prise au dépourvu."
+Effets : +8 Discrétion + embuscade +2d6 dégâts et Étourdissement 1 tour (Vig annule, DD 10 + Niv + Carac)"
 142,XXXMASTER_FORCE_CAMOUFLAGE,Camouflage de Force III,Caché — pouvoir de prestige,XXXFORCE_CAMOFLAGE ; XXXIMPROVED_FORCE_CAMOUFLAGE,"Caché — Assassin Sith / Protecteur (discrétion sans générateur, cf. Spé Pouvoirs.csv)",Refondu en « Spectre de la Force III » (exclusif Assassin Sith) : +12 Discrétion + chaque kill donne prochain coup critique confirmé (2 rounds) et +25 % esquive 2 rounds,,"[Mod D20-Overhaul]
 
-Effets : +12 Discrétion + chaque élimination donne prochain coup critique confirmé (2 rounds) et +25 % esquive 2 rounds
-
-À l'apogée de cet enseignement, l'écho laissé par l'Exilé dans la Force se referme sur chaque victime abattue. Chaque élimination nourrit instantanément son élan meurtrier, garantissant un coup critique sur la frappe suivante tout en le rendant presque insaisissable."
+Effets : +12 Discrétion + chaque élimination donne prochain coup critique confirmé (2 rounds) et +25 % esquive 2 rounds"
 143,REGENERATE_FORCE_POINTS,Régénération de Force,Classe (auto),Niv. 4,Régénère des PF avec le temps (interne),,,
 144,XXXX_CRUSH_OPPOSITION_I,Écraser l'opposition I,Caché — pouvoir de prestige,,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)","Refondu en « Déchirure de la Force I » (Seigneur Sith, niv. 1) : -2 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
 
 Effets : -2 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)
 
-Comme Kreia l'a révélé, l'Exilé porte en lui une blessure béante dans la Force. En laissant cet écho se propager autour de lui, il ébranle la résolution de ses adversaires et affaiblit leur précision, leur garde et leurs défenses."
+L'Exilé laisse l'écho de la plaie qu'il porte dans la Force se propager autour de lui, ébranlant la précision, la garde et la résistance des adversaires à portée."
 145,XXXX_CRUSH_OPPOSITION_II,Écraser l'opposition II,Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_I,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)","Refondu en « Déchirure de la Force II » (Seigneur Sith, niv. 5) : -4 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
 
 Effets : -4 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)
 
-En amplifiant délibérément l'écho de Malachor V selon les préceptes de Kreia, l'Exilé fissure plus profondément la Force autour de lui, sapant gravement les attaques, la défense et les sauvegardes de tous les ennemis proches."
+L'écho silencieux qui émane de l'Exilé s'amplifie et fissure la Force autour de lui, sapant gravement les attaques, la défense et les sauvegardes de ses ennemis."
 146,XXXX_CRUSH_OPPOSITION_III,Écraser l'opposition III,Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_I ; XXXX_CRUSH_OPPOSITION_II,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)","Refondu en « Déchirure de la Force III » (Seigneur Sith, niv. 9) : -6 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
 
 Effets : -6 Atq, Sauvegardes et Défense en zone 15 m pendant 45 s (Vol annule)
 
-L'Exilé ouvre pleinement la blessure qu'il porte dans la Force. L'onde silencieuse qui en émane écrase la combativité de ses adversaires à portée, réduisant lourdement leur précision, leur garde et leur résistance."
+En ouvrant pleinement sa blessure dans la Force, l'Exilé écrase la combativité de tous les adversaires proches, réduisant lourdement leur précision, leur garde et leur résilience."
 147,XXXX_CRUSH_OPPOSITION_IV,Écraser l'opposition IV,Caché — pouvoir de prestige,,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)",supprimé / inutilisé (Déchirure de la Force uniformisé en 3 rangs max),,
 148,XXXX_CRUSH_OPPOSITION_V,Écraser l'opposition V,Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_IV,"Caché — Seigneur Sith (débuff zone Atq/Volonté, cf. Spé Pouvoirs.csv)",supprimé / inutilisé (Déchirure de la Force uniformisé en 3 rangs max),,
 149,DARK_SIDE_CORRUPTION,Corruption du Côté Obscur,Caché / interne,,Interne — corruption,,,
@@ -190,17 +186,17 @@ L'Exilé ouvre pleinement la blessure qu'il porte dans la Force. L'onde silencie
 
 Effets : partage les améliorations personnels avec l'allié le plus proche
 
-Kreia fut la première à remarquer la faculté singulière de l'Exilé à tisser inconsciemment des Liens de Force avec ceux qui le suivent. En canalisant cet écho, il partage ses propres protections et améliorations avec l'ensemble de ses compagnons."
+Par sa faculté singulière à tisser des Liens de Force profonds avec ceux qui le suivent, l'Exilé fait résonner ses propres protections à travers l'ensemble de ses compagnons."
 163,XXXX_INSPIRE_FOLLOWERS_II,Inspirer les fidèles II,Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_I,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)","Refondu en « Écho des Liens II » (Maître Jedi, niv. 5, 45 s) : partage les buffs personnels avec tout le groupe",,"[Mod D20-Overhaul]
 
 Effets : partage les améliorations personnels avec tout le groupe
 
-Les Liens de Force tissés par l'Exilé gagnent en profondeur et en clarté. L'écho de ses pouvoirs personnels résonne plus longtemps à travers tout le groupe au cœur du combat."
+Les Liens de Force qui unissent l'Exilé à ses compagnons gagnent en profondeur, prolongeant l'écho de ses pouvoirs personnels sur tout le groupe au cœur du combat."
 164,XXXX_INSPIRE_FOLLOWERS_III,Inspirer les fidèles III,Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_I ; XXXX_INSPIRE_FOLLOWERS_II,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)","Refondu en « Écho des Liens III » (Maître Jedi, niv. 9, 60 s) : partage buffs personnels + soins avec tout le groupe (sans restriction d'armure)",,"[Mod D20-Overhaul]
 
 Effets : partage améliorations personnels + soins avec tout le groupe (sans restriction d'armure)
 
-En pleine maîtrise des Liens de Force évoqués par Kreia, l'Exilé projette durablement ses améliorations personnelles sur ses compagnons tout en élevant leur défense et leur résistance."
+En parfaite résonance avec les liens qu'il a forgés dans la Force, l'Exilé projette durablement ses protections personnelles sur ses alliés tout en élevant leur défense."
 165,XXXX_INSPIRE_FOLLOWERS_IV,Inspirer les fidèles IV,Caché — pouvoir de prestige,,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)",supprimé / inutilisé (Écho des Liens uniformisé en 3 rangs max),,
 166,XXXX_INSPIRE_FOLLOWERS_V,Inspirer les fidèles V,Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_IV,"Caché — Maître Jedi (buff de groupe, cf. Spé Pouvoirs.csv)",supprimé / inutilisé (Écho des Liens uniformisé en 3 rangs max),,
 167,LIGHT_SIDE_ENLIGHTENMENT,Illumination (LS),Caché — pouvoir de prestige,,"Caché — Maître Jedi, débloque Illumination de Force (cf. Spé Pouvoirs.csv)",,,
@@ -647,14 +643,14 @@ nouveau (246+),MOD_UNBOUND_FORCE_1,Affranchi de la Force I,Caché — pouvoir de
 
 Effets : Passif toutes armures : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond +3/axe
 
-Selon les enseignements de Kreia, s'abandonner à la Force revient à lui céder sa propre volonté. L'Exilé, qui a survécu à la coupure de Malachor V, sait mieux que quiconque que la véritable force naît de la discipline, de l'ingéniosité et de la maîtrise de soi plutôt que de la dépendance aux courants de la Force."
+Ayant survécu à la coupure absolue d'avec la Force, l'Exilé refuse de s'abandonner à ses courants. Sa véritable puissance naît de sa discipline, de son ingéniosité et de sa seule volonté."
 nouveau (246+),MOD_UNBOUND_FORCE_2,Affranchi de la Force II,Caché — pouvoir de prestige,Jedi Protecteur (auto niv. 5 de prestige),CUSTOM — absent du jeu vanilla,"Plafond +5/axe ; +25 % efficacité des consommables (medpacs, grenades, mines, boucliers)",,"[Mod D20-Overhaul]
 
 Effets : Plafond +5/axe ; +25 % efficacité des consommables (medpacs, grenades, mines, boucliers)
 
-Selon les enseignements de Kreia, s'abandonner à la Force revient à lui céder sa propre volonté. L'Exilé, qui a survécu à la coupure de Malachor V, sait mieux que quiconque que la véritable force naît de la discipline, de l'ingéniosité et de la maîtrise de soi plutôt que de la dépendance aux courants de la Force."
+Ayant survécu à la coupure absolue d'avec la Force, l'Exilé refuse de s'abandonner à ses courants. Sa véritable puissance naît de sa discipline, de son ingéniosité et de sa seule volonté."
 nouveau (246+),MOD_UNBOUND_FORCE_3,Affranchi de la Force III,Caché — pouvoir de prestige,Jedi Protecteur (auto niv. 9 de prestige),CUSTOM — absent du jeu vanilla,Plafond +7/axe ; Résistance à la Force passive (15 + Niveau),,"[Mod D20-Overhaul]
 
 Effets : Plafond +7/axe ; Résistance à la Force passive (15 + Niveau)
 
-Selon les enseignements de Kreia, s'abandonner à la Force revient à lui céder sa propre volonté. L'Exilé, qui a survécu à la coupure de Malachor V, sait mieux que quiconque que la véritable force naît de la discipline, de l'ingéniosité et de la maîtrise de soi plutôt que de la dépendance aux courants de la Force."
+Ayant survécu à la coupure absolue d'avec la Force, l'Exilé refuse de s'abandonner à ses courants. Sa véritable puissance naît de sa discipline, de son ingéniosité et de sa seule volonté."
