@@ -20,6 +20,8 @@ ROOT = Path(__file__).resolve().parent.parent
 GAME_PATH = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
 
 UPGRADES_CSV = ROOT / "Kotor 2 - rééquilibrage - Améliorations.csv"
+FEATS_CSV = ROOT / "Kotor 2 - rééquilibrage - WIP Feats.csv"
+POWERS_CSV = ROOT / "Kotor 2 - rééquilibrage - Spé Pouvoirs.csv"
 GEAR_CSVS = [
     ROOT / "Kotor 2 - rééquilibrage - Casques.csv",
     ROOT / "Kotor 2 - rééquilibrage - Implants.csv",
@@ -144,6 +146,76 @@ def populate_csv(csv_path: Path, inst: Installation, tlk, is_upgrades: bool) -> 
     return updated
 
 
+def populate_feats_csv() -> int:
+    with open(FEATS_CSV, encoding="utf-8-sig", newline="") as fh:
+        rows = list(csv.reader(fh))
+    if not rows:
+        return 0
+    header = rows[0]
+    if "Description (mod)" not in header:
+        header.append("Description (mod)")
+    desc_idx = header.index("Description (mod)")
+    updated = 0
+    for r in rows[1:]:
+        while len(r) <= desc_idx:
+            r.append("")
+        if not r or not r[0].strip():
+            continue
+        id_col = r[0].strip()
+        prereq = r[4].strip() if len(r) > 4 else ""
+        mod_txt = r[6].strip() if len(r) > 6 else ""
+        if id_col.startswith("nouveau"):
+            body = mod_txt or (r[5].strip() if len(r) > 5 else "")
+            if prereq:
+                r[desc_idx] = f"Prérequis : {prereq}\n\n{body}"
+            else:
+                r[desc_idx] = body
+            updated += 1
+        elif id_col.isdigit() and mod_txt and "supprim" not in mod_txt.lower() and mod_txt.lower() not in ("inchangé", "inchange", "-"):
+            r[desc_idx] = f"Effet (Overhaul) : {mod_txt}"
+            updated += 1
+    with open(FEATS_CSV, "w", encoding="utf-8-sig", newline="") as fh:
+        csv.writer(fh).writerows(rows)
+    return updated
+
+
+def populate_powers_csv() -> int:
+    with open(POWERS_CSV, encoding="utf-8-sig", newline="") as fh:
+        rows = list(csv.reader(fh))
+    if not rows:
+        return 0
+    header = rows[0]
+    if "Description (mod)" not in header:
+        header.append("Description (mod)")
+    desc_idx = header.index("Description (mod)")
+    updated = 0
+    for r in rows[1:]:
+        while len(r) <= desc_idx:
+            r.append("")
+        if len(r) < 5 or not r[0].strip():
+            continue
+        arm = r[1].strip().replace("Armure moyenne", "Armure intermédiaire").replace("Armure interdite", "Bure uniquement")
+        pf = r[2].strip()
+        eff_van = r[3].strip()
+        chg = r[4].strip()
+        if not arm and not pf and not chg:
+            continue
+        lines = []
+        if arm:
+            lines.append(f"Armure max : {arm}")
+        if pf:
+            lines.append(f"Coût PF (R1/R2/R3) : {pf}")
+        body = chg if chg else eff_van
+        if body:
+            lines.append("")
+            lines.append(body)
+        r[desc_idx] = "\n".join(lines).strip()
+        updated += 1
+    with open(POWERS_CSV, "w", encoding="utf-8-sig", newline="") as fh:
+        csv.writer(fh).writerows(rows)
+    return updated
+
+
 def main() -> None:
     inst = Installation(GAME_PATH)
     tlk = read_tlk(GAME_PATH / "dialog.tlk")
@@ -154,7 +226,11 @@ def main() -> None:
         n = populate_csv(path, inst, tlk, is_upgrades=False)
         print(f"[OK] {path.name} : {n} descriptions remplies dans `Description (mod)`")
         total_gear += n
-    print(f"=== TOTAL : {n_up + total_gear} descriptions générées dans les CSV ===")
+    n_feats = populate_feats_csv()
+    print(f"[OK] {FEATS_CSV.name} : {n_feats} descriptions remplies dans `Description (mod)`")
+    n_pow = populate_powers_csv()
+    print(f"[OK] {POWERS_CSV.name} : {n_pow} descriptions remplies dans `Description (mod)`")
+    print(f"=== TOTAL : {n_up + total_gear + n_feats + n_pow} descriptions générées dans les CSV ===")
 
 
 if __name__ == "__main__":

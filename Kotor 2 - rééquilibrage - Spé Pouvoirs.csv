@@ -1,140 +1,272 @@
-﻿Pouvoir de la Force (VO / VF),Armure max autorisée,Coût PF (L1/L2/L3),Effets par niveau (extraits du jeu),Changement,Obtention,Règle du jeu de base (sans feats)
+﻿Pouvoir de la Force (VO / VF),Armure max autorisée,Coût PF (L1/L2/L3),Effets par niveau (extraits du jeu),Changement,Obtention,Règle du jeu de base (sans feats),Description (mod)
 "Force Aura / Force Shield / Force Armor (LS)
 Aura de Force / Bouclier de Force / Armure de Force",Armure interdite,15 / 25 / 35,"L1 : +2 Défense et sauvegardes, 20 s
 L2 : +4 Défense et sauvegardes, 20 s (Niv. 6)
-L3 : +6 Défense et sauvegardes, 20 s (Niv. 12)",,Power selection,
+L3 : +6 Défense et sauvegardes, 20 s (Niv. 12)",,Power selection,,"Armure max : Bure uniquement
+Coût PF (R1/R2/R3) : 15 / 25 / 35
+
+L1 : +2 Défense et sauvegardes, 20 s
+L2 : +4 Défense et sauvegardes, 20 s (Niv. 6)
+L3 : +6 Défense et sauvegardes, 20 s (Niv. 12)"
 "Force Barrier / Improved / Master (LS)
 Barrière de Force / améliorée / de maître",Armure moyenne,15 / 25 / 35,"L1 : RD 4 physique (tranchant, contondant, perforant), 30 s (Niv. 6)
 L2 : RD 8 physique, 45 s (Niv. 9)
-L3 : RD 15 physique, 60 s (Niv. 15)","RD 4 / 8 / 12 physique (personnel, 60 s)",Power selection,
+L3 : RD 15 physique, 60 s (Niv. 15)","RD 4 / 8 / 12 physique (personnel, 60 s)",Power selection,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 15 / 25 / 35
+
+RD 4 / 8 / 12 physique (personnel, 60 s)"
 "Force Valor / Knight Valor / Master Valor (LS)
 Talent de Force / Talent de chevalier / Talent de maître",Armure légère,15 / 30 / 45,"L1 : +2 caracs physiques et sauvegardes, groupe, 20 s
 L2 : +3 et immunité Poison, groupe, 20 s (Niv. 9)
-L3 : +5 et immunité Poison, groupe, 20 s (Niv. 15)",+2 / +3 / +4 aux 6 caractéristiques (groupe) + immunité Poison (L2/L3),Power selection,
+L3 : +5 et immunité Poison, groupe, 20 s (Niv. 15)",+2 / +3 / +4 aux 6 caractéristiques (groupe) + immunité Poison (L2/L3),Power selection,,"Armure max : Armure légère
+Coût PF (R1/R2/R3) : 15 / 30 / 45
+
++2 / +3 / +4 aux 6 caractéristiques (groupe) + immunité Poison (L2/L3)"
 "Cure / Heal / Master Heal (LS)
 Guérison / Soins améliorés / Soins de maître",Armure moyenne,20 / 35 / 50,"L1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6)
 L2 : 15 PV + mods, neutralise le Poison (Niv. 12)
-L3 : 15 PV + mods + 2 × Niveau, neutralise Poison et Étourdissement (Niv. 18)",,Power selection,
+L3 : 15 PV + mods + 2 × Niveau, neutralise Poison et Étourdissement (Niv. 18)",,Power selection,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 20 / 35 / 50
+
+L1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6)
+L2 : 15 PV + mods, neutralise le Poison (Niv. 12)
+L3 : 15 PV + mods + 2 × Niveau, neutralise Poison et Étourdissement (Niv. 18)"
 "Revitalize / Improved / Master (LS)
 Revitalisation / améliorée / de maître",Armure moyenne,35 / 50 / 65,"L1 : ranime l'allié le plus proche avec 5 % de ses PV max (Niv. 9)
 L2 : ranime tous les alliés tombés, 5 % (Niv. 15)
 L3 : ranime tous les alliés tombés, 10 % (Niv. 21)","10 % lvl 1 - le membre le plus proche
 20 % lvl 2 - les deux membres les plus proches
-30 % lvl 3 - tout le groupe",Power selection,
+30 % lvl 3 - tout le groupe",Power selection,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 35 / 50 / 65
+
+10 % lvl 1 - le membre le plus proche
+20 % lvl 2 - les deux membres les plus proches
+30 % lvl 3 - tout le groupe"
 "Stun / Stasis / Stasis Field (LS)
 Étourdissement / Stase / Champ de stase",Armure interdite,15 / 30 / 50,"L1 : 1 cible étourdie 9 s (Vigueur réussie : ralentie), DD 5 + Niv + SAG + CHA
 L2 : 1 cible en stase 12 s (Vigueur : ralentie) (Niv. 9)
-L3 : tous les ennemis à 10 m de la cible, 12 s (Niv. 15)",L3 (zone 10 m) : durée max portée à 36 s (6 rounds) avec un jet de Vigueur chaque round à DD dégressif (-3 au DD/round) pour s'échapper (si jet initial réussi : ralenti 12 s),Power selection,
+L3 : tous les ennemis à 10 m de la cible, 12 s (Niv. 15)",L3 (zone 10 m) : durée max portée à 36 s (6 rounds) avec un jet de Vigueur chaque round à DD dégressif (-3 au DD/round) pour s'échapper (si jet initial réussi : ralenti 12 s),Power selection,,"Armure max : Bure uniquement
+Coût PF (R1/R2/R3) : 15 / 30 / 50
+
+L3 (zone 10 m) : durée max portée à 36 s (6 rounds) avec un jet de Vigueur chaque round à DD dégressif (-3 au DD/round) pour s'échapper (si jet initial réussi : ralenti 12 s)"
 "Stun Droid / Disable Droid / Destroy Droid (LS)
 Étourdissement / Désactivation / Destruction de droïde",Armure moyenne,10 / 20 / 35,"L1 : 1 droïde immobilisé 12 s, dégâts = Niveau (Vigueur : annule et ½ dégâts)
 L2 : tous les droïdes à 5 m de la cible, 12 s, dégâts = Niveau (Niv. 6)
-L3 : tous les droïdes à 6 m, 1-6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)",,Power selection,
+L3 : tous les droïdes à 6 m, 1-6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)",,Power selection,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 10 / 20 / 35
+
+L1 : 1 droïde immobilisé 12 s, dégâts = Niveau (Vigueur : annule et ½ dégâts)
+L2 : tous les droïdes à 5 m de la cible, 12 s, dégâts = Niveau (Niv. 6)
+L3 : tous les droïdes à 6 m, 1-6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)"
 "Battle Precognition (LS)
-Prémonition du combat",Armure lourde,0,Unique : ajoute le modificateur de Sagesse à la Défense (passif),Remplacé par +10 % d'esquive en mêlée (récompense Echani),Quete,
+Prémonition du combat",Armure lourde,0,Unique : ajoute le modificateur de Sagesse à la Défense (passif),Remplacé par +10 % d'esquive en mêlée (récompense Echani),Quete,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 0
+
+Remplacé par +10 % d'esquive en mêlée (récompense Echani)"
 "Force Enlightenment (LS)
-Grâce du côté Lumineux",Armure moyenne,50,"Unique : active simultanément Vitesse, Armure et Talent de Force au rang max possédé, à coût réduit","Lancer instantané (coût 50 PF) ; lance les 3 buffs au rang max possédé (+1 cran d'armure en ultime), avec Vitesse plafonnée à +1 atq/round si une armure est portée (+2 atq/round uniquement en Robe)",Quete / Lumineux max,
+Grâce du côté Lumineux",Armure moyenne,50,"Unique : active simultanément Vitesse, Armure et Talent de Force au rang max possédé, à coût réduit","Lancer instantané (coût 50 PF) ; lance les 3 buffs au rang max possédé (+1 cran d'armure en ultime), avec Vitesse plafonnée à +1 atq/round si une armure est portée (+2 atq/round uniquement en Robe)",Quete / Lumineux max,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 50
+
+Lancer instantané (coût 50 PF) ; lance les 3 buffs au rang max possédé (+1 cran d'armure en ultime), avec Vitesse plafonnée à +1 atq/round si une armure est portée (+2 atq/round uniquement en Robe)"
 "Inspire Followers I-VI (LS)
 Inspiration des disciples I-VI",Armure lourde,25 / 35 / 45,"L1 : +1 Attaque, Dégâts et Volonté (groupe, 45 s, hors droïdes)
 L2 : +2 (Maître Jedi niv. 5)
 L3 : +3 (niv. 9)
 L4 : +4 (niv. 13)
 L5 : +5 (niv. 17)
-L6 : +6 (niv. 21)","Refondu en « Écho des Liens I–III » (niv. 1/5/9 de prestige) : L1 (30 s) partage les buffs personnels du Maître Jedi avec l'allié le plus proche ; L2 (45 s) avec tout le groupe ; L3 (60 s) buffs personnels + soins (pouvoirs/medpacs/régén.) partagés avec tout le groupe (sans restriction d'armure sur les alliés, comme Kreia)",Prestige Maître Jedi,
+L6 : +6 (niv. 21)","Refondu en « Écho des Liens I–III » (niv. 1/5/9 de prestige) : L1 (30 s) partage les buffs personnels du Maître Jedi avec l'allié le plus proche ; L2 (45 s) avec tout le groupe ; L3 (60 s) buffs personnels + soins (pouvoirs/medpacs/régén.) partagés avec tout le groupe (sans restriction d'armure sur les alliés, comme Kreia)",Prestige Maître Jedi,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 25 / 35 / 45
+
+Refondu en « Écho des Liens I–III » (niv. 1/5/9 de prestige) : L1 (30 s) partage les buffs personnels du Maître Jedi avec l'allié le plus proche ; L2 (45 s) avec tout le groupe ; L3 (60 s) buffs personnels + soins (pouvoirs/medpacs/régén.) partagés avec tout le groupe (sans restriction d'armure sur les alliés, comme Kreia)"
 "Affect Mind / Domination (neutre)
 Influence / Domination",Armure lourde,0,"L1 : options de persuasion supplémentaires en dialogue (hors droïdes)
-L2 : Domination : version renforcée, résistance rare (Niv. 6)",,Dialogue,
+L2 : Domination : version renforcée, résistance rare (Niv. 6)",,Dialogue,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 0
+
+L1 : options de persuasion supplémentaires en dialogue (hors droïdes)
+L2 : Domination : version renforcée, résistance rare (Niv. 6)"
 "Battle Meditation / Improved / Master (neutre)
 Méditation de combat / améliorée / de maître",Armure moyenne,25 / 35 / 50,"L1 : groupe +2 Attaque, Dégâts et Volonté + régén. PV accélérée, 20 s (Niv. 6)
 L2 : + ennemis à 10 m : malus (Volonté annule) (Niv. 12)
-L3 : groupe +4 ; ennemis à 15 m (Niv. 18)","L1 : groupe +mod. CHA (Atq, Dég, Vol + régén. PV, non plafonné) ; L2 : ajoute malus ennemis -mod. CHA à 10 m (Volonté annule) ; L3 : +2 au bonus et au malus, portée 15 m (Volonté annule)",Power selection,
+L3 : groupe +4 ; ennemis à 15 m (Niv. 18)","L1 : groupe +mod. CHA (Atq, Dég, Vol + régén. PV, non plafonné) ; L2 : ajoute malus ennemis -mod. CHA à 10 m (Volonté annule) ; L3 : +2 au bonus et au malus, portée 15 m (Volonté annule)",Power selection,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 25 / 35 / 50
+
+L1 : groupe +mod. CHA (Atq, Dég, Vol + régén. PV, non plafonné) ; L2 : ajoute malus ennemis -mod. CHA à 10 m (Volonté annule) ; L3 : +2 au bonus et au malus, portée 15 m (Volonté annule)"
 "Burst of Speed / Knight Speed / Master Speed (neutre)
 Pointe de vitesse / Vitesse de chevalier / Vitesse de maître",Armure interdite,15 / 30 / 45,"L1 : vitesse de déplacement ×2, +2 Défense, 36 s
 L2 : +4 Défense et +1 attaque/round (Niv. 9)
-L3 : +4 Défense et +2 attaques/round (Niv. 15)",,Power selection,
+L3 : +4 Défense et +2 attaques/round (Niv. 15)",,Power selection,,"Armure max : Bure uniquement
+Coût PF (R1/R2/R3) : 15 / 30 / 45
+
+L1 : vitesse de déplacement ×2, +2 Défense, 36 s
+L2 : +4 Défense et +1 attaque/round (Niv. 9)
+L3 : +4 Défense et +2 attaques/round (Niv. 15)"
 "Energy Resistance / Improved / Master (neutre)
 Résistance à l'énergie / améliorée / de maître",Armure moyenne,15 / 25 / 35,"L1 : RD 6 (énergie, sonique, feu, froid, électricité), 120 s
 L2 : RD 12 (Niv. 9)
-L3 : RD 20, tout le groupe (Niv. 17)","RD 4 / 8 / 12 (personnel, 60 s ; plus d'effet groupe ni d'immunité Poison)",Power selection,
+L3 : RD 20, tout le groupe (Niv. 17)","RD 4 / 8 / 12 (personnel, 60 s ; plus d'effet groupe ni d'immunité Poison)",Power selection,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 15 / 25 / 35
+
+RD 4 / 8 / 12 (personnel, 60 s ; plus d'effet groupe ni d'immunité Poison)"
 "Force Body / Improved / Master (neutre)
 Corps de Force / amélioré / de maître",Armure lourde,0,"L1 : coûts payés 50 % PF / 50 % PV, 30 s
 L2 : 40 % / 40 % (Niv. 9)
-L3 : 30 % / 30 % (Niv. 15)",Coût 50/40/30 % PV + +2 / +4 / +6 au DD des pouvoirs utilisables sous armure,Power selection,
+L3 : 30 % / 30 % (Niv. 15)",Coût 50/40/30 % PV + +2 / +4 / +6 au DD des pouvoirs utilisables sous armure,Power selection,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 0
+
+Coût 50/40/30 % PV + +2 / +4 / +6 au DD des pouvoirs utilisables sous armure"
 "Force Deflection / Force Redirection (neutre)
 Parade grâce à la Force / Renvoi grâce à la Force",Armure lourde,0,"L1 : pare les tirs de blaster sans sabre (permanent) (Niv. 6)
-L2 : pare et renvoie les tirs, +3 aux jets de parade (Niv. 12)",Pare/renvoie sans sabre + +2 / +4 Défense contre les attaques à distance,Power selection,
+L2 : pare et renvoie les tirs, +3 aux jets de parade (Niv. 12)",Pare/renvoie sans sabre + +2 / +4 Défense contre les attaques à distance,Power selection,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 0
+
+Pare/renvoie sans sabre + +2 / +4 Défense contre les attaques à distance"
 "Force Push / Force Whirlwind / Force Wave (neutre)
 Poussée de Force / Tourbillon de Force / Vague de Force",Armure moyenne,15 / 25 / 40,"L1 : 1 cible repoussée 5 m, jetée au sol, étourdie 3 s, dégâts = Niveau (Réflexes : pas d'étourdissement, ½ dégâts)
 L2 : 1 cible immobilisée 12 s, dégâts 1/3 Niveau / 2 s (Réflexes annule tout) (Niv. 9)
-L3 : zone 15 m : ennemis repoussés 5 m, au sol, étourdis 12 s, dégâts 1,5 × Niveau (Réflexes : ½ et pas d'étourdissement) (Niv. 15)","L2 (Tourbillon, 1 cible) : Réflexes réussie inflige ½ dégâts immédiats (1 × Niv) au lieu de tout annuler ; L3 (Vague de Force) transformé en Tourbillon de zone 6 m, durée 12 s, 1/3 Niv toutes les 2 s (total 2 × Niv ; Réflexes réussie : ½ dégâts immédiats et non soulevé)",Power selection,
+L3 : zone 15 m : ennemis repoussés 5 m, au sol, étourdis 12 s, dégâts 1,5 × Niveau (Réflexes : ½ et pas d'étourdissement) (Niv. 15)","L2 (Tourbillon, 1 cible) : Réflexes réussie inflige ½ dégâts immédiats (1 × Niv) au lieu de tout annuler ; L3 (Vague de Force) transformé en Tourbillon de zone 6 m, durée 12 s, 1/3 Niv toutes les 2 s (total 2 × Niv ; Réflexes réussie : ½ dégâts immédiats et non soulevé)",Power selection,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 15 / 25 / 40
+
+L2 (Tourbillon, 1 cible) : Réflexes réussie inflige ½ dégâts immédiats (1 × Niv) au lieu de tout annuler ; L3 (Vague de Force) transformé en Tourbillon de zone 6 m, durée 12 s, 1/3 Niv toutes les 2 s (total 2 × Niv ; Réflexes réussie : ½ dégâts immédiats et non soulevé)"
 "Force Resistance / Force Immunity (neutre)
 Résistance à la Force / Immunité contre la Force",Armure lourde,20 / 35,"L1 : l'attaquant lance 1d20 + son Niveau vs DD 10 + Niveau du défenseur, sinon sans effet, 60 s (Niv. 9)
-L2 : Immunité : DD 15 + Niveau (Niv. 15)",,Power selection,
+L2 : Immunité : DD 15 + Niveau (Niv. 15)",,Power selection,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 20 / 35
+
+L1 : l'attaquant lance 1d20 + son Niveau vs DD 10 + Niveau du défenseur, sinon sans effet, 60 s (Niv. 9)
+L2 : Immunité : DD 15 + Niveau (Niv. 15)"
 "Force Suppression / Force Breach (neutre)
 Suppression de Force / Destruction de Force",Armure légère,20 / 35,"L1 : dissipe les effets de rang I-III sur la cible (Aura, Talent, Vitesse, Résistances…) (Niv. 9)
-L2 : Destruction de Force : dissipe tous les effets de soutien (Niv. 15)",,Power selection,
+L2 : Destruction de Force : dissipe tous les effets de soutien (Niv. 15)",,Power selection,,"Armure max : Armure légère
+Coût PF (R1/R2/R3) : 20 / 35
+
+L1 : dissipe les effets de rang I-III sur la cible (Aura, Talent, Vitesse, Résistances…) (Niv. 9)
+L2 : Destruction de Force : dissipe tous les effets de soutien (Niv. 15)"
 "Mind Trick / Confusion (neutre)
 Subterfuge / Confusion",Armure moyenne,15 / 35,"L1 : distrait une cible 30 s (passe inaperçu à côté d'elle)
-L2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)",,Power selection (évolution d'Affect Mind),
+L2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)",,Power selection (évolution d'Affect Mind),,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 15 / 35
+
+L1 : distrait une cible 30 s (passe inaperçu à côté d'elle)
+L2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)"
 "Throw Lightsaber / Advanced (neutre)
 Lancer de sabre laser / amélioré",Armure lourde,15 / 30,"L1 : 1 cible à 5 m+, touche automatiquement, 1-6 dégâts / 2 Niveaux (sabre requis)
-L2 : jusqu'à 3 cibles en chaîne (5 m entre elles) (Niv. 9)","L1 : touche auto, 1d4/Niv + Renversement 1 tour (Vigueur annule) ; L2 : 3 cibles en chaîne, 1d4/Niv + ignore la RD",Power selection,
+L2 : jusqu'à 3 cibles en chaîne (5 m entre elles) (Niv. 9)","L1 : touche auto, 1d4/Niv + Renversement 1 tour (Vigueur annule) ; L2 : 3 cibles en chaîne, 1d4/Niv + ignore la RD",Power selection,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 15 / 30
+
+L1 : touche auto, 1d4/Niv + Renversement 1 tour (Vigueur annule) ; L2 : 3 cibles en chaîne, 1d4/Niv + ignore la RD"
 "Beast Trick / Beast Confusion (neutre)
 Subterfuge contre les bêtes / Confusion des bêtes",Armure lourde,10 / 20,"L1 : distrait une bête féroce 30 s
-L2 : la bête combat pour vous 30 s (prestige)",,Quête / Dialogue (Kreia sur Dxun),
+L2 : la bête combat pour vous 30 s (prestige)",,Quête / Dialogue (Kreia sur Dxun),,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 10 / 20
+
+L1 : distrait une bête féroce 30 s
+L2 : la bête combat pour vous 30 s (prestige)"
 "Breath Control (neutre)
-Contrôle de la respiration",Armure lourde,15,"Unique : immunité au Poison et aux gaz toxiques, 240 s","Passif : +4 aux jets de sauvegarde contre le Poison (permanent) ; Actif (15 PF) : immunité au Poison et aux gaz toxiques pendant 240 s",Quête / Dialogue (Kreia avant le Jekk'Jekk Tarr sur Nar Shaddaa),
+Contrôle de la respiration",Armure lourde,15,"Unique : immunité au Poison et aux gaz toxiques, 240 s",Passif : +4 aux jets de sauvegarde contre le Poison (permanent) ; Actif (15 PF) : immunité au Poison et aux gaz toxiques pendant 240 s,Quête / Dialogue (Kreia avant le Jekk'Jekk Tarr sur Nar Shaddaa),,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 15
+
+Passif : +4 aux jets de sauvegarde contre le Poison (permanent) ; Actif (15 PF) : immunité au Poison et aux gaz toxiques pendant 240 s"
 "Force Camouflage / Improved / Master (neutre)
 Camouflage par la Force / Science / Maîtrise du camouflage",Armure moyenne,0,"L1 : Discrétion sans générateur de camouflage (permanent)
 L2 : +4 en Discrétion (Niv. 7)
 L3 : +8 en Discrétion (Niv. 13)","Renommé « Spectre de la Force I–III » (exclusif Assassin Sith, niv. 1/5/9 de prestige) :
 L1 : +4 Discrétion + furtivité sans ceinture + Course furtive auto
 L2 : +8 Discrétion + embuscade (sortie de furtivité) inflige +2d6 dégâts et Étourdit 1 tour (Vig annule, DD 10 + Niv + Carac)
-L3 : +12 Discrétion + chaque kill donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)",Prestige Assassin Sith,
+L3 : +12 Discrétion + chaque kill donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)",Prestige Assassin Sith,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 0
+
+Renommé « Spectre de la Force I–III » (exclusif Assassin Sith, niv. 1/5/9 de prestige) :
+L1 : +4 Discrétion + furtivité sans ceinture + Course furtive auto
+L2 : +8 Discrétion + embuscade (sortie de furtivité) inflige +2d6 dégâts et Étourdit 1 tour (Vig annule, DD 10 + Niv + Carac)
+L3 : +12 Discrétion + chaque kill donne : prochaine attaque = critique confirmé (si portée dans les 2 rounds / 12 s) et +25 % d'esquive pendant 2 rounds (non cumulable, réinitialisable)"
 "Force Sight (neutre)
-Vision de Force",Armure lourde,10,"Unique : voit à travers certains obstacles, détection des êtres et camouflages (permanent)",,Quête / Dialogue (Visas Marr avec haute influence),
+Vision de Force",Armure lourde,10,"Unique : voit à travers certains obstacles, détection des êtres et camouflages (permanent)",,Quête / Dialogue (Visas Marr avec haute influence),,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 10
+
+Unique : voit à travers certains obstacles, détection des êtres et camouflages (permanent)"
 "Precognition (neutre)
-Prémonition",Armure lourde,0,"Unique : alerte le Jedi en cas de grand danger imminent (contextuel, passif)",,Quête / Dialogue (Histoire principale avec Kreia),
+Prémonition",Armure lourde,0,"Unique : alerte le Jedi en cas de grand danger imminent (contextuel, passif)",,Quête / Dialogue (Histoire principale avec Kreia),,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 0
+
+Unique : alerte le Jedi en cas de grand danger imminent (contextuel, passif)"
 "Drain Force / Improved / Master (DS)
 Absorption de Force / améliorée / de maître",Armure lourde,5 / 10 / 15,"L1 : 1 cible perd 10 PF, récupérés par le Jedi (Volonté ½)
 L2 : 20 PF (Niv. 9)
-L3 : zone 10 m : tous les ennemis perdent 30 PF (Niv. 15)",Draine 15 / 30 / 45 + Niveau PF et inflige la moitié en dégâts directs aux utilisateurs de Force,Power selection,
+L3 : zone 10 m : tous les ennemis perdent 30 PF (Niv. 15)",Draine 15 / 30 / 45 + Niveau PF et inflige la moitié en dégâts directs aux utilisateurs de Force,Power selection,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 5 / 10 / 15
+
+Draine 15 / 30 / 45 + Niveau PF et inflige la moitié en dégâts directs aux utilisateurs de Force"
 "Drain Life / Death Field / Death Feast (DS)
 Absorption de vie / Champ de mort / Festin de mort",Armure interdite,20 / 40 / 55,"L1 : 1 cible : 1-4 PV / Niveau absorbés et soignent le Jedi (Vigueur ½) (Niv. 9)
-L2 : Champ de mort : zone 10 m (Niv. 18)","L1 (Niv. 9, 1 cible) & L2 (Niv. 15, zone 10 m) : 1d3/Niv sans cap, 100 % des dégâts = soin (Vig ½) ; L3 « Festin de mort » (Niv. 18, zone 10 m) : 1d3/Niv, 100 % des dégâts = soin + excédent au-delà des PV max converti en PV temporaires (EffectTemporaryHitpoints) pendant 24 s (non cumulable, rafraîchi à chaque lancer ; Vig ½)",Power selection,
+L2 : Champ de mort : zone 10 m (Niv. 18)","L1 (Niv. 9, 1 cible) & L2 (Niv. 15, zone 10 m) : 1d3/Niv sans cap, 100 % des dégâts = soin (Vig ½) ; L3 « Festin de mort » (Niv. 18, zone 10 m) : 1d3/Niv, 100 % des dégâts = soin + excédent au-delà des PV max converti en PV temporaires (EffectTemporaryHitpoints) pendant 24 s (non cumulable, rafraîchi à chaque lancer ; Vig ½)",Power selection,,"Armure max : Bure uniquement
+Coût PF (R1/R2/R3) : 20 / 40 / 55
+
+L1 (Niv. 9, 1 cible) & L2 (Niv. 15, zone 10 m) : 1d3/Niv sans cap, 100 % des dégâts = soin (Vig ½) ; L3 « Festin de mort » (Niv. 18, zone 10 m) : 1d3/Niv, 100 % des dégâts = soin + excédent au-delà des PV max converti en PV temporaires (EffectTemporaryHitpoints) pendant 24 s (non cumulable, rafraîchi à chaque lancer ; Vig ½)"
 "Fear / Horror / Insanity (DS)
 Terreur / Horreur / Insanité",Armure légère,15 / 25 / 45,"L1 : 1 cible s'enfuit 6 s (Volonté annule)
 L2 : ennemis à 5 m de la cible tétanisés 12 s (Niv. 6)
-L3 : ennemis à 10 m tétanisés 18 s (Niv. 12)","Plus de perte d'action : DoT mental + gros malus d'Attaque — L1 (1 cible) -4 Atq, L2 (5 m) -6 Atq, L3 (10 m) -8 Atq + Niveau dégâts mentaux/round pendant 24 s (4 rounds) sur échec de Volonté ; limité à 6 s (1 round) si Volonté réussie",Power selection,
+L3 : ennemis à 10 m tétanisés 18 s (Niv. 12)","Plus de perte d'action : DoT mental + gros malus d'Attaque — L1 (1 cible) -4 Atq, L2 (5 m) -6 Atq, L3 (10 m) -8 Atq + Niveau dégâts mentaux/round pendant 24 s (4 rounds) sur échec de Volonté ; limité à 6 s (1 round) si Volonté réussie",Power selection,,"Armure max : Armure légère
+Coût PF (R1/R2/R3) : 15 / 25 / 45
+
+Plus de perte d'action : DoT mental + gros malus d'Attaque — L1 (1 cible) -4 Atq, L2 (5 m) -6 Atq, L3 (10 m) -8 Atq + Niveau dégâts mentaux/round pendant 24 s (4 rounds) sur échec de Volonté ; limité à 6 s (1 round) si Volonté réussie"
 "Force Scream / Improved / Master (DS)
 Cri de Force / amélioré / de maître",Armure légère,15 / 25 / 40,"L1 : 3d6 dégâts soniques + -2 caracs, cône 10 m, 30 s (Volonté : ½ et annule le malus, DD 10 + Niv + SAG + CHA)
 L2 : 5d6 + -4 caracs (Niv. 9)
-L3 : 7d6 + -6 caracs (Niv. 15)","L1 : 1d3/Niv (-2 caracs) ; L2 : 1d4/Niv (-4 caracs) ; L3 : 1d4/Niv sans cap (-6 caracs) ; Volonté : ½ dégâts et annule le malus",Power selection,
+L3 : 7d6 + -6 caracs (Niv. 15)",L1 : 1d3/Niv (-2 caracs) ; L2 : 1d4/Niv (-4 caracs) ; L3 : 1d4/Niv sans cap (-6 caracs) ; Volonté : ½ dégâts et annule le malus,Power selection,,"Armure max : Armure légère
+Coût PF (R1/R2/R3) : 15 / 25 / 40
+
+L1 : 1d3/Niv (-2 caracs) ; L2 : 1d4/Niv (-4 caracs) ; L3 : 1d4/Niv sans cap (-6 caracs) ; Volonté : ½ dégâts et annule le malus"
 "Shock / Force Lightning / Force Storm (DS)
 Choc / Foudre / Tempête de Force",Armure interdite,15 / 30 / 50,"L1 : 1 cible : 1-6 dégâts / Niveau (Volonté ½)
 L2 : Foudre : cône 16 m, 1-6/Niveau, max 10-60 (Niv. 9)
-L3 : Tempête : zone 10 m + draine 1-6 PF / Niveau (Niv. 18)","1d6/Niv sans cap en L3 (L1 cible, L2 cône, L3 zone 10 m) ; suppression du drain de PF ennemi ; sauvegarde passée de Volonté à Réflexes (½ dégâts, Esquive Totale s'applique)",Power selection,
+L3 : Tempête : zone 10 m + draine 1-6 PF / Niveau (Niv. 18)","1d6/Niv sans cap en L3 (L1 cible, L2 cône, L3 zone 10 m) ; suppression du drain de PF ennemi ; sauvegarde passée de Volonté à Réflexes (½ dégâts, Esquive Totale s'applique)",Power selection,,"Armure max : Bure uniquement
+Coût PF (R1/R2/R3) : 15 / 30 / 50
+
+1d6/Niv sans cap en L3 (L1 cible, L2 cône, L3 zone 10 m) ; suppression du drain de PF ennemi ; sauvegarde passée de Volonté à Réflexes (½ dégâts, Esquive Totale s'applique)"
 "Slow / Affliction / Plague (DS)
 Lenteur / Affliction / Peste",Armure moyenne,15 / 25 / 35,"L1 : 1 action partielle/round, -2 Défense, Attaque, Dégâts et Réflexes, 30 s (Volonté annule)
 L2 : Affliction : -7 caracs (1 pt/3 s, 21 s) + ralenti (Vigueur DD 20) (Niv. 6)
-L3 : Peste : -12 toutes caracs (1 pt/s, 12 s) + ralenti, DD 100 impassable (Niv. 12)","Maladie (durée max 42 s, tick toutes les 6 s, se propage à 5 m à la mort de la cible) : ralenti (-50 % dépl.) + ½ Niv dégâts/tick + malus aux 6 caracs ; jet de Vigueur à chaque tick pour stopper la maladie — L1 : -3 caracs (DD normal) ; L2 : -6 caracs (DD +4) ; L3 : -9 caracs (DD +8)",Power selection,
+L3 : Peste : -12 toutes caracs (1 pt/s, 12 s) + ralenti, DD 100 impassable (Niv. 12)","Maladie (durée max 42 s, tick toutes les 6 s, se propage à 5 m à la mort de la cible) : ralenti (-50 % dépl.) + ½ Niv dégâts/tick + malus aux 6 caracs ; jet de Vigueur à chaque tick pour stopper la maladie — L1 : -3 caracs (DD normal) ; L2 : -6 caracs (DD +4) ; L3 : -9 caracs (DD +8)",Power selection,,"Armure max : Armure intermédiaire
+Coût PF (R1/R2/R3) : 15 / 25 / 35
+
+Maladie (durée max 42 s, tick toutes les 6 s, se propage à 5 m à la mort de la cible) : ralenti (-50 % dépl.) + ½ Niv dégâts/tick + malus aux 6 caracs ; jet de Vigueur à chaque tick pour stopper la maladie — L1 : -3 caracs (DD normal) ; L2 : -6 caracs (DD +4) ; L3 : -9 caracs (DD +8)"
 "Wound / Choke / Kill (DS)
 Blessure / Etouffement / Mise à mort",Armure interdite,15 / 30 / 45,"L1 : dégâts 2/3 Niveau / 2 s pendant 6 s (Vigueur annule)
 L2 : Etouffement : cible étourdie 6 s + dégâts 2/3 Niveau / 2 s (Niv. 9)
-L3 : Mise à mort : cible étouffe 6 s et perd 50 % de ses PV max (Vigueur : dégâts réduits au Niveau, pas d'étouffement) (Niv. 12)","Suppression du 50 % PV max ; L1 : 1d4/Niv (Vig ½) ; L2 : 1d6/Niv + stun 6 s ; L3 : 1d8/Niv sans cap + stun 6 s (Vig ½ et annule stun)",Power selection,
+L3 : Mise à mort : cible étouffe 6 s et perd 50 % de ses PV max (Vigueur : dégâts réduits au Niveau, pas d'étouffement) (Niv. 12)",Suppression du 50 % PV max ; L1 : 1d4/Niv (Vig ½) ; L2 : 1d6/Niv + stun 6 s ; L3 : 1d8/Niv sans cap + stun 6 s (Vig ½ et annule stun),Power selection,,"Armure max : Bure uniquement
+Coût PF (R1/R2/R3) : 15 / 30 / 45
+
+Suppression du 50 % PV max ; L1 : 1d4/Niv (Vig ½) ; L2 : 1d6/Niv + stun 6 s ; L3 : 1d8/Niv sans cap + stun 6 s (Vig ½ et annule stun)"
 "Crush Opposition I-VI (DS)
 Annihilation de l'opposition I-VI",Armure lourde,25 / 35 / 45,"L1 : -1 Attaque et Volonté, ennemis zone 15 m, 45 s (Volonté annule)
 L2 : -2 (Seigneur Sith niv. 5)
 L3 : -3 (niv. 9)
 L4 : -4 (niv. 13)
 L5 : -5 (niv. 17)
-L6 : -6 (niv. 21)","Renommé « Déchirure de la Force I–III » et uniformisé en L3 max (niv. 1/5/9 de prestige) : -2 / -4 / -6 Attaque, Sauvegardes et Défense aux ennemis en zone 15 m pendant 45 s (Volonté annule)",Prestige Seigneur Sith,
+L6 : -6 (niv. 21)","Renommé « Déchirure de la Force I–III » et uniformisé en L3 max (niv. 1/5/9 de prestige) : -2 / -4 / -6 Attaque, Sauvegardes et Défense aux ennemis en zone 15 m pendant 45 s (Volonté annule)",Prestige Seigneur Sith,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 25 / 35 / 45
+
+Renommé « Déchirure de la Force I–III » et uniformisé en L3 max (niv. 1/5/9 de prestige) : -2 / -4 / -6 Attaque, Sauvegardes et Défense aux ennemis en zone 15 m pendant 45 s (Volonté annule)"
 "Force Crush (DS)
-Ecrasement de Force",Armure légère,60,"Unique : 1-10 dégâts purs / Niveau, la plupart des défenses inopérantes (Vigueur ½)",1d8/Niv dégâts purs sans cap (ignore RD et résistances élémentaires) + immobilisation 6 s (Vigueur ½ dégâts et annule immobilisation),Quete / Obscur max,
+Ecrasement de Force",Armure légère,60,"Unique : 1-10 dégâts purs / Niveau, la plupart des défenses inopérantes (Vigueur ½)",1d8/Niv dégâts purs sans cap (ignore RD et résistances élémentaires) + immobilisation 6 s (Vigueur ½ dégâts et annule immobilisation),Quete / Obscur max,,"Armure max : Armure légère
+Coût PF (R1/R2/R3) : 60
+
+1d8/Niv dégâts purs sans cap (ignore RD et résistances élémentaires) + immobilisation 6 s (Vigueur ½ dégâts et annule immobilisation)"
 "Fury / Improved / Master (DS)
 Fureur / améliorée / de maître",Armure lourde,20 / 30 / 40,"L1 : +2 FOR, +1 PV/Niveau, +1 Vigueur et Volonté, immunisé Stase et Paralysie, les kills alimentent la Fureur
 L2 : +4 FOR, +2 PV/Niveau, +2 Vig/Vol (Maraudeur niv. 5)
-L3 : +6 FOR, +3 PV/Niveau, +3 Vig/Vol (niv. 9)","Renommé « Stigmate de Force I–III » et uniformisé L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : +2/+4/+6 FOR et DEX, immunité Stase/Paralysie, +1 atq/round dès L1 (non cumulable avec Vitesse) ; coût -5 % PV max/round (arrêt auto à ≤ 25 % PV max)",Prestige Maraudeur Sith,
+L3 : +6 FOR, +3 PV/Niveau, +3 Vig/Vol (niv. 9)","Renommé « Stigmate de Force I–III » et uniformisé L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : +2/+4/+6 FOR et DEX, immunité Stase/Paralysie, +1 atq/round dès L1 (non cumulable avec Vitesse) ; coût -5 % PV max/round (arrêt auto à ≤ 25 % PV max)",Prestige Maraudeur Sith,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 20 / 30 / 40
+
+Renommé « Stigmate de Force I–III » et uniformisé L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : +2/+4/+6 FOR et DEX, immunité Stase/Paralysie, +1 atq/round dès L1 (non cumulable avec Vitesse) ; coût -5 % PV max/round (arrêt auto à ≤ 25 % PV max)"
 "Force Scar I-III (LS)
-Cicatrice de Force I-III",Armure lourde,20 / 30 / 40,(Nouveau pouvoir de prestige — miroir de Fureur Sith),"L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : soin +2 % / +4 % / +6 % PV max par round + +1/+2/+3 aux sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3)",Prestige Maître d'armes Jedi,
+Cicatrice de Force I-III",Armure lourde,20 / 30 / 40,(Nouveau pouvoir de prestige — miroir de Fureur Sith),"L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : soin +2 % / +4 % / +6 % PV max par round + +1/+2/+3 aux sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3)",Prestige Maître d'armes Jedi,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 20 / 30 / 40
+
+L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : soin +2 % / +4 % / +6 % PV max par round + +1/+2/+3 aux sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3)"
 "Unbound from the Force I-III (LS)
-Affranchi de la Force I-III",Armure lourde,0,(Nouveau passif de prestige — remplace Spectre de la Force pour le Jedi protecteur),"Passif L1/L2/L3 (niv. 1/5/9 de prestige, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond par axe +3 (L1) / +5 (L2) / +7 (L3) ; L2 : +25 % efficacité des consommables (medpacs, grenades, mines, boucliers) ; L3 : Résistance à la Force passive (15 + Niveau)",Prestige Jedi protecteur,
+Affranchi de la Force I-III",Armure lourde,0,(Nouveau passif de prestige — remplace Spectre de la Force pour le Jedi protecteur),"Passif L1/L2/L3 (niv. 1/5/9 de prestige, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond par axe +3 (L1) / +5 (L2) / +7 (L3) ; L2 : +25 % efficacité des consommables (medpacs, grenades, mines, boucliers) ; L3 : Résistance à la Force passive (15 + Niveau)",Prestige Jedi protecteur,,"Armure max : Armure lourde
+Coût PF (R1/R2/R3) : 0
+
+Passif L1/L2/L3 (niv. 1/5/9 de prestige, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Informatique+Sécurité), Dégâts (Démolition+Réparation), CA (Vigilance+Discrétion), Sauvegardes (Persuasion+Premiers soins) ; plafond par axe +3 (L1) / +5 (L2) / +7 (L3) ; L2 : +25 % efficacité des consommables (medpacs, grenades, mines, boucliers) ; L3 : Résistance à la Force passive (15 + Niveau)"

@@ -307,6 +307,8 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
     # 1. Masquer les 28 dons supprimés SANS supprimer leurs lignes (compatibilité sauvegardes !)
     # En KotOR 2 feat.2da : *_list = "4" + allclassescanuse = "0" masque complètement le don.
     hidden_count = 0
+    desc_col_idx = rows[0].index("Description (mod)") if rows and "Description (mod)" in rows[0] else -1
+    vanilla_desc_updated = 0
     for r in rows[1:]:
         if len(r) < 7 or not r[0].strip().isdigit():
             continue
@@ -322,6 +324,11 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
                     frow.set_string(c, "")
             frow.set_string("allclassescanuse", "0")
             hidden_count += 1
+        elif desc_col_idx >= 0 and len(r) > desc_col_idx and r[desc_col_idx].strip() and fid < len(feat):
+            desc_ref = len(tlk)
+            tlk.add(r[desc_col_idx].strip())
+            feat.get_row(fid).set_string("description", str(desc_ref))
+            vanilla_desc_updated += 1
 
     # 2. Ajouter les 73 nouveaux dons à partir de l'index 245+
     feat_ids: dict[str, int] = {}
@@ -340,7 +347,11 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         nom = r[2].strip()
         cat = r[3].strip()
         prereq = r[4].strip()
-        desc_mod = r[6].strip() or r[5].strip()
+        desc_mod = (
+            r[desc_col_idx].strip()
+            if desc_col_idx >= 0 and len(r) > desc_col_idx and r[desc_col_idx].strip()
+            else (r[6].strip() or r[5].strip())
+        )
 
         name_ref = len(tlk)
         tlk.add(nom)
@@ -586,15 +597,19 @@ POWER_FAMILY_SPELLS: list[tuple[str, list[str]]] = [
 
 def build_spells() -> TwoDA:
     sp = read_2da(REF_2DA / "spells_tslrcm.2da")
+    tlk = read_tlk(OUT_DIR / "dialog.tlk")
     by_label = {sp.get_row(i).get_string("label"): i for i in range(len(sp))}
     rows = read_csv_rows(CSV_POWERS)
+    desc_idx = rows[0].index("Description (mod)") if rows and "Description (mod)" in rows[0] else -1
     updated = 0
+    desc_updated = 0
     for r in rows[1:]:
         if len(r) < 3:
             continue
         name_n = norm(r[0])
         armor_n = norm(r[1])
         pf_col = r[2].strip()
+        desc_mod = r[desc_idx].strip() if desc_idx >= 0 and len(r) > desc_idx else ""
 
         mask = None
         for needles, m_hex in ARMOR_MASK_MAP:
@@ -606,6 +621,10 @@ def build_spells() -> TwoDA:
 
         for needle, spell_labels in POWER_FAMILY_SPELLS:
             if needle in name_n:
+                desc_ref: int | None = None
+                if desc_mod:
+                    desc_ref = len(tlk)
+                    tlk.add(desc_mod)
                 for tier_i, slbl in enumerate(spell_labels):
                     if slbl not in by_label:
                         continue
@@ -615,12 +634,16 @@ def build_spells() -> TwoDA:
                     if pf_vals:
                         cost = pf_vals[min(tier_i, len(pf_vals) - 1)]
                         srow.set_string("forcepoints", str(cost))
+                    if desc_ref is not None and "spelldesc" in sp.get_headers():
+                        srow.set_string("spelldesc", str(desc_ref))
+                        desc_updated += 1
                     updated += 1
                 break
 
     assert_no_literal_stars(sp, "spells.2da")
     write_2da(sp, OVR_DIR / "spells.2da")
-    print(f"[OK] spells.2da ({len(sp)} rows, {updated} pouvoirs exacts synchronisés depuis Spé Pouvoirs.csv)")
+    write_tlk(tlk, OUT_DIR / "dialog.tlk")
+    print(f"[OK] spells.2da ({len(sp)} rows, {updated} pouvoirs synchronisés, {desc_updated} descriptions dans dialog.tlk)")
     return sp
 
 
