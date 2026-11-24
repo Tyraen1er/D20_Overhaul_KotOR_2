@@ -21,6 +21,7 @@ import re
 import unicodedata
 from pathlib import Path
 
+from pykotor.common.language import Gender, Language, LocalizedString
 from pykotor.extract.installation import Installation
 from pykotor.resource.generics.uti import UTIProperty, read_uti, write_uti
 from pykotor.resource.type import ResourceType
@@ -81,6 +82,16 @@ def norm(s: str) -> str:
     s = "".join(c for c in s if not unicodedata.combining(c))
     s = s.replace("'", " ").replace("\u2019", " ")
     return re.sub(r"\s+", " ", s.lower()).strip()
+
+
+def set_uti_desc(uti, desc_txt: str) -> None:
+    """Injecte une description VF (depuis `Description (mod)` des CSV) dans un UTI."""
+    if not desc_txt:
+        return
+    ls = LocalizedString.from_invalid()
+    ls.set_data(Language.FRENCH, Gender.MALE, desc_txt)
+    ls.set_data(Language.ENGLISH, Gender.MALE, desc_txt)
+    uti.description = ls
 
 
 def make_prop(prop_id: int, subtype: int, cost_table: int, cost_value: int) -> UTIProperty:
@@ -210,6 +221,7 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
                 continue
             resref = r[h["ResRef"]].strip().lower()
             mod_txt = r[h["Changement (mod)"]].strip() if "Changement (mod)" in h and len(r) > h["Changement (mod)"] else ""
+            desc_txt = r[h["Description (mod)"]].strip() if "Description (mod)" in h and len(r) > h["Description (mod)"] else ""
             target_ulvl: int | None = None
             if is_armor_csv:
                 tcol = r[h["Type (2DA)"]].strip()
@@ -222,7 +234,7 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
                 elif any(k in tcol for k in ("Robe", "Clothing", "Revan")):
                     target_ulvl = 0  # Robes : 0 slot
 
-            if not mod_txt and target_ulvl is None:
+            if not mod_txt and not desc_txt and target_ulvl is None:
                 continue
 
             res = inst.resource(resref, ResourceType.UTI)
@@ -230,6 +242,9 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
                 continue
             uti = read_uti(res.data)
             dirty = apply_mod_to_uti(uti, mod_txt)
+            if desc_txt:
+                set_uti_desc(uti, desc_txt)
+                dirty = True
             if target_ulvl is not None and uti.upgrade_level != target_ulvl:
                 uti.upgrade_level = target_ulvl
                 dirty = True
@@ -244,10 +259,27 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
 HEAVY_ONLY_UNDERLAYS = {4, 5, 10, 11, 16, 17}
 
 
+def _load_upgrade_descs() -> dict[str, str]:
+    """Charge la colonne `Description (mod)` de `Améliorations.csv` par resref."""
+    out: dict[str, str] = {}
+    if not CSV_UPGRADES.exists():
+        return out
+    with open(CSV_UPGRADES, encoding="utf-8-sig", newline="") as fh:
+        rows = list(csv.reader(fh))
+    if not rows or "Description (mod)" not in rows[0]:
+        return out
+    d_idx = rows[0].index("Description (mod)")
+    for r in rows[1:]:
+        if len(r) > d_idx and r[0].strip() and r[d_idx].strip():
+            out[r[0].strip().lower()] = r[d_idx].strip()
+    return out
+
+
 def build_standard_armor_upgrades_partition(inst: Installation) -> int:
     """Cloisonne les 36 upgrades d'armure standard (u_a_over_01..18, u_a_unde_01..18) :
       - u_a_over_01..18 -> upgrade_level = 6 (exclusif Intermédiaires : 0 sur-couche sur Légère/Lourde)
       - u_a_unde_01..18 -> upgrade_level = 2 pour RD/blindage Lourde, 1 pour Légère."""
+    descs = _load_upgrade_descs()
     count = 0
     for n in range(1, 19):
         # Sur-couches -> réservées Intermédiaires (level = 6)
@@ -256,6 +288,7 @@ def build_standard_armor_upgrades_partition(inst: Installation) -> int:
         if res_o:
             u = read_uti(res_o.data)
             u.upgrade_level = 6
+            set_uti_desc(u, descs.get(rr_o, ""))
             write_uti(u, OVR_DIR / f"{rr_o}.uti")
             count += 1
         # Sous-couches -> 2 (Lourde) ou 1 (Légère)
@@ -264,6 +297,7 @@ def build_standard_armor_upgrades_partition(inst: Installation) -> int:
         if res_u:
             u = read_uti(res_u.data)
             u.upgrade_level = 2 if n in HEAVY_ONLY_UNDERLAYS else 1
+            set_uti_desc(u, descs.get(rr_u, ""))
             write_uti(u, OVR_DIR / f"{rr_u}.uti")
             count += 1
     return count
@@ -276,6 +310,7 @@ def build_combined_armor_upgrades(inst: Installation) -> int:
     res_unde = inst.resource("u_a_unde_01", ResourceType.UTI)
     if not res_over or not res_unde:
         return 0
+    descs = _load_upgrade_descs()
     count = 0
     for prefix, base_res in (("u_a_over_", res_over), ("u_a_unde_", res_unde)):
         for num in range(19, 31):
@@ -290,6 +325,7 @@ def build_combined_armor_upgrades(inst: Installation) -> int:
                 make_prop(1, 0, 2, tier),                      # CA +1 / +2 / +3
                 make_prop(14, 12, 5, {1: 2, 2: 8, 3: 10}[tier]),  # Immunité Énergie 10% / 15% / 30%
             ]
+            set_uti_desc(uti, descs.get(rr, ""))
             write_uti(uti, OVR_DIR / f"{rr}.uti")
             count += 1
     return count
@@ -415,8 +451,9 @@ def build_weapon_upgrades(inst: Installation) -> int:
         return 0
     with open(CSV_UPGRADES, encoding="utf-8-sig", newline="") as fh:
         rows = list(csv.reader(fh))
+    d_idx = rows[0].index("Description (mod)") if rows and "Description (mod)" in rows[0] else -1
     count = 0
-    for r in rows:
+    for r in rows[1:]:
         if len(r) < 7:
             continue
         rr = r[0].strip().lower()
@@ -430,6 +467,8 @@ def build_weapon_upgrades(inst: Installation) -> int:
         new_props = _parse_upgrade_props(mod_txt, uti.properties)
         if new_props:
             uti.properties = new_props
+            if d_idx >= 0 and len(r) > d_idx and r[d_idx].strip():
+                set_uti_desc(uti, r[d_idx].strip())
             write_uti(uti, OVR_DIR / f"{rr}.uti")
             count += 1
     return count

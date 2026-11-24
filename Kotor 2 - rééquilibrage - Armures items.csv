@@ -1,86 +1,203 @@
-﻿ResRef,Nom,Type (2DA),CA (vanilla),DEX max (vanilla),Niv. min obtention,Prérequis,Bonus Carac (résumé),Propriétés (vanilla),Loot aléatoire,Lieux sûrs,Changement (mod)
-a_light_01,Combinaison de combat légère,Armor Class 4,4,+5,Niv. 6+ (rare 1+),armour_prof_light,,"Malus de défense +-1, Restriction utilisateur",palier 1 niv. 6+ (rare dès 1),—,
-a_light_02,Combinaison de combat,Armor Class 4,4,+5,Niv. 8+ (rare 3+),armour_prof_light,,Restriction utilisateur,palier 2 niv. 8+ (rare dès 3),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",
-a_light_04,Combinaison de combat mand.,Armor Class 4,4,+5,Niv. 12+ (rare 7+),armour_prof_light,,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%, Malus de défense +-1, Restriction utilisateur",palier 4 niv. 12+ (rare dès 7),"Dxun - Atterrissage ×2, Dxun - Ruines mandalorie… ×2, Dxun - Atterrissage ×2, Dxun - Ruines mandalorie… ×2",
-a_light_05,Combinaison de combat zabrak,Armor Class 4,4,+5,Niv. 14+ (rare 9+),armour_prof_light,,"Bonus défense +1, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,
-a_light_07,Armure légère Echani,Armor Class 4,4,+5,Niv. 18+ (rare 13+),armour_prof_light,,"Résistance aux dégâts (Fire) +15/-, Bonus défense +1, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),—,Ajout lore Echani : DEX +1
-a_light_08,Armure de cérémonie massassi,Armor Class 4,4,+5,Niv. 20+ (rare 15+),armour_prof_light,,"Bonus défense +1, Immunité (Critical_Hits), Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),—,
-a_light_09,Combinaison lourde mand.,Armor Class 4,4,+5,Niv. 22+ (rare 17+),armour_prof_light,,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%, Bonus défense +1, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",
-a_light_x08,Armure de mailles électrique,Armor Class 4,4,+5,—,armour_prof_light,,"Résistance aux dégâts (Energy) +5/-, Bonus défense +1, Bonus DEX max +2, Restriction utilisateur",—,—,
-beastriderflight,Armure de vol de bestiaire,Armor Class 4,4,+5,Loot fixe / Quête,armour_prof_light,,"Résistance aux dégâts (Cold) +5/-, Résistance aux dégâts (Fire) +5/-, Restriction utilisateur",—,401dxn,
-onderonmilitarya,Armure militaire d'Ondéron,Armor Class 4,4,+5,Loot fixe / Quête,armour_prof_light,,"Réduction des dégâts +Soak5, Restriction utilisateur",—,401dxn,
-a_light_03,Combinaison de combat lourde,Armor Class 5,5,+4,Niv. 10+ (rare 5+),armour_prof_light,,Restriction utilisateur,palier 3 niv. 10+ (rare dès 5),—,
-a_light_06,Combinaison de alliage Bonadan,Armor Class 5,5,+4,Niv. 16+ (rare 11+),armour_prof_light,,"Bonus défense +1, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,
-a_light_10,Armure de combat zabrak,Armor Class 5,5,+4,Niv. 24+ (rare 19+),armour_prof_light,,"Résistance aux dégâts (Cold) +20/-, Bonus défense +1, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,Plafonnement : RD Froid +20/- → +12/-
-a_light_12,Combinaison-bouclier Echani,Armor Class 5,5,+4,Niv. 28+ (rare 23+),armour_prof_light,,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Bonus défense +2, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Ajout lore Echani : DEX +2
-a_light_13,Armure de fibre renforcée,Armor Class 5,5,+4,Niv. 30+ (rare 25+),armour_prof_light,,"Bonus défense +2, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,
-a_light_14,Armure de guerre zabrak,Armor Class 5,5,+4,Niv. 30+ (rare 27+),armour_prof_light,,"Résistance aux dégâts (Cold) +30/-, Bonus défense +2, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,Plafonnement : RD Froid +30/- → +15/-
-a_light_15,Combinaison de mailles d'Ulic Qel Droma,Armor Class 5,5,+4,Niv. 30+ (rare 29+),armour_prof_light,,"Résistance aux dégâts (Cold) +20/-, Résistance aux dégâts (Fire) +20/-, Bonus défense +3, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,Ajout lore Ulic Qel-Droma : CHA +2 ; Plafonnement : RD Froid/Feu +20/- → +12/-
-beasthidearmor,Armure en peau de bête,Armor Class 5,5,+4,Loot fixe / Quête,armour_prof_light,,"Résistance aux dégâts (Piercing) +5/-, Résistance aux dégâts (Slashing) +5/-, Bonus défense +1, Restriction utilisateur",—,401dxn,
-a_khoonda,Armure de milicien de Khoonda,Armor Class 6,6,+3,—,armour_prof_medium / armour_prof_light,,—,—,—,
-a_medium_01,Combinaison militaire,Armor Class 6,6,+3,Niv. 6+ (rare 1+),armour_prof_medium / armour_prof_light,,Restriction utilisateur,palier 1 niv. 6+ (rare dès 1),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",
-a_medium_03,Armure de combat Echani,Armor Class 6,6,+3,Niv. 10+ (rare 5+),armour_prof_medium / armour_prof_light,,"Bonus défense +1, Restriction utilisateur",palier 3 niv. 10+ (rare dès 5),—,
-a_medium_04,Armure de guerre de Cinnagar,Armor Class 6,6,+3,Niv. 12+ (rare 7+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Sonic) +15/-, Bonus défense +1, Restriction utilisateur",palier 4 niv. 12+ (rare dès 7),—,
-a_medium_05,Combinaison de combat Sith,Armor Class 6,6,+3,Niv. 14+ (rare 9+),armour_prof_medium / armour_prof_light,,"Bonus défense +1, Bonus DEX max +4, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,
-a_medium_07,Maille en fibre verpine,Armor Class 6,6,+3,Niv. 18+ (rare 13+),armour_prof_medium / armour_prof_light,,"Bonus défense +2, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),—,
-a_medium_11,Armure de guerre légère d'Exar Kun,Armor Class 6,6,+3,Niv. 26+ (rare 21+),armour_prof_medium / armour_prof_light,,"Bonus défense +3, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,
-a_medium_12,Armure de guerre lourde de Cinnagar,Armor Class 6,6,+3,Niv. 28+ (rare 23+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Sonic) +20/-, Bonus défense +3, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Plafonnement : RD Sonique +20/- → +12/-
-a_medium_13,Ultramaille de fibre verpine,Armor Class 6,6,+3,Niv. 30+ (rare 25+),armour_prof_medium / armour_prof_light,,"Bonus défense +4, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,Plafonnement : CA +4 → CA +3
-mandaloresarmor,Armure de Mandalore,Armor Class 6,6,+3,Loot fixe / Quête,armour_prof_medium / armour_prof_light,,"Bonus défense +3, Régénération +4, Restriction utilisateur",—,401dxn,
-a_medium_02,Armure de combat légère,Armor Class 7,7,+2,Niv. 8+ (rare 3+),armour_prof_medium / armour_prof_light,,Restriction utilisateur,palier 2 niv. 8+ (rare dès 3),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",
-a_medium_06,Armure de combat légère en bronzium,Armor Class 7,7,+2,Niv. 16+ (rare 11+),armour_prof_medium / armour_prof_light,,"Bonus défense +1, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,
-a_medium_08,Armure lourde krath,Armor Class 7,7,+2,Niv. 20+ (rare 15+),armour_prof_medium / armour_prof_light,,"Bonus défense +2, Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),—,
-a_medium_09,Armure de combat légère à servomoteurs,Armor Class 7,7,+2,Niv. 22+ (rare 17+),armour_prof_medium / armour_prof_light,FOR +1,"Bonus de caractéristique (Strength) +1, Résistance aux dégâts (Sonic) +25/-, Bonus défense +1, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),—,Plafonnement : RD Sonique +25/- → +15/-
-a_medium_10,Armure de guerre sacrée de Krath,Armor Class 7,7,+2,Niv. 24+ (rare 19+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Cold) +15/-, Résistance aux dégâts (Fire) +15/-, Résistance aux dégâts (Sonic) +15/-, Bonus défense +2, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,Ajout lore érudits Krath : INT +2
-a_medium_14,Armure de mailles électriques,Armor Class 7,7,+2,Niv. 30+ (rare 27+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Energy) +10/-, Bonus DEX max +4, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,Plafonnement : RD +10/- → RD +5/- (Énergie)
-a_medium_15,Armure de combat de Jamoh Hogra,Armor Class 7,7,+2,Niv. 30+ (rare 29+),armour_prof_medium / armour_prof_light,FOR +1,"Bonus de caractéristique (Strength) +1, Bonus défense +4, Immunité (Critical_Hits), Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,Plafonnement : CA +4 → CA +3
-a_heavy_01,Armure de combat,Armor Class 8,8,+1,Niv. 6+ (rare 1+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,Restriction utilisateur,palier 1 niv. 6+ (rare dès 1),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",
-a_heavy_03,Armure lourde Echani,Armor Class 8,8,+1,Niv. 10+ (rare 5+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +2, Restriction utilisateur",palier 3 niv. 10+ (rare dès 5),—,
-a_heavy_05,Armure de combat à servomoteurs,Armor Class 8,8,+1,Niv. 14+ (rare 9+),armour_prof_heavy / armour_prof_light / armour_prof_medium,FOR +1,"Bonus de caractéristique (Strength) +1, Bonus défense +1, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,
-a_heavy_09,Maille verpine en alliage zal,Armor Class 8,8,+1,Niv. 22+ (rare 17+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Cold) +25/-, Résistance aux dégâts (Fire) +25/-, Résistance aux dégâts (Sonic) +25/-, Bonus défense +4, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),"Ondéron - Rampe céleste, Ondéron - Rampe céleste","Plafonnement : CA +4 → CA +3, RD élém. +25/- → +15/-"
-a_heavy_11,Combinaison de puissance de Corellia,Armor Class 8,8,+1,Niv. 26+ (rare 21+),armour_prof_heavy / armour_prof_light / armour_prof_medium,FOR +2,"Bonus de caractéristique (Strength) +2, Bonus défense +2, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,
-a_heavy_12,M'uhk'gfa,Armor Class 8,8,+1,Niv. 28+ (rare 23+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Bludgeoning) +10/-, Résistance aux dégâts (Energy) +5/-, Résistance aux dégâts (Piercing) +10/-, Résistance aux dégâts (Slashing) +10/-, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Plafonnement : RD +10/- → RD +3/- (Phys+Énergie)
-a_heavy_13,Armure-exosquelette Iotran,Armor Class 8,8,+1,Niv. 30+ (rare 25+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Dons en bonus, Dons en bonus, Bonus défense +3, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,
-a_heavy_02,Armure de combat lourde,Armor Class 9,9,+0,Niv. 8+ (rare 3+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,Restriction utilisateur,palier 2 niv. 8+ (rare dès 3),—,
-a_heavy_04,Armure lourde en duracier,Armor Class 9,9,+0,Niv. 12+ (rare 7+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +1, Restriction utilisateur",palier 4 niv. 12+ (rare dès 7),"Quartier marchand, Quartier marchand",
-a_heavy_06,Armure lourde flexible,Armor Class 9,9,+0,Niv. 16+ (rare 11+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +1, Bonus DEX max +3, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,
-a_heavy_07,Armure de combat mand.,Armor Class 9,9,+0,Niv. 18+ (rare 13+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Electrical) +25/-, Bonus défense +2, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",Plafonnement : RD Élec +25/- → +15/-
-a_heavy_08,Armure lourde mand.,Armor Class 9,9,+0,Niv. 20+ (rare 15+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +3, Immunité (MindSpells), Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",
-a_heavy_10,Armure d'assaut mand.,Armor Class 9,9,+0,Niv. 24+ (rare 19+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Cold) +25/-, Résistance aux dégâts (Fire) +25/-, Bonus défense +4, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,"Plafonnement : CA +4 → CA +3, RD Froid/Feu +25/- → +15/-"
-a_heavy_14,Armure de Félénar,Armor Class 9,9,+0,Niv. 30+ (rare 27+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +2, Bonus DEX max +4, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,
-a_heavy_15,Armure matrice,Armor Class 9,9,+0,Niv. 30+ (rare 29+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Energy) +5/-, Bonus défense +4, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,Plafonnement : CA +4 → CA +3
-a_heavy_x01,Armure de Mandalore,Armor Class 9,9,+0,—,armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Electrical) +25/-, Bonus défense +2, Restriction utilisateur",—,—,Plafonnement : RD Élec +25/- → +15/-
-a_light_11,Combinaison anti-environnement ubèse,Armor Armd Flight Suit,5,+4,Niv. 26+ (rare 21+),armour_prof_light,,"Résistance aux dégâts (Cold) +10/-, Résistance aux dégâts (Electrical) +10/-, Résistance aux dégâts (Energy) +10/-, Résistance aux dégâts (Fire) +10/-, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,Plafonnement : RD +10/- → RD +3/- (Énergie)
-g_a_armrdfsuit,Armure de guerre blindée,Armor Armd Flight Suit,5,+4,Loot fixe / Quête,armour_prof_light,,Résistance aux dégâts (Cold) +20/-,—,"Station Citadelle - Cant…, Ondéron - Rampe céleste, Station Citadelle - Cant…, Ondéron - Rampe céleste",Plafonnement : RD Froid +20/- → +12/-
-a_robe_06,Armure d'initié Zeison Sha,Armor Zeison Sha,3,+4,Niv. 16+ (rare 11+),armour_prof_light,,"Bonus défense +1, Jets de sauvegarde améliorés +1, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,Ajout lore Zeison Sha (survie Yanibar) : CON +1
-a_robe_07,Armure de néophyte Jal Shey,Armor Zeison Sha,3,+4,Niv. 18+ (rare 13+),armour_prof_light,CHA +1,"Bonus de caractéristique (Charisma) +1, Bonus de compétence +1, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),—,
-a_robe_11,Armure de conseiller Jal Shey,Armor Zeison Sha,3,+4,Niv. 26+ (rare 21+),armour_prof_light,"SAG +1, CHA +2","Bonus de caractéristique (Charisma) +2, Bonus de caractéristique (Wisdom) +1, Bonus de compétence +1, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,
-a_robe_16,Armure de guerrier Zeison Sha,Armor Zeison Sha,3,+4,Niv. 30+,armour_prof_light,,"Bonus défense +2, Jets de sauvegarde améliorés +1, Restriction utilisateur",palier 16 niv. 30+,—,Ajout lore Zeison Sha (survie Yanibar) : CON +2
-a_robe_20,Armure de mentor Jal Shey,Armor Zeison Sha,3,+4,Niv. 30+,armour_prof_light,"SAG +1, CHA +4","Bonus de caractéristique (Charisma) +4, Bonus de caractéristique (Wisdom) +1, Bonus défense +1, Bonus de compétence +1, Restriction utilisateur",palier 20 niv. 30+,—,"Plafonnement : CHA +4, SAG +1 → CHA +3, SAG +1"
-a_robe_26,Armure de Dark Malak,Armor Zeison Sha,3,+4,Niv. 30+,"armour_prof_light, Alignement",FOR +1,"Restriction d'alignement, Bonus de caractéristique (Strength) +1, Bonus défense +4, Régénération +2, Restriction utilisateur",palier 26 niv. 30+,—,Plafonnement : CA +4 → CA +3
-a_robe_02,Bure de padawan,Jedi Robe,0,+-1,Niv. 8+ (rare 3+),jedi_defense,,"Bonus défense +1, Restriction utilisateur",palier 2 niv. 8+ (rare dès 3),—,
-a_robe_03,Bure de padawan Obscur,Jedi Robe,0,+-1,Niv. 10+ (rare 5+),jedi_defense,,"Bonus défense +1, Restriction utilisateur",palier 3 niv. 10+ (rare dès 5),—,
-a_robe_04,Bure de novice Baran Do,Jedi Robe,0,+-1,Niv. 12+ (rare 7+),jedi_defense,SAG +1,"Bonus de caractéristique (Wisdom) +1, Immunité contre dégâts +10%, Immunité contre dégâts +10%, Bonus défense +1, Restriction utilisateur",palier 4 niv. 12+ (rare dès 7),—,
-a_robe_08,Bure de Jedi,Jedi Robe,0,+-1,Niv. 20+ (rare 15+),jedi_defense,,"Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),Ebon Hawk - Intérieur,
-a_robe_09,Bure de Jedi Obscur,Jedi Robe,0,+-1,Niv. 22+ (rare 17+),jedi_defense,,"Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),—,
-a_robe_10,Bure de Norris,Jedi Robe,0,+-1,Niv. 24+ (rare 19+),jedi_defense,,"Immunité contre dégâts +20%, Bonus défense +2, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,
-a_robe_19,Bure de sage Baran Do,Jedi Robe,0,+-1,Niv. 30+,jedi_defense,SAG +4,"Bonus de caractéristique (Wisdom) +4, Immunité contre dégâts +20%, Immunité contre dégâts +20%, Bonus défense +2, Restriction utilisateur",palier 19 niv. 30+,—,Plafonnement : SAG +4 → SAG +3
-a_robe_21,Bure de gardien d'Ossus,Jedi Robe,0,+-1,Niv. 30+,jedi_defense,"INT +4, SAG +4, CHA +2","Bonus de caractéristique (Charisma) +2, Bonus de caractéristique (Intelligence) +4, Bonus de caractéristique (Wisdom) +4, Bonus défense +1, Restriction utilisateur",palier 21 niv. 30+,—,"Plafonnement & lore archives d'Ossus : INT +4, SAG +4, CHA +2 → INT +3, SAG +2"
-a_robe_27,Bure de Jolee,Jedi Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",CHA +4,"Restriction d'alignement, Bonus de caractéristique (Charisma) +4, Bonus défense +3, Régénération de points de Force +1, Restriction utilisateur",palier 27 niv. 30+,—,Plafonnement : CHA +4 → CHA +3
-masterarcasrobes,Bures de maître Arca,Jedi Robe,0,+-1,Loot fixe / Quête,"jedi_defense, Alignement","FOR +4, SAG +2","Restriction d'alignement, Bonus de caractéristique (Strength) +4, Bonus de caractéristique (Wisdom) +2, Bonus défense +3, Restriction utilisateur",—,401dxn,"Plafonnement : FOR +4, SAG +2 → FOR +2, SAG +2"
-rcm_robe_99,*(rcm_robe_99)*,Jedi Robe,0,+-1,—,jedi_defense,,"Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",—,—,
-a_robe_x01,Bure de la Servante,Jedi Knight Robe,0,+-1,—,PNJ only,CHA +2,"Bonus de caractéristique (Charisma) +2, Bonus défense +3, Restriction PJ, Restriction utilisateur",—,—,
-a_robe_05,Bure d'apprenti Mutaki,Jedi Master Robe,0,+-1,Niv. 14+ (rare 9+),jedi_defense,"FOR +1, DEX +1, CON +1","Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +1, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,
-a_robe_12,Bure de Jedi gris,Jedi Master Robe,0,+-1,Niv. 28+ (rare 23+),jedi_defense,CHA +2,"Bonus de caractéristique (Charisma) +2, Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,
-a_robe_13,Bure de chevalier Jedi,Jedi Master Robe,0,+-1,Niv. 30+ (rare 25+),jedi_defense,,"Bonus défense +2, Régénération de points de Force +1, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,
-a_robe_14,Bure de chevalier Jedi Obscur,Jedi Master Robe,0,+-1,Niv. 30+ (rare 27+),jedi_defense,,"Bonus défense +2, Régénération de points de Force +1, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,
-a_robe_15,Bure d'adepte Mutaki,Jedi Master Robe,0,+-1,Niv. 30+ (rare 29+),jedi_defense,"FOR +2, DEX +2, CON +2","Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +2, Bonus défense +1, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,"Plafonnement : FOR +2, DEX +2, CON +2 → FOR +2, DEX +1, CON +2"
-a_robe_17,Bure de maître Jedi,Jedi Master Robe,0,+-1,Niv. 30+,jedi_defense,,"Bonus défense +3, Régénération de points de Force +1, Restriction utilisateur",palier 17 niv. 30+,—,
-a_robe_18,Bure de maître Jedi Obscur,Jedi Master Robe,0,+-1,Niv. 30+,jedi_defense,,"Bonus défense +3, Régénération de points de Force +1, Restriction utilisateur",palier 18 niv. 30+,—,
-a_robe_22,Foulard de Natth,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",FOR +3,"Restriction d'alignement, Bonus de caractéristique (Strength) +3, Bonus défense +3, Restriction utilisateur",palier 22 niv. 30+,—,
-a_robe_23,Bure d'Arca Jeth,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",SAG +2,"Restriction d'alignement, Bonus de caractéristique (Wisdom) +2, Bonus défense +2, Régénération de points de Force +3, Restriction utilisateur",palier 23 niv. 30+,—,
-a_robe_24,Bure d'Aleema Keto,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement","FOR +2, SAG +4","Restriction d'alignement, Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Wisdom) +4, Bonus défense +3, Régénération de points de Force +1, Restriction utilisateur",palier 24 niv. 30+,—,"Plafonnement : SAG +4, FOR +2 → SAG +3, FOR +1"
-a_robe_25,Bure de Sylvar,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",DEX +2,"Restriction d'alignement, Bonus de caractéristique (Dexterity) +2, Résistance aux dégâts (Dark_Side) +15/-, Résistance aux dégâts (Energy) +15/-, Bonus défense +2, Restriction utilisateur",palier 25 niv. 30+,—,Plafonnement : RD +15/- → RD +5/- (Énergie/Obscur)
-a_robe_28,Bure de Thon,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",,"Restriction d'alignement, Dons en bonus, Dons en bonus, Dons en bonus, Bonus défense +3, Restriction utilisateur",palier 28 niv. 30+,—,
-a_robe_29,Bure de Crado,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",FOR +6,"Restriction d'alignement, Bonus de caractéristique (Strength) +6, Malus de caractéristique +-2, Bonus défense +2, Restriction utilisateur",palier 29 niv. 30+,—,Plafonnement : FOR +6 → FOR +3
-a_robe_30,Bure de Nomi,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",SAG +4,"Restriction d'alignement, Bonus de caractéristique (Wisdom) +4, Bonus défense +3, Régénération de points de Force +3, Restriction utilisateur",palier 30 niv. 30+,—,Plafonnement : SAG +4 → SAG +3
+﻿ResRef,Nom,Type (2DA),CA (vanilla),DEX max (vanilla),Niv. min obtention,Prérequis,Bonus Carac (résumé),Propriétés (vanilla),Loot aléatoire,Lieux sûrs,Changement (mod),Description (mod)
+a_light_01,Combinaison de combat légère,Armor Class 4,4,+5,Niv. 6+ (rare 1+),armour_prof_light,,"Malus de défense +-1, Restriction utilisateur",palier 1 niv. 6+ (rare dès 1),—,,
+a_light_02,Combinaison de combat,Armor Class 4,4,+5,Niv. 8+ (rare 3+),armour_prof_light,,Restriction utilisateur,palier 2 niv. 8+ (rare dès 3),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",,
+a_light_04,Combinaison de combat mand.,Armor Class 4,4,+5,Niv. 12+ (rare 7+),armour_prof_light,,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%, Malus de défense +-1, Restriction utilisateur",palier 4 niv. 12+ (rare dès 7),"Dxun - Atterrissage ×2, Dxun - Ruines mandalorie… ×2, Dxun - Atterrissage ×2, Dxun - Ruines mandalorie… ×2",,
+a_light_05,Combinaison de combat zabrak,Armor Class 4,4,+5,Niv. 14+ (rare 9+),armour_prof_light,,"Bonus défense +1, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,,
+a_light_07,Armure légère Echani,Armor Class 4,4,+5,Niv. 18+ (rare 13+),armour_prof_light,,"Résistance aux dégâts (Fire) +15/-, Bonus défense +1, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),—,Ajout lore Echani : DEX +1,"Effets (Overhaul) :
+• Ajout lore Echani : DEX +1
+
+Les Echani préfèrent la beauté des formes à la force brute. Les Maktites l'ont appris à leur corps défendant en voyant que leurs armes technologiques perdaient toute leur efficacité contre les armures des Echani après que ceux-ci en eussent très légèrement modifié les caractéristiques."
+a_light_08,Armure de cérémonie massassi,Armor Class 4,4,+5,Niv. 20+ (rare 15+),armour_prof_light,,"Bonus défense +1, Immunité (Critical_Hits), Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),—,,
+a_light_09,Combinaison lourde mand.,Armor Class 4,4,+5,Niv. 22+ (rare 17+),armour_prof_light,,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%, Bonus défense +1, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",,
+a_light_x08,Armure de mailles électrique,Armor Class 4,4,+5,—,armour_prof_light,,"Résistance aux dégâts (Energy) +5/-, Bonus défense +1, Bonus DEX max +2, Restriction utilisateur",—,—,,
+beastriderflight,Armure de vol de bestiaire,Armor Class 4,4,+5,Loot fixe / Quête,armour_prof_light,,"Résistance aux dégâts (Cold) +5/-, Résistance aux dégâts (Fire) +5/-, Restriction utilisateur",—,401dxn,,
+onderonmilitarya,Armure militaire d'Ondéron,Armor Class 4,4,+5,Loot fixe / Quête,armour_prof_light,,"Réduction des dégâts +Soak5, Restriction utilisateur",—,401dxn,,
+a_light_03,Combinaison de combat lourde,Armor Class 5,5,+4,Niv. 10+ (rare 5+),armour_prof_light,,Restriction utilisateur,palier 3 niv. 10+ (rare dès 5),—,,
+a_light_06,Combinaison de alliage Bonadan,Armor Class 5,5,+4,Niv. 16+ (rare 11+),armour_prof_light,,"Bonus défense +1, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,,
+a_light_10,Armure de combat zabrak,Armor Class 5,5,+4,Niv. 24+ (rare 19+),armour_prof_light,,"Résistance aux dégâts (Cold) +20/-, Bonus défense +1, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,Plafonnement : RD Froid +20/- → +12/-,"Effets (Overhaul) :
+• Plafonnement : RD Froid +20/- → +12/-
+
+C'est sur le continent situé le plus au nord de la planète Iridonia que les Zabraks fabriquent des armures qui, bien que très chères, se vendent comme des petits pains dans toute la galaxie en raison de leur excellente résistance aux basses températures."
+a_light_12,Combinaison-bouclier Echani,Armor Class 5,5,+4,Niv. 28+ (rare 23+),armour_prof_light,,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Bonus défense +2, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Ajout lore Echani : DEX +2,"Effets (Overhaul) :
+• Ajout lore Echani : DEX +2
+
+Les Echani ont combiné leurs dons pour la fabrication d'armures et la conception de boucliers à énergie pour mettre au point cette combinaison de combat particulièrement innovante. La protection qu'elle confère est encore augmentée par un bouclier à énergie de faible puissance."
+a_light_13,Armure de fibre renforcée,Armor Class 5,5,+4,Niv. 30+ (rare 25+),armour_prof_light,,"Bonus défense +2, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,,
+a_light_14,Armure de guerre zabrak,Armor Class 5,5,+4,Niv. 30+ (rare 27+),armour_prof_light,,"Résistance aux dégâts (Cold) +30/-, Bonus défense +2, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,Plafonnement : RD Froid +30/- → +15/-,"Effets (Overhaul) :
+• Plafonnement : RD Froid +30/- → +15/-
+
+Cette armure zabrak est supérieure à la version de base. Souvent réservée aux officiers, elle a été conçue pour être instantanément reconnaissable sur le champ de bataille."
+a_light_15,Combinaison de mailles d'Ulic Qel Droma,Armor Class 5,5,+4,Niv. 30+ (rare 29+),armour_prof_light,,"Résistance aux dégâts (Cold) +20/-, Résistance aux dégâts (Fire) +20/-, Bonus défense +3, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,Ajout lore Ulic Qel-Droma : CHA +2 ; Plafonnement : RD Froid/Feu +20/- → +12/-,"Effets (Overhaul) :
+• Ajout lore Ulic Qel-Droma : CHA +2
+• Plafonnement : RD Froid/Feu +20/- → +12/-
+
+Après avoir tué son frère lors de la guerre contre les Sith d'Exar Kun, Ulic Qel Droma a abandonné cette armure et toutes ses autres possessions matérielles au côté Obscur. C'est un objet puissant mais corrompu."
+beasthidearmor,Armure en peau de bête,Armor Class 5,5,+4,Loot fixe / Quête,armour_prof_light,,"Résistance aux dégâts (Piercing) +5/-, Résistance aux dégâts (Slashing) +5/-, Bonus défense +1, Restriction utilisateur",—,401dxn,,
+a_khoonda,Armure de milicien de Khoonda,Armor Class 6,6,+3,—,armour_prof_medium / armour_prof_light,,—,—,—,,
+a_medium_01,Combinaison militaire,Armor Class 6,6,+3,Niv. 6+ (rare 1+),armour_prof_medium / armour_prof_light,,Restriction utilisateur,palier 1 niv. 6+ (rare dès 1),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",,
+a_medium_03,Armure de combat Echani,Armor Class 6,6,+3,Niv. 10+ (rare 5+),armour_prof_medium / armour_prof_light,,"Bonus défense +1, Restriction utilisateur",palier 3 niv. 10+ (rare dès 5),—,,
+a_medium_04,Armure de guerre de Cinnagar,Armor Class 6,6,+3,Niv. 12+ (rare 7+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Sonic) +15/-, Bonus défense +1, Restriction utilisateur",palier 4 niv. 12+ (rare dès 7),—,,
+a_medium_05,Combinaison de combat Sith,Armor Class 6,6,+3,Niv. 14+ (rare 9+),armour_prof_medium / armour_prof_light,,"Bonus défense +1, Bonus DEX max +4, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,,
+a_medium_07,Maille en fibre verpine,Armor Class 6,6,+3,Niv. 18+ (rare 13+),armour_prof_medium / armour_prof_light,,"Bonus défense +2, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),—,,
+a_medium_11,Armure de guerre légère d'Exar Kun,Armor Class 6,6,+3,Niv. 26+ (rare 21+),armour_prof_medium / armour_prof_light,,"Bonus défense +3, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,,
+a_medium_12,Armure de guerre lourde de Cinnagar,Armor Class 6,6,+3,Niv. 28+ (rare 23+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Sonic) +20/-, Bonus défense +3, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Plafonnement : RD Sonique +20/- → +12/-,"Effets (Overhaul) :
+• Plafonnement : RD Sonique +20/- → +12/-
+
+Suite à la Grande Guerre de l'Hyperespace, qui a eu lieu voici plus de mille ans, les héritiers de l'impératrice Téta ont fortement militarisé leur monde et leur industrie, ce qui leur a permis de produire des armures de combat restant très recherchées à l'heure actuelle. Ce modèle lourd est aussi flexible qu'une armure intermédiaire, mais tout aussi résistante que les autres armures lourdes du marché."
+a_medium_13,Ultramaille de fibre verpine,Armor Class 6,6,+3,Niv. 30+ (rare 25+),armour_prof_medium / armour_prof_light,,"Bonus défense +4, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,Plafonnement : CA +4 → CA +3,"Effets (Overhaul) :
+• Plafonnement : CA +4 → CA +3
+
+Cette combinaison de combat verpine est la meilleure armure intermédiaire qui soit en termes de protection, puisqu'elle surpasse même la plupart des armures lourdes dans ce domaine."
+mandaloresarmor,Armure de Mandalore,Armor Class 6,6,+3,Loot fixe / Quête,armour_prof_medium / armour_prof_light,,"Bonus défense +3, Régénération +4, Restriction utilisateur",—,401dxn,,
+a_medium_02,Armure de combat légère,Armor Class 7,7,+2,Niv. 8+ (rare 3+),armour_prof_medium / armour_prof_light,,Restriction utilisateur,palier 2 niv. 8+ (rare dès 3),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",,
+a_medium_06,Armure de combat légère en bronzium,Armor Class 7,7,+2,Niv. 16+ (rare 11+),armour_prof_medium / armour_prof_light,,"Bonus défense +1, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,,
+a_medium_08,Armure lourde krath,Armor Class 7,7,+2,Niv. 20+ (rare 15+),armour_prof_medium / armour_prof_light,,"Bonus défense +2, Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),—,,
+a_medium_09,Armure de combat légère à servomoteurs,Armor Class 7,7,+2,Niv. 22+ (rare 17+),armour_prof_medium / armour_prof_light,FOR +1,"Bonus de caractéristique (Strength) +1, Résistance aux dégâts (Sonic) +25/-, Bonus défense +1, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),—,Plafonnement : RD Sonique +25/- → +15/-,"Effets (Overhaul) :
+• Plafonnement : RD Sonique +25/- → +15/-
+
+L'une des premières armures à servomoteurs, dont le bruit est atténué par des champs atténuateurs qui ont également comme effet de protéger le porteur de l'armure contre les fréquences soniques extrêmes."
+a_medium_10,Armure de guerre sacrée de Krath,Armor Class 7,7,+2,Niv. 24+ (rare 19+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Cold) +15/-, Résistance aux dégâts (Fire) +15/-, Résistance aux dégâts (Sonic) +15/-, Bonus défense +2, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,Ajout lore érudits Krath : INT +2,"Effets (Overhaul) :
+• Ajout lore érudits Krath : INT +2
+
+Beaucoup de Kraths se portaient volontaires au poste de garde de leurs temples malfaisants, ce qui les conduisait à revêtir ce type d'armure. Les cyniques aiment à se moquer de leur ferveur religieuse, n'hésitant pas à faire remarquer que monter la garde était bien moins dangereux que de prendre part aux raids des esclavagistes."
+a_medium_14,Armure de mailles électriques,Armor Class 7,7,+2,Niv. 30+ (rare 27+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Energy) +10/-, Bonus DEX max +4, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,Plafonnement : RD +10/- → RD +5/- (Énergie),"Effets (Overhaul) :
+• Plafonnement : RD +10/- → RD +5/- (Énergie)
+
+Cette armure flexible est utilisée par les soldats nagais. Très résistante aux tirs de blasters, elle a été conçue pour restreindre au minimum la grande dextérité naturelle des Nagais."
+a_medium_15,Armure de combat de Jamoh Hogra,Armor Class 7,7,+2,Niv. 30+ (rare 29+),armour_prof_medium / armour_prof_light,FOR +1,"Bonus de caractéristique (Strength) +1, Bonus défense +4, Immunité (Critical_Hits), Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,Plafonnement : CA +4 → CA +3,"Effets (Overhaul) :
+• Plafonnement : CA +4 → CA +3
+
+Jamoh Hogra était un mercenaire zabrak qui craignait en permanence pour sa vie après avoir pris part à un raid contre un cuirassé lourd Sith. Il a dépensé une véritable fortune afin d'acquérir cette fortune, pour finalement se faire tuer dans son bain."
+a_heavy_01,Armure de combat,Armor Class 8,8,+1,Niv. 6+ (rare 1+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,Restriction utilisateur,palier 1 niv. 6+ (rare dès 1),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",,
+a_heavy_03,Armure lourde Echani,Armor Class 8,8,+1,Niv. 10+ (rare 5+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +2, Restriction utilisateur",palier 3 niv. 10+ (rare dès 5),—,,
+a_heavy_05,Armure de combat à servomoteurs,Armor Class 8,8,+1,Niv. 14+ (rare 9+),armour_prof_heavy / armour_prof_light / armour_prof_medium,FOR +1,"Bonus de caractéristique (Strength) +1, Bonus défense +1, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,,
+a_heavy_09,Maille verpine en alliage zal,Armor Class 8,8,+1,Niv. 22+ (rare 17+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Cold) +25/-, Résistance aux dégâts (Fire) +25/-, Résistance aux dégâts (Sonic) +25/-, Bonus défense +4, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),"Ondéron - Rampe céleste, Ondéron - Rampe céleste","Plafonnement : CA +4 → CA +3, RD élém. +25/- → +15/-","Effets (Overhaul) :
+• Plafonnement : CA +4 → CA +3, RD élém. +25/- → +15/-
+
+Les Verpines ont mis au point cette armure à nulle autre pareille grâce au très coûteux alliage zak. Il n'y a qu'une seule chose qui dépasse la protection qu'elle confère : son prix."
+a_heavy_11,Combinaison de puissance de Corellia,Armor Class 8,8,+1,Niv. 26+ (rare 21+),armour_prof_heavy / armour_prof_light / armour_prof_medium,FOR +2,"Bonus de caractéristique (Strength) +2, Bonus défense +2, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,,
+a_heavy_12,M'uhk'gfa,Armor Class 8,8,+1,Niv. 28+ (rare 23+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Bludgeoning) +10/-, Résistance aux dégâts (Energy) +5/-, Résistance aux dégâts (Piercing) +10/-, Résistance aux dégâts (Slashing) +10/-, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Plafonnement : RD +10/- → RD +3/- (Phys+Énergie),"Effets (Overhaul) :
+• Plafonnement : RD +10/- → RD +3/- (Phys+Énergie)
+
+La m'uhk'gfa, ou armure de combat, est l'armure encombrante mais très résistante portée par les combattants mandaloriens. Selon la tradition, chacun d'eux se constitue lui-même son armure, à partir de pièces métalliques récupérées sur les lieux de ses victoires."
+a_heavy_13,Armure-exosquelette Iotran,Armor Class 8,8,+1,Niv. 30+ (rare 25+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Dons en bonus, Dons en bonus, Bonus défense +3, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,,
+a_heavy_02,Armure de combat lourde,Armor Class 9,9,+0,Niv. 8+ (rare 3+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,Restriction utilisateur,palier 2 niv. 8+ (rare dès 3),—,,
+a_heavy_04,Armure lourde en duracier,Armor Class 9,9,+0,Niv. 12+ (rare 7+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +1, Restriction utilisateur",palier 4 niv. 12+ (rare dès 7),"Quartier marchand, Quartier marchand",,
+a_heavy_06,Armure lourde flexible,Armor Class 9,9,+0,Niv. 16+ (rare 11+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +1, Bonus DEX max +3, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,,
+a_heavy_07,Armure de combat mand.,Armor Class 9,9,+0,Niv. 18+ (rare 13+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Electrical) +25/-, Bonus défense +2, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",Plafonnement : RD Élec +25/- → +15/-,"Effets (Overhaul) :
+• Plafonnement : RD Élec +25/- → +15/-
+
+Les soldats de la République n'ont que trop vu cette armure au cours de la guerre contre les Mandaloriens, et il n'est pas étonnant qu'un conflit puisse durer aussi longtemps quand des soldats fanatiques sont équipés de telles protections."
+a_heavy_08,Armure lourde mand.,Armor Class 9,9,+0,Niv. 20+ (rare 15+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +3, Immunité (MindSpells), Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",,
+a_heavy_10,Armure d'assaut mand.,Armor Class 9,9,+0,Niv. 24+ (rare 19+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Cold) +25/-, Résistance aux dégâts (Fire) +25/-, Bonus défense +4, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,"Plafonnement : CA +4 → CA +3, RD Froid/Feu +25/- → +15/-","Effets (Overhaul) :
+• Plafonnement : CA +4 → CA +3, RD Froid/Feu +25/- → +15/-
+
+Cette armure était celle d'un soldat d'élite mandalorien. Les troupes de la République n'en ont que trop vu au cours de la guerre."
+a_heavy_14,Armure de Félénar,Armor Class 9,9,+0,Niv. 30+ (rare 27+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +2, Bonus DEX max +4, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,,
+a_heavy_15,Armure matrice,Armor Class 9,9,+0,Niv. 30+ (rare 29+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Energy) +5/-, Bonus défense +4, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,Plafonnement : CA +4 → CA +3,"Effets (Overhaul) :
+• Plafonnement : CA +4 → CA +3
+
+Le blindage en matrice est généralement utilisé pour les coques de vaisseaux, aussi le fait de le transformer en armure personnelle est-il coûteux et complexe sur le plan technologique. Par contre, le résultat donne une armure particulièrement résistante aux tirs de blaster."
+a_heavy_x01,Armure de Mandalore,Armor Class 9,9,+0,—,armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Electrical) +25/-, Bonus défense +2, Restriction utilisateur",—,—,Plafonnement : RD Élec +25/- → +15/-,"Effets (Overhaul) :
+• Plafonnement : RD Élec +25/- → +15/-
+
+L'armure de Mandalore est une armure de combat traditionnelle mandalorienne. Elle semble encore en parfaite condition, malgré les nombreux combats auxquels elle a dû prendre part. On prétend qu'il ne l'enlève jamais volontairement, même pour dormir."
+a_light_11,Combinaison anti-environnement ubèse,Armor Armd Flight Suit,5,+4,Niv. 26+ (rare 21+),armour_prof_light,,"Résistance aux dégâts (Cold) +10/-, Résistance aux dégâts (Electrical) +10/-, Résistance aux dégâts (Energy) +10/-, Résistance aux dégâts (Fire) +10/-, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,Plafonnement : RD +10/- → RD +3/- (Énergie),"Effets (Overhaul) :
+• Plafonnement : RD +10/- → RD +3/- (Énergie)
+
+Les Ubèses vivraient dans la Bordure moyenne, et les rares créatures à avoir rencontré cette race énigmatique lui attribuent la création de cette combinaison particulièrement efficace. Bien que peu utile contre les armes conventionnelles, elle est idéale contre les blasters, le feu et les grenades au cryoban."
+g_a_armrdfsuit,Armure de guerre blindée,Armor Armd Flight Suit,5,+4,Loot fixe / Quête,armour_prof_light,,Résistance aux dégâts (Cold) +20/-,—,"Station Citadelle - Cant…, Ondéron - Rampe céleste, Station Citadelle - Cant…, Ondéron - Rampe céleste",Plafonnement : RD Froid +20/- → +12/-,"Effets (Overhaul) :
+• Plafonnement : RD Froid +20/- → +12/-
+
+Cette combinaison de combat confère une protection contre le vide de l'espace pendant une courte durée. Ses nombreux modèles différents ont été adoptés par des utilisateurs extrêmement variés, allant des pilotes de l'armée aux pirates de l'espace, en passant par les mercenaires et les explorateurs de l'extrême."
+a_robe_06,Armure d'initié Zeison Sha,Armor Zeison Sha,3,+4,Niv. 16+ (rare 11+),armour_prof_light,,"Bonus défense +1, Jets de sauvegarde améliorés +1, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,Ajout lore Zeison Sha (survie Yanibar) : CON +1,"Effets (Overhaul) :
+• Ajout lore Zeison Sha (survie Yanibar) : CON +1
+
+Ne limite pas l'usage des pouvoirs liés à la Force.
+
+Les initiés Zeison Sha sont connus pour leurs aptitudes de survie et les incroyables ressources dont ils disposent. Extrêmement résistante, leur armure flexible a pour fonction de les protéger.
+
+Les Zeison Sha ont évolué sur Yanibar, planète hostile de la Bordure extérieure qui les a obligés à développer leurs pouvoirs liés à la Force pour survivre. Ils mettent l'accent sur l'indépendance et la survie, mais aussi sur l'assistance à porter à ceux qui en ont besoin."
+a_robe_07,Armure de néophyte Jal Shey,Armor Zeison Sha,3,+4,Niv. 18+ (rare 13+),armour_prof_light,CHA +1,"Bonus de caractéristique (Charisma) +1, Bonus de compétence +1, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),—,,
+a_robe_11,Armure de conseiller Jal Shey,Armor Zeison Sha,3,+4,Niv. 26+ (rare 21+),armour_prof_light,"SAG +1, CHA +2","Bonus de caractéristique (Charisma) +2, Bonus de caractéristique (Wisdom) +1, Bonus de compétence +1, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,,
+a_robe_16,Armure de guerrier Zeison Sha,Armor Zeison Sha,3,+4,Niv. 30+,armour_prof_light,,"Bonus défense +2, Jets de sauvegarde améliorés +1, Restriction utilisateur",palier 16 niv. 30+,—,Ajout lore Zeison Sha (survie Yanibar) : CON +2,"Effets (Overhaul) :
+• Ajout lore Zeison Sha (survie Yanibar) : CON +2
+
+Ne limite pas l'usage des pouvoirs liés à la Force.
+
+Les guerriers Zeison Sha sont de redoutables combattants, particulièrement doués pour ce qui est des pouvoirs télékinétiques liés à la Force. Leurs vêtements renforcés restreignent leurs mouvements, mais pas leur usage de la Force.
+
+Les Zeison Sha ont évolué sur Yanibar, planète hostile de la Bordure extérieure qui les a obligés à développer leurs pouvoirs liés à la Force pour survivre. Ils mettent l'accent sur l'indépendance et la survie, mais aussi sur l'assistance à porter à ceux qui en ont besoin."
+a_robe_20,Armure de mentor Jal Shey,Armor Zeison Sha,3,+4,Niv. 30+,armour_prof_light,"SAG +1, CHA +4","Bonus de caractéristique (Charisma) +4, Bonus de caractéristique (Wisdom) +1, Bonus défense +1, Bonus de compétence +1, Restriction utilisateur",palier 20 niv. 30+,—,"Plafonnement : CHA +4, SAG +1 → CHA +3, SAG +1","Effets (Overhaul) :
+• Plafonnement : CHA +4, SAG +1 → CHA +3, SAG +1
+
+Ne limite pas l'usage des pouvoirs liés à la Force.
+
+Dotés d'un intellect sans pareil, les mentors Jal Shey font souvent office de conseillers ou de mentors vénérés.
+
+Les Jal Shey se concentrent sur l'étude de la Force sur le plan intellectuel. Ils cherchent à la comprendre au niveau mental, plutôt que spirituel. La plupart d'entre eux font d'excellents diplomates. Par contre, ils sont moins doués pour les activités physiques."
+a_robe_26,Armure de Dark Malak,Armor Zeison Sha,3,+4,Niv. 30+,"armour_prof_light, Alignement",FOR +1,"Restriction d'alignement, Bonus de caractéristique (Strength) +1, Bonus défense +4, Régénération +2, Restriction utilisateur",palier 26 niv. 30+,—,Plafonnement : CA +4 → CA +3,"Effets (Overhaul) :
+• Plafonnement : CA +4 → CA +3
+
+Ne limite pas l'usage des pouvoirs liés à la Force.
+
+D'aucuns pensent que ce vêtement appartenait autrefois à Dark Malak, l'apprenti déchu de Dark Revan. On attribue à Malak et à Revan le déclenchement de la Guerre civile des Jedi, qui a provoqué l'effondrement de l'Ordre Jedi."
+a_robe_02,Bure de padawan,Jedi Robe,0,+-1,Niv. 8+ (rare 3+),jedi_defense,,"Bonus défense +1, Restriction utilisateur",palier 2 niv. 8+ (rare dès 3),—,,
+a_robe_03,Bure de padawan Obscur,Jedi Robe,0,+-1,Niv. 10+ (rare 5+),jedi_defense,,"Bonus défense +1, Restriction utilisateur",palier 3 niv. 10+ (rare dès 5),—,,
+a_robe_04,Bure de novice Baran Do,Jedi Robe,0,+-1,Niv. 12+ (rare 7+),jedi_defense,SAG +1,"Bonus de caractéristique (Wisdom) +1, Immunité contre dégâts +10%, Immunité contre dégâts +10%, Bonus défense +1, Restriction utilisateur",palier 4 niv. 12+ (rare dès 7),—,,
+a_robe_08,Bure de Jedi,Jedi Robe,0,+-1,Niv. 20+ (rare 15+),jedi_defense,,"Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),Ebon Hawk - Intérieur,,
+a_robe_09,Bure de Jedi Obscur,Jedi Robe,0,+-1,Niv. 22+ (rare 17+),jedi_defense,,"Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),—,,
+a_robe_10,Bure de Norris,Jedi Robe,0,+-1,Niv. 24+ (rare 19+),jedi_defense,,"Immunité contre dégâts +20%, Bonus défense +2, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,,
+a_robe_19,Bure de sage Baran Do,Jedi Robe,0,+-1,Niv. 30+,jedi_defense,SAG +4,"Bonus de caractéristique (Wisdom) +4, Immunité contre dégâts +20%, Immunité contre dégâts +20%, Bonus défense +2, Restriction utilisateur",palier 19 niv. 30+,—,Plafonnement : SAG +4 → SAG +3,"Effets (Overhaul) :
+• Plafonnement : SAG +4 → SAG +3
+
+Les sages sont les plus puissants des Baran Do, capables de lire le passé et l'avenir, et ce à l'échelle de la galaxie tout entière.
+
+Les Baran Do sont des membres sensibles à la Force de la race des Kel Dor. Ils recherchent la paix intérieure avant toute chose. Etres d'une grande patience, ils consultent la Force avant de prendre la moindre décision."
+a_robe_21,Bure de gardien d'Ossus,Jedi Robe,0,+-1,Niv. 30+,jedi_defense,"INT +4, SAG +4, CHA +2","Bonus de caractéristique (Charisma) +2, Bonus de caractéristique (Intelligence) +4, Bonus de caractéristique (Wisdom) +4, Bonus défense +1, Restriction utilisateur",palier 21 niv. 30+,—,"Plafonnement & lore archives d'Ossus : INT +4, SAG +4, CHA +2 → INT +3, SAG +2","Effets (Overhaul) :
+• Plafonnement & lore archives d'Ossus : INT +4, SAG +4, CHA +2 → INT +3, SAG +2
+
+Les Gardiens du Temple du Savoir de la grande bibliothèque des Jedi gardaient les archives, répondant aux questions de ceux qui préféraient apprendre par la discussion plutôt que dans les livres."
+a_robe_27,Bure de Jolee,Jedi Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",CHA +4,"Restriction d'alignement, Bonus de caractéristique (Charisma) +4, Bonus défense +3, Régénération de points de Force +1, Restriction utilisateur",palier 27 niv. 30+,—,Plafonnement : CHA +4 → CHA +3,"Effets (Overhaul) :
+• Plafonnement : CHA +4 → CHA +3
+
+Jolee Bindo, que beaucoup considèrent comme un Jedi Gris, est resté à l'écart de l'Ordre dans sa quête de savoir. Il est possible que cette bure en apparence toute simple mais très puissante lui ait appartenu, mais nul ne sait où il se trouve à l'heure actuelle.
+
+Cette bure peut accepter des améliorations sous forme de sous-couches."
+masterarcasrobes,Bures de maître Arca,Jedi Robe,0,+-1,Loot fixe / Quête,"jedi_defense, Alignement","FOR +4, SAG +2","Restriction d'alignement, Bonus de caractéristique (Strength) +4, Bonus de caractéristique (Wisdom) +2, Bonus défense +3, Restriction utilisateur",—,401dxn,"Plafonnement : FOR +4, SAG +2 → FOR +2, SAG +2","Effets (Overhaul) :
+• Plafonnement : FOR +4, SAG +2 → FOR +2, SAG +2"
+rcm_robe_99,*(rcm_robe_99)*,Jedi Robe,0,+-1,—,jedi_defense,,"Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",—,—,,
+a_robe_x01,Bure de la Servante,Jedi Knight Robe,0,+-1,—,PNJ only,CHA +2,"Bonus de caractéristique (Charisma) +2, Bonus défense +3, Restriction PJ, Restriction utilisateur",—,—,,
+a_robe_05,Bure d'apprenti Mutaki,Jedi Master Robe,0,+-1,Niv. 14+ (rare 9+),jedi_defense,"FOR +1, DEX +1, CON +1","Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +1, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,,
+a_robe_12,Bure de Jedi gris,Jedi Master Robe,0,+-1,Niv. 28+ (rare 23+),jedi_defense,CHA +2,"Bonus de caractéristique (Charisma) +2, Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,,
+a_robe_13,Bure de chevalier Jedi,Jedi Master Robe,0,+-1,Niv. 30+ (rare 25+),jedi_defense,,"Bonus défense +2, Régénération de points de Force +1, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,,
+a_robe_14,Bure de chevalier Jedi Obscur,Jedi Master Robe,0,+-1,Niv. 30+ (rare 27+),jedi_defense,,"Bonus défense +2, Régénération de points de Force +1, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,,
+a_robe_15,Bure d'adepte Mutaki,Jedi Master Robe,0,+-1,Niv. 30+ (rare 29+),jedi_defense,"FOR +2, DEX +2, CON +2","Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +2, Bonus défense +1, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,"Plafonnement : FOR +2, DEX +2, CON +2 → FOR +2, DEX +1, CON +2","Effets (Overhaul) :
+• Plafonnement : FOR +2, DEX +2, CON +2 → FOR +2, DEX +1, CON +2
+
+Les adeptes Mutaki sont passés maîtres dans l'art de guider leur corps à l'aide de la Force, ce qui leur permet de réussir des exploits physiques stupéfiants.
+
+Les Mutaki sont des êtres sensibles à la Force qui utilisent leur corps physique pour canaliser la Force. Leur philosophie repose sur l'équilibre entre le physique et le spirituel."
+a_robe_17,Bure de maître Jedi,Jedi Master Robe,0,+-1,Niv. 30+,jedi_defense,,"Bonus défense +3, Régénération de points de Force +1, Restriction utilisateur",palier 17 niv. 30+,—,,
+a_robe_18,Bure de maître Jedi Obscur,Jedi Master Robe,0,+-1,Niv. 30+,jedi_defense,,"Bonus défense +3, Régénération de points de Force +1, Restriction utilisateur",palier 18 niv. 30+,—,,
+a_robe_22,Foulard de Natth,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",FOR +3,"Restriction d'alignement, Bonus de caractéristique (Strength) +3, Bonus défense +3, Restriction utilisateur",palier 22 niv. 30+,—,,
+a_robe_23,Bure d'Arca Jeth,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",SAG +2,"Restriction d'alignement, Bonus de caractéristique (Wisdom) +2, Bonus défense +2, Régénération de points de Force +3, Restriction utilisateur",palier 23 niv. 30+,—,,
+a_robe_24,Bure d'Aleema Keto,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement","FOR +2, SAG +4","Restriction d'alignement, Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Wisdom) +4, Bonus défense +3, Régénération de points de Force +1, Restriction utilisateur",palier 24 niv. 30+,—,"Plafonnement : SAG +4, FOR +2 → SAG +3, FOR +1","Effets (Overhaul) :
+• Plafonnement : SAG +4, FOR +2 → SAG +3, FOR +1
+
+Aleema Keto a entamé une formation de Jedi mais, alors qu'elle se livrait à des recherches poussées sur les Sith, elle est devenue fascinée par leur pouvoir, ce qui l'a entraînée vers le côté Obscur. Passée maîtresse dans l'art de l'illusion, elle a contribué à attirer Ulic Qel-Droma vers le côté Obscur."
+a_robe_25,Bure de Sylvar,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",DEX +2,"Restriction d'alignement, Bonus de caractéristique (Dexterity) +2, Résistance aux dégâts (Dark_Side) +15/-, Résistance aux dégâts (Energy) +15/-, Bonus défense +2, Restriction utilisateur",palier 25 niv. 30+,—,Plafonnement : RD +15/- → RD +5/- (Énergie/Obscur),"Effets (Overhaul) :
+• Plafonnement : RD +15/- → RD +5/- (Énergie/Obscur)
+
+Elève au côté d'Exar Kun, Sylvar était la femme de Crado. Malgré les terribles épreuves qu'elle a eu à endurer, elle n'a jamais renié le côté Lumineux, devenant même un des membres les plus influents de l'Ordre."
+a_robe_28,Bure de Thon,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",,"Restriction d'alignement, Dons en bonus, Dons en bonus, Dons en bonus, Bonus défense +3, Restriction utilisateur",palier 28 niv. 30+,—,,
+a_robe_29,Bure de Crado,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",FOR +6,"Restriction d'alignement, Bonus de caractéristique (Strength) +6, Malus de caractéristique +-2, Bonus défense +2, Restriction utilisateur",palier 29 niv. 30+,—,Plafonnement : FOR +6 → FOR +3,"Effets (Overhaul) :
+• Plafonnement : FOR +6 → FOR +3
+
+Crado est un Jedi qui a basculé du côté Obscur à cause d'Exar Kun. Après avoir trahi sa bien-aimée Sylvar, il a perdu la vie lors de la destruction de l'amas de Cron.
+
+Il serait plus que surprenant que cette bure lui ait appartenu. Mais ce qui est sûr, c'est qu'il émane d'elle un pouvoir et une corruption qui ne peuvent provenir que du côté Obscur."
+a_robe_30,Bure de Nomi,Jedi Master Robe,0,+-1,Niv. 30+,"jedi_defense, Alignement",SAG +4,"Restriction d'alignement, Bonus de caractéristique (Wisdom) +4, Bonus défense +3, Régénération de points de Force +3, Restriction utilisateur",palier 30 niv. 30+,—,Plafonnement : SAG +4 → SAG +3,"Effets (Overhaul) :
+• Plafonnement : SAG +4 → SAG +3
+
+Nomi avait une incroyable affinité à la Force, mais elle ne s'est décidée à suivre l'enseignement des Jedi qu'à contrecoeur, et seulement suite au décès de son mari, Andur. Sous la tutelle de maître Thon, elle est ensuite entrée au panthéon des plus grands Jedi de tous les temps."

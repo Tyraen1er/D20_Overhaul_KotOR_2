@@ -1,35 +1,64 @@
-﻿ResRef,Nom,Sous-type,Niv. min obtention,Prérequis,Bonus Carac (résumé),Propriétés (vanilla),Loot aléatoire,Lieux sûrs,Changement (mod)
-100_mask01,Casque de repérage,Mask,Loot fixe / Quête,—,,"Résistance aux dégâts (Sonic) +5/-, Bonus de compétence +1",—,"Péragus - Galeries, Péragus - Galeries",
-a_helmet_01,Serre-tête neural,Mask,Niv. 6+ (rare 1+),—,,Jets de sauvegarde améliorés +2,palier 1 niv. 6+ (rare dès 1),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",
-a_helmet_02,Masque respirateur,Mask,Niv. 8+ (rare 3+),—,,Immunité (Poison),palier 2 niv. 8+ (rare dès 3),"Péragus - Dortoirs, Péragus - Dortoirs",
-a_helmet_03,Serre-tête de Rakata,Mask,Niv. 10+ (rare 5+),—,SAG +1,Bonus de caractéristique (Wisdom) +1,palier 3 niv. 10+ (rare dès 5),—,
-a_helmet_04,Augmentateur de discrétion,Mask,Niv. 12+ (rare 7+),—,,"Don requis, Bonus de compétence +4",palier 4 niv. 12+ (rare dès 7),—,
-a_helmet_05,Visière de perception bothan,Mask,Niv. 14+ (rare 9+),—,,"Don requis, Bonus de compétence +3, Bonus de compétence +2, Bonus de compétence +2",palier 5 niv. 14+ (rare dès 9),—,
-a_helmet_06,Bloquants soniques,Mask,Niv. 16+ (rare 11+),—,,"Résistance aux dégâts (Sonic) +10/-, Don requis",palier 6 niv. 16+ (rare dès 11),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",
-a_helmet_07,Serre-tête d'interface,Mask,Niv. 18+ (rare 13+),—,,"Résistance aux dégâts (Sonic) +5/-, Bonus de compétence +2, Bonus de compétence +2, Bonus de compétence +2",palier 7 niv. 18+ (rare dès 13),—,Ajout : INT +1 (interface informatique)
-a_helmet_08,Visière de visée,Mask,Niv. 20+ (rare 15+),—,,"Bonus d'attaque +1, Jets de sauvegarde améliorés +1",palier 8 niv. 20+ (rare dès 15),"Dantooine - niveau soute…, Dantooine - niveau soute…",
-a_helmet_09,Visière de protection,Mask,Niv. 22+ (rare 17+),—,,"Immunité contre dégâts +5%, Immunité contre dégâts +5%, Immunité contre dégâts +5%, Bonus défense +1, Don requis",palier 9 niv. 22+ (rare dès 17),—,
-a_helmet_10,Capteur de pilote spatial,Mask,Niv. 24+ (rare 19+),—,DEX +1,"Bonus de caractéristique (Dexterity) +1, Dons en bonus, Dons en bonus",palier 10 niv. 24+ (rare dès 19),—,
-a_helmet_11,Visière royale,Mask,Niv. 26+ (rare 21+),—,CHA +1,"Bonus de caractéristique (Charisma) +1, Bonus de compétence +2",palier 11 niv. 26+ (rare dès 21),—,
-a_helmet_12,Serre-tête de méditation,Mask,Niv. 28+ (rare 23+),—,SAG +1,"Bonus de caractéristique (Wisdom) +1, Immunité contre dégâts +20%, Jets de sauvegarde améliorés +1",palier 12 niv. 28+ (rare dès 23),—,
-a_helmet_13,Visière sensorielle bothan,Mask,Niv. 30+ (rare 25+),—,,"Don requis, Immunité (Critical_Hits), Bonus de compétence +4, Bonus de compétence +3, Bonus de compétence +3",palier 13 niv. 30+ (rare dès 25),—,Ajout : INT +2 (capteurs d'analyse bothans)
-a_helmet_14,Aveuglants arkaniens,Mask,Niv. 30+ (rare 27+),—,,"Immunité contre dégâts +10%, Bonus défense +1, Don requis, Immunité (MindSpells)",palier 14 niv. 30+ (rare dès 27),—,
-a_helmet_15,Capteur de combat,Mask,Niv. 30+ (rare 29+),—,DEX +2,"Bonus de caractéristique (Dexterity) +2, Dons en bonus, Dons en bonus",palier 15 niv. 30+ (rare dès 29),—,
-a_helmet_16,Analyseur de visée multispectral,Mask,Niv. 30+,—,,"Bonus d'attaque +3, Dons en bonus, Dons en bonus, Don requis, Don requis, Bonus de compétence +4",palier 16 niv. 30+,—,Ajout : INT +2 (ordinateur de visée multispectral) ; Plafonnement : Atq +3 → Atq +2
-a_helmet_17,Casque de conscience,Mask,Niv. 30+,—,CON +2,"Bonus de caractéristique (Constitution) +2, Bonus défense +1, Don requis",palier 17 niv. 30+,—,
-a_helmet_18,Respirateur,Mask,Niv. 30+,—,CON +1,"Bonus de caractéristique (Constitution) +1, Don requis, Immunité (Poison), Régénération +1",palier 18 niv. 30+,—,
-a_helmet_19,Masque de chasse de Das'skar,Mask,Niv. 30+,—,DEX +1,"Bonus d'attaque +1, Bonus de caractéristique (Dexterity) +1, Bonus de compétence +2, Bonus de compétence +2",palier 19 niv. 30+,—,
-a_helmet_20,Masque de la Force,Mask,Niv. 30+,—,,"Malus de caractéristique +-4, Malus de caractéristique +-4, Meilleure résistance à la Force +16, Jets de sauvegarde améliorés +4",palier 20 niv. 30+,—,
-a_helmet_21,Masque Sith,Mask,Niv. 30+,—,,"Dons en bonus, Don requis, Immunité (MindSpells), Régénération de points de Force +1",palier 21 niv. 30+,—,Ajout : FOR +2 (Masque Sith)
-a_helmet_22,Masque stabilisant,Mask,Niv. 30+,—,,"Don requis, Immunité (MindSpells), Jets de sauvegarde améliorés +2",palier 22 niv. 30+,—,
-a_helmet_23,Serre-tête de méditation Mutaki,Mask,Niv. 30+,—,SAG +2,"Bonus de caractéristique (Wisdom) +2, Immunité contre dégâts +30%, Jets de sauvegarde améliorés +2",palier 23 niv. 30+,—,
-a_helmet_24,Evaluateur de cible,Mask,Niv. 30+,—,DEX +2,"Bonus d'attaque +2, Bonus de caractéristique (Dexterity) +2, Dons en bonus, Dons en bonus",palier 24 niv. 30+,—,
-a_helmet_25,Serre-tête de Saresh,Mask,Niv. 30+,Alignement,SAG +5,"Restriction d'alignement, Bonus de caractéristique (Wisdom) +5",palier 25 niv. 30+,—,Plafonnement : SAG +5 → SAG +3
-a_helmet_26,Serre-tête de Bindo,Mask,Niv. 30+,—,CHA +3,"Bonus de caractéristique (Charisma) +3, Immunité contre dégâts +10%, Immunité contre dégâts +10%",palier 26 niv. 30+,—,
-a_helmet_27,Visière de protection améliorée,Mask,Niv. 30+,—,,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +15%, Bonus défense +3, Don requis",palier 27 niv. 30+,—,Plafonnement : CA +3 → CA +2
-a_helmet_28,Bouclier de Force,Mask,Niv. 30+,—,,"Malus de caractéristique +-6, Malus de caractéristique +-6, Résistance aux dégâts (Dark_Side) +5/-, Meilleure résistance à la Force +24, Jets de sauvegarde améliorés +5",palier 28 niv. 30+,—,"Plafonnement : RD +5/- → RD +3/- (Obscur), Saves +5 → Saves +4"
-a_helmet_29,Visière d'absorption,Mask,Niv. 30+,—,,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +75%, Immunité contre dégâts +90%, Bonus défense +1, Don requis",palier 29 niv. 30+,—,Plafonnement : Immunité +75%/+90% → +30%
-a_helmet_30,Visière de Force,Mask,Niv. 30+,—,"SAG +4, CHA +1","Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +4, Régénération de points de Force +2",palier 30 niv. 30+,—,"Plafonnement : SAG +4, CHA +1 → SAG +2, CHA +2"
-mandaloreshelmet,Casque de Mandalore,Mask,Loot fixe / Quête,—,"FOR +2, DEX +2","Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +2, Immunité (Critical_Hits), Bonus de compétence +2, Restriction utilisateur",—,401dxn,
-mandaloriantacti,HUD tactique de Mandalore,Mask,Loot fixe / Quête,—,,"Dons en bonus, Bonus de compétence +4",—,401dxn,Ajout : INT +2 (HUD tactique)
-onderonmotiongog,Visière de détection de mouvement d'Ondéron,Mask,Loot fixe / Quête,—,,Bonus de compétence +6,—,401dxn,
+﻿ResRef,Nom,Sous-type,Niv. min obtention,Prérequis,Bonus Carac (résumé),Propriétés (vanilla),Loot aléatoire,Lieux sûrs,Changement (mod),Description (mod)
+100_mask01,Casque de repérage,Mask,Loot fixe / Quête,—,,"Résistance aux dégâts (Sonic) +5/-, Bonus de compétence +1",—,"Péragus - Galeries, Péragus - Galeries",,
+a_helmet_01,Serre-tête neural,Mask,Niv. 6+ (rare 1+),—,,Jets de sauvegarde améliorés +2,palier 1 niv. 6+ (rare dès 1),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",,
+a_helmet_02,Masque respirateur,Mask,Niv. 8+ (rare 3+),—,,Immunité (Poison),palier 2 niv. 8+ (rare dès 3),"Péragus - Dortoirs, Péragus - Dortoirs",,
+a_helmet_03,Serre-tête de Rakata,Mask,Niv. 10+ (rare 5+),—,SAG +1,Bonus de caractéristique (Wisdom) +1,palier 3 niv. 10+ (rare dès 5),—,,
+a_helmet_04,Augmentateur de discrétion,Mask,Niv. 12+ (rare 7+),—,,"Don requis, Bonus de compétence +4",palier 4 niv. 12+ (rare dès 7),—,,
+a_helmet_05,Visière de perception bothan,Mask,Niv. 14+ (rare 9+),—,,"Don requis, Bonus de compétence +3, Bonus de compétence +2, Bonus de compétence +2",palier 5 niv. 14+ (rare dès 9),—,,
+a_helmet_06,Bloquants soniques,Mask,Niv. 16+ (rare 11+),—,,"Résistance aux dégâts (Sonic) +10/-, Don requis",palier 6 niv. 16+ (rare dès 11),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",,
+a_helmet_07,Serre-tête d'interface,Mask,Niv. 18+ (rare 13+),—,,"Résistance aux dégâts (Sonic) +5/-, Bonus de compétence +2, Bonus de compétence +2, Bonus de compétence +2",palier 7 niv. 18+ (rare dès 13),—,Ajout : INT +1 (interface informatique),"Effets (Overhaul) :
+• Ajout : INT +1 (interface informatique)
+
+Cet objet offre une interface permettant d'accéder à une foule d'informations sur les systèmes électroniques communs aux systèmes de sécurité et de démolition, ainsi qu'aux fonctions informatiques d'ordre général."
+a_helmet_08,Visière de visée,Mask,Niv. 20+ (rare 15+),—,,"Bonus d'attaque +1, Jets de sauvegarde améliorés +1",palier 8 niv. 20+ (rare dès 15),"Dantooine - niveau soute…, Dantooine - niveau soute…",,
+a_helmet_09,Visière de protection,Mask,Niv. 22+ (rare 17+),—,,"Immunité contre dégâts +5%, Immunité contre dégâts +5%, Immunité contre dégâts +5%, Bonus défense +1, Don requis",palier 9 niv. 22+ (rare dès 17),—,,
+a_helmet_10,Capteur de pilote spatial,Mask,Niv. 24+ (rare 19+),—,DEX +1,"Bonus de caractéristique (Dexterity) +1, Dons en bonus, Dons en bonus",palier 10 niv. 24+ (rare dès 19),—,,
+a_helmet_11,Visière royale,Mask,Niv. 26+ (rare 21+),—,CHA +1,"Bonus de caractéristique (Charisma) +1, Bonus de compétence +2",palier 11 niv. 26+ (rare dès 21),—,,
+a_helmet_12,Serre-tête de méditation,Mask,Niv. 28+ (rare 23+),—,SAG +1,"Bonus de caractéristique (Wisdom) +1, Immunité contre dégâts +20%, Jets de sauvegarde améliorés +1",palier 12 niv. 28+ (rare dès 23),—,,
+a_helmet_13,Visière sensorielle bothan,Mask,Niv. 30+ (rare 25+),—,,"Don requis, Immunité (Critical_Hits), Bonus de compétence +4, Bonus de compétence +3, Bonus de compétence +3",palier 13 niv. 30+ (rare dès 25),—,Ajout : INT +2 (capteurs d'analyse bothans),"Effets (Overhaul) :
+• Ajout : INT +2 (capteurs d'analyse bothans)
+
+Les Bothans accordent une grande importance à tout ce qui permet de recueillir des informations. Pour eux, cette visière est de qualité moyenne, mais leurs exigences en la matière sont extrêmement élevées."
+a_helmet_14,Aveuglants arkaniens,Mask,Niv. 30+ (rare 27+),—,,"Immunité contre dégâts +10%, Bonus défense +1, Don requis, Immunité (MindSpells)",palier 14 niv. 30+ (rare dès 27),—,,
+a_helmet_15,Capteur de combat,Mask,Niv. 30+ (rare 29+),—,DEX +2,"Bonus de caractéristique (Dexterity) +2, Dons en bonus, Dons en bonus",palier 15 niv. 30+ (rare dès 29),—,,
+a_helmet_16,Analyseur de visée multispectral,Mask,Niv. 30+,—,,"Bonus d'attaque +3, Dons en bonus, Dons en bonus, Don requis, Don requis, Bonus de compétence +4",palier 16 niv. 30+,—,Ajout : INT +2 (ordinateur de visée multispectral) ; Plafonnement : Atq +3 → Atq +2,"Effets (Overhaul) :
+• Ajout : INT +2 (ordinateur de visée multispectral)
+• Plafonnement : Atq +3 → Atq +2
+
+Cet objet particulièrement évolué est à réserver à ceux qui manient déjà les armes à distance avec une grande efficacité. La pléthore d'informations qu'il communique à son porteur augmente encore la précision de ce dernier."
+a_helmet_17,Casque de conscience,Mask,Niv. 30+,—,CON +2,"Bonus de caractéristique (Constitution) +2, Bonus défense +1, Don requis",palier 17 niv. 30+,—,,
+a_helmet_18,Respirateur,Mask,Niv. 30+,—,CON +1,"Bonus de caractéristique (Constitution) +1, Don requis, Immunité (Poison), Régénération +1",palier 18 niv. 30+,—,,
+a_helmet_19,Masque de chasse de Das'skar,Mask,Niv. 30+,—,DEX +1,"Bonus d'attaque +1, Bonus de caractéristique (Dexterity) +1, Bonus de compétence +2, Bonus de compétence +2",palier 19 niv. 30+,—,,
+a_helmet_20,Masque de la Force,Mask,Niv. 30+,—,,"Malus de caractéristique +-4, Malus de caractéristique +-4, Meilleure résistance à la Force +16, Jets de sauvegarde améliorés +4",palier 20 niv. 30+,—,,
+a_helmet_21,Masque Sith,Mask,Niv. 30+,—,,"Dons en bonus, Don requis, Immunité (MindSpells), Régénération de points de Force +1",palier 21 niv. 30+,—,Ajout : FOR +2 (Masque Sith),"Effets (Overhaul) :
+• Ajout : FOR +2 (Masque Sith)
+
+Ce masque bloque les influences mentales extérieures et autres perturbations sensorielles, permettant ainsi à son utilisateur de se concentrer en faisant fi de toute distraction."
+a_helmet_22,Masque stabilisant,Mask,Niv. 30+,—,,"Don requis, Immunité (MindSpells), Jets de sauvegarde améliorés +2",palier 22 niv. 30+,—,,
+a_helmet_23,Serre-tête de méditation Mutaki,Mask,Niv. 30+,—,SAG +2,"Bonus de caractéristique (Wisdom) +2, Immunité contre dégâts +30%, Jets de sauvegarde améliorés +2",palier 23 niv. 30+,—,,
+a_helmet_24,Evaluateur de cible,Mask,Niv. 30+,—,DEX +2,"Bonus d'attaque +2, Bonus de caractéristique (Dexterity) +2, Dons en bonus, Dons en bonus",palier 24 niv. 30+,—,,
+a_helmet_25,Serre-tête de Saresh,Mask,Niv. 30+,Alignement,SAG +5,"Restriction d'alignement, Bonus de caractéristique (Wisdom) +5",palier 25 niv. 30+,—,Plafonnement : SAG +5 → SAG +3,"Effets (Overhaul) :
+• Plafonnement : SAG +5 → SAG +3
+
+Les Saresh, riche famille de Taris, étaient autant connus pour leur arrogance et leur cruauté que pour leur fabuleuse richesse et l'influence dont ils jouissaient sur la scène politique. Mais au cours des cent dernières années, beaucoup d'entre eux ont montré une grande affinité avec la Force et sont entrés au service de l'Ordre Jedi. Gunn Han Saresh, héritier de la fortune familiale, en faisait partie. C'est pour fêter l'intronisation de son fils au sein de l'Ordre que son père a fait fabriquer ce puissant serre-tête. Afin d'éviter que Gunn ne se laisse gouverner par son arrogance et son orgueil (ce qui était plus que possible, compte tenu de ses ancêtres), le serre-tête a été créé de telle sorte qu'il ne fonctionne que pour un serviteur du côté Lumineux. Il a disparu en même temps que Gunn, peu de temps après la Grande traque."
+a_helmet_26,Serre-tête de Bindo,Mask,Niv. 30+,—,CHA +3,"Bonus de caractéristique (Charisma) +3, Immunité contre dégâts +10%, Immunité contre dégâts +10%",palier 26 niv. 30+,—,,
+a_helmet_27,Visière de protection améliorée,Mask,Niv. 30+,—,,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +15%, Bonus défense +3, Don requis",palier 27 niv. 30+,—,Plafonnement : CA +3 → CA +2,"Effets (Overhaul) :
+• Plafonnement : CA +3 → CA +2
+
+Version bien plus efficace que la peu coûteuse visière de protection classique, ce casque protège contre diverses sources d'agression physique."
+a_helmet_28,Bouclier de Force,Mask,Niv. 30+,—,,"Malus de caractéristique +-6, Malus de caractéristique +-6, Résistance aux dégâts (Dark_Side) +5/-, Meilleure résistance à la Force +24, Jets de sauvegarde améliorés +5",palier 28 niv. 30+,—,"Plafonnement : RD +5/- → RD +3/- (Obscur), Saves +5 → Saves +4","Effets (Overhaul) :
+• Plafonnement : RD +5/- → RD +3/- (Obscur), Saves +5 → Saves +4
+
+Ce casque protège l'esprit de son porteur contre la Force. Il est si efficace que les créatures sensibles à la Force se retrouvent légèrement désorientées quand elles l'enfilent."
+a_helmet_29,Visière d'absorption,Mask,Niv. 30+,—,,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +75%, Immunité contre dégâts +90%, Bonus défense +1, Don requis",palier 29 niv. 30+,—,Plafonnement : Immunité +75%/+90% → +30%,"Effets (Overhaul) :
+• Plafonnement : Immunité +75%/+90% → +30%
+
+Modification high-tech et orientée vers le combat du suppresseur d'ondes sonores, cet objet confère une immunité presque totale contre les attaques soniques et ioniques."
+a_helmet_30,Visière de Force,Mask,Niv. 30+,—,"SAG +4, CHA +1","Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +4, Régénération de points de Force +2",palier 30 niv. 30+,—,"Plafonnement : SAG +4, CHA +1 → SAG +2, CHA +2","Effets (Overhaul) :
+• Plafonnement : SAG +4, CHA +1 → SAG +2, CHA +2
+
+Cette visière utilise un procédé inconnu pour aider son porteur à ne pas se laisser distraire. Elle est particulièrement puissante quand elle est portée par une créature sensible à la Force."
+mandaloreshelmet,Casque de Mandalore,Mask,Loot fixe / Quête,—,"FOR +2, DEX +2","Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +2, Immunité (Critical_Hits), Bonus de compétence +2, Restriction utilisateur",—,401dxn,,
+mandaloriantacti,HUD tactique de Mandalore,Mask,Loot fixe / Quête,—,,"Dons en bonus, Bonus de compétence +4",—,401dxn,Ajout : INT +2 (HUD tactique),"Effets (Overhaul) :
+• Ajout : INT +2 (HUD tactique)"
+onderonmotiongog,Visière de détection de mouvement d'Ondéron,Mask,Loot fixe / Quête,—,,Bonus de compétence +6,—,401dxn,,

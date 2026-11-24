@@ -1,266 +1,1435 @@
-﻿ResRef,Nom,Emplacement,Tier,Effets (vanilla),Loot aléatoire,Changement (mod),Règle du jeu de base (sans feats)
-ARMES DE MÊLÉE — LAMES,,,,,,,
-u_m_edge_01,Tranchant dévaronien modéré,Lame (mêlée),1,Coups critiques plus importants +1d3,palier 1 niv. 6+ (rare dès 1),Coups critiques plus importants +1d4,
-u_m_edge_02,Cellule à décharge sonique T3 (mêlée),Lame (mêlée),2,"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d4",palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts contre Droïdes +1d4,
-u_m_edge_03,Tranchant en mullinine de base,Lame (mêlée),3,Acéré,palier 3 niv. 10+ (rare dès 5),Acéré,
-u_m_edge_04,Tranchant en neutronium de base,Lame (mêlée),4,Bonus aux dégâts (Slashing) +1d3,palier 4 niv. 12+ (rare dès 7),En cas de coup au but (Lenteur : DD 3 + Niv + Carac),
-u_m_edge_05,Tranchant dévaronien modéré,Lame (mêlée),5,"Bonus aux dégâts (Slashing) +2, Coups critiques plus importants +1d8",palier 5 niv. 14+ (rare dès 9),Coups critiques plus importants +1d6,
-u_m_edge_06,Tranchant en ionite amélioré,Lame (mêlée),6,"Bonus aux dégâts (Ion) +1d4, Bonus aux dégâts contre Race +1d6",palier 6 niv. 16+ (rare dès 11),Bonus aux dégâts contre Droïdes +1d8,
-u_m_edge_07,Tranchant en mullinine amélioré,Lame (mêlée),7,"Bonus aux dégâts (Slashing) +1d4, Acéré",palier 7 niv. 18+ (rare dès 13),"Acéré, Coups critiques plus importants +1d4",
-u_m_edge_08,Tranchant en neutronium amélioré,Lame (mêlée),8,"Bonus aux dégâts (Slashing) +3, Coups critiques plus importants +1d4",palier 8 niv. 20+ (rare dès 15),"En cas de coup au but (Lenteur : DD 5 + Niv + Carac), Coups critiques plus importants +1d4",
-u_m_edge_09,Tranchant dévaronien important,Lame (mêlée),9,"Bonus aux dégâts (Slashing) +2, Coups critiques plus importants +2d6",palier 9 niv. 22+ (rare dès 17),Coups critiques plus importants +1d8,
-u_m_edge_10,Tranchant en ionite supérieur,Lame (mêlée),10,"Bonus aux dégâts (Ion) +1d8, Bonus aux dégâts contre Race +1d8",palier 10 niv. 24+ (rare dès 19),Bonus aux dégâts contre Droïdes +2d6,
-u_m_edge_11,Tranchant supérieur en mullinine,Lame (mêlée),11,"Bonus aux dégâts (Slashing) +1d8, Acéré",palier 11 niv. 26+ (rare dès 21),"Acéré, Coups critiques plus importants +1d6",
-u_m_edge_12,Tranchant supérieur en neutronium,Lame (mêlée),12,"Bonus aux dégâts (Slashing) +5, Coups critiques plus importants +1d6",palier 12 niv. 28+ (rare dès 23),"En cas de coup au but (Lenteur : DD 7 + Niv + Carac), Coups critiques plus importants +1d6",
-u_m_edge_13,Tranchant mortel dévaronien,Lame (mêlée),13,"Bonus aux dégâts (Slashing) +3, Coups critiques plus importants +2d10",palier 13 niv. 30+ (rare dès 25),Coups critiques plus importants +2d6,
-u_m_edge_14,Tranchant en quadranium,Lame (mêlée),14,Bonus aux dégâts (Slashing) +2d6,palier 14 niv. 30+ (rare dès 27),En cas de coup au but (Étourdissement : DD 9 + Niv + Carac),
-u_m_edge_15,Tranchant en ostrine,Lame (mêlée),15,"Bonus aux dégâts (Cold) +2d8, Résistance aux dégâts (Fire) +Resist_5/-, Acéré",palier 15 niv. 30+ (rare dès 29),"Acéré, Résistance aux dégâts (Fire) +5/-, En cas de coup au but (Paralysie : DD 9 + Niv + Carac)",
-ARMES DE MÊLÉE — CELLULES D'ÉNERGIE,,,,,,,
-u_m_cell_01,Cellule à ions,Cellule d'énergie (mêlée),1,"Bonus aux dégâts contre Race +1d3, Coups critiques plus importants +1",palier 1 niv. 6+ (rare dès 1),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d4",
-u_m_cell_02,Cellule à vibrations,Cellule d'énergie (mêlée),2,"Bonus aux dégâts (Slashing) +1, Don requis",palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts (Slashing) +1,
-u_m_cell_03,Cellule d'énergie alcaline,Cellule d'énergie (mêlée),3,Bonus aux dégâts (Energy) +1,palier 3 niv. 10+ (rare dès 5),Bonus aux dégâts (Energy) +1,
-u_m_cell_04,Cellule à décharge sonique,Cellule d'énergie (mêlée),4,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Sonic) +2, Coups critiques plus importants +1d8",palier 4 niv. 12+ (rare dès 7),"Bonus aux dégâts (Sonic) +1, Coups critiques plus importants +1d4",
-u_m_cell_05,Cellule à ions T2,Cellule d'énergie (mêlée),5,"Bonus aux dégâts contre Race +1d6, Coups critiques plus importants +1d6",palier 5 niv. 14+ (rare dès 9),"Bonus aux dégâts (Ion) +2, Bonus aux dégâts contre Race +1d6",
-u_m_cell_06,Cellule à vibrations T2,Cellule d'énergie (mêlée),6,"Malus à l'attaque +Penalty_-2, Bonus aux dégâts (Slashing) +1d10, Don requis",palier 6 niv. 16+ (rare dès 11),Bonus aux dégâts (Slashing) +1d4,
-u_m_cell_07,Cellule d'énergie alcaline T2,Cellule d'énergie (mêlée),7,Bonus aux dégâts (Energy) +1d3,palier 7 niv. 18+ (rare dès 13),Bonus aux dégâts (Energy) +2,
-u_m_cell_08,Cellule à décharge sonique T2,Cellule d'énergie (mêlée),8,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Sonic) +4, Coups critiques plus importants +2d6",palier 8 niv. 20+ (rare dès 15),"Bonus aux dégâts (Sonic) +2, Coups critiques plus importants +1d6",
-u_m_cell_09,Cellule à ions T3,Cellule d'énergie (mêlée),9,"Bonus aux dégâts (Ion) +1d4, Bonus aux dégâts contre Race +2d6, Coups critiques plus importants +2d6",palier 9 niv. 22+ (rare dès 17),"Bonus aux dégâts (Ion) +1d6, Bonus aux dégâts contre Race +1d8",
-u_m_cell_10,Cellule à vibrations T3,Cellule d'énergie (mêlée),10,"Malus à l'attaque +Penalty_-2, Bonus aux dégâts (Slashing) +2d6, Don requis",palier 10 niv. 24+ (rare dès 19),Bonus aux dégâts (Slashing) +1d6,
-u_m_cell_11,Cellule d'énergie alcaline T3,Cellule d'énergie (mêlée),11,Bonus aux dégâts (Energy) +1d6,palier 11 niv. 26+ (rare dès 21),Bonus aux dégâts (Energy) +1d6,
-u_m_cell_12,Cellule à décharge sonique T3,Cellule d'énergie (mêlée),12,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Sonic) +1d10, Coups critiques plus importants +2d8",palier 12 niv. 28+ (rare dès 23),"Bonus aux dégâts (Sonic) +1d6, Coups critiques plus importants +1d8",
-u_m_cell_13,Cellule à ions T4,Cellule d'énergie (mêlée),13,"Bonus aux dégâts (Ion) +1d6, Bonus aux dégâts contre Race +2d10, Coups critiques plus importants +2d8",palier 13 niv. 30+ (rare dès 25),"Bonus aux dégâts (Ion) +4, Bonus aux dégâts contre Race +2d6",
-u_m_cell_14,Cellule à vibrations T4,Cellule d'énergie (mêlée),14,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Slashing) +2d8, Don requis",palier 14 niv. 30+ (rare dès 27),Bonus aux dégâts (Slashing) +5,
-u_m_cell_15,Cellule d'énergie alcaline T4,Cellule d'énergie (mêlée),15,Bonus aux dégâts (Energy) +2d6,palier 15 niv. 30+ (rare dès 29),Bonus aux dégâts (Energy) +5,
-ARMES DE MÊLÉE — POIGNÉES (GARDES),,,,,,,
-u_m_grip_01,Poignée en agrinium,Poignée (mêlée),1,Bonus aux dégâts (Slashing) +1,palier 1 niv. 6+ (rare dès 1),Jets de sauvegarde améliorés +1,
-u_m_grip_02,Poignée galbée,Poignée (mêlée),2,"Bonus d'attaque +1, Malus aux dégâts +Penalty_-1",palier 2 niv. 8+ (rare dès 3),Bonus d'attaque +1,
-u_m_grip_03,Poignée zabrak,Poignée (mêlée),3,"Bonus d'attaque +1, Bonus aux dégâts (Slashing) +1, Malus de défense +Penalty_-1",palier 3 niv. 10+ (rare dès 5),"Bonus d'attaque +2, Malus de défense -1",
-u_m_grip_04,Poignée à garde,Poignée (mêlée),4,"Malus à l'attaque +Penalty_-1, Bonus défense +1",palier 4 niv. 12+ (rare dès 7),Bonus défense +1,
-u_m_grip_05,Poignée nagai,Poignée (mêlée),5,Bonus d'attaque +1,palier 5 niv. 14+ (rare dès 9),"Bonus d'attaque +1, Bonus défense +1",
-u_m_grip_06,Poignée en agrinium améliorée,Poignée (mêlée),6,Bonus aux dégâts (Slashing) +1d4,palier 6 niv. 16+ (rare dès 11),Jets de sauvegarde améliorés +2,
-u_m_grip_07,Poignée galbée améliorée,Poignée (mêlée),7,"Bonus d'attaque +2, Malus aux dégâts +Penalty_-1",palier 7 niv. 18+ (rare dès 13),Bonus d'attaque +2,
-u_m_grip_08,Poignée zabrak améliorée,Poignée (mêlée),8,"Bonus d'attaque +3, Bonus aux dégâts (Slashing) +2, Malus de défense +Penalty_-2",palier 8 niv. 20+ (rare dès 15),"Bonus d'attaque +3, Malus de défense -1",
-u_m_grip_09,Poignée à garde améliorée,Poignée (mêlée),9,"Malus à l'attaque +Penalty_-1, Bonus défense +2",palier 9 niv. 22+ (rare dès 17),Bonus défense +2,
-u_m_grip_10,Poignée nagai améliorée,Poignée (mêlée),10,"Bonus d'attaque +1, Bonus défense +1",palier 10 niv. 24+ (rare dès 19),"Bonus d'attaque +2, Bonus défense +1",
-u_m_grip_11,Poignée supérieure en agrinium,Poignée (mêlée),11,Bonus aux dégâts (Slashing) +1d8,palier 11 niv. 26+ (rare dès 21),Jets de sauvegarde améliorés +3,
-u_m_grip_12,Poignée galbée supérieure,Poignée (mêlée),12,"Bonus d'attaque +3, Malus aux dégâts +Penalty_-1",palier 12 niv. 28+ (rare dès 23),Bonus d'attaque +3,
-u_m_grip_13,Poignée zabrak supérieure,Poignée (mêlée),13,"Bonus d'attaque +3, Bonus aux dégâts (Slashing) +1d8, Malus de défense +Penalty_-1",palier 13 niv. 30+ (rare dès 25),"Bonus d'attaque +4, Malus de défense -2",
-u_m_grip_14,Poignée à garde supérieure,Poignée (mêlée),14,Bonus défense +2,palier 14 niv. 30+ (rare dès 27),Bonus défense +3,
-u_m_grip_15,Poignée nagai supérieure,Poignée (mêlée),15,"Bonus d'attaque +2, Bonus défense +1",palier 15 niv. 30+ (rare dès 29),"Bonus d'attaque +2, Bonus défense +2",
-ARMES À DISTANCE — CHAMBRAGES,,,,,,,
-u_r_firi_01,Chambre d'élargissement T1,Chambre de tir,1,Coups critiques plus importants +2,palier 1 niv. 6+ (rare dès 1),Coups critiques plus importants +1d4,
-u_r_firi_02,Chambre d'amplification T1,Chambre de tir,2,Bonus aux dégâts (Energy) +1,palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts (Energy) +1,
-u_r_firi_03,Chambre de précision T1,Chambre de tir,3,"Bonus d'attaque +1, Coups critiques plus importants +1",palier 3 niv. 10+ (rare dès 5),"Bonus d'attaque +1, Coups critiques plus importants +1d3",
-u_r_firi_04,Séparateur de rayon T1,Chambre de tir,4,Bonus aux dégâts (Energy) +1d3,palier 4 niv. 12+ (rare dès 7),Bonus aux dégâts (Energy) +1d2,
-u_r_firi_05,Chambre mand. T1,Chambre de tir,5,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1d4, Malus de défense +Penalty_-1",palier 5 niv. 14+ (rare dès 9),"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1",
-u_r_firi_06,Chambre d'élargissement T2,Chambre de tir,6,"Bonus d'attaque +1, Coups critiques plus importants +4",palier 6 niv. 16+ (rare dès 11),"Bonus d'attaque +1, Coups critiques plus importants +1d6",
-u_r_firi_07,Chambre d'amplification T2,Chambre de tir,7,Bonus aux dégâts (Energy) +4,palier 7 niv. 18+ (rare dès 13),Bonus aux dégâts (Energy) +1d4,
-u_r_firi_08,Chambre de précision T2,Chambre de tir,8,"Bonus d'attaque +2, Coups critiques plus importants +1d6",palier 8 niv. 20+ (rare dès 15),"Bonus d'attaque +2, Coups critiques plus importants +1d4",
-u_r_firi_09,Séparateur de rayon T2,Chambre de tir,9,Bonus aux dégâts (Energy) +1d10,palier 9 niv. 22+ (rare dès 17),Bonus aux dégâts (Energy) +1d6,
-u_r_firi_10,Chambre mand. T2,Chambre de tir,10,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1d12, Malus de défense +Penalty_-2",palier 10 niv. 24+ (rare dès 19),"Bonus d'attaque +1, Bonus aux dégâts (Energy) +2",
-u_r_firi_11,Chambre d'élargissement T3,Chambre de tir,11,"Bonus d'attaque +1, Coups critiques plus importants +1d12",palier 11 niv. 26+ (rare dès 21),"Bonus d'attaque +1, Coups critiques plus importants +2d6",
-u_r_firi_12,Chambre d'amplification T3,Chambre de tir,12,"Bonus aux dégâts (Energy) +5, Bonus aux dégâts (Energy) +1",palier 12 niv. 28+ (rare dès 23),Bonus aux dégâts (Energy) +5,
-u_r_firi_13,Chambre de précision T3,Chambre de tir,13,"Bonus d'attaque +2, Coups critiques plus importants +2d6",palier 13 niv. 30+ (rare dès 25),"Bonus d'attaque +3, Coups critiques plus importants +1d6",
-u_r_firi_14,Séparateur de rayon T3,Chambre de tir,14,Bonus aux dégâts (Energy) +2d6,palier 14 niv. 30+ (rare dès 27),Bonus aux dégâts (Energy) +5,
-u_r_firi_15,Chambre mand. T3,Chambre de tir,15,"Bonus aux dégâts (Energy) +2d8, Malus de défense +Penalty_-1, Bonus d'amélioration +1",palier 15 niv. 30+ (rare dès 29),"Bonus d'attaque +2, Bonus aux dégâts (Energy) +1d6",
-ARMES À DISTANCE — CELLULES D'ÉNERGIE,,,,,,,
-u_r_powe_01,Chargeur d'ions T1,Pack d'énergie (distance),1,Bonus aux dégâts contre Race +1d4,palier 1 niv. 6+ (rare dès 1),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Droïdes +1d4",
-u_r_powe_02,Générateur d'impulsions T1,Pack d'énergie (distance),2,Coups critiques plus importants +1d4,palier 2 niv. 8+ (rare dès 3),Coups critiques plus importants +1d4,
-u_r_powe_03,Cellule d'énergie de base au rylith,Pack d'énergie (distance),3,Bonus aux dégâts (Energy) +2,palier 3 niv. 10+ (rare dès 5),Bonus aux dégâts (Energy) +1,
-u_r_powe_04,Chargeur d'ions T2,Pack d'énergie (distance),4,"Bonus aux dégâts contre Race +1d6, Coups critiques plus importants +2",palier 4 niv. 12+ (rare dès 7),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Droïdes +1d6",
-u_r_powe_05,Générateur d'impulsions T2,Pack d'énergie (distance),5,Coups critiques plus importants +1d8,palier 5 niv. 14+ (rare dès 9),Coups critiques plus importants +1d6,
-u_r_powe_06,Cellule d'énergie au rylith classique,Pack d'énergie (distance),6,Bonus aux dégâts (Energy) +1d4,palier 6 niv. 16+ (rare dès 11),Bonus aux dégâts (Energy) +1d2,
-u_r_powe_07,Chargeur d'ions T3,Pack d'énergie (distance),7,"Bonus aux dégâts contre Race +1d8, Coups critiques plus importants +4",palier 7 niv. 18+ (rare dès 13),"Bonus aux dégâts (Ion) +2, Bonus aux dégâts contre Droïdes +1d8",
-u_r_powe_08,Générateur d'impulsions T3,Pack d'énergie (distance),8,"Bonus aux dégâts (Energy) +2, Coups critiques plus importants +1d10",palier 8 niv. 20+ (rare dès 15),Coups critiques plus importants +1d8,
-u_r_powe_09,Cellule d'énergie alcaline au rylith,Pack d'énergie (distance),9,Bonus aux dégâts (Energy) +1d6,palier 9 niv. 22+ (rare dès 17),Bonus aux dégâts (Energy) +2,
-u_r_powe_10,Chargeur d'ions T4,Pack d'énergie (distance),10,"Bonus aux dégâts (Ion) +1d6, Bonus aux dégâts contre Race +1d6, Coups critiques plus importants +5",palier 10 niv. 24+ (rare dès 19),"Bonus aux dégâts (Ion) +3, Bonus aux dégâts contre Droïdes +1d10",
-u_r_powe_11,Générateur d'impulsions T4,Pack d'énergie (distance),11,"Bonus aux dégâts (Energy) +4, Coups critiques plus importants +2d8",palier 11 niv. 26+ (rare dès 21),Coups critiques plus importants +2d6,
-u_r_powe_12,Cellule d'énergie supérieure au rylith,Pack d'énergie (distance),12,Bonus aux dégâts (Energy) +2d6,palier 12 niv. 28+ (rare dès 23),Bonus aux dégâts (Energy) +1d4,
-u_r_powe_13,Chargeur d'ions T5,Pack d'énergie (distance),13,"Bonus aux dégâts (Ion) +1d8, Bonus aux dégâts contre Race +2d6, Coups critiques plus importants +2d8",palier 13 niv. 30+ (rare dès 25),"Bonus aux dégâts (Ion) +3, Bonus aux dégâts contre Droïdes +2d6",
-u_r_powe_14,Générateur d'impulsions T5,Pack d'énergie (distance),14,"Bonus aux dégâts (Energy) +5, Coups critiques plus importants +2d10",palier 14 niv. 30+ (rare dès 27),Coups critiques plus importants +2d8,
-u_r_powe_15,Cellule d'énergie pure au rylith,Pack d'énergie (distance),15,Bonus aux dégâts (Energy) +2d10,palier 15 niv. 30+ (rare dès 29),Bonus aux dégâts (Energy) +3,
-ARMES À DISTANCE — LUNETTES,,,,,,,
-u_r_targ_01,Lunette de sniper T1,Lunette de visée,1,Acéré,palier 1 niv. 6+ (rare dès 1),Acéré,
-u_r_targ_02,Lunette de précision T1,Lunette de visée,2,Bonus d'attaque +1,palier 2 niv. 8+ (rare dès 3),Bonus d'attaque +1,
-u_r_targ_03,Lunette de visée T1,Lunette de visée,3,En cas de coup au but +14,palier 3 niv. 10+ (rare dès 5),En cas de coup au but (Étourdissement : DD 5 + Niv + Carac),
-u_r_targ_04,Lunette de mutilation T1,Lunette de visée,4,En cas de coup au but +10,palier 4 niv. 12+ (rare dès 7),En cas de coup au but (Lenteur : DD 3 + Niv + Carac),
-u_r_targ_05,Lunette de sniper T2,Lunette de visée,5,"Acéré, En cas de coup au but +14",palier 5 niv. 14+ (rare dès 9),"Acéré, En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)",
-u_r_targ_06,Lunette de précision T2,Lunette de visée,6,Bonus d'attaque +2,palier 6 niv. 16+ (rare dès 11),Bonus d'attaque +2,
-u_r_targ_07,Lunette de visée T2,Lunette de visée,7,"Bonus aux dégâts (Energy) +1, En cas de coup au but +14",palier 7 niv. 18+ (rare dès 13),"Bonus d'attaque +1, En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)",
-u_r_targ_08,Lunette de mutilation T2,Lunette de visée,8,"Bonus aux dégâts (Energy) +1, En cas de coup au but +14",palier 8 niv. 20+ (rare dès 15),"Bonus d'attaque +1, En cas de coup au but (Lenteur : DD 5 + Niv + Carac)",
-u_r_targ_09,Lunette de sniper T3,Lunette de visée,9,"Acéré, En cas de coup au but +14",palier 9 niv. 22+ (rare dès 17),"Bonus d'attaque +1, Acéré, En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)",
-u_r_targ_10,Lunette de précision T3,Lunette de visée,10,Bonus d'attaque +3,palier 10 niv. 24+ (rare dès 19),Bonus d'attaque +3,
-u_r_targ_11,Lunette de visée T3,Lunette de visée,11,"Bonus aux dégâts (Energy) +2, En cas de coup au but +18",palier 11 niv. 26+ (rare dès 21),"Bonus d'attaque +2, En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)",
-u_r_targ_12,Lunette de mutilation T3,Lunette de visée,12,"Bonus aux dégâts (Energy) +3, En cas de coup au but +18",palier 12 niv. 28+ (rare dès 23),"Bonus d'attaque +1, En cas de coup au but (Lenteur : DD 7 + Niv + Carac)",
-u_r_targ_13,Lunette de sniper T4,Lunette de visée,13,"Acéré, En cas de coup au but +18",palier 13 niv. 30+ (rare dès 25),"Bonus d'attaque +1, Acéré, En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)",
-u_r_targ_14,Lunette de précision T4,Lunette de visée,14,Bonus d'attaque +4,palier 14 niv. 30+ (rare dès 27),Bonus d'attaque +4,
-u_r_targ_15,Lunette de visée T4,Lunette de visée,15,"Bonus aux dégâts (Energy) +3, En cas de coup au but +22",palier 15 niv. 30+ (rare dès 29),"Bonus d'attaque +2, En cas de coup au but (Étourdissement : DD 9 + Niv + Carac)",
-SABRES LASER — ÉMETTEURS,,,,,,,
-u_l_emit_01,Émetteur de parade,Émetteur (sabre),1,Parade tirs de blaster: +1 +1,palier 1 niv. 12+ (rare dès 7),"Parade tirs de blaster +1, Bonus défense +1",
-u_l_emit_02,Émetteur de désordre nerveux,Émetteur (sabre),2,"Malus de défense +Penalty_-1, En cas de coup au but +10",palier 2 niv. 14+ (rare dès 9),"Malus de défense -1, En cas de coup au but (Étourdissement : DD 3 + Niv + Carac)",
-u_l_emit_03,Émetteur au phobium brut,Émetteur (sabre),3,"Malus de défense +Penalty_-3, En cas de coup au but +14",palier 3 niv. 16+ (rare dès 11),"Malus de défense -2, En cas de coup au but (Horreur : DD 5 + Niv + Carac)",
-u_l_emit_04,Émetteur de parade,Émetteur (sabre),4,"Parade tirs de blaster: -2 +Penalty_-2, Bonus aux dégâts (Energy) +1, Bonus défense +1",palier 4 niv. 18+ (rare dès 13),"Bonus défense +2, Parade tirs de blaster -1",
-u_l_emit_05,Émetteur de parade amélioré,Émetteur (sabre),5,"Parade tirs de blaster: +1 +2, Bonus défense +1",palier 5 niv. 20+ (rare dès 15),"Parade tirs de blaster +2, Bonus défense +2",
-u_l_emit_06,Émetteur de désordre nerveux amélioré,Émetteur (sabre),6,"Malus de défense +Penalty_-1, En cas de coup au but +10",palier 6 niv. 22+ (rare dès 17),"Malus de défense -1, En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)",
-u_l_emit_07,Émetteur au phobium synthétisé,Émetteur (sabre),7,"Malus de défense +Penalty_-3, En cas de coup au but +14",palier 7 niv. 24+ (rare dès 19),"Malus de défense -2, En cas de coup au but (Horreur : DD 7 + Niv + Carac)",
-u_l_emit_08,Émetteur de parade amélioré,Émetteur (sabre),8,"Parade tirs de blaster: -2 +Penalty_-2, Bonus aux dégâts (Energy) +2, Bonus défense +2",palier 8 niv. 26+ (rare dès 21),"Bonus défense +3, Parade tirs de blaster -1",
-u_l_emit_09,Émetteur de parade haut de gamme,Émetteur (sabre),9,"Parade tirs de blaster: +1 +4, Bonus défense +1",palier 9 niv. 28+ (rare dès 23),"Parade tirs de blaster +4, Bonus défense +3",
-u_l_emit_10,Émetteur de désordre nerveux hightech,Émetteur (sabre),10,"Malus de défense +Penalty_-1, En cas de coup au but +14",palier 10 niv. 30+ (rare dès 25),"Malus de défense -1, En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)",
-u_l_emit_11,Émetteur à alliage au phobium,Émetteur (sabre),11,"Malus de défense +Penalty_-3, En cas de coup au but +18",palier 11 niv. 30+ (rare dès 27),"Malus de défense -2, En cas de coup au but (Horreur : DD 9 + Niv + Carac)",
-u_l_emit_12,Émetteur de parade haut de gamme,Émetteur (sabre),12,"Bonus aux dégâts (Energy) +3, Bonus défense +2",palier 12 niv. 30+ (rare dès 29),Bonus défense +4,
-u_l_emit_13,Émetteur au phobium raffiné,Émetteur (sabre),13,"Malus de défense +Penalty_-1, En cas de coup au but +18",palier 13 niv. 30+ (rare dès 30),"Malus de défense -1, En cas de coup au but (Horreur : DD 9 + Niv + Carac)",
-SABRES LASER — LENTILLES,,,,,,,
-u_l_lens_01,Lentille de kunda synthétisé,Lentille (sabre),1,Parade tirs de blaster: +1 +1,palier 1 niv. 12+ (rare dès 7),"Bonus d'attaque +1, Parade tirs de blaster +1",
-u_l_lens_02,Lentille de dragite,Lentille (sabre),2,Bonus aux dégâts (Energy) +2,palier 2 niv. 14+ (rare dès 9),Coups critiques plus importants +1d4,
-u_l_lens_03,Lentille de byrhotse,Lentille (sabre),3,"Bonus d'attaque +1, Parade tirs de blaster: -2 +Penalty_-2, Bonus aux dégâts (Energy) +1",palier 3 niv. 16+ (rare dès 11),"Bonus d'attaque +2, Parade tirs de blaster -2",
-u_l_lens_04,Lentille de gemme à rayon,Lentille (sabre),4,"Bonus aux dégâts (Energy) +1, Acéré",palier 4 niv. 18+ (rare dès 13),Acéré,
-u_l_lens_05,Lentille vibratoire,Lentille (sabre),5,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Energy) +1d8, Malus de défense +Penalty_-1",palier 5 niv. 20+ (rare dès 15),"Malus à l'attaque -1, Malus de défense -1, Coups critiques plus importants +1d8",
-u_l_lens_06,Lentille de kunda pur,Lentille (sabre),6,"Bonus d'attaque +1, Parade tirs de blaster: +1 +2",palier 6 niv. 22+ (rare dès 17),"Bonus d'attaque +2, Parade tirs de blaster +2",
-u_l_lens_07,Lentille d'adegan,Lentille (sabre),7,Bonus aux dégâts (Energy) +1d12,palier 7 niv. 24+ (rare dès 19),Coups critiques plus importants +1d6,
-u_l_lens_08,Lentille de byrhotse pur,Lentille (sabre),8,"Bonus d'attaque +2, Parade tirs de blaster: -2 +Penalty_-3, Bonus aux dégâts (Energy) +2",palier 8 niv. 26+ (rare dès 21),"Bonus d'attaque +3, Parade tirs de blaster -2",
-u_l_lens_09,Lentille de gemme à rayon améliorée,Lentille (sabre),9,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +2, Acéré",palier 9 niv. 28+ (rare dès 23),"Bonus d'attaque +1, Acéré",
-u_l_lens_10,Lentille vibratoire améliorée,Lentille (sabre),10,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Energy) +2d6, Malus de défense +Penalty_-1",palier 10 niv. 30+ (rare dès 25),"Malus à l'attaque -1, Malus de défense -1, Coups critiques plus importants +2d6",
-u_l_lens_11,Lentille de duel d'Ossus,Lentille (sabre),11,"Bonus d'attaque +2, Parade tirs de blaster: +1 +3",palier 11 niv. 30+ (rare dès 27),"Bonus d'attaque +3, Parade tirs de blaster +3",
-u_l_lens_12,Lentille de pontite,Lentille (sabre),12,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +2d6",palier 12 niv. 30+ (rare dès 29),"Bonus d'attaque +1, Coups critiques plus importants +1d8",
-u_l_lens_13,Lentille de byrhotse améliorée,Lentille (sabre),13,"Bonus d'attaque +3, Parade tirs de blaster: -2 +Penalty_-4, Bonus aux dégâts (Energy) +4",palier 13 niv. 30+ (rare dès 30),"Bonus d'attaque +4, Parade tirs de blaster -3",
-SABRES LASER — CELLULES D'ÉNERGIE,,,,,,,
-u_l_cell_01,Cellule d'énergie à décharge,Cellule d'énergie (sabre),1,Coups critiques plus importants +1d3,palier 1 niv. 12+ (rare dès 7),Coups critiques plus importants +1d4,
-u_l_cell_02,Cellule d'énergie au diatum,Cellule d'énergie (sabre),2,Bonus aux dégâts (Energy) +1,palier 2 niv. 14+ (rare dès 9),Bonus aux dégâts (Energy) +1,
-u_l_cell_03,Cellule d'énergie à ions,Cellule d'énergie (sabre),3,"Bonus aux dégâts contre Race +1d4, Coups critiques plus importants +1d4",palier 3 niv. 16+ (rare dès 11),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d4, Coups critiques plus importants +1d3",
-u_l_cell_04,Cellule à décharge de Telgorn T1,Cellule d'énergie (sabre),4,Bonus aux dégâts (Electrical) +1d3,palier 4 niv. 18+ (rare dès 13),Bonus aux dégâts (Electrical) +1,
-u_l_cell_05,Cellule d'énergie à décharge améliorée,Cellule d'énergie (sabre),5,Coups critiques plus importants +1d6,palier 5 niv. 20+ (rare dès 15),"Bonus aux dégâts (Energy) +1, Coups critiques plus importants +1d6",
-u_l_cell_06,Cellule d'énergie au diatum améliorée,Cellule d'énergie (sabre),6,Bonus aux dégâts (Energy) +2,palier 6 niv. 22+ (rare dès 17),Bonus aux dégâts (Energy) +2,
-u_l_cell_07,Cellule d'énergie à ions améliorée,Cellule d'énergie (sabre),7,"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d8, Coups critiques plus importants +1d3",palier 7 niv. 24+ (rare dès 19),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d8, Coups critiques plus importants +1d4",
-u_l_cell_08,Cellule à décharge de Telgorn T2,Cellule d'énergie (sabre),8,Bonus aux dégâts (Electrical) +1d4,palier 8 niv. 26+ (rare dès 21),Bonus aux dégâts (Electrical) +2,
-u_l_cell_09,Cellule d'énergie à grande décharge,Cellule d'énergie (sabre),9,Coups critiques plus importants +1d8,palier 9 niv. 28+ (rare dès 23),"Bonus aux dégâts (Energy) +2, Coups critiques plus importants +1d8",
-u_l_cell_10,Cellule d'énergie supérieure au diatium,Cellule d'énergie (sabre),10,Bonus aux dégâts (Energy) +4,palier 10 niv. 30+ (rare dès 25),Bonus aux dégâts (Energy) +3,
-u_l_cell_11,Cellule d'énergie à ions supérieure,Cellule d'énergie (sabre),11,"Bonus aux dégâts (Ion) +2, Bonus aux dégâts contre Race +1d12, Coups critiques plus importants +1d6",palier 11 niv. 30+ (rare dès 27),"Bonus aux dégâts (Ion) +2, Bonus aux dégâts contre Race +2d6, Coups critiques plus importants +1d6",
-u_l_cell_12,Cellule à décharge de Telgorn T3,Cellule d'énergie (sabre),12,Bonus aux dégâts (Electrical) +1d8,palier 12 niv. 30+ (rare dès 29),Bonus aux dégâts (Electrical) +1d6,
-u_l_cell_13,Cellule d'énergie au diatum ultime,Cellule d'énergie (sabre),13,Bonus aux dégâts (Energy) +5,palier 13 niv. 30+ (rare dès 30),Bonus aux dégâts (Energy) +1d6,
-SABRES LASER — CRISTAUX DE COULEUR,,,,,,,
-u_l_colo_01,"Cristal, bleu",Cristal de couleur,1,—,palier 1 niv. 10+ (rare dès 5),,
-u_l_colo_02,"Cristal, vert",Cristal de couleur,2,—,palier 2 niv. 10+ (rare dès 5),,
-u_l_colo_03,"Cristal, jaune",Cristal de couleur,3,—,palier 3 niv. 10+ (rare dès 5),,
-u_l_colo_04,"Cristal, rouge",Cristal de couleur,4,—,palier 4 niv. 10+ (rare dès 5),,
-u_l_colo_05,"Cristal, violet",Cristal de couleur,5,—,palier 5 niv. 10+ (rare dès 5),,
-u_l_colo_06,"Cristal, bleu cyan",Cristal de couleur,6,—,palier 6 niv. 10+ (rare dès 5),,
-u_l_colo_07,"Cristal, argenté",Cristal de couleur,7,—,palier 7 niv. 10+ (rare dès 5),,
-u_l_colo_08,"Cristal, orange",Cristal de couleur,8,—,palier 8 niv. 10+ (rare dès 5),,
-u_l_colo_09,"Cristal, viridien",Cristal de couleur,9,—,palier 9 niv. 10+ (rare dès 5),,
-u_l_colo_10,"Cristal, bronze",Cristal de couleur,10,—,palier 10 niv. 10+ (rare dès 5),,
-SABRES LASER — CRISTAUX D'AMÉLIORATION,,,,,,,
-u_l_crys_01,"Cristal, adegan",Cristal (sabre),1,Bonus aux dégâts (Energy) +2,palier 1 niv. 10+ (rare dès 5),Bonus d'attaque +1,
-u_l_crys_02,"Cristal, rubat",Cristal (sabre),2,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1",palier 2 niv. 11+ (rare dès 6),"Bonus d'attaque +1, Bonus défense +1",
-u_l_crys_03,"Cristal, Ruusan",Cristal (sabre),3,"Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +1",palier 3 niv. 12+ (rare dès 7),"Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +1",
-u_l_crys_04,"Cristal, nextor",Cristal (sabre),4,"Bonus d'attaque +1, Acéré",palier 4 niv. 13+ (rare dès 8),"Bonus d'attaque +1, Acéré",
-u_l_crys_05,"Cristal, dragite",Cristal (sabre),5,"Bonus de caractéristique (Constitution) +1, Bonus aux dégâts (Sonic) +1",palier 5 niv. 14+ (rare dès 9),"Bonus de caractéristique (Constitution) +1, Résistance aux dégâts (Sonic) +5/-",
-u_l_crys_06,"Cristal, fikrann",Cristal (sabre),6,"Bonus d'attaque +2, Bonus aux dégâts contre Race +2d6",palier 6 niv. 15+ (rare dès 10),"Bonus d'attaque +1, Bonus aux dégâts contre Droïdes +1d6",
-u_l_crys_07,"Cristal, phond",Cristal (sabre),7,Bonus aux dégâts (Slashing) +1d6,palier 7 niv. 16+ (rare dès 11),"Bonus de caractéristique (Strength) +1, Bonus d'attaque +1",
-u_l_crys_08,"Cristal, bondar",Cristal (sabre),8,En cas de coup au but +10,palier 8 niv. 17+ (rare dès 12),En cas de coup au but (Étourdissement : DD 3 + Niv + Carac),
-u_l_crys_09,"Cristal, velmorite",Cristal (sabre),9,"Bonus de caractéristique (Dexterity) +1, Acéré",palier 9 niv. 18+ (rare dès 13),"Bonus de caractéristique (Dexterity) +1, Acéré",
-u_l_crys_10,"Cristal, sigil",Cristal (sabre),10,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1d6",palier 10 niv. 19+ (rare dès 14),Bonus d'attaque +2,
-u_l_crys_11,"Cristal, jenruax",Cristal (sabre),11,"Parade tirs de blaster: +1 +5, Bonus aux dégâts (Energy) +2",palier 11 niv. 20+ (rare dès 15),"Parade tirs de blaster +4, Bonus défense +1",
-u_l_crys_12,"Cristal, kasha",Cristal (sabre),12,"Bonus d'attaque +1, Bonus de caractéristique (Wisdom) +2",palier 12 niv. 21+ (rare dès 16),"Bonus d'attaque +1, Bonus de caractéristique (Wisdom) +2",
-u_l_crys_13,"Cristal, opila",Cristal (sabre),13,"Bonus aux dégâts (Energy) +3, Coups critiques plus importants +2d6",palier 13 niv. 22+ (rare dès 17),"Acéré, Bonus d'attaque +1",
-u_l_crys_14,"Cristal, éralam",Cristal (sabre),14,"Bonus d'attaque +2, Bonus aux dégâts (Energy) +2",palier 14 niv. 23+ (rare dès 18),"Bonus d'attaque +2, Bonus défense +1",
-u_l_crys_15,"Cristal, stygium",Cristal (sabre),15,"Bonus d'attaque +1, Bonus de caractéristique (Dexterity) +1, Bonus de compétence +4",palier 15 niv. 24+ (rare dès 19),"Bonus d'attaque +1, Bonus de caractéristique (Dexterity) +1, Bonus de compétence +4",
-u_l_crys_16,"Cristal, damind",Cristal (sabre),16,Bonus d'attaque +3,palier 16 niv. 25+ (rare dès 20),Bonus d'attaque +3,
-u_l_crys_17,"Cristal, sapith",Cristal (sabre),17,"Bonus d'attaque +2, Bonus aux dégâts (Energy) +3",palier 17 niv. 26+ (rare dès 21),"Bonus d'attaque +2, Bonus de caractéristique (Dexterity) +1",
-u_l_crys_18,"Cristal, pontite",Cristal (sabre),18,"Bonus de caractéristique (Charisma) +2, Bonus aux dégâts (Cold) +1d10",palier 18 niv. 27+ (rare dès 22),"Bonus de caractéristique (Charisma) +2, Résistance aux dégâts (Cold) +5/-",
-u_l_crys_19,"Cristal, upari",Cristal (sabre),19,"Bonus d'attaque +3, Bonus aux dégâts (Energy) +1d8",palier 19 niv. 28+ (rare dès 23),"Bonus d'attaque +3, Bonus défense +1",
-u_l_crys_20,Ultima-perle,Cristal (sabre),20,"Bonus d'attaque +3, Bonus aux dégâts (Energy) +2, Coups critiques plus importants +1d6",palier 20 niv. 29+ (rare dès 24),"Bonus d'attaque +3, Jets de sauvegarde améliorés +2",
-u_l_crys_21,"Cristal, solari",Cristal (sabre),21,"Restriction d'alignement, Bonus d'attaque +3, Bonus aux dégâts (Energy) +3, Bonus aux dégâts contre Alignement +1d8",palier 21 niv. 30+ (rare dès 25),"Restriction d'alignement (Lumineux), Bonus d'attaque +2, Bonus aux dégâts contre Côté Obscur +1d8",
-u_l_crys_22,Gemme lordienne,Cristal (sabre),22,"Parade tirs de blaster: +1 +3, Bonus défense +2",palier 22 niv. 30+ (rare dès 26),"Parade tirs de blaster +3, Bonus défense +2",
-u_l_crys_23,Lingot de minerai de Barab,Cristal (sabre),23,Bonus aux dégâts (Fire) +2d6,palier 23 niv. 30+ (rare dès 27),"Bonus de caractéristique (Strength) +2, Résistance aux dégâts (Fire) +10/-",
-u_l_crys_24,Saphir d'Ankarès,Cristal (sabre),24,"Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +2, Acéré, Régénération +2",palier 24 niv. 30+ (rare dès 28),"Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +2, Acéré, Régénération +2",
-u_l_crys_25,"Cristal, kaiburr",Cristal (sabre),25,"Bonus de caractéristique (Constitution) +3, Bonus de caractéristique (Wisdom) +3, Régénération +3",palier 25 niv. 30+ (rare dès 29),"Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Wisdom) +2, Régénération +3",
-u_l_crys_21x,"Cristal, qixoni",Cristal (sabre),—,"Restriction d'alignement, Bonus aux dégâts (Energy) +5, Régénération de points de Force +1",—,"Restriction d'alignement (Obscur), Bonus de caractéristique (Charisma) +2, Régénération de points de Force +2",
-u_l_crys_x23,"Cristal, Hurrikaine",Cristal (sabre),—,"Bonus aux dégâts (Unstoppable) +1d8, En cas de coup au but +18",—,"Bonus d'attaque +2, En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)",
-ARMURES — SURCOUCHES,,,,,,,
-u_a_over_01,Protection contre la chaleur T1,Overlay (armure),1,Immunité contre dégâts +10%,palier 1 niv. 6+ (rare dès 1),[Standard Légère Mk I] Immunité contre dégâts (Fire/Cold) +5%,
-u_a_over_02,Revêtement 'Armure' T1,Overlay (armure),2,Bonus de compétence +2,palier 2 niv. 8+ (rare dès 3),"[Standard Légère Mk I] Jets de sauvegarde améliorés +1, Bonus de compétence +2",
-u_a_over_03,Sur-couche atténuatrice T1,Overlay (armure),3,Immunité contre dégâts +10%,palier 3 niv. 10+ (rare dès 5),[Standard Légère Mk I] Immunité contre dégâts (Sonic/Electrical) +5%,
-u_a_over_04,Revêtement ablatif T1,Overlay (armure),4,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +10%, Bonus défense +1",palier 4 niv. 12+ (rare dès 7),"[Standard Légère Mk I] Bonus défense +1, Immunité contre dégâts (Energy) +5%",
-u_a_over_05,Protection contre l'énergie T1,Overlay (armure),5,Immunité contre dégâts +10%,palier 5 niv. 14+ (rare dès 9),[Standard Légère Mk I] Immunité contre dégâts (Energy) +10%,
-u_a_over_06,Protection antibalistique T1,Overlay (armure),6,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%",palier 6 niv. 16+ (rare dès 11),[Standard Légère Mk I] Immunité contre dégâts (Physique) +5%,
-u_a_over_07,Plaques liées T1,Overlay (armure),7,Bonus défense +1,palier 7 niv. 18+ (rare dès 13),[Standard Légère Mk II] Bonus défense +2,
-u_a_over_08,Plaques lourdes liées T1,Overlay (armure),8,"Malus de caractéristique +Penalty_-2, Bonus défense +2",palier 8 niv. 20+ (rare dès 15),"[Standard Légère Mk II] Bonus défense +2, Jets de sauvegarde améliorés +1",
-u_a_over_09,Protection contre la chaleur T2,Overlay (armure),9,Immunité contre dégâts +15%,palier 9 niv. 22+ (rare dès 17),"[Standard Légère Mk II] Immunité contre dégâts (Fire/Cold) +10%, Résistance (Fire) +Resist_5/-",
-u_a_over_10,Revêtement 'Armure' T2,Overlay (armure),10,"Jets de sauvegarde améliorés +1, Bonus de compétence +4",palier 10 niv. 24+ (rare dès 19),"[Standard Légère Mk II] Jets de sauvegarde améliorés +2, Bonus de compétence +4",
-u_a_over_11,Sur-couche atténuatrice T2,Overlay (armure),11,Immunité contre dégâts +15%,palier 11 niv. 26+ (rare dès 21),"[Standard Légère Mk II] Immunité contre dégâts (Sonic/Electrical) +10%, Résistance (Sonic) +Resist_5/-",
-u_a_over_12,Revêtement ablatif T2,Overlay (armure),12,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +25%, Bonus défense +1",palier 12 niv. 28+ (rare dès 23),"[Standard Légère Mk II] Bonus défense +2, Immunité contre dégâts (Energy) +10%",
-u_a_over_13,Protection contre l'énergie T2,Overlay (armure),13,Immunité contre dégâts +15%,palier 13 niv. 30+ (rare dès 25),[Standard Légère Mk III] Immunité contre dégâts (Energy) +15%,
-u_a_over_14,Protection antibalistique T2,Overlay (armure),14,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +15%",palier 14 niv. 30+ (rare dès 27),[Standard Légère Mk III] Immunité contre dégâts (Physique) +15%,
-u_a_over_15,Plaques liées T2,Overlay (armure),15,Bonus défense +2,palier 15 niv. 30+ (rare dès 29),[Standard Légère Mk III] Bonus défense +3,
-u_a_over_16,Plaques lourdes liées T2,Overlay (armure),16,"Malus de caractéristique +Penalty_-3, Bonus défense +3",palier 16 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Bonus défense +3, Immunité contre dégâts (Physique) +10%",
-u_a_over_17,Protection contre la chaleur T3,Overlay (armure),17,"Immunité contre dégâts +15%, Résistance aux dégâts (Fire) +Resist_5/-",palier 17 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Immunité contre dégâts (Fire/Cold) +15%, Résistance (Fire/Cold) +Resist_10/-",
-u_a_over_18,Revêtement 'Armure' T3,Overlay (armure),18,"Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1, Bonus de compétence +6",palier 18 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +3, Bonus de compétence +6",
-u_a_over_19,Sur-couche atténuatrice T3,Overlay (armure),19,"Immunité contre dégâts +20%, Résistance aux dégâts (Sonic) +Resist_5/-",palier 19 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus défense +1, Immunité contre dégâts (Energy) +5%",
-u_a_over_20,Revêtement ablatif T3,Overlay (armure),20,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +30%, Bonus défense +1",palier 20 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus défense +1, Immunité contre dégâts (Physique) +5%",
-u_a_over_21,Protection contre l'énergie T3,Overlay (armure),21,Immunité contre dégâts +20%,palier 21 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1, Bonus de compétence +4",
-u_a_over_22,Protection antibalistique T3,Overlay (armure),22,"Immunité contre dégâts +20%, Immunité contre dégâts +20%, Immunité contre dégâts +20%",palier 22 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Immunité contre dégâts (Élémentaire) +10%, Résistance (Fire/Cold/Sonic) +Resist_5/-",
-u_a_over_23,Plaques liées T3,Overlay (armure),23,Bonus défense +3,palier 23 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus défense +1, Immunité contre dégâts (Energy) +10%",
-u_a_over_24,Plaques lourdes liées T3,Overlay (armure),24,"Malus à l'attaque +Penalty_-4, Immunité contre dégâts +15%, Bonus défense +4",palier 24 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus défense +1, Immunité contre dégâts (Physique) +10%",
-u_a_over_25,Protection contre la chaleur T4,Overlay (armure),25,"Immunité contre dégâts +20%, Résistance aux dégâts (Fire) +Resist_10/-",palier 25 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +2, Bonus de compétence +6",
-u_a_over_26,Revêtement 'Armure' T4,Overlay (armure),26,"Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +1, Bonus de compétence +8",palier 26 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Immunité contre dégâts (Élémentaire) +15%, Résistance (Fire/Cold/Sonic) +Resist_10/-",
-u_a_over_27,Sur-couche atténuatrice T4,Overlay (armure),27,"Immunité contre dégâts +50%, Résistance aux dégâts (Sonic) +Resist_5/-",palier 27 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus défense +2, Immunité contre dégâts (Energy) +15%",
-u_a_over_28,Revêtement ablatif T4,Overlay (armure),28,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +30%, Résistance aux dégâts (Energy) +Resist_5/-, Bonus défense +1",palier 28 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus défense +2, Immunité contre dégâts (Physique) +15%",
-u_a_over_29,Protection contre l'énergie T4,Overlay (armure),29,Immunité contre dégâts +30%,palier 29 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +3, Bonus de compétence +8",
-u_a_over_30,Plaques liées T4,Overlay (armure),30,"Résistance aux dégâts (Bludgeoning) +Resist_5/-, Résistance aux dégâts (Piercing) +Resist_5/-, Résistance aux dégâts (Slashing) +Resist_5/-, Bonus défense +3",palier 30 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Immunité contre dégâts (Élémentaire) +20%, Résistance (Fire/Cold/Sonic) +Resist_15/-",
-ARMURES — SOUS-COUCHES,,,,,,,
-u_a_unde_01,Sous-couche anti-environnement T1,Underlay (armure),1,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 1 niv. 6+ (rare dès 1),"[Standard Lourde Mk I] Immunité (Élémentaire) +10%, Résistance (Cold/Fire) +Resist_5/-",
-u_a_unde_02,Sous-couche bio-restaurative T1,Underlay (armure),2,Régénération +1,palier 2 niv. 8+ (rare dès 3),[Standard Lourde Mk I] Régénération +1,
-u_a_unde_03,Sous-couche fortificatrice T1,Underlay (armure),3,Immunité contre dégâts +10%,palier 3 niv. 10+ (rare dès 5),[Standard Lourde Mk I] Immunité contre dégâts (Physique/Énergie) +5%,
-u_a_unde_04,Sous-couche renforçante T1,Underlay (armure),4,Bonus de caractéristique (Strength) +1,palier 4 niv. 12+ (rare dès 7),"[Standard Lourde Mk I] Bonus de caractéristique (Strength) +1, Bonus de caractéristique (Constitution) +1",
-u_a_unde_05,Sous-couche flexible T1,Underlay (armure),5,Bonus DEX max +1,palier 5 niv. 14+ (rare dès 9),[Standard Lourde Mk I] Bonus DEX max +1,
-u_a_unde_06,Sous-couche en duracier T1,Underlay (armure),6,"Bonus défense contre Dégâts (Bludgeoning) +1, Bonus défense contre Dégâts (Piercing) +1, Bonus défense contre Dégâts (Slashing) +1",palier 6 niv. 16+ (rare dès 11),[Standard Lourde Mk I] Réduction des dégâts (Physique) +1/-,
-u_a_unde_07,Sous-couche anti-environnement T2,Underlay (armure),7,"Immunité contre dégâts +20%, Immunité contre dégâts +20%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 7 niv. 18+ (rare dès 13),"[Standard Lourde Mk II] Immunité (Élémentaire) +15%, Résistance (Cold/Fire) +Resist_10/-",
-u_a_unde_08,Sous-couche bio-restaurative T2,Underlay (armure),8,Régénération +2,palier 8 niv. 20+ (rare dès 15),[Standard Lourde Mk II] Régénération +2,
-u_a_unde_09,Sous-couche fortificatrice T2,Underlay (armure),9,"Immunité contre dégâts +10%, Immunité (LvL/Ab_drain)",palier 9 niv. 22+ (rare dès 17),"[Standard Lourde Mk II] Immunité contre dégâts (Physique/Énergie) +10%, Immunité (Critiques)",
-u_a_unde_10,Sous-couche renforçante T2,Underlay (armure),10,"Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Strength) +1",palier 10 niv. 24+ (rare dès 19),"[Standard Lourde Mk II] Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +2",
-u_a_unde_11,Sous-couche flexible T2,Underlay (armure),11,"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1",palier 11 niv. 26+ (rare dès 21),"[Standard Lourde Mk II] Bonus DEX max +2, Bonus défense +1",
-u_a_unde_12,Sous-couche en duracier T2,Underlay (armure),12,"Malus de caractéristique +Penalty_-1, Bonus défense contre Dégâts (Bludgeoning) +2, Bonus défense contre Dégâts (Piercing) +2, Bonus défense contre Dégâts (Slashing) +2",palier 12 niv. 28+ (rare dès 23),"[Standard Lourde Mk II] Réduction des dégâts (Physique) +2/-, Bonus défense +1",
-u_a_unde_13,Sous-couche anti-environnement T3,Underlay (armure),13,"Immunité contre dégâts +25%, Immunité contre dégâts +25%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 13 niv. 30+ (rare dès 25),"[Standard Lourde Mk III] Immunité (Élémentaire) +20%, Résistance (Cold/Fire) +Resist_15/-",
-u_a_unde_14,Sous-couche bio-restaurative T3,Underlay (armure),14,Régénération +3,palier 14 niv. 30+ (rare dès 27),[Standard Lourde Mk III] Régénération +3,
-u_a_unde_15,Sous-couche fortificatrice T3,Underlay (armure),15,"Immunité contre dégâts +15%, Immunité (LvL/Ab_drain)",palier 15 niv. 30+ (rare dès 29),"[Standard Lourde Mk III] Immunité contre dégâts (Physique/Énergie) +15%, Immunité (Drain/Critiques)",
-u_a_unde_16,Sous-couche renforçante T3,Underlay (armure),16,"Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Strength) +2",palier 16 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Bonus de caractéristique (Strength) +3, Bonus de caractéristique (Constitution) +3",
-u_a_unde_17,Sous-couche flexible T3,Underlay (armure),17,"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +2",palier 17 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Bonus DEX max +3, Bonus défense +2",
-u_a_unde_18,Sous-couche en duracier T3,Underlay (armure),18,"Malus de caractéristique +Penalty_-2, Bonus défense contre Dégâts (Bludgeoning) +3, Bonus défense contre Dégâts (Piercing) +3, Bonus défense contre Dégâts (Slashing) +3",palier 18 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Réduction des dégâts (Physique) +3/-, Bonus défense +2",
-u_a_unde_19,Sous-couche anti-environnement T4,Underlay (armure),19,"Immunité contre dégâts +30%, Immunité contre dégâts +30%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 19 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Strength/Constitution) +1, Régénération +1",
-u_a_unde_20,Sous-couche bio-restaurative T4,Underlay (armure),20,"Bonus de caractéristique (Constitution) +1, Régénération +3",palier 20 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Réduction des dégâts +1/-, Immunité contre dégâts +5%",
-u_a_unde_21,Sous-couche fortificatrice T4,Underlay (armure),21,"Immunité contre dégâts +20%, Immunité (LvL/Ab_drain)",palier 21 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1, Jets de sauvegarde améliorés +1",
-u_a_unde_22,Sous-couche renforçante T4,Underlay (armure),22,"Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Strength) +2",palier 22 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Immunité contre dégâts +5%, Régénération +1, Immunité (Drain)",
-u_a_unde_23,Sous-couche flexible T4,Underlay (armure),23,"Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2",palier 23 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Strength/Constitution) +2, Régénération +2",
-u_a_unde_24,Sous-couche en duracier T4,Underlay (armure),24,"Malus de caractéristique +Penalty_-3, Bonus défense contre Dégâts (Bludgeoning) +4, Bonus défense contre Dégâts (Piercing) +4, Bonus défense contre Dégâts (Slashing) +4",palier 24 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Réduction des dégâts +2/-, Immunité contre dégâts +10%",
-u_a_unde_25,Sous-couche anti-environnement T5,Underlay (armure),25,"Immunité contre dégâts +30%, Immunité contre dégâts +30%, Résistance aux dégâts (Cold) +Resist_10/-, Résistance aux dégâts (Fire) +Resist_10/-",palier 25 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",
-u_a_unde_26,Sous-couche bio-restaurative T5,Underlay (armure),26,"Bonus de caractéristique (Constitution) +3, Régénération +3",palier 26 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Immunité contre dégâts +10%, Régénération +2, Immunité (Drain/Critiques)",
-u_a_unde_27,Sous-couche fortificatrice T5,Underlay (armure),27,"Immunité contre dégâts +30%, Immunité (LvL/Ab_drain)",palier 27 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Strength/Constitution) +2, Régénération +3",
-u_a_unde_28,Sous-couche renforçante T5,Underlay (armure),28,"Bonus de caractéristique (Constitution) +3, Bonus de caractéristique (Strength) +3",palier 28 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Réduction des dégâts +2/-, Immunité contre dégâts +15%",
-u_a_unde_29,Sous-couche flexible T5,Underlay (armure),29,"Bonus de caractéristique (Dexterity) +3, Bonus DEX max +3",palier 29 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",
-u_a_unde_30,Sous-couche en duracier T5,Underlay (armure),30,"Malus de caractéristique +Penalty_-3, Bonus défense contre Dégâts (Bludgeoning) +5, Bonus défense contre Dégâts (Piercing) +5, Bonus défense contre Dégâts (Slashing) +5",palier 30 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Immunité contre dégâts +15%, Régénération +2, Immunité (Drain/Critiques)",
-ARMURES INTERMÉDIAIRES — SURCOUCHES DOUBLES (EXCLUSIVES),,,,,,,
-u_a_over_c01,Sur-couche double ablative Mk I,Overlay double (armure interm.),1,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Immunité contre dégâts (Energy) +10%",
-u_a_over_c02,Sur-couche double balistique Mk I,Overlay double (armure interm.),2,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Immunité contre dégâts (Physique) +10%",
-u_a_over_c03,Sur-couche double tactique Mk I,Overlay double (armure interm.),3,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Jets de sauvegarde améliorés +1, Bonus de compétence +3",
-u_a_over_c04,Sur-couche double environnementale Mk I,Overlay double (armure interm.),4,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +10%, Résistance (Fire/Sonic) +5/-",
-u_a_over_c05,Sur-couche double ablative Mk II,Overlay double (armure interm.),5,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +2, Immunité contre dégâts (Energy) +15%",
-u_a_over_c06,Sur-couche double balistique Mk II,Overlay double (armure interm.),6,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +2, Immunité contre dégâts (Physique) +15%",
-u_a_over_c07,Sur-couche double tactique Mk II,Overlay double (armure interm.),7,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +1, Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +2, Bonus de compétence +5",
-u_a_over_c08,Sur-couche double environnementale Mk II,Overlay double (armure interm.),8,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +20%, Résistance (Fire/Cold/Sonic) +10/-",
-u_a_over_c09,Sur-couche double ablative Mk III,Overlay double (armure interm.),9,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +3, Immunité contre dégâts (Energy) +25%",
-u_a_over_c10,Sur-couche double balistique Mk III,Overlay double (armure interm.),10,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +3, Immunité contre dégâts (Physique) +25%",
-u_a_over_c11,Sur-couche double tactique Mk III,Overlay double (armure interm.),11,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +2, Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +3, Bonus de compétence +8",
-u_a_over_c12,Sur-couche double environnementale Mk III,Overlay double (armure interm.),12,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +30%, Résistance (Fire/Cold/Sonic) +15/-",
-ARMURES INTERMÉDIAIRES — SOUS-COUCHES DOUBLES (EXCLUSIVES),,,,,,,
-u_a_unde_c01,Sous-couche double bio-renforcée Mk I,Underlay double (armure interm.),1,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus de caractéristique (Strength) +1, Bonus de caractéristique (Constitution) +1, Régénération +1",
-u_a_unde_c02,Sous-couche double duracier fortifié Mk I,Underlay double (armure interm.),2,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Réduction des dégâts (Physique) +1/-, Immunité contre dégâts (Physique/Énergie) +5%",
-u_a_unde_c03,Sous-couche double articulations tactiques Mk I,Underlay double (armure interm.),3,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1, Jets de sauvegarde améliorés +1",
-u_a_unde_c04,Sous-couche double bio-environnementale Mk I,Underlay double (armure interm.),4,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Immunité contre dégâts (Fire/Cold) +15%, Résistance (Fire/Cold) +5/-, Régénération +1",
-u_a_unde_c05,Sous-couche double bio-renforcée Mk II,Underlay double (armure interm.),5,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +2, Régénération +2",
-u_a_unde_c06,Sous-couche double duracier fortifié Mk II,Underlay double (armure interm.),6,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Réduction des dégâts (Physique) +2/-, Immunité contre dégâts (Physique/Énergie) +10%, Immunité (Drain)",
-u_a_unde_c07,Sous-couche double articulations tactiques Mk II,Underlay double (armure interm.),7,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",
-u_a_unde_c08,Sous-couche double bio-environnementale Mk II,Underlay double (armure interm.),8,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Immunité contre dégâts (Fire/Cold) +20%, Résistance (Fire/Cold) +10/-, Régénération +2, Immunité (Poison)",
-u_a_unde_c09,Sous-couche double bio-renforcée Mk III,Underlay double (armure interm.),9,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus de caractéristique (Strength) +3, Bonus de caractéristique (Constitution) +3, Régénération +3",
-u_a_unde_c10,Sous-couche double duracier fortifié Mk III,Underlay double (armure interm.),10,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Réduction des dégâts (Physique) +3/-, Immunité contre dégâts (Physique/Énergie) +15%, Immunité (Drain/Critiques)",
-u_a_unde_c11,Sous-couche double articulations tactiques Mk III,Underlay double (armure interm.),11,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus de caractéristique (Dexterity) +3, Bonus DEX max +3, Jets de sauvegarde améliorés +3",
-u_a_unde_c12,Sous-couche double bio-environnementale Mk III,Underlay double (armure interm.),12,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Immunité contre dégâts (Fire/Cold) +30%, Résistance (Fire/Cold) +15/-, Régénération +3, Immunité (Poison/Drain)",
+﻿ResRef,Nom,Emplacement,Tier,Effets (vanilla),Loot aléatoire,Changement (mod),Règle du jeu de base (sans feats),Description (mod)
+ARMES DE MÊLÉE — LAMES,,,,,,,,
+u_m_edge_01,Tranchant dévaronien modéré,Lame (mêlée),1,Coups critiques plus importants +1d3,palier 1 niv. 6+ (rare dès 1),Coups critiques plus importants +1d4,,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Coups critiques plus importants +1d4
+
+Le poison sanguin dévaronien est une pierre précieuse capable de libérer une substance toxique dans les veines des êtres vivants. Il suffit d'en appliquer quelques particules sur le tranchant d'une arme pour infliger une vive douleur aux victimes de cette dernière. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_02,Cellule à décharge sonique T3 (mêlée),Lame (mêlée),2,"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d4",palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts contre Droïdes +1d4,,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Bonus aux dégâts contre Droïdes +1d4
+
+L'ionite est un alliage produisant une charge électrique inverse à celle avec laquelle il est en contact, ce qui la rend particulièrement redoutable pour les systèmes électroniques. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_03,Tranchant en mullinine de base,Lame (mêlée),3,Acéré,palier 3 niv. 10+ (rare dès 5),Acéré,,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Acéré
+
+Extrêmement coupante, la mullinine est un matériau idéal pour la fabrication des armes de mêlée. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_04,Tranchant en neutronium de base,Lame (mêlée),4,Bonus aux dégâts (Slashing) +1d3,palier 4 niv. 12+ (rare dès 7),En cas de coup au but (Lenteur : DD 3 + Niv + Carac),,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• En cas de coup au but (Lenteur : DD 3 + Niv + Carac)
+
+Le neutronium est un matériau très résistant à longue durée de vie, qui entre dans la composition du duracier. Il permet d'augmenter les dégâts infligés par une lame. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_05,Tranchant dévaronien modéré,Lame (mêlée),5,"Bonus aux dégâts (Slashing) +2, Coups critiques plus importants +1d8",palier 5 niv. 14+ (rare dès 9),Coups critiques plus importants +1d6,,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Coups critiques plus importants +1d6
+
+Le poison sanguin dévaronien est une pierre précieuse capable de libérer une substance toxique dans les veines des êtres vivants. Il suffit d'en appliquer quelques particules sur le tranchant d'une arme pour infliger une vive douleur aux victimes de cette dernière. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_06,Tranchant en ionite amélioré,Lame (mêlée),6,"Bonus aux dégâts (Ion) +1d4, Bonus aux dégâts contre Race +1d6",palier 6 niv. 16+ (rare dès 11),Bonus aux dégâts contre Droïdes +1d8,,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Bonus aux dégâts contre Droïdes +1d8
+
+L'ionite est un alliage produisant une charge électrique inverse à celle avec laquelle il est en contact, ce qui la rend particulièrement redoutable pour les systèmes électroniques. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_07,Tranchant en mullinine amélioré,Lame (mêlée),7,"Bonus aux dégâts (Slashing) +1d4, Acéré",palier 7 niv. 18+ (rare dès 13),"Acéré, Coups critiques plus importants +1d4",,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Acéré
+• Coups critiques plus importants +1d4
+
+Extrêmement coupante, la mullinine est un matériau idéal pour la fabrication des armes de mêlée. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_08,Tranchant en neutronium amélioré,Lame (mêlée),8,"Bonus aux dégâts (Slashing) +3, Coups critiques plus importants +1d4",palier 8 niv. 20+ (rare dès 15),"En cas de coup au but (Lenteur : DD 5 + Niv + Carac), Coups critiques plus importants +1d4",,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• En cas de coup au but (Lenteur : DD 5 + Niv + Carac)
+• Coups critiques plus importants +1d4
+
+Le neutronium est un matériau très résistant à longue durée de vie, qui entre dans la composition du duracier. Il permet d'augmenter les dégâts infligés par une lame. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_09,Tranchant dévaronien important,Lame (mêlée),9,"Bonus aux dégâts (Slashing) +2, Coups critiques plus importants +2d6",palier 9 niv. 22+ (rare dès 17),Coups critiques plus importants +1d8,,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Coups critiques plus importants +1d8
+
+Le poison sanguin dévaronien est une pierre précieuse capable de libérer une substance toxique dans les veines des êtres vivants. Il suffit d'en appliquer quelques particules sur le tranchant d'une arme pour infliger une vive douleur aux victimes de cette dernière. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_10,Tranchant en ionite supérieur,Lame (mêlée),10,"Bonus aux dégâts (Ion) +1d8, Bonus aux dégâts contre Race +1d8",palier 10 niv. 24+ (rare dès 19),Bonus aux dégâts contre Droïdes +2d6,,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Bonus aux dégâts contre Droïdes +2d6
+
+L'ionite est un alliage produisant une charge électrique inverse à celle avec laquelle il est en contact, ce qui la rend particulièrement redoutable pour les systèmes électroniques. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_11,Tranchant supérieur en mullinine,Lame (mêlée),11,"Bonus aux dégâts (Slashing) +1d8, Acéré",palier 11 niv. 26+ (rare dès 21),"Acéré, Coups critiques plus importants +1d6",,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Acéré
+• Coups critiques plus importants +1d6
+
+Extrêmement coupante, la mullinine est un matériau idéal pour la fabrication des armes de mêlée. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_12,Tranchant supérieur en neutronium,Lame (mêlée),12,"Bonus aux dégâts (Slashing) +5, Coups critiques plus importants +1d6",palier 12 niv. 28+ (rare dès 23),"En cas de coup au but (Lenteur : DD 7 + Niv + Carac), Coups critiques plus importants +1d6",,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• En cas de coup au but (Lenteur : DD 7 + Niv + Carac)
+• Coups critiques plus importants +1d6
+
+Le neutronium est un matériau très résistant à longue durée de vie, qui entre dans la composition du duracier. Il permet d'augmenter les dégâts infligés par une lame. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_13,Tranchant mortel dévaronien,Lame (mêlée),13,"Bonus aux dégâts (Slashing) +3, Coups critiques plus importants +2d10",palier 13 niv. 30+ (rare dès 25),Coups critiques plus importants +2d6,,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Coups critiques plus importants +2d6
+
+Le poison sanguin dévaronien est une pierre précieuse capable de libérer une substance toxique dans les veines des êtres vivants. Il suffit d'en appliquer quelques particules sur le tranchant d'une arme pour infliger une vive douleur aux victimes de cette dernière. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_14,Tranchant en quadranium,Lame (mêlée),14,Bonus aux dégâts (Slashing) +2d6,palier 14 niv. 30+ (rare dès 27),En cas de coup au but (Étourdissement : DD 9 + Niv + Carac),,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• En cas de coup au but (Étourdissement : DD 9 + Niv + Carac)
+
+Le quadranium est un métal d'une grande rareté, que l'on utilise généralement dans la fabrication des réservoirs à carburant des vaisseaux spatiaux. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_edge_15,Tranchant en ostrine,Lame (mêlée),15,"Bonus aux dégâts (Cold) +2d8, Résistance aux dégâts (Fire) +Resist_5/-, Acéré",palier 15 niv. 30+ (rare dès 29),"Acéré, Résistance aux dégâts (Fire) +5/-, En cas de coup au but (Paralysie : DD 9 + Niv + Carac)",,"Spécial : Amélioration, arme de mêlée (Lame (mêlée))
+
+• Acéré
+• Résistance aux dégâts (Fire) +5/-
+• En cas de coup au but (Paralysie : DD 9 + Niv + Carac)
+
+Le neutronium est un matériau très résistant à longue durée de vie, qui entre dans la composition du duracier. Il permet d'augmenter les dégâts infligés par une lame. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+ARMES DE MÊLÉE — CELLULES D'ÉNERGIE,,,,,,,,
+u_m_cell_01,Cellule à ions,Cellule d'énergie (mêlée),1,"Bonus aux dégâts contre Race +1d3, Coups critiques plus importants +1",palier 1 niv. 6+ (rare dès 1),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d4",,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Ion) +1
+• Bonus aux dégâts contre Race +1d4
+
+Cette cellule génère des ions tout le long de la lame. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_02,Cellule à vibrations,Cellule d'énergie (mêlée),2,"Bonus aux dégâts (Slashing) +1, Don requis",palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts (Slashing) +1,,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Slashing) +1
+
+Cette cellule augmente les dégâts infligés par l'arme, tout en la rendant bien plus difficile à manier. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_03,Cellule d'énergie alcaline,Cellule d'énergie (mêlée),3,Bonus aux dégâts (Energy) +1,palier 3 niv. 10+ (rare dès 5),Bonus aux dégâts (Energy) +1,,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Energy) +1
+
+Cette cellule stabilise la lame, ce qui augmente les dégâts qu'elle inflige. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_04,Cellule à décharge sonique,Cellule d'énergie (mêlée),4,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Sonic) +2, Coups critiques plus importants +1d8",palier 4 niv. 12+ (rare dès 7),"Bonus aux dégâts (Sonic) +1, Coups critiques plus importants +1d4",,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Sonic) +1
+• Coups critiques plus importants +1d4
+
+Cette cellule génère des ondes sonores au moment de l'impact de la lame. Même si cela rend l'arme difficile à manier, rares sont les armures capables de résister à de tels coups. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_05,Cellule à ions T2,Cellule d'énergie (mêlée),5,"Bonus aux dégâts contre Race +1d6, Coups critiques plus importants +1d6",palier 5 niv. 14+ (rare dès 9),"Bonus aux dégâts (Ion) +2, Bonus aux dégâts contre Race +1d6",,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Ion) +2
+• Bonus aux dégâts contre Race +1d6
+
+Cette cellule génère des ions tout le long de la lame de l'arme. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_06,Cellule à vibrations T2,Cellule d'énergie (mêlée),6,"Malus à l'attaque +Penalty_-2, Bonus aux dégâts (Slashing) +1d10, Don requis",palier 6 niv. 16+ (rare dès 11),Bonus aux dégâts (Slashing) +1d4,,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Slashing) +1d4
+
+Cette cellule augmente les dégâts infligés par l'arme, tout en la rendant bien plus difficile à manier. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_07,Cellule d'énergie alcaline T2,Cellule d'énergie (mêlée),7,Bonus aux dégâts (Energy) +1d3,palier 7 niv. 18+ (rare dès 13),Bonus aux dégâts (Energy) +2,,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Energy) +2
+
+Cette cellule stabilise la lame, ce qui augmente les dégâts qu'elle inflige. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_08,Cellule à décharge sonique T2,Cellule d'énergie (mêlée),8,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Sonic) +4, Coups critiques plus importants +2d6",palier 8 niv. 20+ (rare dès 15),"Bonus aux dégâts (Sonic) +2, Coups critiques plus importants +1d6",,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Sonic) +2
+• Coups critiques plus importants +1d6
+
+Cette cellule génère des ondes sonores au moment de l'impact de la lame. Même si cela rend l'arme difficile à manier, rares sont les armures capables de résister à de tels coups. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_09,Cellule à ions T3,Cellule d'énergie (mêlée),9,"Bonus aux dégâts (Ion) +1d4, Bonus aux dégâts contre Race +2d6, Coups critiques plus importants +2d6",palier 9 niv. 22+ (rare dès 17),"Bonus aux dégâts (Ion) +1d6, Bonus aux dégâts contre Race +1d8",,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Ion) +1d6
+• Bonus aux dégâts contre Race +1d8
+
+Cette cellule génère des ions tout le long de la lame. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_10,Cellule à vibrations T3,Cellule d'énergie (mêlée),10,"Malus à l'attaque +Penalty_-2, Bonus aux dégâts (Slashing) +2d6, Don requis",palier 10 niv. 24+ (rare dès 19),Bonus aux dégâts (Slashing) +1d6,,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Slashing) +1d6
+
+Cette cellule augmente les dégâts infligés par l'arme, tout en la rendant bien plus difficile à manier. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_11,Cellule d'énergie alcaline T3,Cellule d'énergie (mêlée),11,Bonus aux dégâts (Energy) +1d6,palier 11 niv. 26+ (rare dès 21),Bonus aux dégâts (Energy) +1d6,,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Energy) +1d6
+
+Cette cellule stabilise la lame, ce qui augmente les dégâts qu'elle inflige. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_12,Cellule à décharge sonique T3,Cellule d'énergie (mêlée),12,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Sonic) +1d10, Coups critiques plus importants +2d8",palier 12 niv. 28+ (rare dès 23),"Bonus aux dégâts (Sonic) +1d6, Coups critiques plus importants +1d8",,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Sonic) +1d6
+• Coups critiques plus importants +1d8
+
+Cette cellule génère des ondes sonores au moment de l'impact de la lame. Même si cela rend l'arme difficile à manier, rares sont les armures capables de résister à de tels coups. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_13,Cellule à ions T4,Cellule d'énergie (mêlée),13,"Bonus aux dégâts (Ion) +1d6, Bonus aux dégâts contre Race +2d10, Coups critiques plus importants +2d8",palier 13 niv. 30+ (rare dès 25),"Bonus aux dégâts (Ion) +4, Bonus aux dégâts contre Race +2d6",,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Ion) +4
+• Bonus aux dégâts contre Race +2d6
+
+Cette cellule génère des ions tout le long de la lame. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_14,Cellule à vibrations T4,Cellule d'énergie (mêlée),14,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Slashing) +2d8, Don requis",palier 14 niv. 30+ (rare dès 27),Bonus aux dégâts (Slashing) +5,,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Slashing) +5
+
+Cette cellule augmente les dégâts infligés par l'arme, tout en la rendant bien plus difficile à manier. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+u_m_cell_15,Cellule d'énergie alcaline T4,Cellule d'énergie (mêlée),15,Bonus aux dégâts (Energy) +2d6,palier 15 niv. 30+ (rare dès 29),Bonus aux dégâts (Energy) +5,,"Spécial : Amélioration, arme de mêlée (Cellule d'énergie (mêlée))
+
+• Bonus aux dégâts (Energy) +5
+
+Cette cellule stabilise la lame, ce qui augmente les dégâts qu'elle inflige. Seules certaines armes, telles que les vibro-lames, peuvent être équipées de cellules à énergie. Cette modification nécessite un établi équipé des outils adéquats."
+ARMES DE MÊLÉE — POIGNÉES (GARDES),,,,,,,,
+u_m_grip_01,Poignée en agrinium,Poignée (mêlée),1,Bonus aux dégâts (Slashing) +1,palier 1 niv. 6+ (rare dès 1),Jets de sauvegarde améliorés +1,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Jets de sauvegarde améliorés +1
+
+Cette poignée est en agrinium, matériau particulièrement léger, ce qui permet de favoriser la pointe de l'arme pour ce qui est de l'équilibre de cette dernière. Les coups portés sont donc plus violents. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_02,Poignée galbée,Poignée (mêlée),2,"Bonus d'attaque +1, Malus aux dégâts +Penalty_-1",palier 2 niv. 8+ (rare dès 3),Bonus d'attaque +1,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +1
+
+Cette petite poignée offre une remarquable précision, mais les coups portés par l'arme sont moins puissants. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_03,Poignée zabrak,Poignée (mêlée),3,"Bonus d'attaque +1, Bonus aux dégâts (Slashing) +1, Malus de défense +Penalty_-1",palier 3 niv. 10+ (rare dès 5),"Bonus d'attaque +2, Malus de défense -1",,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +2
+• Malus de défense -1
+
+Cette poignée extrêmement spécialisée est dotée d'une garde réduite, ce qui augmente la précision et les dégâts de l'arme, mais la rend moins efficace pour parer les coups. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_04,Poignée à garde,Poignée (mêlée),4,"Malus à l'attaque +Penalty_-1, Bonus défense +1",palier 4 niv. 12+ (rare dès 7),Bonus défense +1,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus défense +1
+
+La garde dont est équipée cette poignée rend l'arme idéale pour la parade. En revanche, elle est légèrement moins facile à manier. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_m_grip_05,Poignée nagai,Poignée (mêlée),5,Bonus d'attaque +1,palier 5 niv. 14+ (rare dès 9),"Bonus d'attaque +1, Bonus défense +1",,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +1
+• Bonus défense +1
+
+Les Nagais ont conçu cette poignée afin d'augmenter l'efficacité de l'arme à laquelle elle est fixée sans effet négatif. La modification ne peut s'effectuer que sur les armes d'excellente qualité et améliorables, à condition de disposer d'un établi et des outils appropriés."
+u_m_grip_06,Poignée en agrinium améliorée,Poignée (mêlée),6,Bonus aux dégâts (Slashing) +1d4,palier 6 niv. 16+ (rare dès 11),Jets de sauvegarde améliorés +2,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Jets de sauvegarde améliorés +2
+
+Cette poignée est en agrinium, matériau particulièrement léger, ce qui permet de favoriser la pointe de l'arme pour ce qui est de l'équilibre de cette dernière. Les coups portés sont donc plus violents. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_07,Poignée galbée améliorée,Poignée (mêlée),7,"Bonus d'attaque +2, Malus aux dégâts +Penalty_-1",palier 7 niv. 18+ (rare dès 13),Bonus d'attaque +2,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +2
+
+Cette petite poignée offre une remarquable précision, mais les coups portés par l'arme sont moins puissants. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_08,Poignée zabrak améliorée,Poignée (mêlée),8,"Bonus d'attaque +3, Bonus aux dégâts (Slashing) +2, Malus de défense +Penalty_-2",palier 8 niv. 20+ (rare dès 15),"Bonus d'attaque +3, Malus de défense -1",,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +3
+• Malus de défense -1
+
+Cette poignée extrêmement spécialisée est dotée d'une garde réduite, ce qui augmente la précision et les dégâts de l'arme, mais la rend moins efficace pour parer les coups. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_09,Poignée à garde améliorée,Poignée (mêlée),9,"Malus à l'attaque +Penalty_-1, Bonus défense +2",palier 9 niv. 22+ (rare dès 17),Bonus défense +2,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus défense +2
+
+La garde dont est équipée cette poignée rend l'arme idéale pour la parade. En revanche, elle est légèrement moins facile à manier. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_m_grip_10,Poignée nagai améliorée,Poignée (mêlée),10,"Bonus d'attaque +1, Bonus défense +1",palier 10 niv. 24+ (rare dès 19),"Bonus d'attaque +2, Bonus défense +1",,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +2
+• Bonus défense +1
+
+Les Nagais ont conçu cette poignée afin d'augmenter l'efficacité de l'arme à laquelle elle est fixée sans effet négatif. La modification ne peut s'effectuer que sur les armes d'excellente qualité et améliorables, à condition de disposer d'un établi et des outils appropriés."
+u_m_grip_11,Poignée supérieure en agrinium,Poignée (mêlée),11,Bonus aux dégâts (Slashing) +1d8,palier 11 niv. 26+ (rare dès 21),Jets de sauvegarde améliorés +3,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Jets de sauvegarde améliorés +3
+
+Cette poignée est en agrinium, matériau particulièrement léger, ce qui permet de favoriser la pointe de l'arme pour ce qui est de l'équilibre de cette dernière. Les coups portés sont donc plus violents. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_12,Poignée galbée supérieure,Poignée (mêlée),12,"Bonus d'attaque +3, Malus aux dégâts +Penalty_-1",palier 12 niv. 28+ (rare dès 23),Bonus d'attaque +3,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +3
+
+Cette petite poignée offre une remarquable précision, mais les coups portés par l'arme sont moins puissants. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_13,Poignée zabrak supérieure,Poignée (mêlée),13,"Bonus d'attaque +3, Bonus aux dégâts (Slashing) +1d8, Malus de défense +Penalty_-1",palier 13 niv. 30+ (rare dès 25),"Bonus d'attaque +4, Malus de défense -2",,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +4
+• Malus de défense -2
+
+Cette poignée extrêmement spécialisée est dotée d'une garde réduite, ce qui augmente la précision et les dégâts de l'arme, mais la rend moins efficace pour parer les coups. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_m_grip_14,Poignée à garde supérieure,Poignée (mêlée),14,Bonus défense +2,palier 14 niv. 30+ (rare dès 27),Bonus défense +3,,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus défense +3
+
+La garde dont est équipée cette poignée rend l'arme idéale pour la parade. En revanche, elle est légèrement moins facile à manier. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_m_grip_15,Poignée nagai supérieure,Poignée (mêlée),15,"Bonus d'attaque +2, Bonus défense +1",palier 15 niv. 30+ (rare dès 29),"Bonus d'attaque +2, Bonus défense +2",,"Spécial : Amélioration, arme de mêlée (Poignée (mêlée))
+
+• Bonus d'attaque +2
+• Bonus défense +2
+
+Les Nagais ont conçu cette poignée afin d'augmenter l'efficacité de l'arme à laquelle elle est fixée sans effet négatif. La modification ne peut s'effectuer que sur les armes d'excellente qualité et améliorables, à condition de disposer d'un établi et des outils appropriés."
+ARMES À DISTANCE — CHAMBRAGES,,,,,,,,
+u_r_firi_01,Chambre d'élargissement T1,Chambre de tir,1,Coups critiques plus importants +2,palier 1 niv. 6+ (rare dès 1),Coups critiques plus importants +1d4,,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Coups critiques plus importants +1d4
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_02,Chambre d'amplification T1,Chambre de tir,2,Bonus aux dégâts (Energy) +1,palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts (Energy) +1,,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus aux dégâts (Energy) +1
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_03,Chambre de précision T1,Chambre de tir,3,"Bonus d'attaque +1, Coups critiques plus importants +1",palier 3 niv. 10+ (rare dès 5),"Bonus d'attaque +1, Coups critiques plus importants +1d3",,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus d'attaque +1
+• Coups critiques plus importants +1d3
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_04,Séparateur de rayon T1,Chambre de tir,4,Bonus aux dégâts (Energy) +1d3,palier 4 niv. 12+ (rare dès 7),Bonus aux dégâts (Energy) +1d2,,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus aux dégâts (Energy) +1d2
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_05,Chambre mand. T1,Chambre de tir,5,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1d4, Malus de défense +Penalty_-1",palier 5 niv. 14+ (rare dès 9),"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1",,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus d'attaque +1
+• Bonus aux dégâts (Energy) +1
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_06,Chambre d'élargissement T2,Chambre de tir,6,"Bonus d'attaque +1, Coups critiques plus importants +4",palier 6 niv. 16+ (rare dès 11),"Bonus d'attaque +1, Coups critiques plus importants +1d6",,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus d'attaque +1
+• Coups critiques plus importants +1d6
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_07,Chambre d'amplification T2,Chambre de tir,7,Bonus aux dégâts (Energy) +4,palier 7 niv. 18+ (rare dès 13),Bonus aux dégâts (Energy) +1d4,,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus aux dégâts (Energy) +1d4
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_08,Chambre de précision T2,Chambre de tir,8,"Bonus d'attaque +2, Coups critiques plus importants +1d6",palier 8 niv. 20+ (rare dès 15),"Bonus d'attaque +2, Coups critiques plus importants +1d4",,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus d'attaque +2
+• Coups critiques plus importants +1d4
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_09,Séparateur de rayon T2,Chambre de tir,9,Bonus aux dégâts (Energy) +1d10,palier 9 niv. 22+ (rare dès 17),Bonus aux dégâts (Energy) +1d6,,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus aux dégâts (Energy) +1d6
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_10,Chambre mand. T2,Chambre de tir,10,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1d12, Malus de défense +Penalty_-2",palier 10 niv. 24+ (rare dès 19),"Bonus d'attaque +1, Bonus aux dégâts (Energy) +2",,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus d'attaque +1
+• Bonus aux dégâts (Energy) +2
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_11,Chambre d'élargissement T3,Chambre de tir,11,"Bonus d'attaque +1, Coups critiques plus importants +1d12",palier 11 niv. 26+ (rare dès 21),"Bonus d'attaque +1, Coups critiques plus importants +2d6",,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus d'attaque +1
+• Coups critiques plus importants +2d6
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_12,Chambre d'amplification T3,Chambre de tir,12,"Bonus aux dégâts (Energy) +5, Bonus aux dégâts (Energy) +1",palier 12 niv. 28+ (rare dès 23),Bonus aux dégâts (Energy) +5,,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus aux dégâts (Energy) +5
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_13,Chambre de précision T3,Chambre de tir,13,"Bonus d'attaque +2, Coups critiques plus importants +2d6",palier 13 niv. 30+ (rare dès 25),"Bonus d'attaque +3, Coups critiques plus importants +1d6",,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus d'attaque +3
+• Coups critiques plus importants +1d6
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_14,Séparateur de rayon T3,Chambre de tir,14,Bonus aux dégâts (Energy) +2d6,palier 14 niv. 30+ (rare dès 27),Bonus aux dégâts (Energy) +5,,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus aux dégâts (Energy) +5
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_firi_15,Chambre mand. T3,Chambre de tir,15,"Bonus aux dégâts (Energy) +2d8, Malus de défense +Penalty_-1, Bonus d'amélioration +1",palier 15 niv. 30+ (rare dès 29),"Bonus d'attaque +2, Bonus aux dégâts (Energy) +1d6",,"Spécial : Amélioration, arme à distance (Chambre de tir)
+
+• Bonus d'attaque +2
+• Bonus aux dégâts (Energy) +1d6
+
+Cet objet permet d'élargir le rayon de certains blasters, ce qui augmente les dégâts qu'ils infligent et peut les doter d'effets supplémentaires. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+ARMES À DISTANCE — CELLULES D'ÉNERGIE,,,,,,,,
+u_r_powe_01,Chargeur d'ions T1,Pack d'énergie (distance),1,Bonus aux dégâts contre Race +1d4,palier 1 niv. 6+ (rare dès 1),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Droïdes +1d4",,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Ion) +1
+• Bonus aux dégâts contre Droïdes +1d4
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_02,Générateur d'impulsions T1,Pack d'énergie (distance),2,Coups critiques plus importants +1d4,palier 2 niv. 8+ (rare dès 3),Coups critiques plus importants +1d4,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Coups critiques plus importants +1d4
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_03,Cellule d'énergie de base au rylith,Pack d'énergie (distance),3,Bonus aux dégâts (Energy) +2,palier 3 niv. 10+ (rare dès 5),Bonus aux dégâts (Energy) +1,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Energy) +1
+
+Le cristal de rylith absorbe l'énergie solaire. Il est utilisé dans la fabrication de réserves d'énergie pour armes de pointe. Cette cellule d'énergie augmente la production d'énergie des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_04,Chargeur d'ions T2,Pack d'énergie (distance),4,"Bonus aux dégâts contre Race +1d6, Coups critiques plus importants +2",palier 4 niv. 12+ (rare dès 7),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Droïdes +1d6",,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Ion) +1
+• Bonus aux dégâts contre Droïdes +1d6
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_05,Générateur d'impulsions T2,Pack d'énergie (distance),5,Coups critiques plus importants +1d8,palier 5 niv. 14+ (rare dès 9),Coups critiques plus importants +1d6,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Coups critiques plus importants +1d6
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_06,Cellule d'énergie au rylith classique,Pack d'énergie (distance),6,Bonus aux dégâts (Energy) +1d4,palier 6 niv. 16+ (rare dès 11),Bonus aux dégâts (Energy) +1d2,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Energy) +1d2
+
+Le cristal de rylith absorbe l'énergie solaire. Il est utilisé dans la fabrication de réserves d'énergie pour armes de pointe. Cette cellule d'énergie augmente la production d'énergie des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_07,Chargeur d'ions T3,Pack d'énergie (distance),7,"Bonus aux dégâts contre Race +1d8, Coups critiques plus importants +4",palier 7 niv. 18+ (rare dès 13),"Bonus aux dégâts (Ion) +2, Bonus aux dégâts contre Droïdes +1d8",,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Ion) +2
+• Bonus aux dégâts contre Droïdes +1d8
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_08,Générateur d'impulsions T3,Pack d'énergie (distance),8,"Bonus aux dégâts (Energy) +2, Coups critiques plus importants +1d10",palier 8 niv. 20+ (rare dès 15),Coups critiques plus importants +1d8,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Coups critiques plus importants +1d8
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_09,Cellule d'énergie alcaline au rylith,Pack d'énergie (distance),9,Bonus aux dégâts (Energy) +1d6,palier 9 niv. 22+ (rare dès 17),Bonus aux dégâts (Energy) +2,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Energy) +2
+
+Le cristal de rylith absorbe l'énergie solaire. Il est utilisé dans la fabrication de réserves d'énergie pour armes de pointe. Cette cellule d'énergie augmente la production d'énergie des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_10,Chargeur d'ions T4,Pack d'énergie (distance),10,"Bonus aux dégâts (Ion) +1d6, Bonus aux dégâts contre Race +1d6, Coups critiques plus importants +5",palier 10 niv. 24+ (rare dès 19),"Bonus aux dégâts (Ion) +3, Bonus aux dégâts contre Droïdes +1d10",,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Ion) +3
+• Bonus aux dégâts contre Droïdes +1d10
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_11,Générateur d'impulsions T4,Pack d'énergie (distance),11,"Bonus aux dégâts (Energy) +4, Coups critiques plus importants +2d8",palier 11 niv. 26+ (rare dès 21),Coups critiques plus importants +2d6,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Coups critiques plus importants +2d6
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_12,Cellule d'énergie supérieure au rylith,Pack d'énergie (distance),12,Bonus aux dégâts (Energy) +2d6,palier 12 niv. 28+ (rare dès 23),Bonus aux dégâts (Energy) +1d4,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Energy) +1d4
+
+Le cristal de rylith absorbe l'énergie solaire. Il est utilisé dans la fabrication de réserves d'énergie pour armes de pointe. Cette cellule d'énergie augmente la production d'énergie des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_13,Chargeur d'ions T5,Pack d'énergie (distance),13,"Bonus aux dégâts (Ion) +1d8, Bonus aux dégâts contre Race +2d6, Coups critiques plus importants +2d8",palier 13 niv. 30+ (rare dès 25),"Bonus aux dégâts (Ion) +3, Bonus aux dégâts contre Droïdes +2d6",,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Ion) +3
+• Bonus aux dégâts contre Droïdes +2d6
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_14,Générateur d'impulsions T5,Pack d'énergie (distance),14,"Bonus aux dégâts (Energy) +5, Coups critiques plus importants +2d10",palier 14 niv. 30+ (rare dès 27),Coups critiques plus importants +2d8,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Coups critiques plus importants +2d8
+
+Cette cellule d'énergie augmente la production d'énergie de certains blasters, augmentant ainsi les dégâts infligés pour peu que l'utilisateur sache se servir de ce type d'arme. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_powe_15,Cellule d'énergie pure au rylith,Pack d'énergie (distance),15,Bonus aux dégâts (Energy) +2d10,palier 15 niv. 30+ (rare dès 29),Bonus aux dégâts (Energy) +3,,"Spécial : Amélioration, arme à distance (Pack d'énergie (distance))
+
+• Bonus aux dégâts (Energy) +3
+
+Le cristal de rylith absorbe l'énergie solaire. Il est utilisé dans la fabrication de réserves d'énergie pour armes de pointe. Cette cellule d'énergie augmente la production d'énergie des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+ARMES À DISTANCE — LUNETTES,,,,,,,,
+u_r_targ_01,Lunette de sniper T1,Lunette de visée,1,Acéré,palier 1 niv. 6+ (rare dès 1),Acéré,,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Acéré
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_02,Lunette de précision T1,Lunette de visée,2,Bonus d'attaque +1,palier 2 niv. 8+ (rare dès 3),Bonus d'attaque +1,,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +1
+
+Ce viseur augmente l'efficacité des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et une arme de qualité suffisante pour être améliorable."
+u_r_targ_03,Lunette de visée T1,Lunette de visée,3,En cas de coup au but +14,palier 3 niv. 10+ (rare dès 5),En cas de coup au but (Étourdissement : DD 5 + Niv + Carac),,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_04,Lunette de mutilation T1,Lunette de visée,4,En cas de coup au but +10,palier 4 niv. 12+ (rare dès 7),En cas de coup au but (Lenteur : DD 3 + Niv + Carac),,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• En cas de coup au but (Lenteur : DD 3 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_05,Lunette de sniper T2,Lunette de visée,5,"Acéré, En cas de coup au but +14",palier 5 niv. 14+ (rare dès 9),"Acéré, En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)",,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Acéré
+• En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_06,Lunette de précision T2,Lunette de visée,6,Bonus d'attaque +2,palier 6 niv. 16+ (rare dès 11),Bonus d'attaque +2,,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +2
+
+Ce viseur augmente l'efficacité des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et une arme de qualité suffisante pour être améliorable."
+u_r_targ_07,Lunette de visée T2,Lunette de visée,7,"Bonus aux dégâts (Energy) +1, En cas de coup au but +14",palier 7 niv. 18+ (rare dès 13),"Bonus d'attaque +1, En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)",,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +1
+• En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_08,Lunette de mutilation T2,Lunette de visée,8,"Bonus aux dégâts (Energy) +1, En cas de coup au but +14",palier 8 niv. 20+ (rare dès 15),"Bonus d'attaque +1, En cas de coup au but (Lenteur : DD 5 + Niv + Carac)",,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +1
+• En cas de coup au but (Lenteur : DD 5 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_09,Lunette de sniper T3,Lunette de visée,9,"Acéré, En cas de coup au but +14",palier 9 niv. 22+ (rare dès 17),"Bonus d'attaque +1, Acéré, En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)",,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +1
+• Acéré
+• En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_10,Lunette de précision T3,Lunette de visée,10,Bonus d'attaque +3,palier 10 niv. 24+ (rare dès 19),Bonus d'attaque +3,,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +3
+
+Ce viseur augmente l'efficacité des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et une arme de qualité suffisante pour être améliorable."
+u_r_targ_11,Lunette de visée T3,Lunette de visée,11,"Bonus aux dégâts (Energy) +2, En cas de coup au but +18",palier 11 niv. 26+ (rare dès 21),"Bonus d'attaque +2, En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)",,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +2
+• En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_12,Lunette de mutilation T3,Lunette de visée,12,"Bonus aux dégâts (Energy) +3, En cas de coup au but +18",palier 12 niv. 28+ (rare dès 23),"Bonus d'attaque +1, En cas de coup au but (Lenteur : DD 7 + Niv + Carac)",,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +1
+• En cas de coup au but (Lenteur : DD 7 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_13,Lunette de sniper T4,Lunette de visée,13,"Acéré, En cas de coup au but +18",palier 13 niv. 30+ (rare dès 25),"Bonus d'attaque +1, Acéré, En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)",,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +1
+• Acéré
+• En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+u_r_targ_14,Lunette de précision T4,Lunette de visée,14,Bonus d'attaque +4,palier 14 niv. 30+ (rare dès 27),Bonus d'attaque +4,,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +4
+
+Ce viseur augmente l'efficacité des blasters, fusils blasters et arbalètes laser. Cette modification nécessite un établi et une arme de qualité suffisante pour être améliorable."
+u_r_targ_15,Lunette de visée T4,Lunette de visée,15,"Bonus aux dégâts (Energy) +3, En cas de coup au but +22",palier 15 niv. 30+ (rare dès 29),"Bonus d'attaque +2, En cas de coup au but (Étourdissement : DD 9 + Niv + Carac)",,"Spécial : Amélioration, arme à distance (Lunette de visée)
+
+• Bonus d'attaque +2
+• En cas de coup au but (Étourdissement : DD 9 + Niv + Carac)
+
+Cette lunette de visée améliore la précision de certains blasters, permettant ainsi de mieux toucher sa cible. Cette modification nécessite un établi et ne peut s'effectuer que sur une arme de qualité suffisante pour être améliorable."
+SABRES LASER — ÉMETTEURS,,,,,,,,
+u_l_emit_01,Émetteur de parade,Émetteur (sabre),1,Parade tirs de blaster: +1 +1,palier 1 niv. 12+ (rare dès 7),"Parade tirs de blaster +1, Bonus défense +1",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Parade tirs de blaster +1
+• Bonus défense +1
+
+Cet émetteur a été optimisé pour être utilisé contre les tirs de blasters. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_l_emit_02,Émetteur de désordre nerveux,Émetteur (sabre),2,"Malus de défense +Penalty_-1, En cas de coup au but +10",palier 2 niv. 14+ (rare dès 9),"Malus de défense -1, En cas de coup au but (Étourdissement : DD 3 + Niv + Carac)",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Malus de défense -1
+• En cas de coup au but (Étourdissement : DD 3 + Niv + Carac)
+
+Cet émetteur projette un rayon perturbant fortement le système nerveux de la victime. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_03,Émetteur au phobium brut,Émetteur (sabre),3,"Malus de défense +Penalty_-3, En cas de coup au but +14",palier 3 niv. 16+ (rare dès 11),"Malus de défense -2, En cas de coup au but (Horreur : DD 5 + Niv + Carac)",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Malus de défense -2
+• En cas de coup au but (Horreur : DD 5 + Niv + Carac)
+
+Conçu pour les combattants particulièrement agressifs, cet émetteur est plus lourd et moins maniable qu'un émetteur de désordre nerveux. Par contre, il est aussi bien plus efficace. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_04,Émetteur de parade,Émetteur (sabre),4,"Parade tirs de blaster: -2 +Penalty_-2, Bonus aux dégâts (Energy) +1, Bonus défense +1",palier 4 niv. 18+ (rare dès 13),"Bonus défense +2, Parade tirs de blaster -1",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Bonus défense +2
+• Parade tirs de blaster -1
+
+Cet émetteur est surtout utile pour parer les attaques au corps à corps. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_05,Émetteur de parade amélioré,Émetteur (sabre),5,"Parade tirs de blaster: +1 +2, Bonus défense +1",palier 5 niv. 20+ (rare dès 15),"Parade tirs de blaster +2, Bonus défense +2",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Parade tirs de blaster +2
+• Bonus défense +2
+
+Cet émetteur a été optimisé pour être utilisé contre les tirs de blasters. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_l_emit_06,Émetteur de désordre nerveux amélioré,Émetteur (sabre),6,"Malus de défense +Penalty_-1, En cas de coup au but +10",palier 6 niv. 22+ (rare dès 17),"Malus de défense -1, En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Malus de défense -1
+• En cas de coup au but (Étourdissement : DD 5 + Niv + Carac)
+
+Cet émetteur projette un rayon perturbant fortement le système nerveux de la victime. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_07,Émetteur au phobium synthétisé,Émetteur (sabre),7,"Malus de défense +Penalty_-3, En cas de coup au but +14",palier 7 niv. 24+ (rare dès 19),"Malus de défense -2, En cas de coup au but (Horreur : DD 7 + Niv + Carac)",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Malus de défense -2
+• En cas de coup au but (Horreur : DD 7 + Niv + Carac)
+
+Conçu pour les combattants particulièrement agressifs, cet émetteur est plus lourd et moins maniable qu'un émetteur de désordre nerveux. Par contre, il est aussi bien plus efficace. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_08,Émetteur de parade amélioré,Émetteur (sabre),8,"Parade tirs de blaster: -2 +Penalty_-2, Bonus aux dégâts (Energy) +2, Bonus défense +2",palier 8 niv. 26+ (rare dès 21),"Bonus défense +3, Parade tirs de blaster -1",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Bonus défense +3
+• Parade tirs de blaster -1
+
+Cet émetteur est surtout utile pour parer les attaques au corps à corps. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_09,Émetteur de parade haut de gamme,Émetteur (sabre),9,"Parade tirs de blaster: +1 +4, Bonus défense +1",palier 9 niv. 28+ (rare dès 23),"Parade tirs de blaster +4, Bonus défense +3",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Parade tirs de blaster +4
+• Bonus défense +3
+
+Cet émetteur a été optimisé pour être utilisé contre les tirs de blasters. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_l_emit_10,Émetteur de désordre nerveux hightech,Émetteur (sabre),10,"Malus de défense +Penalty_-1, En cas de coup au but +14",palier 10 niv. 30+ (rare dès 25),"Malus de défense -1, En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Malus de défense -1
+• En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)
+
+Cet émetteur projette un rayon perturbant fortement le système nerveux de la victime. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_11,Émetteur à alliage au phobium,Émetteur (sabre),11,"Malus de défense +Penalty_-3, En cas de coup au but +18",palier 11 niv. 30+ (rare dès 27),"Malus de défense -2, En cas de coup au but (Horreur : DD 9 + Niv + Carac)",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Malus de défense -2
+• En cas de coup au but (Horreur : DD 9 + Niv + Carac)
+
+Conçu pour les combattants particulièrement agressifs, cet émetteur est plus lourd et moins maniable qu'un émetteur de désordre nerveux. Par contre, il est aussi bien plus efficace. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_12,Émetteur de parade haut de gamme,Émetteur (sabre),12,"Bonus aux dégâts (Energy) +3, Bonus défense +2",palier 12 niv. 30+ (rare dès 29),Bonus défense +4,,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Bonus défense +4
+
+Cet émetteur est surtout utile pour parer les attaques au corps à corps. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_emit_13,Émetteur au phobium raffiné,Émetteur (sabre),13,"Malus de défense +Penalty_-1, En cas de coup au but +18",palier 13 niv. 30+ (rare dès 30),"Malus de défense -1, En cas de coup au but (Horreur : DD 9 + Niv + Carac)",,"Spécial : Amélioration, sabre laser (Émetteur (sabre))
+
+• Malus de défense -1
+• En cas de coup au but (Horreur : DD 9 + Niv + Carac)
+
+Cet émetteur haut de gamme est plus efficace et plus facile d'utilisation que la plupart des autres modèles au phobium. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+SABRES LASER — LENTILLES,,,,,,,,
+u_l_lens_01,Lentille de kunda synthétisé,Lentille (sabre),1,Parade tirs de blaster: +1 +1,palier 1 niv. 12+ (rare dès 7),"Bonus d'attaque +1, Parade tirs de blaster +1",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Bonus d'attaque +1
+• Parade tirs de blaster +1
+
+La pierre de kunda possède de nombreuses applications pratiques dans les domaines de la médecine et des communications, mais elle peut également être combinée avec une lentille classique pour produire une lame plus large, et pourtant plus concentrée. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_l_lens_02,Lentille de dragite,Lentille (sabre),2,Bonus aux dégâts (Energy) +2,palier 2 niv. 14+ (rare dès 9),Coups critiques plus importants +1d4,,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Coups critiques plus importants +1d4
+
+Bien que généralement utilisée comme cristal de focalisation, la dragite est l'un des rares cristaux pouvant également donner une lentille pour sabre laser. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_03,Lentille de byrhotse,Lentille (sabre),3,"Bonus d'attaque +1, Parade tirs de blaster: -2 +Penalty_-2, Bonus aux dégâts (Energy) +1",palier 3 niv. 16+ (rare dès 11),"Bonus d'attaque +2, Parade tirs de blaster -2",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Bonus d'attaque +2
+• Parade tirs de blaster -2
+
+A l'origine, le byrhotse servait uniquement à créer des lentilles de caméra infrarouge, mais on l'utilise désormais également dans d'autres domaines, dont celui des lentilles pour sabre laser. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_04,Lentille de gemme à rayon,Lentille (sabre),4,"Bonus aux dégâts (Energy) +1, Acéré",palier 4 niv. 18+ (rare dès 13),Acéré,,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Acéré
+
+La gemme à rayon mérite bien son nom. Ce cristal est fréquemment utilisé dans la fabrication d'ordinateurs optiques, tels que ceux des systèmes de navigation. Il n'est donc pas surprenant qu'il serve également à créer une lame de sabre laser extrêmement concentrée. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_05,Lentille vibratoire,Lentille (sabre),5,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Energy) +1d8, Malus de défense +Penalty_-1",palier 5 niv. 20+ (rare dès 15),"Malus à l'attaque -1, Malus de défense -1, Coups critiques plus importants +1d8",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Malus à l'attaque -1
+• Malus de défense -1
+• Coups critiques plus importants +1d8
+
+Cette lentille vibre très rapidement, ce qui donne une lame moins stable, mais plus meurtrière. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_06,Lentille de kunda pur,Lentille (sabre),6,"Bonus d'attaque +1, Parade tirs de blaster: +1 +2",palier 6 niv. 22+ (rare dès 17),"Bonus d'attaque +2, Parade tirs de blaster +2",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Bonus d'attaque +2
+• Parade tirs de blaster +2
+
+La pierre de kunda possède de nombreuses applications pratiques dans les domaines de la médecine et des communications, mais elle peut également être combinée avec une lentille classique pour produire une lame plus large, et pourtant plus concentrée. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_l_lens_07,Lentille d'adegan,Lentille (sabre),7,Bonus aux dégâts (Energy) +1d12,palier 7 niv. 24+ (rare dès 19),Coups critiques plus importants +1d6,,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Coups critiques plus importants +1d6
+
+Bien que généralement utilisé comme cristal de focalisation, l'adegan est l'un des rares cristaux pouvant également donner une lentille pour sabre laser. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_08,Lentille de byrhotse pur,Lentille (sabre),8,"Bonus d'attaque +2, Parade tirs de blaster: -2 +Penalty_-3, Bonus aux dégâts (Energy) +2",palier 8 niv. 26+ (rare dès 21),"Bonus d'attaque +3, Parade tirs de blaster -2",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Bonus d'attaque +3
+• Parade tirs de blaster -2
+
+A l'origine, le byrhotse servait uniquement à créer des lentilles de caméra infrarouge, mais on l'utilise désormais également dans d'autres domaines, dont celui des lentilles pour sabre laser. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_09,Lentille de gemme à rayon améliorée,Lentille (sabre),9,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +2, Acéré",palier 9 niv. 28+ (rare dès 23),"Bonus d'attaque +1, Acéré",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Bonus d'attaque +1
+• Acéré
+
+La gemme à rayon mérite bien son nom. Ce cristal est fréquemment utilisé dans la fabrication d'ordinateurs optiques, tels que ceux des systèmes de navigation. Il n'est donc pas surprenant qu'il serve également à créer une lame de sabre laser extrêmement concentrée. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_10,Lentille vibratoire améliorée,Lentille (sabre),10,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Energy) +2d6, Malus de défense +Penalty_-1",palier 10 niv. 30+ (rare dès 25),"Malus à l'attaque -1, Malus de défense -1, Coups critiques plus importants +2d6",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Malus à l'attaque -1
+• Malus de défense -1
+• Coups critiques plus importants +2d6
+
+Cette lentille vibre très rapidement, ce qui donne une lame moins stable, mais plus meurtrière. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_11,Lentille de duel d'Ossus,Lentille (sabre),11,"Bonus d'attaque +2, Parade tirs de blaster: +1 +3",palier 11 niv. 30+ (rare dès 27),"Bonus d'attaque +3, Parade tirs de blaster +3",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Bonus d'attaque +3
+• Parade tirs de blaster +3
+
+Ossus était le siège de la grande bibliothèque des Jedi, mais des entraînements s'y déroulaient également. Même après la catastrophe de la supernova de Cron, on trouvait ce type d'équipement dans l'Enclave Jedi. La lentille de duel était destinée à produire une lame de sabre laser qui puisse être utilisée dans des situations où un contrôle total de la lame est requis. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour qu'elle soit améliorable."
+u_l_lens_12,Lentille de pontite,Lentille (sabre),12,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +2d6",palier 12 niv. 30+ (rare dès 29),"Bonus d'attaque +1, Coups critiques plus importants +1d8",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Bonus d'attaque +1
+• Coups critiques plus importants +1d8
+
+Bien que généralement utilisée comme cristal de focalisation, la pontite est l'un des rares cristaux pouvant également donner une lentille pour sabre laser. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_lens_13,Lentille de byrhotse améliorée,Lentille (sabre),13,"Bonus d'attaque +3, Parade tirs de blaster: -2 +Penalty_-4, Bonus aux dégâts (Energy) +4",palier 13 niv. 30+ (rare dès 30),"Bonus d'attaque +4, Parade tirs de blaster -3",,"Spécial : Amélioration, sabre laser (Lentille (sabre))
+
+• Bonus d'attaque +4
+• Parade tirs de blaster -3
+
+A l'origine, le byrhotse servait uniquement à créer des lentilles de caméra infrarouge, mais on l'utilise désormais également dans d'autres domaines, dont celui des lentilles pour sabre laser. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+SABRES LASER — CELLULES D'ÉNERGIE,,,,,,,,
+u_l_cell_01,Cellule d'énergie à décharge,Cellule d'énergie (sabre),1,Coups critiques plus importants +1d3,palier 1 niv. 12+ (rare dès 7),Coups critiques plus importants +1d4,,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Coups critiques plus importants +1d4
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_02,Cellule d'énergie au diatum,Cellule d'énergie (sabre),2,Bonus aux dégâts (Energy) +1,palier 2 niv. 14+ (rare dès 9),Bonus aux dégâts (Energy) +1,,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Energy) +1
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_03,Cellule d'énergie à ions,Cellule d'énergie (sabre),3,"Bonus aux dégâts contre Race +1d4, Coups critiques plus importants +1d4",palier 3 niv. 16+ (rare dès 11),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d4, Coups critiques plus importants +1d3",,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Ion) +1
+• Bonus aux dégâts contre Race +1d4
+• Coups critiques plus importants +1d3
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_04,Cellule à décharge de Telgorn T1,Cellule d'énergie (sabre),4,Bonus aux dégâts (Electrical) +1d3,palier 4 niv. 18+ (rare dès 13),Bonus aux dégâts (Electrical) +1,,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Electrical) +1
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_05,Cellule d'énergie à décharge améliorée,Cellule d'énergie (sabre),5,Coups critiques plus importants +1d6,palier 5 niv. 20+ (rare dès 15),"Bonus aux dégâts (Energy) +1, Coups critiques plus importants +1d6",,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Energy) +1
+• Coups critiques plus importants +1d6
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_06,Cellule d'énergie au diatum améliorée,Cellule d'énergie (sabre),6,Bonus aux dégâts (Energy) +2,palier 6 niv. 22+ (rare dès 17),Bonus aux dégâts (Energy) +2,,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Energy) +2
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_07,Cellule d'énergie à ions améliorée,Cellule d'énergie (sabre),7,"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d8, Coups critiques plus importants +1d3",palier 7 niv. 24+ (rare dès 19),"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d8, Coups critiques plus importants +1d4",,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Ion) +1
+• Bonus aux dégâts contre Race +1d8
+• Coups critiques plus importants +1d4
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_08,Cellule à décharge de Telgorn T2,Cellule d'énergie (sabre),8,Bonus aux dégâts (Electrical) +1d4,palier 8 niv. 26+ (rare dès 21),Bonus aux dégâts (Electrical) +2,,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Electrical) +2
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_09,Cellule d'énergie à grande décharge,Cellule d'énergie (sabre),9,Coups critiques plus importants +1d8,palier 9 niv. 28+ (rare dès 23),"Bonus aux dégâts (Energy) +2, Coups critiques plus importants +1d8",,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Energy) +2
+• Coups critiques plus importants +1d8
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_10,Cellule d'énergie supérieure au diatium,Cellule d'énergie (sabre),10,Bonus aux dégâts (Energy) +4,palier 10 niv. 30+ (rare dès 25),Bonus aux dégâts (Energy) +3,,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Energy) +3
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_11,Cellule d'énergie à ions supérieure,Cellule d'énergie (sabre),11,"Bonus aux dégâts (Ion) +2, Bonus aux dégâts contre Race +1d12, Coups critiques plus importants +1d6",palier 11 niv. 30+ (rare dès 27),"Bonus aux dégâts (Ion) +2, Bonus aux dégâts contre Race +2d6, Coups critiques plus importants +1d6",,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Ion) +2
+• Bonus aux dégâts contre Race +2d6
+• Coups critiques plus importants +1d6
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_12,Cellule à décharge de Telgorn T3,Cellule d'énergie (sabre),12,Bonus aux dégâts (Electrical) +1d8,palier 12 niv. 30+ (rare dès 29),Bonus aux dégâts (Electrical) +1d6,,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Electrical) +1d6
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+u_l_cell_13,Cellule d'énergie au diatum ultime,Cellule d'énergie (sabre),13,Bonus aux dégâts (Energy) +5,palier 13 niv. 30+ (rare dès 30),Bonus aux dégâts (Energy) +1d6,,"Spécial : Amélioration, sabre laser (Cellule d'énergie (sabre))
+
+• Bonus aux dégâts (Energy) +1d6
+
+Cette cellule d'énergie augmente la quantité d'énergie émise par un sabre laser, ce qui permet à un utilisateur expérimenté de porter des attaques plus puissantes. Cette modification nécessite un établi équipé des outils adéquats, ainsi qu'une arme de qualité suffisante pour être améliorable."
+SABRES LASER — CRISTAUX DE COULEUR,,,,,,,,
+u_l_colo_01,"Cristal, bleu",Cristal de couleur,1,—,palier 1 niv. 10+ (rare dès 5),,,
+u_l_colo_02,"Cristal, vert",Cristal de couleur,2,—,palier 2 niv. 10+ (rare dès 5),,,
+u_l_colo_03,"Cristal, jaune",Cristal de couleur,3,—,palier 3 niv. 10+ (rare dès 5),,,
+u_l_colo_04,"Cristal, rouge",Cristal de couleur,4,—,palier 4 niv. 10+ (rare dès 5),,,
+u_l_colo_05,"Cristal, violet",Cristal de couleur,5,—,palier 5 niv. 10+ (rare dès 5),,,
+u_l_colo_06,"Cristal, bleu cyan",Cristal de couleur,6,—,palier 6 niv. 10+ (rare dès 5),,,
+u_l_colo_07,"Cristal, argenté",Cristal de couleur,7,—,palier 7 niv. 10+ (rare dès 5),,,
+u_l_colo_08,"Cristal, orange",Cristal de couleur,8,—,palier 8 niv. 10+ (rare dès 5),,,
+u_l_colo_09,"Cristal, viridien",Cristal de couleur,9,—,palier 9 niv. 10+ (rare dès 5),,,
+u_l_colo_10,"Cristal, bronze",Cristal de couleur,10,—,palier 10 niv. 10+ (rare dès 5),,,
+SABRES LASER — CRISTAUX D'AMÉLIORATION,,,,,,,,
+u_l_crys_01,"Cristal, adegan",Cristal (sabre),1,Bonus aux dégâts (Energy) +2,palier 1 niv. 10+ (rare dès 5),Bonus d'attaque +1,,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +1
+
+Le cristal d'adegan, également appelé cristal d'ilum, est l'un des plus utilisés dans la focalisation de sabre laser."
+u_l_crys_02,"Cristal, rubat",Cristal (sabre),2,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1",palier 2 niv. 11+ (rare dès 6),"Bonus d'attaque +1, Bonus défense +1",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +1
+• Bonus défense +1
+
+Utilisé dans la fabrication des sabres laser, ce cristal est extrait sur Phémis. Il donne un sabre à la lame particulièrement nette, ce qui permet de mieux la voir, et donc de toucher l'adversaire avec davantage d'efficacité."
+u_l_crys_03,"Cristal, Ruusan",Cristal (sabre),3,"Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +1",palier 3 niv. 12+ (rare dès 7),"Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +1",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus de caractéristique (Charisma) +1
+• Bonus de caractéristique (Wisdom) +1
+
+Ce cristal provient de Ruusan, planète de la Bordure centrale. Il n'a aucun effet direct sur l'efficacité du sabre laser, mais il aide le Jedi à concentrer son énergie pour utiliser la Force."
+u_l_crys_04,"Cristal, nextor",Cristal (sabre),4,"Bonus d'attaque +1, Acéré",palier 4 niv. 13+ (rare dès 8),"Bonus d'attaque +1, Acéré",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +1
+• Acéré
+
+Critique possible : x2
+
+Ce cristal est extrait des montagnes de M'haeli. Il produit une lame volatile qui inflige des dégâts stupéfiants."
+u_l_crys_05,"Cristal, dragite",Cristal (sabre),5,"Bonus de caractéristique (Constitution) +1, Bonus aux dégâts (Sonic) +1",palier 5 niv. 14+ (rare dès 9),"Bonus de caractéristique (Constitution) +1, Résistance aux dégâts (Sonic) +5/-",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus de caractéristique (Constitution) +1
+• Résistance aux dégâts (Sonic) +5/-
+
+Ce cristal se trouve sur M'haeli, et plus précisément dans la chaîne des monts D'olop. La lame qu'il génère résonne à chaque impact, ce qui lui permet d'infliger de légers dégâts de type sonique à chaque coup."
+u_l_crys_06,"Cristal, fikrann",Cristal (sabre),6,"Bonus d'attaque +2, Bonus aux dégâts contre Race +2d6",palier 6 niv. 15+ (rare dès 10),"Bonus d'attaque +1, Bonus aux dégâts contre Droïdes +1d6",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +1
+• Bonus aux dégâts contre Droïdes +1d6
+
+Ce gros cristal est extrait par les autochtones de Rafa V. Quand on l'utilise dans la fabrication des sabres laser, il génère une lame chargée en électricité, redoutable contre les droïdes."
+u_l_crys_07,"Cristal, phond",Cristal (sabre),7,Bonus aux dégâts (Slashing) +1d6,palier 7 niv. 16+ (rare dès 11),"Bonus de caractéristique (Strength) +1, Bonus d'attaque +1",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus de caractéristique (Strength) +1
+• Bonus d'attaque +1
+
+Cet étrange cristal est obtenu par coagulation spontanée d'impuretés durant le processus de création de certains alliages sous des conditions bien particulières. Il génère une lame de sabre laser à l'éclat particulièrement vif."
+u_l_crys_08,"Cristal, bondar",Cristal (sabre),8,En cas de coup au but +10,palier 8 niv. 17+ (rare dès 12),En cas de coup au but (Étourdissement : DD 3 + Niv + Carac),,"Spécial : Cristal d'amélioration, sabre laser
+
+• En cas de coup au but (Étourdissement : DD 3 + Niv + Carac)
+
+Jet de sauvegarde : DD 10 pour annuler l'étourdissement
+
+Ce cristal était autrefois extrait du sous-sol d'un astéroïde en orbite éloignée autour du système d'Alderande. Il crée une lame de sabre laser qui émet des pulsations pouvant étourdir l'adversaire à chaque impact."
+u_l_crys_09,"Cristal, velmorite",Cristal (sabre),9,"Bonus de caractéristique (Dexterity) +1, Acéré",palier 9 niv. 18+ (rare dès 13),"Bonus de caractéristique (Dexterity) +1, Acéré",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus de caractéristique (Dexterity) +1
+• Acéré
+
+Ce cristal ne se trouve que sur la planète Velmor. Il génère une lame très fine et d'autant plus facile à manier."
+u_l_crys_10,"Cristal, sigil",Cristal (sabre),10,"Bonus d'attaque +1, Bonus aux dégâts (Energy) +1d6",palier 10 niv. 19+ (rare dès 14),Bonus d'attaque +2,,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +2
+
+Extrait dans le système de Sigil, ce cristal est coûteux mais mérite amplement son prix. Il produit une lame de sabre laser qui brûle l'adversaire au contact, lui infligeant d'importants dégâts."
+u_l_crys_11,"Cristal, jenruax",Cristal (sabre),11,"Parade tirs de blaster: +1 +5, Bonus aux dégâts (Energy) +2",palier 11 niv. 20+ (rare dès 15),"Parade tirs de blaster +4, Bonus défense +1",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Parade tirs de blaster +4
+• Bonus défense +1
+
+Ce cristal d'opila raffiné a été débarrassé de toutes ses impuretés. Il génère une lame de sabre laser fendant l'air avec une rapidité stupéfiante."
+u_l_crys_12,"Cristal, kasha",Cristal (sabre),12,"Bonus d'attaque +1, Bonus de caractéristique (Wisdom) +2",palier 12 niv. 21+ (rare dès 16),"Bonus d'attaque +1, Bonus de caractéristique (Wisdom) +2",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +1
+• Bonus de caractéristique (Wisdom) +2
+
+Traditionnellement, ce cristal est utilisé comme un outil de méditation par les Céréans. Quand on l'ajoute à un sabre laser, il aide l'utilisateur à garder la tête claire et à ne pas se laisser distraire, même en plein combat."
+u_l_crys_13,"Cristal, opila",Cristal (sabre),13,"Bonus aux dégâts (Energy) +3, Coups critiques plus importants +2d6",palier 13 niv. 22+ (rare dès 17),"Acéré, Bonus d'attaque +1",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Acéré
+• Bonus d'attaque +1
+
+Originaire des champs d'astéroïdes du système de Fyrth, ce cristal est utilisé dans la fabrication des sabres laser pour produire une lame qui fend l'air particulièrement rapidement."
+u_l_crys_14,"Cristal, éralam",Cristal (sabre),14,"Bonus d'attaque +2, Bonus aux dégâts (Energy) +2",palier 14 niv. 23+ (rare dès 18),"Bonus d'attaque +2, Bonus défense +1",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +2
+• Bonus défense +1
+
+Ce cristal était autrefois extrait du sol de la troisième lune d'Erai, détruite par les intenses bombardements des Sith. Il est donc extrêmement difficile d'en trouver. Il produit une lame très nette et de qualité supérieure."
+u_l_crys_15,"Cristal, stygium",Cristal (sabre),15,"Bonus d'attaque +1, Bonus de caractéristique (Dexterity) +1, Bonus de compétence +4",palier 15 niv. 24+ (rare dès 19),"Bonus d'attaque +1, Bonus de caractéristique (Dexterity) +1, Bonus de compétence +4",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +1
+• Bonus de caractéristique (Dexterity) +1
+• Bonus de compétence +4
+
+Discrétion +4
+
+Le stygium sert à produire des effets de camouflage par lesquels les capteurs ont énormément de mal à se laisser abuser. Sous forme de cristal, il peut entrer dans la composition d'un sabre laser."
+u_l_crys_16,"Cristal, damind",Cristal (sabre),16,Bonus d'attaque +3,palier 16 niv. 25+ (rare dès 20),Bonus d'attaque +3,,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +3
+
+Ce cristal originaire du monde désertique de Daminia pour être utilisé dans la fabrication des sabres laser pour donner une lame bien définie et légèrement plus longue et plus large que la normale."
+u_l_crys_17,"Cristal, sapith",Cristal (sabre),17,"Bonus d'attaque +2, Bonus aux dégâts (Energy) +3",palier 17 niv. 26+ (rare dès 21),"Bonus d'attaque +2, Bonus de caractéristique (Dexterity) +1",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +2
+• Bonus de caractéristique (Dexterity) +1
+
+Cette substance cristalline était autrefois excrétée tous les onze ans par le ver volice de Lwhekk, qui a depuis disparu. Il génère une lame de sabre laser plus intense, ce qui permet de mieux la contrôler."
+u_l_crys_18,"Cristal, pontite",Cristal (sabre),18,"Bonus de caractéristique (Charisma) +2, Bonus aux dégâts (Cold) +1d10",palier 18 niv. 27+ (rare dès 22),"Bonus de caractéristique (Charisma) +2, Résistance aux dégâts (Cold) +5/-",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus de caractéristique (Charisma) +2
+• Résistance aux dégâts (Cold) +5/-
+
+La pondite est l'une des formes les plus rares du cristal d'adegan. Elle génère un froid intense qui inflige des dégâts et calme les esprits."
+u_l_crys_19,"Cristal, upari",Cristal (sabre),19,"Bonus d'attaque +3, Bonus aux dégâts (Energy) +1d8",palier 19 niv. 28+ (rare dès 23),"Bonus d'attaque +3, Bonus défense +1",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +3
+• Bonus défense +1
+
+Bizarrement, ce cristal se trouve principalement en orbite autour des mondes majoritairement constitués de forêts. Il est très fragile, mais présente l'avantage de permettre à un maître Jedi de produire de multiples effets différents."
+u_l_crys_20,Ultima-perle,Cristal (sabre),20,"Bonus d'attaque +3, Bonus aux dégâts (Energy) +2, Coups critiques plus importants +1d6",palier 20 niv. 29+ (rare dès 24),"Bonus d'attaque +3, Jets de sauvegarde améliorés +2",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +3
+• Jets de sauvegarde améliorés +2
+
+Cette pierre d'une grande rareté originaire de Calamari peut sembler constituer un étrange choix de cristal de focalisation. Elle est en effet difficile à installer, mais elle possède de puissants pouvoirs."
+u_l_crys_21,"Cristal, solari",Cristal (sabre),21,"Restriction d'alignement, Bonus d'attaque +3, Bonus aux dégâts (Energy) +3, Bonus aux dégâts contre Alignement +1d8",palier 21 niv. 30+ (rare dès 25),"Restriction d'alignement (Lumineux), Bonus d'attaque +2, Bonus aux dégâts contre Côté Obscur +1d8",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Restriction d'alignement (Lumineux)
+• Bonus d'attaque +2
+• Bonus aux dégâts contre Côté Obscur +1d8
+
+L'histoire de l'Ordre Jedi regorge de cristaux sabres laser célèbres, mais le légendaire cristal de Solari est sans doute le plus puissant de tous. Cet artefact du côté Lumineux prend la forme d'une gemme blanche utilisé dans la création d'un sabre laser ne pouvant être manié que par un Jedi à l'esprit pur. Quand le grand maître Jedi Ood Bnar a entamé son changement de cycle de vie après avoir servi l'Ordre pendant un millénaire, il a remis son cristal de Solari à la plus prometteuse de ses élèves, une jeune femme du nom de Shaela Nuur, qui a disparu peu de temps après la Grande traque, emportant le cristal avec elle."
+u_l_crys_22,Gemme lordienne,Cristal (sabre),22,"Parade tirs de blaster: +1 +3, Bonus défense +2",palier 22 niv. 30+ (rare dès 26),"Parade tirs de blaster +3, Bonus défense +2",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Parade tirs de blaster +3
+• Bonus défense +2
+
+Quand ils se sont retrouvés soumis, les Lordiens se sont vu interdire de parler entre eux, aussi ont-ils appris à communiquer à l'aide de gestes imperceptibles. Quand les Jedi les ont délivrés, ils se sont aperçus que les adeptes de la Force lordiens avaient utilisé leurs pouvoirs pour conférer à cette pierre la faculté d'aider son porteur à lire les gestes de ses adversaires."
+u_l_crys_23,Lingot de minerai de Barab,Cristal (sabre),23,Bonus aux dégâts (Fire) +2d6,palier 23 niv. 30+ (rare dès 27),"Bonus de caractéristique (Strength) +2, Résistance aux dégâts (Fire) +10/-",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus de caractéristique (Strength) +2
+• Résistance aux dégâts (Fire) +10/-
+
+Le minerai de Barab I se trouve à la surface, ce qui signifie qu'il est exposé aux radiations solaires et aux pluies diluviennes qui balayent la planète. Il prend la forme de lingots qui concentrent les radiations.
+
+Quand on les place dans un sabre laser, ils produisent une lame tellement incandescente qu'elle en perd presque sa cohésion."
+u_l_crys_24,Saphir d'Ankarès,Cristal (sabre),24,"Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +2, Acéré, Régénération +2",palier 24 niv. 30+ (rare dès 28),"Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +2, Acéré, Régénération +2",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus de caractéristique (Dexterity) +1
+• Bonus de caractéristique (Strength) +2
+• Acéré
+• Régénération +2
+
+Ce cristal possède des propriétés régénérantes presque légendaires, sans oublier ses autres pouvoirs. C'est l'un des plus puissants cristaux que l'on utilise dans la création des sabres laser."
+u_l_crys_25,"Cristal, kaiburr",Cristal (sabre),25,"Bonus de caractéristique (Constitution) +3, Bonus de caractéristique (Wisdom) +3, Régénération +3",palier 25 niv. 30+ (rare dès 29),"Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Wisdom) +2, Régénération +3",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus de caractéristique (Constitution) +2
+• Bonus de caractéristique (Wisdom) +2
+• Régénération +3
+
+Le cristal de kaiburr est peut-être le plus puissant que l'on puisse intégrer à un sabre laser. Il soigne l'utilisateur de l'arme, tout en lui conférant une meilleure résistance physique et une plus grande clairvoyance."
+u_l_crys_21x,"Cristal, qixoni",Cristal (sabre),—,"Restriction d'alignement, Bonus aux dégâts (Energy) +5, Régénération de points de Force +1",—,"Restriction d'alignement (Obscur), Bonus de caractéristique (Charisma) +2, Régénération de points de Force +2",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Restriction d'alignement (Obscur)
+• Bonus de caractéristique (Charisma) +2
+• Régénération de points de Force +2
+
+Les cristaux Qixoni se sont formés sur une planète qui fut détruite il y a plus de mille ans, quand son soleil s'est transformé en supernova. Ces cristaux sont extrêmement rares et puissants."
+u_l_crys_x23,"Cristal, Hurrikaine",Cristal (sabre),—,"Bonus aux dégâts (Unstoppable) +1d8, En cas de coup au but +18",—,"Bonus d'attaque +2, En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)",,"Spécial : Cristal d'amélioration, sabre laser
+
+• Bonus d'attaque +2
+• En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)
+
+Extrêmement rare, le cristal de Hurrikaine est surtout connu pour sa beauté sans pareille. Quand on l'intègre à un sabre laser, il produit une lame si puissante qu'elle traverse au moins partiellement toutes les défenses."
+ARMURES — SURCOUCHES,,,,,,,,
+u_a_over_01,Protection contre la chaleur T1,Overlay (armure),1,Immunité contre dégâts +10%,palier 1 niv. 6+ (rare dès 1),[Standard Légère Mk I] Immunité contre dégâts (Fire/Cold) +5%,,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk I] Immunité contre dégâts (Fire/Cold) +5%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_02,Revêtement 'Armure' T1,Overlay (armure),2,Bonus de compétence +2,palier 2 niv. 8+ (rare dès 3),"[Standard Légère Mk I] Jets de sauvegarde améliorés +1, Bonus de compétence +2",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk I] Jets de sauvegarde améliorés +1
+• Bonus de compétence +2
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_03,Sur-couche atténuatrice T1,Overlay (armure),3,Immunité contre dégâts +10%,palier 3 niv. 10+ (rare dès 5),[Standard Légère Mk I] Immunité contre dégâts (Sonic/Electrical) +5%,,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk I] Immunité contre dégâts (Sonic/Electrical) +5%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_04,Revêtement ablatif T1,Overlay (armure),4,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +10%, Bonus défense +1",palier 4 niv. 12+ (rare dès 7),"[Standard Légère Mk I] Bonus défense +1, Immunité contre dégâts (Energy) +5%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk I] Bonus défense +1
+• Immunité contre dégâts (Energy) +5%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_05,Protection contre l'énergie T1,Overlay (armure),5,Immunité contre dégâts +10%,palier 5 niv. 14+ (rare dès 9),[Standard Légère Mk I] Immunité contre dégâts (Energy) +10%,,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk I] Immunité contre dégâts (Energy) +10%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_06,Protection antibalistique T1,Overlay (armure),6,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%",palier 6 niv. 16+ (rare dès 11),[Standard Légère Mk I] Immunité contre dégâts (Physique) +5%,,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk I] Immunité contre dégâts (Physique) +5%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_07,Plaques liées T1,Overlay (armure),7,Bonus défense +1,palier 7 niv. 18+ (rare dès 13),[Standard Légère Mk II] Bonus défense +2,,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk II] Bonus défense +2
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_08,Plaques lourdes liées T1,Overlay (armure),8,"Malus de caractéristique +Penalty_-2, Bonus défense +2",palier 8 niv. 20+ (rare dès 15),"[Standard Légère Mk II] Bonus défense +2, Jets de sauvegarde améliorés +1",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk II] Bonus défense +2
+• Jets de sauvegarde améliorés +1
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_09,Protection contre la chaleur T2,Overlay (armure),9,Immunité contre dégâts +15%,palier 9 niv. 22+ (rare dès 17),"[Standard Légère Mk II] Immunité contre dégâts (Fire/Cold) +10%, Résistance (Fire) +Resist_5/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk II] Immunité contre dégâts (Fire/Cold) +10%
+• Résistance (Fire) +Resist_5/-
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_10,Revêtement 'Armure' T2,Overlay (armure),10,"Jets de sauvegarde améliorés +1, Bonus de compétence +4",palier 10 niv. 24+ (rare dès 19),"[Standard Légère Mk II] Jets de sauvegarde améliorés +2, Bonus de compétence +4",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk II] Jets de sauvegarde améliorés +2
+• Bonus de compétence +4
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_11,Sur-couche atténuatrice T2,Overlay (armure),11,Immunité contre dégâts +15%,palier 11 niv. 26+ (rare dès 21),"[Standard Légère Mk II] Immunité contre dégâts (Sonic/Electrical) +10%, Résistance (Sonic) +Resist_5/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk II] Immunité contre dégâts (Sonic/Electrical) +10%
+• Résistance (Sonic) +Resist_5/-
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_12,Revêtement ablatif T2,Overlay (armure),12,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +25%, Bonus défense +1",palier 12 niv. 28+ (rare dès 23),"[Standard Légère Mk II] Bonus défense +2, Immunité contre dégâts (Energy) +10%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk II] Bonus défense +2
+• Immunité contre dégâts (Energy) +10%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_13,Protection contre l'énergie T2,Overlay (armure),13,Immunité contre dégâts +15%,palier 13 niv. 30+ (rare dès 25),[Standard Légère Mk III] Immunité contre dégâts (Energy) +15%,,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk III] Immunité contre dégâts (Energy) +15%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_14,Protection antibalistique T2,Overlay (armure),14,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +15%",palier 14 niv. 30+ (rare dès 27),[Standard Légère Mk III] Immunité contre dégâts (Physique) +15%,,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk III] Immunité contre dégâts (Physique) +15%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_15,Plaques liées T2,Overlay (armure),15,Bonus défense +2,palier 15 niv. 30+ (rare dès 29),[Standard Légère Mk III] Bonus défense +3,,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk III] Bonus défense +3
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_16,Plaques lourdes liées T2,Overlay (armure),16,"Malus de caractéristique +Penalty_-3, Bonus défense +3",palier 16 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Bonus défense +3, Immunité contre dégâts (Physique) +10%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk III] Bonus défense +3
+• Immunité contre dégâts (Physique) +10%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_17,Protection contre la chaleur T3,Overlay (armure),17,"Immunité contre dégâts +15%, Résistance aux dégâts (Fire) +Resist_5/-",palier 17 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Immunité contre dégâts (Fire/Cold) +15%, Résistance (Fire/Cold) +Resist_10/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk III] Immunité contre dégâts (Fire/Cold) +15%
+• Résistance (Fire/Cold) +Resist_10/-
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_18,Revêtement 'Armure' T3,Overlay (armure),18,"Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1, Bonus de compétence +6",palier 18 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +3, Bonus de compétence +6",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Standard Légère Mk III] Bonus de caractéristique (Dexterity) +1
+• Jets de sauvegarde améliorés +3
+• Bonus de compétence +6
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_19,Sur-couche atténuatrice T3,Overlay (armure),19,"Immunité contre dégâts +20%, Résistance aux dégâts (Sonic) +Resist_5/-",palier 19 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus défense +1, Immunité contre dégâts (Energy) +5%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk I] Bonus défense +1
+• Immunité contre dégâts (Energy) +5%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_20,Revêtement ablatif T3,Overlay (armure),20,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +30%, Bonus défense +1",palier 20 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus défense +1, Immunité contre dégâts (Physique) +5%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk I] Bonus défense +1
+• Immunité contre dégâts (Physique) +5%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_21,Protection contre l'énergie T3,Overlay (armure),21,Immunité contre dégâts +20%,palier 21 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1, Bonus de compétence +4",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk I] Bonus de caractéristique (Dexterity) +1
+• Jets de sauvegarde améliorés +1
+• Bonus de compétence +4
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_22,Protection antibalistique T3,Overlay (armure),22,"Immunité contre dégâts +20%, Immunité contre dégâts +20%, Immunité contre dégâts +20%",palier 22 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Immunité contre dégâts (Élémentaire) +10%, Résistance (Fire/Cold/Sonic) +Resist_5/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk I] Immunité contre dégâts (Élémentaire) +10%
+• Résistance (Fire/Cold/Sonic) +Resist_5/-
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_23,Plaques liées T3,Overlay (armure),23,Bonus défense +3,palier 23 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus défense +1, Immunité contre dégâts (Energy) +10%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk II] Bonus défense +1
+• Immunité contre dégâts (Energy) +10%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_24,Plaques lourdes liées T3,Overlay (armure),24,"Malus à l'attaque +Penalty_-4, Immunité contre dégâts +15%, Bonus défense +4",palier 24 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus défense +1, Immunité contre dégâts (Physique) +10%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk II] Bonus défense +1
+• Immunité contre dégâts (Physique) +10%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_25,Protection contre la chaleur T4,Overlay (armure),25,"Immunité contre dégâts +20%, Résistance aux dégâts (Fire) +Resist_10/-",palier 25 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +2, Bonus de compétence +6",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk II] Bonus de caractéristique (Dexterity) +1
+• Jets de sauvegarde améliorés +2
+• Bonus de compétence +6
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_26,Revêtement 'Armure' T4,Overlay (armure),26,"Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +1, Bonus de compétence +8",palier 26 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Immunité contre dégâts (Élémentaire) +15%, Résistance (Fire/Cold/Sonic) +Resist_10/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk II] Immunité contre dégâts (Élémentaire) +15%
+• Résistance (Fire/Cold/Sonic) +Resist_10/-
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_27,Sur-couche atténuatrice T4,Overlay (armure),27,"Immunité contre dégâts +50%, Résistance aux dégâts (Sonic) +Resist_5/-",palier 27 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus défense +2, Immunité contre dégâts (Energy) +15%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk III] Bonus défense +2
+• Immunité contre dégâts (Energy) +15%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_28,Revêtement ablatif T4,Overlay (armure),28,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +30%, Résistance aux dégâts (Energy) +Resist_5/-, Bonus défense +1",palier 28 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus défense +2, Immunité contre dégâts (Physique) +15%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk III] Bonus défense +2
+• Immunité contre dégâts (Physique) +15%
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_29,Protection contre l'énergie T4,Overlay (armure),29,Immunité contre dégâts +30%,palier 29 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +3, Bonus de compétence +8",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk III] Bonus de caractéristique (Dexterity) +2
+• Jets de sauvegarde améliorés +3
+• Bonus de compétence +8
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+u_a_over_30,Plaques liées T4,Overlay (armure),30,"Résistance aux dégâts (Bludgeoning) +Resist_5/-, Résistance aux dégâts (Piercing) +Resist_5/-, Résistance aux dégâts (Slashing) +Resist_5/-, Bonus défense +3",palier 30 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Immunité contre dégâts (Élémentaire) +20%, Résistance (Fire/Cold/Sonic) +Resist_15/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk III] Immunité contre dégâts (Élémentaire) +20%
+• Résistance (Fire/Cold/Sonic) +Resist_15/-
+
+La sur-couche est un alliage améliorant les propriétés intrinsèques d'une armure. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable."
+ARMURES — SOUS-COUCHES,,,,,,,,
+u_a_unde_01,Sous-couche anti-environnement T1,Underlay (armure),1,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 1 niv. 6+ (rare dès 1),"[Standard Lourde Mk I] Immunité (Élémentaire) +10%, Résistance (Cold/Fire) +Resist_5/-",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk I] Immunité (Élémentaire) +10%
+• Résistance (Cold/Fire) +Resist_5/-
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_02,Sous-couche bio-restaurative T1,Underlay (armure),2,Régénération +1,palier 2 niv. 8+ (rare dès 3),[Standard Lourde Mk I] Régénération +1,,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk I] Régénération +1
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_03,Sous-couche fortificatrice T1,Underlay (armure),3,Immunité contre dégâts +10%,palier 3 niv. 10+ (rare dès 5),[Standard Lourde Mk I] Immunité contre dégâts (Physique/Énergie) +5%,,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk I] Immunité contre dégâts (Physique/Énergie) +5%
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_04,Sous-couche renforçante T1,Underlay (armure),4,Bonus de caractéristique (Strength) +1,palier 4 niv. 12+ (rare dès 7),"[Standard Lourde Mk I] Bonus de caractéristique (Strength) +1, Bonus de caractéristique (Constitution) +1",,"Spécial : Amélioration d'armure (Sous-couche — Armure lourde / intermédiaire)
+
+• [Standard Lourde Mk I] Bonus de caractéristique (Strength) +1
+• Bonus de caractéristique (Constitution) +1
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_05,Sous-couche flexible T1,Underlay (armure),5,Bonus DEX max +1,palier 5 niv. 14+ (rare dès 9),[Standard Lourde Mk I] Bonus DEX max +1,,"Spécial : Amélioration d'armure (Sous-couche — Armure lourde / intermédiaire)
+
+• [Standard Lourde Mk I] Bonus DEX max +1
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_06,Sous-couche en duracier T1,Underlay (armure),6,"Bonus défense contre Dégâts (Bludgeoning) +1, Bonus défense contre Dégâts (Piercing) +1, Bonus défense contre Dégâts (Slashing) +1",palier 6 niv. 16+ (rare dès 11),[Standard Lourde Mk I] Réduction des dégâts (Physique) +1/-,,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk I] Réduction des dégâts (Physique) +1/-
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_07,Sous-couche anti-environnement T2,Underlay (armure),7,"Immunité contre dégâts +20%, Immunité contre dégâts +20%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 7 niv. 18+ (rare dès 13),"[Standard Lourde Mk II] Immunité (Élémentaire) +15%, Résistance (Cold/Fire) +Resist_10/-",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk II] Immunité (Élémentaire) +15%
+• Résistance (Cold/Fire) +Resist_10/-
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_08,Sous-couche bio-restaurative T2,Underlay (armure),8,Régénération +2,palier 8 niv. 20+ (rare dès 15),[Standard Lourde Mk II] Régénération +2,,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk II] Régénération +2
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_09,Sous-couche fortificatrice T2,Underlay (armure),9,"Immunité contre dégâts +10%, Immunité (LvL/Ab_drain)",palier 9 niv. 22+ (rare dès 17),"[Standard Lourde Mk II] Immunité contre dégâts (Physique/Énergie) +10%, Immunité (Critiques)",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk II] Immunité contre dégâts (Physique/Énergie) +10%
+• Immunité (Critiques)
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_10,Sous-couche renforçante T2,Underlay (armure),10,"Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Strength) +1",palier 10 niv. 24+ (rare dès 19),"[Standard Lourde Mk II] Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +2",,"Spécial : Amélioration d'armure (Sous-couche — Armure lourde / intermédiaire)
+
+• [Standard Lourde Mk II] Bonus de caractéristique (Strength) +2
+• Bonus de caractéristique (Constitution) +2
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_11,Sous-couche flexible T2,Underlay (armure),11,"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1",palier 11 niv. 26+ (rare dès 21),"[Standard Lourde Mk II] Bonus DEX max +2, Bonus défense +1",,"Spécial : Amélioration d'armure (Sous-couche — Armure lourde / intermédiaire)
+
+• [Standard Lourde Mk II] Bonus DEX max +2
+• Bonus défense +1
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_12,Sous-couche en duracier T2,Underlay (armure),12,"Malus de caractéristique +Penalty_-1, Bonus défense contre Dégâts (Bludgeoning) +2, Bonus défense contre Dégâts (Piercing) +2, Bonus défense contre Dégâts (Slashing) +2",palier 12 niv. 28+ (rare dès 23),"[Standard Lourde Mk II] Réduction des dégâts (Physique) +2/-, Bonus défense +1",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk II] Réduction des dégâts (Physique) +2/-
+• Bonus défense +1
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_13,Sous-couche anti-environnement T3,Underlay (armure),13,"Immunité contre dégâts +25%, Immunité contre dégâts +25%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 13 niv. 30+ (rare dès 25),"[Standard Lourde Mk III] Immunité (Élémentaire) +20%, Résistance (Cold/Fire) +Resist_15/-",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk III] Immunité (Élémentaire) +20%
+• Résistance (Cold/Fire) +Resist_15/-
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_14,Sous-couche bio-restaurative T3,Underlay (armure),14,Régénération +3,palier 14 niv. 30+ (rare dès 27),[Standard Lourde Mk III] Régénération +3,,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk III] Régénération +3
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_15,Sous-couche fortificatrice T3,Underlay (armure),15,"Immunité contre dégâts +15%, Immunité (LvL/Ab_drain)",palier 15 niv. 30+ (rare dès 29),"[Standard Lourde Mk III] Immunité contre dégâts (Physique/Énergie) +15%, Immunité (Drain/Critiques)",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk III] Immunité contre dégâts (Physique/Énergie) +15%
+• Immunité (Drain/Critiques)
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_16,Sous-couche renforçante T3,Underlay (armure),16,"Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Strength) +2",palier 16 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Bonus de caractéristique (Strength) +3, Bonus de caractéristique (Constitution) +3",,"Spécial : Amélioration d'armure (Sous-couche — Armure lourde / intermédiaire)
+
+• [Standard Lourde Mk III] Bonus de caractéristique (Strength) +3
+• Bonus de caractéristique (Constitution) +3
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_17,Sous-couche flexible T3,Underlay (armure),17,"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +2",palier 17 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Bonus DEX max +3, Bonus défense +2",,"Spécial : Amélioration d'armure (Sous-couche — Armure lourde / intermédiaire)
+
+• [Standard Lourde Mk III] Bonus DEX max +3
+• Bonus défense +2
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_18,Sous-couche en duracier T3,Underlay (armure),18,"Malus de caractéristique +Penalty_-2, Bonus défense contre Dégâts (Bludgeoning) +3, Bonus défense contre Dégâts (Piercing) +3, Bonus défense contre Dégâts (Slashing) +3",palier 18 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Réduction des dégâts (Physique) +3/-, Bonus défense +2",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• [Standard Lourde Mk III] Réduction des dégâts (Physique) +3/-
+• Bonus défense +2
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_19,Sous-couche anti-environnement T4,Underlay (armure),19,"Immunité contre dégâts +30%, Immunité contre dégâts +30%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 19 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Strength/Constitution) +1, Régénération +1",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk I] Bonus de caractéristique (Strength/Constitution) +1
+• Régénération +1
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_20,Sous-couche bio-restaurative T4,Underlay (armure),20,"Bonus de caractéristique (Constitution) +1, Régénération +3",palier 20 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Réduction des dégâts +1/-, Immunité contre dégâts +5%",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk I] Réduction des dégâts +1/-
+• Immunité contre dégâts +5%
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_21,Sous-couche fortificatrice T4,Underlay (armure),21,"Immunité contre dégâts +20%, Immunité (LvL/Ab_drain)",palier 21 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1, Jets de sauvegarde améliorés +1",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk I] Bonus de caractéristique (Dexterity) +1
+• Bonus DEX max +1
+• Jets de sauvegarde améliorés +1
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_22,Sous-couche renforçante T4,Underlay (armure),22,"Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Strength) +2",palier 22 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Immunité contre dégâts +5%, Régénération +1, Immunité (Drain)",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk I] Immunité contre dégâts +5%
+• Régénération +1
+• Immunité (Drain)
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_23,Sous-couche flexible T4,Underlay (armure),23,"Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2",palier 23 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Strength/Constitution) +2, Régénération +2",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk II] Bonus de caractéristique (Strength/Constitution) +2
+• Régénération +2
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_24,Sous-couche en duracier T4,Underlay (armure),24,"Malus de caractéristique +Penalty_-3, Bonus défense contre Dégâts (Bludgeoning) +4, Bonus défense contre Dégâts (Piercing) +4, Bonus défense contre Dégâts (Slashing) +4",palier 24 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Réduction des dégâts +2/-, Immunité contre dégâts +10%",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk II] Réduction des dégâts +2/-
+• Immunité contre dégâts +10%
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_25,Sous-couche anti-environnement T5,Underlay (armure),25,"Immunité contre dégâts +30%, Immunité contre dégâts +30%, Résistance aux dégâts (Cold) +Resist_10/-, Résistance aux dégâts (Fire) +Resist_10/-",palier 25 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk II] Bonus de caractéristique (Dexterity) +2
+• Bonus DEX max +2
+• Jets de sauvegarde améliorés +2
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_26,Sous-couche bio-restaurative T5,Underlay (armure),26,"Bonus de caractéristique (Constitution) +3, Régénération +3",palier 26 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Immunité contre dégâts +10%, Régénération +2, Immunité (Drain/Critiques)",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk II] Immunité contre dégâts +10%
+• Régénération +2
+• Immunité (Drain/Critiques)
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_27,Sous-couche fortificatrice T5,Underlay (armure),27,"Immunité contre dégâts +30%, Immunité (LvL/Ab_drain)",palier 27 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Strength/Constitution) +2, Régénération +3",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk III] Bonus de caractéristique (Strength/Constitution) +2
+• Régénération +3
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_28,Sous-couche renforçante T5,Underlay (armure),28,"Bonus de caractéristique (Constitution) +3, Bonus de caractéristique (Strength) +3",palier 28 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Réduction des dégâts +2/-, Immunité contre dégâts +15%",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk III] Réduction des dégâts +2/-
+• Immunité contre dégâts +15%
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_29,Sous-couche flexible T5,Underlay (armure),29,"Bonus de caractéristique (Dexterity) +3, Bonus DEX max +3",palier 29 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk III] Bonus de caractéristique (Dexterity) +2
+• Bonus DEX max +2
+• Jets de sauvegarde améliorés +2
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+u_a_unde_30,Sous-couche en duracier T5,Underlay (armure),30,"Malus de caractéristique +Penalty_-3, Bonus défense contre Dégâts (Bludgeoning) +5, Bonus défense contre Dégâts (Piercing) +5, Bonus défense contre Dégâts (Slashing) +5",palier 30 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Immunité contre dégâts +15%, Régénération +2, Immunité (Drain/Critiques)",,"Spécial : Amélioration d'armure (Sous-couche — Armure intermédiaire uniquement)
+
+• [Combinée Interm. Mk III] Immunité contre dégâts +15%
+• Régénération +2
+• Immunité (Drain/Critiques)
+
+La sous-couche peut apporter plusieurs modifications à l'armure sous laquelle elle est placée. Cette modification nécessite un établi et une armure de qualité suffisante pour être améliorable. Cette sous-couche flexible ne peut être utilisée qu'avec une armure lourde."
+ARMURES INTERMÉDIAIRES — SURCOUCHES DOUBLES (EXCLUSIVES),,,,,,,,
+u_a_over_c01,Sur-couche double ablative Mk I,Overlay double (armure interm.),1,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Immunité contre dégâts (Energy) +10%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +1
+• Immunité contre dégâts (Energy) +10%
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c02,Sur-couche double balistique Mk I,Overlay double (armure interm.),2,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Immunité contre dégâts (Physique) +10%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +1
+• Immunité contre dégâts (Physique) +10%
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c03,Sur-couche double tactique Mk I,Overlay double (armure interm.),3,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Jets de sauvegarde améliorés +1, Bonus de compétence +3",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +1
+• Jets de sauvegarde améliorés +1
+• Bonus de compétence +3
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c04,Sur-couche double environnementale Mk I,Overlay double (armure interm.),4,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +10%, Résistance (Fire/Sonic) +5/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +10%
+• Résistance (Fire/Sonic) +5/-
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c05,Sur-couche double ablative Mk II,Overlay double (armure interm.),5,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +2, Immunité contre dégâts (Energy) +15%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +2
+• Immunité contre dégâts (Energy) +15%
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c06,Sur-couche double balistique Mk II,Overlay double (armure interm.),6,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +2, Immunité contre dégâts (Physique) +15%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +2
+• Immunité contre dégâts (Physique) +15%
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c07,Sur-couche double tactique Mk II,Overlay double (armure interm.),7,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +1, Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +2, Bonus de compétence +5",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +1
+• Bonus de caractéristique (Dexterity) +1
+• Jets de sauvegarde améliorés +2
+• Bonus de compétence +5
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c08,Sur-couche double environnementale Mk II,Overlay double (armure interm.),8,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +20%, Résistance (Fire/Cold/Sonic) +10/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +20%
+• Résistance (Fire/Cold/Sonic) +10/-
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c09,Sur-couche double ablative Mk III,Overlay double (armure interm.),9,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +3, Immunité contre dégâts (Energy) +25%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +3
+• Immunité contre dégâts (Energy) +25%
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c10,Sur-couche double balistique Mk III,Overlay double (armure interm.),10,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +3, Immunité contre dégâts (Physique) +25%",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +3
+• Immunité contre dégâts (Physique) +25%
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c11,Sur-couche double tactique Mk III,Overlay double (armure interm.),11,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +2, Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +3, Bonus de compétence +8",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Bonus défense +2
+• Bonus de caractéristique (Dexterity) +2
+• Jets de sauvegarde améliorés +3
+• Bonus de compétence +8
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_over_c12,Sur-couche double environnementale Mk III,Overlay double (armure interm.),12,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +30%, Résistance (Fire/Cold/Sonic) +15/-",,"Spécial : Amélioration d'armure (Sur-couche — Armure intermédiaire uniquement)
+
+• Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +30%
+• Résistance (Fire/Cold/Sonic) +15/-
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+ARMURES INTERMÉDIAIRES — SOUS-COUCHES DOUBLES (EXCLUSIVES),,,,,,,,
+u_a_unde_c01,Sous-couche double bio-renforcée Mk I,Underlay double (armure interm.),1,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus de caractéristique (Strength) +1, Bonus de caractéristique (Constitution) +1, Régénération +1",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Bonus de caractéristique (Strength) +1
+• Bonus de caractéristique (Constitution) +1
+• Régénération +1
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c02,Sous-couche double duracier fortifié Mk I,Underlay double (armure interm.),2,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Réduction des dégâts (Physique) +1/-, Immunité contre dégâts (Physique/Énergie) +5%",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Réduction des dégâts (Physique) +1/-
+• Immunité contre dégâts (Physique/Énergie) +5%
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c03,Sous-couche double articulations tactiques Mk I,Underlay double (armure interm.),3,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1, Jets de sauvegarde améliorés +1",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Bonus de caractéristique (Dexterity) +1
+• Bonus DEX max +1
+• Jets de sauvegarde améliorés +1
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c04,Sous-couche double bio-environnementale Mk I,Underlay double (armure interm.),4,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Immunité contre dégâts (Fire/Cold) +15%, Résistance (Fire/Cold) +5/-, Régénération +1",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Immunité contre dégâts (Fire/Cold) +15%
+• Résistance (Fire/Cold) +5/-
+• Régénération +1
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c05,Sous-couche double bio-renforcée Mk II,Underlay double (armure interm.),5,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +2, Régénération +2",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Bonus de caractéristique (Strength) +2
+• Bonus de caractéristique (Constitution) +2
+• Régénération +2
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c06,Sous-couche double duracier fortifié Mk II,Underlay double (armure interm.),6,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Réduction des dégâts (Physique) +2/-, Immunité contre dégâts (Physique/Énergie) +10%, Immunité (Drain)",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Réduction des dégâts (Physique) +2/-
+• Immunité contre dégâts (Physique/Énergie) +10%
+• Immunité (Drain)
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c07,Sous-couche double articulations tactiques Mk II,Underlay double (armure interm.),7,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Bonus de caractéristique (Dexterity) +2
+• Bonus DEX max +2
+• Jets de sauvegarde améliorés +2
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c08,Sous-couche double bio-environnementale Mk II,Underlay double (armure interm.),8,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Immunité contre dégâts (Fire/Cold) +20%, Résistance (Fire/Cold) +10/-, Régénération +2, Immunité (Poison)",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Immunité contre dégâts (Fire/Cold) +20%
+• Résistance (Fire/Cold) +10/-
+• Régénération +2
+• Immunité (Poison)
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c09,Sous-couche double bio-renforcée Mk III,Underlay double (armure interm.),9,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus de caractéristique (Strength) +3, Bonus de caractéristique (Constitution) +3, Régénération +3",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Bonus de caractéristique (Strength) +3
+• Bonus de caractéristique (Constitution) +3
+• Régénération +3
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c10,Sous-couche double duracier fortifié Mk III,Underlay double (armure interm.),10,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Réduction des dégâts (Physique) +3/-, Immunité contre dégâts (Physique/Énergie) +15%, Immunité (Drain/Critiques)",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Réduction des dégâts (Physique) +3/-
+• Immunité contre dégâts (Physique/Énergie) +15%
+• Immunité (Drain/Critiques)
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c11,Sous-couche double articulations tactiques Mk III,Underlay double (armure interm.),11,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus de caractéristique (Dexterity) +3, Bonus DEX max +3, Jets de sauvegarde améliorés +3",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Bonus de caractéristique (Dexterity) +3
+• Bonus DEX max +3
+• Jets de sauvegarde améliorés +3
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
+u_a_unde_c12,Sous-couche double bio-environnementale Mk III,Underlay double (armure interm.),12,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Immunité contre dégâts (Fire/Cold) +30%, Résistance (Fire/Cold) +15/-, Régénération +3, Immunité (Poison/Drain)",,"Spécial : Amélioration d'armure (Sous-couche — Armure légère / lourde / intermédiaire)
+
+• Immunité contre dégâts (Fire/Cold) +30%
+• Résistance (Fire/Cold) +15/-
+• Régénération +3
+• Immunité (Poison/Drain)
+
+Amélioration combinée conçue exclusivement pour les armures intermédiaires. Nécessite un établi équipé des outils adéquats."
