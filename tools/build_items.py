@@ -242,12 +242,6 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
                 continue
             uti = read_uti(res.data)
             dirty = apply_mod_to_uti(uti, mod_txt)
-            # Armures-bures (Zeison Sha/Jal Shey/Malak bi=102) & Ubèse/Flight Suit (bi=98) :
-            # migrer vers Armor_Class_4 (bi=38) en conservant body_variation & texture_variation
-            # pour le grisé natif des pouvoirs interdits (0x003f) sans casser les modèles 3D.
-            if is_armor_csv and uti.base_item in (98, 102):
-                uti.base_item = 38
-                dirty = True
             if desc_txt:
                 set_uti_desc(uti, desc_txt)
                 dirty = True

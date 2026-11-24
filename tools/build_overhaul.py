@@ -475,12 +475,16 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
     by_label = {bi.get_row(i).get_string("label"): i for i in range(len(bi))}
 
     # 1. Armures : CA base & DEX max actés (22/11)
+    # + Armor_Zeison_Sha (row 102) : itemtype 38 (Robe) -> 31 (Armure légère AC4) pour griser
+    # nativement les pouvoirs interdits en armure tout en conservant bodyvar=M (modèles 3D intacts).
     arm_updated = 0
     for lbl, (ac, max_dex) in ARMOR_BASEITEM_MAP.items():
         if lbl in by_label:
             r = bi.get_row(by_label[lbl])
             r.set_string("baseac", str(ac))
             r.set_string("dexbonus", str(max_dex))
+            if lbl == "Armor_Zeison_Sha":
+                r.set_string("itemtype", "31")
             arm_updated += 1
 
     # 2. Armes : dégâts d20 & critique depuis Armes.csv (mapping exact 1-à-1)
