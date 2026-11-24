@@ -24,7 +24,7 @@
 
 | Arme | Famille | Maniement | Dégâts | Critique | Emplacements d'amélioration |
 | :--- | :--- | :---: | :--- | :---: | :--- |
-| **Mains nues** | Hors famille | 1M | Physique `1d6` *(progresse auto)* | `19-20, ×2` | Aucun *(compte comme 1M pour Duel)* |
+| **Mains nues** | Impact | 1M | Physique `1d6` *(progresse auto)* | `19-20, ×2` | Aucun *(compte comme 1M pour Duel)* |
 | **Matraque paralysante** | Impact | 1M *(équil.)* | Contondant `1d8` | `18-20, ×2` | Poignée |
 | **Bâton** | Impact | Double *(équil.)* | Contondant `1d8` | `19-20, ×2` | Poignée |
 | **Pique de Force** | Impact | **2M** | Contondant `2d8` | `20, ×3` | Poignée |
@@ -87,14 +87,14 @@ Dans le jeu de base, on pouvait empiler des bonus de dégâts bruts sur chaque e
 | **Sabre laser** | **Cellule d'énergie** *(sabre)* | **Seul emplacement à dégâts réguliers** du sabre (Énergie, Électrique, Ion) |
 | **Sabre laser** | **Cristaux d'amélioration (×2)** | `+Caractéristiques`, `Régénération PV/PF`, `+Attaque`, `+CA`, `Parade`, `Acéré`, bonus `vs Alignement / Droïdes`, effets sur coup *(aucun dégât brut générique)* |
 
-> **Exemples de cristaux de sabre rééquilibrés :** *Adegan* (`+1 Atq`), *Rubat* (`+1 Atq, +1 CA`), *Phond* (`+1 FOR, +1 Atq`), *Bondar* (Étourdissement DD évolutif), *Opila* (`Acéré, +1 Atq`), *Ultima-perle* (`+3 Atq, +2 Saves`), *Solari* (Lumineux : `+2 Atq, +1d8 vs Obscur`), *Lingot de Barab* (`+2 FOR, RD Feu +10/-`), *Kaiburr* (`+2 CON, +2 SAG, Régén +3`), *Qixoni* (Obscur : `+2 CHA, Régén PF +2`), *Hurrikaine* (`+2 Atq`, Étourdissement DD `7 + Niv + Carac`).
+> **Exemples de cristaux de sabre rééquilibrés :** *Adegan* (`+1 Atq`), *Rubat* (`+1 Atq, +1 CA`), *Phond* (`+1 FOR, +1 Atq`), *Bondar* (Étourdissement DD évolutif), *Opila* (`Acéré, +1 Atq`), *Ultima-perle* (`+3 Atq, +2 Sauvegardes`), *Solari* (Lumineux : `+2 Atq, +1d8 vs Obscur`), *Lingot de Barab* (`+2 FOR, RD Feu +10/-`), *Kaiburr* (`+2 CON, +2 SAG, Régén +3`), *Qixoni* (Obscur : `+2 CHA, Régén PF +2`), *Hurrikaine* (`+2 Atq`, Étourdissement DD `7 + Niv + Carac`).
 
 ---
 
 ## Nouveautés de l'Établi & du Laboratoire (Artisanat)
 
 1. **Toutes les armes de base (hors Sabres Laser) sont fabricables dès le niveau 1 !**
-   - 18 nouvelles recettes ont été ajoutées à l'établi (seuils de *Réparation* de 2 à 8) : *Épée courte*, *Matraque à énergie*, *Bâton*, *Vibrolame*, *Double-lame*, *Hache gamorréenne*, *Pique de Force*, *Lame de guerre wookie*, *Pistolet blaster*, *Blaster à ions*, *Pistolet sonique*, *Pistolet disrupteur*, *Blaster lourd*, *Carabine blaster*, *Fusil à ions*, *Fusil sonique*, *Arbalète laser* et *Blaster lourd à répétition*.
+   - 18 nouvelles recettes ont été ajoutées à l'établi (seuils de *Réparation* de 2 à 8) : *Épée courte*, *Matraque paralysante*, *Bâton*, *Vibrolame*, *Double-lame*, *Hache gamorréenne*, *Pique de Force*, *Lame de guerre wookie*, *Pistolet blaster*, *Pistolet à ions*, *Pistolet sonique*, *Pistolet disrupteur*, *Blaster lourd*, *Carabine blaster*, *Fusil à ions*, *Fusil sonique*, *Arbalète wookie* et *Blaster lourd à répétition*.
    - Vous n'êtes plus dépendant du hasard du butin pour jouer la famille d'arme de votre choix dès Péragus ou Télos !
 2. **24 nouvelles recettes d'améliorations doubles pour Armures Intermédiaires**
    - **12 Sur-couches doubles** (*Ablative*, *Balistique*, *Tactique*, *Environnementale* — en Mk I, II et III, via *Réparation* 6 / 14 / 22).
