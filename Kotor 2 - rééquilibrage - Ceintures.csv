@@ -2,88 +2,80 @@
 100_belt01,Harnais de sécurité,Belt,Loot fixe / Quête,—,,Bonus de compétence +1,—,"Péragus - Galeries, Péragus - Galeries",,
 a_belt_01,Amplificateur d'adrénaline,Belt,Niv. 6+ (rare 1+),—,,Jets de sauvegarde améliorés +2,palier 1 niv. 6+ (rare dès 1),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",,
 a_belt_02,Cardio-régulateur,Belt,Niv. 8+ (rare 3+),—,,Jets de sauvegarde améliorés +2,palier 2 niv. 8+ (rare dès 3),"Péragus - Galeries, Péragus - Galeries",,
-a_belt_04,Ceinture multifonction de la Czerka,Belt,Niv. 12+ (rare 7+),—,,"Bonus de compétence +2, Bonus de compétence +2, Bonus de compétence +2, Bonus de compétence +3",palier 4 niv. 12+ (rare dès 7),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…",Ajout : INT +1 (ceinture d'outillage Czerka),"Effets (Overhaul) :
-• Ajout : INT +1 (ceinture d'outillage Czerka)
+a_belt_04,Ceinture multifonction de la Czerka,Belt,Niv. 12+ (rare 7+),—,,"Bonus de compétence +2, Bonus de compétence +2, Bonus de compétence +2, Bonus de compétence +3",palier 4 niv. 12+ (rare dès 7),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…",Ajout : INT +1 (ceinture d'outillage Czerka),"[Mod D20-Overhaul]
 
-Cette ceinture multifonction propose une grande quantité d'outils permettant d'accomplir de multiples tâches. Conçue à l'origine par la corporation Czerka, pour ses opérations de maintenance, elle s'est ensuite généralisée dans toute la République.
-
-L'utilisateur doit avoir assigné des points aux compétences de Démolition et de Sécurité pour pouvoir tirer tout le bénéfice de cette ceinture."
+Propriétés notables :
+• INT +1 (ceinture d'outillage Czerka)"
 a_belt_05,Ampli. d'adrénaline amélioré,Belt,Niv. 14+ (rare 9+),—,,Jets de sauvegarde améliorés +3,palier 5 niv. 14+ (rare dès 9),—,,
 a_belt_07,Augmentateur de force,Belt,Niv. 18+ (rare 13+),—,FOR +1,"Bonus de caractéristique (Strength) +1, Jets de sauvegarde améliorés +1",palier 7 niv. 18+ (rare dès 13),—,,
 a_belt_08,Cardio-régulateur Systech,Belt,Niv. 20+ (rare 15+),—,CON +1,"Bonus de caractéristique (Constitution) +1, Jets de sauvegarde améliorés +1",palier 8 niv. 20+ (rare dès 15),—,,
 a_belt_09,Hyper-amplificateur d'adrénaline,Belt,Niv. 22+ (rare 17+),—,DEX +1,"Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +3",palier 9 niv. 22+ (rare dès 17),—,,
 a_belt_11,Inhibiteur d'inertie,Belt,Niv. 26+ (rare 21+),—,DEX +1,"Bonus de caractéristique (Dexterity) +1, Bonus défense +1",palier 11 niv. 26+ (rare dès 21),—,,
-a_belt_12,Bouclier de capacitance,Belt,Niv. 28+ (rare 23+),—,,Immunité contre dégâts +75%,palier 12 niv. 28+ (rare dès 23),—,Plafonnement : Immunité +75% → +30%,"Effets (Overhaul) :
-• Plafonnement : Immunité +75% → +30%
+a_belt_12,Bouclier de capacitance,Belt,Niv. 28+ (rare 23+),—,,Immunité contre dégâts +75%,palier 12 niv. 28+ (rare dès 23),—,Plafonnement : Immunité +75% → +30%,"[Mod D20-Overhaul]
 
-Cet appareil de protection, qui se porte autour de la taille, absorbe et stocke l'énergie électrique dirigée à l'encontre de son porteur, pour la libérer ensuite dans le temps, de manière totalement inoffensive. La libération d'électricité crée de légères vibrations le long de la surface intérieure du bouclier, ce qui explique le surnom de ce dernier, le 'Vibreur'."
-a_belt_13,Générateur de bouclier thermique,Belt,Niv. 30+ (rare 25+),—,,Immunité contre dégâts +75%,palier 13 niv. 30+ (rare dès 25),—,Plafonnement : Immunité +75% → +30%,"Effets (Overhaul) :
-• Plafonnement : Immunité +75% → +30%
+Propriétés notables :
+• +30%"
+a_belt_13,Générateur de bouclier thermique,Belt,Niv. 30+ (rare 25+),—,,Immunité contre dégâts +75%,palier 13 niv. 30+ (rare dès 25),—,Plafonnement : Immunité +75% → +30%,"[Mod D20-Overhaul]
 
-Ce générateur constitue un champ magnétique autour de l'utilisateur. Bien que totalement inefficace contre la plupart des armes modernes, ce dernier détourne la chaleur, le plus souvent sous forme de feu."
+Propriétés notables :
+• +30%"
 a_belt_15,Augmentateur de force CNS,Belt,Niv. 30+ (rare 29+),—,FOR +2,"Bonus de caractéristique (Strength) +2, Jets de sauvegarde améliorés +2",palier 15 niv. 30+ (rare dès 29),—,,
-a_belt_16,Ceinture multifonction de l'Echange,Belt,Niv. 30+,—,"FOR +1, DEX +1","Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +1, Bonus de compétence +3, Bonus de compétence +3, Bonus de compétence +3, Bonus de compétence +3",palier 16 niv. 30+,—,"Rééquilibrage lore tech : FOR +1, DEX +1 → INT +1, DEX +1","Effets (Overhaul) :
-• Rééquilibrage lore tech : FOR +1, DEX +1 → INT +1, DEX +1
+a_belt_16,Ceinture multifonction de l'Echange,Belt,Niv. 30+,—,"FOR +1, DEX +1","Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +1, Bonus de compétence +3, Bonus de compétence +3, Bonus de compétence +3, Bonus de compétence +3",palier 16 niv. 30+,—,"Rééquilibrage lore tech : FOR +1, DEX +1 → INT +1, DEX +1","[Mod D20-Overhaul]
 
-Cette ceinture utilisée par les mécaniciens peut également permettre d'exécuter des tâches moins avouables.
+Propriétés notables :
+• INT +1, DEX +1"
+a_belt_17,Ceinture d'immunité,Belt,Niv. 30+,—,CON +1,"Malus à l'attaque +-1, Bonus de caractéristique (Constitution) +1, Résistance aux dégâts (Bludgeoning) +5/-, Résistance aux dégâts (Energy) +5/-, Résistance aux dégâts (Piercing) +5/-, Résistance aux dégâts (Slashing) +5/-",palier 17 niv. 30+,—,Plafonnement : RD +5/- → RD +2/- (Phys+Énergie),"[Mod D20-Overhaul]
 
-L'utilisateur doit avoir assigné des points aux compétences de Démolition et de Sécurité pour pouvoir tirer tout le bénéfice de cette ceinture."
-a_belt_17,Ceinture d'immunité,Belt,Niv. 30+,—,CON +1,"Malus à l'attaque +-1, Bonus de caractéristique (Constitution) +1, Résistance aux dégâts (Bludgeoning) +5/-, Résistance aux dégâts (Energy) +5/-, Résistance aux dégâts (Piercing) +5/-, Résistance aux dégâts (Slashing) +5/-",palier 17 niv. 30+,—,Plafonnement : RD +5/- → RD +2/- (Phys+Énergie),"Effets (Overhaul) :
-• Plafonnement : RD +5/- → RD +2/- (Phys+Énergie)
+Propriétés notables :
+• RD +2/- (Phys+Énergie)"
+a_belt_18,Stimulateur d'adrénaline,Belt,Niv. 30+,—,DEX +2,"Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +4",palier 18 niv. 30+,—,Plafonnement : Saves +4 → Saves +3,"[Mod D20-Overhaul]
 
-Cette épaisse ceinture protège son porteur contre les attaques, tout en restreignant légèrement ses possibilités de mouvement. Le plus souvent, elle est utilisée par les combattants expérimentés, qui ne sont pas trop gênés par le handicap qu'elle impose."
-a_belt_18,Stimulateur d'adrénaline,Belt,Niv. 30+,—,DEX +2,"Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +4",palier 18 niv. 30+,—,Plafonnement : Saves +4 → Saves +3,"Effets (Overhaul) :
-• Plafonnement : Saves +4 → Saves +3
-
-Cette ceinture confère à son porteur une sensibilité augmentée par rapport à son environnement, tout en améliorant ses réflexes et son temps de réaction."
+Propriétés notables :
+• Saves +3"
 a_belt_19,Ceinture d'amplification nerveuse,Belt,Niv. 30+,—,SAG +1,"Bonus de caractéristique (Wisdom) +1, Immunité (MindSpells)",palier 19 niv. 30+,—,,
-a_belt_20,Ceinture Jal Shey,Belt,Niv. 30+,—,SAG +1,"Bonus de caractéristique (Wisdom) +1, Meilleure résistance à la Force +14",palier 20 niv. 30+,—,"Ajout lore Jal Shey : SAG +1 → CHA +1, SAG +1","Effets (Overhaul) :
-• Ajout lore Jal Shey : SAG +1 → CHA +1, SAG +1
+a_belt_20,Ceinture Jal Shey,Belt,Niv. 30+,—,SAG +1,"Bonus de caractéristique (Wisdom) +1, Meilleure résistance à la Force +14",palier 20 niv. 30+,—,"Ajout lore Jal Shey : SAG +1 → CHA +1, SAG +1","[Mod D20-Overhaul]
 
-Cette ceinture constitue une amélioration par rapport aux premiers modèles confectionnés par les Jal Shey. Elle les protège contre l'influence du côté Obscur.
+Propriétés notables :
+• CHA +1, SAG +1"
+a_belt_21,Générateur de boucliers multiples,Belt,Niv. 30+,—,,"Immunité contre dégâts +50%, Immunité contre dégâts +50%, Immunité contre dégâts +15%",palier 21 niv. 30+,—,Plafonnement : Immunité +50%/+50% → +25%/+25%,"[Mod D20-Overhaul]
 
-Les Jal Shey se concentrent sur l'étude de la Force sur le plan intellectuel. Ils cherchent à la comprendre au niveau mental, plutôt que spirituel. La plupart d'entre eux font d'excellents diplomates. Par contre, ils sont moins doués pour les activités physiques."
-a_belt_21,Générateur de boucliers multiples,Belt,Niv. 30+,—,,"Immunité contre dégâts +50%, Immunité contre dégâts +50%, Immunité contre dégâts +15%",palier 21 niv. 30+,—,Plafonnement : Immunité +50%/+50% → +25%/+25%,"Effets (Overhaul) :
-• Plafonnement : Immunité +50%/+50% → +25%/+25%
+Propriétés notables :
+• +25%/+25%"
+a_belt_24,Ceinture de spécialiste en technologie,Belt,Niv. 30+,—,"FOR +1, DEX +2","Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +1, Bonus de compétence +2, Bonus de compétence +4, Bonus de compétence +4, Bonus de compétence +5 *(+2 autres, slots d'amélioration)*",palier 24 niv. 30+,—,"Rééquilibrage lore spécialiste tech : FOR +1, DEX +2 → INT +3","[Mod D20-Overhaul]
 
-Cette ceinture combine les fonctions du bouclier à capacitance et du générateur de bouclier thermique, offrant ainsi une protection étendue à son porteur."
-a_belt_24,Ceinture de spécialiste en technologie,Belt,Niv. 30+,—,"FOR +1, DEX +2","Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +1, Bonus de compétence +2, Bonus de compétence +4, Bonus de compétence +4, Bonus de compétence +5 *(+2 autres, slots d'amélioration)*",palier 24 niv. 30+,—,"Rééquilibrage lore spécialiste tech : FOR +1, DEX +2 → INT +3","Effets (Overhaul) :
-• Rééquilibrage lore spécialiste tech : FOR +1, DEX +2 → INT +3
+Propriétés notables :
+• INT +3"
+a_belt_25,Cardio-régulateur Aratech,Belt,Niv. 30+,—,"FOR +1, CON +3","Bonus de caractéristique (Constitution) +3, Bonus de caractéristique (Strength) +1, Jets de sauvegarde améliorés +1",palier 25 niv. 30+,—,"Plafonnement : CON +3, FOR +1 → CON +3","[Mod D20-Overhaul]
 
-Cette ceinture d'aspect tout simple est très recherchée par les voyous et par ceux qui cherchent à créer de plus puissantes améliorations.
+Propriétés notables :
+• CON +3"
+a_belt_26,Augmentateur de force GNS,Belt,Niv. 30+,—,FOR +4,Bonus de caractéristique (Strength) +4,palier 26 niv. 30+,—,Plafonnement : FOR +4 → FOR +3,"[Mod D20-Overhaul]
 
-L'utilisateur doit avoir assigné des points aux compétences de Démolition et de Sécurité pour pouvoir utiliser les propriétés de la ceinture."
-a_belt_25,Cardio-régulateur Aratech,Belt,Niv. 30+,—,"FOR +1, CON +3","Bonus de caractéristique (Constitution) +3, Bonus de caractéristique (Strength) +1, Jets de sauvegarde améliorés +1",palier 25 niv. 30+,—,"Plafonnement : CON +3, FOR +1 → CON +3","Effets (Overhaul) :
-• Plafonnement : CON +3, FOR +1 → CON +3
+Propriétés notables :
+• FOR +3"
+a_belt_27,Ceinture de Qel-Droma,Belt,Niv. 30+,—,"SAG +1, CHA +1","Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +1, Immunité contre dégâts +20%, Immunité contre dégâts +20%",palier 27 niv. 30+,—,"Rééquilibrage lore Qel-Droma : SAG +1, CHA +1 → CHA +2, SAG +1","[Mod D20-Overhaul]
 
-Avec ses performances améliorées et son absence d'effets secondaires négatifs, le cardio-régulateur Aratech est très apprécié de la plupart des mercenaires."
-a_belt_26,Augmentateur de force GNS,Belt,Niv. 30+,—,FOR +4,Bonus de caractéristique (Strength) +4,palier 26 niv. 30+,—,Plafonnement : FOR +4 → FOR +3,"Effets (Overhaul) :
-• Plafonnement : FOR +4 → FOR +3
+Propriétés notables :
+• CHA +2, SAG +1"
+a_belt_28,Ceinture d'immortalité,Belt,Niv. 30+,—,CON +1,"Malus à l'attaque +-2, Bonus de caractéristique (Constitution) +1, Résistance aux dégâts (Bludgeoning) +10/-, Résistance aux dégâts (Energy) +10/-, Résistance aux dégâts (Piercing) +10/-, Résistance aux dégâts (Slashing) +10/-",palier 28 niv. 30+,—,Plafonnement : RD +10/- → RD +3/- (Phys+Énergie),"[Mod D20-Overhaul]
 
-Ce générateur est une version plus puissante de l'augmentateur de force expérimental de CNS. Il met l'accent sur le développement musculaire, mais n'offre pas les propriétés défensives du précédent modèle."
-a_belt_27,Ceinture de Qel-Droma,Belt,Niv. 30+,—,"SAG +1, CHA +1","Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +1, Immunité contre dégâts +20%, Immunité contre dégâts +20%",palier 27 niv. 30+,—,"Rééquilibrage lore Qel-Droma : SAG +1, CHA +1 → CHA +2, SAG +1","Effets (Overhaul) :
-• Rééquilibrage lore Qel-Droma : SAG +1, CHA +1 → CHA +2, SAG +1
+Propriétés notables :
+• RD +3/- (Phys+Énergie)"
+a_belt_30,Ceinture de mentor Jal Shey,Belt,Niv. 30+,—,SAG +2,"Bonus de caractéristique (Wisdom) +2, Meilleure résistance à la Force +20",palier 30 niv. 30+,—,"Ajout lore Jal Shey : SAG +2 → CHA +2, SAG +2","[Mod D20-Overhaul]
 
-La famille Qel-Droma a donné vie à plusieurs personnes sensibles à la Force. Plusieurs de ses membres, comme Cay Qel-Droma, restent aujourd'hui encore un exemple de la magnificence du côté Lumineux, tandis que d'autres, comme son frère Ulric, se sont laissés détourner par le côté Obscur."
-a_belt_28,Ceinture d'immortalité,Belt,Niv. 30+,—,CON +1,"Malus à l'attaque +-2, Bonus de caractéristique (Constitution) +1, Résistance aux dégâts (Bludgeoning) +10/-, Résistance aux dégâts (Energy) +10/-, Résistance aux dégâts (Piercing) +10/-, Résistance aux dégâts (Slashing) +10/-",palier 28 niv. 30+,—,Plafonnement : RD +10/- → RD +3/- (Phys+Énergie),"Effets (Overhaul) :
-• Plafonnement : RD +10/- → RD +3/- (Phys+Énergie)
+Propriétés notables :
+• CHA +2, SAG +2"
+mandalorianutili,Ceinture multifonction de mand.,Belt,Loot fixe / Quête,—,,"Résistance aux dégâts (Cold) +5/-, Résistance aux dégâts (Fire) +5/-, Jets de sauvegarde améliorés +4",—,401dxn,Plafonnement : Saves +4 → Saves +3,"[Mod D20-Overhaul]
 
-Cette ceinture est une version améliorée de la ceinture d'immunité. Bien qu'elle ne confère pas l'immortalité à son porteur, elle le protège efficacement contre un grand nombre d'attaques."
-a_belt_30,Ceinture de mentor Jal Shey,Belt,Niv. 30+,—,SAG +2,"Bonus de caractéristique (Wisdom) +2, Meilleure résistance à la Force +20",palier 30 niv. 30+,—,"Ajout lore Jal Shey : SAG +2 → CHA +2, SAG +2","Effets (Overhaul) :
-• Ajout lore Jal Shey : SAG +2 → CHA +2, SAG +2
-
-Cette ceinture constitue une amélioration par rapport aux premiers modèles confectionnés par les Jal Shey. Elle les protège contre l'influence du côté Obscur.
-
-Les Jal Shey se concentrent sur l'étude de la Force sur le plan intellectuel. Ils cherchent à la comprendre au niveau mental, plutôt que spirituel. La plupart d'entre eux font d'excellents diplomates. Par contre, ils sont moins doués pour les activités physiques."
-mandalorianutili,Ceinture multifonction de mand.,Belt,Loot fixe / Quête,—,,"Résistance aux dégâts (Cold) +5/-, Résistance aux dégâts (Fire) +5/-, Jets de sauvegarde améliorés +4",—,401dxn,Plafonnement : Saves +4 → Saves +3,"Effets (Overhaul) :
-• Plafonnement : Saves +4 → Saves +3"
+Propriétés notables :
+• Saves +3"
 a_belt_03,Générateur de champ de camouflage,Stealth Unit,Niv. 10+ (rare 5+),—,,—,palier 3 niv. 10+ (rare dès 5),"Péragus - Niv. administr…, Nar Shaddaa - PF atterri…, Dxun - Tombe, Péragus - Niv. administr… (+3 lieux)",,
 a_belt_06,Ceinture d'atténuation Aratech,Stealth Unit,Niv. 16+ (rare 11+),—,,"Immunité contre dégâts +25%, Bonus de compétence +2",palier 6 niv. 16+ (rare dès 11),—,,
 a_belt_10,Diffuseur d'ombres de l'Echange,Stealth Unit,Niv. 24+ (rare 19+),—,DEX +1,"Bonus de caractéristique (Dexterity) +1, Bonus de compétence +2, Bonus de compétence +4",palier 10 niv. 24+ (rare dès 19),—,,
 a_belt_14,Générateur de camouflage ériadu,Stealth Unit,Niv. 30+ (rare 27+),—,DEX +2,"Bonus de caractéristique (Dexterity) +2, Bonus de compétence +6",palier 14 niv. 30+ (rare dès 27),"Korriban - Tombeau secret, Korriban - Tombeau secret",,
 a_belt_22,Caméléon defel,Stealth Unit,Niv. 30+,—,DEX +3,"Bonus de caractéristique (Dexterity) +3, Bonus de compétence +8",palier 22 niv. 30+,—,,
 a_belt_23,Ceinture d'éclaireur frozian,Stealth Unit,Niv. 30+,—,DEX +3,"Bonus de caractéristique (Dexterity) +3, Bonus défense +1, Bonus de compétence +3",palier 23 niv. 30+,—,,
-a_belt_29,Ceinture d'échos Aratech,Stealth Unit,Niv. 30+,—,DEX +4,"Bonus de caractéristique (Dexterity) +4, Bonus de compétence +10",palier 29 niv. 30+,—,Plafonnement : DEX +4 → DEX +3,"Effets (Overhaul) :
-• Plafonnement : DEX +4 → DEX +3
+a_belt_29,Ceinture d'échos Aratech,Stealth Unit,Niv. 30+,—,DEX +4,"Bonus de caractéristique (Dexterity) +4, Bonus de compétence +10",palier 29 niv. 30+,—,Plafonnement : DEX +4 → DEX +3,"[Mod D20-Overhaul]
 
-La ceinture d'échos est un objet haut de gamme pour ceux qui ne souhaitent pas se faire repérer. Elle est généralement réservée aux gens très riches ou extrêmement dangereux... Les adversaires doivent réussir un jet de Vigilance opposé à la compétence de Discrétion du porteur +10 pour pouvoir le repérer. L'utilisateur doit avoir assigné des points à la compétence de Discrétion pour pouvoir utiliser ce mode. Le champ de camouflage se dissipe en situation de combat, mais pas quand on se cantonne aux tâches normales."
+Propriétés notables :
+• DEX +3"
