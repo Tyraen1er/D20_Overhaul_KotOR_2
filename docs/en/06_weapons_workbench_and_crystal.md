@@ -24,7 +24,7 @@
 
 | Weapon | Family | Wielding | Damage | Critical | Upgrade Slots |
 | :--- | :--- | :---: | :--- | :---: | :--- |
-| **Unarmed** | None | 1H | Physical `1d6` *(auto-scales)* | `19-20, ×2` | None *(counts as 1H for Dueling)* |
+| **Unarmed** | Impact | 1H | Physical `1d6` *(auto-scales)* | `19-20, ×2` | None *(counts as 1H for Dueling)* |
 | **Stun Baton** | Impact | 1H *(bal.)* | Bludgeoning `1d8` | `18-20, ×2` | Grip |
 | **Quarterstaff** | Impact | Double *(bal.)* | Bludgeoning `1d8` | `19-20, ×2` | Grip |
 | **Force Pike** | Impact | **2H** | Bludgeoning `2d8` | `20, ×3` | Grip |
@@ -64,7 +64,7 @@
 ## Grenades, Rockets & Weapon On-Hit Effects: Scaling DCs!
 
 In vanilla, grenades and weapon status effects had fixed DCs (such as DC 15) that became useless after the first two planets. Every DC now **scales with your level**:
-- **All Grenades** *(Frag, Concussion, Thermal Detonator, Poison, Plasma, CryoBan, Sonic, Ion)*: **`DC = 10 + Level + INT Mod`** *(Adhesive grenades remain no-save)*.
+- **All Grenades** *(Frag, Concussion, Thermal Detonator, Poison, Flash, Plasma, CryoBan, Sonic, Ion)*: **`DC = 10 + Level + INT Mod`** *(Adhesive grenades remain no-save)*.
 - **Specialized Darts & Rockets** *(Mira/Mandalore wrist launcher)*: **`DC = 12 + Level + INT Mod`**.
 - **Weapon & Upgrade On-Hit Effects** *(Stun, Slow, Horror, Paralysis, Sonic…)*: instead of fixed vanilla DCs `10 / 14 / 18 / 22`, they now scale as **`3 / 5 / 7 / 9 + Level + Weapon Attribute Mod`** *(STR/DEX in melee, DEX/INT at range)*.
 

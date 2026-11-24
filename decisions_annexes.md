@@ -131,7 +131,7 @@ Analyse comparative historique (pré-overhaul) :
 
 ## 7. Historique : la branche Mains nues (supprimée le 14/11)
 
-L'arbre *Arts Martiaux / Arts Mutaki / Arts Martiaux Supérieurs* (spécification initiale : Atq & Dégâts = jet + (DEX ou FOR) + SAG, plage 19-20 → 17-20, Tourbillon de Force sur critique — acté §6/§7 d'origine) a été **supprimé** : une seule série de dons par caractéristique étant retenue (§5), et l'identité mains nues étant désormais portée par la posture Duel + la chaîne vanilla + la Spé carac Matukai. Le rang III Matukai a connu trois itérations (Vague de Force sur critique → Tourbillon à synergie Impact explicite, rejetée car « les synergies doivent être trouvées, pas décrites » → punitions sur sauvegarde ratée/attaque manquée, actée 15/11).
+L'arbre *Arts Martiaux / Arts Mutaki / Arts Martiaux Supérieurs* (spécification initiale : Atq & Dégâts = jet + (DEX ou FOR) + SAG, plage 19-20 → 17-20, Tourbillon de Force sur critique — acté §6/§7 d'origine) a été **supprimé** : une seule série de dons par caractéristique étant retenue (§5), et l'identité mains nues étant désormais portée par la famille **Armes d'Impact** (décision révisée 24/11) + la posture Duel + la chaîne vanilla + la Spé carac Matukai. Le rang III Matukai a connu trois itérations (Vague de Force sur critique → Tourbillon à synergie Impact explicite, rejetée car « les synergies doivent être trouvées, pas décrites » → punitions sur sauvegarde ratée/attaque manquée, actée 15/11).
 
 ---
 

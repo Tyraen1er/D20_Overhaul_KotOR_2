@@ -43,14 +43,14 @@ This overhaul addresses **two core issues** in the vanilla game:
 
 | Area | Vanilla Game | With the Overhaul |
 | :--- | :--- | :--- |
-| **Classes (Lvl 30)** | Martial classes get nearly as many powers as casters | Clear inverse symmetry: **22 feats / 12 powers** (Guardian), **18 / 16** (Sentinel), **15 / 24** (Consular) |
+| **Classes (Lvl 30)** | Martial classes get nearly as many powers as Consulars | Clear inverse symmetry: **22 feats / 12 powers** (Guardian), **18 / 16** (Sentinel), **15 / 24** (Consular) |
 | **Combat Styles** | *Dueling* and *Two-Weapon Fighting* dominate everything | Old feats replaced by **4 stances** (*Dueling*, *Ambidexterity*, *Heavy Weapon*, *High-Rate Weapon*) |
-| **Weapon Specializations** | Flat +1 Attack / +2 Damage | **8 families** with unique tactical effects (Knockdown, Armor Break, Maim, Stun…) |
+| **Weapon Specializations** | Flat +1 Attack / +2 Damage | **8 families** with unique tactical effects (Knockdown, Armor Break, Rattle, Stun…) |
 | **Ranged Weapons** | DEX adds zero damage | **DEX adds to ranged damage** (just like STR in melee) |
 | **Attributes** | Few ways to leverage CON, INT, or CHA in combat | **6 mutually exclusive trees** (one per attribute) for unique archetypes |
 | **Armor** | Rarely worth wearing for a Jedi | **Native DR** (Medium 2 / Heavy 4), **3 feat trees**, combined upgrades exclusive to Medium armor |
-| **Force Powers** | Flat FP costs; *Force Storm* & *Insanity* overpower everything | Scaling FP costs by tier, rebalanced powers, **Metamagic**, **6 overhauled prestige powers** |
-| **Workbench & Upgrades** | Massive flat damage stacking by mid-game | **Only 1 flat-damage slot** per weapon, character-level crafting gates, all base non-saber weapons craftable |
+| **Force Powers** | Flat FP costs; *Force Storm* & *Insanity* overpower everything | Scaling FP costs by tier, rebalanced powers, **Force Awakening**, **6 overhauled prestige powers** |
+| **Workbench & Upgrades** | Massive flat damage stacking by mid-game | **Only 1 flat damage slot** per weapon, character-level crafting gates, all base non-saber weapons craftable |
 | **Stealth** | Low payoff outside Sneak Attack | First attack from stealth is a **confirmed critical hit** |
 | **Enemies & Bosses** | Few defenses; bosses melt in 2 rounds | **6 enemy families** with distinct defenses; **5–10 round** boss fights |
 
@@ -63,11 +63,11 @@ Even before picking a single feat or Force power, the overhaul changes several f
 - **New Two-Handed Weapons (`2H`)**: heavy melee weapons (*Vibrosword*, *Gamorrean Battleaxe*, *Force Pike*) and rifles/bowcasters now occupy both hands with no extra off-hand attack, dealing **`200% STR`** in melee and **`150% DEX`** at range by default.
 - **Ranged Weapons Scale with Dexterity (`DEX`)**: unlike vanilla where DEX added zero damage to blasters, ranged attacks now add your DEX modifier to damage (**`150% DEX`** with a single 1H pistol or 2H rifle, **`100% / 50% DEX`** dual-wielding, **`150% / 50% DEX`** with repeating blasters).
 - **Double-Bladed & Repeating Weapons: AC Penalty Instead of Attack Penalty**: all double weapons and repeating blasters are now balanced and no longer suffer the vanilla `-6 / -10` two-weapon attack penalty. Instead, they carry a **native `-5 AC` penalty** and deal **`150% / 50%`** STR (melee) or DEX (ranged).
-- **Guaranteed Confirmed Critical from Stealth**: your **first attack** made from stealth is automatically a **confirmed critical hit** (no confirmation roll needed), stacking with Sneak Attack dice.
+- **Guaranteed Confirmed Critical from Stealth**: your **first attack** made within **6 seconds** of leaving stealth receives **`+50` Attack** (guaranteeing a hit) and **duplicates its entire damage roll (including Sneak Attack dice)** to simulate a confirmed critical hit. In game, this bonus damage appears on a **second damage line** in the combat log right after the initial hit.
 - **Unarmed Counts as One-Handed**: fighting unarmed natively follows single 1H weapon rules (`150% STR` in melee and full compatibility with the *Dueling* stance).
 - **Native Armor Damage Reduction (DR)**: wearing **Medium armor** natively grants **`DR 2/-`** and **Heavy armor** grants **`DR 4/-`** (physical & energy). Each armor category also has its own workbench slot rules (1 Overlay for Light, 2 exclusive combined slots for Medium, 1 Underlay for Heavy).
 - **Scaling DCs for Grenades, Rockets & Weapon On-Hit Effects**: no more obsolete flat DCs — grenades use **`10 + Level + INT Mod`**, darts/rockets use **`12 + Level + INT Mod`**, and weapon on-hit effects use **`3 / 5 / 7 / 9 + Level + Weapon Attribute Mod`**.
-- **Strict Workbench Slot Roles & Level Gates**: only one slot per weapon adds regular flat damage, all base non-lightsaber weapons are craftable from Level 1, and upgrades unlock by character level (`Mk I: Lvl 1`, `Mk II: Lvl 10`, `Mk III: Lvl 15/18`, `Mk IV: Lvl 20`).
+- **Strict Workbench Slot Roles & Level Gates**: only one slot per weapon adds regular flat damage, all base non-lightsaber weapons are craftable from Level 1, and upgrades unlock by character level (`Mk I: Lvl 1`, `Mk II: Lvl 10`, `Mk III: Lvl 15/18`, `Mk IV / Mk V: Lvl 20`).
 - **Scaling FP Costs & Uncapped Tier 3 Powers**: Force Point costs now rise with each tier (`T1 < T2 < T3`), and Tier 3 powers scale without dice caps all the way to Level 30.
 - **Dice Notation (`1d8`, `2d6`, etc.)**: all in-game descriptions replace vanilla ranges (`1-8`, `2-12`) with standard dice notation.
 

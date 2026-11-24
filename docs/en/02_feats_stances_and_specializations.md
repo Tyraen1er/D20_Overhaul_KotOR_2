@@ -1,4 +1,4 @@
-# 2. Feats: Stances, Weapon Specializations, Attributes & Metamagic
+# 2. Feats: Stances, Weapon Specializations, Attributes & Force Awakening
 
 [← Previous: Classes & Progression](01_classes_and_progression.md) | [Table of Contents](README.md) | [Next: Armor & Defenses →](03_armor_and_defenses.md)
 
@@ -23,9 +23,9 @@ Each stance has **3 tiers** (available at **Levels 1, 4, and 8**) and enhances h
 | Stance | Eligible Weapons | Base Rule *(without feats)* | Tier I (Lvl 1+) | Tier II (Lvl 4+) | Tier III (Lvl 8+) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Dueling** | 1 one-handed weapon *(off-hand empty)* **or unarmed** | Damage: **150% STR** (melee) or **150% DEX** (ranged) | `+2` Attack<br>Crit threat **+1** | `+4` Attack<br>Crit threat **+2** | `+6` Attack<br>Crit threat **+3** *(all classes)* |
-| **Ambidexterity** | 2 weapons *(one in each hand)* | Damage: **100% / 50%** STR (melee) or DEX (ranged)<br>Attack penalty `-6 / -10` *(or `-4 / -10` with balanced off-hand)* | Penalty reduced to **`-6 / -6`**<br>**+1 AC** | Penalty reduced to **`-4 / -4`**<br>**+2 AC** | Penalty reduced to **`-2 / -2`**<br>**+3 AC** *(non-casters)* |
-| **Heavy Weapon Handling** | **Two-handed** non-double weapon *(melee or ranged)* | Damage: **200% STR** (melee) or **150% DEX** (ranged) | `+1` Attack<br>Melee **215% STR**<br>Ranged **165% DEX** | `+2` Attack<br>Melee **235% STR**<br>Ranged **185% DEX** | `+3` Attack<br>Melee **250% STR**<br>Ranged **200% DEX** *(non-casters)* |
-| **High-Rate Weapon Handling** | **Double-bladed** melee weapons & **repeating blasters** | Damage: **150% / 50%** STR (melee) or DEX (ranged)<br>All balanced; native **`-5 AC`** penalty *(no two-weapon attack penalty)* | Damage **`+1 / +1`**<br>AC penalty **`-3`** | Damage **`+2 / +2`**<br>AC penalty **`-2`** | Damage **`+3 / +3`**<br>AC penalty **`-1`** *(non-casters)* |
+| **Ambidexterity** | 2 weapons *(one in each hand)* | Damage: **100% / 50%** STR (melee) or DEX (ranged)<br>Attack penalty `-6 / -10` *(or `-4 / -10` with balanced off-hand)* | Penalty reduced to **`-6 / -6`**<br>**+1 AC** | Penalty reduced to **`-4 / -4`**<br>**+2 AC** | Penalty reduced to **`-2 / -2`**<br>**+3 AC** *(except Force classes)* |
+| **Heavy Weapon Handling** | **Two-handed** non-double weapon *(melee or ranged)* | Damage: **200% STR** (melee) or **150% DEX** (ranged) | `+1` Attack<br>Melee **215% STR**<br>Ranged **165% DEX** | `+2` Attack<br>Melee **235% STR**<br>Ranged **185% DEX** | `+3` Attack<br>Melee **250% STR**<br>Ranged **200% DEX** *(except Force classes)* |
+| **High-Rate Weapon Handling** | **Double-bladed** melee weapons & **repeating blasters** | Damage: **150% / 50%** STR (melee) or DEX (ranged)<br>All balanced; native **`-5 AC`** penalty *(no two-weapon attack penalty)* | Damage **`+1 / +1`**<br>AC penalty **`-3`** | Damage **`+2 / +2`**<br>AC penalty **`-2`** | Damage **`+3 / +3`**<br>AC penalty **`-1`** *(except Force classes)* |
 
 > **Tactical note:**
 > - **Dueling** focuses on high accuracy and frequent critical hits.
@@ -48,9 +48,9 @@ Every weapon in the game now belongs to one of **8 families** (4 melee, 4 ranged
 
 | Family | Included Weapons | Tier II (Lvl 8+) | Tier III (Lvl 15+) |
 | :--- | :--- | :--- | :--- |
-| **Impact Weapons** | Stun baton, Quarterstaff, Force pike | **Knockdown** (1 round) — *Fort negates (DC 10 + Lvl + Attr; chance = threat range / 20 per hit)* | Knockdown extended to **2 rounds** |
+| **Impact Weapons** | Unarmed, Stun baton, Quarterstaff, Force pike | **Knockdown** (1 round) — *Fort negates (DC 10 + Lvl + Attr; chance = threat range / 20 per hit)* | Knockdown extended to **2 rounds** |
 | **Traditional Weapons** | Short sword, Long sword, Double-bladed sword, Gamorrean battleaxe, Wookiee warblade | **Armor Break**: `-3 AC` for 2 rounds — *Fort negates (DC 5 + Lvl + Attr, on every hit)* | Armor Break **stacks** and lasts **+1 round** |
-| **Resonance Weapons** | Vibroblade, Vibrosword, Double-bladed vibrosword | **Maim**: `-4` Attack & `-4` Damage for 1 round — *Ref negates (DC 5 + Lvl + Attr, on every hit)* | **Stacks**: `-2` per trigger (up to **`-8`**), refreshes duration |
+| **Resonance Weapons** | Vibroblade, Vibrosword, Double-bladed vibrosword | **Rattle**: `-4` Attack & `-4` Damage for 1 round — *Ref negates (DC 5 + Lvl + Attr, on every hit)* | **Stacks**: `-2` per trigger (up to **`-8`**), refreshes duration |
 | **Laser Weapons** | Short lightsaber, Lightsaber, Double-bladed lightsaber | **Will Break**: `-4` to all saving throws for 2 rounds — *Will negates (DC 5 + Lvl + Attr, on every hit)* | Will Break applies **with no saving throw** |
 
 ### Ranged Families
@@ -63,7 +63,7 @@ Every weapon in the game now belongs to one of **8 families** (4 melee, 4 ranged
 | **Assassin Fire** | Hold-out blaster, Disruptor pistol, Disruptor rifle | **Sneak Attack `+2d6`** *(grants Sneak Attack even if your class doesn't have it)* | **Critical multiplier `+1`** *(e.g., ×2 → ×3, ×3 → ×4)* |
 
 > **What about Unarmed Combat?**
-> Unarmed strikes do not belong to a weapon family. Unarmed builds use the **Dueling** stance (fists count as 1H), the automatic **Unarmed Specialist I–VIII** progression, and optionally the **Matukai Mastery** attribute tree.
+> Unarmed strikes belong to the **Impact Weapons** family (gaining access to *Impact Weapon Specialization I–III* and Knockdown). Unarmed builds also use the **Dueling** stance (fists count as 1H), the automatic **Unarmed Specialist I–VIII** progression, unarmed gloves, and optionally the **Matukai Mastery** attribute tree.
 
 ---
 
@@ -75,18 +75,18 @@ The mod adds **6 specialization trees** — one for each attribute (**STR, DEX, 
 
 | Tree (Attribute) | Tier I (Lvl 1+) | Tier II (Lvl 8+) | Tier III (Lvl 15+) |
 | :--- | :--- | :--- | :--- |
-| **Gamorrean Refinement** *(STR)* | **+1 STR**<br>Adds **½ STR mod** as bonus ranks to **all skills** | **+2 STR**<br>Can **wield any weapon one-handed** *(including 2H and double weapons, melee & ranged; Dueling and Ambidexterity stances only)* | **+3 STR**<br>**Immunity to Mind-Affecting effects** |
+| **Gamorrean Refinement** *(STR)* | **+1 STR**<br>Adds **1/2 STR mod** as bonus ranks to **all skills** | **+2 STR**<br>Can **wield any weapon one-handed** *(including 2H and double weapons, melee & ranged; permanently locks out Heavy Weapon and High-Rate Weapon stances)* | **+3 STR**<br>**Immunity to Mind-Affecting effects** |
 | **Echani Techniques** *(DEX)* | **+1 DEX**<br>Uses **DEX instead of STR** for **melee attack rolls** *(if DEX > STR)* | **+2 DEX**<br>Uses **DEX instead of STR** for **melee damage** *(if DEX > STR)* | **+3 DEX**<br>**Removes the Max DEX cap on all armor** |
-| **Way of the Krayt Dragon** *(CON)* | **+1 CON**<br>**DR `+ ½ CON mod`** *(rounded up)* | **+2 CON**<br>**Transfusion**: every 6 s, converts **5% max VP into 5% max FP** if FP < 50% *(stops if VP drops to 75%)* | **+3 CON**<br>Adds **CON mod to all saving throws** |
+| **Way of the Krayt Dragon** *(CON)* | **+1 CON**<br>**DR `+ 1/2 CON mod`** *(rounded up)* | **+2 CON**<br>**Transfusion**: every 6 s, converts **5% max VP into 5% max FP** if FP < 50% *(stops if VP drops to 75%)* | **+3 CON**<br>Adds **CON mod to all saving throws** |
 | **Gand Findsman** *(INT)* | **+1 INT**<br>**Grenades and mines deal `+5%` damage per total Demolitions rank** | **+2 INT**<br>Uses **INT instead of DEX** for **ranged attack & damage** *(if INT > DEX)* | **+3 INT**<br>**Master Sapper**: grenade radius **4 m → 6 m**, pierces *Total Evasion* (min half damage), **50% chance** not to consume the grenade |
-| **Matukai Mastery** *(WIS)* | **+1 WIS**<br>**Adds** WIS mod to **attack rolls** *(on top of your primary weapon attribute)* | **+2 WIS**<br>Saves **`+ ½ WIS mod`**; **succeeding on a saving throw** deals your WIS mod as direct damage to the attacker | **+3 WIS**<br>**WIS replaces DEX for AC**; any enemy that **misses you** takes your WIS mod as direct damage |
+| **Matukai Mastery** *(WIS)* | **+1 WIS**<br>**Adds** WIS mod to **attack rolls** *(on top of your primary weapon attribute)* | **+2 WIS**<br>Saves **`+ 1/2 WIS mod`**; **succeeding on a saving throw** deals your WIS mod as direct damage to the attacker | **+3 WIS**<br>**WIS replaces DEX for AC**; any enemy that **misses you** takes your WIS mod as direct damage |
 | **Legacy of Nomi** *(CHA)* | **+1 CHA**<br>**Companions earn 100% XP** | **+2 CHA**<br>**Entire party** gains **`+ CHA mod`** to all saving throws | **+3 CHA**<br>**Defense (AC) `+ CHA mod`** |
 
 ---
 
-## Metamagic & Total Evasion
+## Force Awakening & Total Evasion
 
-### Metamagic (7 New Feats for Force Users)
+### Force Awakening (7 New Feats for Force Users)
 Designed to give Consulars, Jedi Masters, and Sith Lords meaningful feat investments that directly supercharge their Force powers:
 
 | Feat | Tiers | Access | Effect |
@@ -96,7 +96,7 @@ Designed to give Consulars, Jedi Masters, and Sith Lords meaningful feat investm
 | **Extend Power** | 1 | All Jedi/Sith (Lvl 1+) | **Doubles the duration (`×2`)** of all Force buffs |
 
 ### Total Evasion (Overhaul of *Evasion*)
-- **Vanilla:** Succeeding on a Reflex save vs. an AoE reduced damage by half.
+- **Vanilla:** exclusive to Mira (Scout Lvl 6); a successful Reflex save vs. an AoE dealt 0 damage, but a failed save dealt full (100%) damage.
 - **Overhaul:**
   - **Successful** Reflex save against an AoE (grenade, *Force Storm*, *Force Wave*…): **0 damage**.
   - **Failed** Reflex save: **half damage only**.

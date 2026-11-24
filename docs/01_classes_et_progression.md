@@ -14,11 +14,11 @@ Le mod rétablit une **symétrie claire** entre les trois grandes familles de cl
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Gardien Jedi** / **Maître d'Armes** / **Maraudeur Sith** | 1 tous les 3 niveaux *(+2 au Niv. 1)* | **12** | ~2 tous les 3 niveaux + bonus | **22** | **Maître Martial** |
 | **Sentinelle Jedi** / **Jedi Protecteur** / **Assassin Sith** | 1 tous les 2 niveaux | **16** | ~3 tous les 5 niveaux | **18** | **Hybride Tactique** |
-| **Consulaire Jedi** / **Maître Jedi** / **Seigneur Sith** | 4 tous les 5 niveaux | **24** | 1 tous les 2 niveaux | **15** | **Archimage de la Force** |
+| **Consulaire Jedi** / **Maître Jedi** / **Seigneur Sith** | 4 tous les 5 niveaux | **24** | 1 tous les 2 niveaux | **15** | **Maître de la Force** |
 
 > **À retenir :**
 > - Un **Gardien** choisit ses pouvoirs avec soin (buffs essentiels, quelques utilitaires), mais dispose d'un énorme budget de **22 dons** pour maîtriser armes, postures et armures.
-> - Un **Consulaire** choisit **15 dons** (ce qui lui laisse de la place pour la nouvelle **Métamagie** et un arbre de caractéristique) tout en maîtrisant un large répertoire de **24 pouvoirs**.
+> - Un **Consulaire** choisit **15 dons** (ce qui lui laisse de la place pour le nouvel **Éveil de Force** et un arbre de caractéristique) tout en maîtrisant un large répertoire de **24 pouvoirs**.
 > - Une **Sentinelle** offre un équilibre idéal entre combat, compétences, armures intermédiaires et pouvoirs.
 
 ---
@@ -30,11 +30,11 @@ Pour assurer une montée en puissance progressive, les arbres de dons se débloq
   - Rang I : **Niveau 1+**
   - Rang II : **Niveau 4+**
   - Rang III : **Niveau 8+**
-- **Grands arbres de spécialisation** (**Spécialisations de caractéristique**, **Spécialisations d'armes**, **Arbres d'armures**, **Métamagie** *Amplifié* et *Pénétrant*) :
+- **Grands arbres de spécialisation** (**Spécialisations de caractéristique**, **Spécialisations d'armes**, **Arbres d'armures**, **Éveil de Force** *Amplifié* et *Pénétrant*) :
   - Rang I : **Niveau 1+**
   - Rang II : **Niveau 8+**
   - Rang III : **Niveau 15+**
-  *(Exception : le don de Métamagie **Pouvoir Prolongé** est accessible dès le niveau 1.)*
+  *(Exception : le don d'Éveil de Force **Pouvoir Prolongé** est accessible dès le niveau 1.)*
 
 > Le tableau complet des **restrictions par classe / classe de prestige** ainsi que les règles des **Compagnons** sont détaillés au **Chapitre 5** *(après la présentation de tous les dons)*.
 

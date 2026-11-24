@@ -1,4 +1,4 @@
-# 2. Dons : Postures, Spécialisations, Caractéristiques & Métamagie
+# 2. Dons : Postures, Spécialisations, Caractéristiques & Éveil de Force
 
 [← Page précédente : Classes & Progression](01_classes_et_progression.md) | [Sommaire](README.md) | [Page suivante : Armures & Défenses →](03_armures_et_defenses.md)
 
@@ -23,9 +23,9 @@ Chaque posture comporte **3 rangs** (accessibles aux **niveaux 1, 4 et 8**). Ell
 | Posture | Armes concernées | Règle de base *(sans don)* | Rang I (Niv. 1+) | Rang II (Niv. 4+) | Rang III (Niv. 8+) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Duel** | 1 arme à une main *(main gauche vide)* **ou mains nues** | Dégâts : **150 % FOR** (mêlée) ou **150 % DEX** (distance) | `+2` Attaque<br>Plage de critique **+1** | `+4` Attaque<br>Plage de critique **+2** | `+6` Attaque<br>Plage de critique **+3** *(ouvert à tous)* |
-| **Ambidextrie** | 2 armes *(une dans chaque main)* | Dégâts : **100 % / 50 %** FOR (mêlée) ou DEX (distance)<br>Malus d'attaque `-6 / -10` *(ou `-4 / -10` si arme équilibrée en main gauche)* | Malus réduit à **`-6 / -6`**<br>**+1 CA** | Malus réduit à **`-4 / -4`**<br>**+2 CA** | Malus réduit à **`-2 / -2`**<br>**+3 CA** *(sauf Mages)* |
-| **Maniement d'Arme Lourde** | Arme à **deux mains** non double *(mêlée ou distance)* | Dégâts : **200 % FOR** (mêlée) ou **150 % DEX** (distance) | `+1` Attaque<br>Mêlée **215 % FOR**<br>Distance **165 % DEX** | `+2` Attaque<br>Mêlée **235 % FOR**<br>Distance **185 % DEX** | `+3` Attaque<br>Mêlée **250 % FOR**<br>Distance **200 % DEX** *(sauf Mages)* |
-| **Maniement d'Arme haute cadence** | **Armes doubles** *(mêlée)* et **blasters à répétition** *(distance)* | Dégâts : **150 % / 50 %** FOR (mêlée) ou DEX (distance)<br>Toutes équilibrées ; malus natif de **`-5 CA`** *(plus de malus d'attaque à 2 armes)* | Dégâts **`+1 / +1`**<br>Malus réduit à **`-3 CA`** | Dégâts **`+2 / +2`**<br>Malus réduit à **`-2 CA`** | Dégâts **`+3 / +3`**<br>Malus réduit à **`-1 CA`** *(sauf Mages)* |
+| **Ambidextrie** | 2 armes *(une dans chaque main)* | Dégâts : **100 % / 50 %** FOR (mêlée) ou DEX (distance)<br>Malus d'attaque `-6 / -10` *(ou `-4 / -10` si arme équilibrée en main gauche)* | Malus réduit à **`-6 / -6`**<br>**+1 CA** | Malus réduit à **`-4 / -4`**<br>**+2 CA** | Malus réduit à **`-2 / -2`**<br>**+3 CA** *(sauf classes de Force)* |
+| **Maniement d'Arme Lourde** | Arme à **deux mains** non double *(mêlée ou distance)* | Dégâts : **200 % FOR** (mêlée) ou **150 % DEX** (distance) | `+1` Attaque<br>Mêlée **215 % FOR**<br>Distance **165 % DEX** | `+2` Attaque<br>Mêlée **235 % FOR**<br>Distance **185 % DEX** | `+3` Attaque<br>Mêlée **250 % FOR**<br>Distance **200 % DEX** *(sauf classes de Force)* |
+| **Maniement d'Arme haute cadence** | **Armes doubles** *(mêlée)* et **blasters à répétition** *(distance)* | Dégâts : **150 % / 50 %** FOR (mêlée) ou DEX (distance)<br>Toutes équilibrées ; malus natif de **`-5 CA`** *(plus de malus d'attaque à 2 armes)* | Dégâts **`+1 / +1`**<br>Malus réduit à **`-3 CA`** | Dégâts **`+2 / +2`**<br>Malus réduit à **`-2 CA`** | Dégâts **`+3 / +3`**<br>Malus réduit à **`-1 CA`** *(sauf classes de Force)* |
 
 > **Astuce tactique :**
 > - **Duel** mise sur la précision et les coups critiques fréquents.
@@ -48,9 +48,9 @@ Au lieu de simples bonus plats, toutes les armes du jeu sont désormais regroup�
 
 | Famille | Armes incluses | Rang II (Niv. 8+) | Rang III (Niv. 15+) |
 | :--- | :--- | :--- | :--- |
-| **Arme d'Impact** | Matraque, Bâton, Pique de Force | **Renversement** (1 tour) — *Vigueur annule (DD 10 + Niv + Carac ; chance = plage de critique / 20 par coup)* | Renversement porté à **2 tours** |
+| **Arme d'Impact** | Mains nues, Matraque, Bâton, Pique de Force | **Renversement** (1 tour) — *Vigueur annule (DD 10 + Niv + Carac ; chance = plage de critique / 20 par coup)* | Renversement porté à **2 tours** |
 | **Arme Traditionnelle** | Épée courte, Épée longue, Double-lame, Hache gamorréenne, Lame de guerre wookie | **Bris d'armure** : `-3 CA` pendant 2 tours — *Vigueur annule (DD 5 + Niv + Carac, sur chaque coup)* | Bris d'armure **cumulable** et dure **+1 tour** |
-| **Arme à Résonance** | Vibrolame, Vibro-épée, Vibrolame double | **Mutilation** : `-4` Attaque et `-4` Dégâts pendant 1 tour — *Réflexes annule (DD 5 + Niv + Carac, sur chaque coup)* | **Empilable** : `-2` supplémentaires par déclenchement (plafond `-8`), durée rafraîchie |
+| **Arme à Résonance** | Vibrolame, Vibro-épée, Vibrolame double | **Ébranlement** : `-4` Attaque et `-4` Dégâts pendant 1 tour — *Réflexes annule (DD 5 + Niv + Carac, sur chaque coup)* | **Empilable** : `-2` supplémentaires par déclenchement (plafond `-8`), durée rafraîchie |
 | **Arme Laser** | Sabre laser court, Sabre laser, Double sabre laser | **Bris de volonté** : `-4` à toutes les sauvegardes pendant 2 tours — *Volonté annule (DD 5 + Niv + Carac, sur chaque coup)* | Bris de volonté **sans jet de sauvegarde** (s'applique automatiquement) |
 
 ### Familles à Distance
@@ -63,7 +63,7 @@ Au lieu de simples bonus plats, toutes les armes du jeu sont désormais regroup�
 | **Tir Assassin** | Blaster de poche, Pistolet disrupteur, Fusil disrupteur | **Attaques sournoises `+2d6`** *(donne la capacité d'en faire même si votre classe ne l'a pas)* | **Multiplicateur de critique `+1`** *(ex. ×2 → ×3, ×3 → ×4)* |
 
 > **Et le combat à mains nues ?**
-> Les poings n'appartiennent à aucune famille d'arme. Le style mains nues s'appuie sur la posture **Duel** (les poings comptent comme une arme 1M), la progression automatique **Spécialiste mains nues I–VIII** et, si vous le souhaitez, l'arbre de caractéristique **Maîtrise Matukai**.
+> Les poings appartiennent à la famille **Arme d'Impact** (et profitent donc de *Spécialisation Arme d'Impact I–III* et du Renversement). Le style mains nues s'appuie en plus sur la posture **Duel** (les poings comptent comme une arme 1M), la progression automatique **Spécialiste mains nues I–VIII**, les gants dédiés et, si vous le souhaitez, l'arbre de caractéristique **Maîtrise Matukai**.
 
 ---
 
@@ -75,19 +75,19 @@ Le mod introduit **6 arbres de spécialisation** — un pour chacune des six car
 
 | Arbre (Carac.) | Rang I (Niv. 1+) | Rang II (Niv. 8+) | Rang III (Niv. 15+) |
 | :--- | :--- | :--- | :--- |
-| **Raffinement Gamoréen** *(FOR)* | **+1 FOR**<br>Ajoute **½ mod. FOR** en rangs sur **toutes les compétences** | **+2 FOR**<br>Permet de **tenir toutes les armes à une main** *(y compris armes 2M et doubles, mêlée et distance ; postures Duel et Ambidextrie uniquement)* | **+3 FOR**<br>**Immunité aux effets mentaux** |
+| **Raffinement Gamorréen** *(FOR)* | **+1 FOR**<br>Ajoute **1/2 mod. FOR** en rangs sur **toutes les compétences** | **+2 FOR**<br>Permet de **tenir toutes les armes à une main** *(y compris armes 2M et doubles, mêlée et distance ; interdit définitivement les postures Arme Lourde et Haute cadence)* | **+3 FOR**<br>**Immunité aux effets mentaux** |
 | **Techniques Echanis** *(DEX)* | **+1 DEX**<br>Utilise la **DEX au lieu de la FOR** pour l'**attaque en mêlée** *(si DEX > FOR)* | **+2 DEX**<br>Utilise la **DEX au lieu de la FOR** pour les **dégâts en mêlée** *(si DEX > FOR)* | **+3 DEX**<br>**Supprime le plafond de DEX des armures** |
-| **Voie du dragon Kraith** *(CON)* | **+1 CON**<br>**RD `+ ½ mod. CON`** *(arrondi supérieur)* | **+2 CON**<br>**Transfusion :** toutes les 6 s, convertit **5 % de vos PV max en 5 % de vos PF max** si vos PF sont sous 50 % *(s'arrête si vos PV descendent à 75 %)* | **+3 CON**<br>Ajoute votre **mod. CON à tous vos jets de sauvegarde** |
+| **Voie du dragon Krayt** *(CON)* | **+1 CON**<br>**RD `+ 1/2 mod. CON`** *(arrondi supérieur)* | **+2 CON**<br>**Transfusion :** toutes les 6 s, convertit **5 % de vos PV max en 5 % de vos PF max** si vos PF sont sous 50 % *(s'arrête si vos PV descendent à 75 %)* | **+3 CON**<br>Ajoute votre **mod. CON à tous vos jets de sauvegarde** |
 | **Chasseur de prime Gand** *(INT)* | **+1 INT**<br>Dégâts des **grenades et mines `+5 %` par rang total de Démolition** | **+2 INT**<br>Utilise l'**INT au lieu de la DEX** pour l'**attaque et les dégâts à distance** *(si INT > DEX)* | **+3 INT**<br>**Maître Artificier :** rayon des grenades porté de **4 m → 6 m**, perce *Esquive Totale* (demi-dégâts min.), **50 % de chance** de ne pas consommer la grenade |
-| **Maîtrise Matukai** *(SAG)* | **+1 SAG**<br>**Ajoute** votre mod. SAG à l'**attaque** *(en plus de votre caractéristique habituelle)* | **+2 SAG**<br>Sauvegardes **`+ ½ mod. SAG`** ; **réussir une sauvegarde** inflige votre mod. SAG en dégâts directs à l'attaquant | **+3 SAG**<br>La **SAG remplace la DEX pour la CA** ; tout ennemi qui **vous rate** subit votre mod. SAG en dégâts directs |
+| **Maîtrise Matukai** *(SAG)* | **+1 SAG**<br>**Ajoute** votre mod. SAG à l'**attaque** *(en plus de votre caractéristique habituelle)* | **+2 SAG**<br>Sauvegardes **`+ 1/2 mod. SAG`** ; **réussir une sauvegarde** inflige votre mod. SAG en dégâts directs à l'attaquant | **+3 SAG**<br>La **SAG remplace la DEX pour la CA** ; tout ennemi qui **vous rate** subit votre mod. SAG en dégâts directs |
 | **Héritage de Nomi** *(CHA)* | **+1 CHA**<br>Vos **compagnons reçoivent 100 % de l'XP** | **+2 CHA**<br>**Tout le groupe** gagne **`+ mod. CHA`** aux jets de sauvegarde | **+3 CHA**<br>**Défense (CA) `+ mod. CHA`** |
 
 ---
 
-## Dons de Métamagie & Esquive Totale
+## Dons d'Éveil de Force & Esquive Totale
 
-### Métamagie (7 nouveaux dons pour utilisateurs de la Force)
-Calibrée pour donner au Consulaire (et aux classes de prestige mages) de vrais choix de dons qui renforcent directement ses pouvoirs :
+### Éveil de Force (7 nouveaux dons pour utilisateurs de la Force)
+Calibré pour donner au Consulaire, au Maître Jedi et au Seigneur Sith de vrais choix de dons qui renforcent directement ses pouvoirs :
 
 | Don | Rangs | Accès | Effet |
 | :--- | :---: | :--- | :--- |
@@ -96,7 +96,7 @@ Calibrée pour donner au Consulaire (et aux classes de prestige mages) de vrais 
 | **Pouvoir Prolongé** | 1 | Tous Jedi/Sith (Niv. 1+) | **Double la durée** (`×2`) de tous vos buffs de Force |
 
 ### Esquive Totale (refonte du don *Esquive*)
-- **Avant :** Réussir un jet de Réflexes contre une attaque de zone réduisait les dégâts de moitié.
+- **Avant (vanilla) :** réservé à Mira (Éclaireur niv. 6) ; réussir un jet de Réflexes contre une attaque de zone infligeait 0 dégât, mais un échec infligeait 100 % des dégâts.
 - **Avec le mod :**
   - Si vous **réussissez** votre jet de Réflexes contre une attaque de zone (grenade, *Tempête de Force*, *Vague de Force*…) : **0 dégât**.
   - Si vous le **ratez** : **demi-dégâts seulement**.

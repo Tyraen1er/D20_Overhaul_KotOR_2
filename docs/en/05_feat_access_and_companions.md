@@ -11,13 +11,13 @@ Now that every feat tree has been introduced, here is the full reference table s
 | Feat Tree | Tier I | Tier II (Lvl 8+) | Tier III (Lvl 15+) |
 | :--- | :--- | :--- | :--- |
 | **Attribute Specializations (6 trees)** | All classes | All classes | All classes |
-| **Stance: Dueling** | All classes | All classes | All classes |
-| **Stances: Ambidexterity, Heavy Weapon, High-Rate** | All classes | All classes | **All except Casters** *(locked for Consular, Jedi Master, Sith Lord)* |
+| **Stance: Dueling** *(Lvl 1 / 4 / 8)* | All classes | All classes *(Lvl 4+)* | All classes *(Lvl 8+)* |
+| **Stances: Ambidexterity, Heavy Weapon, High-Rate** *(Lvl 1 / 4 / 8)* | All classes | All classes *(Lvl 4+)* | **All except Force classes** *(Lvl 8+; locked for Consular, Jedi Master, Sith Lord)* |
 | **Weapon Specializations (8 families)** | All classes | Guardian, Sentinel & their prestiges *(+ non-Jedi)* | **Weapon Master**, **Sith Marauder** *(+ non-Jedi Lvl 15+)* |
 | **Armor: Juggernaut** *(Heavy)* | All (with Heavy Armor Prof.) | Guardian, Weapon Master, Marauder *(+ Soldier)* | **Weapon Master**, **Sith Marauder** *(+ Soldier Lvl 15+)* |
 | **Armor: Tactical Armor** *(Medium)* | All (with Medium Armor Prof.) | Sentinel, Watchman, Assassin *(+ Scout, Scoundrel, Tech Specialist)* | **Jedi Watchman**, **Sith Assassin** *(+ Scout, Scoundrel, Tech Specialist Lvl 15+)* |
 | **Armor: Ballistic Evasion** *(Light)* | All (with Light Armor Prof.) | Guardian, Sentinel & their prestiges *(+ Soldier, Scout, Scoundrel)* | **Weapon Master**, **Marauder**, **Watchman**, **Assassin** *(+ Soldier, Scout, Scoundrel Lvl 15+)* |
-| **Metamagic** *(Empower, Penetrate)* | All Jedi / Sith | **Consular**, **Jedi Master**, **Sith Lord** | **Jedi Master**, **Sith Lord** |
+| **Force Awakening** *(Empower, Penetrate)* | All Jedi / Sith | **Consular**, **Jedi Master**, **Sith Lord** | **Jedi Master**, **Sith Lord** |
 | **Total Evasion** | — | — | **Jedi Watchman**, **Sith Assassin** *(+ Mira auto at Lvl 6)* |
 
 ---
@@ -37,7 +37,7 @@ Characters who remain in non-Jedi classes **can select** the **Tier III** martia
 > Once a companion is trained as a Jedi (Atton, Bao-Dur, Disciple, Mira, Handmaiden), they follow the standard rules of their Jedi class.
 
 ### 2. Story Companion Exceptions
-- **Kreia (Level 15+)**: counts as a **Jedi Master** for selectable feats at level-up, granting full access to **Metamagic** (including Tier III).
+- **Kreia (Level 15+)**: counts as a **Jedi Master** for selectable feats at level-up, granting full access to **Force Awakening** (including Tier III).
 - **Visas Marr (Level 15+)**: counts as a **Sith Assassin** for selectable feats at level-up, unlocking *Tactical Armor III*, *Ballistic Evasion III*, and *Total Evasion*.
 - **Handmaiden (Echani sparring reward)**: *Battle Precognition* (which added Wisdom to Defense) is replaced by **`+10%` melee evasion** *(avoiding overlap with the new Matukai Wisdom specialization)*.
 

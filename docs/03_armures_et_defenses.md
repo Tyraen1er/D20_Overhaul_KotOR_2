@@ -14,7 +14,7 @@ Le mod redéfinit **chaque type d'armure** autour d'un rôle précis, avec une *
 | :--- | :---: | :---: | :---: | :--- | :--- |
 | **Bures & Tenues** *(sans armure)* | `0` *(inchangé)* | Illimité *(sauf bures restrictives +5)* | **0** | Aucun *(0 emplacement)* | **Tous les pouvoirs** |
 | **Armure Légère** | `4–5` → **`6–7`** | `+4/+5` → **`+7 à +10`** | **0** | **1 emplacement** : Sur-couche standard uniquement | Pouvoirs autorisés en légère *(bloque Vitesse, Armure de Force, Stase, Tempête, Mise à mort, Absorption de vie)* |
-| **Armure Intermédiaire** *(Moyenne)* | `6–7` → **`5–6`** | `+2/+3` → **`+3 à +6`** | **RD `2/-`** | **2 emplacements exclusifs** : Sur-couche + Sous-couche **combinées** | Pouvoirs autorisés en moyenne *(Soins, Revitalisation, Barrière, Résistance Énergie, Peste, Poussée/Vague, Méditation, Grâce LS…)* |
+| **Armure Intermédiaire** | `6–7` → **`5–6`** | `+2/+3` → **`+3 à +6`** | **RD `2/-`** | **2 emplacements exclusifs** : Sur-couche + Sous-couche **combinées** | Pouvoirs autorisés en intermédiaire *(Soins, Revitalisation, Barrière, Résistance Énergie, Peste, Poussée/Vague, Méditation, Grâce LS…)* |
 | **Armure Lourde** | `8–9` → **`7–8`** | `0/+1` → **`0 à +2`** | **RD `4/-`** | **1 emplacement** : Sous-couche standard uniquement | Pouvoirs autorisés en lourde *(Corps de Force, Lancer de sabre, Résistance Force, Absorption Force, Parade/Renvoi, Ultimes de prestige)* |
 
 > **Fin des passe-droits sur les armures légères :** les **Combinaisons Ubese / de vol blindées** et les **Armures Zeison Sha / Jal Shey** ne bénéficient plus de leur passe-droit du jeu de base — elles suivent désormais exactement les mêmes restrictions de pouvoirs de la Force que toutes les autres armures légères.
@@ -36,23 +36,23 @@ Les armures intermédiaires incarnent l'**armure technologique et tactique** par
 
 Chaque type d'armure dispose désormais de son propre arbre de **3 dons** (Niv. 1 / 8 / 15). Les bonus s'appliquent dès que vous portez une armure de la catégorie correspondante.
 
-### 1. Esquive Ballistique *(Armure Légère — Mobilité & Esquive)*
+### 1. Esquive Balistique *(Armure Légère — Mobilité & Esquive)*
 *Idéal pour les duellistes, éclaireurs et combattants agiles qui misent sur la chance d'esquiver complètement les coups.*
 
 | Rang | Prérequis | Effet |
 | :---: | :--- | :--- |
-| **Esquive Ballistique I** | Niv. 1+, Port d'armure légère | **`+10 %` d'esquive**, **`+1 CA`** |
-| **Esquive Ballistique II** | Niv. 8+, Rang I, Gardien / Sentinelle / prestiges *(ou Soldat/Éclaireur/Voyou)* | **`+20 %` d'esquive**, **`+2 CA`** |
-| **Esquive Ballistique III** | Niv. 15+, Rang II, Maître d'Armes / Maraudeur / Jedi Protecteur / Assassin *(ou Soldat/Éclaireur/Voyou Niv. 15+ ; Visas Niv. 15+)* | **`+30 %` d'esquive**, **`+3 CA`** |
+| **Esquive Balistique I** | Niv. 1+, Port d'armure légère | **`+10 %` d'esquive**, **`+1 CA`** |
+| **Esquive Balistique II** | Niv. 8+, Rang I, Gardien / Sentinelle / prestiges *(ou Soldat/Éclaireur/Voyou)* | **`+20 %` d'esquive**, **`+2 CA`** |
+| **Esquive Balistique III** | Niv. 15+, Rang II, Maître d'Armes / Maraudeur / Jedi Protecteur / Assassin *(ou Soldat/Éclaireur/Voyou Niv. 15+ ; Visas Niv. 15+)* | **`+30 %` d'esquive**, **`+3 CA`** |
 
 ### 2. Armure Tactique *(Armure Intermédiaire — Boucliers & Furtivité)*
-*Idéal pour les profils ingénieurs, hybrides et furtifs : transforme les boucliers d'avant-bras en véritables murs d'énergie et autorise la discrétion en armure moyenne.*
+*Idéal pour les profils ingénieurs, hybrides et furtifs : transforme les boucliers d'avant-bras en véritables murs d'énergie et autorise la discrétion en armure intermédiaire.*
 
 | Rang | Prérequis | Effet |
 | :---: | :--- | :--- |
-| **Armure Tactique I** | Niv. 1+, Port d'armure intermédiaire | **`RD 3/-`**, **`+1 CA`**, **durée des boucliers `+100 %`**, **furtivité sans ceinture** *(en armure moyenne)* |
-| **Armure Tactique II** | Niv. 8+, Rang I, Sentinelle / Jedi Protecteur / Assassin *(ou Éclaireur/Voyou/Technicien)* | **`RD 4/-`**, **`+2 CA`**, **efficacité des boucliers doublée (`×2`)**, accès à **Course furtive** *(en armure moyenne)* |
-| **Armure Tactique III** | Niv. 15+, Rang II, Jedi Protecteur / Assassin *(ou Éclaireur/Voyou/Technicien Niv. 15+ ; Visas Niv. 15+)* | **`RD 5/-`**, **`+3 CA`**, **efficacité des boucliers triplée (`×3`)** |
+| **Armure Tactique I** | Niv. 1+, Port d'armure intermédiaire | **`RD 3/-`**, **`+1 CA`**, **durée des boucliers `+100 %`**, **furtivité sans ceinture** *(en armure intermédiaire)* |
+| **Armure Tactique II** | Niv. 8+, Rang I, Sentinelle / Jedi Protecteur / Assassin *(ou Éclaireur/Voyou/Technicien)* | **`RD 4/-`**, **`+2 CA`**, **absorption des boucliers doublée (`×2`)**, accès à **Course furtive** *(en armure intermédiaire)* |
+| **Armure Tactique III** | Niv. 15+, Rang II, Jedi Protecteur / Assassin *(ou Éclaireur/Voyou/Technicien Niv. 15+ ; Visas Niv. 15+)* | **`RD 5/-`**, **`+3 CA`**, **absorption des boucliers triplée (`×3`)** |
 
 ### 3. Juggernaut *(Armure Lourde — Tank pur)*
 *Idéal pour les combattants en première ligne qui veulent encaisser les coups sans broncher.*

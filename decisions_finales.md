@@ -46,7 +46,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 | **Maraudeur Sith** | **Stigmate de Force** *(ex Fureur)* | Lourde | `30 s` : `+2/+4/+6` FOR & DEX, immunité Stase/Paralysie, `+1 atq/rd` dès L1 *(non cumulable Vitesse)* ; `-5 %` PV max/rd *(arrêt ≤ 25 % PV)* |
 | **Maître d'Armes Jedi** | **Cicatrice de Force** *(nouveau)* | Lourde | `30 s` : soin `+2/+4/+6 %` PV max/rd, `+1/+2/+3` sauvegardes, immunité Peur/Étourdissement (L2) et Paralysie (L3) |
 | **Assassin Sith** | **Spectre de la Force** *(ex Camouflage)* | Moyenne | Passif : furtivité sans ceinture + Course furtive + `+4/+8/+12` Discrétion ; L2 embuscade `+2d6`/Stun 1t ; L3 kill → crit confirmé + `+25 %` esquive (2t) |
-| **Jedi protecteur** | **Affranchi de la Force** *(nouveau)* | Lourde | Passif : `+1` par 8 rangs combinés sur 4 paires de compétences → Atq, Dég, CA, Saves *(cap `+3/+5/+7`)* ; L2 `+25 %` objets profanes ; L3 Résist. Force `15 + Niv` |
+| **Jedi protecteur** | **Affranchi de la Force** *(nouveau)* | Lourde | Passif : `+1` par 8 rangs combinés sur 4 paires de compétences → Atq, Dég, CA, Saves *(cap `+3/+5/+7`)* ; L2 `+25 %` consommables ; L3 Résist. Force `15 + Niv` |
 | **Seigneur Sith** | **Déchirure de la Force** *(ex Annihilation)* | Lourde | `45 s`, zone `15 m` : `-2/-4/-6` Atq, Sauvegardes et CA *(Volonté annule)* |
 | **Maître Jedi** | **Écho des Liens** *(ex Inspiration)* | Lourde | Partage les buffs personnels avec l'allié le plus proche (L1, `30 s`), tout le groupe (L2, `45 s`), + soins partagés (L3, `60 s`, sans restriction d'armure) |
 
@@ -92,9 +92,9 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 | Famille (armes) | Rang II (effet sur coup) | Rang III |
 | :--- | :--- | :--- |
-| **Impact** (matraque, bâton, pique de Force) | **Renversement** 1 tour (Vigueur, DD 10, proc plage/20) | Renversement **2 tours** |
+| **Impact** (mains nues, matraque, bâton, pique de Force) | **Renversement** 1 tour (Vigueur, DD 10, proc plage/20) | Renversement **2 tours** |
 | **Traditionnelle** (épées courte/longue/double, hache gamorréenne, lame wookie) | **Bris d'armure** : -3 CA, 2 tours (Vigueur, DD 5, proc par coup) | Bris d'armure cumulable, **+1 tour** |
-| **Résonance** (vibrolame, vibro-épée, vibrolame double) | **Mutilation** : -4 Atq & Dégâts, 1 tour (Réflexes, DD 5, proc par coup) | Empilable : -2/proc, **plafond -8**, durée rafraîchie |
+| **Résonance** (vibrolame, vibro-épée, vibrolame double) | **Ébranlement** : -4 Atq & Dégâts, 1 tour (Réflexes, DD 5, proc par coup) | Empilable : -2/proc, **plafond -8**, durée rafraîchie |
 | **Laser** (sabre court, sabre, double sabre) | **Bris de volonté** : -4 sauvegardes, 2 tours (Volonté, DD 5, proc par coup) | Bris de volonté **sans jet de sauvegarde** |
 | **Tir d'Assaut** (pistolet blaster, carabine, blaster à répétition) | **Aucun malus en mêlée** | **+1 Atq/round** main directrice |
 | **Tir Pénétrant** (blaster lourd, fusil blaster, arbalète wookie, blaster lourd à répétition) — *ex « Tir Lourd », renommé 15/11* | **Repousse 3 m** (Vigueur, DD 5 ; sauvegarde par coup qui touche, effet 1×/round même après plusieurs échecs) | **+5 Dégâts** |
@@ -103,7 +103,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 *Exception assumée (15/11)* : le `mult. crit. +1` du Tir Assassin touche au critique malgré le principe « les Spé ne touchent pas au critique » — c'est LA spécialité sournoise, et elle n'empiète pas sur Duel (multiplicateur ≠ plage).
 
-**C. Mains nues** (décision 14/11) : la branche dédiée (*Arts Martiaux / Arts Mutaki*) est **supprimée**. L'identité mains nues passe par la **posture Duel** (les poings comptent comme arme 1M) + la chaîne vanilla *Spécialiste mains nues* I-VIII + les Spé de caractéristique (Matukai). Les poings n'appartiennent à aucune famille de Spé d'arme.
+**C. Mains nues** (révisé 24/11) : la branche dédiée (*Arts Martiaux / Arts Mutaki*) reste **supprimée**. Les mains nues appartiennent désormais à la famille **Armes d'Impact** (accès à *Spécialisation Arme d'Impact I–III* et au Renversement), en plus de la **posture Duel** (les poings comptent comme arme 1M), de la chaîne vanilla *Spécialiste mains nues* I–VIII et des Spé de caractéristique (Matukai).
 
 **D. L'axe distance/mêlée** : parité de viabilité, asymétrie de coûts — chaque posture/famille distance atteint les cibles DPR du §9 par son propre chemin (`100 % / 50 % DEX` en `1M`/`D`, `150 % → 250 % DEX` via Arme Lourde `2M`, `INT` via Gand II, utilitaires via les familles de tir) ; la mêlée paie en défense et approche, la distance paie en contreurs (boucliers d'énergie, déflexion). Équilibrage fin par le chantier ennemis.
 
@@ -113,14 +113,14 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 | Arbre (carac) | Rang I | Rang II | Rang III (signature) |
 | :--- | :--- | :--- | :--- |
-| **Raffinement Gamoréen** (FOR) | +1 FOR ; + ½ mod. FOR en rangs sur **toutes** les compétences | +2 FOR ; **tient toutes les armes à 1M** (mêlée et distance) ; interdit définitivement les postures **Arme Lourde et Haute cadence** | +3 FOR ; immunité au mental |
+| **Raffinement Gamorréen** (FOR) | +1 FOR ; + ½ mod. FOR en rangs sur **toutes** les compétences | +2 FOR ; **tient toutes les armes à 1M** (mêlée et distance) ; interdit définitivement les postures **Arme Lourde et Haute cadence** | +3 FOR ; immunité au mental |
 | **Techniques Echanis** (DEX) | +1 DEX ; attaque mêlée : FOR/DEX (si DEX > FOR) | +2 DEX ; dégâts mêlée : FOR/DEX | +3 DEX ; **supprime le plafond de DEX des armures** |
-| **Voie du dragon Kraith** (CON) | +1 CON ; RD + ½ mod. CON (arrondi sup.) | +2 CON ; **transfusion** : toutes les 6 s, 5 % PV max → 5 % PF max si PF < 50 % (jamais sous 75 % PV) | +3 CON ; toutes sauvegardes + mod. CON |
+| **Voie du dragon Krayt** (CON) | +1 CON ; RD + ½ mod. CON (arrondi sup.) | +2 CON ; **transfusion** : toutes les 6 s, 5 % PV max → 5 % PF max si PF < 50 % (jamais sous 75 % PV) | +3 CON ; toutes sauvegardes + mod. CON |
 | **Chasseur de prime Gand** (INT) | +1 INT ; **grenades `+5 %` dégâts / rang total de Démolition** | +2 INT ; attaque & dégâts distance : DEX/INT (si INT > DEX) | +3 INT ; **Maître Artificier** : rayon grenades `4→6 m`, perce *Esquive Totale*, `50 %` de non-consommation |
 | **Maîtrise Matukai** (SAG) | +1 SAG ; **ajoute** le mod. de SAG à l'attaque (par-dessus la carac directrice) | +2 SAG ; sauvegardes + ½ SAG ; **réussir une sauvegarde inflige SAG dégâts à l'attaquant** | +3 SAG ; **SAG remplace DEX pour la CA** ; tout ennemi vous ratant subit SAG dégâts par attaque échouée |
 | **Héritage de Nomi** (CHA) | +1 CHA ; compagnons 100 % de l'XP | +2 CHA ; groupe : sauvegardes + mod. CHA | +3 CHA ; **Défense + mod. CHA** |
 
-Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV ↔ 25 % PF** (rituel complet) ; les dégâts de punition Matukai contournent la RD (scriptés) et ne peuvent pas critiquer ; le cumul Nomi/Matukai + Précognition suppose des types de bonus distincts (plafond moteur à vérifier).
+Notes d'équilibrage : la transfusion Krayt échange invariablement **25 % PV ↔ 25 % PF** (rituel complet) ; les dégâts de punition Matukai contournent la RD (scriptés) et ne peuvent pas critiquer ; le cumul Nomi/Matukai + Précognition suppose des types de bonus distincts (plafond moteur à vérifier).
 
 ### 6. Architecture de Dons & Budgets
 
@@ -135,12 +135,12 @@ Notes d'équilibrage : la transfusion Kraith échange invariablement **25 % PV �
   - **Métamagie** : R1 tous Jedi/Sith · R2 **Consulaire / Maître Jedi / Seigneur Sith** · R3 **Maître Jedi / Seigneur Sith**.
   - **Spécialisations d'arme (8 familles)** : R1 tous · R2 **Gardien / Sentinelle** + leurs prestiges · R3 **Maître d'Armes / Maraudeur Sith**.
   - **Postures** : R1 & R2 tous · R3 *Duel* = tous, *Ambidextrie / Arme Lourde / Haute cadence* = **tous sauf Mages**.
-  - **Armures** : R1 tous (si port) · **Juggernaut** R2 Gardien/prestiges martiaux, R3 **Maître d'Armes / Maraudeur Sith** · **Armure Tactique** R2 Sentinelle/prestiges hybrides, R3 **Jedi protecteur / Assassin Sith** · **Esquive Ballistique** R2 Gardien/Sentinelle + prestiges, R3 **Maître d'Armes / Maraudeur / Jedi protecteur / Assassin**.
+  - **Armures** : R1 tous (si port) · **Juggernaut** R2 Gardien/prestiges martiaux, R3 **Maître d'Armes / Maraudeur Sith** · **Armure Tactique** R2 Sentinelle/prestiges hybrides, R3 **Jedi protecteur / Assassin Sith** · **Esquive Balistique** R2 Gardien/Sentinelle + prestiges, R3 **Maître d'Armes / Maraudeur / Jedi protecteur / Assassin**.
   - **Spécialisations de Caractéristique (6 arbres)** : **ouvertes à toutes les classes**, paliers par niveau (**Niv. 1+ / Niv. 8+ / Niv. 15+**).
   - **Compagnons (acté le 19/11 — gating par classe + 2 exceptions level-up)** :
-    - Classes **non-Jedi** (`SOL`, `SCT`, `SCD`, `TEC`, `DRC`, `DRX`) : accès aux Rangs III martiaux/armures pertinents dès le **Niveau 15+** (`minattackbonus = 15` dans `feat.2da`, exact grâce à `CLS_ATK_1` `BAB 1.0`) — `SOL` (Spé d'arme III, Juggernaut III, Esquive Ballistique III), `SCT/SCD` (Spé d'arme III, Esquive Ballistique III, Armure Tactique III), `TEC` (Armure Tactique III, Spé d'arme III), `DRC` (Spé d'arme distance III), `DRX` (Spé d'arme distance II). Les compagnons convertis en Jedi suivent les règles normales de leur classe Jedi.
+    - Classes **non-Jedi** (`SOL`, `SCT`, `SCD`, `TEC`, `DRC`, `DRX`) : accès aux Rangs III martiaux/armures pertinents dès le **Niveau 15+** (`minattackbonus = 15` dans `feat.2da`, exact grâce à `CLS_ATK_1` `BAB 1.0`) — `SOL` (Spé d'arme III, Juggernaut III, Esquive Balistique III), `SCT/SCD` (Spé d'arme III, Esquive Balistique III, Armure Tactique III), `TEC` (Armure Tactique III, Spé d'arme III), `DRC` (Spé d'arme distance III), `DRX` (Spé d'arme distance II). Les compagnons convertis en Jedi suivent les règles normales de leur classe Jedi.
     - **Exception Kreia (Niv. 15+)** : considérée comme **Maître Jedi** pour les dons sélectionnables en level-up (accès à toute la **Métamagie**, dont Rangs III).
-    - **Exception Visas (Niv. 15+)** : considérée comme **Assassin Sith** pour les dons sélectionnables en level-up (accès aux dons sélectionnables d'Assassin Sith : *Armure Tactique III*, *Esquive Ballistique III*, *Esquive Totale*).
+    - **Exception Visas (Niv. 15+)** : considérée comme **Assassin Sith** pour les dons sélectionnables en level-up (accès aux dons sélectionnables d'Assassin Sith : *Armure Tactique III*, *Esquive Balistique III*, *Esquive Totale*).
 
 ### 7. Dons Transversaux : Métamagie & Esquive Totale
 
@@ -175,8 +175,8 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 | Arbre | Rang I | Rang II | Rang III | Identité |
 | :--- | :--- | :--- | :--- | :--- |
 | **Juggernaut** (lourde) | RD 3/-, immunité tous dégâts 10 % | RD 4/-, immunité 20 % | RD 5/-, immunité 30 % | Encaisser les dégâts |
-| **Armure Tactique** *(ex Blindage de Combat)* (interm.) | RD 3/-, +1 CA, durée des boucliers +100 %, furtivité sans ceinture (armure moyenne portée) | RD 4/-, +2 CA, efficacité boucliers ×2, accès à Course furtive (armure moyenne portée) | RD 5/-, +3 CA, efficacité boucliers ×3 | Spé ingénieur et craft — boucliers & furtivité |
-| **Esquive Ballistique** *(ex Seconde Peau)* (légère) | Esquive +10 %, +1 CA base | Esquive +20 %, +2 CA base | Esquive +30 %, +3 CA base | Esquiver toutes les attaques *(pas d'augmentation de la CA gagnée via caractéristiques)* |
+| **Armure Tactique** *(ex Blindage de Combat)* (interm.) | RD 3/-, +1 CA, durée des boucliers +100 %, furtivité sans ceinture (armure moyenne portée) | RD 4/-, +2 CA, absorption boucliers ×2, accès à Course furtive (armure moyenne portée) | RD 5/-, +3 CA, absorption boucliers ×3 | Spé ingénieur et craft — boucliers & furtivité |
+| **Esquive Balistique** *(ex Seconde Peau)* (légère) | Esquive +10 %, +1 CA base | Esquive +20 %, +2 CA base | Esquive +30 %, +3 CA base | Esquiver toutes les attaques *(pas d'augmentation de la CA gagnée via caractéristiques)* |
 
 **RD cumulée max** (Juggernaut III + native lourde 4 + Robustesse II 2) : **RD 11 + 30 % d'immunité** (≈ −53 % sur un coup de 23, ≈ −40 % sur un coup de 68). **Pas de cap global d'immunité** (acté le 19/11 ; révisable ultérieurement selon les retours joueurs).
 
@@ -194,7 +194,7 @@ Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), pari
 | **MID** — Niv. 16 (280 PV, CA 29, **RD 5**) | 26–67 DPR (4–11 rds) | 23–65 DPR (4–12 rds) | 36–66 DPR (4–8 rds) | 36–81 DPR (3,5–8 rds) |
 | **LATE** — Niv. 26 (650 PV, CA 44, **RD 8**) | 55–140 DPR (5–12 rds) | 49–150 DPR (4–13 rds) | 86–186 DPR (3,5–8 rds) | 61–170 DPR (4–11 rds) |
 
-*(Survie Late vérifiée sur les 4 armures avec `Déluge de coups 3` + `Robustesse 3` : **Bure** `TTD/TTK = 1,51×` [8,0r / 5,3r], **Légère + Esq. Ballistique** `1,51×` [14,3r / 9,5r], **Moyenne + Armure Tactique** `1,17×` sur 1 bouclier 100×3 [`1,55×` sur 2 boucliers], **Lourde + Juggernaut** `1,54×` [17,2r / 11,2r] et indestructible vs escouades.)*
+*(Survie Late vérifiée sur les 4 armures avec `Déluge de coups 3` + `Robustesse 3` : **Bure** `TTD/TTK = 1,51×` [8,0r / 5,3r], **Légère + Esq. Balistique** `1,51×` [14,3r / 9,5r], **Moyenne + Armure Tactique** `1,17×` sur 1 bouclier 100×3 [`1,55×` sur 2 boucliers], **Lourde + Juggernaut** `1,54×` [17,2r / 11,2r] et indestructible vs escouades.)*
 
 ### 10. Furtivité : l'attaque en embuscade est un critique confirmé
 
@@ -223,14 +223,14 @@ Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), pari
 
 1. **[TODO Tests moteur]** : ~~à tester en jeu.~~ **VÉRIFIÉ EN JEU (23/11 — `mods/04-engine-tests/`)** :
    - **T-excl (`exclusion` dans `feat.2da`)** : **KO** (ne bloque pas au level-up) → mutualité des 6 Spé Carac gérée par **garde-fou scripté** (premier arbre pris prioritaire).
-   - **T1 (Gamoréen II)** : **OK** (`equipableslots=0x00030` + `weaponwield=2` + `weaponsize=3` → double-maniement 1M propre, +100 % / +50 % FOR, 1 att/main, sans crash).
-   - **T2 (`reqfeat0` sur `baseitems.2da`)** : **OK** (bloque réellement l'équipement sans le don → permet de réserver les variantes 1M Gamoréen II).
+   - **T1 (Gamorréen II)** : **OK** (`equipableslots=0x00030` + `weaponwield=2` + `weaponsize=3` → double-maniement 1M propre, +100 % / +50 % FOR, 1 att/main, sans crash).
+   - **T2 (`reqfeat0` sur `baseitems.2da`)** : **OK** (bloque réellement l'équipement sans le don → permet de réserver les variantes 1M Gamorréen II).
    - **T4 (cumul `EffectACIncrease`)** : **non cumulable entre effets séparés** (seul le max s'applique : `+5` au lieu de `+15`) → **sommer tous les bonus de CA custom en un seul `EffectACIncrease(nTotalAC)`** dans le heartbeat.
    - **T5 (`level` dans `itemcreate.2da`)** : **OK** (verrouille nativement les recettes à l'établi par niveau de personnage — valide toute la grille `Craft.csv`).
    - **Architecture scripts (`pykotor`)** : ne jamais recompiler le gros `k_ai_master.ncs` vanilla ; toujours passer par les **petits wrappers `k_def_*` / `k_hen_*`** (`~140–214` instructions) qui appellent ensuite le vrai `k_ai_master` vanilla. *(T3 détection fine des ratés Matukai à confirmer par VFX/log au Jalon 3.)*
 2. **[TODO Budgets §6]** : ~~recomposer le socle de dons avec les nouveaux axes.~~ **ACTÉ (19/11) : budgets `22 / 18 / 15` dons (`12 / 16 / 24` pouvoirs) + gating Classe / Prestige / Compagnons.**
 3. **[TODO Contrat §9]** : ~~remapper les colonnes DPR sur l'architecture postures × familles.~~ **ACTÉ (18–19/11) dans `dpr_check.py` / `dpr_data.json`.**
-4. **[TODO Arbres d'armures §8.B]** : ~~revalider les 9 dons.~~ **ACTÉ (17–19/11) : *Juggernaut*, *Armure Tactique*, *Esquive Ballistique* intégrés dans `Feats.csv`.**
+4. **[TODO Arbres d'armures §8.B]** : ~~revalider les 9 dons.~~ **ACTÉ (17–19/11) : *Juggernaut*, *Armure Tactique*, *Esquive Balistique* intégrés dans `Feats.csv`.**
 5. **[TODO Servante]** : ~~remplacer son don d'histoire *Prémonition du combat*.~~ **ACTÉ (19/11) : *Prémonition du combat* remplacé par `+10 %` d'esquive en mêlée.**
 6. **[TODO Équipement & Loot]** : ~~calibrage des armes & upgrades cloisonnées + refonte du Cristal personnel + stat *On-Hit*.~~ **ACTÉ (19–22/11)** dans `Armes.csv`, `Améliorations.csv`, `Armures.csv`, les 6 CSV d'équipement (`Casques`, `Implants`, `Gants`, `Ceintures`, `Brassards`, `Armures items` — plafond strict **`+1/+2`**, max **`+3`** légendaire sur une stat unique, couverture des **6 stats** sur les 5 slots majeurs, respect du lore ; suppression des 4 CSV redondants de dons mineurs), §3.A (Cristal personnel 3 paliers auto + Kreia + 2 effets classe de base/prestige) et §11.2 (*On-Hit* = `3/5/7/9 + Niv + Carac directrice de l'arme`). **Chantier Équipement clos.**
 7. **[TODO Craft & Établi]** : ~~recalibrer les seuils de niveau + ajouter armes de base & 24 upgrades doubles.~~ **ACTÉ (19/11) dans `Craft.csv`** : toutes les armes de base non-laser craftables (hors Sabres Laser), 24 upgrades doubles intermédiaires ajoutées, et verrou de niveau `itemcreate.2da` (**`Mk I = Niv. 1 / Mk II = Niv. 10 / Mk III = Niv. 15 / Mk IV-T5 = Niv. 20`**, `1 / 10 / 18` sur lignées 3 tiers ; test moteur de la colonne `level` à confirmer). *(Nettoyage des anciens tags `[Combinée Interm.]` effectué.)*
@@ -241,7 +241,7 @@ Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), pari
      - **Maraudeur Sith — *Stigmate de Force I–III*** *(ex Fureur Sith, `Armure lourde`, 30 s)* : `+2/+4/+6` FOR & DEX, immunité Stase/Paralysie, **`+1 atq/rd` dès L1** (non cumulable *Vitesse*), coût `-5 %` PV max/round (arrêt auto ≤ `25 %` PV max).
      - **Maître d'armes Jedi — *Cicatrice de Force I–III*** (`Armure lourde`, 30 s, nouveau) : soin `+2/+4/+6 %` PV max/round + `+1/+2/+3` sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3).
      - **Assassin Sith — *Spectre de la Force I–III*** *(ex Camouflage par la Force, `Armure moyenne`, passif, exclusif Assassin)* : furtivité sans ceinture + course furtive, embuscade `+2d6`/Stun 1t, L3 kill → crit confirmé + `+25 %` esquive 2t.
-     - **Jedi protecteur — *Affranchi de la Force I–III*** (`Armure lourde`, passif, nouveau) : `+1` tous les 8 rangs combinés sur 4 paires (`Informatique+Sécurité` → Atq, `Démolition+Réparation` → Dég, `Vigilance+Discrétion` → CA, `Persuasion+Premiers soins` → Saves ; plafond `+3/+5/+7`) + L2 `+25 %` efficacité objets profanes + L3 Résistance à la Force passive (`15 + Niv`).
+     - **Jedi protecteur — *Affranchi de la Force I–III*** (`Armure lourde`, passif, nouveau) : `+1` tous les 8 rangs combinés sur 4 paires (`Informatique+Sécurité` → Atq, `Démolition+Réparation` → Dég, `Vigilance+Discrétion` → CA, `Persuasion+Premiers soins` → Saves ; plafond `+3/+5/+7`) + L2 `+25 %` efficacité consommables + L3 Résistance à la Force passive (`15 + Niv`).
      - **Seigneur Sith — *Déchirure de la Force I–III*** *(ex Annihilation de l'opposition, `Armure lourde`, 45 s)* : `-2/-4/-6` Atq, Sauvegardes et CA en zone 15 m (`Volonté` annule).
      - **Maître Jedi — *Écho des Liens I–III*** *(ex Inspiration des disciples, `Armure lourde`)* : L1 (30 s) partage buffs personnels avec l'allié le plus proche ; L2 (45 s) tout le groupe ; L3 (60 s) buffs personnels + soins partagés avec tout le groupe (sans restriction d'armure sur les alliés, comme Kreia).
      - **Alignement** : *Grâce du côté Lumineux* (`Armure moyenne`, lancer instantané 50 PF, *Vitesse* plafonnée à `+1 atq/rd` si armure portée) ; *Écrasement de Force* (`Armure légère`, `1d8/Niv` dégâts purs sans cap + immo 6 s, Vig ½ et annule).
