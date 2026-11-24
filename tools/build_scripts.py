@@ -152,10 +152,10 @@ int Ov_GetArmorTier(object oTarget)
     return 0;
 }}
 
-// Famille d'arme : 1=Impact, 2=Trad, 3=Resonance, 4=Laser, 5=Assaut, 6=Penetrant, 7=Tactique, 8=Assassin
+// Famille d'arme : 1=Impact (inclut mains nues), 2=Trad, 3=Resonance, 4=Laser, 5=Assaut, 6=Penetrant, 7=Tactique, 8=Assassin
 int Ov_GetWeaponFamily(int nBI)
 {{
-    if (nBI == 0 || nBI == 1 || nBI == 78 || nBI == 93 || nBI == 104) return 1;
+    if (nBI == -1 || nBI == 0 || nBI == 1 || nBI == 78 || nBI == 93 || nBI == 104 || nBI == 115) return 1;
     if (nBI == 2 || nBI == 4 || nBI == 6 || nBI == 79 || nBI == 80 || nBI == 105) return 2;
     if (nBI == 3 || nBI == 5 || nBI == 7 || nBI == 106) return 3;
     if (nBI == 8 || nBI == 9 || nBI == 10 || nBI == 107) return 4;
@@ -298,7 +298,7 @@ void Ov_RefreshPassives(object oTarget)
     object oRight = GetItemInSlot(INVENTORY_SLOT_RIGHTWEAPON, oTarget);
     object oLeft  = GetItemInSlot(INVENTORY_SLOT_LEFTWEAPON, oTarget);
     int nBI = GetIsObjectValid(oRight) ? GetBaseItemType(oRight) : -1;
-    int nFam = (nBI >= 0) ? Ov_GetWeaponFamily(nBI) : 0;
+    int nFam = Ov_GetWeaponFamily(nBI);
     int bRanged = (nBI >= 0) ? Ov_IsRangedBaseItem(nBI) : FALSE;
 
     int nStr = GetAbilityModifier(ABILITY_STRENGTH, oTarget);
@@ -610,24 +610,24 @@ void Ov_OnDamageHook(object oVictim)
 
     if (GetIsDead(oVictim)) return;
 
-    // 2. Procs des 8 Specialisations d'arme (Rangs II & III)
+    // 2. Procs des 8 Specialisations d'arme (Rangs II & III) - mains nues = famille 1 (Impact)
     object oW = GetItemInSlot(INVENTORY_SLOT_RIGHTWEAPON, oAtk);
-    if (!GetIsObjectValid(oW)) return;
-    int nBI = GetBaseItemType(oW);
+    int nBI = GetIsObjectValid(oW) ? GetBaseItemType(oW) : -1;
     int nFam = Ov_GetWeaponFamily(nBI);
     if (nFam == 0) return;
 
     int nLvl = GetHitDice(oAtk);
-    int nStat = Ov_IsRangedBaseItem(nBI)
+    int bIsRanged = (nBI >= 0) ? Ov_IsRangedBaseItem(nBI) : FALSE;
+    int nStat = bIsRanged
         ? GetAbilityModifier(ABILITY_DEXTERITY, oAtk)
         : GetAbilityModifier(ABILITY_STRENGTH, oAtk);
     int nTree = Ov_GetActiveCaracTree(oAtk);
-    if (nTree == 2 && !Ov_IsRangedBaseItem(nBI))
+    if (nTree == 2 && !bIsRanged)
     {{
         int nD = GetAbilityModifier(ABILITY_DEXTERITY, oAtk);
         if (nD > nStat) nStat = nD;
     }}
-    else if (nTree == 4 && Ov_IsRangedBaseItem(nBI) && GetHasFeat(OV_GAN_2, oAtk))
+    else if (nTree == 4 && bIsRanged && GetHasFeat(OV_GAN_2, oAtk))
     {{
         int nI = GetAbilityModifier(ABILITY_INTELLIGENCE, oAtk);
         if (nI > nStat) nStat = nI;
