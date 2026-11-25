@@ -18,13 +18,13 @@
 
 ## Catalogue des Armes (Mêlée, Sabres & Distance)
 
-> **Principe d'équilibre entre familles :** Les familles qui disposent de **moins d'emplacements d'amélioration** (1 ou 2 au lieu de 3) compensent cette limite par des **dégâts de base plus élevés**, une **plage de critique plus large** ou un **multiplicateur de critique `×3`**.
+> **Principe d'équilibre entre familles :** Les familles qui disposent de **moins d'emplacements d'amélioration** (1 ou 2 au lieu de 3) compensent cette limite par des **dégâts de base plus élevés**, une **plage de critique plus large** ou un **multiplicateur de critique `×3`**. Les bonus de dégâts bruts des armes nommées / loot sont plafonnés par palier (**`+2`** en T1–14, **`+1d4` / `+3`** en T15–22, **`+1d6` / `+4`** en T23–30) tout en préservant leurs effets uniques, et les **6 reliques légendaires de fin de jeu** (*Arg'garok*, *Épée de Freyyr*, *Bâton électrique géonosien*, *Blaster de Freedon Nadd*, *Fusil automatique zabrak*, *Fusil à répétition d'Ondéron*) restent non modifiables à l'établi avec un bonus plafonné à **`+1d8` / `+1d10`**.
 
 ### Armes de Mêlée & Sabres Laser
 
 | Arme | Famille | Maniement | Dégâts | Critique | Emplacements d'amélioration |
 | :--- | :--- | :---: | :--- | :---: | :--- |
-| **Mains nues** | Impact | 1M | Physique `1d6` *(progresse auto)* | `19-20, ×2` | Aucun *(compte comme 1M pour Duel)* |
+| **Mains nues** | Impact | 1M | Physique `1d6` *(+Spé mains nues I–III : `+1d4/+2d4/+3d4` aux Niv. 4/12/19 ou Prestige 4)* | `19-20, ×2` | Aucun *(compte comme 1M pour Duel)* |
 | **Matraque paralysante** | Impact | 1M *(équil.)* | Contondant `1d8` | `18-20, ×2` | Poignée |
 | **Bâton** | Impact | Double *(équil.)* | Contondant `1d8` | `19-20, ×2` | Poignée |
 | **Pique de Force** | Impact | **2M** | Contondant `2d8` | `20, ×3` | Poignée |
@@ -47,11 +47,11 @@
 | **Pistolet blaster** | Tir d'Assaut | 1M *(équil.)* | 23 m | Énergie `1d10` | `19-20, ×2` | — | Lunette, Pack |
 | **Carabine blaster** | Tir d'Assaut | **2M** | 25 m | Énergie `1d12` | `19-20, ×2` | — | Lunette, Pack |
 | **Blaster à répétition** | Tir d'Assaut | Répétition *(équil.)* | 28 m | Énergie `2d6` | `20, ×2` | — | Lunette, Pack |
-| **Blaster lourd** | Tir Pénétrant | 1M | 23 m | Énergie `1d10` | `19-20, ×2` | — | Lunette, Pack, Chambrage |
+| **Blaster lourd** | Tir Pénétrant | 1M | 23 m | Énergie `1d12` | `19-20, ×2` | — | Lunette, Pack, Chambrage |
 | **Fusil blaster** | Tir Pénétrant | **2M** | 28 m | Énergie `1d12` | `19-20, ×2` | — | Lunette, Pack, Chambrage |
 | **Arbalète wookie** | Tir Pénétrant | **2M** | 28 m | Énergie `1d10` | `20, ×3` | — | Lunette, Pack, Chambrage |
 | **Blaster lourd à répétition** | Tir Pénétrant | Répétition *(équil.)* | 28 m | Énergie `2d6` | `20, ×2` | — | Lunette, Pack, Chambrage |
-| **Blaster de poche** | Tir Assassin | 1M *(équil.)* | 23 m | Énergie `1d8` | `19-20, ×2` | Critiques massifs `+1d8` | Lunette, Pack |
+| **Blaster de poche** | Tir Assassin | 1M *(équil.)* | 23 m | Énergie `1d6` | `19-20, ×2` | Critiques massifs `+1d8` | Lunette, Pack |
 | **Pistolet disrupteur** | Tir Assassin | 1M | 23 m | Imparable `1d10` | `18-20, ×2` | Ignore la RD | Lunette, Pack |
 | **Fusil disrupteur** | Tir Assassin | **2M** | 28 m | Imparable `1d12` | `18-20, ×3` | Ignore la RD | Lunette, Pack |
 | **Pistolet à ions** | Tir Tactique | 1M *(équil.)* | 17 m | Ion `1d10` | `19-20, ×3` | `+1d10` vs Droïdes | Lunette |
@@ -96,9 +96,9 @@ Dans le jeu de base, on pouvait empiler des bonus de dégâts bruts sur chaque e
 1. **Toutes les armes de base (hors Sabres Laser) sont fabricables dès le niveau 1 !**
    - 18 nouvelles recettes ont été ajoutées à l'établi (seuils de *Réparation* de 2 à 8) : *Épée courte*, *Matraque paralysante*, *Bâton*, *Vibrolame*, *Double-lame*, *Hache gamorréenne*, *Pique de Force*, *Lame de guerre wookie*, *Pistolet blaster*, *Pistolet à ions*, *Pistolet sonique*, *Pistolet disrupteur*, *Blaster lourd*, *Carabine blaster*, *Fusil à ions*, *Fusil sonique*, *Arbalète wookie* et *Blaster lourd à répétition*.
    - Vous n'êtes plus dépendant du hasard du butin pour jouer la famille d'arme de votre choix dès Péragus ou Télos !
-2. **24 nouvelles recettes d'améliorations doubles pour Armures Intermédiaires**
-   - **12 Sur-couches doubles** (*Ablative*, *Balistique*, *Tactique*, *Environnementale* — en Mk I, II et III, via *Réparation* 6 / 14 / 22).
-   - **12 Sous-couches doubles** (*Bio-renforcée*, *Duracier fortifié*, *Articulations tactiques*, *Bio-environnementale* — en Mk I, II et III, via *Premiers secours* 6 / 14 / 22).
+2. **60 améliorations d'armures retravaillées à l'établi**
+   - **30 Sous-couches** (*6 lignées T1→T5*) : 15 communes accessibles dès les Armures Légères (*Anti-environnement*, *Bio-restaurative*, *Fortificatrice*) et 15 blindées pour Armures Lourdes & Intermédiaires (*Renforçante*, *Flexible*, *Duracier*).
+   - **30 Sur-couches renforcées exclusives aux Armures Intermédiaires** (*8 lignées T1→T4*) combinant immunités croisées, sauvegardes, discrétion, immunités aux effets de contrôle et renforts défensifs.
 3. **Verrou de niveau du personnage à l'établi**
    - Dans le jeu de base, monter ses compétences tôt permettait de fabriquer des pièces de fin de jeu dès les premières planètes. Désormais, les recettes d'améliorations, boucliers et roquettes se débloquent progressivement selon le **niveau de votre personnage** :
      - **Mk I** : **Niveau 1**

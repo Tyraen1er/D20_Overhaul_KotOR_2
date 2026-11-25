@@ -12,10 +12,10 @@ Le mod redéfinit **chaque type d'armure** autour d'un rôle précis, avec une *
 
 | Catégorie | CA de base *(avant → après)* | Plafond DEX *(avant → après)* | RD native *(Physique & Énergie)* | Emplacements à l'établi | Pouvoirs de Force autorisés |
 | :--- | :---: | :---: | :---: | :--- | :--- |
-| **Bures & Tenues** *(sans armure)* | `0` *(inchangé)* | Illimité *(sauf bures restrictives +5)* | **0** | Aucun *(0 emplacement)* | **Tous les pouvoirs** |
-| **Armure Légère** | `4–5` → **`6–7`** | `+4/+5` → **`+7 à +10`** | **0** | **1 emplacement** : Sur-couche standard uniquement | Pouvoirs autorisés en légère *(bloque Vitesse, Armure de Force, Stase, Tempête, Mise à mort, Absorption de vie)* |
-| **Armure Intermédiaire** | `6–7` → **`5–6`** | `+2/+3` → **`+3 à +6`** | **RD `2/-`** | **2 emplacements exclusifs** : Sur-couche + Sous-couche **combinées** | Pouvoirs autorisés en intermédiaire *(Soins, Revitalisation, Barrière, Résistance Énergie, Peste, Poussée/Vague, Méditation, Grâce LS…)* |
-| **Armure Lourde** | `8–9` → **`7–8`** | `0/+1` → **`0 à +2`** | **RD `4/-`** | **1 emplacement** : Sous-couche standard uniquement | Pouvoirs autorisés en lourde *(Corps de Force, Lancer de sabre, Résistance Force, Absorption Force, Parade/Renvoi, Ultimes de prestige)* |
+| **Bures & Tenues** *(sans armure)* | `0` *(inchangé)* | Illimité *(sauf bures restrictives +5)* | **0** | Aucun *(0 emplacement)* | **Tous les pouvoirs** *(défense dépendant des buffs temporaires : Armure de Force, Vitesse, Talent)* |
+| **Armure Légère** | `4–5` → **`4–5`** | `+4/+5` → **`+14 à +16`** | **0** | **1 emplacement** : Sous-couche légère uniquement *(15 pièces)* | Pouvoirs autorisés en légère *(bloque Vitesse, Armure de Force, Stase, Tempête, Mise à mort, Absorption de vie)* |
+| **Armure Intermédiaire** | `6–7` → **`6–7`** | `+2/+3` → **`+3 à +4`** | **RD `2/-`** | **2 emplacements** : Sous-couche complète *(identique Lourde)* + **Sur-couche exclusive renforcée** *(30 pièces)* | Pouvoirs autorisés en intermédiaire *(Soins, Revitalisation, Barrière, Résistance Énergie, Peste, Poussée/Vague, Méditation, Grâce LS…)* |
+| **Armure Lourde** | `8–9` → **`10–11`** | `0/+1` → **`+0 à +1`** | **RD `4/-`** | **1 emplacement** : Sous-couche complète *(30 pièces)* | Pouvoirs autorisés en lourde *(Corps de Force, Lancer de sabre, Résistance Force, Absorption Force, Parade/Renvoi, Ultimes de prestige)* |
 
 > **Fin des passe-droits sur les armures légères :** les **Combinaisons Ubese / de vol blindées** et les **Armures Zeison Sha / Jal Shey** ne bénéficient plus de leur passe-droit du jeu de base — elles suivent désormais exactement les mêmes restrictions de pouvoirs de la Force que toutes les autres armures légères.
 
@@ -25,10 +25,10 @@ Le mod redéfinit **chaque type d'armure** autour d'un rôle précis, avec une *
 
 ## Pourquoi les armures intermédiaires ont-elles des améliorations exclusives ?
 
-Les armures intermédiaires incarnent l'**armure technologique et tactique** par excellence : là où les armures légères privilégient la souplesse et les armures lourdes le blindage brut, leur châssis modulaire est conçu pour accueillir des composants avancés. Concrètement, chaque catégorie s'améliore différemment à l'établi :
-- **Armures Légères (1 emplacement — Sur-couche standard)** : accès aux 18 sur-couches standards (Défense, esquive, résistances élémentaires, compétences).
-- **Armures Lourdes (1 emplacement — Sous-couche standard)** : accès aux 18 sous-couches standards (RD physique, FOR/CON, régénération, immunité critiques/drain).
-- **Armures Intermédiaires (2 emplacements — Améliorations combinées exclusives)** : sans aucun don requis, le simple fait de porter une armure intermédiaire vous permet d'y installer **une sur-couche double ET une sous-couche double** (24 pièces exclusives qui combinent les effets de deux améliorations classiques). C'est l'armure technologique et polyvalente par excellence !
+Les armures intermédiaires incarnent l'**armure technologique et tactique** par excellence : là où les armures légères privilégient la souplesse et les armures lourdes le blindage brut, leur châssis modulaire accueille deux composants complémentaires. Concrètement, chaque catégorie s'améliore différemment à l'établi :
+- **Armures Légères (1 emplacement — Sous-couche légère)** : accès aux **15 sous-couches légères** (*Anti-environnement*, *Bio-restaurative*, *Fortificatrice*).
+- **Armures Lourdes (1 emplacement — Sous-couche complète)** : accès aux **30 sous-couches** (*communes* + *Renforçante FOR/CON*, *Flexible DEX max*, *Duracier Physique*).
+- **Armures Intermédiaires (2 emplacements — Sous-couche complète + Sur-couche exclusive renforcée)** : sans aucun don requis, l'armure intermédiaire partage **les mêmes 30 sous-couches que l'armure lourde** et dispose en plus de l'exclusivité des **30 sur-couches renforcées** (*8 lignées* combinant résistances/immunités croisées, sauvegardes, discrétion, immunités aux effets de contrôle et renforts défensifs). C'est l'armure polyvalente et modulable par excellence !
 
 ---
 

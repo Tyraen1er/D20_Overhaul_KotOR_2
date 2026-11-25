@@ -248,14 +248,26 @@ Le vide que porte l'Exilé agit sur la Force comme une gravité silencieuse : to
 209,ECHANI_STRIKE_I,Frappe echani I,Compagnon / PNJ,,Bonus de combat (Servante),,,
 210,ECHANI_STRIKE_II,Frappe echani II,Compagnon / PNJ,ECHANI_STRIKE_I,Bonus accru,,,
 211,ECHANI_STRIKE_III,Frappe echani III,Compagnon / PNJ,ECHANI_STRIKE_I ; ECHANI_STRIKE_II,Bonus maximal,,,
-212,UNARMED_SPECIALIST_I,Spécialiste mains nues I,Classe (auto),,Dégâts à mains nues accrus (progression auto),,,
-213,UNARMED_SPECIALIST_II,Spécialiste mains nues II,Classe (auto),UNARMED_SPECIALIST_I,Dégâts à mains nues accrus (progression auto),,,
-214,UNARMED_SPECIALIST_III,Spécialiste mains nues III,Classe (auto),UNARMED_SPECIALIST_I ; UNARMED_SPECIALIST_II,Dégâts à mains nues accrus (progression auto),,,
-215,UNARMED_SPECIALIST_IV,Spécialiste mains nues IV,Classe (auto),,Dégâts à mains nues accrus (progression auto),,,
-216,UNARMED_SPECIALIST_V,Spécialiste mains nues V,Classe (auto),UNARMED_SPECIALIST_IV,Dégâts à mains nues accrus (progression auto),,,
-217,UNARMED_SPECIALIST_VI,Spécialiste mains nues VI,Classe (auto),UNARMED_SPECIALIST_IV ; UNARMED_SPECIALIST_V,Dégâts à mains nues accrus (progression auto),,,
-218,UNARMED_SPECIALIST_VII,Spécialiste mains nues VII,Classe (auto),,Dégâts à mains nues accrus (progression auto),,,
-219,UNARMED_SPECIALIST_VIII,Spécialiste mains nues VIII,Classe (auto),UNARMED_SPECIALIST_VII,Dernier palier de dégâts à mains nues,,,
+212,UNARMED_SPECIALIST_I,Spécialiste mains nues I,Classe (auto),,Dégâts à mains nues accrus (progression auto),Calibrage mod (B4-1) : +1d4 dégâts à mains nues (auto Niv. 4 base / Niv. 1 prestige / Servante & Bao-Dur Niv. 4),,"[Mod D20-Overhaul]
+
+Conditions : Jedi, Servante ou Bao-Dur niveau 4 (accordé automatiquement).
+
+Spécialement formé au combat à mains nues, le personnage inflige +1d4 points de dégâts supplémentaires à toutes ses attaques sans arme."
+213,UNARMED_SPECIALIST_II,Spécialiste mains nues II,Classe (auto),UNARMED_SPECIALIST_I,Dégâts à mains nues accrus (progression auto),Calibrage mod (B4-1) : +2d4 dégâts à mains nues (auto Niv. 12 base / Niv. 1 prestige / Servante & Bao-Dur Niv. 12),,"[Mod D20-Overhaul]
+
+Conditions : Jedi, Servante ou Bao-Dur niveau 12 (accordé automatiquement).
+
+Spécialement formé au combat à mains nues, le personnage inflige +2d4 points de dégâts supplémentaires à toutes ses attaques sans arme (remplace Spécialiste mains nues I)."
+214,UNARMED_SPECIALIST_III,Spécialiste mains nues III,Classe (auto),UNARMED_SPECIALIST_I ; UNARMED_SPECIALIST_II,Dégâts à mains nues accrus (progression auto),Calibrage mod (B4-1) : +3d4 dégâts à mains nues — plafond final (auto Niv. 19 base / Niv. 4 prestige / Servante & Bao-Dur Niv. 19),,"[Mod D20-Overhaul]
+
+Conditions : Jedi, Servante ou Bao-Dur niveau 19 — ou classe de prestige niveau 4 (accordé automatiquement).
+
+Palier final de maîtrise du combat à mains nues : le personnage inflige +3d4 points de dégâts supplémentaires à toutes ses attaques sans arme (remplace Spécialiste mains nues II)."
+215,UNARMED_SPECIALIST_IV,Spécialiste mains nues IV,Classe (auto),,Dégâts à mains nues accrus (progression auto),Supprimé (progression plafonnée au Rang III : +3d4 max),,
+216,UNARMED_SPECIALIST_V,Spécialiste mains nues V,Classe (auto),UNARMED_SPECIALIST_IV,Dégâts à mains nues accrus (progression auto),Supprimé (progression plafonnée au Rang III : +3d4 max),,
+217,UNARMED_SPECIALIST_VI,Spécialiste mains nues VI,Classe (auto),UNARMED_SPECIALIST_IV ; UNARMED_SPECIALIST_V,Dégâts à mains nues accrus (progression auto),Supprimé (progression plafonnée au Rang III : +3d4 max),,
+218,UNARMED_SPECIALIST_VII,Spécialiste mains nues VII,Classe (auto),,Dégâts à mains nues accrus (progression auto),Supprimé (progression plafonnée au Rang III : +3d4 max),,
+219,UNARMED_SPECIALIST_VIII,Spécialiste mains nues VIII,Classe (auto),UNARMED_SPECIALIST_VII,Dernier palier de dégâts à mains nues,Supprimé (progression plafonnée au Rang III : +3d4 max),,
 220,SHIELD_BREAKER,Brise-bouclier,Compagnon / PNJ,,HK-47 — attaque vs boucliers (interne),,,
 221,REPULSOR_STRIKE,Frappe répulseur,Compagnon / PNJ,,HK-47 — renversement sur impact (interne),,,
 222,ELECTRICAL_STRIKE,Frappe électrique,Compagnon / PNJ,REPULSOR_STRIKE,HK-47 — dégâts ioniques sur impact (interne),,,

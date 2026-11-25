@@ -165,7 +165,8 @@ ALL_LIST_COLS = [
     "tec_list", "drx_list", "drc_list",
 ]
 ALL_GRANT_COLS = [c.replace("_list", "_granted") for c in ALL_LIST_COLS] + [
-    "jcn_pc_granted", "jgd_pc_granted", "jsn_pc_granted"
+    "jcn_pc_granted", "jgd_pc_granted", "jsn_pc_granted",
+    "handmaiden", "baodur",
 ]
 
 MARTIAL_PRESTIGE = ["jwm_list", "sma_list"]
@@ -330,6 +331,26 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
             feat.get_row(fid).set_string("description", str(desc_ref))
             vanilla_desc_updated += 1
 
+    # 1b. Calibrage B4-1 : Spécialiste combat à mains nues plafonné au Rang III (+3d4) et harmonisé Prestige
+    #     Base Jedi / Servante / Bao-Dur : Niv. 4 / 12 / 19 ; Classes de prestige : Niv. 1 / 1 / 4 (= Niv. 19 total)
+    #     (Rangs IV-VIII lignes 215-219 déjà masqués + colonnes granted/handmaiden/baodur vidées via "Supprimé" ci-dessus.)
+    unarmed_schedule = {
+        212: (4, 1),   # UNARMED_SPECIALIST_I (+1d4)
+        213: (12, 1),  # UNARMED_SPECIALIST_II (+2d4)
+        214: (19, 4),  # UNARMED_SPECIALIST_III (+3d4 — plafond final)
+    }
+    base_jedi_grants = ("jcn_granted", "jgd_granted", "jsn_granted", "handmaiden", "baodur")
+    prestige_grants = ("sas_granted", "sld_granted", "sma_granted", "jwa_granted", "jma_granted", "jwm_granted")
+    for fid, (base_lvl, prest_lvl) in unarmed_schedule.items():
+        if fid < len(feat):
+            frow = feat.get_row(fid)
+            for c in base_jedi_grants:
+                if c in feat.get_headers():
+                    frow.set_string(c, str(base_lvl))
+            for c in prestige_grants:
+                if c in feat.get_headers():
+                    frow.set_string(c, str(prest_lvl))
+
     # 2. Ajouter les 73 nouveaux dons à partir de l'index 245+
     feat_ids: dict[str, int] = {}
     new_rows_data: list[tuple[int, list[str]]] = []
@@ -412,14 +433,14 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
 # ============================================================================
 
 ARMOR_BASEITEM_MAP = {
-    "Armor_Class_4": (6, 10),
-    "Armor_Class_5": (7, 8),
-    "Armor_Class_6": (5, 6),
-    "Armor_Class_7": (6, 4),
-    "Armor_Class_8": (7, 2),
-    "Armor_Class_9": (8, 0),
-    "Armor_Armd_Flight_Suit": (6, 9),
-    "Armor_Zeison_Sha": (6, 10),
+    "Armor_Class_4": (4, 16),
+    "Armor_Class_5": (5, 14),
+    "Armor_Class_6": (6, 4),
+    "Armor_Class_7": (7, 3),
+    "Armor_Class_8": (10, 1),
+    "Armor_Class_9": (11, 0),
+    "Armor_Armd_Flight_Suit": (5, 15),
+    "Armor_Zeison_Sha": (4, 16),
 }
 
 GAMORREAN_MIRROR_LABELS = [
@@ -435,7 +456,18 @@ GAMORREAN_MIRROR_LABELS = [
     "Sonic_Rifle",
     "Ion_Rifle",
     "Bowcaster",
+    "Vibro_Sword",
+    "Gammorean_Battleaxe",
+    "Force_Pike",
+    "Wookie_Warblade",
 ]
+
+# Armes de mêlée 2M non-doubles (Armes.csv) : main droite uniquement (0x00010), 1 attaque/rd (wield=2), taille 2M (4)
+MELEE_2H_BASEITEMS = (
+    "Vibro_Sword",
+    "Gammorean_Battleaxe",
+    "Force_Pike",
+)
 
 
 WEAPON_CSV_TO_BASEITEM = {
@@ -508,6 +540,15 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
             brow.set_string("critthreat", str(threat))
             brow.set_string("crithitmult", m_crit.group(2))
         weap_updated += 1
+
+    # 2a. Maniement 2M des armes de mêlée lourdes (Vibro_Sword, Gammorean_Battleaxe, Force_Pike) :
+    #     equipableslots=0x00010 (bloque la main gauche sans Gamoréen II), weaponwield=2 (1 att/rd, pas double), weaponsize=4.
+    for lbl in MELEE_2H_BASEITEMS:
+        if lbl in by_label:
+            brow = bi.get_row(by_label[lbl])
+            brow.set_string("equipableslots", "0x00010")
+            brow.set_string("weaponwield", "2")
+            brow.set_string("weaponsize", "4")
 
     # 2b. Compatibilité K2CP : Creature_Item_Slash (row 81) + Mining_Laser (row 104) & Adv_Mining_Laser (row 105)
     # Placés AVANT nos variantes 1M afin que leurs index (104, 105) coïncident exactement avec K2CP v1.6.3.
@@ -700,6 +741,7 @@ def build_itemcreate() -> TwoDA:
     ic = read_2da(REF_2DA / "itemcreate_tslrcm.2da")
     by_label = {ic.get_row(i).get_string("label").lower(): i for i in range(len(ic))}
     rows = read_csv_rows(CSV_CRAFT)
+    mod_idx = rows[0].index("Changement (mod)") if rows and "Changement (mod)" in rows[0] else 9
     updated = 0
     added = 0
     seen_new: set[str] = set()
@@ -709,11 +751,11 @@ def build_itemcreate() -> TwoDA:
         resref = r[0].strip().lower()
         if not resref or resref.startswith("—"):
             continue
-        # Éviter le doublon c01..c12 (on garde u_a_over_19..30 / u_a_unde_19..30)
+        # Éviter tout doublon c01..c12
         if "_c0" in resref or "_c1" in resref:
             continue
-        lvl_txt = r[4].strip() if len(r) > 4 else ""
-        m_lvl = re.search(r"(\d+)", lvl_txt)
+        lvl_txt = r[mod_idx].strip() if len(r) > mod_idx else ""
+        m_lvl = re.search(r"Niv\.\s*(\d+)", lvl_txt, re.I)
         lvl = int(m_lvl.group(1)) if m_lvl else 0
         if lvl == 1:
             lvl = 0  # Niv. 1+ = disponible dès le début (0 dans itemcreate.2da)

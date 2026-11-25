@@ -103,7 +103,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 *Exception assumée (15/11)* : le `mult. crit. +1` du Tir Assassin touche au critique malgré le principe « les Spé ne touchent pas au critique » — c'est LA spécialité sournoise, et elle n'empiète pas sur Duel (multiplicateur ≠ plage).
 
-**C. Mains nues** (révisé 24/11) : la branche dédiée (*Arts Martiaux / Arts Mutaki*) reste **supprimée**. Les mains nues appartiennent désormais à la famille **Armes d'Impact** (accès à *Spécialisation Arme d'Impact I–III* et au Renversement), en plus de la **posture Duel** (les poings comptent comme arme 1M), de la chaîne vanilla *Spécialiste mains nues* I–VIII et des Spé de caractéristique (Matukai).
+**C. Mains nues** (révisé 24/11) : la branche dédiée (*Arts Martiaux / Arts Mutaki*) reste **supprimée**. Les mains nues appartiennent désormais à la famille **Armes d'Impact** (accès à *Spécialisation Arme d'Impact I–III* et au Renversement), en plus de la **posture Duel** (les poings comptent comme arme 1M), de la chaîne *Spécialiste mains nues* **plafonnée au Rang III (`+1d4 / +2d4 / +3d4` aux Niv. 4 / 12 / 19 base ou Niv. 4 prestige ; Rangs IV–VIII supprimés)** et des Spé de caractéristique (Matukai).
 
 **D. L'axe distance/mêlée** : parité de viabilité, asymétrie de coûts — chaque posture/famille distance atteint les cibles DPR du §9 par son propre chemin (`100 % / 50 % DEX` en `1M`/`D`, `150 % → 250 % DEX` via Arme Lourde `2M`, `INT` via Gand II, utilitaires via les familles de tir) ; la mêlée paie en défense et approche, la distance paie en contreurs (boucliers d'énergie, déflexion). Équilibrage fin par le chantier ennemis.
 
@@ -160,15 +160,17 @@ Notes d'équilibrage : la transfusion Krayt échange invariablement **25 % PV �
 
 Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`](decisions_annexes.md#1-armures--recherche-et-justifications) :
 
-**A. Règles natives sans don (par catégorie d'armure)** — recalibrage CA & plafonds DEX du 22/11 (source : *Armures.csv*) : **Légère `6–7` (DEX `7–10`)**, **Intermédiaire `5–6` (DEX `3–6`)**, **Lourde `7–8` (DEX `0–2`)** *(hors Techniques Echanis III §5 qui supprime le plafond)*. **RD native lourde = `4/-`, intermédiaire = `2/-` ; refonte des 30 sur-couches et 30 sous-couches en 18 standards (`01..18`) + 12 combinées (`19..30`, exclusives intermédiaires via `UpgradeLevel`).**
+**A. Règles natives sans don (par catégorie d'armure)** — recalibrage CA & plafonds DEX (source : *Armures.csv*) *(hors Techniques Echanis III §5 qui supprime le plafond)*. **RD native lourde = `4/-`, intermédiaire = `2/-` ; refonte des 60 améliorations d'armures (`30` sous-couches `u_a_unde_01..30` + `30` sur-couches `u_a_over_01..30`, acté 24/11) :**
 
-| Type | CA base | Plafond DEX | **RD Physique & Énergie native** | **Accès Établi (cible refonte upgrades)** |
+| Type | CA base | Plafond DEX | **RD Physique & Énergie native** | **Accès Établi (`UpgradeLevel` 0 / 1 / 2 / 6)** |
 | :--- | :---: | :---: | :---: | :--- |
-| Légère | **6–7** | **+7 à +10** | **0** | **1 seul slot** : Sur-couche (*overlay*) standard uniquement (`01..18`) |
-| Intermédiaire | **5–6** | **+3 à +6** | **RD 2** | **2 slots exclusifs** : **Upgrades combinées** (1 sur-couche + 1 sous-couche combinant chacune 2 upgrades communes, `19..30`, via `UpgradeLevel` dédié, sans don requis) |
-| Lourde | **7–8** | **+0 à +2** | **RD 4** | **1 seul slot** : Sous-couche (*underlay*) standard uniquement (`01..18`) |
+| Légère | **4–5** | **+14 à +16** *(AC4/ZS `4/+16`, Ubese `5/+15`, AC5 `5/+14`)* | **0** | **1 seul slot** (`ulvl 1`) : **15 Sous-couches communes** (*Anti-environnement*, *Bio-restaurative*, *Fortificatrice*) |
+| Intermédiaire | **6–7** | **+3 à +4** *(AC6 `6/+4`, AC7 `7/+3`)* | **RD 2** | **2 slots** (`ulvl 6`) : **30 Sous-couches communes** *(identiques Lourde)* + **30 Sur-couches exclusives renforcées** (*8 lignées* compensant le retrait des sous-couches doubles) |
+| Lourde | **10–11** | **+0 à +1** *(AC8 `10/+1`, AC9 `11/+0`)* | **RD 4** | **1 seul slot** (`ulvl 2`) : **30 Sous-couches complètes** (*communes + Renforçante, Flexible, Duracier*) |
 
-*Note technique (17–18/11)* : `swkotor2.exe` limite en dur les armures à **1 slot sur-couche + 1 slot sous-couche** (impossible d'ajouter des slots séparés sans patch binaire). Attribuer le `UpgradeLevel` maximal uniquement aux `.uti` d'armures intermédiaires et aux pièces combinées réserve nativement ces dernières aux armures intermédiaires sur simple critère de type d'armure ; à l'inverse, le slot non autorisé des armures légères (sous-couche) et lourdes (sur-couche) est verrouillé pour n'offrir qu'**1 seul emplacement d'upgrade** sur chacune.
+*Hiérarchie CA validée (25/11/2026)* : **Nue** : Légère (`19–20`) > Lourde (`11`) > Intermédiaire (`10`) · **En jeu (upgradée + dons + buffs)** : Légère (`+Esquive Bal.`) ≈ Bure *full buff* (*Armure +6, Vitesse +4, Talent +2*) > Moyenne upgradée (`+2 CA Sur-couche +2 DEX Flexible + Armure Tactique`) > Lourde (`RD 11/- + 30 % imm.`). Sans ses buffs temporaires, la Bure chute sous la Moyenne upgradée (viabilité conditionnée aux buffs).
+
+*Note technique (17–24/11)* : `swkotor2.exe` limite en dur les armures à **1 slot sur-couche (`upgradetype 10`) + 1 slot sous-couche (`upgradetype 11`)** et vérifie linéairement `upgrade.UpgradeLevel <= item.UpgradeLevel` (`0x4cbcd0`). En plaçant les sous-couches légères à `1`, les sous-couches blindées à `2`, et **toutes les 30 sur-couches à `6`**, les armures légères (`1`) et lourdes (`2`) n'ont chacune accès qu'à 1 slot (Sous-couche, avec pool réduit sur Légère et complet sur Lourde), tandis que les armures intermédiaires (`6`) partagent le pool complet de sous-couches de la Lourde et détiennent l'exclusivité absolue des 30 sur-couches renforcées (sans aucun don requis).
 
 **B. Trois arbres de dons** (3 dons chacun, arbitrage du 17/11 — source : *spé Armure.csv*) :
 

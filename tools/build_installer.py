@@ -197,13 +197,13 @@ def build_installer() -> None:
         baseitem_row_to_mem[bi_idx] = next_mem_id
         next_mem_id += 1
 
-    # Repérer l'index du don MOD_HEAVY_WEAPON_2 dans feat.2da pour le lier via 2DAMEMORY
+    # Repérer l'index du don MOD_GAMORREAN_2 dans feat.2da pour le lier via 2DAMEMORY (reqfeat0 des variantes 1M)
     ref_feat = read_2da(REF_2DA / "feat_tslrcm.2da")
     mod_feat = read_2da(OVR_DIR / "feat.2da")
     feat_row_to_mem: dict[int, int] = {}
     gam2_feat_idx: int | None = None
     for f_idx in range(len(ref_feat), len(mod_feat)):
-        if mod_feat.get_row(f_idx).get_string("label") == "MOD_HEAVY_WEAPON_2":
+        if mod_feat.get_row(f_idx).get_string("label") in ("MOD_GAMORREAN_2", "MOD_GAMORRAN_2"):
             gam2_feat_idx = f_idx
             feat_row_to_mem[f_idx] = next_mem_id
             next_mem_id += 1

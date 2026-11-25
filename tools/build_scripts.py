@@ -18,6 +18,8 @@ import shutil
 import subprocess
 from pathlib import Path
 
+from pykotor.resource.formats.twoda import read_2da
+
 ROOT = Path(__file__).resolve().parent.parent
 REF_SCRIPTS = ROOT / "_reference" / "scripts"
 NWNNSSCOMP = ROOT / "_reference" / "autres_mods" / "Content Pack-57-1-67-1616632489" / "tslpatchdata" / "nwnnsscomp.exe"
@@ -26,6 +28,7 @@ SRC_DIR = OUT_DIR / "src"
 STAGE_DIR = OUT_DIR / "_compile_stage"
 OVR_DIR = OUT_DIR / "Override"
 FEAT_IDS_FILE = OUT_DIR / "feat_ids.json"
+MIRROR_MAP_FILE = OUT_DIR / "baseitem_1m_map.json"
 
 
 def _prepare_stage() -> None:
@@ -66,7 +69,81 @@ def compile_script(name: str, code: str) -> int:
     return size
 
 
+def _build_dynamic_baseitem_helpers() -> tuple[str, str, str]:
+    """Construit dynamiquement `Ov_GetArmorDexCap`, `Ov_GetWeaponFamily` et `Ov_IsHeavy2HBaseItem`
+    depuis `baseitems.2da` et `baseitem_1m_map.json` (zéro indice magique désynchronisable)."""
+    bi_path = OVR_DIR / "baseitems.2da"
+    bi = read_2da(bi_path) if bi_path.exists() else None
+    mirror_map: dict[str, int] = (
+        json.loads(MIRROR_MAP_FILE.read_text(encoding="utf-8"))
+        if MIRROR_MAP_FILE.exists()
+        else {}
+    )
+
+    # 1. Plafonds DEX exacts par baseitem d'armure/bure restrictive (pour Techniques Echanis III)
+    dex_cap_lines: list[str] = []
+    for bi_idx in (38, 39, 40, 41, 42, 43, 98, 99, 102):
+        if bi is not None and bi_idx < len(bi):
+            row = bi.get_row(bi_idx)
+            val = row.get_string("dexbonus").strip()
+            lbl = row.get_string("label").strip()
+            if val.isdigit():
+                dex_cap_lines.append(f"    if (nBase == {bi_idx}) return {int(val)}; // {lbl}")
+    dex_cap_body = "\n".join(dex_cap_lines)
+
+    # 2. Familles d'armes (1..8) : IDs vanilla + tous les baseitems custom de baseitem_1m_map.json
+    fam_ids: dict[int, list[int]] = {
+        1: [-1, 0, 1, 78, 93],         # Impact (mains nues, bâton, matraque, gaffi, pique)
+        2: [2, 4, 6, 79, 80],          # Traditionnelle (épées, hache gamorréenne, lame wookie)
+        3: [3, 5, 7],                  # Résonance (vibrolame, vibro-épée, vibro-double)
+        4: [8, 9, 10],                 # Laser (sabres)
+        5: [12, 20, 23],               # Tir d'Assaut (pistolet, carabine, répétition)
+        6: [13, 19, 24, 77],           # Tir Pénétrant (lourd, arbalète, lourd répét., fusil)
+        7: [15, 17, 18, 22],           # Tir Tactique (ions, soniques)
+        8: [14, 16, 21],               # Tir Assassin (poche, disrupteurs)
+    }
+    mirror_to_fam = {
+        "Plasma_Torch": 1,
+        "Quarter_Staff": 1,
+        "Force_Pike": 1,
+        "Double_Bladed_Sword": 2,
+        "Wookie_Warblade": 2,
+        "Gammorean_Battleaxe": 2,
+        "Vibro_Sword": 3,
+        "Vibro_Double_Blade": 3,
+        "Double_Bladed_Lightsaber": 4,
+        "Mining_Laser": 5,
+        "Blaster_Carbine": 5,
+        "Repeating_Blaster": 5,
+        "Adv_Mining_Laser": 6,
+        "Blaster_Rifle": 6,
+        "Heavy_Repeating_Blaster": 6,
+        "Bowcaster": 6,
+        "Sonic_Rifle": 7,
+        "Ion_Rifle": 7,
+        "Disrupter_Rifle": 8,
+    }
+    for lbl, bi_idx in sorted(mirror_map.items(), key=lambda kv: kv[1]):
+        fam = mirror_to_fam.get(lbl)
+        if fam is not None and bi_idx not in fam_ids[fam]:
+            fam_ids[fam].append(bi_idx)
+
+    fam_lines: list[str] = []
+    for fam in range(1, 9):
+        cond = " || ".join(f"nBI == {i}" for i in fam_ids[fam])
+        fam_lines.append(f"    if ({cond}) return {fam};")
+    fam_body = "\n".join(fam_lines)
+
+    # 3. Armes 2M non-doubles (Maniement d'Arme Lourde) : mêlée 2M (3, 80, 93) + fusils/carabines/arbalètes 2M
+    heavy_2h_ids = [3, 80, 93, 18, 19, 20, 21, 22, 77]
+    if "Adv_Mining_Laser" in mirror_map:
+        heavy_2h_ids.append(mirror_map["Adv_Mining_Laser"])
+    heavy_2h_cond = " || ".join(f"nBI == {i}" for i in heavy_2h_ids)
+    return dex_cap_body, fam_body, heavy_2h_cond
+
+
 def build_ov_inc_core(fids: dict[str, int]) -> str:
+    dex_cap_body, fam_body, heavy_2h_cond = _build_dynamic_baseitem_helpers()
     code = f'''//:: ov_inc_core - KotOR 2 Overhaul Core Library (Passe 2 : Passifs + Postures + Spe Armes + Ripostes)
 
 int OV_GAM_1 = {fids["MOD_GAMORREAN_1"]};
@@ -152,18 +229,21 @@ int Ov_GetArmorTier(object oTarget)
     return 0;
 }}
 
+// Plafond DEX reel lu dynamiquement depuis baseitems.2da (-1 si illimite)
+int Ov_GetArmorDexCap(object oTarget)
+{{
+    object oArmor = GetItemInSlot(INVENTORY_SLOT_BODY, oTarget);
+    if (!GetIsObjectValid(oArmor)) return -1;
+    int nBase = GetBaseItemType(oArmor);
+{dex_cap_body}
+    return -1;
+}}
+
 // Famille d'arme : 1=Impact (inclut mains nues), 2=Trad, 3=Resonance, 4=Laser, 5=Assaut, 6=Penetrant, 7=Tactique, 8=Assassin
-// Index baseitems custom : 104=Mining_Laser, 105=Adv_Mining_Laser, 106..116=Variantes 1M Gamoreen II, 117=Plasma_Torch
+// Inclut dynamiquement tous les baseitems custom de baseitem_1m_map.json
 int Ov_GetWeaponFamily(int nBI)
 {{
-    if (nBI == -1 || nBI == 0 || nBI == 1 || nBI == 78 || nBI == 93 || nBI == 106 || nBI == 117) return 1;
-    if (nBI == 2 || nBI == 4 || nBI == 6 || nBI == 79 || nBI == 80 || nBI == 107) return 2;
-    if (nBI == 3 || nBI == 5 || nBI == 7 || nBI == 108) return 3;
-    if (nBI == 8 || nBI == 9 || nBI == 10 || nBI == 109) return 4;
-    if (nBI == 12 || nBI == 20 || nBI == 23 || nBI == 104 || nBI == 111 || nBI == 112) return 5;
-    if (nBI == 13 || nBI == 19 || nBI == 24 || nBI == 77 || nBI == 105 || nBI == 110 || nBI == 113 || nBI == 116) return 6;
-    if (nBI == 15 || nBI == 17 || nBI == 18 || nBI == 22 || nBI == 114 || nBI == 115) return 7;
-    if (nBI == 14 || nBI == 16 || nBI == 21) return 8;
+{fam_body}
     return 0;
 }}
 
@@ -173,14 +253,16 @@ int Ov_IsRangedBaseItem(int nBI)
     return (nFam >= 5 && nFam <= 8);
 }}
 
+// Armes Doubles & a Repetition (Posture Arme haute cadence) : 0, 6, 7, 9, 23, 24, 78, 79 (Wookie_Warblade)
 int Ov_IsDoubleBaseItem(int nBI)
 {{
-    return (nBI == 0 || nBI == 6 || nBI == 7 || nBI == 9 || nBI == 23 || nBI == 24 || nBI == 78 || nBI == 93);
+    return (nBI == 0 || nBI == 6 || nBI == 7 || nBI == 9 || nBI == 23 || nBI == 24 || nBI == 78 || nBI == 79);
 }}
 
+// Armes 2M non-doubles (Posture Arme Lourde) : Vibro_Sword(3), Gammorean_Battleaxe(80), Force_Pike(93) + fusils 2M
 int Ov_IsHeavy2HBaseItem(int nBI)
 {{
-    return (nBI == 18 || nBI == 19 || nBI == 20 || nBI == 21 || nBI == 22 || nBI == 77 || nBI == 79 || nBI == 105);
+    return ({heavy_2h_cond});
 }}
 
 // Garde-fou de mutualite des 6 Spe Carac (LocalNumber 22 : 1=GAM, 2=ECH, 3=KRA, 4=GAN, 5=MAT, 6=NOM)
@@ -362,25 +444,36 @@ void Ov_RefreshPassives(object oTarget)
     else if (nFam == 8 && GetHasFeat(OV_SP_ASSASSIN_1, oTarget)) {{ nTotalAtk += 2; nTotalDmg += 2; }}
 
     // 4. Specialisations de Caracteristique (mutuellement exclusives via nTree)
-    if (nTree == 1) // Gamoreen
+    //    +1 / +2 / +3 a la caracteristique dediee de l'arbre (applique via EffectAbilityIncrease)
+    int nTreeAbil = -1;
+    int nTreeBonus = 0;
+    int nSkillAll = 0;
+    if (nTree == 1) // Gamoreen (FOR : +1/+2/+3 ; I: +1/2 mod FOR toutes competences ; II: 1M ; III: imm. mental)
     {{
+        nTreeAbil = ABILITY_STRENGTH;
+        nTreeBonus = GetHasFeat(OV_GAM_3, oTarget) ? 3 : (GetHasFeat(OV_GAM_2, oTarget) ? 2 : 1);
+        if (nStr > 0) nSkillAll += (nStr / 2);
         if (GetHasFeat(OV_GAM_3, oTarget)) bMindImm = TRUE;
     }}
-    else if (nTree == 2) // Echani (I: DEX Atq melee, II: DEX Dmg melee, III: leve plafond DEX armure)
+    else if (nTree == 2) // Echani (DEX : +1/+2/+3 ; I: DEX Atq melee ; II: DEX Dmg melee ; III: leve plafond DEX armure)
     {{
+        nTreeAbil = ABILITY_DEXTERITY;
+        nTreeBonus = GetHasFeat(OV_ECH_3, oTarget) ? 3 : (GetHasFeat(OV_ECH_2, oTarget) ? 2 : 1);
         if (!bRanged && nDex > nStr)
         {{
             nTotalAtk += (nDex - nStr);
             if (GetHasFeat(OV_ECH_2, oTarget)) nTotalDmg += (nDex - nStr);
         }}
-        if (GetHasFeat(OV_ECH_3, oTarget) && nTier > 0)
+        if (GetHasFeat(OV_ECH_3, oTarget))
         {{
-            int nCap = (nTier == 1) ? 5 : ((nTier == 2) ? 3 : 1);
-            if (nDex > nCap) nTotalAC += (nDex - nCap);
+            int nCap = Ov_GetArmorDexCap(oTarget);
+            if (nCap >= 0 && nDex > nCap) nTotalAC += (nDex - nCap);
         }}
     }}
-    else if (nTree == 3) // Kraith (I: +1/2 CON arrondi sup., II: transfusion, III: +CON saves)
+    else if (nTree == 3) // Kraith (CON : +1/+2/+3 ; I: +1/2 CON arrondi sup. RD ; II: transfusion ; III: +CON saves)
     {{
+        nTreeAbil = ABILITY_CONSTITUTION;
+        nTreeBonus = GetHasFeat(OV_KRA_3, oTarget) ? 3 : (GetHasFeat(OV_KRA_2, oTarget) ? 2 : 1);
         if (nCon > 0) nTotalRD += (nCon + 1) / 2;
         if (GetHasFeat(OV_KRA_3, oTarget) && nCon > 0) nTotalSaves += nCon;
         if (GetHasFeat(OV_KRA_2, oTarget))
@@ -400,22 +493,28 @@ void Ov_RefreshPassives(object oTarget)
             }}
         }}
     }}
-    else if (nTree == 4) // Gand (II: INT Atq/Dmg distance si INT > DEX)
+    else if (nTree == 4) // Gand (INT : +1/+2/+3 ; I: grenades ; II: INT Atq/Dmg distance si INT > DEX)
     {{
+        nTreeAbil = ABILITY_INTELLIGENCE;
+        nTreeBonus = GetHasFeat(OV_GAN_3, oTarget) ? 3 : (GetHasFeat(OV_GAN_2, oTarget) ? 2 : 1);
         if (bRanged && GetHasFeat(OV_GAN_2, oTarget) && nInt > nDex)
         {{
             nTotalAtk += (nInt - nDex);
             nTotalDmg += (nInt - nDex);
         }}
     }}
-    else if (nTree == 5) // Matukai (I: +SAG Atq, II: +1/2 SAG saves, III: SAG remplace DEX pour CA)
+    else if (nTree == 5) // Matukai (SAG : +1/+2/+3 ; I: +SAG Atq ; II: +1/2 SAG saves ; III: SAG remplace DEX pour CA)
     {{
+        nTreeAbil = ABILITY_WISDOM;
+        nTreeBonus = GetHasFeat(OV_MAT_3, oTarget) ? 3 : (GetHasFeat(OV_MAT_2, oTarget) ? 2 : 1);
         if (nWis > 0) nTotalAtk += nWis;
         if (GetHasFeat(OV_MAT_2, oTarget) && nWis > 0) nTotalSaves += (nWis / 2);
         if (GetHasFeat(OV_MAT_3, oTarget) && nWis > nDex) nTotalAC += (nWis - nDex);
     }}
-    else if (nTree == 6) // Nomi (II: +CHA saves, III: +CHA CA)
+    else if (nTree == 6) // Nomi (CHA : +1/+2/+3 ; II: +CHA saves ; III: +CHA CA)
     {{
+        nTreeAbil = ABILITY_CHARISMA;
+        nTreeBonus = GetHasFeat(OV_NOM_3, oTarget) ? 3 : (GetHasFeat(OV_NOM_2, oTarget) ? 2 : 1);
         if (GetHasFeat(OV_NOM_2, oTarget) && nCha > 0) nTotalSaves += nCha;
         if (GetHasFeat(OV_NOM_3, oTarget) && nCha > 0) nTotalAC += nCha;
     }}
@@ -451,7 +550,6 @@ void Ov_RefreshPassives(object oTarget)
     }}
 
     // 6. Cristal personnel de l'Exile : effets de classe de base + prestige quand sabre equipe
-    int nSkillAll = 0;
     if (oTarget == oPC && nFam == 4 && GetGlobalNumber("000_Quest_Crystal") > 0)
     {{
         if (GetLevelByClass(CLASS_TYPE_JEDIGUARDIAN, oPC) > 0)
@@ -558,6 +656,12 @@ void Ov_RefreshPassives(object oTarget)
     {{
         effect eMi = EffectImmunity(IMMUNITY_TYPE_MIND_SPELLS);
         if (bHasAny) eBundle = EffectLinkEffects(eBundle, eMi); else eBundle = eMi;
+        bHasAny = TRUE;
+    }}
+    if (nTreeAbil >= 0 && nTreeBonus > 0)
+    {{
+        effect eAb = EffectAbilityIncrease(nTreeAbil, nTreeBonus);
+        if (bHasAny) eBundle = EffectLinkEffects(eBundle, eAb); else eBundle = eAb;
         bHasAny = TRUE;
     }}
 

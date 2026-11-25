@@ -38,7 +38,7 @@ AUTOBALANCE_SETS: dict[str, AutobalanceSet] = {
     "Set_2": AutobalanceSet("Soldat standard (Set_2)", 0.65, 0.90, 0.70, 0.090, 0.90, -2),
     "Set_3": AutobalanceSet("Soldat d'elite (Set_3)", 0.65, 0.95, 0.80, 0.110, 1.00, -1),
     "Set_4": AutobalanceSet("Lieutenant / Sous-boss (Set_4)", 0.70, 1.00, 0.90, 0.135, 1.00, 1),
-    "Set_5": AutobalanceSet("Boss Majeur (Set_5)", 0.80, 1.10, 1.00, 0.175, 1.05, 4),
+    "Set_5": AutobalanceSet("Boss Majeur (Set_5 — D20 Overhaul)", 0.95, 1.10, 1.00, 0.155, 1.05, 4),
 }
 
 
@@ -361,24 +361,24 @@ def convert_jdr_armor_to_kotor(
     In KotOR 2, armor gives Defense (AC) + can grant permanent Damage Immunity / Damage Reduction
     against all HP to compensate for losing Force Speed and uncapped DEX.
     """
-    base_ac_map = {"light": 5, "medium": 7, "heavy": 9}
-    base_ac = base_ac_map.get(armor_category.lower(), 6)
-
-    # Convert tabletop Wound DR (2..9) into KotOR 2 all-HP Damage Reduction + Damage Immunity %
-    kotor_flat_dr = max(tabletop_dr - 1, 1)
-    kotor_immunity_pct = tabletop_dr * 5  # e.g. DR 4 -> 20% physical/energy immunity; DR 8 -> 40%
+    base_ac_map = {"light": 4, "medium": 6, "heavy": 10}
+    max_dex_map = {"light": 16, "medium": 4, "heavy": 1}
+    native_rd_map = {"light": 0, "medium": 2, "heavy": 4}
+    base_ac = base_ac_map.get(armor_category.lower(), 7)
+    mod_max_dex = max_dex_map.get(armor_category.lower(), max_dex)
+    kotor_flat_dr = native_rd_map.get(armor_category.lower(), max(tabletop_dr - 1, 1))
+    kotor_immunity_pct = 30 if armor_category.lower() == "heavy" else 0
 
     return {
         "category": armor_category,
         "tabletop_stats": f"DR {tabletop_dr} (Wounds only), Max DEX +{max_dex}, ACP {armor_check_penalty}",
         "kotor_armor_ac": base_ac,
-        "kotor_max_dex": max_dex,
+        "kotor_max_dex": mod_max_dex,
         "kotor_flat_dr_all_hp": kotor_flat_dr,
-        "kotor_damage_immunity_pct": f"{kotor_immunity_pct}% (Tranchant/Contondant/Perforant/Énergie)",
+        "kotor_damage_immunity_pct": f"{kotor_immunity_pct}% max via Juggernaut III (Tranchant/Contondant/Perforant/Énergie)",
         "force_restriction_note": (
-            "Dans le JdR, le malus d'armure ("
-            f"{armor_check_penalty}) s'applique seulement aux pouvoirs physiques (Control), "
-            "sans interdire les pouvoirs mentaux/télékinétiques (Sense/Alter)."
+            "Règle D20 Overhaul : CA (Légère+DEX > Lourde >= Interm.+DEX), RD (Lourde 4 > Interm. 2 >= Légère 0), "
+            "DEX (Légère > Interm. > Lourde), 2 slots combinés exclusifs sur Intermédiaire."
         ),
     }
 
@@ -431,12 +431,12 @@ def cmd_enemy_curve(args: argparse.Namespace) -> None:
 
 
 def cmd_sim_duel(args: argparse.Namespace) -> None:
-    """Compare Single-Weapon Duelist (Vanilla vs Modded STR scaling) against Two-Weapon Fighting."""
+    """Compare Single-Weapon Duelist (D20 Overhaul: 150% FOR + +6 Atq + +3 crit) vs Dual/Double."""
     levels = [8, 11, 15, 22, 24, 28]
-    print("\n=== SIMULATION : DUEL (1 ARME) vs COMBAT À 2 ARMES vs BOSS SOLO ===")
-    print(f"Bonus Duel testé : +{int(args.duel_scale * 100)}% du modificateur FOR/DEX aux dégâts (+3 Att/Déf)\n")
+    print("\n=== SIMULATION RAPIDE : DUEL III (D20 Overhaul) vs DOUBLE LAME vs BOSS SOLO ===")
+    print("Note : pour une simulation complète (upgrades cloisonnées, armures, TTD, buffs), utiliser `tools/dpr_check.py`.\n")
     header = (
-        f"{'Niv':>3} | {'Cible / Boss':<26} | {'Build':<26} | "
+        f"{'Niv':>3} | {'Cible / Boss':<26} | {'Build':<28} | "
         f"{'Toucher':>7} | {'Att/rd':>6} | {'Dég/hit':>7} | {'DPR':>6} | {'TTK (rds)':>9}"
     )
     print(header)
@@ -453,37 +453,43 @@ def cmd_sim_duel(args: argparse.Namespace) -> None:
 
     for lvl in levels:
         enemy = boss_by_level[lvl]
-        # Progressive player stats across the campaign (STR mod, weapon avg damage, Master Speed extra attacks)
-        str_mod = 4 + (lvl - 6) // 3  # +4 at lvl 8 -> +11 at lvl 28 (with gear/buffs)
-        wpn_dmg = 10.0 + (lvl - 6) * 1.4  # ~13 at lvl 8 -> ~41 at lvl 28 (upgraded lightsaber/sword)
-        extra_att = 1 if lvl < 15 else (2 if lvl < 21 else 3)  # Flurry (+1) + Knight/Master Speed (+1/+2)
+        str_mod = 4 + (lvl - 6) // 3
+        # Sabre laser D20 Overhaul (2d8 = 9.0) + cellule plafonnée (+1/+2/+3.5)
+        wpn_dmg = 9.0 + (1.0 if lvl < 14 else (2.0 if lvl < 20 else 3.5))
+        extra_att = 1 if lvl < 15 else (2 if lvl < 21 else 3)
 
         builds = [
             BuildConfig(
-                name="1 Arme (Duel III Vanilla)",
+                name="1M (Sans posture Duel)",
                 style="single",
                 base_weapon_dmg=wpn_dmg,
                 str_or_dex_mod=str_mod,
-                bonus_attack_mod=3,  # Duel III +3 Attack
-                duel_str_scaling=0.0,
+                bonus_attack_mod=2,
+                bonus_flat_dmg=2.0,
+                duel_str_scaling=0.5,  # Règle de base 1M : 150% FOR
+                crit_range=2,
                 extra_attacks=extra_att,
             ),
             BuildConfig(
-                name=f"1 Arme (Duel +{int(args.duel_scale * 100)}% FOR)",
+                name="1M (Duel III : +6 Atq, +3 crit)",
                 style="single",
                 base_weapon_dmg=wpn_dmg,
                 str_or_dex_mod=str_mod,
-                bonus_attack_mod=3,
+                bonus_attack_mod=8,  # +6 Duel III + +2 Spé Laser I
+                bonus_flat_dmg=2.0,
                 duel_str_scaling=args.duel_scale,
+                crit_range=5,  # 19-20 (2) + 3 Duel III = 16-20 (5)
                 extra_attacks=extra_att,
             ),
             BuildConfig(
-                name="2 Armes / Double Lame",
+                name="Double Sabre (Haute Cadence III)",
                 style="double",
-                base_weapon_dmg=wpn_dmg + 2.0,
-                offhand_weapon_dmg=wpn_dmg + 2.0,
+                base_weapon_dmg=wpn_dmg,
+                offhand_weapon_dmg=wpn_dmg,
                 str_or_dex_mod=str_mod,
-                bonus_attack_mod=0,
+                bonus_attack_mod=2,
+                bonus_flat_dmg=5.0,  # +3 Haute Cadence III + +2 Spé Laser I
+                crit_range=1,
                 extra_attacks=extra_att,
             ),
         ]
@@ -491,7 +497,7 @@ def cmd_sim_duel(args: argparse.Namespace) -> None:
         for b in builds:
             res = evaluate_build_vs_enemy(lvl, b, enemy)
             print(
-                f"{lvl:>3} | {enemy.name[:26]:<26} | {b.name:<26} | "
+                f"{lvl:>3} | {enemy.name[:26]:<26} | {b.name:<28} | "
                 f"{res['p_hit_pct']:>6.1f}% | {res['attacks_per_round']:>6} | "
                 f"{res['avg_dmg_per_hit']:>7.1f} | {res['dpr']:>6.1f} | {res['ttk_rounds']:>9.2f}"
             )
@@ -499,12 +505,13 @@ def cmd_sim_duel(args: argparse.Namespace) -> None:
 
 
 def cmd_sim_stun(args: argparse.Namespace) -> None:
-    """Compare Unarmed Stun DC formulas (Tabletop 10 + 1/2 Lvl vs KotOR 5 + 1.0 Lvl) across levels."""
+    """Compare Impact II-III Knockdown proc (DD 10 + L + Mod, proc plage/20) across levels."""
     levels = [8, 12, 16, 20, 24, 28]
-    print(f"\n=== SIMULATION : PROBABILITÉ D'ÉTOURDISSEMENT (STUN MAINS NUES) CONTRE {args.set} ===")
+    print(f"\n=== SIMULATION : PROC RENVERSEMENT IMPACT (DD 10+L+Mod, plage/20) CONTRE {args.set} ===")
+    print("Note : pour une simulation complète par build, utiliser `tools/dpr_check.py`.\n")
     header = (
-        f"{'Niv(L)':>6} | {'Vig Ennemi':>10} | {'DD JdR (10+L/2+Mod)':>20} | "
-        f"{'Stun/hit (JdR)':>14} | {'DD KotOR (5+L+Mod)':>19} | {'Stun/hit (KotOR)':>16} | {'Stun/round (KotOR)':>18}"
+        f"{'Niv(L)':>6} | {'Vig Ennemi':>10} | {'DD Impact (10+L+Mod)':>20} | "
+        f"{'Échec Vig':>10} | {'Proc/hit (18-20)':>16} | {'Proc/round (Duel III)':>21}"
     )
     print(header)
     print("-" * len(header))
@@ -512,20 +519,17 @@ def cmd_sim_stun(args: argparse.Namespace) -> None:
     for lvl in levels:
         enemy = kotor2_enemy_stats(lvl, args.set)
         stat_mod = 4 + (lvl - 6) // 3
-        dc_jdr = 10 + (lvl // 2) + stat_mod
-        dc_kotor = 5 + lvl + stat_mod
-        extra_att = 1 if lvl < 15 else 3
-
-        b_jdr = BuildConfig("Mains Nues (DD JdR)", "unarmed", 12.0, str_or_dex_mod=stat_mod, extra_attacks=extra_att, on_hit_stun_dc=dc_jdr)
-        b_k2 = BuildConfig("Mains Nues (DD KotOR)", "unarmed", 12.0, str_or_dex_mod=stat_mod, extra_attacks=extra_att, on_hit_stun_dc=dc_kotor)
-
-        r_jdr = evaluate_build_vs_enemy(lvl, b_jdr, enemy)
-        r_k2 = evaluate_build_vs_enemy(lvl, b_k2, enemy)
+        dc_impact = 10 + lvl + stat_mod
+        p_fail = save_fail_probability(dc_impact, enemy.fort_save)
+        p_hit = hit_probability(lvl + stat_mod + 8, enemy.defense)
+        n_att = 2 if lvl < 15 else 4
+        p_hit_base = p_hit * (3 / 20.0) * p_fail
+        p_hit_duel = p_hit * (6 / 20.0) * p_fail  # Matraque 18-20 (3) + Duel III (+3) = 6/20
+        p_rd_duel = 1.0 - ((1.0 - p_hit_duel) ** n_att)
 
         print(
-            f"{lvl:>6} | {'+' + str(enemy.fort_save):>10} | {'DD ' + str(dc_jdr):>20} | "
-            f"{r_jdr['p_stun_hit_pct']:>13.1f}% | {'DD ' + str(dc_kotor):>19} | "
-            f"{r_k2['p_stun_hit_pct']:>15.1f}% | {r_k2['p_stun_round_pct']:>17.1f}%"
+            f"{lvl:>6} | {'+' + str(enemy.fort_save):>10} | {'DD ' + str(dc_impact):>20} | "
+            f"{p_fail * 100:>9.1f}% | {p_hit_base * 100:>15.1f}% | {p_rd_duel * 100:>20.1f}%"
         )
 
 
@@ -565,7 +569,7 @@ def register_balance_subparsers(subparsers: argparse._SubParsersAction) -> None:
     p_curve.set_defaults(func=cmd_enemy_curve)
 
     p_duel = subparsers.add_parser("sim-duel", help="Simuler l'efficacité du don Duel (+%% FOR/DEX) face au Combat à 2 armes")
-    p_duel.add_argument("--duel-scale", type=float, default=1.0, help="Bonus FOR/DEX ajouté aux dégâts en Duel (ex: 0.5 pour +50%%, 1.0 pour +100%%)")
+    p_duel.add_argument("--duel-scale", type=float, default=0.5, help="Multiplicateur FOR/DEX ajouté au-delà de 1.0 en 1M (défaut 0.5 = 150%% FOR)")
     p_duel.set_defaults(func=cmd_sim_duel)
 
     p_stun = subparsers.add_parser("sim-stun", help="Simuler la probabilité d'étourdissement (Stun Mains Nues) selon la formule de DD")

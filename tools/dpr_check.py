@@ -51,6 +51,7 @@ import math
 import re
 import sys
 import unicodedata
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -58,6 +59,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 DATA_FILE = HERE / "dpr_data.json"
 DEFAULT_UPGRADES_CSV = ROOT / "Kotor 2 - rééquilibrage - Améliorations.csv"
+DEFAULT_CRAFT_CSV = ROOT / "Kotor 2 - rééquilibrage - Craft.csv"
 
 ROMAN = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5}
 TIER_ORDER = {"sans": 0, "legere": 1, "moyenne": 2, "lourde": 3}
@@ -393,7 +395,7 @@ def resolve_buffs(data: Data, buff_ranks: dict[str, int], armor_tier: str,
     if speed_mode == "auto":
         if fury_used:
             attacks, speed_ac = fur_att, 0
-        elif vit_att:
+        elif vit_att or vit_ac:
             attacks, speed_ac = vit_att, vit_ac
         elif buff_allowed(data, "vitesse", armor_tier):
             attacks = phase["speed_attacks"]
@@ -433,55 +435,121 @@ def best_upgrades(data: Data, weapon: Weapon, level: int, mode: str, phase: dict
         return Upgrades()
 
     pools: dict[str, list[dict]] = data.raw["upgrade_pools"].get(weapon.upgrade_pool, {})
-    allowed = set(weapon.allowed_slots) if weapon.allowed_slots else None
+    slot_counts = Counter(weapon.allowed_slots) if weapon.allowed_slots else Counter(pools.keys())
     avail: dict[str, list[dict]] = {}
-    for slot, items in pools.items():
-        if allowed is not None and slot not in allowed:
-            continue
+    for slot in slot_counts:
+        items = pools.get(slot, [])
         avail[slot] = [it for it in items if it.get("level_req", 99) <= level]
 
+    def _item_score(it: dict) -> float:
+        return (
+            it["damage"] + it["onhit"] + 0.25 * it["massive"]
+            + 2.0 * it["attack"] + (2.0 if it["keen"] else 0.0)
+            + 0.1 * it.get("defense", 0)
+        )
+
     if mode == "cap":
-        # Plafond acté §3.A pondéré selon les slots autorisés par famille d'arme.
+        # Plafond acté §3.A pondéré selon le cloisonnement strict des slots (Cellule / Chambre / Pack).
         up = Upgrades()
         weights = data.raw.get("slot_damage_weights", {}).get(weapon.upgrade_pool, {})
-        if allowed is not None and weights:
-            ratio = min(1.0, sum(weights.get(s, 0.0) for s in allowed))
+        unique_slots = list(slot_counts.keys())
+        if weights:
+            ratio = min(1.0, sum(weights.get(s, 0.0) for s in unique_slots))
         else:
             ratio = 1.0
+        # Sabres : pièces de sabre indisponibles avant Niv. 10 (règle loot/établi)
+        if weapon.upgrade_pool == "saber" and level < 10:
+            ratio = 0.0
         up.damage = round(float(phase["upgrade_cap"]) * ratio, 2)
-        # les bonus d'Attaque (sans dégâts) restent autorisés sur les slots actifs : meilleur par emplacement
-        for slot, items in avail.items():
-            pure = [it for it in items if it["damage"] == 0 and it["onhit"] == 0]
-            if pure:
-                up.attack += max(it["attack"] for it in pure)
-        slot_txt = f", {weapon.slots} slot{'s' if weapon.slots > 1 else ''}" if allowed is not None else ""
-        up.detail = f"cap §3.A (+{up.damage:g} dég{slot_txt})"
+        # Bénéfices hors dégâts réguliers réellement offerts par les slots utilitaires (non comptés dans le cap dégâts)
+        for slot, cnt in slot_counts.items():
+            if weights.get(slot, 0.0) > 0.0:
+                continue
+            pure = [it for it in avail.get(slot, []) if it["damage"] == 0 and it["onhit"] == 0]
+            if not pure:
+                continue
+            ranked = sorted(pure, key=_item_score, reverse=True)
+            picked: list[dict] = []
+            seen_rr: set[str] = set()
+            for it in ranked:
+                if it["resref"] in seen_rr:
+                    continue
+                if len(picked) > 0 and it["keen"] and up.keen and it["attack"] == 0 and it["massive"] == 0:
+                    continue
+                picked.append(it)
+                seen_rr.add(it["resref"])
+                if len(picked) >= cnt:
+                    break
+            for pick in picked:
+                up.attack += pick["attack"]
+                up.massive += pick["massive"]
+                up.keen = up.keen or pick["keen"]
+        slot_txt = f", {weapon.slots} slot{'s' if weapon.slots > 1 else ''}"
+        extras = []
+        if up.attack:
+            extras.append(f"{up.attack:+d} Atq")
+        if up.keen:
+            extras.append("Acéré")
+        if up.massive:
+            extras.append(f"+{up.massive:g} crit")
+        extra_txt = (" / " + ", ".join(extras)) if extras else ""
+        up.detail = f"cap §3.A (+{up.damage:g} dég{extra_txt}{slot_txt})"
         return up
 
-    # mode "vanilla" : meilleur objet par emplacement (score dégâts > attaque > acéré)
+    # mode "mod" (ou alias legacy "vanilla") : meilleures pièces réelles d'Améliorations.csv par slot
+    # (gère 2 cristaux distincts sur les sabres via slot_counts)
     up = Upgrades()
     names = []
-    for slot, items in avail.items():
+    for slot, cnt in slot_counts.items():
+        items = avail.get(slot, [])
         if not items:
             continue
-        best = max(
-            items,
-            key=lambda it: (
-                it["damage"] + it["onhit"] + 0.6 * it["massive"] + 2.0 * it["attack"] + (1.5 if it["keen"] else 0.0),
-            ),
-        )
-        up.damage += best["damage"]
-        up.onhit += best["onhit"]
-        up.attack += best["attack"]
-        up.massive += best["massive"]
-        up.keen = up.keen or best["keen"]
-        names.append(best["resref"])
+        ranked = sorted(items, key=_item_score, reverse=True)
+        picked: list[dict] = []
+        seen_rr: set[str] = set()
+        for it in ranked:
+            if it["resref"] in seen_rr:
+                continue
+            # Éviter de prendre 2 pièces Acéré redondantes dans un slot double (ex. 2 cristaux)
+            if len(picked) > 0 and it["keen"] and up.keen and it["attack"] == 0 and it["damage"] == 0 and it["massive"] == 0:
+                continue
+            picked.append(it)
+            seen_rr.add(it["resref"])
+            if len(picked) >= cnt:
+                break
+        for best in picked:
+            up.damage += best["damage"]
+            up.onhit += best["onhit"]
+            up.attack += best["attack"]
+            up.massive += best["massive"]
+            up.keen = up.keen or best["keen"]
+            names.append(best["resref"])
     up.detail = ",".join(names) if names else "rien dispo"
     return up
 
 
-def reingest_upgrades(csv_path: Path) -> dict:
-    """Parse `WIP Améliorations.csv` → {pool: {slot: [items]}} et met à jour dpr_data.json."""
+def _load_craft_levels(craft_path: Path = DEFAULT_CRAFT_CSV) -> dict[str, int]:
+    """Charge les paliers de déblocage établi (`Niv. X`) depuis Craft.csv par resref."""
+    out: dict[str, int] = {}
+    if not craft_path.exists():
+        return out
+    with open(craft_path, encoding="utf-8-sig", newline="") as fh:
+        rows = list(csv.reader(fh))
+    if not rows:
+        return out
+    mod_idx = rows[0].index("Changement (mod)") if "Changement (mod)" in rows[0] else -1
+    if mod_idx < 0:
+        return out
+    for r in rows[1:]:
+        if len(r) > mod_idx and r[0].strip():
+            m = re.search(r"Niv\.\s*(\d+)", r[mod_idx], re.I)
+            if m:
+                out[r[0].strip().lower()] = int(m.group(1))
+    return out
+
+
+def reingest_upgrades(csv_path: Path, craft_path: Path = DEFAULT_CRAFT_CSV) -> dict:
+    """Parse `Améliorations.csv` (+ paliers `Craft.csv`) → {pool: {slot: [items]}} et met à jour dpr_data.json."""
     slot_map = [
         ("Lame (mêlée)", "melee", "Lame"),
         ("Cellule d'énergie (mêlée)", "melee", "Cellule"),
@@ -494,6 +562,7 @@ def reingest_upgrades(csv_path: Path) -> dict:
         ("Cellule d'énergie (sabre)", "saber", "Cellule"),
         ("Cristal (sabre)", "saber", "Cristal"),
     ]
+    craft_lvls = _load_craft_levels(craft_path)
     pools: dict[str, dict[str, list[dict]]] = {"melee": {}, "ranged": {}, "saber": {}}
     with open(csv_path, encoding="utf-8-sig", newline="") as fh:
         rows = list(csv.reader(fh))
@@ -501,7 +570,8 @@ def reingest_upgrades(csv_path: Path) -> dict:
         if len(row) < 6 or not row[0].startswith("u_"):
             continue
         resref, _name, empl, _tier, effects_van, loot = row[0], row[1], row[2], row[3], row[4], row[5]
-        effects = row[6].strip() if len(row) > 6 and row[6].strip() else effects_van
+        mod_col = row[6].strip() if len(row) > 6 else ""
+        effects = effects_van if (not mod_col or norm(mod_col) == "inchange") else mod_col
         pool = slot = None
         for needle, p, s in slot_map:
             if needle.lower() in empl.lower():
@@ -514,10 +584,16 @@ def reingest_upgrades(csv_path: Path) -> dict:
             effects_n = ""
         dmg = sum(avg_dice(m) for m in re.findall(r"bonus aux degats \([^)]*\) \+(\d+d\d+|\d+)", effects_n))
         atk = sum(int(m) for m in re.findall(r"bonus d attaque \+(-?\d+)", effects_n))
-        onhit = sum(float(m) for m in re.findall(r"en cas de coup au but \+(\d+)", effects_n))
+        atk -= sum(int(m) for m in re.findall(r"malus a l attaque (?:\+penalty_)?-(\d+)", effects_n))
+        def_b = sum(int(m) for m in re.findall(r"bonus defense \+(-?\d+)", effects_n))
+        def_b -= sum(int(m) for m in re.findall(r"malus de defense (?:\+penalty_)?-(\d+)", effects_n))
+        # Note : en KotOR 2, « En cas de coup au but +14 » est un DD de statut (Stun/Lenteur), JAMAIS des dégâts plats.
+        onhit = 0.0
         massive = sum(avg_dice(m) for m in re.findall(r"coups critiques plus importants \+(\d+d\d+|\d+)", effects_n))
         m_lvl = re.search(r"niv\. (\d+)\+", loot)
-        level_req = int(m_lvl.group(1)) if m_lvl else 99
+        loot_lvl = int(m_lvl.group(1)) if m_lvl else 99
+        craft_lvl = craft_lvls.get(resref.strip().lower(), 99)
+        level_req = min(loot_lvl, craft_lvl)
         pools[pool].setdefault(slot, []).append(
             {
                 "resref": resref,
@@ -525,6 +601,7 @@ def reingest_upgrades(csv_path: Path) -> dict:
                 "damage": round(dmg, 1),
                 "onhit": round(onhit, 1),
                 "attack": atk,
+                "defense": def_b,
                 "keen": "acere" in effects_n,
                 "massive": round(massive, 1),
                 "level_req": level_req,
@@ -617,14 +694,15 @@ def _parse_stat_pairs(txt: str) -> dict[str, int]:
 def _armor_tier_from_type(type_col: str, resref: str) -> str:
     t = norm(type_col)
     r = resref.lower()
-    if "robe" in t or "cloth" in t or r.startswith("a_robe"):
-        return "sans"
-    if any(k in t for k in ("armor class 4", "armor class 5")) or r.startswith("a_light"):
+    # Zeison Sha / Jal Shey / Malak (baseitem 102) et Ubese / Flight Suit (baseitem 98) = Armures légères (décision 23/11)
+    if any(k in t for k in ("armor class 4", "armor class 5", "zeison sha", "armd flight suit")) or r.startswith("a_light"):
         return "legere"
     if any(k in t for k in ("armor class 6", "armor class 7")) or r.startswith("a_medium"):
         return "moyenne"
     if any(k in t for k in ("armor class 8", "armor class 9")) or r.startswith("a_heavy"):
         return "lourde"
+    if "robe" in t or "cloth" in t or r.startswith("a_robe"):
+        return "sans"
     return "sans"
 
 
@@ -732,7 +810,7 @@ def reingest_gear(root: Path = ROOT) -> int:
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     data["gear_pools"] = pools
     data["personal_crystal"] = {
-        "early": {"primary": 2, "secondary": 0, "other": 0},
+        "early": {"primary": 2, "secondary": 1, "other": 0},
         "mid":   {"primary": 4, "secondary": 2, "other": 1},
         "late":  {"primary": 6, "secondary": 4, "other": 2},
     }
@@ -932,8 +1010,13 @@ class Config:
 def enumerate_configs(data: Data, feats: Feats, weapon_filter: str | None) -> list[Config]:
     gam2 = feats.rank("caracs", "gamorrean") >= 2
     flt = norm(weapon_filter) if weapon_filter else None
-    melee_1m = [w.key for w in data.weapons if not w.ranged and w.wield == "1M" and w.key != "unarmed"]
-    ranged_1m = [w.key for w in data.weapons if w.ranged and w.wield == "1M"]
+    if gam2:
+        # Gamoréen II tient TOUTES les armes à 1M (mêlée ET distance, y compris 2M/D en main gauche)
+        melee_off = [w.key for w in data.weapons if not w.ranged and w.key != "unarmed"]
+        ranged_off = [w.key for w in data.weapons if w.ranged]
+    else:
+        melee_off = [w.key for w in data.weapons if not w.ranged and w.wield == "1M" and w.key != "unarmed"]
+        ranged_off = [w.key for w in data.weapons if w.ranged and w.wield == "1M"]
 
     def keep(w: Weapon) -> bool:
         return flt in (None,) or flt in norm(w.name) or flt in norm(w.key) or flt in norm(w.family) or flt in norm(w.name.replace(" ", ""))
@@ -950,14 +1033,14 @@ def enumerate_configs(data: Data, feats: Feats, weapon_filter: str | None) -> li
         if w.wield == "1M":
             modes = ["single", "dual"]
         elif w.wield == "2M":
-            modes = (["single", "dual"] if not w.ranged else ["single"]) if gam2 else ["twohand"]
+            modes = ["single", "dual"] if gam2 else ["twohand"]
         elif w.wield == "D":
-            modes = (["single", "dual"] if not w.ranged else ["single"]) if gam2 else ["double"]
+            modes = ["single", "dual"] if gam2 else ["double"]
         for mode in modes:
             offs: list[str | None] = [None]
             if mode == "dual":
-                pool = ranged_1m if w.ranged else melee_1m
-                offs = [o for o in pool if o != w.key]
+                pool = ranged_off if w.ranged else melee_off
+                offs = [o for o in pool if (gam2 or o != w.key)]
             for off in offs:
                 configs += [Config(w.key, off, mode, a) for a in actives]
     return configs
@@ -1028,22 +1111,22 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
         style_atq += heavy_r * data.feats["styles"]["arme_lourde"]["attack_per_rank"]
 
     if w.ranged:
-        attr_atk = I if (gand >= 2 and I > D) else D
+        gov_stat = I if (gand >= 2 and I > D) else D
     else:
-        attr_atk = D if (echani >= 1 and D > F) else F
-    if matukai >= 1:
-        attr_atk += S
+        gov_stat = D if (echani >= 1 and D > F) else F
+    attr_atk = gov_stat + (S if matukai >= 1 else 0)
 
     active = {"attacks": 0, "attack": 0, "damage": 0, "range_mult": 1, "ac": 0}
     if cfg.active != "none":
         active.update(data.feats["actives"][cfg.active]["by_rank"][str(feats.rank("actives", cfg.active))])
+    power_base = active.get("ranged_damage", active["damage"]) if w.ranged else active["damage"]
     power_doubled = (
         cfg.active == "power"
         and not w.ranged
         and cfg.mode in ("dual", "double")
         and data.feats["actives"]["power"].get("dual_double_doubled", False)
     )
-    power_dmg = active["damage"] * (2 if power_doubled else 1)
+    power_dmg = power_base * (2 if power_doubled else 1)
     if data.model.get("power_attack_cap"):
         power_dmg = min(power_dmg, data.model["power_attack_cap"])
 
@@ -1056,8 +1139,13 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
     else:
         up_off = Upgrades()
 
-    def hand_static(weapon: Weapon, up: Upgrades, is_off: bool) -> float:
-        dmg = weapon.dmg_avg + up.per_hit
+    def hand_static(weapon: Weapon, up: Upgrades, is_off: bool) -> tuple[float, float]:
+        """Retourne (dégâts_multipliables_sur_crit, dégâts_bonus_non_multipliés)."""
+        crit_dmg = weapon.dmg_avg
+        # Progression automatique Spécialiste mains nues I–III plafonnée (B4-1 : +1d4/+2d4/+3d4 aux niv. 4/12/19)
+        if weapon.key == "unarmed" and data.model.get("unarmed_specialist_auto", True):
+            unarmed_rank = 3 if char.level >= 19 else (2 if char.level >= 12 else (1 if char.level >= 4 else 0))
+            crit_dmg += unarmed_rank * 2.5
         # multiplicateur de caractéristique
         if weapon.ranged:
             attr = I if (gand >= 2 and I > D) else D
@@ -1070,7 +1158,7 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
                 mult = r_mults[1 if is_off else 0]
             else:
                 mult = data.model.get("ranged_1m_duel_mult", 1.5)
-            dmg += attr * mult
+            crit_dmg += attr * mult
         else:
             if cfg.mode == "twohand":
                 mult = data.feats["styles"]["arme_lourde"]["melee_mult_by_rank"][str(heavy_r)]
@@ -1081,28 +1169,34 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
             else:
                 mult = 1.5
             attr = D if (echani >= 2 and D > F) else F
-            dmg += attr * mult
-            if char.use_gear and char.gear_melee_dmg > 0:
-                dmg += char.gear_melee_dmg
+            crit_dmg += attr * mult
         # arme haute cadence : +N dégâts par bout
         if cfg.mode == "double" and hc_r:
-            dmg += hc_r * data.feats["styles"]["haute_cadence"]["dmg_per_rank_per_hand"]
+            crit_dmg += hc_r * data.feats["styles"]["haute_cadence"]["dmg_per_rank_per_hand"]
         # spécialisation de famille (par arme équipée de la famille)
         sr = spec_rank_for(feats, weapon, data)
         if sr >= 1:
-            dmg += 2
+            crit_dmg += 2
             if weapon.family == "penetrant" and sr >= 3:
-                dmg += data.feats["familles"]["penetrant"]["rank3"]["damage"]
-        dmg += power_dmg
-        return dmg
+                crit_dmg += data.feats["familles"]["penetrant"]["rank3"]["damage"]
+        crit_dmg += power_dmg
+        # Bonus d'upgrades & gants (iprp Damage_Bonus : non multipliés sur critique en KotOR 2)
+        bonus_dmg = up.per_hit + (char.gear_melee_dmg if (not weapon.ranged and char.use_gear and char.gear_melee_dmg > 0) else 0.0)
+        if data.model.get("upgrades_multiplied_on_crit", False):
+            return crit_dmg + bonus_dmg, 0.0
+        return crit_dmg, bonus_dmg
 
-    d_main = hand_static(w, up_main, False)
-    d_off = hand_static(off_w, up_off, True) if off_w else 0.0
+    dm_crit, dm_flat = hand_static(w, up_main, False)
+    do_crit, do_flat = hand_static(off_w, up_off, True) if off_w else (0.0, 0.0)
+    d_main = dm_crit + dm_flat
 
     # ---- critique -------------------------------------------------------------
     def crit_params(weapon: Weapon, up: Upgrades) -> tuple[int, int, float]:
-        rng = weapon.crit_range * (2 if up.keen else 1)
-        rng = rng * active["range_mult"]
+        if data.model.get("keen_critstrike_additive", True):
+            # Règle Odyssey Engine / d20 : Acéré (+1×) et Coup critique (+1×/+2×/+3×) s'additionnent sur la base
+            rng = weapon.crit_range * (1 + (1 if up.keen else 0) + (active["range_mult"] - 1))
+        else:
+            rng = weapon.crit_range * (2 if up.keen else 1) * active["range_mult"]
         if duel_ok and data.model.get("duel_crit_mode") == "range_ext":
             rng += duel_r * data.feats["styles"]["duel"]["crit_range_per_rank"]
         rng = min(rng, 20)
@@ -1148,22 +1242,24 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
     sn_m, sn_o = sneak_avg(w), (sneak_avg(off_w) if off_w else 0.0)
 
     # ---- dégâts attendus, RD après multiplication critique ----------------------
-    def expected(dmg: float, atq: float, rng: int, mult: int, massive: float, sn: float) -> float:
+    def expected(dmg_crit: float, dmg_flat: float, atq: float, rng: int, mult: int, massive: float, sn: float) -> float:
         p = hit_probability(atq, def_eff)
         p_threat = rng / 20.0
         p_crit = p * p_threat
-        base = max(dmg - enemy.rd, 0.0) + sn
-        crit = max(dmg * mult + massive * mult - enemy.rd, 0.0) + sn
+        base = max(dmg_crit + dmg_flat - enemy.rd, 0.0) + sn
+        massive_add = (massive * mult) if data.model.get("massive_crit_multiplied", False) else massive
+        crit = max(dmg_crit * mult + dmg_flat + massive_add - enemy.rd, 0.0) + sn
         return (p - p_crit) * base + p_crit * crit
 
-    e_main = expected(d_main, atq_m, rng_m, mult_m, massive_m, sn_m)
-    e_off = expected(d_off, atq_o, rng_o, mult_o, massive_o, sn_o) if off_w else 0.0
+    e_main = expected(dm_crit, dm_flat, atq_m, rng_m, mult_m, massive_m, sn_m)
+    e_off = expected(do_crit, do_flat, atq_o, rng_o, mult_o, massive_o, sn_o) if off_w else 0.0
     dpr_weapons = n_main * e_main + n_off * e_off
 
-    # ---- procs de contrôle (Impact / Tactique) et Mutilation (Résonance) ------
+    # ---- procs de contrôle (Impact / Tactique) et Ébranlement (Résonance) -----
+    # Le DD utilise uniquement la caractéristique directrice de l'arme (sans +SAG de Matukai I)
     p_no_ctrl = 1.0
     ctrl_dur = 0
-    ctrl_dc = 10 + char.level + attr_atk
+    ctrl_dc = 10 + char.level + gov_stat
     p_fail_fort = save_fail_probability(ctrl_dc, enemy.fort_save)
     for hw, h_atq, h_rng, h_cnt in ((w, atq_m, rng_m, n_main), (off_w, atq_o, rng_o, n_off)):
         if hw and hw.family in ("impact", "tactique") and spec_rank_for(feats, hw, data) >= 2 and h_cnt > 0:
@@ -1177,7 +1273,7 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
     mut_debuff = 0.0
     p_no_mut = 1.0
     mut_rank = 0
-    mut_dc = 5 + char.level + attr_atk
+    mut_dc = 5 + char.level + gov_stat
     p_fail_ref = save_fail_probability(mut_dc, enemy.ref_save)
     for hw, h_atq, h_cnt in ((w, atq_m, n_main), (off_w, atq_o, n_off)):
         if hw and hw.family == "resonance" and spec_rank_for(feats, hw, data) >= 2 and h_cnt > 0:
@@ -1432,6 +1528,31 @@ def run_report(data: Data, feats: Feats, args) -> None:
                 ref_save=enemy_raw.get("ref_save", 0),
             )
         char = build_char(data, pk, preset, overrides, "auto", armor_tier=armor_tier)
+        if getattr(args, "gear", False):
+            # Équipe le meilleur set légal des 6 CSV + Cristal personnel (si sabre dans les candidats)
+            carac_prio = {
+                "gamorrean": ("FOR", "CON"), "echani": ("DEX", "CON"), "kraith": ("CON", "FOR"),
+                "gand": ("INT", "DEX"), "matukai": ("SAG", "DEX"), "nomi": ("CHA", "SAG"),
+            }
+            preset_prio = {"gardien": ("FOR", "CON"), "sentinelle": ("DEX", "CON"), "consulaire": ("SAG", "CHA")}
+            p_stat, s_stat = preset_prio.get(preset, ("FOR", "CON"))
+            for ck, pair in carac_prio.items():
+                if feats.rank("caracs", ck) > 0:
+                    p_stat, s_stat = pair
+                    break
+            cand_cfgs = enumerate_configs(data, feats, args.weapon)
+            any_saber = any(data.weapon_by_key[c.main].family == "laser" for c in cand_cfgs)
+            any_melee = any(not data.weapon_by_key[c.main].ranged for c in cand_cfgs)
+            g = equip_best_gear(data, pk, preset, armor_tier, p_stat, s_stat, is_melee=any_melee, is_saber=any_saber)
+            char.stats = dict(g["mods"])
+            char.stats.update(overrides)
+            char.use_gear = True
+            char.gear_ac = g["gear_ac"]
+            char.gear_saves = g["gear_saves"]
+            char.gear_attack = g["gear_attack"]
+            char.gear_melee_dmg = g["gear_melee_dmg"]
+            char.gear_rd = g["gear_rd"]
+            char.gear_equipped = g["equipped"]
         # application des buffs autorisés par l'armure
         buffs = resolve_buffs(data, buff_ranks, armor_tier, phase, args.speed)
         for k in char.stats:
@@ -1463,6 +1584,9 @@ def run_report(data: Data, feats: Feats, args) -> None:
                   + " ".join(f"{k}{v:+d}" for k, v in eff_stats.items() if v))
         print("\n" + header)
         print("-" * len(header))
+        if char.use_gear and char.gear_equipped:
+            g_str = ", ".join(f"{k}:{v}" for k, v in char.gear_equipped.items())
+            print(f" 🎒 GEAR (6 CSV)    : {g_str}")
         print(f" 🏆 MEILLEURE CONFIG : {best['label']} | active : {best['active']} | {best['attacks']} att/rd | "
               f"Atq {best['attack_main']:+d} | toucher {best['p_hit'] * 100:.0f}% | "
               f"{best['dmg_hit_net']} dég nets/coup | DPR {best['dpr']} | {best['ttk']:.1f} rounds → {verdict(best['ttk'])}")
@@ -1492,14 +1616,14 @@ def run_report(data: Data, feats: Feats, args) -> None:
 
     print("\n" + "-" * 124)
     print(" Hypothèses : critique confirmé (≈ proba toucher) ; RD boss soustraite par coup après mult ; "
-          "Vitesse = attaques main directrice ;")
-    print(" 'crit chance +N' du Duel = +N de plage ; Duel = mêlée/mains nues ; arme équilibrée = "
-          f"{data.model['balanced_bonus']} Atq ; mains nues = hors famille ;")
-    print(" Distance 1M/D = +100% / +50% DEX (ou INT via Gand II) ; plafonds d'upgrades pondérés par slots autorisés.")
-    print(" Armure & Défenses : CA, plafond DEX, RD native, 1/2/1 slots, arbres d'armure, Boucliers & pouvoirs gatés "
-          "(dpr_data.json → armor_stats, force_buffs).")
-    print(" Valeurs éditables : tools/dpr_data.json (armes, dons, armures, boss, plafonds, pouvoirs). "
-          "Resync après édition des CSV : --reingest-upgrades / --reingest-pouvoirs.")
+          "Critiques massifs & dés d'upgrades non multipliés sur crit (Odyssey Engine) ;")
+    print(" Acéré + Coup critique additifs ; Duel = 1M mêlée, mains nues et distance ; arme équilibrée = "
+          f"{data.model['balanced_bonus']} Atq ; mains nues = famille Impact (+Spé mains nues auto) ;")
+    print(" Distance 1M/D = +150% Duel / +100%+50% Ambidextrie / +150%+50% Répétition DEX (ou INT via Gand II) ; "
+          "upgrades cloisonnées par slot (Améliorations.csv + Craft.csv).")
+    print(" Armure & Défenses : CA (Légère+DEX > Lourde >= Interm.+DEX), RD native (4/2/0), 1/2/1 slots, arbres d'armure, "
+          "Boucliers & pouvoirs gatés (--gear pour équiper les 6 CSV + Cristal perso).")
+    print(" Valeurs éditables : tools/dpr_data.json. Resync CSV : --reingest-upgrades / --reingest-pouvoirs / --reingest-gear.")
     if args.md:
         print("\n## Synthèse (markdown)")
         print("\n".join(md_lines))
@@ -1544,23 +1668,29 @@ def selftest() -> None:
     enemy = Enemy("t", 120, 20, 3, 19)
     res = evaluate(Config("lightsaber", None, "single", "none"), data, feats, char, "early", enemy, "cap", 0, 0.0)
     assert res["dpr"] > 0
-    # --- slots d'upgrades par famille ------------------------------------------
+    # --- slots d'upgrades cloisonnés par famille (§3.A post-19/11) -------------
     up_imp = best_upgrades(data, data.weapon_by_key["force_pike"], 26, "cap", data.phases["late"])
     up_trad = best_upgrades(data, data.weapon_by_key["long_sword"], 26, "cap", data.phases["late"])
     up_res = best_upgrades(data, data.weapon_by_key["vibroblade"], 26, "cap", data.phases["late"])
-    assert abs(up_imp.damage - 1.5) < 1e-6, up_imp
-    assert abs(up_trad.damage - 5.0) < 1e-6, up_trad
-    assert abs(up_res.damage - 10.0) < 1e-6, up_res
-    # --- distance +150% DEX en 1M/D (et INT avec Gand II uniquement) ----------
+    assert abs(up_imp.damage - 0.0) < 1e-6 and up_imp.attack >= 3, up_imp
+    assert abs(up_trad.damage - 0.0) < 1e-6 and up_trad.keen, up_trad
+    assert abs(up_res.damage - 5.0) < 1e-6, up_res
+    # mode "mod" : 2 cristaux distincts sur sabre + paliers Craft.csv (Niv. 20 dispo en Late Niv. 26)
+    up_sbr = best_upgrades(data, data.weapon_by_key["lightsaber"], 26, "mod", data.phases["late"])
+    assert up_sbr.damage >= 3.5 and up_sbr.attack >= 6, up_sbr
+    # --- distance +150% DEX en 1M/D, Duel 1M à distance, INT via Gand II -------
     c_sen = build_char(data, "late", "sentinelle", {}, "auto")  # DEX +9, INT +3
     f_none = parse_feats(data, "")
     pistol_dmg = data.weapon_by_key["blaster_pistol"].dmg_avg
     rep_dmg = data.weapon_by_key["repeating"].dmg_avg
     r_pistol = evaluate(Config("blaster_pistol", None, "single", "none"), data, f_none, c_sen, "late", enemy, "none", 0, 0.0)
     assert r_pistol["dmg_hit_net"] == round(pistol_dmg + 9.0 * 1.5 - 3, 1), r_pistol
+    # Duel III s'applique bien aux pistolets 1M (+6 Atq)
+    f_duel = parse_feats(data, "Duel 3")
+    r_pistol_duel = evaluate(Config("blaster_pistol", None, "single", "none"), data, f_duel, c_sen, "late", enemy, "none", 0, 0.0)
+    assert r_pistol_duel["attack_main"] == c_sen.bab + 9 + 6, r_pistol_duel
     r_rep = evaluate(Config("repeating", None, "double", "none"), data, f_none, c_sen, "late", enemy, "none", 0, 0.0)
     assert r_rep["dmg_hit_net"] == round(rep_dmg + 9.0 * 1.5 - 3, 1), r_rep
-    # En mode double (Arme haute cadence), malus attaque = [0, 0] (plus de -6/-10 vanilla)
     assert r_rep["attack_main"] == c_sen.bab + 9, r_rep
     c_int = build_char(data, "late", "sentinelle", {"DEX": 2, "INT": 8}, "auto")
     f_gand1 = parse_feats(data, "Chasseur de prime Gand 1")
@@ -1570,12 +1700,20 @@ def selftest() -> None:
     r_gand2 = evaluate(Config("blaster_pistol", None, "single", "none"), data, f_gand2, c_int, "late", enemy, "none", 0, 0.0)
     assert r_gand2["attack_main"] == c_int.bab + (8 + 1), r_gand2
     assert r_gand2["dmg_hit_net"] == round(pistol_dmg + (8 + 1) * 1.5 - 3, 1), r_gand2
-    # --- Mains nues hors famille Impact & Gamoréen II interdit 2M/double ------
-    assert spec_rank_for(parse_feats(data, "Spécialisation Arme d'Impact 3"), data.weapon_by_key["unarmed"], data) == 0
+    # --- Mains nues = famille Impact + progression Spé mains nues I-III (B4-1) -
+    f_imp = parse_feats(data, "Spécialisation Arme d'Impact 3")
+    assert spec_rank_for(f_imp, data.weapon_by_key["unarmed"], data) == 3
+    r_unarmed_late = evaluate(Config("unarmed", None, "single", "none"), data, f_imp, c_sen, "late", enemy, "none", 0, 0.0)
+    # Niv 26 = Spé mains nues III plafonné (+3d4 = +7.5) + base 3.5 + 1.5*FOR(7) + Spé Impact(+2) - RD(3)
+    assert r_unarmed_late["dmg_hit_net"] == round(3.5 + 7.5 + 7 * 1.5 + 2 - 3, 1), r_unarmed_late
+    # --- Gamoréen II : interdit 2M/double mais ouvre 1M/dual mêlée ET distance -
     gam_cfgs = enumerate_configs(data, parse_feats(data, "Raffinement Gamoréen 2"), None)
     assert all(c.mode not in ("twohand", "double") for c in gam_cfgs), "Gamoréen II doit interdire 2M/double"
+    assert any(c.main == "blaster_rifle" and c.mode == "dual" for c in gam_cfgs), "Gamoréen II ouvre le dual distance"
     # --- armure & buffs -------------------------------------------------------
     assert parse_armor("Robe") == "sans" and parse_armor("lourde") == "lourde"
+    assert _armor_tier_from_type("Armor Zeison Sha", "a_robe_26") == "legere"
+    assert _armor_tier_from_type("Armor Armd Flight Suit", "g_a_armrdfsuit") == "legere"
     ranks, unk = parse_buffs(data, "Vitesse 3, Talent de Force 2, Illumination, Stigmate de Force 3")
     assert ranks == {"vitesse": 3, "valor": 2, "illumination": 1, "fureur": 3} and not unk, (ranks, unk)
     assert not buff_allowed(data, "vitesse", "legere")       # interdite sous armure
@@ -1591,36 +1729,41 @@ def selftest() -> None:
     assert r2["attacks"] == 1 and r2["mod_all"] == 2 and r2["armor_ac"] == 6 and not r2["blocked"], r2
     r2_robe = resolve_buffs(data, {"illumination": 1}, "sans", data.phases["late"], "auto")
     assert r2_robe["attacks"] == 2 and r2_robe["mod_all"] == 2 and r2_robe["armor_ac"] == 6, r2_robe
-    # plafonnement des rangs en phase early (Illumination bloquée avant Niv. 15, Vitesse max 1)
+    # Vitesse L1 (early Niv. 8) = 0 attaque bonus, +2 CA (règle réelle KotOR 2)
     r_early = resolve_buffs(data, {"vitesse": 3, "illumination": 1}, "sans", data.phases["early"], "auto")
-    assert r_early["attacks"] == 1 and r_early["speed_ac"] == 2, r_early
+    assert r_early["attacks"] == 0 and r_early["speed_ac"] == 2, r_early
     # Stigmate de Force en armure lourde → +1 atq, +3 FOR, +3 DEX
     r3 = resolve_buffs(data, {"fureur": 3}, "lourde", data.phases["late"], "auto")
     assert r3["attacks"] == 1 and r3["for_add"] == 3 and r3["dex_add"] == 3 and r3["speed_ac"] == 0, r3
     # Barrière de Force 3 (Armure moyenne) → RD 12
     r_bar = resolve_buffs(data, {"barriere": 3}, "moyenne", data.phases["late"], "auto")
     assert r_bar["barrier_rd"] == 12, r_bar
-    # --- arbres d'armures, spé carac défensives & TTD -------------------------
+    # --- arbres d'armures, règle de CA, spé carac défensives & TTD ------------
     e_late = data.enemies["late"]
     boss_late = Enemy("boss", e_late["hp"], e_late["defense"], e_late["rd"],
                       enemy_fort_save(data, 26), e_late["attack"], e_late["dmg_hit"], e_late["attacks"],
                       e_late["will_save"], e_late["ref_save"])
+    # Règle CA actée : (Légère+DEX) > Lourde >= (Intermédiaire+DEX)
+    a_l, a_m, a_h = data.raw["armor_stats"]["legere"], data.raw["armor_stats"]["moyenne"], data.raw["armor_stats"]["lourde"]
+    assert (a_l["base_ac"] + a_l["max_dex"]) > (a_h["base_ac"] + a_h["max_dex"]) >= (a_m["base_ac"] + a_m["max_dex"])
+    assert a_h["native_rd"] > a_m["native_rd"] >= a_l["native_rd"]
+    assert a_l["max_dex"] > a_m["max_dex"] > a_h["max_dex"]
     c_heavy = build_char(data, "late", "gardien", {}, "auto", armor_tier="lourde")
     f_jugg = parse_feats(data, "Juggernaut 3, Robustesse 2, Voie du dragon Kraith 1")
-    r_jugg = evaluate(Config("lightsaber", None, "single", "none"), data, f_jugg, c_heavy, "late", boss_late, "cap", 0, 0.0)
-    assert r_jugg["player_rd"] == 4 + 3 + 5 + 2 + 3, r_jugg
-    assert abs(r_jugg["player_imm"] - 0.45) < 1e-9, r_jugg
+    r_jugg = evaluate(Config("lightsaber", None, "single", "none"), data, f_jugg, c_heavy, "late", boss_late, "mod", 0, 0.0)
+    assert r_jugg["player_rd"] == a_h["native_rd"] + a_h["upg_rd_by_phase"]["late"] + 5 + 2 + 3, r_jugg
+    assert abs(r_jugg["player_imm"] - (0.30 + a_h["upg_imm_by_phase"]["late"])) < 1e-9, r_jugg
     assert r_jugg["boss_ttd"] > 0, r_jugg
     c_light = build_char(data, "late", "sentinelle", {}, "auto", armor_tier="legere")
     f_peau = parse_feats(data, "Seconde Peau 3, Techniques Echanis 3")
-    r_peau = evaluate(Config("lightsaber", None, "single", "none"), data, f_peau, c_light, "late", boss_late, "cap", 0, 0.0)
+    r_peau = evaluate(Config("lightsaber", None, "single", "none"), data, f_peau, c_light, "late", boss_late, "mod", 0, 0.0)
     assert abs(r_peau["player_dodge"] - 0.30) < 1e-9, r_peau
-    # Echani III supprime le plafond DEX (+9 + 1 = +10 vs max_dex +4) ; base_ac légère = 7
-    assert r_peau["player_ac"] == 10 + 10 + 7 + 4 + 3 + (9 + 1) + 3, r_peau
+    # Echani III supprime le plafond DEX (+9 + 1 = +10) ; base_ac légère = 5, item_ac = 3, upg_ac = 2
+    assert r_peau["player_ac"] == 10 + 10 + a_l["base_ac"] + a_l["item_ac_by_phase"]["late"] + a_l["upg_ac_by_phase"]["late"] + (9 + 1) + 3, r_peau
     c_med = build_char(data, "late", "sentinelle", {}, "auto", armor_tier="moyenne")
     f_med = parse_feats(data, "Armure Tactique 3")
-    r_med = evaluate(Config("lightsaber", None, "single", "none"), data, f_med, c_med, "late", boss_late, "cap", 0, 0.0)
-    assert r_med["shield_hp"] == 300 and r_med["player_rd"] == 2 + 2 + 5, r_med
+    r_med = evaluate(Config("lightsaber", None, "single", "none"), data, f_med, c_med, "late", boss_late, "mod", 0, 0.0)
+    assert r_med["shield_hp"] == 300 and r_med["player_rd"] == 2 + a_m["upg_rd_by_phase"]["late"] + 5, r_med
     print("selftest OK")
 
 
@@ -1644,8 +1787,10 @@ def main() -> None:
                     help="Attaques bonus de Vitesse. auto : rang de phase si l'armure l'autorise "
                          "(0/1/2, comme le contrat §9) ou rang du buff Vitesse/Fureur ; "
                          "none/knight/master : override manuel qui bypass le gating d'armure")
-    ap.add_argument("--upgrades", default="cap", choices=["cap", "vanilla", "none"],
-                    help="cap : plafonds actés +2/+5/+10 pondérés par slots ; vanilla : meilleurs items du CSV ; none")
+    ap.add_argument("--upgrades", default="mod", choices=["mod", "cap", "vanilla", "none"],
+                    help="mod (défaut) : vraies pièces moddées d'Améliorations.csv (+Craft.csv) ; cap : plafonds théoriques §3.A cloisonnés ; vanilla : alias de mod ; none")
+    ap.add_argument("--gear", action="store_true",
+                    help="Équipe automatiquement le meilleur set légal des 6 CSV d'équipement + Cristal personnel (gear_pools)")
     ap.add_argument("--sneak-dice", type=int, default=0, help="Dés d'Attaque sournoise de classe (ex. 4 pour 4d6)")
     ap.add_argument("--sneak-uptime", type=float, default=0.0, metavar="FRAC",
                     help="Fraction des rounds où la sournoise s'applique (0..1, ex. 0.3 cible contrôlée)")

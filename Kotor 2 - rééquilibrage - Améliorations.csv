@@ -1060,656 +1060,463 @@ Effets :
 • Bonus d'attaque +2
 • En cas de coup au but (Étourdissement : DD 7 + Niv + Carac)"
 ARMURES — SURCOUCHES,,,,,,,,
-u_a_over_01,Protection contre la chaleur T1,Overlay (armure),1,Immunité contre dégâts +10%,palier 1 niv. 6+ (rare dès 1),[Standard Légère Mk I] Immunité contre dégâts (Fire/Cold) +5%,,"[Mod D20-Overhaul]
+u_a_over_01,Protection contre la chaleur T1,Overlay (armure),1,Immunité contre dégâts +10%,palier 1 niv. 6+ (rare dès 1),"Immunité contre dégâts (Fire/Cold) +15%, Résistance aux dégâts (Fire/Cold) +5/-",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
 Effets :
-• [Standard Légère Mk I] Immunité contre dégâts (Fire/Cold) +5%"
-u_a_over_02,Revêtement 'Armure' T1,Overlay (armure),2,Bonus de compétence +2,palier 2 niv. 8+ (rare dès 3),"[Standard Légère Mk I] Jets de sauvegarde améliorés +1, Bonus de compétence +2",,"[Mod D20-Overhaul]
+• Immunité contre dégâts (Feu/Froid) +15%
+• Résistance aux dégâts (Feu/Froid) +5/-"
+u_a_over_02,Revêtement 'Armure' T1,Overlay (armure),2,Bonus de compétence +2,palier 2 niv. 8+ (rare dès 3),"Bonus de compétence (Discrétion) +2, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
 Effets :
-• [Standard Légère Mk I] Jets de sauvegarde améliorés +1
-• Bonus de compétence +2"
-u_a_over_03,Sur-couche atténuatrice T1,Overlay (armure),3,Immunité contre dégâts +10%,palier 3 niv. 10+ (rare dès 5),[Standard Légère Mk I] Immunité contre dégâts (Sonic/Electrical) +5%,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk I] Immunité contre dégâts (Sonic/Electrical) +5%"
-u_a_over_04,Revêtement ablatif T1,Overlay (armure),4,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +10%, Bonus défense +1",palier 4 niv. 12+ (rare dès 7),"[Standard Légère Mk I] Bonus défense +1, Immunité contre dégâts (Energy) +5%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk I] Bonus défense +1
-• Immunité contre dégâts (énergie) +5%"
-u_a_over_05,Protection contre l'énergie T1,Overlay (armure),5,Immunité contre dégâts +10%,palier 5 niv. 14+ (rare dès 9),[Standard Légère Mk I] Immunité contre dégâts (Energy) +10%,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk I] Immunité contre dégâts (énergie) +10%"
-u_a_over_06,Protection antibalistique T1,Overlay (armure),6,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%",palier 6 niv. 16+ (rare dès 11),[Standard Légère Mk I] Immunité contre dégâts (Physique) +5%,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk I] Immunité contre dégâts (Physique) +5%"
-u_a_over_07,Plaques liées T1,Overlay (armure),7,Bonus défense +1,palier 7 niv. 18+ (rare dès 13),[Standard Légère Mk II] Bonus défense +2,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk II] Bonus défense +2"
-u_a_over_08,Plaques lourdes liées T1,Overlay (armure),8,"Malus de caractéristique +Penalty_-2, Bonus défense +2",palier 8 niv. 20+ (rare dès 15),"[Standard Légère Mk II] Bonus défense +2, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk II] Bonus défense +2
+• Bonus de compétence (Discrétion) +2
 • Jets de sauvegarde améliorés +1"
-u_a_over_09,Protection contre la chaleur T2,Overlay (armure),9,Immunité contre dégâts +15%,palier 9 niv. 22+ (rare dès 17),"[Standard Légère Mk II] Immunité contre dégâts (Fire/Cold) +10%, Résistance (Fire) +Resist_5/-",,"[Mod D20-Overhaul]
+u_a_over_03,Sur-couche atténuatrice T1,Overlay (armure),3,Immunité contre dégâts +10%,palier 3 niv. 10+ (rare dès 5),"Immunité contre dégâts (Sonic/Electrical) +15%, Résistance aux dégâts (Sonic/Electrical) +5/-",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
 Effets :
-• [Standard Légère Mk II] Immunité contre dégâts (Fire/Cold) +10%
-• Résistance (feu) +Resist_5/-"
-u_a_over_10,Revêtement 'Armure' T2,Overlay (armure),10,"Jets de sauvegarde améliorés +1, Bonus de compétence +4",palier 10 niv. 24+ (rare dès 19),"[Standard Légère Mk II] Jets de sauvegarde améliorés +2, Bonus de compétence +4",,"[Mod D20-Overhaul]
+• Immunité contre dégâts (Sonique/Électrique) +15%
+• Résistance aux dégâts (Sonique/Électrique) +5/-"
+u_a_over_04,Revêtement ablatif T1,Overlay (armure),4,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +10%, Bonus défense +1",palier 4 niv. 12+ (rare dès 7),"Bonus défense +1, Immunité contre dégâts (Energy) +15%",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
 Effets :
-• [Standard Légère Mk II] Jets de sauvegarde améliorés +2
-• Bonus de compétence +4"
-u_a_over_11,Sur-couche atténuatrice T2,Overlay (armure),11,Immunité contre dégâts +15%,palier 11 niv. 26+ (rare dès 21),"[Standard Légère Mk II] Immunité contre dégâts (Sonic/Electrical) +10%, Résistance (Sonic) +Resist_5/-",,"[Mod D20-Overhaul]
+• Bonus défense +1
+• Immunité contre dégâts (Énergie) +15%"
+u_a_over_05,Protection contre l'énergie T1,Overlay (armure),5,Immunité contre dégâts +10%,palier 5 niv. 14+ (rare dès 9),"Immunité contre dégâts (Energy) +15%, Régénération +1",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
 Effets :
-• [Standard Légère Mk II] Immunité contre dégâts (Sonic/Electrical) +10%
-• Résistance (soniques) +Resist_5/-"
-u_a_over_12,Revêtement ablatif T2,Overlay (armure),12,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +25%, Bonus défense +1",palier 12 niv. 28+ (rare dès 23),"[Standard Légère Mk II] Bonus défense +2, Immunité contre dégâts (Energy) +10%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk II] Bonus défense +2
-• Immunité contre dégâts (énergie) +10%"
-u_a_over_13,Protection contre l'énergie T2,Overlay (armure),13,Immunité contre dégâts +15%,palier 13 niv. 30+ (rare dès 25),[Standard Légère Mk III] Immunité contre dégâts (Energy) +15%,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk III] Immunité contre dégâts (énergie) +15%"
-u_a_over_14,Protection antibalistique T2,Overlay (armure),14,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +15%",palier 14 niv. 30+ (rare dès 27),[Standard Légère Mk III] Immunité contre dégâts (Physique) +15%,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk III] Immunité contre dégâts (Physique) +15%"
-u_a_over_15,Plaques liées T2,Overlay (armure),15,Bonus défense +2,palier 15 niv. 30+ (rare dès 29),[Standard Légère Mk III] Bonus défense +3,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk III] Bonus défense +3"
-u_a_over_16,Plaques lourdes liées T2,Overlay (armure),16,"Malus de caractéristique +Penalty_-3, Bonus défense +3",palier 16 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Bonus défense +3, Immunité contre dégâts (Physique) +10%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk III] Bonus défense +3
-• Immunité contre dégâts (Physique) +10%"
-u_a_over_17,Protection contre la chaleur T3,Overlay (armure),17,"Immunité contre dégâts +15%, Résistance aux dégâts (Fire) +Resist_5/-",palier 17 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Immunité contre dégâts (Fire/Cold) +15%, Résistance (Fire/Cold) +Resist_10/-",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk III] Immunité contre dégâts (Fire/Cold) +15%
-• Résistance (Fire/Cold) +Resist_10/-"
-u_a_over_18,Revêtement 'Armure' T3,Overlay (armure),18,"Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1, Bonus de compétence +6",palier 18 niv. 30+ (rare dès 30),"[Standard Légère Mk III] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +3, Bonus de compétence +6",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Standard Légère Mk III] Bonus de caractéristique (Dextérité) +1
-• Jets de sauvegarde améliorés +3
-• Bonus de compétence +6"
-u_a_over_19,Sur-couche atténuatrice T3,Overlay (armure),19,"Immunité contre dégâts +20%, Résistance aux dégâts (Sonic) +Resist_5/-",palier 19 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus défense +1, Immunité contre dégâts (Energy) +5%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk I] Bonus défense +1
-• Immunité contre dégâts (énergie) +5%"
-u_a_over_20,Revêtement ablatif T3,Overlay (armure),20,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +30%, Bonus défense +1",palier 20 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus défense +1, Immunité contre dégâts (Physique) +5%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk I] Bonus défense +1
-• Immunité contre dégâts (Physique) +5%"
-u_a_over_21,Protection contre l'énergie T3,Overlay (armure),21,Immunité contre dégâts +20%,palier 21 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1, Bonus de compétence +4",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk I] Bonus de caractéristique (Dextérité) +1
-• Jets de sauvegarde améliorés +1
-• Bonus de compétence +4"
-u_a_over_22,Protection antibalistique T3,Overlay (armure),22,"Immunité contre dégâts +20%, Immunité contre dégâts +20%, Immunité contre dégâts +20%",palier 22 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Immunité contre dégâts (Élémentaire) +10%, Résistance (Fire/Cold/Sonic) +Resist_5/-",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk I] Immunité contre dégâts (Élémentaire) +10%
-• Résistance (Fire/Cold/Sonic) +Resist_5/-"
-u_a_over_23,Plaques liées T3,Overlay (armure),23,Bonus défense +3,palier 23 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus défense +1, Immunité contre dégâts (Energy) +10%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk II] Bonus défense +1
-• Immunité contre dégâts (énergie) +10%"
-u_a_over_24,Plaques lourdes liées T3,Overlay (armure),24,"Malus à l'attaque +Penalty_-4, Immunité contre dégâts +15%, Bonus défense +4",palier 24 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus défense +1, Immunité contre dégâts (Physique) +10%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk II] Bonus défense +1
-• Immunité contre dégâts (Physique) +10%"
-u_a_over_25,Protection contre la chaleur T4,Overlay (armure),25,"Immunité contre dégâts +20%, Résistance aux dégâts (Fire) +Resist_10/-",palier 25 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +2, Bonus de compétence +6",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk II] Bonus de caractéristique (Dextérité) +1
-• Jets de sauvegarde améliorés +2
-• Bonus de compétence +6"
-u_a_over_26,Revêtement 'Armure' T4,Overlay (armure),26,"Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +1, Bonus de compétence +8",palier 26 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Immunité contre dégâts (Élémentaire) +15%, Résistance (Fire/Cold/Sonic) +Resist_10/-",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk II] Immunité contre dégâts (Élémentaire) +15%
-• Résistance (Fire/Cold/Sonic) +Resist_10/-"
-u_a_over_27,Sur-couche atténuatrice T4,Overlay (armure),27,"Immunité contre dégâts +50%, Résistance aux dégâts (Sonic) +Resist_5/-",palier 27 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus défense +2, Immunité contre dégâts (Energy) +15%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk III] Bonus défense +2
-• Immunité contre dégâts (énergie) +15%"
-u_a_over_28,Revêtement ablatif T4,Overlay (armure),28,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +30%, Résistance aux dégâts (Energy) +Resist_5/-, Bonus défense +1",palier 28 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus défense +2, Immunité contre dégâts (Physique) +15%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk III] Bonus défense +2
-• Immunité contre dégâts (Physique) +15%"
-u_a_over_29,Protection contre l'énergie T4,Overlay (armure),29,Immunité contre dégâts +30%,palier 29 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +3, Bonus de compétence +8",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk III] Bonus de caractéristique (Dextérité) +2
-• Jets de sauvegarde améliorés +3
-• Bonus de compétence +8"
-u_a_over_30,Plaques liées T4,Overlay (armure),30,"Résistance aux dégâts (Bludgeoning) +Resist_5/-, Résistance aux dégâts (Piercing) +Resist_5/-, Résistance aux dégâts (Slashing) +Resist_5/-, Bonus défense +3",palier 30 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Immunité contre dégâts (Élémentaire) +20%, Résistance (Fire/Cold/Sonic) +Resist_15/-",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk III] Immunité contre dégâts (Élémentaire) +20%
-• Résistance (Fire/Cold/Sonic) +Resist_15/-"
-ARMURES — SOUS-COUCHES,,,,,,,,
-u_a_unde_01,Sous-couche anti-environnement T1,Underlay (armure),1,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 1 niv. 6+ (rare dès 1),"[Standard Lourde Mk I] Immunité (Élémentaire) +10%, Résistance (Cold/Fire) +Resist_5/-",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk I] Immunité (Élémentaire) +10%
-• Résistance (Cold/Fire) +Resist_5/-"
-u_a_unde_02,Sous-couche bio-restaurative T1,Underlay (armure),2,Régénération +1,palier 2 niv. 8+ (rare dès 3),[Standard Lourde Mk I] Régénération +1,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk I] Régénération +1"
-u_a_unde_03,Sous-couche fortificatrice T1,Underlay (armure),3,Immunité contre dégâts +10%,palier 3 niv. 10+ (rare dès 5),[Standard Lourde Mk I] Immunité contre dégâts (Physique/Énergie) +5%,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk I] Immunité contre dégâts (Physique/Énergie) +5%"
-u_a_unde_04,Sous-couche renforçante T1,Underlay (armure),4,Bonus de caractéristique (Strength) +1,palier 4 niv. 12+ (rare dès 7),"[Standard Lourde Mk I] Bonus de caractéristique (Strength) +1, Bonus de caractéristique (Constitution) +1",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
-
-Effets :
-• [Standard Lourde Mk I] Bonus de caractéristique (Force) +1
-• Bonus de caractéristique (Constitution) +1"
-u_a_unde_05,Sous-couche flexible T1,Underlay (armure),5,Bonus DEX max +1,palier 5 niv. 14+ (rare dès 9),[Standard Lourde Mk I] Bonus DEX max +1,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
-
-Effets :
-• [Standard Lourde Mk I] Bonus DEX max +1"
-u_a_unde_06,Sous-couche en duracier T1,Underlay (armure),6,"Bonus défense contre Dégâts (Bludgeoning) +1, Bonus défense contre Dégâts (Piercing) +1, Bonus défense contre Dégâts (Slashing) +1",palier 6 niv. 16+ (rare dès 11),[Standard Lourde Mk I] Réduction des dégâts (Physique) +1/-,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk I] Réduction des dégâts (Physique) +1/-"
-u_a_unde_07,Sous-couche anti-environnement T2,Underlay (armure),7,"Immunité contre dégâts +20%, Immunité contre dégâts +20%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 7 niv. 18+ (rare dès 13),"[Standard Lourde Mk II] Immunité (Élémentaire) +15%, Résistance (Cold/Fire) +Resist_10/-",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk II] Immunité (Élémentaire) +15%
-• Résistance (Cold/Fire) +Resist_10/-"
-u_a_unde_08,Sous-couche bio-restaurative T2,Underlay (armure),8,Régénération +2,palier 8 niv. 20+ (rare dès 15),[Standard Lourde Mk II] Régénération +2,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk II] Régénération +2"
-u_a_unde_09,Sous-couche fortificatrice T2,Underlay (armure),9,"Immunité contre dégâts +10%, Immunité (LvL/Ab_drain)",palier 9 niv. 22+ (rare dès 17),"[Standard Lourde Mk II] Immunité contre dégâts (Physique/Énergie) +10%, Immunité (Critiques)",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk II] Immunité contre dégâts (Physique/Énergie) +10%
-• Immunité (Critiques)"
-u_a_unde_10,Sous-couche renforçante T2,Underlay (armure),10,"Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Strength) +1",palier 10 niv. 24+ (rare dès 19),"[Standard Lourde Mk II] Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +2",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
-
-Effets :
-• [Standard Lourde Mk II] Bonus de caractéristique (Force) +2
-• Bonus de caractéristique (Constitution) +2"
-u_a_unde_11,Sous-couche flexible T2,Underlay (armure),11,"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1",palier 11 niv. 26+ (rare dès 21),"[Standard Lourde Mk II] Bonus DEX max +2, Bonus défense +1",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
-
-Effets :
-• [Standard Lourde Mk II] Bonus DEX max +2
-• Bonus défense +1"
-u_a_unde_12,Sous-couche en duracier T2,Underlay (armure),12,"Malus de caractéristique +Penalty_-1, Bonus défense contre Dégâts (Bludgeoning) +2, Bonus défense contre Dégâts (Piercing) +2, Bonus défense contre Dégâts (Slashing) +2",palier 12 niv. 28+ (rare dès 23),"[Standard Lourde Mk II] Réduction des dégâts (Physique) +2/-, Bonus défense +1",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk II] Réduction des dégâts (Physique) +2/-
-• Bonus défense +1"
-u_a_unde_13,Sous-couche anti-environnement T3,Underlay (armure),13,"Immunité contre dégâts +25%, Immunité contre dégâts +25%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 13 niv. 30+ (rare dès 25),"[Standard Lourde Mk III] Immunité (Élémentaire) +20%, Résistance (Cold/Fire) +Resist_15/-",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk III] Immunité (Élémentaire) +20%
-• Résistance (Cold/Fire) +Resist_15/-"
-u_a_unde_14,Sous-couche bio-restaurative T3,Underlay (armure),14,Régénération +3,palier 14 niv. 30+ (rare dès 27),[Standard Lourde Mk III] Régénération +3,,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk III] Régénération +3"
-u_a_unde_15,Sous-couche fortificatrice T3,Underlay (armure),15,"Immunité contre dégâts +15%, Immunité (LvL/Ab_drain)",palier 15 niv. 30+ (rare dès 29),"[Standard Lourde Mk III] Immunité contre dégâts (Physique/Énergie) +15%, Immunité (Drain/Critiques)",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk III] Immunité contre dégâts (Physique/Énergie) +15%
-• Immunité (Drain/Critiques)"
-u_a_unde_16,Sous-couche renforçante T3,Underlay (armure),16,"Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Strength) +2",palier 16 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Bonus de caractéristique (Strength) +3, Bonus de caractéristique (Constitution) +3",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
-
-Effets :
-• [Standard Lourde Mk III] Bonus de caractéristique (Force) +3
-• Bonus de caractéristique (Constitution) +3"
-u_a_unde_17,Sous-couche flexible T3,Underlay (armure),17,"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +2",palier 17 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Bonus DEX max +3, Bonus défense +2",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
-
-Effets :
-• [Standard Lourde Mk III] Bonus DEX max +3
-• Bonus défense +2"
-u_a_unde_18,Sous-couche en duracier T3,Underlay (armure),18,"Malus de caractéristique +Penalty_-2, Bonus défense contre Dégâts (Bludgeoning) +3, Bonus défense contre Dégâts (Piercing) +3, Bonus défense contre Dégâts (Slashing) +3",palier 18 niv. 30+ (rare dès 30),"[Standard Lourde Mk III] Réduction des dégâts (Physique) +3/-, Bonus défense +2",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Effets :
-• [Standard Lourde Mk III] Réduction des dégâts (Physique) +3/-
-• Bonus défense +2"
-u_a_unde_19,Sous-couche anti-environnement T4,Underlay (armure),19,"Immunité contre dégâts +30%, Immunité contre dégâts +30%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 19 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Strength/Constitution) +1, Régénération +1",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk I] Bonus de caractéristique (Strength/Constitution) +1
+• Immunité contre dégâts (Énergie) +15%
 • Régénération +1"
-u_a_unde_20,Sous-couche bio-restaurative T4,Underlay (armure),20,"Bonus de caractéristique (Constitution) +1, Régénération +3",palier 20 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Réduction des dégâts +1/-, Immunité contre dégâts +5%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk I] Réduction des dégâts +1/-
-• Immunité contre dégâts +5%"
-u_a_unde_21,Sous-couche fortificatrice T4,Underlay (armure),21,"Immunité contre dégâts +20%, Immunité (LvL/Ab_drain)",palier 21 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk I] Bonus de caractéristique (Dextérité) +1
-• Bonus DEX max +1
-• Jets de sauvegarde améliorés +1"
-u_a_unde_22,Sous-couche renforçante T4,Underlay (armure),22,"Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Strength) +2",palier 22 niv. 30+ (rare dès 30),"[Combinée Interm. Mk I] Immunité contre dégâts +5%, Régénération +1, Immunité (Drain)",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk I] Immunité contre dégâts +5%
-• Régénération +1
-• Immunité (Drain)"
-u_a_unde_23,Sous-couche flexible T4,Underlay (armure),23,"Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2",palier 23 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Strength/Constitution) +2, Régénération +2",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk II] Bonus de caractéristique (Strength/Constitution) +2
-• Régénération +2"
-u_a_unde_24,Sous-couche en duracier T4,Underlay (armure),24,"Malus de caractéristique +Penalty_-3, Bonus défense contre Dégâts (Bludgeoning) +4, Bonus défense contre Dégâts (Piercing) +4, Bonus défense contre Dégâts (Slashing) +4",palier 24 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Réduction des dégâts +2/-, Immunité contre dégâts +10%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk II] Réduction des dégâts +2/-
-• Immunité contre dégâts +10%"
-u_a_unde_25,Sous-couche anti-environnement T5,Underlay (armure),25,"Immunité contre dégâts +30%, Immunité contre dégâts +30%, Résistance aux dégâts (Cold) +Resist_10/-, Résistance aux dégâts (Fire) +Resist_10/-",palier 25 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk II] Bonus de caractéristique (Dextérité) +2
-• Bonus DEX max +2
-• Jets de sauvegarde améliorés +2"
-u_a_unde_26,Sous-couche bio-restaurative T5,Underlay (armure),26,"Bonus de caractéristique (Constitution) +3, Régénération +3",palier 26 niv. 30+ (rare dès 30),"[Combinée Interm. Mk II] Immunité contre dégâts +10%, Régénération +2, Immunité (Drain/Critiques)",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk II] Immunité contre dégâts +10%
-• Régénération +2
-• Immunité (Drain/Critiques)"
-u_a_unde_27,Sous-couche fortificatrice T5,Underlay (armure),27,"Immunité contre dégâts +30%, Immunité (LvL/Ab_drain)",palier 27 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Strength/Constitution) +2, Régénération +3",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk III] Bonus de caractéristique (Strength/Constitution) +2
-• Régénération +3"
-u_a_unde_28,Sous-couche renforçante T5,Underlay (armure),28,"Bonus de caractéristique (Constitution) +3, Bonus de caractéristique (Strength) +3",palier 28 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Réduction des dégâts +2/-, Immunité contre dégâts +15%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk III] Réduction des dégâts +2/-
-• Immunité contre dégâts +15%"
-u_a_unde_29,Sous-couche flexible T5,Underlay (armure),29,"Bonus de caractéristique (Dexterity) +3, Bonus DEX max +3",palier 29 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk III] Bonus de caractéristique (Dextérité) +2
-• Bonus DEX max +2
-• Jets de sauvegarde améliorés +2"
-u_a_unde_30,Sous-couche en duracier T5,Underlay (armure),30,"Malus de caractéristique +Penalty_-3, Bonus défense contre Dégâts (Bludgeoning) +5, Bonus défense contre Dégâts (Piercing) +5, Bonus défense contre Dégâts (Slashing) +5",palier 30 niv. 30+ (rare dès 30),"[Combinée Interm. Mk III] Immunité contre dégâts +15%, Régénération +2, Immunité (Drain/Critiques)",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure intermédiaire uniquement)
-
-Effets :
-• [Combinée Interm. Mk III] Immunité contre dégâts +15%
-• Régénération +2
-• Immunité (Drain/Critiques)"
-ARMURES INTERMÉDIAIRES — SURCOUCHES DOUBLES (EXCLUSIVES),,,,,,,,
-u_a_over_c01,Sur-couche double ablative Mk I,Overlay double (armure interm.),1,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Immunité contre dégâts (Energy) +10%",,"[Mod D20-Overhaul]
+u_a_over_06,Protection antibalistique T1,Overlay (armure),6,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%",palier 6 niv. 16+ (rare dès 11),"Bonus défense +1, Immunité contre dégâts (Physique) +10%",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
-Effets :
-• Bonus défense +1
-• Immunité contre dégâts (énergie) +10%"
-u_a_over_c02,Sur-couche double balistique Mk I,Overlay double (armure interm.),2,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Immunité contre dégâts (Physique) +10%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
 
 Effets :
 • Bonus défense +1
 • Immunité contre dégâts (Physique) +10%"
-u_a_over_c03,Sur-couche double tactique Mk I,Overlay double (armure interm.),3,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus défense +1, Jets de sauvegarde améliorés +1, Bonus de compétence +3",,"[Mod D20-Overhaul]
+u_a_over_07,Plaques liées T1,Overlay (armure),7,Bonus défense +1,palier 7 niv. 18+ (rare dès 13),"Bonus défense +1, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
 
 Effets :
 • Bonus défense +1
-• Jets de sauvegarde améliorés +1
-• Bonus de compétence +3"
-u_a_over_c04,Sur-couche double environnementale Mk I,Overlay double (armure interm.),4,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +10%, Résistance (Fire/Sonic) +5/-",,"[Mod D20-Overhaul]
+• Jets de sauvegarde améliorés +1"
+u_a_over_08,Plaques lourdes liées T1,Overlay (armure),8,"Malus de caractéristique +Penalty_-2, Bonus défense +2",palier 8 niv. 20+ (rare dès 15),"Bonus défense +1, Immunité contre dégâts (Physique/Énergie) +5%, Bonus de caractéristique (Constitution) +1",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
-Effets :
-• Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +10%
-• Résistance (Fire/Sonic) +5/-"
-u_a_over_c05,Sur-couche double ablative Mk II,Overlay double (armure interm.),5,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +2, Immunité contre dégâts (Energy) +15%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
-Effets :
-• Bonus défense +2
-• Immunité contre dégâts (énergie) +15%"
-u_a_over_c06,Sur-couche double balistique Mk II,Overlay double (armure interm.),6,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +2, Immunité contre dégâts (Physique) +15%",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
-Effets :
-• Bonus défense +2
-• Immunité contre dégâts (Physique) +15%"
-u_a_over_c07,Sur-couche double tactique Mk II,Overlay double (armure interm.),7,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus défense +1, Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +2, Bonus de compétence +5",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
 
 Effets :
 • Bonus défense +1
-• Bonus de caractéristique (Dextérité) +1
+• Immunité contre dégâts (Physique/Énergie) +5%
+• Bonus de caractéristique (Constitution) +1"
+u_a_over_09,Protection contre la chaleur T2,Overlay (armure),9,Immunité contre dégâts +15%,palier 9 niv. 22+ (rare dès 17),"Immunité contre dégâts (Fire/Cold) +20%, Résistance aux dégâts (Fire/Cold) +10/-, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Immunité contre dégâts (Feu/Froid) +20%
+• Résistance aux dégâts (Feu/Froid) +10/-
+• Jets de sauvegarde améliorés +1"
+u_a_over_10,Revêtement 'Armure' T2,Overlay (armure),10,"Jets de sauvegarde améliorés +1, Bonus de compétence +4",palier 10 niv. 24+ (rare dès 19),"Bonus de compétence (Discrétion) +4, Jets de sauvegarde améliorés +2, Bonus de caractéristique (Dexterity) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Bonus de compétence (Discrétion) +4
 • Jets de sauvegarde améliorés +2
-• Bonus de compétence +5"
-u_a_over_c08,Sur-couche double environnementale Mk II,Overlay double (armure interm.),8,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +20%, Résistance (Fire/Cold/Sonic) +10/-",,"[Mod D20-Overhaul]
+• Bonus de caractéristique (Dextérité) +1"
+u_a_over_11,Sur-couche atténuatrice T2,Overlay (armure),11,Immunité contre dégâts +15%,palier 11 niv. 26+ (rare dès 21),"Immunité contre dégâts (Sonic/Electrical) +20%, Résistance aux dégâts (Sonic/Electrical) +10/-, Immunité (Peur)",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
 
 Effets :
-• Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +20%
-• Résistance (Fire/Cold/Sonic) +10/-"
-u_a_over_c09,Sur-couche double ablative Mk III,Overlay double (armure interm.),9,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +3, Immunité contre dégâts (Energy) +25%",,"[Mod D20-Overhaul]
+• Immunité contre dégâts (Sonique/Électrique) +20%
+• Résistance aux dégâts (Sonique/Électrique) +10/-
+• Immunité (Peur)"
+u_a_over_12,Revêtement ablatif T2,Overlay (armure),12,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +25%, Bonus défense +1",palier 12 niv. 28+ (rare dès 23),"Bonus défense +1, Immunité contre dégâts (Energy) +20%, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
 
 Effets :
-• Bonus défense +3
-• Immunité contre dégâts (énergie) +25%"
-u_a_over_c10,Sur-couche double balistique Mk III,Overlay double (armure interm.),10,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +3, Immunité contre dégâts (Physique) +25%",,"[Mod D20-Overhaul]
+• Bonus défense +1
+• Immunité contre dégâts (Énergie) +20%
+• Jets de sauvegarde améliorés +1"
+u_a_over_13,Protection contre l'énergie T2,Overlay (armure),13,Immunité contre dégâts +15%,palier 13 niv. 30+ (rare dès 25),"Immunité contre dégâts (Energy) +20%, Régénération +2",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
 
 Effets :
-• Bonus défense +3
-• Immunité contre dégâts (Physique) +25%"
-u_a_over_c11,Sur-couche double tactique Mk III,Overlay double (armure interm.),11,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus défense +2, Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +3, Bonus de compétence +8",,"[Mod D20-Overhaul]
+• Immunité contre dégâts (Énergie) +20%
+• Régénération +2"
+u_a_over_14,Protection antibalistique T2,Overlay (armure),14,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +15%",palier 14 niv. 30+ (rare dès 27),"Bonus défense +1, Immunité contre dégâts (Physique) +20%",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Effets :
+• Bonus défense +1
+• Immunité contre dégâts (Physique) +20%"
+u_a_over_15,Plaques liées T2,Overlay (armure),15,Bonus défense +2,palier 15 niv. 30+ (rare dès 29),"Bonus défense +1, Jets de sauvegarde améliorés +2, Immunité contre dégâts (Physique) +5%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Bonus défense +1
+• Jets de sauvegarde améliorés +2
+• Immunité contre dégâts (Physique) +5%"
+u_a_over_16,Plaques lourdes liées T2,Overlay (armure),16,"Malus de caractéristique +Penalty_-3, Bonus défense +3",palier 16 niv. 30+ (rare dès 30),"Bonus défense +1, Immunité contre dégâts (Physique/Énergie) +10%, Bonus de caractéristique (Strength) +1, Bonus de caractéristique (Constitution) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Bonus défense +1
+• Immunité contre dégâts (Physique/Énergie) +10%
+• Bonus de caractéristique (Force) +1
+• Bonus de caractéristique (Constitution) +1"
+u_a_over_17,Protection contre la chaleur T3,Overlay (armure),17,"Immunité contre dégâts +15%, Résistance aux dégâts (Fire) +Resist_5/-",palier 17 niv. 30+ (rare dès 30),"Immunité contre dégâts (Fire/Cold) +25%, Résistance aux dégâts (Fire/Cold) +10/-, Jets de sauvegarde améliorés +2",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Immunité contre dégâts (Feu/Froid) +25%
+• Résistance aux dégâts (Feu/Froid) +10/-
+• Jets de sauvegarde améliorés +2"
+u_a_over_18,Revêtement 'Armure' T3,Overlay (armure),18,"Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1, Bonus de compétence +6",palier 18 niv. 30+ (rare dès 30),"Bonus de compétence (Discrétion) +6, Jets de sauvegarde améliorés +3, Bonus de caractéristique (Dexterity) +1, Bonus défense +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Bonus de compétence (Discrétion) +6
+• Jets de sauvegarde améliorés +3
+• Bonus de caractéristique (Dextérité) +1
+• Bonus défense +1"
+u_a_over_19,Sur-couche atténuatrice T3,Overlay (armure),19,"Immunité contre dégâts +20%, Résistance aux dégâts (Sonic) +Resist_5/-",palier 19 niv. 30+ (rare dès 30),"Immunité contre dégâts (Sonic/Electrical) +25%, Résistance aux dégâts (Sonic/Electrical) +10/-, Immunité (Peur), Immunité (Paralysie)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Immunité contre dégâts (Sonique/Électrique) +25%
+• Résistance aux dégâts (Sonique/Électrique) +10/-
+• Immunité (Peur)
+• Immunité (Paralysie)"
+u_a_over_20,Revêtement ablatif T3,Overlay (armure),20,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +30%, Bonus défense +1",palier 20 niv. 30+ (rare dès 30),"Bonus défense +1, Immunité contre dégâts (Energy) +25%, Jets de sauvegarde améliorés +1, Immunité (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Bonus défense +1
+• Immunité contre dégâts (Énergie) +25%
+• Jets de sauvegarde améliorés +1
+• Immunité (Drain)"
+u_a_over_21,Protection contre l'énergie T3,Overlay (armure),21,Immunité contre dégâts +20%,palier 21 niv. 30+ (rare dès 30),"Immunité contre dégâts (Energy) +25%, Résistance aux dégâts (Energy) +5/-, Régénération +2, Immunité (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Immunité contre dégâts (Énergie) +25%
+• Résistance aux dégâts (Énergie) +5/-
+• Régénération +2
+• Immunité (Drain)"
+u_a_over_22,Protection antibalistique T3,Overlay (armure),22,"Immunité contre dégâts +20%, Immunité contre dégâts +20%, Immunité contre dégâts +20%",palier 22 niv. 30+ (rare dès 30),"Bonus défense +2, Immunité contre dégâts (Physique) +30%, Immunité (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
 Effets :
 • Bonus défense +2
-• Bonus de caractéristique (Dextérité) +2
-• Jets de sauvegarde améliorés +3
-• Bonus de compétence +8"
-u_a_over_c12,Sur-couche double environnementale Mk III,Overlay double (armure interm.),12,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +30%, Résistance (Fire/Cold/Sonic) +15/-",,"[Mod D20-Overhaul]
+• Immunité contre dégâts (Physique) +30%
+• Immunité (Critiques)"
+u_a_over_23,Plaques liées T3,Overlay (armure),23,Bonus défense +3,palier 23 niv. 30+ (rare dès 30),"Bonus défense +2, Jets de sauvegarde améliorés +2, Immunité contre dégâts (Physique) +10%",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Effets :
+• Bonus défense +2
+• Jets de sauvegarde améliorés +2
+• Immunité contre dégâts (Physique) +10%"
+u_a_over_24,Plaques lourdes liées T3,Overlay (armure),24,"Malus à l'attaque +Penalty_-4, Immunité contre dégâts +15%, Bonus défense +4",palier 24 niv. 30+ (rare dès 30),"Bonus défense +2, Immunité contre dégâts (Physique/Énergie) +15%, Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +2, Immunité (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
 
 Effets :
-• Immunité contre dégâts (Fire/Cold/Sonic/Electrical) +30%
-• Résistance (Fire/Cold/Sonic) +15/-"
-ARMURES INTERMÉDIAIRES — SOUS-COUCHES DOUBLES (EXCLUSIVES),,,,,,,,
-u_a_unde_c01,Sous-couche double bio-renforcée Mk I,Underlay double (armure interm.),1,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus de caractéristique (Strength) +1, Bonus de caractéristique (Constitution) +1, Régénération +1",,"[Mod D20-Overhaul]
+• Bonus défense +2
+• Immunité contre dégâts (Physique/Énergie) +15%
+• Bonus de caractéristique (Force) +2
+• Bonus de caractéristique (Constitution) +2
+• Immunité (Critiques)"
+u_a_over_25,Protection contre la chaleur T4,Overlay (armure),25,"Immunité contre dégâts +20%, Résistance aux dégâts (Fire) +Resist_10/-",palier 25 niv. 30+ (rare dès 30),"Immunité contre dégâts (Fire/Cold) +30%, Résistance aux dégâts (Fire/Cold) +15/-, Jets de sauvegarde améliorés +3",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Immunité contre dégâts (Feu/Froid) +30%
+• Résistance aux dégâts (Feu/Froid) +15/-
+• Jets de sauvegarde améliorés +3"
+u_a_over_26,Revêtement 'Armure' T4,Overlay (armure),26,"Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +1, Bonus de compétence +8",palier 26 niv. 30+ (rare dès 30),"Bonus de compétence (Discrétion) +8, Jets de sauvegarde améliorés +4, Bonus de caractéristique (Dexterity) +2, Bonus défense +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Bonus de compétence (Discrétion) +8
+• Jets de sauvegarde améliorés +4
+• Bonus de caractéristique (Dextérité) +2
+• Bonus défense +1"
+u_a_over_27,Sur-couche atténuatrice T4,Overlay (armure),27,"Immunité contre dégâts +50%, Résistance aux dégâts (Sonic) +Resist_5/-",palier 27 niv. 30+ (rare dès 30),"Immunité contre dégâts (Sonic/Electrical) +30%, Résistance aux dégâts (Sonic/Electrical) +15/-, Immunité (Effets mentaux), Immunité (Paralysie)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Immunité contre dégâts (Sonique/Électrique) +30%
+• Résistance aux dégâts (Sonique/Électrique) +15/-
+• Immunité (Effets mentaux)
+• Immunité (Paralysie)"
+u_a_over_28,Revêtement ablatif T4,Overlay (armure),28,"Malus de caractéristique +Penalty_-1, Immunité contre dégâts +30%, Résistance aux dégâts (Energy) +Resist_5/-, Bonus défense +1",palier 28 niv. 30+ (rare dès 30),"Bonus défense +2, Immunité contre dégâts (Energy) +30%, Jets de sauvegarde améliorés +2, Immunité (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Bonus défense +2
+• Immunité contre dégâts (Énergie) +30%
+• Jets de sauvegarde améliorés +2
+• Immunité (Drain)"
+u_a_over_29,Protection contre l'énergie T4,Overlay (armure),29,Immunité contre dégâts +30%,palier 29 niv. 30+ (rare dès 30),"Immunité contre dégâts (Energy) +30%, Résistance aux dégâts (Energy) +5/-, Régénération +3, Immunité (Drain), Immunité (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Immunité contre dégâts (Énergie) +30%
+• Résistance aux dégâts (Énergie) +5/-
+• Régénération +3
+• Immunité (Drain)
+• Immunité (Critiques)"
+u_a_over_30,Plaques liées T4,Overlay (armure),30,"Résistance aux dégâts (Bludgeoning) +Resist_5/-, Résistance aux dégâts (Piercing) +Resist_5/-, Résistance aux dégâts (Slashing) +Resist_5/-, Bonus défense +3",palier 30 niv. 30+ (rare dès 30),"Bonus défense +2, Jets de sauvegarde améliorés +3, Immunité contre dégâts (Physique) +15%, Immunité (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effets :
+• Bonus défense +2
+• Jets de sauvegarde améliorés +3
+• Immunité contre dégâts (Physique) +15%
+• Immunité (Critiques)"
+ARMURES — SOUS-COUCHES,,,,,,,,
+u_a_unde_01,Sous-couche anti-environnement T1,Underlay (armure),1,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 1 niv. 6+ (rare dès 1),"Immunité contre dégâts (Fire/Cold) +10%, Résistance aux dégâts (Fire/Cold) +5/-",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
 
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Effets :
+• Immunité contre dégâts (Feu/Froid) +10%
+• Résistance aux dégâts (Feu/Froid) +5/-"
+u_a_unde_02,Sous-couche bio-restaurative T1,Underlay (armure),2,Régénération +1,palier 2 niv. 8+ (rare dès 3),Régénération +1,,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Régénération +1"
+u_a_unde_03,Sous-couche fortificatrice T1,Underlay (armure),3,Immunité contre dégâts +10%,palier 3 niv. 10+ (rare dès 5),Immunité contre dégâts (Energy) +5%,,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Immunité contre dégâts (Énergie) +5%"
+u_a_unde_04,Sous-couche renforçante T1,Underlay (armure),4,Bonus de caractéristique (Strength) +1,palier 4 niv. 12+ (rare dès 7),Bonus de caractéristique (Strength) +1,,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
+
+Effets :
+• Bonus de caractéristique (Force) +1"
+u_a_unde_05,Sous-couche flexible T1,Underlay (armure),5,Bonus DEX max +1,palier 5 niv. 14+ (rare dès 9),Bonus DEX max +1,,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
+
+Effets :
+• Bonus DEX max +1"
+u_a_unde_06,Sous-couche en duracier T1,Underlay (armure),6,"Bonus défense contre Dégâts (Bludgeoning) +1, Bonus défense contre Dégâts (Piercing) +1, Bonus défense contre Dégâts (Slashing) +1",palier 6 niv. 16+ (rare dès 11),"Défense vs Physique +1, Immunité contre dégâts (Physique) +5%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
+
+Effets :
+• Défense vs Physique +1
+• Immunité contre dégâts (Physique) +5%"
+u_a_unde_07,Sous-couche anti-environnement T2,Underlay (armure),7,"Immunité contre dégâts +20%, Immunité contre dégâts +20%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 7 niv. 18+ (rare dès 13),"Immunité contre dégâts (Fire/Cold) +15%, Résistance aux dégâts (Fire/Cold) +5/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Immunité contre dégâts (Feu/Froid) +15%
+• Résistance aux dégâts (Feu/Froid) +5/-"
+u_a_unde_08,Sous-couche bio-restaurative T2,Underlay (armure),8,Régénération +2,palier 8 niv. 20+ (rare dès 15),"Régénération +1, Immunité (Poison)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Régénération +1
+• Immunité (Poison)"
+u_a_unde_09,Sous-couche fortificatrice T2,Underlay (armure),9,"Immunité contre dégâts +10%, Immunité (LvL/Ab_drain)",palier 9 niv. 22+ (rare dès 17),"Immunité contre dégâts (Energy) +10%, Immunité (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Immunité contre dégâts (Énergie) +10%
+• Immunité (Drain)"
+u_a_unde_10,Sous-couche renforçante T2,Underlay (armure),10,"Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Strength) +1",palier 10 niv. 24+ (rare dès 19),"Bonus de caractéristique (Strength) +1, Bonus de caractéristique (Constitution) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
 
 Effets :
 • Bonus de caractéristique (Force) +1
-• Bonus de caractéristique (Constitution) +1
-• Régénération +1"
-u_a_unde_c02,Sous-couche double duracier fortifié Mk I,Underlay double (armure interm.),2,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Réduction des dégâts (Physique) +1/-, Immunité contre dégâts (Physique/Énergie) +5%",,"[Mod D20-Overhaul]
+• Bonus de caractéristique (Constitution) +1"
+u_a_unde_11,Sous-couche flexible T2,Underlay (armure),11,"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1",palier 11 niv. 26+ (rare dès 21),"Bonus DEX max +1, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
 
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
 
 Effets :
-• Réduction des dégâts (Physique) +1/-
-• Immunité contre dégâts (Physique/Énergie) +5%"
-u_a_unde_c03,Sous-couche double articulations tactiques Mk I,Underlay double (armure interm.),3,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +1, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
-Effets :
-• Bonus de caractéristique (Dextérité) +1
 • Bonus DEX max +1
 • Jets de sauvegarde améliorés +1"
-u_a_unde_c04,Sous-couche double bio-environnementale Mk I,Underlay double (armure interm.),4,CUSTOM — absent du jeu vanilla,craft / loot Mk I (niv. 6+),"Immunité contre dégâts (Fire/Cold) +15%, Résistance (Fire/Cold) +5/-, Régénération +1",,"[Mod D20-Overhaul]
+u_a_unde_12,Sous-couche en duracier T2,Underlay (armure),12,"Malus de caractéristique +Penalty_-1, Bonus défense contre Dégâts (Bludgeoning) +2, Bonus défense contre Dégâts (Piercing) +2, Bonus défense contre Dégâts (Slashing) +2",palier 12 niv. 28+ (rare dès 23),"Défense vs Physique +2, Immunité contre dégâts (Physique) +10%",,"[Mod D20-Overhaul]
 
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
 
 Effets :
-• Immunité contre dégâts (Fire/Cold) +15%
-• Résistance (Fire/Cold) +5/-
-• Régénération +1"
-u_a_unde_c05,Sous-couche double bio-renforcée Mk II,Underlay double (armure interm.),5,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +2, Régénération +2",,"[Mod D20-Overhaul]
+• Défense vs Physique +2
+• Immunité contre dégâts (Physique) +10%"
+u_a_unde_13,Sous-couche anti-environnement T3,Underlay (armure),13,"Immunité contre dégâts +25%, Immunité contre dégâts +25%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 13 niv. 30+ (rare dès 25),"Immunité contre dégâts (Fire/Cold) +20%, Résistance aux dégâts (Fire/Cold) +10/-",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
 
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Effets :
+• Immunité contre dégâts (Feu/Froid) +20%
+• Résistance aux dégâts (Feu/Froid) +10/-"
+u_a_unde_14,Sous-couche bio-restaurative T3,Underlay (armure),14,Régénération +3,palier 14 niv. 30+ (rare dès 27),"Régénération +2, Immunité (Poison)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Régénération +2
+• Immunité (Poison)"
+u_a_unde_15,Sous-couche fortificatrice T3,Underlay (armure),15,"Immunité contre dégâts +15%, Immunité (LvL/Ab_drain)",palier 15 niv. 30+ (rare dès 29),"Immunité contre dégâts (Energy) +15%, Immunité (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Immunité contre dégâts (Énergie) +15%
+• Immunité (Drain)"
+u_a_unde_16,Sous-couche renforçante T3,Underlay (armure),16,"Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Strength) +2",palier 16 niv. 30+ (rare dès 30),"Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
 
 Effets :
 • Bonus de caractéristique (Force) +2
-• Bonus de caractéristique (Constitution) +2
-• Régénération +2"
-u_a_unde_c06,Sous-couche double duracier fortifié Mk II,Underlay double (armure interm.),6,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Réduction des dégâts (Physique) +2/-, Immunité contre dégâts (Physique/Énergie) +10%, Immunité (Drain)",,"[Mod D20-Overhaul]
+• Bonus de caractéristique (Constitution) +1"
+u_a_unde_17,Sous-couche flexible T3,Underlay (armure),17,"Bonus de caractéristique (Dexterity) +1, Bonus DEX max +2",palier 17 niv. 30+ (rare dès 30),"Bonus DEX max +1, Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
+
+Effets :
+• Bonus DEX max +1
+• Bonus de caractéristique (Dextérité) +1
+• Jets de sauvegarde améliorés +1"
+u_a_unde_18,Sous-couche en duracier T3,Underlay (armure),18,"Malus de caractéristique +Penalty_-2, Bonus défense contre Dégâts (Bludgeoning) +3, Bonus défense contre Dégâts (Piercing) +3, Bonus défense contre Dégâts (Slashing) +3",palier 18 niv. 30+ (rare dès 30),"Défense vs Physique +2, Immunité contre dégâts (Physique) +15%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
+
+Effets :
+• Défense vs Physique +2
+• Immunité contre dégâts (Physique) +15%"
+u_a_unde_19,Sous-couche anti-environnement T4,Underlay (armure),19,"Immunité contre dégâts +30%, Immunité contre dégâts +30%, Résistance aux dégâts (Cold) +Resist_5/-, Résistance aux dégâts (Fire) +Resist_5/-",palier 19 niv. 30+ (rare dès 30),"Immunité contre dégâts (Fire/Cold) +25%, Résistance aux dégâts (Fire/Cold) +10/-",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
 
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
 Effets :
-• Réduction des dégâts (Physique) +2/-
-• Immunité contre dégâts (Physique/Énergie) +10%
-• Immunité (Drain)"
-u_a_unde_c07,Sous-couche double articulations tactiques Mk II,Underlay double (armure interm.),7,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2, Jets de sauvegarde améliorés +2",,"[Mod D20-Overhaul]
+• Immunité contre dégâts (Feu/Froid) +25%
+• Résistance aux dégâts (Feu/Froid) +10/-"
+u_a_unde_20,Sous-couche bio-restaurative T4,Underlay (armure),20,"Bonus de caractéristique (Constitution) +1, Régénération +3",palier 20 niv. 30+ (rare dès 30),"Régénération +2, Bonus de caractéristique (Constitution) +1, Immunité (Poison)",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
 
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
 Effets :
-• Bonus de caractéristique (Dextérité) +2
-• Bonus DEX max +2
-• Jets de sauvegarde améliorés +2"
-u_a_unde_c08,Sous-couche double bio-environnementale Mk II,Underlay double (armure interm.),8,CUSTOM — absent du jeu vanilla,craft / loot Mk II (niv. 14+),"Immunité contre dégâts (Fire/Cold) +20%, Résistance (Fire/Cold) +10/-, Régénération +2, Immunité (Poison)",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
-Effets :
-• Immunité contre dégâts (Fire/Cold) +20%
-• Résistance (Fire/Cold) +10/-
 • Régénération +2
+• Bonus de caractéristique (Constitution) +1
 • Immunité (Poison)"
-u_a_unde_c09,Sous-couche double bio-renforcée Mk III,Underlay double (armure interm.),9,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus de caractéristique (Strength) +3, Bonus de caractéristique (Constitution) +3, Régénération +3",,"[Mod D20-Overhaul]
+u_a_unde_21,Sous-couche fortificatrice T4,Underlay (armure),21,"Immunité contre dégâts +20%, Immunité (LvL/Ab_drain)",palier 21 niv. 30+ (rare dès 30),"Immunité contre dégâts (Energy) +20%, Immunité (Drain), Immunité (Critiques)",,"[Mod D20-Overhaul]
 
 Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
 
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Effets :
+• Immunité contre dégâts (Énergie) +20%
+• Immunité (Drain)
+• Immunité (Critiques)"
+u_a_unde_22,Sous-couche renforçante T4,Underlay (armure),22,"Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Strength) +2",palier 22 niv. 30+ (rare dès 30),"Bonus de caractéristique (Strength) +2, Bonus de caractéristique (Constitution) +2",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
+
+Effets :
+• Bonus de caractéristique (Force) +2
+• Bonus de caractéristique (Constitution) +2"
+u_a_unde_23,Sous-couche flexible T4,Underlay (armure),23,"Bonus de caractéristique (Dexterity) +2, Bonus DEX max +2",palier 23 niv. 30+ (rare dès 30),"Bonus DEX max +2, Bonus de caractéristique (Dexterity) +1, Jets de sauvegarde améliorés +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
+
+Effets :
+• Bonus DEX max +2
+• Bonus de caractéristique (Dextérité) +1
+• Jets de sauvegarde améliorés +1"
+u_a_unde_24,Sous-couche en duracier T4,Underlay (armure),24,"Malus de caractéristique +Penalty_-3, Bonus défense contre Dégâts (Bludgeoning) +4, Bonus défense contre Dégâts (Piercing) +4, Bonus défense contre Dégâts (Slashing) +4",palier 24 niv. 30+ (rare dès 30),"Défense vs Physique +3, Résistance aux dégâts (Physique) +5/-, Immunité contre dégâts (Physique) +15%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
+
+Effets :
+• Défense vs Physique +3
+• Résistance aux dégâts (Physique) +5/-
+• Immunité contre dégâts (Physique) +15%"
+u_a_unde_25,Sous-couche anti-environnement T5,Underlay (armure),25,"Immunité contre dégâts +30%, Immunité contre dégâts +30%, Résistance aux dégâts (Cold) +Resist_10/-, Résistance aux dégâts (Fire) +Resist_10/-",palier 25 niv. 30+ (rare dès 30),"Immunité contre dégâts (Fire/Cold) +30%, Résistance aux dégâts (Fire/Cold) +15/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Immunité contre dégâts (Feu/Froid) +30%
+• Résistance aux dégâts (Feu/Froid) +15/-"
+u_a_unde_26,Sous-couche bio-restaurative T5,Underlay (armure),26,"Bonus de caractéristique (Constitution) +3, Régénération +3",palier 26 niv. 30+ (rare dès 30),"Régénération +3, Bonus de caractéristique (Constitution) +2, Immunité (Poison)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Régénération +3
+• Bonus de caractéristique (Constitution) +2
+• Immunité (Poison)"
+u_a_unde_27,Sous-couche fortificatrice T5,Underlay (armure),27,"Immunité contre dégâts +30%, Immunité (LvL/Ab_drain)",palier 27 niv. 30+ (rare dès 30),"Immunité contre dégâts (Energy) +25%, Immunité (Drain), Immunité (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effets :
+• Immunité contre dégâts (Énergie) +25%
+• Immunité (Drain)
+• Immunité (Critiques)"
+u_a_unde_28,Sous-couche renforçante T5,Underlay (armure),28,"Bonus de caractéristique (Constitution) +3, Bonus de caractéristique (Strength) +3",palier 28 niv. 30+ (rare dès 30),"Bonus de caractéristique (Strength) +3, Bonus de caractéristique (Constitution) +3",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
 
 Effets :
 • Bonus de caractéristique (Force) +3
-• Bonus de caractéristique (Constitution) +3
-• Régénération +3"
-u_a_unde_c10,Sous-couche double duracier fortifié Mk III,Underlay double (armure interm.),10,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Réduction des dégâts (Physique) +3/-, Immunité contre dégâts (Physique/Énergie) +15%, Immunité (Drain/Critiques)",,"[Mod D20-Overhaul]
+• Bonus de caractéristique (Constitution) +3"
+u_a_unde_29,Sous-couche flexible T5,Underlay (armure),29,"Bonus de caractéristique (Dexterity) +3, Bonus DEX max +3",palier 29 niv. 30+ (rare dès 30),"Bonus DEX max +2, Bonus de caractéristique (Dexterity) +2, Jets de sauvegarde améliorés +2",,"[Mod D20-Overhaul]
 
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
 
 Effets :
-• Réduction des dégâts (Physique) +3/-
-• Immunité contre dégâts (Physique/Énergie) +15%
-• Immunité (Drain/Critiques)"
-u_a_unde_c11,Sous-couche double articulations tactiques Mk III,Underlay double (armure interm.),11,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Bonus de caractéristique (Dexterity) +3, Bonus DEX max +3, Jets de sauvegarde améliorés +3",,"[Mod D20-Overhaul]
+• Bonus DEX max +2
+• Bonus de caractéristique (Dextérité) +2
+• Jets de sauvegarde améliorés +2"
+u_a_unde_30,Sous-couche en duracier T5,Underlay (armure),30,"Malus de caractéristique +Penalty_-3, Bonus défense contre Dégâts (Bludgeoning) +5, Bonus défense contre Dégâts (Piercing) +5, Bonus défense contre Dégâts (Slashing) +5",palier 30 niv. 30+ (rare dès 30),"Défense vs Physique +3, Résistance aux dégâts (Physique) +5/-, Immunité contre dégâts (Physique) +20%",,"[Mod D20-Overhaul]
 
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
+Amélioration d'armure — Sous-couche (armure lourde ou intermédiaire)
 
 Effets :
-• Bonus de caractéristique (Dextérité) +3
-• Bonus DEX max +3
-• Jets de sauvegarde améliorés +3"
-u_a_unde_c12,Sous-couche double bio-environnementale Mk III,Underlay double (armure interm.),12,CUSTOM — absent du jeu vanilla,craft / loot Mk III (niv. 22+),"Immunité contre dégâts (Fire/Cold) +30%, Résistance (Fire/Cold) +15/-, Régénération +3, Immunité (Poison/Drain)",,"[Mod D20-Overhaul]
-
-Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
-
-Alliage composite de haute technicité, spécialement conçu pour exploiter la modularité des armures intermédiaires. Nécessite un établi équipé des outils adéquats.
-
-Effets :
-• Immunité contre dégâts (Fire/Cold) +30%
-• Résistance (Fire/Cold) +15/-
-• Régénération +3
-• Immunité (Poison/Drain)"
+• Défense vs Physique +3
+• Résistance aux dégâts (Physique) +5/-
+• Immunité contre dégâts (Physique) +20%"
