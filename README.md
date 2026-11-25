@@ -51,6 +51,18 @@ Ce document répertorie l'architecture de l'espace de travail ainsi que les **d�
   * Utile : `--armor sans|legere|moyenne|lourde` + `--buffs "Vitesse 3,Talent de Force 3"` — l'armure portée ne donne **aucun bonus simulé** mais **gâte les pouvoirs de Force** (Vitesse interdite sous armure, Talent ≤ légère, Illumination ≤ moyenne qui relance Vitesse+Talent au rang max, Fureur = fallback vanilla toute armure) ; `--upgrades cap|vanilla|none` (plafonds actés +2/+5/+10 ou meilleurs items actuels), `--speed` (override manuel), `--sneak-dice/--sneak-uptime`, `--enemy PV,CA,RD`, `--weapon <filtre>`, `--top N`, `--list-feats`, `--list-weapons`, `--md`.
   * **Toutes les valeurs d'équilibrage vivent dans `tools/dpr_data.json`** (armes, dons, boss, plafonds) : c'est ce fichier qu'on édite pour tester des ajustements — jamais le moteur. Les pools d'améliorations se régénèrent depuis le CSV utilisateur via `--reingest-upgrades`.
   * Conventions : toucher `(21-(CA-Atq))/20` borné 5-95 %, critique confirmé (≈ proba de toucher), RD du boss soustraite par coup après multiplication critique, Vitesse = +1/+2 attaques main directrice (auto par phase).
+* **Chaîne complète de build → vérification → installation du mod :**
+   ```powershell
+   .\.venv\Scripts\python.exe tools\build_overhaul.py    # (si CSV 2da modifiés) regenere les .2da -> mods/overhaul/Override
+   .\.venv\Scripts\python.exe tools\build_items.py       # (si CSV items modifiés) regenere les .uti/.dlg -> mods/overhaul/Override
+   .\.venv\Scripts\python.exe tools\build_scripts.py     # compile les .nss -> .ncs (nwnnsscomp C++) -> mods/overhaul/Override
+   .\.venv\Scripts\python.exe tools\build_installer.py   # assemble l'installateur TSLPatcher -> installer/
+   .\.venv\Scripts\python.exe tools\verify_passes123.py  # suite de verification complete (177 tests)
+   .\.venv\Scripts\python.exe tools\install_to_game.py   # copie dialog.tlk + Override -> dossier Steam + verif post-copie
+   ```
+   * [`tools/verify_passes123.py`](tools/verify_passes123.py) est la **suite de vérification de référence** (Passes 1–3 : `spells/feat/itemcreate/baseitems.2da`, `.uti`, `.dlg`, TLK, mutualité des 6 arbres de Spé Carac, système Gamorréen II, peaux de bêtes, RD exactes…) — tout doit afficher `ALL CHECKS PASSED 100%!` avant toute installation.
+   * [`tools/install_to_game.py`](tools/install_to_game.py) sert aux **tests en jeu rapides** (copie directe + nettoyage des anciens fichiers fantômes `m_w_*_1m.uti` / `ov_gam_a_*`) ; la **distribution publique** passe par l'`INSTALL.exe` de `installer/`.
+   * ⚠️ **Obsolète :** [`tools/verify_mod.py`](tools/verify_mod.py) est un vestige du Jalon 0 (vérifications pazaak/cantine de la première itération du mod) — ses fichiers cibles n'existent plus, ne plus l'utiliser (remplacé par `verify_passes123.py`).
 * **Ressources de référence extraites (`_reference/`) :**
   * `_reference/scripts/` : Contient les 638 scripts `.nss` du jeu (`nwscript.nss`, `k_inc_force.nss`, `k_ai_master.nss`, `k_sp1_generic.nss`, etc.).
   * `_reference/2da/` : Contient les fichiers `.2da` et `.csv` de référence (`feat.2da`, `spells.2da`, `baseitems.2da`, `iprp_damagecost.2da`, `iprp_onhit.2da`).
