@@ -1,0 +1,317 @@
+﻿ResRef,Name (EN),Station,Category (2DA Group),Skill (Vanilla),Skill Rank (Vanilla),Required Level (Vanilla),Alignment (Vanilla),Base .uti Cost,Changes (Mod)
+ÉTABLI — ARMURES (SUR/SOUS-COUCHES),,,,,,,,,
+u_a_over_01,Heat Shielding Mark I,Workbench,Armor (Overlays/Underlays),Repair,2,—,—,20,Lvl 1 (Mk I — Medium Armor Excl.)
+u_a_unde_01,Environment Mark I,Workbench,Armor (Overlays/Underlays),Demolitions,2,—,—,30,Lvl 1 (Mk I)
+u_a_over_02,Armorply Plating Mark I,Workbench,Armor (Overlays/Underlays),Repair,3,—,—,40,Lvl 1 (Mk I — Medium Armor Excl.)
+u_a_unde_02,Biorestorative Mark I,Workbench,Armor (Overlays/Underlays),Treat Injury,3,—,—,55,Lvl 1 (Mk I)
+u_a_over_03,Sound Dampening Mark I,Workbench,Armor (Overlays/Underlays),Stealth,4,—,—,60,Lvl 1 (Mk I — Medium Armor Excl.)
+u_a_unde_03,Armorweave Mark I,Workbench,Armor (Overlays/Underlays),Security,4,—,—,85,Lvl 1 (Mk I)
+u_a_over_04,Ablative Plating Mark I,Workbench,Armor (Overlays/Underlays),Repair,5,—,—,85,Lvl 1 (Mk I — Medium Armor Excl.)
+u_a_unde_04,Strengthening Mark I,Workbench,Armor (Overlays/Underlays),Treat Injury,5,—,—,110,Lvl 1 (Mk I)
+u_a_over_05,Energy Shielding Mark I,Workbench,Armor (Overlays/Underlays),Demolitions,6,—,—,175,Lvl 1 (Mk I — Medium Armor Excl.)
+u_a_unde_05,Flexible Mark I,Workbench,Armor (Overlays/Underlays),Stealth,6,—,—,225,Lvl 1 (Mk I)
+u_a_over_06,Ballistic Shielding Mark I,Workbench,Armor (Overlays/Underlays),Demolitions,7,—,—,275,Lvl 1 (Mk I — Medium Armor Excl.)
+u_a_unde_06,Durasteel Mark I,Workbench,Armor (Overlays/Underlays),Awareness,7,—,—,350,Lvl 1 (Mk I)
+u_a_over_07,Bonded Plates Mark I,Workbench,Armor (Overlays/Underlays),Repair,8,—,—,475,Lvl 1 (Mk I — Medium Armor Excl.)
+u_a_unde_07,Environment Mark II,Workbench,Armor (Overlays/Underlays),Demolitions,8,—,—,600,Lvl 10 (Mk II)
+u_a_over_08,Heavy Bonded Plates Mark I,Workbench,Armor (Overlays/Underlays),Repair,9,—,—,650,Lvl 1 (Mk I — Medium Armor Excl.)
+u_a_unde_08,Biorestorative Mark II,Workbench,Armor (Overlays/Underlays),Treat Injury,9,—,—,750,Lvl 10 (Mk II)
+u_a_over_09,Heat Shielding Mark II,Workbench,Armor (Overlays/Underlays),Repair,10,—,—,850,Lvl 10 (Mk II — Medium Armor Excl.)
+u_a_unde_09,Armorweave Mark II,Workbench,Armor (Overlays/Underlays),Security,10,—,—,1000,Lvl 10 (Mk II)
+u_a_over_10,Armorply Plating Mark II,Workbench,Armor (Overlays/Underlays),Repair,11,—,—,1000,Lvl 10 (Mk II — Medium Armor Excl.)
+u_a_unde_10,Strengthening Mark II,Workbench,Armor (Overlays/Underlays),Treat Injury,11,—,—,1250,Lvl 10 (Mk II)
+u_a_over_11,Sound Dampening Mark II,Workbench,Armor (Overlays/Underlays),Stealth,12,—,—,1125,Lvl 10 (Mk II — Medium Armor Excl.)
+u_a_unde_11,Flexible Mark II,Workbench,Armor (Overlays/Underlays),Stealth,12,—,—,1475,Lvl 10 (Mk II)
+u_a_over_12,Ablative Plating Mark II,Workbench,Armor (Overlays/Underlays),Repair,13,—,—,1500,Lvl 10 (Mk II — Medium Armor Excl.)
+u_a_unde_12,Durasteel Mark II,Workbench,Armor (Overlays/Underlays),Awareness,13,—,—,1950,Lvl 10 (Mk II)
+u_a_over_13,Energy Shielding Mark II,Workbench,Armor (Overlays/Underlays),Demolitions,14,—,—,2000,Lvl 10 (Mk II — Medium Armor Excl.)
+u_a_unde_13,Environment Mark III,Workbench,Armor (Overlays/Underlays),Demolitions,14,—,—,2650,Lvl 15 (Mk III)
+u_a_over_14,Ballistic Shielding Mark II,Workbench,Armor (Overlays/Underlays),Demolitions,15,—,—,2750,Lvl 10 (Mk II — Medium Armor Excl.)
+u_a_unde_14,Biorestorative Mark III,Workbench,Armor (Overlays/Underlays),Treat Injury,15,—,—,3125,Lvl 15 (Mk III)
+u_a_over_15,Bonded Plates Mark II,Workbench,Armor (Overlays/Underlays),Repair,16,—,—,3500,Lvl 10 (Mk II — Medium Armor Excl.)
+u_a_unde_15,Armorweave Mark III,Workbench,Armor (Overlays/Underlays),Security,16,—,—,4025,Lvl 15 (Mk III)
+u_a_over_16,Heavy Bonded Plates Mark II,Workbench,Armor (Overlays/Underlays),Repair,17,—,—,4500,Lvl 10 (Mk II — Medium Armor Excl.)
+u_a_unde_16,Strengthening Mark III,Workbench,Armor (Overlays/Underlays),Treat Injury,17,—,—,5900,Lvl 15 (Mk III)
+u_a_over_17,Heat Shielding Mark III,Workbench,Armor (Overlays/Underlays),Repair,18,—,—,6000,Lvl 15 (Mk III — Medium Armor Excl.)
+u_a_unde_17,Flexible Mark III,Workbench,Armor (Overlays/Underlays),Stealth,18,—,—,6550,Lvl 15 (Mk III)
+u_a_over_18,Armorply Plating Mark III,Workbench,Armor (Overlays/Underlays),Repair,19,—,—,7500,Lvl 15 (Mk III — Medium Armor Excl.)
+u_a_unde_18,Durasteel Mark III,Workbench,Armor (Overlays/Underlays),Awareness,19,—,—,8750,Lvl 15 (Mk III)
+u_a_over_19,Sound Dampening Mark III,Workbench,Armor (Overlays/Underlays),Stealth,20,—,—,9000,Lvl 15 (Mk III — Medium Armor Excl.)
+u_a_unde_19,Environment Mark IV,Workbench,Armor (Overlays/Underlays),Demolitions,20,—,—,9925,Lvl 20 (Mk IV)
+u_a_over_20,Ablative Plating Mark III,Workbench,Armor (Overlays/Underlays),Repair,21,—,—,10125,Lvl 15 (Mk III — Medium Armor Excl.)
+u_a_unde_20,Biorestorative Mark IV,Workbench,Armor (Overlays/Underlays),Treat Injury,21,—,—,11785,Lvl 20 (Mk IV)
+u_a_over_21,Energy Shielding Mark III,Workbench,Armor (Overlays/Underlays),Demolitions,22,—,—,12250,Lvl 15 (Mk III — Medium Armor Excl.)
+u_a_unde_21,Armorweave Mark IV,Workbench,Armor (Overlays/Underlays),Security,22,—,—,13750,Lvl 20 (Mk IV)
+u_a_over_22,Ballistic Shielding Mark III,Workbench,Armor (Overlays/Underlays),Demolitions,23,—,—,14250,Lvl 18 (Mk III — Medium Armor Excl.)
+u_a_unde_22,Strengthening Mark IV,Workbench,Armor (Overlays/Underlays),Treat Injury,23,—,—,15750,Lvl 20 (Mk IV)
+u_a_over_23,Bonded Plates Mark III,Workbench,Armor (Overlays/Underlays),Repair,24,—,—,5400,Lvl 15 (Mk III — Medium Armor Excl.)
+u_a_unde_23,Flexible Mark IV,Workbench,Armor (Overlays/Underlays),Stealth,24,—,—,17555,Lvl 20 (Mk IV)
+u_a_over_24,Heavy Bonded Plates Mark III,Workbench,Armor (Overlays/Underlays),Repair,25,—,—,6100,Lvl 18 (Mk III — Medium Armor Excl.)
+u_a_unde_24,Durasteel Mark IV,Workbench,Armor (Overlays/Underlays),Awareness,25,—,—,19685,Lvl 20 (Mk IV)
+u_a_over_25,Heat Shielding Mark IV,Workbench,Armor (Overlays/Underlays),Repair,26,—,—,19250,Lvl 20 (Mk IV — Medium Armor Excl.)
+u_a_unde_25,Environment Mark V,Workbench,Armor (Overlays/Underlays),Demolitions,26,—,—,20995,Lvl 20 (Mk V)
+u_a_over_26,Armorply Plating Mark IV,Workbench,Armor (Overlays/Underlays),Repair,27,—,—,21250,Lvl 20 (Mk IV — Medium Armor Excl.)
+u_a_unde_26,Biorestorative Mark V,Workbench,Armor (Overlays/Underlays),Treat Injury,27,—,—,22755,Lvl 20 (Mk V)
+u_a_over_27,Sound Dampening Mark IV,Workbench,Armor (Overlays/Underlays),Stealth,28,—,—,22500,Lvl 20 (Mk IV — Medium Armor Excl.)
+u_a_unde_27,Armorweave Mark V,Workbench,Armor (Overlays/Underlays),Security,28,—,—,24450,Lvl 20 (Mk V)
+u_a_over_28,Ablative Plating Mark IV,Workbench,Armor (Overlays/Underlays),Repair,29,—,—,24500,Lvl 20 (Mk IV — Medium Armor Excl.)
+u_a_unde_28,Strengthening Mark V,Workbench,Armor (Overlays/Underlays),Treat Injury,29,—,—,26560,Lvl 20 (Mk V)
+u_a_over_29,Energy Shielding Mark IV,Workbench,Armor (Overlays/Underlays),Demolitions,30,—,—,25500,Lvl 20 (Mk IV — Medium Armor Excl.)
+u_a_unde_29,Flexible Mark V,Workbench,Armor (Overlays/Underlays),Stealth,30,—,—,28950,Lvl 20 (Mk V)
+u_a_over_30,Bonded Plates Mark IV,Workbench,Armor (Overlays/Underlays),Repair,31,—,—,28850,Lvl 20 (Mk IV — Medium Armor Excl.)
+u_a_unde_30,Durasteel Mark V,Workbench,Armor (Overlays/Underlays),Awareness,31,—,—,29950,Lvl 20 (Mk V)
+ÉTABLI — ARMES À DISTANCE (UPGRADES),,,,,,,,,
+u_r_firi_01,Broadening Chamber Mark I,Workbench,Ranged Weapons (Upgrades),Repair,4,—,—,55,Lvl 1 (Mk I)
+u_r_powe_01,Ion Charger Mark I,Workbench,Ranged Weapons (Upgrades),Security,4,—,—,40,Lvl 1 (Mk I)
+u_r_targ_01,Pinpoint Scope Mark I,Workbench,Ranged Weapons (Upgrades),Awareness,4,—,—,50,Lvl 1 (Mk I)
+u_r_firi_02,Amplifying Chamber Mark I,Workbench,Ranged Weapons (Upgrades),Demolitions,6,—,—,110,Lvl 1 (Mk I)
+u_r_powe_02,Power Pulsator Mark I,Workbench,Ranged Weapons (Upgrades),Computer Use,6,—,—,90,Lvl 1 (Mk I)
+u_r_targ_02,Accuracy Scope Mark I,Workbench,Ranged Weapons (Upgrades),Awareness,6,—,—,100,Lvl 1 (Mk I)
+u_r_firi_03,Precision Chamber Mark I,Workbench,Ranged Weapons (Upgrades),Security,8,—,—,320,Lvl 1 (Mk I)
+u_r_powe_03,Basic Rylith Power Cell,Workbench,Ranged Weapons (Upgrades),Security,8,—,—,280,Lvl 1 (Mk I)
+u_r_targ_03,Targeting Scope Mark I,Workbench,Ranged Weapons (Upgrades),Stealth,8,—,—,100,Lvl 1 (Mk I)
+u_r_firi_04,Beam Splitter Mark I,Workbench,Ranged Weapons (Upgrades),Computer Use,10,—,—,740,Lvl 1 (Mk I)
+u_r_powe_04,Ion Charger Mark II,Workbench,Ranged Weapons (Upgrades),Security,10,—,—,690,Lvl 1 (Mk I)
+u_r_targ_04,Crippling Scope Mark I,Workbench,Ranged Weapons (Upgrades),Stealth,10,—,—,700,Lvl 1 (Mk I)
+u_r_firi_05,Mandalorian Chamber Mark I,Workbench,Ranged Weapons (Upgrades),Repair,12,—,—,1230,Lvl 1 (Mk I)
+u_r_powe_05,Power Pulsator Mark II,Workbench,Ranged Weapons (Upgrades),Computer Use,12,—,—,1035,Lvl 10 (Mk II)
+u_r_targ_05,Pinpoint Scope Mark II,Workbench,Ranged Weapons (Upgrades),Awareness,12,—,—,1100,Lvl 10 (Mk II)
+u_r_firi_06,Broadened Chamber Mark II,Workbench,Ranged Weapons (Upgrades),Repair,14,—,—,1775,Lvl 10 (Mk II)
+u_r_powe_06,Standard Rylith Power Cell,Workbench,Ranged Weapons (Upgrades),Security,14,—,—,1635,Lvl 10 (Mk II)
+u_r_targ_06,Accuracy Scope Mark II,Workbench,Ranged Weapons (Upgrades),Awareness,14,—,—,1700,Lvl 10 (Mk II)
+u_r_firi_07,Amplifying Chamber Mark II,Workbench,Ranged Weapons (Upgrades),Demolitions,16,—,—,3000,Lvl 10 (Mk II)
+u_r_powe_07,Ion Charger Mark III,Workbench,Ranged Weapons (Upgrades),Security,16,—,—,2780,Lvl 10 (Mk II)
+u_r_targ_07,Targeting Scope Mark II,Workbench,Ranged Weapons (Upgrades),Stealth,16,—,—,2900,Lvl 10 (Mk II)
+u_r_firi_08,Precision Chamber Mark II,Workbench,Ranged Weapons (Upgrades),Security,18,—,—,4780,Lvl 10 (Mk II)
+u_r_powe_08,Power Pulsator Mark III,Workbench,Ranged Weapons (Upgrades),Computer Use,18,—,—,4645,Lvl 10 (Mk II)
+u_r_targ_08,Crippling Scope Mark II,Workbench,Ranged Weapons (Upgrades),Stealth,18,—,—,4700,Lvl 10 (Mk II)
+u_r_firi_09,Beam Splitter Mark II,Workbench,Ranged Weapons (Upgrades),Computer Use,20,—,—,7800,Lvl 10 (Mk II)
+u_r_powe_09,Advanced Rylith Power Cell,Workbench,Ranged Weapons (Upgrades),Security,20,—,—,7560,Lvl 15 (Mk III)
+u_r_targ_09,Pinpoint Scope Mark III,Workbench,Ranged Weapons (Upgrades),Awareness,20,—,—,7600,Lvl 15 (Mk III)
+u_r_firi_10,Mandalorian Chamber Mark II,Workbench,Ranged Weapons (Upgrades),Repair,22,—,—,11265,Lvl 10 (Mk II)
+u_r_powe_10,Ion Charger Mark IV,Workbench,Ranged Weapons (Upgrades),Security,22,—,—,10185,Lvl 15 (Mk III)
+u_r_targ_10,Accuracy Scope Mark III,Workbench,Ranged Weapons (Upgrades),Awareness,22,—,—,11000,Lvl 15 (Mk III)
+u_r_firi_11,Broadened Chamber Mark III,Workbench,Ranged Weapons (Upgrades),Repair,24,—,—,14665,Lvl 18 (Mk III)
+u_r_powe_11,Power Pulsator Mark IV,Workbench,Ranged Weapons (Upgrades),Computer Use,24,—,—,13995,Lvl 15 (Mk III)
+u_r_targ_11,Targeting Scope Mark III,Workbench,Ranged Weapons (Upgrades),Stealth,24,—,—,14600,Lvl 15 (Mk III)
+u_r_firi_12,Amplifying Chamber Mark III,Workbench,Ranged Weapons (Upgrades),Demolitions,26,—,—,6050,Lvl 18 (Mk III)
+u_r_powe_12,Superior Rylith Power Cell,Workbench,Ranged Weapons (Upgrades),Security,26,—,—,17500,Lvl 15 (Mk III)
+u_r_targ_12,Crippling Scope Mark III,Workbench,Ranged Weapons (Upgrades),Stealth,26,—,—,18200,Lvl 15 (Mk III)
+u_r_firi_13,Precision Chamber Mark III,Workbench,Ranged Weapons (Upgrades),Security,28,—,—,22305,Lvl 18 (Mk III)
+u_r_powe_13,Ion Charger Mark V,Workbench,Ranged Weapons (Upgrades),Security,28,—,—,21635,Lvl 20 (Mk IV/T5)
+u_r_targ_13,Pinpoint Scope Mark IV,Workbench,Ranged Weapons (Upgrades),Awareness,28,—,—,21800,Lvl 20 (Mk IV/T5)
+u_r_firi_14,Beam Splitter Mark III,Workbench,Ranged Weapons (Upgrades),Computer Use,30,—,—,26950,Lvl 18 (Mk III)
+u_r_powe_14,Power Pulsator Mark V,Workbench,Ranged Weapons (Upgrades),Computer Use,30,—,—,25345,Lvl 20 (Mk IV/T5)
+u_r_firi_15,Mandalorian Chamber Mark III,Workbench,Ranged Weapons (Upgrades),Repair,32,—,—,29650,Lvl 18 (Mk III)
+u_r_powe_15,Pure Rylith Power Cell,Workbench,Ranged Weapons (Upgrades),Security,32,—,—,28965,Lvl 20 (Mk IV/T5)
+u_r_targ_15,Targeting Scope Mark IV,Workbench,Ranged Weapons (Upgrades),Stealth,32,—,—,29000,Lvl 20 (Mk IV/T5)
+ÉTABLI — ARMES DE MÊLÉE (UPGRADES),,,,,,,,,
+u_m_cell_01,Ion Cell,Workbench,Melee Weapons (Upgrades),Security,4,—,—,50,Lvl 1 (Mk I)
+u_m_edge_01,Mild Devaronian Edge,Workbench,Melee Weapons (Upgrades),Stealth,4,—,—,43,Lvl 1 (Mk I)
+u_m_grip_01,Agrinium Grip,Workbench,Melee Weapons (Upgrades),Repair,4,—,—,58,Lvl 1 (Mk I)
+u_m_cell_02,Vibration Cell,Workbench,Melee Weapons (Upgrades),Computer Use,6,—,—,100,Lvl 1 (Mk I)
+u_m_edge_02,Basic Ionite Edge,Workbench,Melee Weapons (Upgrades),Security,6,—,—,90,Lvl 1 (Mk I)
+u_m_grip_02,Contoured Grip,Workbench,Melee Weapons (Upgrades),Repair,6,—,—,105,Lvl 1 (Mk I)
+u_m_cell_03,Enhanced Energy Cell,Workbench,Melee Weapons (Upgrades),Computer Use,8,—,—,300,Lvl 1 (Mk I)
+u_m_edge_03,Basic Mullinine Edge,Workbench,Melee Weapons (Upgrades),Repair,8,—,—,285,Lvl 1 (Mk I)
+u_m_grip_03,Zabrak Grip,Workbench,Melee Weapons (Upgrades),Repair,8,—,—,330,Lvl 1 (Mk I)
+u_m_cell_04,Sonic Discharge Cell,Workbench,Melee Weapons (Upgrades),Stealth,10,—,—,700,Lvl 1 (Mk I)
+u_m_edge_04,Basic Neutronium Edge,Workbench,Melee Weapons (Upgrades),Repair,10,—,—,665,Lvl 1 (Mk I)
+u_m_grip_04,Basket Hilt,Workbench,Melee Weapons (Upgrades),Repair,10,—,—,765,Lvl 1 (Mk I)
+u_m_cell_05,Ion Cell Mark II,Workbench,Melee Weapons (Upgrades),Security,12,—,—,1100,Lvl 10 (Mk II)
+u_m_edge_05,Moderate Devaronian Edge,Workbench,Melee Weapons (Upgrades),Stealth,12,—,—,1025,Lvl 10 (Mk II)
+u_m_grip_05,Nagai Grip,Workbench,Melee Weapons (Upgrades),Stealth,12,—,—,1250,Lvl 1 (Mk I)
+u_m_cell_06,Vibration Cell Mark II,Workbench,Melee Weapons (Upgrades),Computer Use,14,—,—,650,Lvl 10 (Mk II)
+u_m_edge_06,Improved Ionite Edge,Workbench,Melee Weapons (Upgrades),Security,14,—,—,1550,Lvl 10 (Mk II)
+u_m_grip_06,Advanced Agrinium Grip,Workbench,Melee Weapons (Upgrades),Repair,14,—,—,1800,Lvl 10 (Mk II)
+u_m_cell_07,Enhanced Energy Cell Mark II,Workbench,Melee Weapons (Upgrades),Computer Use,16,—,—,2900,Lvl 10 (Mk II)
+u_m_edge_07,Improved Mullinine Edge,Workbench,Melee Weapons (Upgrades),Repair,16,—,—,2850,Lvl 10 (Mk II)
+u_m_grip_07,Advanced Contoured Grip,Workbench,Melee Weapons (Upgrades),Repair,16,—,—,3000,Lvl 10 (Mk II)
+u_m_cell_08,Sonic Discharge Cell Mark II,Workbench,Melee Weapons (Upgrades),Stealth,18,—,—,4700,Lvl 10 (Mk II)
+u_m_edge_08,Improved Neutronium Edge,Workbench,Melee Weapons (Upgrades),Repair,18,—,—,4625,Lvl 10 (Mk II)
+u_m_grip_08,Advanced Zabrak Grip,Workbench,Melee Weapons (Upgrades),Repair,18,—,—,4850,Lvl 10 (Mk II)
+u_m_cell_09,Ion Cell Mark III,Workbench,Melee Weapons (Upgrades),Security,20,—,—,7600,Lvl 15 (Mk III)
+u_m_edge_09,Severe Devaronian Edge,Workbench,Melee Weapons (Upgrades),Stealth,20,—,—,7550,Lvl 15 (Mk III)
+u_m_grip_09,Advanced Basket Hilt,Workbench,Melee Weapons (Upgrades),Repair,20,—,—,7765,Lvl 10 (Mk II)
+u_m_cell_10,Vibration Cell Mark III,Workbench,Melee Weapons (Upgrades),Computer Use,22,—,—,11000,Lvl 15 (Mk III)
+u_m_edge_10,Superior Ionite Edge,Workbench,Melee Weapons (Upgrades),Security,22,—,—,10085,Lvl 15 (Mk III)
+u_m_grip_10,Advanced Nagai Grip,Workbench,Melee Weapons (Upgrades),Stealth,22,—,—,11125,Lvl 10 (Mk II)
+u_m_cell_11,Enhanced Energy Cell Mark III,Workbench,Melee Weapons (Upgrades),Computer Use,24,—,—,14600,Lvl 15 (Mk III)
+u_m_edge_11,Superior Mullinine Edge,Workbench,Melee Weapons (Upgrades),Repair,24,—,—,14500,Lvl 15 (Mk III)
+u_m_grip_11,Superior Agrinium Grip,Workbench,Melee Weapons (Upgrades),Repair,24,—,—,14850,Lvl 18 (Mk III)
+u_m_cell_12,Sonic Discharge Cell Mark III,Workbench,Melee Weapons (Upgrades),Stealth,26,—,—,18200,Lvl 15 (Mk III)
+u_m_edge_12,Superior Neutronium Edge,Workbench,Melee Weapons (Upgrades),Repair,26,—,—,18075,Lvl 15 (Mk III)
+u_m_grip_12,Superior Contoured Grip,Workbench,Melee Weapons (Upgrades),Repair,26,—,—,19850,Lvl 18 (Mk III)
+u_m_cell_13,Ion Cell Mark IV,Workbench,Melee Weapons (Upgrades),Security,28,—,—,21800,Lvl 20 (Mk IV/T5)
+u_m_edge_13,Deadly Devaronian Edge,Workbench,Melee Weapons (Upgrades),Stealth,28,—,—,21650,Lvl 20 (Mk IV/T5)
+u_m_grip_13,Superior Zabrak Grip,Workbench,Melee Weapons (Upgrades),Repair,28,—,—,22250,Lvl 18 (Mk III)
+u_m_cell_14,Vibration Cell Mark IV,Workbench,Melee Weapons (Upgrades),Computer Use,30,—,—,25400,Lvl 20 (Mk IV/T5)
+u_m_edge_14,Quadranium Edge,Workbench,Melee Weapons (Upgrades),Security,30,—,—,25225,Lvl 20 (Mk IV/T5)
+u_m_grip_14,Superior Basket Hilt,Workbench,Melee Weapons (Upgrades),Repair,30,—,—,26000,Lvl 18 (Mk III)
+u_m_cell_15,Enhanced Energy Cell Mark IV,Workbench,Melee Weapons (Upgrades),Computer Use,32,—,—,29000,Lvl 20 (Mk IV/T5)
+u_m_edge_15,Ostrine Edge,Workbench,Melee Weapons (Upgrades),Repair,32,—,—,28850,Lvl 20 (Mk IV/T5)
+u_m_grip_15,Superior Nagai Grip,Workbench,Melee Weapons (Upgrades),Stealth,32,—,—,29650,Lvl 18 (Mk III)
+ÉTABLI — SABRES LASER (UPGRADES),,,,,,,,,
+u_l_cell_01,Discharge Energy Cell,Workbench,Lightsabers (Upgrades),Demolitions,5,—,—,305,Lvl 1 (Mk I)
+u_l_emit_01,Deflection Emitter,Workbench,Lightsabers (Upgrades),Repair,5,—,—,295,Lvl 1 (Mk I)
+u_l_lens_01,Synthesized Kunda Lens,Workbench,Lightsabers (Upgrades),Treat Injury,5,—,—,300,Lvl 1 (Mk I)
+u_l_cell_02,Diatium Energy Cell,Workbench,Lightsabers (Upgrades),Computer Use,7,—,—,775,Lvl 1 (Mk I)
+u_l_emit_02,Disrupting Emitter,Workbench,Lightsabers (Upgrades),Repair,7,—,—,665,Lvl 1 (Mk I)
+u_l_lens_02,Dragite Lens,Workbench,Lightsabers (Upgrades),Awareness,7,—,—,700,Lvl 1 (Mk I)
+u_l_cell_03,Ion Energy Cell,Workbench,Lightsabers (Upgrades),Security,9,—,—,1120,Lvl 1 (Mk I)
+u_l_emit_03,Crude Phobium Emitter,Workbench,Lightsabers (Upgrades),Repair,9,—,—,1085,Lvl 1 (Mk I)
+u_l_lens_03,Synthesized Byrothsis Lens,Workbench,Lightsabers (Upgrades),Awareness,9,—,—,1100,Lvl 1 (Mk I)
+u_l_cell_04,Telgorn Jolt Cell Mark I,Workbench,Lightsabers (Upgrades),Demolitions,11,—,—,2125,Lvl 1 (Mk I)
+u_l_emit_04,Fencing Emitter,Workbench,Lightsabers (Upgrades),Repair,11,—,—,1665,Lvl 1 (Mk I)
+u_l_lens_04,Beam Gem Lens,Workbench,Lightsabers (Upgrades),Computer Use,11,—,—,1700,Lvl 1 (Mk I)
+u_l_cell_05,Improved Discharge Energy Cell,Workbench,Lightsabers (Upgrades),Demolitions,13,—,—,3275,Lvl 10 (Mk II)
+u_l_emit_05,Improved Deflection Emitter,Workbench,Lightsabers (Upgrades),Repair,13,—,—,2885,Lvl 10 (Mk II)
+u_l_lens_05,Vibration Lens,Workbench,Lightsabers (Upgrades),Computer Use,13,—,—,2900,Lvl 10 (Mk II)
+u_l_cell_06,Improved Diatium Energy Cell,Workbench,Lightsabers (Upgrades),Computer Use,15,—,—,4985,Lvl 10 (Mk II)
+u_l_emit_06,Advanced Disrupting Emitter,Workbench,Lightsabers (Upgrades),Repair,15,—,—,4665,Lvl 10 (Mk II)
+u_l_lens_06,Pure Kunda Lens,Workbench,Lightsabers (Upgrades),Treat Injury,15,—,—,4700,Lvl 10 (Mk II)
+u_l_cell_07,Improved Ion Energy Cell,Workbench,Lightsabers (Upgrades),Security,17,—,—,8950,Lvl 10 (Mk II)
+u_l_emit_07,Synthesized Phobium Emitter,Workbench,Lightsabers (Upgrades),Repair,17,—,—,7555,Lvl 10 (Mk II)
+u_l_lens_07,Adegan Lens,Workbench,Lightsabers (Upgrades),Awareness,17,—,—,7600,Lvl 10 (Mk II)
+u_l_cell_08,Telgorn Jolt Cell Mark II,Workbench,Lightsabers (Upgrades),Demolitions,19,—,—,11335,Lvl 10 (Mk II)
+u_l_emit_08,Improved Fencing Emitter,Workbench,Lightsabers (Upgrades),Repair,19,—,—,10115,Lvl 10 (Mk II)
+u_l_lens_08,Pure Byrothsis Lens,Workbench,Lightsabers (Upgrades),Awareness,19,—,—,11000,Lvl 10 (Mk II)
+u_l_cell_09,Superior Discharge Energy Cell,Workbench,Lightsabers (Upgrades),Demolitions,21,—,—,14995,Lvl 15 (Mk III)
+u_l_emit_09,Expert Deflection Emitter,Workbench,Lightsabers (Upgrades),Repair,21,—,—,13555,Lvl 15 (Mk III)
+u_l_lens_09,Improved Beam Gem Lens,Workbench,Lightsabers (Upgrades),Computer Use,21,—,—,14600,Lvl 15 (Mk III)
+u_l_cell_10,Superior Diatium Energy Cell,Workbench,Lightsabers (Upgrades),Computer Use,23,—,—,19750,Lvl 15 (Mk III)
+u_l_emit_10,Superior Disrupting Emitter,Workbench,Lightsabers (Upgrades),Repair,23,—,—,17775,Lvl 15 (Mk III)
+u_l_lens_10,Improved Vibration Lens,Workbench,Lightsabers (Upgrades),Computer Use,23,—,—,18200,Lvl 15 (Mk III)
+u_l_cell_11,Superior Ion Energy Cell,Workbench,Lightsabers (Upgrades),Security,25,—,—,20365,Lvl 15 (Mk III)
+u_l_emit_11,Phobium Alloy Emitter,Workbench,Lightsabers (Upgrades),Repair,25,—,—,20225,Lvl 15 (Mk III)
+u_l_lens_11,Ossus Dueling Lens,Workbench,Lightsabers (Upgrades),Treat Injury,25,—,—,21800,Lvl 15 (Mk III)
+u_l_cell_12,Telgorn Jolt Cell Mark III,Workbench,Lightsabers (Upgrades),Demolitions,27,—,—,26000,Lvl 20 (Mk IV)
+u_l_emit_12,Expert Fencing Emitter,Workbench,Lightsabers (Upgrades),Repair,27,—,—,24450,Lvl 20 (Mk IV)
+u_l_lens_12,Pontite Lens,Workbench,Lightsabers (Upgrades),Awareness,27,—,—,25400,Lvl 20 (Mk IV)
+u_l_cell_13,Ultimate Diatium Energy Cell,Workbench,Lightsabers (Upgrades),Computer Use,29,—,—,29850,Lvl 20 (Mk IV)
+u_l_emit_13,Refined Phobium Emitter,Workbench,Lightsabers (Upgrades),Repair,29,—,—,28885,Lvl 20 (Mk IV)
+u_l_lens_13,Enhanced Byrothsis Lens,Workbench,Lightsabers (Upgrades),Awareness,29,—,—,29000,Lvl 20 (Mk IV)
+"ÉTABLI — UTILITAIRES, ARMES & ROQUETTES",,,,,,,,,
+a_shield_01,Bouclier d'énergie,Workbench,"Utilitaires, armes & roquettes",Security,1,—,—,30,Lvl 1
+G_I_DRDREPEQP001,Trousse de réparation,Workbench,"Utilitaires, armes & roquettes",Repair,1,—,—,25,
+w_melee_02,Epée longue,Workbench,"Utilitaires, armes & roquettes",Repair,1,—,—,50,Lvl 1 (arme de base craftable)
+w_blaste_03,Pistolet de survie,Workbench,"Utilitaires, armes & roquettes",Repair,2,—,—,60,Lvl 1 (arme de base craftable)
+a_shield_02,Bouclier de mêlée mand.,Workbench,"Utilitaires, armes & roquettes",Security,5,—,—,60,Lvl 1
+g_i_parts01,Pièces détachées,Workbench,"Utilitaires, armes & roquettes",Repair,5,—,—,200,
+g_i_progspike01,"Programme d'intrusion, ordinateur",Workbench,"Utilitaires, armes & roquettes",Computer Use,5,—,—,250,
+g_i_secspike01,Programme de sécurité,Workbench,"Utilitaires, armes & roquettes",Security,5,—,—,100,
+w_brifle_04,Fusil blaster,Workbench,"Utilitaires, armes & roquettes",Repair,7,—,—,100,Lvl 1 (arme de base craftable)
+G_I_DRDREPEQP002,Trousse de réparation améliorée,Workbench,"Utilitaires, armes & roquettes",Repair,10,—,—,50,
+w_melee_06,Vibro-épée,Workbench,"Utilitaires, armes & roquettes",Repair,10,—,—,285,Lvl 1 (arme de base craftable)
+a_shield_04,Bouclier Echani,Workbench,"Utilitaires, armes & roquettes",Security,11,—,—,125,Lvl 10
+w_blaste_07,Pistolet d'éclaireur,Workbench,"Utilitaires, armes & roquettes",Repair,11,—,—,500,Lvl 1 (arme de base craftable)
+w_brifle_10,Fusil blaster à répétition,Workbench,"Utilitaires, armes & roquettes",Repair,13,—,—,1750,Lvl 1 (arme de base craftable)
+w_brifle_13,Fusil désintégrateur,Workbench,"Utilitaires, armes & roquettes",Repair,16,—,—,2535,Lvl 1 (arme de base craftable)
+a_shield_06,Bouclier de duel Echani,Workbench,"Utilitaires, armes & roquettes",Security,19,—,—,400,Lvl 15
+w_melee_15,Vibro-double-lame,Workbench,"Utilitaires, armes & roquettes",Repair,19,—,—,3585,Lvl 1 (arme de base craftable)
+G_I_DRDREPEQP003,Trousse de reconstruction,Workbench,"Utilitaires, armes & roquettes",Repair,20,—,—,100,
+w_blaste_18,Blaster de vigile,Workbench,"Utilitaires, armes & roquettes",Repair,22,—,—,7600,Lvl 1 (arme de base craftable)
+w_melee_19,Epée de Ryyk,Workbench,"Utilitaires, armes & roquettes",Repair,23,—,—,9000,Lvl 1 (arme de base craftable)
+a_shield_07,Prototype de bouclier verpine,Workbench,"Utilitaires, armes & roquettes",Security,29,—,—,625,Lvl 20
+w_rocket_01,Roquette explosive,Workbench (Mira),"Utilitaires, armes & roquettes",Repair,5,—,—,75,Lvl 1
+w_rocket_02,Fléchette tranquillisante,Workbench (Mira),"Utilitaires, armes & roquettes",Repair,10,—,—,125,Lvl 10
+w_rocket_03,Roquette perforante,Workbench (Mira),"Utilitaires, armes & roquettes",Repair,15,—,—,275,Lvl 15
+w_rocket_04,Fléchette de Kyber,Workbench (Mira),"Utilitaires, armes & roquettes",Repair,20,—,—,350,Lvl 20
+w_rocket_05,Roquette à plasma,Workbench (Mira),"Utilitaires, armes & roquettes",Repair,25,—,—,490,Lvl 20
+ÉTABLI — ARMES DE BASE NON-LASER (AJOUTS MOD),,,,,,,,,
+w_melee_01,Epée courte,Workbench,Armes de base (ajouts mod),Repair,2,—,—,25,Ajout mod — Lvl 1 (seuil Repair 2)
+w_melee_03,Matraque à énergie,Workbench,Armes de base (ajouts mod),Repair,3,—,—,75,Ajout mod — Lvl 1 (seuil Repair 3)
+w_melee_04,Bâton,Workbench,Armes de base (ajouts mod),Repair,2,—,—,100,Ajout mod — Lvl 1 (seuil Repair 2)
+w_melee_05,Vibro-lame,Workbench,Armes de base (ajouts mod),Repair,4,—,—,190,Ajout mod — Lvl 1 (seuil Repair 4)
+w_melee_07,Double-lame,Workbench,Armes de base (ajouts mod),Repair,5,—,—,475,Ajout mod — Lvl 1 (seuil Repair 5)
+w_melee_09,Hache de guerre gamorréenne,Workbench,Armes de base (ajouts mod),Repair,6,—,—,800,Ajout mod — Lvl 1 (seuil Repair 6)
+w_melee_14,Pique de Force,Workbench,Armes de base (ajouts mod),Repair,6,—,—,3000,Ajout mod — Lvl 1 (seuil Repair 6)
+w_melee_ww_base,Lame de guerre wookie (base mod),Workbench,Armes de base (ajouts mod),Repair,6,—,—,100,Ajout mod — Lvl 1 (seuil Repair 6)
+w_blaste_01,Pistolet blaster,Workbench,Armes de base (ajouts mod),Repair,2,—,—,25,Ajout mod — Lvl 1 (seuil Repair 2)
+w_blaste_02,Blaster à ions,Workbench,Armes de base (ajouts mod),Repair,4,—,—,50,Ajout mod — Lvl 1 (seuil Repair 4)
+w_blaste_04,Pistolet sonique,Workbench,Armes de base (ajouts mod),Repair,4,—,—,100,Ajout mod — Lvl 1 (seuil Repair 4)
+w_blaste_05,Pistolet désintégrateur,Workbench,Armes de base (ajouts mod),Repair,6,—,—,200,Ajout mod — Lvl 1 (seuil Repair 6)
+w_blaste_06,Blaster lourd,Workbench,Armes de base (ajouts mod),Repair,5,—,—,300,Ajout mod — Lvl 1 (seuil Repair 5)
+w_brifle_01,Fusil blaster automatique,Workbench,Armes de base (ajouts mod),Repair,4,—,—,35,Ajout mod — Lvl 1 (seuil Repair 4)
+w_brifle_02,Fusil automatique à ions,Workbench,Armes de base (ajouts mod),Repair,5,—,—,65,Ajout mod — Lvl 1 (seuil Repair 5)
+w_brifle_03,Fusil automatique sonique,Workbench,Armes de base (ajouts mod),Repair,5,—,—,95,Ajout mod — Lvl 1 (seuil Repair 5)
+w_brifle_05,Arbalète laser,Workbench,Armes de base (ajouts mod),Repair,6,—,—,250,Ajout mod — Lvl 1 (seuil Repair 6)
+w_brifle_hr_base,Blaster lourd à répétition (base mod),Workbench,Armes de base (ajouts mod),Repair,8,—,—,100,Ajout mod — Lvl 1 (seuil Repair 8)
+LABORATOIRE — MÉDIPACS & IMPLANTS,,,,,,,,,
+g_i_medeqpmnt01,Trousse de soins,Lab Stationratoire,Médipacs & Implants,Treat Injury,1,—,—,40,
+e_imp2_01,Implant de combat rétinien,Lab Stationratoire,Médipacs & Implants,Treat Injury,5,—,—,75,
+g_i_medeqpmnt04,Trousse d'antidote,Lab Stationratoire,Médipacs & Implants,Treat Injury,5,—,—,49,
+e_imp1_01,Pack de réflexes,Lab Stationratoire,Médipacs & Implants,Treat Injury,8,—,—,50,
+e_imp3_01,Système de bio-antidote,Lab Stationratoire,Médipacs & Implants,Treat Injury,10,—,—,100,
+g_i_medeqpmnt02,Trousse de soins améliorée,Lab Stationratoire,Médipacs & Implants,Treat Injury,10,—,—,80,
+e_imp4_01,Pack-D de force,Lab Stationratoire,Médipacs & Implants,Treat Injury,11,—,—,75,
+e_imp1_02,Pack de phéromones,Lab Stationratoire,Médipacs & Implants,Treat Injury,17,—,—,200,
+e_imp2_02,Implant lornan,Lab Stationratoire,Médipacs & Implants,Treat Injury,18,—,—,300,
+e_imp3_02,Système de régulation nerveuse,Lab Stationratoire,Médipacs & Implants,Treat Injury,19,—,—,600,
+e_imp4_02,Pack-D d'immunité,Lab Stationratoire,Médipacs & Implants,Treat Injury,20,—,—,300,
+g_i_medeqpmnt03,Trousse de survie,Lab Stationratoire,Médipacs & Implants,Treat Injury,20,—,—,150,
+e_imp1_03,Pack cardio-vasculaire,Lab Stationratoire,Médipacs & Implants,Treat Injury,26,—,—,900,
+e_imp2_03,Implant biotech.,Lab Stationratoire,Médipacs & Implants,Treat Injury,27,—,—,1200,
+e_imp3_03,Système de réaction,Lab Stationratoire,Médipacs & Implants,Treat Injury,28,—,—,1600,
+e_imp4_03,Pack-D de perception,Lab Stationratoire,Médipacs & Implants,Treat Injury,29,—,—,900,
+e_imp1_04,Pack de force,Lab Stationratoire,Médipacs & Implants,Treat Injury,35,—,—,2000,
+e_imp2_04,Implant de puissance,Lab Stationratoire,Médipacs & Implants,Treat Injury,36,—,—,2600,
+e_imp3_04,Système de combat amélioré,Lab Stationratoire,Médipacs & Implants,Treat Injury,37,—,—,3400,
+e_imp4_04,Pack-D d'augmentation,Lab Stationratoire,Médipacs & Implants,Treat Injury,38,—,—,1700,
+LABORATOIRE — STIMS,,,,,,,,,
+g_i_adrnaline001,Inj. adrénaline : force,Lab Stationratoire,Stims,Treat Injury,3,—,—,50,
+g_i_adrnaline002,Inj. adrénaline : promptitude,Lab Stationratoire,Stims,Treat Injury,6,—,—,50,
+g_i_adrnaline003,Inj. adrénaline : endurance,Lab Stationratoire,Stims,Treat Injury,9,—,—,50,
+g_i_cmbtshot001,Stimulant de combat,Lab Stationratoire,Stims,Treat Injury,12,—,—,100,
+g_i_adrnaline004,Hyper-injection d'adrén. : force,Lab Stationratoire,Stims,Treat Injury,15,—,—,100,
+g_i_adrnaline005,Hyper-injection d'adrén. : promptitude,Lab Stationratoire,Stims,Treat Injury,18,—,—,100,
+g_i_adrnaline006,Hyper-injection d'adrén. : endurance,Lab Stationratoire,Stims,Treat Injury,21,—,—,100,
+g_i_cmbtshot002,Hyper-stimulant de combat,Lab Stationratoire,Stims,Treat Injury,23,—,—,200,
+g_i_cmbtshot003,Stimulant de combat Echani,Lab Stationratoire,Stims,Treat Injury,30,—,—,200,
+LABORATOIRE — MINES,,,,,,,,,
+g_i_trapkit001,"Mine aveuglante, faible",Lab Stationratoire,Mines,Demolitions,2,—,—,100,
+g_i_trapkit004,"Mine à fragmentation, faible",Lab Stationratoire,Mines,Demolitions,3,—,—,100,
+g_i_trapkit013,"Mine sonique, faible",Lab Stationratoire,Mines,Demolitions,4,—,—,100,
+g_i_trapkit007,"Mine à plasma, faible",Lab Stationratoire,Mines,Demolitions,5,—,—,100,
+g_i_trapkit010,"Mine à gaz, faible",Lab Stationratoire,Mines,Demolitions,6,—,—,100,
+g_i_trapkit002,"Mine aveuglante, intermédiaire",Lab Stationratoire,Mines,Demolitions,8,—,—,250,
+g_i_trapkit005,"Mine à fragmentation, intermédiaire",Lab Stationratoire,Mines,Demolitions,9,—,—,250,
+g_i_trapkit014,"Mine sonique, intermédiaire",Lab Stationratoire,Mines,Demolitions,10,—,—,200,
+g_i_trapkit008,"Mine à plasma, intermédiaire",Lab Stationratoire,Mines,Demolitions,11,—,—,250,
+g_i_trapkit011,"Mine à gaz, intermédiaire",Lab Stationratoire,Mines,Demolitions,12,—,—,250,
+g_i_trapkit016,"Mine aveuglante, puissante",Lab Stationratoire,Mines,Demolitions,14,—,—,350,
+g_i_trapkit018,"Mine à fragmentation, puissante",Lab Stationratoire,Mines,Demolitions,15,—,—,350,
+g_i_trapkit024,"Mine sonique, puissante",Lab Stationratoire,Mines,Demolitions,16,—,—,300,
+g_i_trapkit020,"Mine à plasma, puissante",Lab Stationratoire,Mines,Demolitions,17,—,—,350,
+g_i_trapkit022,"Mine à gaz, puissante",Lab Stationratoire,Mines,Demolitions,18,—,—,350,
+g_i_trapkit003,"Mine aveuglante, mortelle",Lab Stationratoire,Mines,Demolitions,20,—,—,400,
+g_i_trapkit006,"Mine à fragmentation, mortelle",Lab Stationratoire,Mines,Demolitions,21,—,—,400,
+g_i_trapkit015,"Mine sonique, mortelle",Lab Stationratoire,Mines,Demolitions,22,—,—,400,
+g_i_trapkit009,"Mine à plasma, mortelle",Lab Stationratoire,Mines,Demolitions,23,—,—,400,
+g_i_trapkit012,"Mine à gaz, mortelle",Lab Stationratoire,Mines,Demolitions,24,—,—,400,
+g_i_trapkit017,"Mine aveuglante, dévastatrice",Lab Stationratoire,Mines,Demolitions,26,—,—,600,
+g_i_trapkit019,"Mine à fragmentation, dévastatrice",Lab Stationratoire,Mines,Demolitions,27,—,—,600,
+g_i_trapkit025,"Mine sonique, dévastatrice",Lab Stationratoire,Mines,Demolitions,28,—,—,600,
+g_i_trapkit021,"Mine à plasma, dévastatrice",Lab Stationratoire,Mines,Demolitions,29,—,—,600,
+g_i_trapkit023,"Mine à gaz, dévastatrice",Lab Stationratoire,Mines,Demolitions,30,—,—,600,
+LABORATOIRE — GRENADES,,,,,,,,,
+g_w_sonicdet02,Détonateur sonique,Lab Stationratoire,Grenades,Demolitions,2,—,—,70,
+g_w_fraggren01,Grenade à fragmentation,Lab Stationratoire,Grenades,Demolitions,3,—,—,100,
+g_w_stungren01,Grenade érounddissante,Lab Stationratoire,Grenades,Demolitions,4,—,—,100,
+g_w_iongren01,Grenade à ions,Lab Stationratoire,Grenades,Demolitions,5,—,—,150,
+g_w_adhsvgren001,Grenade adhésive,Lab Stationratoire,Grenades,Demolitions,9,—,—,150,
+g_w_cryobgren001,Grenade à cryoban,Lab Stationratoire,Grenades,Demolitions,13,—,—,150,
+g_w_sonicgren01,Grenade sonique,Lab Stationratoire,Grenades,Demolitions,14,—,—,150,
+g_w_poisngren01,Grenade toxique,Lab Stationratoire,Grenades,Demolitions,17,—,—,150,
+g_w_firegren001,Grenade à plasma,Lab Stationratoire,Grenades,Demolitions,21,—,—,750,
+g_w_thermldet01,Détonateur thermique,Lab Stationratoire,Grenades,Demolitions,28,—,—,2000,
+LABORATOIRE — OBJETS DE QUÊTE / COUPÉS (SEUIL 50),,,,,,,,,
+airspeeder41,"Interface navigation, fonceur",Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,100,
+airspeeder42,Volets de manoeuvre,Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,100,
+airspeeder43,Cellules d'énergie cryogéniques,Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,50,
+beasttenderkeycard,,Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,,
+hkpart01,Processeur de droïde de modèle HK,Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,327,
+hkpart02,Châssis de droïde de modèle HK,Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,1500,
+hkpart03,Amas de contrôle de droïde de modèle HK,Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,250,
+hkpart04,Vocabulateur de droïde de modèle HK,Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,114,
+hkpart05,Pack pacifique de droïde de modèle HK,Lab Stationratoire,Objets de quête / coupés (seuil 50),Demolitions,50,—,—,215,

@@ -14,11 +14,11 @@ a_belt_11,Inhibiteur d'inertie,Belt,Niv. 26+ (rare 21+),—,DEX +1,"Bonus de car
 a_belt_12,Bouclier de capacitance,Belt,Niv. 28+ (rare 23+),—,,Immunité contre dégâts +75%,palier 12 niv. 28+ (rare dès 23),—,Plafonnement : Immunité +75% → +30%,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +30%"
+• Immunité contre dégâts (Électrique) +30 %"
 a_belt_13,Générateur de bouclier thermique,Belt,Niv. 30+ (rare 25+),—,,Immunité contre dégâts +75%,palier 13 niv. 30+ (rare dès 25),—,Plafonnement : Immunité +75% → +30%,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +30%"
+• Immunité contre dégâts (Feu) +30 %"
 a_belt_15,Augmentateur de force CNS,Belt,Niv. 30+ (rare 29+),—,FOR +2,"Bonus de caractéristique (Strength) +2, Jets de sauvegarde améliorés +2",palier 15 niv. 30+ (rare dès 29),—,,
 a_belt_16,Ceinture multifonction de l'Echange,Belt,Niv. 30+,—,"FOR +1, DEX +1","Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +1, Bonus de compétence +3, Bonus de compétence +3, Bonus de compétence +3, Bonus de compétence +3",palier 16 niv. 30+,—,"Rééquilibrage lore tech : FOR +1, DEX +1 → INT +1, DEX +1","[Mod D20-Overhaul]
 
@@ -40,7 +40,7 @@ Propriétés notables :
 a_belt_21,Générateur de boucliers multiples,Belt,Niv. 30+,—,,"Immunité contre dégâts +50%, Immunité contre dégâts +50%, Immunité contre dégâts +15%",palier 21 niv. 30+,—,Plafonnement : Immunité +50%/+50% → +25%/+25%,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +25%/+25%"
+• Immunités contre dégâts +25 % / +25 %"
 a_belt_24,Ceinture de spécialiste en technologie,Belt,Niv. 30+,—,"FOR +1, DEX +2","Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +1, Bonus de compétence +2, Bonus de compétence +4, Bonus de compétence +4, Bonus de compétence +5 *(+2 autres, slots d'amélioration)*",palier 24 niv. 30+,—,"Rééquilibrage lore spécialiste tech : FOR +1, DEX +2 → INT +3","[Mod D20-Overhaul]
 
 Propriétés notables :

@@ -1,0 +1,1522 @@
+﻿ResRef,Name,Slot,Tier,Effects (Vanilla),Random Loot,Changes (Mod),Baseline Game Rule (No Feats),Description (Mod)
+ARMES DE MÊLÉE — LAMES,,,,,,,,
+u_m_edge_01,Mild Devaronian Edge,Edge (Melee),1,Massive Criticals +1d3,tier 1 lvl 6+ (rare from 1),Massive Criticals +1d4,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Massive Criticals +1d4"
+u_m_edge_02,Basic Ionite Edge,Edge (Melee),2,"Damage Bonus (Ion) +1, Damage Bonus vs. Race +1d4",tier 2 lvl 8+ (rare from 3),Damage Bonus vs. Droids +1d4,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Damage Bonus vs. Droids +1d4"
+u_m_edge_03,Basic Mullinine Edge,Edge (Melee),3,Keen,tier 3 lvl 10+ (rare from 5),Keen,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Keen"
+u_m_edge_04,Basic Neutronium Edge,Edge (Melee),4,Damage Bonus (Slashing) +1d3,tier 4 lvl 12+ (rare from 7),On Hit (Slow : DC 3 + Lvl + Attr),,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• On Hit (Slow : DC 3 + Lvl + Attr)"
+u_m_edge_05,Moderate Devaronian Edge,Edge (Melee),5,"Damage Bonus (Slashing) +2, Massive Criticals +1d8",tier 5 lvl 14+ (rare from 9),Massive Criticals +1d6,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Massive Criticals +1d6"
+u_m_edge_06,Improved Ionite Edge,Edge (Melee),6,"Damage Bonus (Ion) +1d4, Damage Bonus vs. Race +1d6",tier 6 lvl 16+ (rare from 11),Damage Bonus vs. Droids +1d8,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Damage Bonus vs. Droids +1d8"
+u_m_edge_07,Improved Mullinine Edge,Edge (Melee),7,"Damage Bonus (Slashing) +1d4, Keen",tier 7 lvl 18+ (rare from 13),"Keen, Massive Criticals +1d4",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Keen
+• Massive Criticals +1d4"
+u_m_edge_08,Improved Neutronium Edge,Edge (Melee),8,"Damage Bonus (Slashing) +3, Massive Criticals +1d4",tier 8 lvl 20+ (rare from 15),"On Hit (Slow : DC 5 + Lvl + Attr), Massive Criticals +1d4",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• On Hit (Slow : DC 5 + Lvl + Attr)
+• Massive Criticals +1d4"
+u_m_edge_09,Severe Devaronian Edge,Edge (Melee),9,"Damage Bonus (Slashing) +2, Massive Criticals +2d6",tier 9 lvl 22+ (rare from 17),Massive Criticals +1d8,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Massive Criticals +1d8"
+u_m_edge_10,Superior Ionite Edge,Edge (Melee),10,"Damage Bonus (Ion) +1d8, Damage Bonus vs. Race +1d8",tier 10 lvl 24+ (rare from 19),Damage Bonus vs. Droids +2d6,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Damage Bonus vs. Droids +2d6"
+u_m_edge_11,Superior Mullinine Edge,Edge (Melee),11,"Damage Bonus (Slashing) +1d8, Keen",tier 11 lvl 26+ (rare from 21),"Keen, Massive Criticals +1d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Keen
+• Massive Criticals +1d6"
+u_m_edge_12,Superior Neutronium Edge,Edge (Melee),12,"Damage Bonus (Slashing) +5, Massive Criticals +1d6",tier 12 lvl 28+ (rare from 23),"On Hit (Slow : DC 7 + Lvl + Attr), Massive Criticals +1d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• On Hit (Slow : DC 7 + Lvl + Attr)
+• Massive Criticals +1d6"
+u_m_edge_13,Deadly Devaronian Edge,Edge (Melee),13,"Damage Bonus (Slashing) +3, Massive Criticals +2d10",tier 13 lvl 30+ (rare from 25),Massive Criticals +2d6,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Massive Criticals +2d6"
+u_m_edge_14,Quadranium Edge,Edge (Melee),14,Damage Bonus (Slashing) +2d6,tier 14 lvl 30+ (rare from 27),On Hit (Stun : DC 9 + Lvl + Attr),,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• On Hit (Stun : DC 9 + Lvl + Attr)"
+u_m_edge_15,Ostrine Edge,Edge (Melee),15,"Damage Bonus (Cold) +2d8, Damage Resistance (Fire) +Resist_5/-, Keen",tier 15 lvl 30+ (rare from 29),"Keen, Damage Resistance (Fire) +5/-, On Hit (Paralysis : DC 9 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Edge (Melee)
+
+Effects:
+• Keen
+• Damage Resistance (feu) +5/-
+• On Hit (Paralysis : DC 9 + Lvl + Attr)"
+ARMES DE MÊLÉE — CELLULES D'ÉNERGIE,,,,,,,,
+u_m_cell_01,Ion Cell,Power Cell (Melee),1,"Damage Bonus vs. Race +1d3, Massive Criticals +1",tier 1 lvl 6+ (rare from 1),"Damage Bonus (Ion) +1, Damage Bonus vs. Race +1d4",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (ioniques) +1
+• Damage Bonus vs. Droids +1d4"
+u_m_cell_02,Vibration Cell,Power Cell (Melee),2,"Damage Bonus (Slashing) +1, Don requis",tier 2 lvl 8+ (rare from 3),Damage Bonus (Slashing) +1,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (tranchants) +1"
+u_m_cell_03,Enhanced Energy Cell,Power Cell (Melee),3,Damage Bonus (Energy) +1,tier 3 lvl 10+ (rare from 5),Damage Bonus (Energy) +1,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (énergie) +1"
+u_m_cell_04,Sonic Discharge Cell,Power Cell (Melee),4,"Attack Penalty +Penalty_-1, Damage Bonus (Sonic) +2, Massive Criticals +1d8",tier 4 lvl 12+ (rare from 7),"Damage Bonus (Sonic) +1, Massive Criticals +1d4",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (soniques) +1
+• Massive Criticals +1d4"
+u_m_cell_05,Ion Cell Mark II,Power Cell (Melee),5,"Damage Bonus vs. Race +1d6, Massive Criticals +1d6",tier 5 lvl 14+ (rare from 9),"Damage Bonus (Ion) +2, Damage Bonus vs. Race +1d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (ioniques) +2
+• Damage Bonus vs. Droids +1d6"
+u_m_cell_06,Vibration Cell Mark II,Power Cell (Melee),6,"Attack Penalty +Penalty_-2, Damage Bonus (Slashing) +1d10, Don requis",tier 6 lvl 16+ (rare from 11),Damage Bonus (Slashing) +1d4,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (tranchants) +1d4"
+u_m_cell_07,Enhanced Energy Cell Mark II,Power Cell (Melee),7,Damage Bonus (Energy) +1d3,tier 7 lvl 18+ (rare from 13),Damage Bonus (Energy) +2,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (énergie) +2"
+u_m_cell_08,Sonic Discharge Cell Mark II,Power Cell (Melee),8,"Attack Penalty +Penalty_-1, Damage Bonus (Sonic) +4, Massive Criticals +2d6",tier 8 lvl 20+ (rare from 15),"Damage Bonus (Sonic) +2, Massive Criticals +1d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (soniques) +2
+• Massive Criticals +1d6"
+u_m_cell_09,Ion Cell Mark III,Power Cell (Melee),9,"Damage Bonus (Ion) +1d4, Damage Bonus vs. Race +2d6, Massive Criticals +2d6",tier 9 lvl 22+ (rare from 17),"Damage Bonus (Ion) +1d6, Damage Bonus vs. Race +1d8",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (ioniques) +1d6
+• Damage Bonus vs. Droids +1d8"
+u_m_cell_10,Vibration Cell Mark III,Power Cell (Melee),10,"Attack Penalty +Penalty_-2, Damage Bonus (Slashing) +2d6, Don requis",tier 10 lvl 24+ (rare from 19),Damage Bonus (Slashing) +1d6,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (tranchants) +1d6"
+u_m_cell_11,Enhanced Energy Cell Mark III,Power Cell (Melee),11,Damage Bonus (Energy) +1d6,tier 11 lvl 26+ (rare from 21),Damage Bonus (Energy) +1d6,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (énergie) +1d6"
+u_m_cell_12,Sonic Discharge Cell Mark III,Power Cell (Melee),12,"Attack Penalty +Penalty_-1, Damage Bonus (Sonic) +1d10, Massive Criticals +2d8",tier 12 lvl 28+ (rare from 23),"Damage Bonus (Sonic) +1d6, Massive Criticals +1d8",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (soniques) +1d6
+• Massive Criticals +1d8"
+u_m_cell_13,Ion Cell Mark IV,Power Cell (Melee),13,"Damage Bonus (Ion) +1d6, Damage Bonus vs. Race +2d10, Massive Criticals +2d8",tier 13 lvl 30+ (rare from 25),"Damage Bonus (Ion) +4, Damage Bonus vs. Race +2d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (ioniques) +4
+• Damage Bonus vs. Droids +2d6"
+u_m_cell_14,Vibration Cell Mark IV,Power Cell (Melee),14,"Attack Penalty +Penalty_-1, Damage Bonus (Slashing) +2d8, Don requis",tier 14 lvl 30+ (rare from 27),Damage Bonus (Slashing) +5,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (tranchants) +5"
+u_m_cell_15,Enhanced Energy Cell Mark IV,Power Cell (Melee),15,Damage Bonus (Energy) +2d6,tier 15 lvl 30+ (rare from 29),Damage Bonus (Energy) +5,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Power Cell (Melee)
+
+Effects:
+• Damage Bonus (énergie) +5"
+ARMES DE MÊLÉE — POIGNÉES (GARDES),,,,,,,,
+u_m_grip_01,Agrinium Grip,Grip (Melee),1,Damage Bonus (Slashing) +1,tier 1 lvl 6+ (rare from 1),Improved Saving Throws +1,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Improved Saving Throws +1"
+u_m_grip_02,Contoured Grip,Grip (Melee),2,"Attack Bonus +1, Malus aux dégâts +Penalty_-1",tier 2 lvl 8+ (rare from 3),Attack Bonus +1,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +1"
+u_m_grip_03,Zabrak Grip,Grip (Melee),3,"Attack Bonus +1, Damage Bonus (Slashing) +1, Malus de défense +Penalty_-1",tier 3 lvl 10+ (rare from 5),"Attack Bonus +2, Malus de défense -1",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +2
+• Malus de défense -1"
+u_m_grip_04,Basket Hilt,Grip (Melee),4,"Attack Penalty +Penalty_-1, Defense Bonus +1",tier 4 lvl 12+ (rare from 7),Defense Bonus +1,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Defense Bonus +1"
+u_m_grip_05,Nagai Grip,Grip (Melee),5,Attack Bonus +1,tier 5 lvl 14+ (rare from 9),"Attack Bonus +1, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +1
+• Defense Bonus +1"
+u_m_grip_06,Advanced Agrinium Grip,Grip (Melee),6,Damage Bonus (Slashing) +1d4,tier 6 lvl 16+ (rare from 11),Improved Saving Throws +2,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Improved Saving Throws +2"
+u_m_grip_07,Advanced Contoured Grip,Grip (Melee),7,"Attack Bonus +2, Malus aux dégâts +Penalty_-1",tier 7 lvl 18+ (rare from 13),Attack Bonus +2,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +2"
+u_m_grip_08,Advanced Zabrak Grip,Grip (Melee),8,"Attack Bonus +3, Damage Bonus (Slashing) +2, Malus de défense +Penalty_-2",tier 8 lvl 20+ (rare from 15),"Attack Bonus +3, Malus de défense -1",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +3
+• Malus de défense -1"
+u_m_grip_09,Advanced Basket Hilt,Grip (Melee),9,"Attack Penalty +Penalty_-1, Defense Bonus +2",tier 9 lvl 22+ (rare from 17),Defense Bonus +2,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Defense Bonus +2"
+u_m_grip_10,Advanced Nagai Grip,Grip (Melee),10,"Attack Bonus +1, Defense Bonus +1",tier 10 lvl 24+ (rare from 19),"Attack Bonus +2, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +2
+• Defense Bonus +1"
+u_m_grip_11,Superior Agrinium Grip,Grip (Melee),11,Damage Bonus (Slashing) +1d8,tier 11 lvl 26+ (rare from 21),Improved Saving Throws +3,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Improved Saving Throws +3"
+u_m_grip_12,Superior Contoured Grip,Grip (Melee),12,"Attack Bonus +3, Malus aux dégâts +Penalty_-1",tier 12 lvl 28+ (rare from 23),Attack Bonus +3,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +3"
+u_m_grip_13,Superior Zabrak Grip,Grip (Melee),13,"Attack Bonus +3, Damage Bonus (Slashing) +1d8, Malus de défense +Penalty_-1",tier 13 lvl 30+ (rare from 25),"Attack Bonus +4, Malus de défense -2",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +4
+• Malus de défense -2"
+u_m_grip_14,Superior Basket Hilt,Grip (Melee),14,Defense Bonus +2,tier 14 lvl 30+ (rare from 27),Defense Bonus +3,,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Defense Bonus +3"
+u_m_grip_15,Superior Nagai Grip,Grip (Melee),15,"Attack Bonus +2, Defense Bonus +1",tier 15 lvl 30+ (rare from 29),"Attack Bonus +2, Defense Bonus +2",,"[Mod D20-Overhaul]
+
+Amélioration d'arme de mêlée — Grip (Melee)
+
+Effects:
+• Attack Bonus +2
+• Defense Bonus +2"
+ARMES À DISTANCE — CHAMBRAGES,,,,,,,,
+u_r_firi_01,Broadening Chamber Mark I,Chambre de tir,1,Massive Criticals +2,tier 1 lvl 6+ (rare from 1),Massive Criticals +1d4,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Massive Criticals +1d4"
+u_r_firi_02,Amplifying Chamber Mark I,Chambre de tir,2,Damage Bonus (Energy) +1,tier 2 lvl 8+ (rare from 3),Damage Bonus (Energy) +1,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Damage Bonus (énergie) +1"
+u_r_firi_03,Precision Chamber Mark I,Chambre de tir,3,"Attack Bonus +1, Massive Criticals +1",tier 3 lvl 10+ (rare from 5),"Attack Bonus +1, Massive Criticals +1d3",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Attack Bonus +1
+• Massive Criticals +1d3"
+u_r_firi_04,Beam Splitter Mark I,Chambre de tir,4,Damage Bonus (Energy) +1d3,tier 4 lvl 12+ (rare from 7),Damage Bonus (Energy) +1d2,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Damage Bonus (énergie) +1d2"
+u_r_firi_05,Mandalorian Chamber Mark I,Chambre de tir,5,"Attack Bonus +1, Damage Bonus (Energy) +1d4, Malus de défense +Penalty_-1",tier 5 lvl 14+ (rare from 9),"Attack Bonus +1, Damage Bonus (Energy) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Attack Bonus +1
+• Damage Bonus (énergie) +1"
+u_r_firi_06,Broadened Chamber Mark II,Chambre de tir,6,"Attack Bonus +1, Massive Criticals +4",tier 6 lvl 16+ (rare from 11),"Attack Bonus +1, Massive Criticals +1d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Attack Bonus +1
+• Massive Criticals +1d6"
+u_r_firi_07,Amplifying Chamber Mark II,Chambre de tir,7,Damage Bonus (Energy) +4,tier 7 lvl 18+ (rare from 13),Damage Bonus (Energy) +1d4,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Damage Bonus (énergie) +1d4"
+u_r_firi_08,Precision Chamber Mark II,Chambre de tir,8,"Attack Bonus +2, Massive Criticals +1d6",tier 8 lvl 20+ (rare from 15),"Attack Bonus +2, Massive Criticals +1d4",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Attack Bonus +2
+• Massive Criticals +1d4"
+u_r_firi_09,Beam Splitter Mark II,Chambre de tir,9,Damage Bonus (Energy) +1d10,tier 9 lvl 22+ (rare from 17),Damage Bonus (Energy) +1d6,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Damage Bonus (énergie) +1d6"
+u_r_firi_10,Mandalorian Chamber Mark II,Chambre de tir,10,"Attack Bonus +1, Damage Bonus (Energy) +1d12, Malus de défense +Penalty_-2",tier 10 lvl 24+ (rare from 19),"Attack Bonus +1, Damage Bonus (Energy) +2",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Attack Bonus +1
+• Damage Bonus (énergie) +2"
+u_r_firi_11,Broadened Chamber Mark III,Chambre de tir,11,"Attack Bonus +1, Massive Criticals +1d12",tier 11 lvl 26+ (rare from 21),"Attack Bonus +1, Massive Criticals +2d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Attack Bonus +1
+• Massive Criticals +2d6"
+u_r_firi_12,Amplifying Chamber Mark III,Chambre de tir,12,"Damage Bonus (Energy) +5, Damage Bonus (Energy) +1",tier 12 lvl 28+ (rare from 23),Damage Bonus (Energy) +5,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Damage Bonus (énergie) +5"
+u_r_firi_13,Precision Chamber Mark III,Chambre de tir,13,"Attack Bonus +2, Massive Criticals +2d6",tier 13 lvl 30+ (rare from 25),"Attack Bonus +3, Massive Criticals +1d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Attack Bonus +3
+• Massive Criticals +1d6"
+u_r_firi_14,Beam Splitter Mark III,Chambre de tir,14,Damage Bonus (Energy) +2d6,tier 14 lvl 30+ (rare from 27),Damage Bonus (Energy) +5,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Damage Bonus (énergie) +5"
+u_r_firi_15,Mandalorian Chamber Mark III,Chambre de tir,15,"Damage Bonus (Energy) +2d8, Malus de défense +Penalty_-1, Bonus d'amélioration +1",tier 15 lvl 30+ (rare from 29),"Attack Bonus +2, Damage Bonus (Energy) +1d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Chambre de tir
+
+Effects:
+• Attack Bonus +2
+• Damage Bonus (énergie) +1d6"
+ARMES À DISTANCE — CELLULES D'ÉNERGIE,,,,,,,,
+u_r_powe_01,Ion Charger Mark I,Power Pack (Ranged),1,Damage Bonus vs. Race +1d4,tier 1 lvl 6+ (rare from 1),"Damage Bonus (Ion) +1, Damage Bonus vs. Droids +1d4",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (ioniques) +1
+• Damage Bonus vs. Droids +1d4"
+u_r_powe_02,Power Pulsator Mark I,Power Pack (Ranged),2,Massive Criticals +1d4,tier 2 lvl 8+ (rare from 3),Massive Criticals +1d4,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Massive Criticals +1d4"
+u_r_powe_03,Basic Rylith Power Cell,Power Pack (Ranged),3,Damage Bonus (Energy) +2,tier 3 lvl 10+ (rare from 5),Damage Bonus (Energy) +1,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (énergie) +1"
+u_r_powe_04,Ion Charger Mark II,Power Pack (Ranged),4,"Damage Bonus vs. Race +1d6, Massive Criticals +2",tier 4 lvl 12+ (rare from 7),"Damage Bonus (Ion) +1, Damage Bonus vs. Droids +1d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (ioniques) +1
+• Damage Bonus vs. Droids +1d6"
+u_r_powe_05,Power Pulsator Mark II,Power Pack (Ranged),5,Massive Criticals +1d8,tier 5 lvl 14+ (rare from 9),Massive Criticals +1d6,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Massive Criticals +1d6"
+u_r_powe_06,Standard Rylith Power Cell,Power Pack (Ranged),6,Damage Bonus (Energy) +1d4,tier 6 lvl 16+ (rare from 11),Damage Bonus (Energy) +1d2,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (énergie) +1d2"
+u_r_powe_07,Ion Charger Mark III,Power Pack (Ranged),7,"Damage Bonus vs. Race +1d8, Massive Criticals +4",tier 7 lvl 18+ (rare from 13),"Damage Bonus (Ion) +2, Damage Bonus vs. Droids +1d8",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (ioniques) +2
+• Damage Bonus vs. Droids +1d8"
+u_r_powe_08,Power Pulsator Mark III,Power Pack (Ranged),8,"Damage Bonus (Energy) +2, Massive Criticals +1d10",tier 8 lvl 20+ (rare from 15),Massive Criticals +1d8,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Massive Criticals +1d8"
+u_r_powe_09,Advanced Rylith Power Cell,Power Pack (Ranged),9,Damage Bonus (Energy) +1d6,tier 9 lvl 22+ (rare from 17),Damage Bonus (Energy) +2,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (énergie) +2"
+u_r_powe_10,Ion Charger Mark IV,Power Pack (Ranged),10,"Damage Bonus (Ion) +1d6, Damage Bonus vs. Race +1d6, Massive Criticals +5",tier 10 lvl 24+ (rare from 19),"Damage Bonus (Ion) +3, Damage Bonus vs. Droids +1d10",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (ioniques) +3
+• Damage Bonus vs. Droids +1d10"
+u_r_powe_11,Power Pulsator Mark IV,Power Pack (Ranged),11,"Damage Bonus (Energy) +4, Massive Criticals +2d8",tier 11 lvl 26+ (rare from 21),Massive Criticals +2d6,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Massive Criticals +2d6"
+u_r_powe_12,Superior Rylith Power Cell,Power Pack (Ranged),12,Damage Bonus (Energy) +2d6,tier 12 lvl 28+ (rare from 23),Damage Bonus (Energy) +1d4,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (énergie) +1d4"
+u_r_powe_13,Ion Charger Mark V,Power Pack (Ranged),13,"Damage Bonus (Ion) +1d8, Damage Bonus vs. Race +2d6, Massive Criticals +2d8",tier 13 lvl 30+ (rare from 25),"Damage Bonus (Ion) +3, Damage Bonus vs. Droids +2d6",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (ioniques) +3
+• Damage Bonus vs. Droids +2d6"
+u_r_powe_14,Power Pulsator Mark V,Power Pack (Ranged),14,"Damage Bonus (Energy) +5, Massive Criticals +2d10",tier 14 lvl 30+ (rare from 27),Massive Criticals +2d8,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Massive Criticals +2d8"
+u_r_powe_15,Pure Rylith Power Cell,Power Pack (Ranged),15,Damage Bonus (Energy) +2d10,tier 15 lvl 30+ (rare from 29),Damage Bonus (Energy) +3,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Power Pack (Ranged)
+
+Effects:
+• Damage Bonus (énergie) +3"
+ARMES À DISTANCE — LUNETTES,,,,,,,,
+u_r_targ_01,Pinpoint Scope Mark I,Lunette de visée,1,Keen,tier 1 lvl 6+ (rare from 1),Keen,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Keen"
+u_r_targ_02,Accuracy Scope Mark I,Lunette de visée,2,Attack Bonus +1,tier 2 lvl 8+ (rare from 3),Attack Bonus +1,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +1"
+u_r_targ_03,Targeting Scope Mark I,Lunette de visée,3,On Hit +14,tier 3 lvl 10+ (rare from 5),On Hit (Stun : DC 5 + Lvl + Attr),,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• On Hit (Stun : DC 5 + Lvl + Attr)"
+u_r_targ_04,Crippling Scope Mark I,Lunette de visée,4,On Hit +10,tier 4 lvl 12+ (rare from 7),On Hit (Slow : DC 3 + Lvl + Attr),,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• On Hit (Slow : DC 3 + Lvl + Attr)"
+u_r_targ_05,Pinpoint Scope Mark II,Lunette de visée,5,"Keen, On Hit +14",tier 5 lvl 14+ (rare from 9),"Keen, On Hit (Stun : DC 5 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Keen
+• On Hit (Stun : DC 5 + Lvl + Attr)"
+u_r_targ_06,Accuracy Scope Mark II,Lunette de visée,6,Attack Bonus +2,tier 6 lvl 16+ (rare from 11),Attack Bonus +2,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +2"
+u_r_targ_07,Targeting Scope Mark II,Lunette de visée,7,"Damage Bonus (Energy) +1, On Hit +14",tier 7 lvl 18+ (rare from 13),"Attack Bonus +1, On Hit (Stun : DC 5 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +1
+• On Hit (Stun : DC 5 + Lvl + Attr)"
+u_r_targ_08,Crippling Scope Mark II,Lunette de visée,8,"Damage Bonus (Energy) +1, On Hit +14",tier 8 lvl 20+ (rare from 15),"Attack Bonus +1, On Hit (Slow : DC 5 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +1
+• On Hit (Slow : DC 5 + Lvl + Attr)"
+u_r_targ_09,Pinpoint Scope Mark III,Lunette de visée,9,"Keen, On Hit +14",tier 9 lvl 22+ (rare from 17),"Attack Bonus +1, Keen, On Hit (Stun : DC 5 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +1
+• Keen
+• On Hit (Stun : DC 5 + Lvl + Attr)"
+u_r_targ_10,Accuracy Scope Mark III,Lunette de visée,10,Attack Bonus +3,tier 10 lvl 24+ (rare from 19),Attack Bonus +3,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +3"
+u_r_targ_11,Targeting Scope Mark III,Lunette de visée,11,"Damage Bonus (Energy) +2, On Hit +18",tier 11 lvl 26+ (rare from 21),"Attack Bonus +2, On Hit (Stun : DC 7 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +2
+• On Hit (Stun : DC 7 + Lvl + Attr)"
+u_r_targ_12,Crippling Scope Mark III,Lunette de visée,12,"Damage Bonus (Energy) +3, On Hit +18",tier 12 lvl 28+ (rare from 23),"Attack Bonus +1, On Hit (Slow : DC 7 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +1
+• On Hit (Slow : DC 7 + Lvl + Attr)"
+u_r_targ_13,Pinpoint Scope Mark IV,Lunette de visée,13,"Keen, On Hit +18",tier 13 lvl 30+ (rare from 25),"Attack Bonus +1, Keen, On Hit (Stun : DC 7 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +1
+• Keen
+• On Hit (Stun : DC 7 + Lvl + Attr)"
+u_r_targ_14,Accuracy Scope Mark IV,Lunette de visée,14,Attack Bonus +4,tier 14 lvl 30+ (rare from 27),Attack Bonus +4,,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +4"
+u_r_targ_15,Targeting Scope Mark IV,Lunette de visée,15,"Damage Bonus (Energy) +3, On Hit +22",tier 15 lvl 30+ (rare from 29),"Attack Bonus +2, On Hit (Stun : DC 9 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration d'arme à distance — Lunette de visée
+
+Effects:
+• Attack Bonus +2
+• On Hit (Stun : DC 9 + Lvl + Attr)"
+SABRES LASER — ÉMETTEURS,,,,,,,,
+u_l_emit_01,Deflection Emitter,Emitter (Lightsaber),1,Parade tirs de blaster: +1 +1,tier 1 lvl 12+ (rare from 7),"Parade tirs de blaster +1, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Parade tirs de blaster +1
+• Defense Bonus +1"
+u_l_emit_02,Disrupting Emitter,Emitter (Lightsaber),2,"Malus de défense +Penalty_-1, On Hit +10",tier 2 lvl 14+ (rare from 9),"Malus de défense -1, On Hit (Stun : DC 3 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Malus de défense -1
+• On Hit (Stun : DC 3 + Lvl + Attr)"
+u_l_emit_03,Crude Phobium Emitter,Emitter (Lightsaber),3,"Malus de défense +Penalty_-3, On Hit +14",tier 3 lvl 16+ (rare from 11),"Malus de défense -2, On Hit (Horror : DC 5 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Malus de défense -2
+• On Hit (Horror : DC 5 + Lvl + Attr)"
+u_l_emit_04,Fencing Emitter,Emitter (Lightsaber),4,"Parade tirs de blaster: -2 +Penalty_-2, Damage Bonus (Energy) +1, Defense Bonus +1",tier 4 lvl 18+ (rare from 13),"Defense Bonus +2, Parade tirs de blaster -1",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Defense Bonus +2
+• Parade tirs de blaster -1"
+u_l_emit_05,Improved Deflection Emitter,Emitter (Lightsaber),5,"Parade tirs de blaster: +1 +2, Defense Bonus +1",tier 5 lvl 20+ (rare from 15),"Parade tirs de blaster +2, Defense Bonus +2",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Parade tirs de blaster +2
+• Defense Bonus +2"
+u_l_emit_06,Advanced Disrupting Emitter,Emitter (Lightsaber),6,"Malus de défense +Penalty_-1, On Hit +10",tier 6 lvl 22+ (rare from 17),"Malus de défense -1, On Hit (Stun : DC 5 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Malus de défense -1
+• On Hit (Stun : DC 5 + Lvl + Attr)"
+u_l_emit_07,Synthesized Phobium Emitter,Emitter (Lightsaber),7,"Malus de défense +Penalty_-3, On Hit +14",tier 7 lvl 24+ (rare from 19),"Malus de défense -2, On Hit (Horror : DC 7 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Malus de défense -2
+• On Hit (Horror : DC 7 + Lvl + Attr)"
+u_l_emit_08,Improved Fencing Emitter,Emitter (Lightsaber),8,"Parade tirs de blaster: -2 +Penalty_-2, Damage Bonus (Energy) +2, Defense Bonus +2",tier 8 lvl 26+ (rare from 21),"Defense Bonus +3, Parade tirs de blaster -1",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Defense Bonus +3
+• Parade tirs de blaster -1"
+u_l_emit_09,Expert Deflection Emitter,Emitter (Lightsaber),9,"Parade tirs de blaster: +1 +4, Defense Bonus +1",tier 9 lvl 28+ (rare from 23),"Parade tirs de blaster +4, Defense Bonus +3",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Parade tirs de blaster +4
+• Defense Bonus +3"
+u_l_emit_10,Superior Disrupting Emitter,Emitter (Lightsaber),10,"Malus de défense +Penalty_-1, On Hit +14",tier 10 lvl 30+ (rare from 25),"Malus de défense -1, On Hit (Stun : DC 7 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Malus de défense -1
+• On Hit (Stun : DC 7 + Lvl + Attr)"
+u_l_emit_11,Phobium Alloy Emitter,Emitter (Lightsaber),11,"Malus de défense +Penalty_-3, On Hit +18",tier 11 lvl 30+ (rare from 27),"Malus de défense -2, On Hit (Horror : DC 9 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Malus de défense -2
+• On Hit (Horror : DC 9 + Lvl + Attr)"
+u_l_emit_12,Expert Fencing Emitter,Emitter (Lightsaber),12,"Damage Bonus (Energy) +3, Defense Bonus +2",tier 12 lvl 30+ (rare from 29),Defense Bonus +4,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Defense Bonus +4"
+u_l_emit_13,Refined Phobium Emitter,Emitter (Lightsaber),13,"Malus de défense +Penalty_-1, On Hit +18",tier 13 lvl 30+ (rare from 30),"Malus de défense -1, On Hit (Horror : DC 9 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Emitter (Lightsaber)
+
+Effects:
+• Malus de défense -1
+• On Hit (Horror : DC 9 + Lvl + Attr)"
+SABRES LASER — LENTILLES,,,,,,,,
+u_l_lens_01,Synthesized Kunda Lens,Lens (Lightsaber),1,Parade tirs de blaster: +1 +1,tier 1 lvl 12+ (rare from 7),"Attack Bonus +1, Parade tirs de blaster +1",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Bonus +1
+• Parade tirs de blaster +1"
+u_l_lens_02,Dragite Lens,Lens (Lightsaber),2,Damage Bonus (Energy) +2,tier 2 lvl 14+ (rare from 9),Massive Criticals +1d4,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Massive Criticals +1d4"
+u_l_lens_03,Synthesized Byrothsis Lens,Lens (Lightsaber),3,"Attack Bonus +1, Parade tirs de blaster: -2 +Penalty_-2, Damage Bonus (Energy) +1",tier 3 lvl 16+ (rare from 11),"Attack Bonus +2, Parade tirs de blaster -2",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Bonus +2
+• Parade tirs de blaster -2"
+u_l_lens_04,Beam Gem Lens,Lens (Lightsaber),4,"Damage Bonus (Energy) +1, Keen",tier 4 lvl 18+ (rare from 13),Keen,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Keen"
+u_l_lens_05,Vibration Lens,Lens (Lightsaber),5,"Attack Penalty +Penalty_-1, Damage Bonus (Energy) +1d8, Malus de défense +Penalty_-1",tier 5 lvl 20+ (rare from 15),"Attack Penalty -1, Malus de défense -1, Massive Criticals +1d8",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Penalty -1
+• Malus de défense -1
+• Massive Criticals +1d8"
+u_l_lens_06,Pure Kunda Lens,Lens (Lightsaber),6,"Attack Bonus +1, Parade tirs de blaster: +1 +2",tier 6 lvl 22+ (rare from 17),"Attack Bonus +2, Parade tirs de blaster +2",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Bonus +2
+• Parade tirs de blaster +2"
+u_l_lens_07,Adegan Lens,Lens (Lightsaber),7,Damage Bonus (Energy) +1d12,tier 7 lvl 24+ (rare from 19),Massive Criticals +1d6,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Massive Criticals +1d6"
+u_l_lens_08,Pure Byrothsis Lens,Lens (Lightsaber),8,"Attack Bonus +2, Parade tirs de blaster: -2 +Penalty_-3, Damage Bonus (Energy) +2",tier 8 lvl 26+ (rare from 21),"Attack Bonus +3, Parade tirs de blaster -2",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Bonus +3
+• Parade tirs de blaster -2"
+u_l_lens_09,Improved Beam Gem Lens,Lens (Lightsaber),9,"Attack Bonus +1, Damage Bonus (Energy) +2, Keen",tier 9 lvl 28+ (rare from 23),"Attack Bonus +1, Keen",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Bonus +1
+• Keen"
+u_l_lens_10,Improved Vibration Lens,Lens (Lightsaber),10,"Attack Penalty +Penalty_-1, Damage Bonus (Energy) +2d6, Malus de défense +Penalty_-1",tier 10 lvl 30+ (rare from 25),"Attack Penalty -1, Malus de défense -1, Massive Criticals +2d6",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Penalty -1
+• Malus de défense -1
+• Massive Criticals +2d6"
+u_l_lens_11,Ossus Dueling Lens,Lens (Lightsaber),11,"Attack Bonus +2, Parade tirs de blaster: +1 +3",tier 11 lvl 30+ (rare from 27),"Attack Bonus +3, Parade tirs de blaster +3",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Bonus +3
+• Parade tirs de blaster +3"
+u_l_lens_12,Pontite Lens,Lens (Lightsaber),12,"Attack Bonus +1, Damage Bonus (Energy) +2d6",tier 12 lvl 30+ (rare from 29),"Attack Bonus +1, Massive Criticals +1d8",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Bonus +1
+• Massive Criticals +1d8"
+u_l_lens_13,Enhanced Byrothsis Lens,Lens (Lightsaber),13,"Attack Bonus +3, Parade tirs de blaster: -2 +Penalty_-4, Damage Bonus (Energy) +4",tier 13 lvl 30+ (rare from 30),"Attack Bonus +4, Parade tirs de blaster -3",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Lens (Lightsaber)
+
+Effects:
+• Attack Bonus +4
+• Parade tirs de blaster -3"
+SABRES LASER — CELLULES D'ÉNERGIE,,,,,,,,
+u_l_cell_01,Discharge Energy Cell,Energy Cell (Lightsaber),1,Massive Criticals +1d3,tier 1 lvl 12+ (rare from 7),Massive Criticals +1d4,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Massive Criticals +1d4"
+u_l_cell_02,Diatium Energy Cell,Energy Cell (Lightsaber),2,Damage Bonus (Energy) +1,tier 2 lvl 14+ (rare from 9),Damage Bonus (Energy) +1,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (énergie) +1"
+u_l_cell_03,Ion Energy Cell,Energy Cell (Lightsaber),3,"Damage Bonus vs. Race +1d4, Massive Criticals +1d4",tier 3 lvl 16+ (rare from 11),"Damage Bonus (Ion) +1, Damage Bonus vs. Race +1d4, Massive Criticals +1d3",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (ioniques) +1
+• Damage Bonus vs. Droids +1d4
+• Massive Criticals +1d3"
+u_l_cell_04,Telgorn Jolt Cell Mark I,Energy Cell (Lightsaber),4,Damage Bonus (Electrical) +1d3,tier 4 lvl 18+ (rare from 13),Damage Bonus (Electrical) +1,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (électriques) +1"
+u_l_cell_05,Improved Discharge Energy Cell,Energy Cell (Lightsaber),5,Massive Criticals +1d6,tier 5 lvl 20+ (rare from 15),"Damage Bonus (Energy) +1, Massive Criticals +1d6",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (énergie) +1
+• Massive Criticals +1d6"
+u_l_cell_06,Improved Diatium Energy Cell,Energy Cell (Lightsaber),6,Damage Bonus (Energy) +2,tier 6 lvl 22+ (rare from 17),Damage Bonus (Energy) +2,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (énergie) +2"
+u_l_cell_07,Improved Ion Energy Cell,Energy Cell (Lightsaber),7,"Damage Bonus (Ion) +1, Damage Bonus vs. Race +1d8, Massive Criticals +1d3",tier 7 lvl 24+ (rare from 19),"Damage Bonus (Ion) +1, Damage Bonus vs. Race +1d8, Massive Criticals +1d4",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (ioniques) +1
+• Damage Bonus vs. Droids +1d8
+• Massive Criticals +1d4"
+u_l_cell_08,Telgorn Jolt Cell Mark II,Energy Cell (Lightsaber),8,Damage Bonus (Electrical) +1d4,tier 8 lvl 26+ (rare from 21),Damage Bonus (Electrical) +2,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (électriques) +2"
+u_l_cell_09,Superior Discharge Energy Cell,Energy Cell (Lightsaber),9,Massive Criticals +1d8,tier 9 lvl 28+ (rare from 23),"Damage Bonus (Energy) +2, Massive Criticals +1d8",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (énergie) +2
+• Massive Criticals +1d8"
+u_l_cell_10,Superior Diatium Energy Cell,Energy Cell (Lightsaber),10,Damage Bonus (Energy) +4,tier 10 lvl 30+ (rare from 25),Damage Bonus (Energy) +3,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (énergie) +3"
+u_l_cell_11,Superior Ion Energy Cell,Energy Cell (Lightsaber),11,"Damage Bonus (Ion) +2, Damage Bonus vs. Race +1d12, Massive Criticals +1d6",tier 11 lvl 30+ (rare from 27),"Damage Bonus (Ion) +2, Damage Bonus vs. Race +2d6, Massive Criticals +1d6",,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (ioniques) +2
+• Damage Bonus vs. Droids +2d6
+• Massive Criticals +1d6"
+u_l_cell_12,Telgorn Jolt Cell Mark III,Energy Cell (Lightsaber),12,Damage Bonus (Electrical) +1d8,tier 12 lvl 30+ (rare from 29),Damage Bonus (Electrical) +1d6,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (électriques) +1d6"
+u_l_cell_13,Ultimate Diatium Energy Cell,Energy Cell (Lightsaber),13,Damage Bonus (Energy) +5,tier 13 lvl 30+ (rare from 30),Damage Bonus (Energy) +1d6,,"[Mod D20-Overhaul]
+
+Amélioration de sabre laser — Energy Cell (Lightsaber)
+
+Effects:
+• Damage Bonus (énergie) +1d6"
+SABRES LASER — CRISTAUX DE COULEUR,,,,,,,,
+u_l_colo_01,"Crystal, Blue",Cristal de couleur,1,—,tier 1 lvl 10+ (rare from 5),,,
+u_l_colo_02,"Crystal, Green",Cristal de couleur,2,—,tier 2 lvl 10+ (rare from 5),,,
+u_l_colo_03,"Crystal, Yellow",Cristal de couleur,3,—,tier 3 lvl 10+ (rare from 5),,,
+u_l_colo_04,"Crystal, Red",Cristal de couleur,4,—,tier 4 lvl 10+ (rare from 5),,,
+u_l_colo_05,"Crystal, Violet",Cristal de couleur,5,—,tier 5 lvl 10+ (rare from 5),,,
+u_l_colo_06,"Crystal, Cyan",Cristal de couleur,6,—,tier 6 lvl 10+ (rare from 5),,,
+u_l_colo_07,"Crystal, Silver",Cristal de couleur,7,—,tier 7 lvl 10+ (rare from 5),,,
+u_l_colo_08,"Crystal, Orange",Cristal de couleur,8,—,tier 8 lvl 10+ (rare from 5),,,
+u_l_colo_09,"Crystal, Viridian",Cristal de couleur,9,—,tier 9 lvl 10+ (rare from 5),,,
+u_l_colo_10,"Crystal, Bronze",Cristal de couleur,10,—,tier 10 lvl 10+ (rare from 5),,,
+SABRES LASER — CRISTAUX D'AMÉLIORATION,,,,,,,,
+u_l_crys_01,"Crystal, Adegan",Crystal (Lightsaber),1,Damage Bonus (Energy) +2,tier 1 lvl 10+ (rare from 5),Attack Bonus +1,,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +1"
+u_l_crys_02,"Crystal, Rubat",Crystal (Lightsaber),2,"Attack Bonus +1, Damage Bonus (Energy) +1",tier 2 lvl 11+ (rare from 6),"Attack Bonus +1, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +1
+• Defense Bonus +1"
+u_l_crys_03,"Crystal, Ruusan",Crystal (Lightsaber),3,"Attribute Bonus (Charisma) +1, Attribute Bonus (Wisdom) +1",tier 3 lvl 12+ (rare from 7),"Attribute Bonus (Charisma) +1, Attribute Bonus (Wisdom) +1",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attribute Bonus (Charisme) +1
+• Attribute Bonus (Sagesse) +1"
+u_l_crys_04,"Crystal, Nextor",Crystal (Lightsaber),4,"Attack Bonus +1, Keen",tier 4 lvl 13+ (rare from 8),"Attack Bonus +1, Keen",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +1
+• Keen"
+u_l_crys_05,"Crystal, Dragite",Crystal (Lightsaber),5,"Attribute Bonus (Constitution) +1, Damage Bonus (Sonic) +1",tier 5 lvl 14+ (rare from 9),"Attribute Bonus (Constitution) +1, Damage Resistance (Sonic) +5/-",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attribute Bonus (Constitution) +1
+• Damage Resistance (soniques) +5/-"
+u_l_crys_06,"Crystal, Firkrann",Crystal (Lightsaber),6,"Attack Bonus +2, Damage Bonus vs. Race +2d6",tier 6 lvl 15+ (rare from 10),"Attack Bonus +1, Damage Bonus vs. Droids +1d6",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +1
+• Damage Bonus vs. Droids +1d6"
+u_l_crys_07,"Crystal, Phond",Crystal (Lightsaber),7,Damage Bonus (Slashing) +1d6,tier 7 lvl 16+ (rare from 11),"Attribute Bonus (Strength) +1, Attack Bonus +1",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attribute Bonus (Force) +1
+• Attack Bonus +1"
+u_l_crys_08,"Crystal, Bondar",Crystal (Lightsaber),8,On Hit +10,tier 8 lvl 17+ (rare from 12),On Hit (Stun : DC 3 + Lvl + Attr),,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• On Hit (Stun : DC 3 + Lvl + Attr)"
+u_l_crys_09,"Crystal, Velmorite",Crystal (Lightsaber),9,"Attribute Bonus (Dexterity) +1, Keen",tier 9 lvl 18+ (rare from 13),"Attribute Bonus (Dexterity) +1, Keen",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attribute Bonus (Dextérité) +1
+• Keen"
+u_l_crys_10,"Crystal, Sigil",Crystal (Lightsaber),10,"Attack Bonus +1, Damage Bonus (Energy) +1d6",tier 10 lvl 19+ (rare from 14),Attack Bonus +2,,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +2"
+u_l_crys_11,"Crystal, Jenruax",Crystal (Lightsaber),11,"Parade tirs de blaster: +1 +5, Damage Bonus (Energy) +2",tier 11 lvl 20+ (rare from 15),"Parade tirs de blaster +4, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Parade tirs de blaster +4
+• Defense Bonus +1"
+u_l_crys_12,"Crystal, Kasha",Crystal (Lightsaber),12,"Attack Bonus +1, Attribute Bonus (Wisdom) +2",tier 12 lvl 21+ (rare from 16),"Attack Bonus +1, Attribute Bonus (Wisdom) +2",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +1
+• Attribute Bonus (Sagesse) +2"
+u_l_crys_13,"Crystal, Opila",Crystal (Lightsaber),13,"Damage Bonus (Energy) +3, Massive Criticals +2d6",tier 13 lvl 22+ (rare from 17),"Keen, Attack Bonus +1",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Keen
+• Attack Bonus +1"
+u_l_crys_14,"Crystal, Eralam",Crystal (Lightsaber),14,"Attack Bonus +2, Damage Bonus (Energy) +2",tier 14 lvl 23+ (rare from 18),"Attack Bonus +2, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +2
+• Defense Bonus +1"
+u_l_crys_15,"Crystal, Stygium",Crystal (Lightsaber),15,"Attack Bonus +1, Attribute Bonus (Dexterity) +1, Skill Bonus +4",tier 15 lvl 24+ (rare from 19),"Attack Bonus +1, Attribute Bonus (Dexterity) +1, Skill Bonus +4",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +1
+• Attribute Bonus (Dextérité) +1
+• Skill Bonus +4"
+u_l_crys_16,"Crystal, Damind",Crystal (Lightsaber),16,Attack Bonus +3,tier 16 lvl 25+ (rare from 20),Attack Bonus +3,,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +3"
+u_l_crys_17,"Crystal, Sapith",Crystal (Lightsaber),17,"Attack Bonus +2, Damage Bonus (Energy) +3",tier 17 lvl 26+ (rare from 21),"Attack Bonus +2, Attribute Bonus (Dexterity) +1",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +2
+• Attribute Bonus (Dextérité) +1"
+u_l_crys_18,"Crystal, Pontite",Crystal (Lightsaber),18,"Attribute Bonus (Charisma) +2, Damage Bonus (Cold) +1d10",tier 18 lvl 27+ (rare from 22),"Attribute Bonus (Charisma) +2, Damage Resistance (Cold) +5/-",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attribute Bonus (Charisme) +2
+• Damage Resistance (froid) +5/-"
+u_l_crys_19,"Crystal, Upari",Crystal (Lightsaber),19,"Attack Bonus +3, Damage Bonus (Energy) +1d8",tier 19 lvl 28+ (rare from 23),"Attack Bonus +3, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +3
+• Defense Bonus +1"
+u_l_crys_20,Ultima-pearl,Crystal (Lightsaber),20,"Attack Bonus +3, Damage Bonus (Energy) +2, Massive Criticals +1d6",tier 20 lvl 29+ (rare from 24),"Attack Bonus +3, Improved Saving Throws +2",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +3
+• Improved Saving Throws +2"
+u_l_crys_21,"Crystal, Solari",Crystal (Lightsaber),21,"Alignment Restriction, Attack Bonus +3, Damage Bonus (Energy) +3, Damage Bonus contre Alignment +1d8",tier 21 lvl 30+ (rare from 25),"Alignment Restriction: Light Side, Attack Bonus +2, Damage Bonus vs. Dark Side +1d8",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Alignment Restriction: Light Side
+• Attack Bonus +2
+• Damage Bonus vs. Dark Side +1d8"
+u_l_crys_22,Lorrdian Gemstone,Crystal (Lightsaber),22,"Parade tirs de blaster: +1 +3, Defense Bonus +2",tier 22 lvl 30+ (rare from 26),"Parade tirs de blaster +3, Defense Bonus +2",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Parade tirs de blaster +3
+• Defense Bonus +2"
+u_l_crys_23,Barab Ore Ingot,Crystal (Lightsaber),23,Damage Bonus (Fire) +2d6,tier 23 lvl 30+ (rare from 27),"Attribute Bonus (Strength) +2, Damage Resistance (Fire) +10/-",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attribute Bonus (Force) +2
+• Damage Resistance (feu) +10/-"
+u_l_crys_24,Ankarres Sapphire,Crystal (Lightsaber),24,"Attribute Bonus (Dexterity) +1, Attribute Bonus (Strength) +2, Keen, Regeneration +2",tier 24 lvl 30+ (rare from 28),"Attribute Bonus (Dexterity) +1, Attribute Bonus (Strength) +2, Keen, Regeneration +2",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attribute Bonus (Dextérité) +1
+• Attribute Bonus (Force) +2
+• Keen
+• Regeneration +2"
+u_l_crys_25,"Crystal, Kaiburr",Crystal (Lightsaber),25,"Attribute Bonus (Constitution) +3, Attribute Bonus (Wisdom) +3, Regeneration +3",tier 25 lvl 30+ (rare from 29),"Attribute Bonus (Constitution) +2, Attribute Bonus (Wisdom) +2, Regeneration +3",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attribute Bonus (Constitution) +2
+• Attribute Bonus (Sagesse) +2
+• Regeneration +3"
+u_l_crys_21x,"Crystal, Qixoni",Crystal (Lightsaber),—,"Alignment Restriction, Damage Bonus (Energy) +5, Regenerate Force Points +1",—,"Alignment Restriction: Dark Side, Attribute Bonus (Charisma) +2, Regenerate Force Points +2",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Alignment Restriction: Dark Side
+• Attribute Bonus (Charisme) +2
+• Regenerate Force Points +2"
+u_l_crys_x23,"Crystal, Hurrikaine",Crystal (Lightsaber),—,"Damage Bonus (Unstoppable) +1d8, On Hit +18",—,"Attack Bonus +2, On Hit (Stun : DC 7 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Cristal d'amélioration — Sabre laser
+
+Effects:
+• Attack Bonus +2
+• On Hit (Stun : DC 7 + Lvl + Attr)"
+ARMURES — SURCOUCHES,,,,,,,,
+u_a_over_01,Heat Shielding Mark I,Overlay (armure),1,Damage Immunity +10%,tier 1 lvl 6+ (rare from 1),"Damage Immunity (Fire/Cold) +15%, Damage Resistance (Fire/Cold) +5/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Fire/Cold) +15%
+• Damage Resistance (Fire/Cold) +5/-"
+u_a_over_02,Armorply Plating Mark I,Overlay (armure),2,Skill Bonus +2,tier 2 lvl 8+ (rare from 3),"Skill Bonus (Stealth) +2, Improved Saving Throws +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Skill Bonus (Stealth) +2
+• Improved Saving Throws +1"
+u_a_over_03,Sound Dampening Mark I,Overlay (armure),3,Damage Immunity +10%,tier 3 lvl 10+ (rare from 5),"Damage Immunity (Sonic/Electrical) +15%, Damage Resistance (Sonic/Electrical) +5/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Sonic/Electrical) +15%
+• Damage Resistance (Sonic/Electrical) +5/-"
+u_a_over_04,Ablative Plating Mark I,Overlay (armure),4,"Malus de caractéristique +Penalty_-1, Damage Immunity +10%, Defense Bonus +1",tier 4 lvl 12+ (rare from 7),"Defense Bonus +1, Damage Immunity (Energy) +15%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Damage Immunity (Energy) +15%"
+u_a_over_05,Energy Shielding Mark I,Overlay (armure),5,Damage Immunity +10%,tier 5 lvl 14+ (rare from 9),"Damage Immunity (Energy) +15%, Regeneration +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Energy) +15%
+• Regeneration +1"
+u_a_over_06,Ballistic Shielding Mark I,Overlay (armure),6,"Damage Immunity +10%, Damage Immunity +10%, Damage Immunity +10%",tier 6 lvl 16+ (rare from 11),"Defense Bonus +1, Damage Immunity (Physique) +10%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Damage Immunity (Physique) +10%"
+u_a_over_07,Bonded Plates Mark I,Overlay (armure),7,Defense Bonus +1,tier 7 lvl 18+ (rare from 13),"Defense Bonus +1, Improved Saving Throws +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Improved Saving Throws +1"
+u_a_over_08,Heavy Bonded Plates Mark I,Overlay (armure),8,"Malus de caractéristique +Penalty_-2, Defense Bonus +2",tier 8 lvl 20+ (rare from 15),"Defense Bonus +1, Damage Immunity (Physique/Energy) +5%, Attribute Bonus (Constitution) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Damage Immunity (Physique/Energy) +5%
+• Attribute Bonus (Constitution) +1"
+u_a_over_09,Heat Shielding Mark II,Overlay (armure),9,Damage Immunity +15%,tier 9 lvl 22+ (rare from 17),"Damage Immunity (Fire/Cold) +20%, Damage Resistance (Fire/Cold) +10/-, Improved Saving Throws +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Fire/Cold) +20%
+• Damage Resistance (Fire/Cold) +10/-
+• Improved Saving Throws +1"
+u_a_over_10,Armorply Plating Mark II,Overlay (armure),10,"Improved Saving Throws +1, Skill Bonus +4",tier 10 lvl 24+ (rare from 19),"Skill Bonus (Stealth) +4, Improved Saving Throws +2, Attribute Bonus (Dexterity) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Skill Bonus (Stealth) +4
+• Improved Saving Throws +2
+• Attribute Bonus (Dextérité) +1"
+u_a_over_11,Sound Dampening Mark II,Overlay (armure),11,Damage Immunity +15%,tier 11 lvl 26+ (rare from 21),"Damage Immunity (Sonic/Electrical) +20%, Damage Resistance (Sonic/Electrical) +10/-, Immunity (Peur)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Sonic/Electrical) +20%
+• Damage Resistance (Sonic/Electrical) +10/-
+• Immunity (Peur)"
+u_a_over_12,Ablative Plating Mark II,Overlay (armure),12,"Malus de caractéristique +Penalty_-1, Damage Immunity +25%, Defense Bonus +1",tier 12 lvl 28+ (rare from 23),"Defense Bonus +1, Damage Immunity (Energy) +20%, Improved Saving Throws +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Damage Immunity (Energy) +20%
+• Improved Saving Throws +1"
+u_a_over_13,Energy Shielding Mark II,Overlay (armure),13,Damage Immunity +15%,tier 13 lvl 30+ (rare from 25),"Damage Immunity (Energy) +20%, Regeneration +2",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Energy) +20%
+• Regeneration +2"
+u_a_over_14,Ballistic Shielding Mark II,Overlay (armure),14,"Damage Immunity +15%, Damage Immunity +15%, Damage Immunity +15%",tier 14 lvl 30+ (rare from 27),"Defense Bonus +1, Damage Immunity (Physique) +20%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Damage Immunity (Physique) +20%"
+u_a_over_15,Bonded Plates Mark II,Overlay (armure),15,Defense Bonus +2,tier 15 lvl 30+ (rare from 29),"Defense Bonus +1, Improved Saving Throws +2, Damage Immunity (Physique) +5%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Improved Saving Throws +2
+• Damage Immunity (Physique) +5%"
+u_a_over_16,Heavy Bonded Plates Mark II,Overlay (armure),16,"Malus de caractéristique +Penalty_-3, Defense Bonus +3",tier 16 lvl 30+ (rare from 30),"Defense Bonus +1, Damage Immunity (Physique/Energy) +10%, Attribute Bonus (Strength) +1, Attribute Bonus (Constitution) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Damage Immunity (Physique/Energy) +10%
+• Attribute Bonus (Force) +1
+• Attribute Bonus (Constitution) +1"
+u_a_over_17,Heat Shielding Mark III,Overlay (armure),17,"Damage Immunity +15%, Damage Resistance (Fire) +Resist_5/-",tier 17 lvl 30+ (rare from 30),"Damage Immunity (Fire/Cold) +25%, Damage Resistance (Fire/Cold) +10/-, Improved Saving Throws +2",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Fire/Cold) +25%
+• Damage Resistance (Fire/Cold) +10/-
+• Improved Saving Throws +2"
+u_a_over_18,Armorply Plating Mark III,Overlay (armure),18,"Attribute Bonus (Dexterity) +1, Improved Saving Throws +1, Skill Bonus +6",tier 18 lvl 30+ (rare from 30),"Skill Bonus (Stealth) +6, Improved Saving Throws +3, Attribute Bonus (Dexterity) +1, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Skill Bonus (Stealth) +6
+• Improved Saving Throws +3
+• Attribute Bonus (Dextérité) +1
+• Defense Bonus +1"
+u_a_over_19,Sound Dampening Mark III,Overlay (armure),19,"Damage Immunity +20%, Damage Resistance (Sonic) +Resist_5/-",tier 19 lvl 30+ (rare from 30),"Damage Immunity (Sonic/Electrical) +25%, Damage Resistance (Sonic/Electrical) +10/-, Immunity (Peur), Immunity (Paralysis)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Sonic/Electrical) +25%
+• Damage Resistance (Sonic/Electrical) +10/-
+• Immunity (Peur)
+• Immunity (Paralysis)"
+u_a_over_20,Ablative Plating Mark III,Overlay (armure),20,"Malus de caractéristique +Penalty_-1, Damage Immunity +30%, Defense Bonus +1",tier 20 lvl 30+ (rare from 30),"Defense Bonus +1, Damage Immunity (Energy) +25%, Improved Saving Throws +1, Immunity (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +1
+• Damage Immunity (Energy) +25%
+• Improved Saving Throws +1
+• Immunity (Drain)"
+u_a_over_21,Energy Shielding Mark III,Overlay (armure),21,Damage Immunity +20%,tier 21 lvl 30+ (rare from 30),"Damage Immunity (Energy) +25%, Damage Resistance (Energy) +5/-, Regeneration +2, Immunity (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Energy) +25%
+• Damage Resistance (Energy) +5/-
+• Regeneration +2
+• Immunity (Drain)"
+u_a_over_22,Ballistic Shielding Mark III,Overlay (armure),22,"Damage Immunity +20%, Damage Immunity +20%, Damage Immunity +20%",tier 22 lvl 30+ (rare from 30),"Defense Bonus +2, Damage Immunity (Physique) +30%, Immunity (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +2
+• Damage Immunity (Physique) +30%
+• Immunity (Critiques)"
+u_a_over_23,Bonded Plates Mark III,Overlay (armure),23,Defense Bonus +3,tier 23 lvl 30+ (rare from 30),"Defense Bonus +2, Improved Saving Throws +2, Damage Immunity (Physique) +10%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +2
+• Improved Saving Throws +2
+• Damage Immunity (Physique) +10%"
+u_a_over_24,Heavy Bonded Plates Mark III,Overlay (armure),24,"Attack Penalty +Penalty_-4, Damage Immunity +15%, Defense Bonus +4",tier 24 lvl 30+ (rare from 30),"Defense Bonus +2, Damage Immunity (Physique/Energy) +15%, Attribute Bonus (Strength) +2, Attribute Bonus (Constitution) +2, Immunity (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +2
+• Damage Immunity (Physique/Energy) +15%
+• Attribute Bonus (Force) +2
+• Attribute Bonus (Constitution) +2
+• Immunity (Critiques)"
+u_a_over_25,Heat Shielding Mark IV,Overlay (armure),25,"Damage Immunity +20%, Damage Resistance (Fire) +Resist_10/-",tier 25 lvl 30+ (rare from 30),"Damage Immunity (Fire/Cold) +30%, Damage Resistance (Fire/Cold) +15/-, Improved Saving Throws +3",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Fire/Cold) +30%
+• Damage Resistance (Fire/Cold) +15/-
+• Improved Saving Throws +3"
+u_a_over_26,Armorply Plating Mark IV,Overlay (armure),26,"Attribute Bonus (Dexterity) +2, Improved Saving Throws +1, Skill Bonus +8",tier 26 lvl 30+ (rare from 30),"Skill Bonus (Stealth) +8, Improved Saving Throws +4, Attribute Bonus (Dexterity) +2, Defense Bonus +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Skill Bonus (Stealth) +8
+• Improved Saving Throws +4
+• Attribute Bonus (Dextérité) +2
+• Defense Bonus +1"
+u_a_over_27,Sound Dampening Mark IV,Overlay (armure),27,"Damage Immunity +50%, Damage Resistance (Sonic) +Resist_5/-",tier 27 lvl 30+ (rare from 30),"Damage Immunity (Sonic/Electrical) +30%, Damage Resistance (Sonic/Electrical) +15/-, Immunity (Effets mentaux), Immunity (Paralysis)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Sonic/Electrical) +30%
+• Damage Resistance (Sonic/Electrical) +15/-
+• Immunity (Effets mentaux)
+• Immunity (Paralysis)"
+u_a_over_28,Ablative Plating Mark IV,Overlay (armure),28,"Malus de caractéristique +Penalty_-1, Damage Immunity +30%, Damage Resistance (Energy) +Resist_5/-, Defense Bonus +1",tier 28 lvl 30+ (rare from 30),"Defense Bonus +2, Damage Immunity (Energy) +30%, Improved Saving Throws +2, Immunity (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +2
+• Damage Immunity (Energy) +30%
+• Improved Saving Throws +2
+• Immunity (Drain)"
+u_a_over_29,Energy Shielding Mark IV,Overlay (armure),29,Damage Immunity +30%,tier 29 lvl 30+ (rare from 30),"Damage Immunity (Energy) +30%, Damage Resistance (Energy) +5/-, Regeneration +3, Immunity (Drain), Immunity (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Damage Immunity (Energy) +30%
+• Damage Resistance (Energy) +5/-
+• Regeneration +3
+• Immunity (Drain)
+• Immunity (Critiques)"
+u_a_over_30,Bonded Plates Mark IV,Overlay (armure),30,"Damage Resistance (Bludgeoning) +Resist_5/-, Damage Resistance (Piercing) +Resist_5/-, Damage Resistance (Slashing) +Resist_5/-, Defense Bonus +3",tier 30 lvl 30+ (rare from 30),"Defense Bonus +2, Improved Saving Throws +3, Damage Immunity (Physique) +15%, Immunity (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sur-couche (armure intermédiaire uniquement)
+
+Effects:
+• Defense Bonus +2
+• Improved Saving Throws +3
+• Damage Immunity (Physique) +15%
+• Immunity (Critiques)"
+ARMURES — SOUS-COUCHES,,,,,,,,
+u_a_unde_01,Environment Mark I,Underlay (armure),1,"Damage Immunity +15%, Damage Immunity +15%, Damage Resistance (Cold) +Resist_5/-, Damage Resistance (Fire) +Resist_5/-",tier 1 lvl 6+ (rare from 1),"Damage Immunity (Fire/Cold) +10%, Damage Resistance (Fire/Cold) +5/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Fire/Cold) +10%
+• Damage Resistance (Fire/Cold) +5/-"
+u_a_unde_02,Biorestorative Mark I,Underlay (armure),2,Regeneration +1,tier 2 lvl 8+ (rare from 3),Regeneration +1,,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Regeneration +1"
+u_a_unde_03,Armorweave Mark I,Underlay (armure),3,Damage Immunity +10%,tier 3 lvl 10+ (rare from 5),Damage Immunity (Energy) +5%,,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Energy) +5%"
+u_a_unde_04,Strengthening Mark I,Underlay (armure),4,Attribute Bonus (Strength) +1,tier 4 lvl 12+ (rare from 7),Attribute Bonus (Strength) +1,,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Attribute Bonus (Force) +1"
+u_a_unde_05,Flexible Mark I,Underlay (armure),5,Max DEX Bonus +1,tier 5 lvl 14+ (rare from 9),Max DEX Bonus +1,,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Max DEX Bonus +1"
+u_a_unde_06,Durasteel Mark I,Underlay (armure),6,"Defense Bonus contre Damage (Bludgeoning) +1, Defense Bonus contre Damage (Piercing) +1, Defense Bonus contre Damage (Slashing) +1",tier 6 lvl 16+ (rare from 11),"Défense vs Physique +1, Damage Immunity (Physique) +5%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Défense vs Physique +1
+• Damage Immunity (Physique) +5%"
+u_a_unde_07,Environment Mark II,Underlay (armure),7,"Damage Immunity +20%, Damage Immunity +20%, Damage Resistance (Cold) +Resist_5/-, Damage Resistance (Fire) +Resist_5/-",tier 7 lvl 18+ (rare from 13),"Damage Immunity (Fire/Cold) +15%, Damage Resistance (Fire/Cold) +5/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Fire/Cold) +15%
+• Damage Resistance (Fire/Cold) +5/-"
+u_a_unde_08,Biorestorative Mark II,Underlay (armure),8,Regeneration +2,tier 8 lvl 20+ (rare from 15),"Regeneration +1, Immunity: Poison",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Regeneration +1
+• Immunity: Poison"
+u_a_unde_09,Armorweave Mark II,Underlay (armure),9,"Damage Immunity +10%, Immunity (LvL/Ab_drain)",tier 9 lvl 22+ (rare from 17),"Damage Immunity (Energy) +10%, Immunity (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Energy) +10%
+• Immunity (Drain)"
+u_a_unde_10,Strengthening Mark II,Underlay (armure),10,"Attribute Bonus (Constitution) +1, Attribute Bonus (Strength) +1",tier 10 lvl 24+ (rare from 19),"Attribute Bonus (Strength) +1, Attribute Bonus (Constitution) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Attribute Bonus (Force) +1
+• Attribute Bonus (Constitution) +1"
+u_a_unde_11,Flexible Mark II,Underlay (armure),11,"Attribute Bonus (Dexterity) +1, Max DEX Bonus +1",tier 11 lvl 26+ (rare from 21),"Max DEX Bonus +1, Improved Saving Throws +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Max DEX Bonus +1
+• Improved Saving Throws +1"
+u_a_unde_12,Durasteel Mark II,Underlay (armure),12,"Malus de caractéristique +Penalty_-1, Defense Bonus contre Damage (Bludgeoning) +2, Defense Bonus contre Damage (Piercing) +2, Defense Bonus contre Damage (Slashing) +2",tier 12 lvl 28+ (rare from 23),"Défense vs Physique +2, Damage Immunity (Physique) +10%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Défense vs Physique +2
+• Damage Immunity (Physique) +10%"
+u_a_unde_13,Environment Mark III,Underlay (armure),13,"Damage Immunity +25%, Damage Immunity +25%, Damage Resistance (Cold) +Resist_5/-, Damage Resistance (Fire) +Resist_5/-",tier 13 lvl 30+ (rare from 25),"Damage Immunity (Fire/Cold) +20%, Damage Resistance (Fire/Cold) +10/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Fire/Cold) +20%
+• Damage Resistance (Fire/Cold) +10/-"
+u_a_unde_14,Biorestorative Mark III,Underlay (armure),14,Regeneration +3,tier 14 lvl 30+ (rare from 27),"Regeneration +2, Immunity: Poison",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Regeneration +2
+• Immunity: Poison"
+u_a_unde_15,Armorweave Mark III,Underlay (armure),15,"Damage Immunity +15%, Immunity (LvL/Ab_drain)",tier 15 lvl 30+ (rare from 29),"Damage Immunity (Energy) +15%, Immunity (Drain)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Energy) +15%
+• Immunity (Drain)"
+u_a_unde_16,Strengthening Mark III,Underlay (armure),16,"Attribute Bonus (Constitution) +1, Attribute Bonus (Strength) +2",tier 16 lvl 30+ (rare from 30),"Attribute Bonus (Strength) +2, Attribute Bonus (Constitution) +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Attribute Bonus (Force) +2
+• Attribute Bonus (Constitution) +1"
+u_a_unde_17,Flexible Mark III,Underlay (armure),17,"Attribute Bonus (Dexterity) +1, Max DEX Bonus +2",tier 17 lvl 30+ (rare from 30),"Max DEX Bonus +1, Attribute Bonus (Dexterity) +1, Improved Saving Throws +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Max DEX Bonus +1
+• Attribute Bonus (Dextérité) +1
+• Improved Saving Throws +1"
+u_a_unde_18,Durasteel Mark III,Underlay (armure),18,"Malus de caractéristique +Penalty_-2, Defense Bonus contre Damage (Bludgeoning) +3, Defense Bonus contre Damage (Piercing) +3, Defense Bonus contre Damage (Slashing) +3",tier 18 lvl 30+ (rare from 30),"Défense vs Physique +2, Damage Immunity (Physique) +15%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Défense vs Physique +2
+• Damage Immunity (Physique) +15%"
+u_a_unde_19,Environment Mark IV,Underlay (armure),19,"Damage Immunity +30%, Damage Immunity +30%, Damage Resistance (Cold) +Resist_5/-, Damage Resistance (Fire) +Resist_5/-",tier 19 lvl 30+ (rare from 30),"Damage Immunity (Fire/Cold) +25%, Damage Resistance (Fire/Cold) +10/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Fire/Cold) +25%
+• Damage Resistance (Fire/Cold) +10/-"
+u_a_unde_20,Biorestorative Mark IV,Underlay (armure),20,"Attribute Bonus (Constitution) +1, Regeneration +3",tier 20 lvl 30+ (rare from 30),"Regeneration +2, Attribute Bonus (Constitution) +1, Immunity: Poison",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Regeneration +2
+• Attribute Bonus (Constitution) +1
+• Immunity: Poison"
+u_a_unde_21,Armorweave Mark IV,Underlay (armure),21,"Damage Immunity +20%, Immunity (LvL/Ab_drain)",tier 21 lvl 30+ (rare from 30),"Damage Immunity (Energy) +20%, Immunity (Drain), Immunity (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Energy) +20%
+• Immunity (Drain)
+• Immunity (Critiques)"
+u_a_unde_22,Strengthening Mark IV,Underlay (armure),22,"Attribute Bonus (Constitution) +2, Attribute Bonus (Strength) +2",tier 22 lvl 30+ (rare from 30),"Attribute Bonus (Strength) +2, Attribute Bonus (Constitution) +2",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Attribute Bonus (Force) +2
+• Attribute Bonus (Constitution) +2"
+u_a_unde_23,Flexible Mark IV,Underlay (armure),23,"Attribute Bonus (Dexterity) +2, Max DEX Bonus +2",tier 23 lvl 30+ (rare from 30),"Max DEX Bonus +2, Attribute Bonus (Dexterity) +1, Improved Saving Throws +1",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Max DEX Bonus +2
+• Attribute Bonus (Dextérité) +1
+• Improved Saving Throws +1"
+u_a_unde_24,Durasteel Mark IV,Underlay (armure),24,"Malus de caractéristique +Penalty_-3, Defense Bonus contre Damage (Bludgeoning) +4, Defense Bonus contre Damage (Piercing) +4, Defense Bonus contre Damage (Slashing) +4",tier 24 lvl 30+ (rare from 30),"Défense vs Physique +3, Damage Resistance (Physique) +5/-, Damage Immunity (Physique) +15%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Défense vs Physique +3
+• Damage Resistance (Physique) +5/-
+• Damage Immunity (Physique) +15%"
+u_a_unde_25,Environment Mark V,Underlay (armure),25,"Damage Immunity +30%, Damage Immunity +30%, Damage Resistance (Cold) +Resist_10/-, Damage Resistance (Fire) +Resist_10/-",tier 25 lvl 30+ (rare from 30),"Damage Immunity (Fire/Cold) +30%, Damage Resistance (Fire/Cold) +15/-",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Fire/Cold) +30%
+• Damage Resistance (Fire/Cold) +15/-"
+u_a_unde_26,Biorestorative Mark V,Underlay (armure),26,"Attribute Bonus (Constitution) +3, Regeneration +3",tier 26 lvl 30+ (rare from 30),"Regeneration +3, Attribute Bonus (Constitution) +2, Immunity: Poison",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Regeneration +3
+• Attribute Bonus (Constitution) +2
+• Immunity: Poison"
+u_a_unde_27,Armorweave Mark V,Underlay (armure),27,"Damage Immunity +30%, Immunity (LvL/Ab_drain)",tier 27 lvl 30+ (rare from 30),"Damage Immunity (Energy) +25%, Immunity (Drain), Immunity (Critiques)",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (armure légère, intermédiaire ou lourde)
+
+Effects:
+• Damage Immunity (Energy) +25%
+• Immunity (Drain)
+• Immunity (Critiques)"
+u_a_unde_28,Strengthening Mark V,Underlay (armure),28,"Attribute Bonus (Constitution) +3, Attribute Bonus (Strength) +3",tier 28 lvl 30+ (rare from 30),"Attribute Bonus (Strength) +3, Attribute Bonus (Constitution) +3",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Attribute Bonus (Force) +3
+• Attribute Bonus (Constitution) +3"
+u_a_unde_29,Flexible Mark V,Underlay (armure),29,"Attribute Bonus (Dexterity) +3, Max DEX Bonus +3",tier 29 lvl 30+ (rare from 30),"Max DEX Bonus +2, Attribute Bonus (Dexterity) +2, Improved Saving Throws +2",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Max DEX Bonus +2
+• Attribute Bonus (Dextérité) +2
+• Improved Saving Throws +2"
+u_a_unde_30,Durasteel Mark V,Underlay (armure),30,"Malus de caractéristique +Penalty_-3, Defense Bonus contre Damage (Bludgeoning) +5, Defense Bonus contre Damage (Piercing) +5, Defense Bonus contre Damage (Slashing) +5",tier 30 lvl 30+ (rare from 30),"Défense vs Physique +3, Damage Resistance (Physique) +5/-, Damage Immunity (Physique) +20%",,"[Mod D20-Overhaul]
+
+Amélioration d'armure — Sous-couche (Heavy Armor ou intermédiaire)
+
+Effects:
+• Défense vs Physique +3
+• Damage Resistance (Physique) +5/-
+• Damage Immunity (Physique) +20%"

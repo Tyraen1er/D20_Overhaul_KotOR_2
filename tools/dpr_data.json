@@ -954,10 +954,15 @@
         ],
         "rank1": {},
         "rank2": {
-          "one_hand_all_melee": true
+          "one_hand_all_melee": true,
+          "one_hand_all_weapons": true,
+          "hc_1m_main_extra_attack": true,
+          "hc_1m_off_extra_attack": false,
+          "hc_1m_ac_penalty": 0,
+          "forbids_2h_double_postures": false
         },
         "rank3": {},
-        "_doc": "Rank II : tient toutes les armes 2M/D (mêlée et distance) à 1M → ouvre les modes single/dual."
+        "_doc": "Rank II (validé 25/11) : Adaptateur Gamorréen (établi portatif toujours accessible + bascule 2M/D <-> 1M en posture hors combat, 69 armes mêlée & distance). Option B : arme haute cadence 1M tenue en main principale = +1 attaque/round (EffectModifyAttacks, cap moteur +2, 0 CA) ; aucun bonus en main gauche. N'interdit plus les postures Arme Lourde (2M) et Haute cadence (D)."
       },
       "echani": {
         "label": "Techniques Echanis",

@@ -8,7 +8,7 @@ Coût en Points de Force : 15 / 25 / 35
 
 Le Jedi entoure son corps d'un champ protecteur de Force qui dévie les attaques et renforce sa résistance.
 
-L1 : +2 Défense et sauvegardes, 20 s L2 : +4 Défense et sauvegardes, 20 s (Niv. 6) L3 : +6 Défense et sauvegardes, 20 s (Niv. 12)"
+R1 : +2 Défense et sauvegardes, 20 s R2 : +4 Défense et sauvegardes, 20 s (Niv. 6) R3 : +6 Défense et sauvegardes, 20 s (Niv. 12)"
 "Force Barrier / Improved / Master (LS)
 Barrière de Force / améliorée / de maître",Armure moyenne,15 / 25 / 35,"L1 : RD 4 physique (tranchant, contondant, perforant), 30 s (Niv. 6)
 L2 : RD 8 physique, 45 s (Niv. 9)
@@ -28,7 +28,7 @@ Coût en Points de Force : 15 / 30 / 45
 
 La Force vivante irrigue le lanceur et ses compagnons, élevant simultanément leurs capacités physiques et mentales.
 
-+2 / +3 / +4 aux 6 caractéristiques (groupe) + immunité Poison (L2/L3)"
++2 / +3 / +4 aux 6 caractéristiques (groupe) + immunité Poison (R2/R3)"
 "Cure / Heal / Master Heal (LS)
 Guérison / Soins améliorés / Soins de maître",Armure moyenne,20 / 35 / 50,"L1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6)
 L2 : 15 PV + mods, neutralise le Poison (Niv. 12)
@@ -38,7 +38,7 @@ Coût en Points de Force : 20 / 35 / 50
 
 En canalisant le côté Lumineux, le Jedi accélère la régénération cellulaire et referme les blessures du groupe.
 
-L1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6) L2 : 15 PV + mods, neutralise le Poison (Niv. 12) L3 : 15 PV + mods + 2 × Niveau, neutralise Poison et Étourdissement (Niv. 18)"
+R1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6) R2 : 15 PV + mods, neutralise le Poison (Niv. 12) R3 : 15 PV + mods + 2 × Niveau, neutralise Poison et Étourdissement (Niv. 18)"
 "Revitalize / Improved / Master (LS)
 Revitalisation / améliorée / de maître",Armure moyenne,35 / 50 / 65,"L1 : ranime l'allié le plus proche avec 5 % de ses PV max (Niv. 9)
 L2 : ranime tous les alliés tombés, 5 % (Niv. 15)
@@ -50,7 +50,7 @@ Coût en Points de Force : 35 / 50 / 65
 
 Une vague d'énergie lumineuse rappelle les compagnons tombés au combat et leur rend une part de leur vitalité.
 
-10 % lvl 1 - le membre le plus proche 20 % lvl 2 - les deux membres les plus proches 30 % lvl 3 - tout le groupe"
+R1 : 10 % — le membre le plus proche R2 : 20 % — les deux membres les plus proches R3 : 30 % — tout le groupe"
 "Stun / Stasis / Stasis Field (LS)
 Étourdissement / Stase / Champ de stase",Armure interdite,15 / 30 / 50,"L1 : 1 cible étourdie 9 s (Vigueur réussie : ralentie), DD 5 + Niv + SAG + CHA
 L2 : 1 cible en stase 12 s (Vigueur : ralentie) (Niv. 9)
@@ -60,7 +60,7 @@ Coût en Points de Force : 15 / 30 / 50
 
 Le Jedi fige le système nerveux de ses adversaires dans un champ de stase qui entrave tout mouvement.
 
-L3 (zone 10 m) : durée max portée à 36 s (6 rounds) avec un jet de Vigueur chaque round à DD dégressif (-3 au DD/round) pour s'échapper (si jet initial réussi : ralenti 12 s)"
+R3 (zone 10 m) : durée max portée à 36 s (6 rounds) avec un jet de Vigueur chaque round à DD dégressif (-3 au DD/round) pour s'échapper (si jet initial réussi : ralenti 12 s)"
 "Stun Droid / Disable Droid / Destroy Droid (LS)
 Étourdissement / Désactivation / Destruction de droïde",Armure moyenne,10 / 20 / 35,"L1 : 1 droïde immobilisé 12 s, dégâts = Niveau (Vigueur : annule et ½ dégâts)
 L2 : tous les droïdes à 5 m de la cible, 12 s, dégâts = Niveau (Niv. 6)
@@ -68,9 +68,9 @@ L3 : tous les droïdes à 6 m, 1-6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)",
 Armure maximale : Armure intermédiaire
 Coût en Points de Force : 10 / 20 / 35
 
-Une impulsion de Force perturbe les circuits internes et surchage les processeurs des unités droïdes.
+Une impulsion de Force perturbe les circuits internes et surcharge les processeurs des unités droïdes.
 
-L1 : 1 droïde immobilisé 12 s, dégâts = Niveau (Vigueur : annule et ½ dégâts) L2 : tous les droïdes à 5 m de la cible, 12 s, dégâts = Niveau (Niv. 6) L3 : tous les droïdes à 6 m, 1-6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)"
+R1 : 1 droïde immobilisé 12 s, dégâts = Niveau (Vigueur : annule et ½ dégâts) R2 : tous les droïdes à 5 m de la cible, 12 s, dégâts = Niveau (Niv. 6) R3 : tous les droïdes à 6 m, 1d6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)"
 "Battle Precognition (LS)
 Prémonition du combat",Armure lourde,0,Unique : ajoute le modificateur de Sagesse à la Défense (passif),Remplacé par +10 % d'esquive en mêlée (récompense Echani),Quete,,"[Mod D20-Overhaul]
 Armure maximale : Armure lourde
@@ -86,7 +86,7 @@ Coût en Points de Force : 50
 
 Dans un instant de lucidité absolue au cœur de la Force, l'Exilé éveille simultanément ses protections lumineuses les plus élevées.
 
-Lancer instantané (coût 50 PF) ; lance les 3 améliorations au rang max possédé (+1 cran d'armure en ultime), avec Vitesse plafonnée à +1 atq/round si une armure est portée (+2 atq/round uniquement en Robe)"
+Lancer instantané (coût 50 PF) ; lance les 3 améliorations au rang max possédé, avec Vitesse plafonnée à +1 atq/round si une armure est portée (+2 atq/round uniquement en Bure)"
 "Inspire Followers I-VI (LS)
 Inspiration des disciples I-VI",Armure lourde,25 / 35 / 45,"L1 : +1 Attaque, Dégâts et Volonté (groupe, 45 s, hors droïdes)
 L2 : +2 (Maître Jedi niv. 5)
@@ -108,7 +108,7 @@ Coût en Points de Force : 0
 
 Une subtile inflexion de la Force oriente la pensée des esprits faibles lors des échanges.
 
-L1 : options de persuasion supplémentaires en dialogue (hors droïdes) L2 : Domination : version renforcée, résistance rare (Niv. 6)"
+R1 : options de persuasion supplémentaires en dialogue (hors droïdes) R2 : Domination : version renforcée, résistance rare (Niv. 6)"
 "Battle Meditation / Improved / Master (neutre)
 Méditation de combat / améliorée / de maître",Armure moyenne,25 / 35 / 50,"L1 : groupe +2 Attaque, Dégâts et Volonté + régén. PV accélérée, 20 s (Niv. 6)
 L2 : + ennemis à 10 m : malus (Volonté annule) (Niv. 12)
@@ -118,7 +118,7 @@ Coût en Points de Force : 25 / 35 / 50
 
 Art rare de coordination mentale qui galvanise la précision et le moral des alliés tout en sapant ceux de l'ennemi.
 
-L1 : groupe +mod. CHA (Atq, Dég, Vol + régén. PV, non plafonné) ; L2 : ajoute malus ennemis -mod. CHA à 10 m (Volonté annule) ; L3 : +2 au bonus et au malus, portée 15 m (Volonté annule)"
+R1 : groupe +mod. CHA (Atq, Dég, Vol + régén. PV, non plafonné) ; R2 : ajoute malus ennemis -mod. CHA à 10 m (Volonté annule) ; R3 : +2 au bonus et au malus, portée 15 m (Volonté annule)"
 "Burst of Speed / Knight Speed / Master Speed (neutre)
 Pointe de vitesse / Vitesse de chevalier / Vitesse de maître",Armure interdite,15 / 30 / 45,"L1 : vitesse de déplacement ×2, +2 Défense, 36 s
 L2 : +4 Défense et +1 attaque/round (Niv. 9)
@@ -128,7 +128,7 @@ Coût en Points de Force : 15 / 30 / 45
 
 La Force accélère les réflexes et la vélocité du Jedi bien au-delà des limites biologiques normales.
 
-L1 : vitesse de déplacement ×2, +2 Défense, 36 s L2 : +4 Défense et +1 attaque/round (Niv. 9) L3 : +4 Défense et +2 attaques/round (Niv. 15)"
+R1 : vitesse de déplacement ×2, +2 Défense, 36 s R2 : +4 Défense et +1 attaque/round (Niv. 9) R3 : +4 Défense et +2 attaques/round (Niv. 15)"
 "Energy Resistance / Improved / Master (neutre)
 Résistance à l'énergie / améliorée / de maître",Armure moyenne,15 / 25 / 35,"L1 : RD 6 (énergie, sonique, feu, froid, électricité), 120 s
 L2 : RD 12 (Niv. 9)
@@ -167,7 +167,7 @@ Coût en Points de Force : 15 / 25 / 40
 
 Une onde télékinétique projette les adversaires ou les soulève dans un tourbillon incontrôlable.
 
-L2 (Tourbillon, 1 cible) : Réflexes réussie inflige ½ dégâts immédiats (1 × Niv) au lieu de tout annuler ; L3 (Vague de Force) transformé en Tourbillon de zone 6 m, durée 12 s, 1/3 Niv toutes les 2 s (total 2 × Niv ; Réflexes réussie : ½ dégâts immédiats et non soulevé)"
+R2 (Tourbillon, 1 cible) : Réflexes réussie inflige ½ dégâts immédiats (1 × Niv) au lieu de tout annuler ; R3 (Vague de Force) transformé en Tourbillon de zone 6 m, durée 12 s, 1/3 Niv toutes les 2 s (total 2 × Niv ; Réflexes réussie : ½ dégâts immédiats et non soulevé)"
 "Force Resistance / Force Immunity (neutre)
 Résistance à la Force / Immunité contre la Force",Armure lourde,20 / 35,"L1 : l'attaquant lance 1d20 + son Niveau vs DD 10 + Niveau du défenseur, sinon sans effet, 60 s (Niv. 9)
 L2 : Immunité : DD 15 + Niveau (Niv. 15)",,Power selection,,"[Mod D20-Overhaul]
@@ -176,7 +176,7 @@ Coût en Points de Force : 20 / 35
 
 Un rempart mental et spirituel dresse une barrière contre les pouvoirs hostiles de la Force.
 
-L1 : l'attaquant lance 1d20 + son Niveau vs DD 10 + Niveau du défenseur, sinon sans effet, 60 s (Niv. 9) L2 : Immunité : DD 15 + Niveau (Niv. 15)"
+R1 : l'attaquant lance 1d20 + son Niveau vs DD 10 + Niveau du défenseur, sinon sans effet, 60 s (Niv. 9) R2 : Immunité : DD 15 + Niveau (Niv. 15)"
 "Force Suppression / Force Breach (neutre)
 Suppression de Force / Destruction de Force",Armure légère,20 / 35,"L1 : dissipe les effets de rang I-III sur la cible (Aura, Talent, Vitesse, Résistances…) (Niv. 9)
 L2 : Destruction de Force : dissipe tous les effets de soutien (Niv. 15)",,Power selection,,"[Mod D20-Overhaul]
@@ -185,7 +185,7 @@ Coût en Points de Force : 20 / 35
 
 Un souffle de rupture dissipe les protections et altérations de Force actives sur la cible.
 
-L1 : dissipe les effets de rang I-III sur la cible (Aura, Talent, Vitesse, Résistances…) (Niv. 9) L2 : Destruction de Force : dissipe tous les effets de soutien (Niv. 15)"
+R1 : dissipe les effets de rang I-III sur la cible (Aura, Talent, Vitesse, Résistances…) (Niv. 9) R2 : Destruction de Force : dissipe tous les effets de soutien (Niv. 15)"
 "Mind Trick / Confusion (neutre)
 Subterfuge / Confusion",Armure moyenne,15 / 35,"L1 : distrait une cible 30 s (passe inaperçu à côté d'elle)
 L2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)",,Power selection (évolution d'Affect Mind),,"[Mod D20-Overhaul]
@@ -194,7 +194,7 @@ Coût en Points de Force : 15 / 35
 
 Un brouillard mental trouble la perception de l'adversaire jusqu'à le retourner contre ses propres alliés.
 
-L1 : distrait une cible 30 s (passe inaperçu à côté d'elle) L2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)"
+R1 : distrait une cible 30 s (passe inaperçu à côté d'elle) R2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)"
 "Throw Lightsaber / Advanced (neutre)
 Lancer de sabre laser / amélioré",Armure lourde,15 / 30,"L1 : 1 cible à 5 m+, touche automatiquement, 1-6 dégâts / 2 Niveaux (sabre requis)
 L2 : jusqu'à 3 cibles en chaîne (5 m entre elles) (Niv. 9)","L1 : touche auto, 1d4/Niv + Renversement 1 tour (Vigueur annule) ; L2 : 3 cibles en chaîne, 1d4/Niv + ignore la RD",Power selection,,"[Mod D20-Overhaul]
@@ -203,7 +203,7 @@ Coût en Points de Force : 15 / 30
 
 Guidé par la Force, le sabre laser décrit un arc mortel à distance avant de revenir dans la main de son porteur.
 
-L1 : touche auto, 1d4/Niv + Renversement 1 tour (Vigueur annule) ; L2 : 3 cibles en chaîne, 1d4/Niv + ignore la RD"
+R1 : touche auto, 1d4/Niv + Renversement 1 tour (Vigueur annule) ; R2 : 3 cibles en chaîne, 1d4/Niv + ignore la RD"
 "Beast Trick / Beast Confusion (neutre)
 Subterfuge contre les bêtes / Confusion des bêtes",Armure lourde,10 / 20,"L1 : distrait une bête féroce 30 s
 L2 : la bête combat pour vous 30 s (prestige)",,Quête / Dialogue (Kreia sur Dxun),,"[Mod D20-Overhaul]
@@ -212,7 +212,7 @@ Coût en Points de Force : 10 / 20
 
 Le Jedi apaise ou détourne l'instinct primaire des créatures sauvages.
 
-L1 : distrait une bête féroce 30 s L2 : la bête combat pour vous 30 s (prestige)"
+R1 : distrait une bête féroce 30 s R2 : la bête combat pour vous 30 s (prestige)"
 "Breath Control (neutre)
 Contrôle de la respiration",Armure lourde,15,"Unique : immunité au Poison et aux gaz toxiques, 240 s",Passif : +4 aux jets de sauvegarde contre le Poison (permanent) ; Actif (15 PF) : immunité au Poison et aux gaz toxiques pendant 240 s,Quête / Dialogue (Kreia avant le Jekk'Jekk Tarr sur Nar Shaddaa),,"[Mod D20-Overhaul]
 Armure maximale : Armure lourde
@@ -268,7 +268,7 @@ Coût en Points de Force : 20 / 40 / 55
 
 Un siphon sombre aspire l'essence vitale des êtres vivants pour guérir les blessures du lanceur.
 
-L1 (Niv. 9, 1 cible) & L2 (Niv. 15, zone 10 m) : 1d3/Niv sans cap, 100 % des dégâts = soin (Vig ½) ; L3 « Festin de mort » (Niv. 18, zone 10 m) : 1d3/Niv, 100 % des dégâts = soin + excédent au-delà des PV max converti en PV temporaires (EffectTemporaryHitpoints) pendant 24 s (non cumulable, rafraîchi à chaque lancer ; Vig ½)"
+R1 (Niv. 9, 1 cible) & R2 (Niv. 15, zone 10 m) : 1d3/Niv sans cap, 100 % des dégâts = soin (Vig ½) ; R3 « Festin de mort » (Niv. 18, zone 10 m) : 1d3/Niv, 100 % des dégâts = soin + excédent au-delà des PV max converti en PV temporaires pendant 24 s (non cumulable, rafraîchi à chaque lancer ; Vig ½)"
 "Fear / Horror / Insanity (DS)
 Terreur / Horreur / Insanité",Armure légère,15 / 25 / 45,"L1 : 1 cible s'enfuit 6 s (Volonté annule)
 L2 : ennemis à 5 m de la cible tétanisés 12 s (Niv. 6)
@@ -278,7 +278,7 @@ Coût en Points de Force : 15 / 25 / 45
 
 Une terreur glaciale s'infiltre dans l'esprit des adversaires, rongeant leur psyché et troublant leurs attaques.
 
-Plus de perte d'action : DoT mental + gros malus d'Attaque — L1 (1 cible) -4 Atq, L2 (5 m) -6 Atq, L3 (10 m) -8 Atq + Niveau dégâts mentaux/round pendant 24 s (4 rounds) sur échec de Volonté ; limité à 6 s (1 round) si Volonté réussie"
+Plus de perte d'action : DoT mental + gros malus d'Attaque — R1 (1 cible) -4 Atq, R2 (5 m) -6 Atq, R3 (10 m) -8 Atq + Niveau dégâts mentaux/round pendant 24 s (4 rounds) sur échec de Volonté ; limité à 6 s (1 round) si Volonté réussie"
 "Force Scream / Improved / Master (DS)
 Cri de Force / amélioré / de maître",Armure légère,15 / 25 / 40,"L1 : 3d6 dégâts soniques + -2 caracs, cône 10 m, 30 s (Volonté : ½ et annule le malus, DD 10 + Niv + SAG + CHA)
 L2 : 5d6 + -4 caracs (Niv. 9)
@@ -288,7 +288,7 @@ Coût en Points de Force : 15 / 25 / 40
 
 Un hurlement chargé d'énergie sombre ébranle le corps et les défenses de tous les ennemis proches.
 
-L1 : 1d3/Niv (-2 caracs) ; L2 : 1d4/Niv (-4 caracs) ; L3 : 1d4/Niv sans cap (-6 caracs) ; Volonté : ½ dégâts et annule le malus"
+R1 : 1d3/Niv (-2 caracs) ; R2 : 1d4/Niv (-4 caracs) ; R3 : 1d4/Niv sans cap (-6 caracs) ; Volonté : ½ dégâts et annule le malus"
 "Shock / Force Lightning / Force Storm (DS)
 Choc / Foudre / Tempête de Force",Armure interdite,15 / 30 / 50,"L1 : 1 cible : 1-6 dégâts / Niveau (Volonté ½)
 L2 : Foudre : cône 16 m, 1-6/Niveau, max 10-60 (Niv. 9)
@@ -298,7 +298,7 @@ Coût en Points de Force : 15 / 30 / 50
 
 Des arcs d'éclairs du côté Obscur foudroient les ennemis avec une violence électrique croissante.
 
-1d6/Niv sans cap en L3 (L1 cible, L2 cône, L3 zone 10 m) ; suppression du drain de PF ennemi ; sauvegarde passée de Volonté à Réflexes (½ dégâts, Esquive Totale s'applique)"
+1d6/Niv sans cap en R3 (R1 cible, R2 cône, R3 zone 10 m) ; suppression du drain de PF ennemi ; sauvegarde passée de Volonté à Réflexes (½ dégâts, Esquive Totale s'applique)"
 "Slow / Affliction / Plague (DS)
 Lenteur / Affliction / Peste",Armure moyenne,15 / 25 / 35,"L1 : 1 action partielle/round, -2 Défense, Attaque, Dégâts et Réflexes, 30 s (Volonté annule)
 L2 : Affliction : -7 caracs (1 pt/3 s, 21 s) + ralenti (Vigueur DD 20) (Niv. 6)
@@ -308,7 +308,7 @@ Coût en Points de Force : 15 / 25 / 35
 
 Une corruption sournoise affaiblit progressivement le corps de la cible et se propage aux ennemis proches.
 
-Maladie (durée max 42 s, tick toutes les 6 s, se propage à 5 m à la mort de la cible) : ralenti (-50 % dépl.) + ½ Niv dégâts/tick + malus aux 6 caracs ; jet de Vigueur à chaque tick pour stopper la maladie — L1 : -3 caracs (DD normal) ; L2 : -6 caracs (DD +4) ; L3 : -9 caracs (DD +8)"
+Maladie (durée max 42 s, tick toutes les 6 s, se propage à 5 m à la mort de la cible) : ralenti (-50 % dépl.) + ½ Niv dégâts/tick + malus aux 6 caracs ; jet de Vigueur à chaque tick pour stopper la maladie — R1 : -3 caracs (DD normal) ; R2 : -6 caracs (DD +4) ; R3 : -9 caracs (DD +8)"
 "Wound / Choke / Kill (DS)
 Blessure / Etouffement / Mise à mort",Armure interdite,15 / 30 / 45,"L1 : dégâts 2/3 Niveau / 2 s pendant 6 s (Vigueur annule)
 L2 : Etouffement : cible étourdie 6 s + dégâts 2/3 Niveau / 2 s (Niv. 9)
@@ -318,7 +318,7 @@ Coût en Points de Force : 15 / 30 / 45
 
 La télékinésie sombre comprime les organes internes de la cible, lui infligeant une douleur paralysante.
 
-Suppression du 50 % PV max ; L1 : 1d4/Niv (Vig ½) ; L2 : 1d6/Niv + étourdissement 6 s ; L3 : 1d8/Niv sans cap + étourdissement 6 s (Vig ½ et annule étourdissement)"
+Suppression du 50 % PV max ; R1 : 1d4/Niv (Vig ½) ; R2 : 1d6/Niv + étourdissement 6 s ; R3 : 1d8/Niv sans cap + étourdissement 6 s (Vig ½ et annule étourdissement)"
 "Crush Opposition I-VI (DS)
 Annihilation de l'opposition I-VI",Armure lourde,25 / 35 / 45,"L1 : -1 Attaque et Volonté, ennemis zone 15 m, 45 s (Volonté annule)
 L2 : -2 (Seigneur Sith niv. 5)

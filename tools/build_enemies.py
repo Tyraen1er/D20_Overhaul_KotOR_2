@@ -82,16 +82,16 @@ def build_creature_hides(inst: Installation) -> int:
             make_prop(14, 8, 5, 10),  # Immunité Feu 30%
         ],
         "ov_hide_beast_m": [
-            make_prop(17, 0, 7, 1),   # RD Contondant 5/-
-            make_prop(17, 1, 7, 1),   # RD Perforant 5/-
-            make_prop(17, 2, 7, 1),   # RD Tranchant 5/-
+            make_prop(17, 0, 7, 9),   # RD Contondant 4/- (iprp_resistcost row 9)
+            make_prop(17, 1, 7, 9),   # RD Perforant 4/-
+            make_prop(17, 2, 7, 9),   # RD Tranchant 4/-
             make_prop(24, 5, 0, 0),   # Immunité Peur (subtype 5 = Fear)
         ],
         "ov_hide_beast_l": [
-            make_prop(17, 0, 7, 1),
-            make_prop(17, 1, 7, 1),
-            make_prop(17, 2, 7, 1),
-            make_prop(17, 12, 7, 1),  # RD Énergie 5/- (apex)
+            make_prop(17, 0, 7, 10),  # RD Contondant 6/- (iprp_resistcost row 10)
+            make_prop(17, 1, 7, 10),  # RD Perforant 6/-
+            make_prop(17, 2, 7, 10),  # RD Tranchant 6/-
+            make_prop(17, 12, 7, 10), # RD Énergie 6/- (apex)
             make_prop(24, 5, 0, 0),   # Immunité Peur (subtype 5 = Fear ; régén hors combat gérée en runtime)
         ],
         "ov_hide_assn": [

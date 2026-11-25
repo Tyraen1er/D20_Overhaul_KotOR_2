@@ -27,14 +27,21 @@ from pykotor.extract.installation import Installation, SearchLocation
 from pykotor.resource.formats.erf import read_erf
 from pykotor.resource.formats.gff import GFFList, read_gff, write_gff
 from pykotor.resource.formats.key import read_key
+from pykotor.resource.formats.tlk import read_tlk
+from pykotor.resource.formats.twoda import read_2da
 from pykotor.resource.generics.uti import UTIProperty, read_uti, write_uti
+from pykotor.resource.generics.utp import read_utp, write_utp
 from pykotor.resource.type import ResourceType
 import copy
 
 ROOT = Path(__file__).resolve().parent.parent
 GAME_PATH = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
 OVR_DIR = ROOT / "mods" / "overhaul" / "Override"
-MIRROR_MAP_FILE = ROOT / "mods" / "overhaul" / "baseitem_1m_map.json"
+OUT_DIR = ROOT / "mods" / "overhaul"
+MIRROR_MAP_FILE = OUT_DIR / "baseitem_1m_map.json"
+FEAT_IDS_FILE = OUT_DIR / "feat_ids.json"
+SPELL_IDS_FILE = OUT_DIR / "spell_ids.json"
+GAM_SWAP_MAP_FILE = OUT_DIR / "gamorrean_swap_map.json"
 
 GEAR_CSVS = [
     "Kotor 2 - rééquilibrage - Casques.csv",
@@ -64,8 +71,9 @@ ONHIT_FR_SUB = {
     "etourdissement": 1, "paralysie": 2, "horreur": 4, "lenteur": 5,
 }
 IMM_COST_MAP = {5: 1, 10: 2, 15: 8, 20: 9, 25: 3, 30: 10}
-# iprp_resistcost.2da : 1=5/-, 2=10/-, 3=15/- (paliers natifs moteur)
-RD_TO_COST = {2: 1, 3: 1, 5: 1, 10: 2, 12: 2, 15: 3}
+# iprp_resistcost.2da (étendu par build_overhaul.py : 1=5/-, 2=10/-, 3=15/-, 7=2/-, 8=3/-, 9=4/-, 10=6/-, 11=12/-)
+RD_TO_COST = {2: 7, 3: 8, 4: 9, 5: 1, 6: 10, 10: 2, 12: 11, 15: 3}
+COST_TO_RD = {1: 5, 2: 10, 3: 15, 4: 20, 5: 25, 6: 30, 7: 2, 8: 3, 9: 4, 10: 6, 11: 12}
 
 # Variantes 1M Gamoréen II : resref vanilla (du bon type d'arme !) -> (baseitem_label_2m, resref_1m)
 GAMORREAN_WEAPONS = [
@@ -447,13 +455,13 @@ def apply_mod_to_uti(uti, mod_txt: str) -> bool:
                     p.cost_value = cap_cv
                     changed = True
 
-        # 7. RD : "RD ... → RD +Y/-" ou "→ +Y/-"
+        # 7. RD : "RD ... → RD +Y/-" ou "→ +Y/-" (comparaison par valeur réelle amount, pas par index!)
         m_rd = re.search(r"rd .*?→ (?:rd )?\+(\d+)/-", seg_n)
         if m_rd:
             target_rd = int(m_rd.group(1))
             target_cv = RD_TO_COST.get(target_rd, 1)
             for p in uti.properties:
-                if p.property_name == 17 and p.cost_value > target_cv:
+                if p.property_name == 17 and COST_TO_RD.get(p.cost_value, 999) > target_rd:
                     p.cost_value = target_cv
                     changed = True
 
@@ -677,30 +685,362 @@ def build_armor_upgrades(inst: Installation) -> tuple[int, int]:
 
 
 def build_gamorrean_1m_utis(inst: Installation) -> int:
-    """Génère les variantes .uti 1M réservées à Gamoréen II (via baseitem_1m_map.json).
-    Nettoie les bonus gratuits hérités des templates uniques (ex. w_melee_09, w_melee_30, w_brifle_05/17)."""
+    """Génère un jumeau exact 1M (`ov1m_001.uti..ov1m_NNN.uti`, reqfeat0=MOD_GAMORREAN_2) pour
+    TOUTES les armes 2M / Doubles jouables du jeu (base, loot, uniques, reliques et doubles sabres laser).
+    Conserve 100 % des stats natives, noms (+ ' (1M)'), icônes, modèles 3D et UpgradeLevel, et produit
+    `mods/overhaul/gamorrean_swap_map.json` pour la bascule bidirectionnelle 2M <-> 1M en script."""
     if not MIRROR_MAP_FILE.exists():
         return 0
     mirror_map: dict[str, int] = json.loads(MIRROR_MAP_FILE.read_text(encoding="utf-8"))
-    count = 0
-    for src_rr, bi_label, dst_rr in GAMORREAN_WEAPONS:
-        if bi_label not in mirror_map:
+
+    # Nettoyer les anciennes variantes 1M (m_w_*_1m.uti ou ov1m_*.uti) pour éviter tout fichier fantôme
+    for old_f in list(OVR_DIR.glob("m_w_*_1m.uti")) + list(OVR_DIR.glob("ov1m_*.uti")):
+        old_f.unlink()
+
+    bi_table = read_2da(OVR_DIR / "baseitems.2da")
+    tlk = read_tlk(OUT_DIR / "dialog.tlk")
+    fids: dict[str, int] = json.loads(FEAT_IDS_FILE.read_text(encoding="utf-8")) if FEAT_IDS_FILE.exists() else {}
+    gam2_id = fids.get("MOD_GAMORREAN_2") or fids.get("MOD_GAMORRAN_2")
+    assert gam2_id is not None, "MOD_GAMORREAN_2 absent de feat_ids.json"
+
+    # Mapping baseitem source -> baseitem 1M (inclut Adv_Mining_Laser -> Adv_Mining_Laser_1M)
+    non_mirror_keys = {"Mining_Laser", "Adv_Mining_Laser", "Adv_Mining_Laser_1M", "Plasma_Torch"}
+    src_to_1m_bi: dict[str, int] = {lbl: idx for lbl, idx in mirror_map.items() if lbl not in non_mirror_keys}
+    if "Adv_Mining_Laser_1M" in mirror_map:
+        src_to_1m_bi["Adv_Mining_Laser"] = mirror_map["Adv_Mining_Laser_1M"]
+
+    bi_to_label = {
+        i: bi_table.get_row(i).get_string("label")
+        for i in range(len(bi_table))
+        if bi_table.get_row(i).get_string("label") in src_to_1m_bi
+    }
+
+    # Collecter tous les candidats UTI (Override fraîchement généré + chitin.key)
+    key = read_key(GAME_PATH / "chitin.key")
+    candidates: set[str] = {str(e.resref).lower() for e in key.key_entries if e.restype == ResourceType.UTI}
+    for f in OVR_DIR.glob("*.uti"):
+        candidates.add(f.stem.lower())
+
+    # Exclusions strictes pour Gamorréen II (uniquement debug / arme droïde Remote / No_Damage ;
+    # autorise les 3 armes 2M/D propres à 101per.mod : heavymininglaser, advancedminingla, guidonbeacon)
+    gam_excluded_resrefs = {
+        "killblaster",
+        "killstick",
+        "w_blaste_x20",
+        "w_brifle_25",
+    }
+
+    swap_map: list[dict[str, str]] = []
+    idx = 0
+    for rr in sorted(candidates):
+        if rr.startswith(WEAPON_ULVL_EXCLUDED_PREFIXES) or rr in gam_excluded_resrefs:
             continue
-        res = inst.resource(src_rr, ResourceType.UTI, order=[SearchLocation.CHITIN]) or inst.resource(src_rr, ResourceType.UTI)
-        if not res:
+        if rr.startswith(("m_w_", "ov1m_", "ov_")):
             continue
-        uti = read_uti(res.data)
-        uti.base_item = mirror_map[bi_label]
-        if bi_label in WEAPON_LABEL_ULVL:
-            uti.upgrade_level = WEAPON_LABEL_ULVL[bi_label]
-        # Garder des variantes 1M de base propres (aucun bonus de dégâts/Keen/Atq gratuit issu d'une relique)
-        strip_props = (11, 28, 38) if dst_rr == "m_w_wookwb_1m" else (11,)
-        uti.properties = [p for p in uti.properties if p.property_name not in strip_props]
+        ovr_path = OVR_DIR / f"{rr}.uti"
+        if ovr_path.exists():
+            uti = read_uti(ovr_path)
+        else:
+            res = inst.resource(rr, ResourceType.UTI, order=[SearchLocation.CHITIN])
+            if not res:
+                continue
+            try:
+                uti = read_uti(res.data)
+            except Exception:
+                continue
+
+        bi_lbl = bi_to_label.get(uti.base_item)
+        if not bi_lbl or bi_lbl not in src_to_1m_bi:
+            continue
+        if any(p.property_name == 31 for p in uti.properties):  # Exclure No_Damage
+            continue
+
+        orig_tag = (uti.tag or rr).strip().lower()
+        idx += 1
+        dst_rr = f"ov1m_{idx:03d}"
+
+        # Résoudre le nom VF d'origine pour ajouter " (1M)" lisiblement dans l'inventaire
+        orig_name = uti.name.get(Language.FRENCH, Gender.MALE) or uti.name.get(Language.ENGLISH, Gender.MALE)
+        if not orig_name and uti.name.stringref is not None and 0 <= uti.name.stringref < len(tlk):
+            orig_name = tlk.get(uti.name.stringref).text
+        if orig_name:
+            ls_nm = LocalizedString.from_invalid()
+            ls_nm.set_data(Language.FRENCH, Gender.MALE, f"{orig_name} (1M)")
+            ls_nm.set_data(Language.ENGLISH, Gender.MALE, f"{orig_name} (1M)")
+            uti.name = ls_nm
+
+        uti.base_item = src_to_1m_bi[bi_lbl]
+        # Double verrou : baseitems.2da reqfeat0=MOD_GAMORREAN_2 + Use_Limitation_Feat (prop 57) visible en fiche objet !
+        if not any(p.property_name == 57 and p.subtype == gam2_id for p in uti.properties):
+            uti.properties.append(make_prop(57, gam2_id, 0, 0))
+
+        # Option B (Gamorréen II) : indiquer sur toutes les armes haute cadence (1M) que l'attaque bonus
+        # n'est valide qu'en main principale (aucun bonus d'attaque en main gauche, sans malus de CA)
+        if bi_lbl in {
+            "Quarter_Staff", "Double_Bladed_Sword", "Vibro_Double_Blade",
+            "Double_Bladed_Lightsaber", "Wookie_Warblade",
+            "Repeating_Blaster", "Heavy_Repeating_Blaster",
+        }:
+            orig_desc = uti.description.get(Language.FRENCH, Gender.MALE) or uti.description.get(Language.ENGLISH, Gender.MALE)
+            if not orig_desc and uti.description.stringref is not None and 0 <= uti.description.stringref < len(tlk):
+                orig_desc = tlk.get(uti.description.stringref).text
+            hc_note = (
+                "[Mod D20-Overhaul — Arme haute cadence (1M)]\n"
+                "En main principale (main droite), cette arme conserve +1 attaque supplémentaire par round "
+                "(plafond moteur +2 avec Vitesse de Force ou Tir d'Assaut III, sans malus de CA). "
+                "Équipée en main gauche, elle n'octroie pas d'attaque supplémentaire."
+            )
+            full_desc = f"{orig_desc.rstrip()}\n\n{hc_note}" if orig_desc and orig_desc.strip() else hc_note
+            set_uti_desc(uti, full_desc)
+
         uti.resref.set_data(dst_rr)
         uti.tag = dst_rr
         write_uti(uti, OVR_DIR / f"{dst_rr}.uti")
-        count += 1
-    return count
+
+        swap_map.append({
+            "tag_2m": orig_tag,
+            "res_2m": rr,
+            "tag_1m": dst_rr,
+            "res_1m": dst_rr,
+            "baseitem_label": bi_lbl,
+        })
+
+    GAM_SWAP_MAP_FILE.write_text(json.dumps(swap_map, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return len(swap_map)
+
+
+def build_gamorrean_adapter_item_and_dlg(inst: Installation) -> tuple[int, int, int]:
+    """Génère :
+      1. `ov_gam_adapt.uti` : objet réutilisable (Adaptateur Gamorréen, BaseItem=54 Combat_Shots utilisable
+         même à 100% PV depuis le HUD Stimulants ET l'Inventaire, auto-réapprovisionné dans `ov_gam_use`).
+      2. `ov_gam_term.utp` : terminal invisible temporaire (cloné de `plc_invis`) permettant d'ouvrir
+         proprement le dialogue COMPUTER (le moteur interdit l'auto-dialogue créature -> soi-même).
+      3. `ov_gam_conv.dlg` : menu terminal (ConversationType=1) permettant de :
+         - Ouvrir l'écran d'amélioration (ShowUpgradeScreen) pour retirer ses pièces avant conversion
+         - Convertir l'arme en main droite (2M <-> 1M)
+         - Rouvrir immédiatement l'écran d'amélioration après conversion pour remonter ses pièces."""
+    sids: dict[str, int] = json.loads(SPELL_IDS_FILE.read_text(encoding="utf-8")) if SPELL_IDS_FILE.exists() else {}
+    gam_spell_id = sids.get("ITEM_ABILITY_GAMORREAN_ADAPT")
+    assert gam_spell_id is not None, "ITEM_ABILITY_GAMORREAN_ADAPT absent de spell_ids.json"
+
+    # 1. Objet utilitaire réutilisable ov_gam_adapt.uti (cloné de g_i_cmbtshot001, bi=54 Combat_Shots)
+    res_it = inst.resource("g_i_cmbtshot001", ResourceType.UTI, order=[SearchLocation.CHITIN])
+    assert res_it, "g_i_cmbtshot001 introuvable"
+    uti = read_uti(res_it.data)
+    uti.resref.set_data("ov_gam_adapt")
+    uti.tag = "ov_gam_adapt"
+    uti.cost = 0
+    uti.additional_cost = 0
+    uti.stack_size = 1
+    uti.charges = 1
+    uti.plot = False  # plot=False indispensable pour apparaitre en barre d'action HUD & onglet Consommables !
+    uti.properties = [make_prop(10, gam_spell_id, 3, 13)]  # CastSpell, Unlimited_Use (cost_value=13, evite la perte d'item)
+    ls_name = LocalizedString.from_invalid()
+    ls_name.set_data(Language.FRENCH, Gender.MALE, "Adaptateur Gamorréen (2M / 1M)")
+    ls_name.set_data(Language.ENGLISH, Gender.MALE, "Gamorrean Adapter (2H / 1H)")
+    uti.name = ls_name
+    set_uti_desc(
+        uti,
+        "[Mod D20-Overhaul]\n"
+        "Le goût insatiable des Gamorréens pour la guerre les a poussés à bricoler cet établi de campagne "
+        "sommaire mais indestructible, pensé pour ajuster, démonter et rééquilibrer n'importe quel armement "
+        "lourd sur le terrain, en tout lieu.\n\n"
+        "---\n"
+        "Mode d'emploi (Raffinement Gamorréen II) :\n"
+        "Objet réutilisable à l'infini, utilisable en posture hors combat (depuis le slot Stimulants du HUD "
+        "ou l'Inventaire) :\n"
+        "- Ouvre l'établi d'amélioration portatif à tout moment, quelle que soit l'arme équipée ;\n"
+        "- Convertit l'arme à deux mains (2M) ou haute cadence / double (D) tenue en main droite (mêlée et "
+        "distance) vers sa version à une main (1M), ou inversement.\n\n"
+        "ATTENTION : retirez toujours les améliorations de votre arme à l'établi AVANT de la convertir "
+        "(sinon elles seront définitivement perdues), puis remontez-les après conversion. "
+        "Les armes converties en 1M requièrent le don Raffinement Gamorréen II pour être équipées.",
+    )
+    write_uti(uti, OVR_DIR / "ov_gam_adapt.uti")
+
+    # 2. Placeable invisible temporaire ov_gam_term.utp (cloné de plc_invis) pour supporter le dialogue COMPUTER
+    res_utp = inst.resource("plc_invis", ResourceType.UTP, order=[SearchLocation.CHITIN])
+    assert res_utp, "plc_invis.utp introuvable"
+    utp = read_utp(res_utp.data)
+    utp.resref.set_data("ov_gam_term")
+    utp.tag = "ov_gam_term"
+    utp.conversation.set_data("ov_gam_conv")
+    utp.useable = False
+    utp.static = False
+    utp.plot = True
+    utp.min1_hp = True
+    utp.has_inventory = False
+    utp.not_blastable = True
+    ls_term = LocalizedString.from_invalid()
+    ls_term.set_data(Language.FRENCH, Gender.MALE, "Adaptateur Gamorréen")
+    ls_term.set_data(Language.ENGLISH, Gender.MALE, "Gamorrean Adapter")
+    utp.name = ls_term
+    write_utp(utp, OVR_DIR / "ov_gam_term.utp")
+
+    # 2. Dialogue terminal ov_gam_conv.dlg (cloné du schéma exact de 000_medstation.dlg)
+    res_dlg = inst.resource("000_medstation", ResourceType.DLG, order=[SearchLocation.CHITIN])
+    assert res_dlg, "000_medstation.dlg introuvable"
+    gff = read_gff(res_dlg.data)
+
+    orig_entries = gff.root.get_list("EntryList")
+    orig_replies = gff.root.get_list("ReplyList")
+    orig_starters = gff.root.get_list("StartingList")
+    tmpl_entry = copy.deepcopy(orig_entries.at(0))
+    tmpl_reply = copy.deepcopy(orig_replies.at(0))
+    tmpl_starter = copy.deepcopy(orig_starters.at(0))
+    tmpl_rep_link = next(
+        copy.deepcopy(orig_entries.at(i).get_list("RepliesList").at(0))
+        for i in range(len(orig_entries))
+        if len(orig_entries.at(i).get_list("RepliesList")) > 0
+    )
+    tmpl_ent_link = next(
+        copy.deepcopy(orig_replies.at(i).get_list("EntriesList").at(0))
+        for i in range(len(orig_replies))
+        if len(orig_replies.at(i).get_list("EntriesList")) > 0
+    )
+
+    def _loc(txt: str) -> LocalizedString:
+        ls = LocalizedString.from_invalid()
+        ls.set_data(Language.FRENCH, Gender.MALE, txt)
+        ls.set_data(Language.ENGLISH, Gender.MALE, txt)
+        return ls
+
+    def _link(tmpl, target_idx: int, pos_idx: int, active: str = ""):
+        lk = copy.deepcopy(tmpl)
+        lk.struct_id = pos_idx
+        lk.set_uint32("Index", target_idx)
+        lk.set_resref("Active", ResRef(active))
+        if lk.exists("Active2"):
+            lk.set_resref("Active2", ResRef(""))
+        if lk.exists("Param1"):
+            lk.set_int32("Param1", 0)
+        if lk.exists("Not"):
+            lk.set_uint8("Not", 0)
+        if lk.exists("Not2"):
+            lk.set_uint8("Not2", 0)
+        return lk
+
+    new_entries = GFFList()
+    new_replies = GFFList()
+    new_starters = GFFList()
+
+    def _add_entry(txt: str, reply_indices: list[int]) -> int:
+        ent = copy.deepcopy(tmpl_entry)
+        idx = len(new_entries)
+        ent.struct_id = idx
+        ent.set_string("Speaker", "")
+        ent.set_locstring("Text", _loc(txt))
+        ent.set_resref("VO_ResRef", ResRef(""))
+        ent.set_resref("Sound", ResRef(""))
+        if ent.exists("SoundExists"):
+            ent.set_uint8("SoundExists", 0)
+        if ent.exists("Delay"):
+            ent.set_uint32("Delay", 4294967295)
+        if ent.exists("NodeID"):
+            ent.set_int32("NodeID", idx + 1)
+        ent.set_resref("Script", ResRef(""))
+        ent.set_resref("Script2", ResRef(""))
+        ent.set_int32("ActionParam1", 0)
+        ent.set_int32("ActionParam2", 0)
+        if ent.exists("ActionParamStrA"):
+            ent.set_string("ActionParamStrA", "")
+        if ent.exists("ActionParamStrB"):
+            ent.set_string("ActionParamStrB", "")
+        rl = GFFList()
+        for pos_i, ri in enumerate(reply_indices):
+            rl._structs.append(_link(tmpl_rep_link, ri, pos_i))
+        ent.set_list("RepliesList", rl)
+        new_entries._structs.append(ent)
+        return idx
+
+    def _add_reply(txt: str, script: str = "", next_entries: list[int] | None = None) -> int:
+        rep = copy.deepcopy(tmpl_reply)
+        idx = len(new_replies)
+        rep.struct_id = idx
+        rep.set_locstring("Text", _loc(txt))
+        rep.set_resref("VO_ResRef", ResRef(""))
+        rep.set_resref("Sound", ResRef(""))
+        rep.set_resref("Script", ResRef(script))
+        rep.set_resref("Script2", ResRef(""))
+        rep.set_int32("ActionParam1", 0)
+        rep.set_int32("ActionParam2", 0)
+        if rep.exists("ActionParamStrA"):
+            rep.set_string("ActionParamStrA", "")
+        if rep.exists("ActionParamStrB"):
+            rep.set_string("ActionParamStrB", "")
+        el = GFFList()
+        for pos_i, ei in enumerate(next_entries or []):
+            el._structs.append(_link(tmpl_ent_link, ei, pos_i))
+        rep.set_list("EntriesList", el)
+        new_replies._structs.append(rep)
+        return idx
+
+    # Replies : établi toujours disponible (quelle que soit l'arme équipée) + conversion si arme 2M/D/1M en main droite
+    r_upgr = _add_reply(
+        "1. Ouvrir l'établi d'amélioration (retirer ou remonter mes pièces)",
+        script="ov_gam_a_upgr",
+    )
+    r_swap = _add_reply(
+        "2. Convertir l'arme équipée en main droite (2M/D - 1M)",
+        script="ov_gam_a_swap",
+    )
+    r_cancel = _add_reply("3. Annuler")
+    r_upgr_only = _add_reply(
+        "1. Ouvrir l'établi d'amélioration",
+        script="ov_gam_a_upgr",
+    )
+    r_close_2 = _add_reply("2. Fermer")
+    r_close = _add_reply("Fermer")
+
+    # Entries :
+    #   0: Menu complet (établi + conversion 2M/D - 1M) avec avertissement explicite sur les améliorations
+    #   1: Menu établi seul (établi portatif toujours accessible, même sans arme 2M/D équipée en main droite)
+    #   2: Fallback (pas le don Raffinement Gamorréen II ou en combat)
+    e_main = _add_entry(
+        "[ÉTABLI PORTATIF GAMORRÉEN — ADAPTATION 2M/D ET 1M]\n\n"
+        "Permet d'ouvrir l'établi d'amélioration en tout lieu, ou de convertir votre arme à deux mains (2M) "
+        "ou haute cadence / double (D) tenue en main droite (mêlée et distance) vers son équivalent à une main (1M), "
+        "et inversement.\n\n"
+        "ATTENTION — AMÉLIORATIONS :\n"
+        "Les améliorations montées sur l'arme ne peuvent pas être transférées automatiquement lors de la conversion.\n"
+        "• Utilisez d'abord « Ouvrir l'établi d'amélioration » pour RETIRER toutes les pièces de votre arme "
+        "(sinon elles seront DÉFINITIVEMENT PERDUES) ;\n"
+        "• Utilisez ensuite « Convertir l'arme équipée » ;\n"
+        "• Rouvrez enfin l'établi pour remonter vos pièces sur l'arme convertie.",
+        [r_upgr, r_swap, r_cancel],
+    )
+    e_wb_only = _add_entry(
+        "[ÉTABLI PORTATIF GAMORRÉEN]\n\n"
+        "L'établi d'amélioration portatif est prêt à être utilisé.\n\n"
+        "(Conversion 2M/D - 1M indisponible : aucune arme à deux mains, double, haute cadence ou déjà adaptée en 1M "
+        "n'est actuellement équipée en main droite.)",
+        [r_upgr_only, r_close_2],
+    )
+    e_fallback = _add_entry(
+        "[ÉTABLI PORTATIF GAMORRÉEN]\n\n"
+        "Utilisation impossible pour le moment.\n"
+        "Vérifiez que :\n"
+        "- Ce personnage possède le don Raffinement Gamorréen II ;\n"
+        "- Vous êtes en posture hors combat.",
+        [r_close],
+    )
+
+    # StartingList : Entry 0 si ov_gam_c_can == TRUE, Entry 1 si ov_gam_c_wb == TRUE, sinon Entry 2
+    new_starters._structs.append(_link(tmpl_starter, e_main, 0, active="ov_gam_c_can"))
+    new_starters._structs.append(_link(tmpl_starter, e_wb_only, 1, active="ov_gam_c_wb"))
+    new_starters._structs.append(_link(tmpl_starter, e_fallback, 2, active=""))
+
+    gff.root.set_int32("ConversationType", 1)  # CONVERSATION_TYPE_COMPUTER
+    gff.root.set_uint8("UnequipItems", 0)
+    gff.root.set_uint8("UnequipHItem", 0)
+    gff.root.set_resref("EndConversation", ResRef("ov_gam_end"))
+    gff.root.set_resref("EndConverAbort", ResRef("ov_gam_end"))
+    gff.root.set_string("VO_ID", "")
+    gff.root.set_list("EntryList", new_entries)
+    gff.root.set_list("ReplyList", new_replies)
+    gff.root.set_list("StartingList", new_starters)
+    write_gff(gff, OVR_DIR / "ov_gam_conv.dlg")
+    return 1, 1, 1
 
 
 def _parse_upgrade_props(mod_txt: str, old_props: list[UTIProperty]) -> list[UTIProperty]:
@@ -971,7 +1311,9 @@ def build_plasma_torch_vanilla() -> int:
 
 def build_mining_lasers_k2cp(inst: Installation) -> int:
     """Aligne mininglaser.uti (1d7) et advancedminingla.uti (1d11) sur les baseitems dédiés
-    Mining_Laser (104) et Adv_Mining_Laser (105), 100 % compatibles avec K2CP v1.6.3."""
+    Mining_Laser (104) et Adv_Mining_Laser (105), 100 % compatibles avec K2CP v1.6.3,
+    et extrait aussi heavymininglaser.uti + guidonbeacon.uti depuis 101per.mod dans Override/
+    pour que leur bascule 2M/D <-> 1M fonctionne dans tous les modules du jeu."""
     if not MIRROR_MAP_FILE.exists():
         return 0
     mirror_map: dict[str, int] = json.loads(MIRROR_MAP_FILE.read_text(encoding="utf-8"))
@@ -990,6 +1332,17 @@ def build_mining_lasers_k2cp(inst: Installation) -> int:
         uti.base_item = bi_idx
         write_uti(uti, OVR_DIR / f"{rr}.uti")
         count += 1
+
+    # Extraire les 2 autres armes 2M/D propres à 101per.mod (Laser de forage lourd & Balise de guidage)
+    mod_path = GAME_PATH / "Modules" / "101per.mod"
+    if mod_path.exists():
+        erf = read_erf(mod_path)
+        for res in erf:
+            if res.restype == ResourceType.UTI and str(res.resref).lower() in ("heavymininglaser", "guidonbeacon"):
+                rr = str(res.resref).lower()
+                uti = read_uti(res.data)
+                write_uti(uti, OVR_DIR / f"{rr}.uti")
+                count += 1
     return count
 
 
@@ -1195,8 +1548,6 @@ def main() -> None:
         f"[OK] Améliorations d'armures (Améliorations.csv) : {n_unde} sous-couches (ulvl 1/2) "
         f"+ {n_over} sur-couches exclusives Intermédiaire (ulvl 6) + 2 legacy"
     )
-    n_gam = build_gamorrean_1m_utis(inst)
-    print(f"[OK] Variantes 1M Gamoréen II : {n_gam} fichiers .uti (m_w_*_1m.uti)")
     n_wup = build_weapon_upgrades(inst)
     print(f"[OK] Améliorations d'armes & sabres (Améliorations.csv + ulvl 1/2/3) : {n_wup} fichiers .uti générés")
     n_wslots, w_by_lvl, n_b2 = build_weapon_slots_partition(inst)
@@ -1207,16 +1558,20 @@ def main() -> None:
     )
     n_basew = build_craftable_base_weapons(inst)
     print(f"[OK] Armes de base craftables ajoutées : {n_basew} fichiers .uti (w_melee_ww_base, w_brifle_hr_base)")
+    n_ml = build_mining_lasers_k2cp(inst)
+    print(f"[OK] Lasers miniers & Péragus 2M/D : {n_ml} fichiers .uti (mininglaser, advancedminingla, heavymininglaser, guidonbeacon)")
+    n_gam = build_gamorrean_1m_utis(inst)
+    print(f"[OK] Variantes 1M Gamorréen II (toutes armes 2M/Doubles) : {n_gam} fichiers .uti (ov1m_*.uti)")
+    n_gam_it, n_gam_dlg, n_gam_utp = build_gamorrean_adapter_item_and_dlg(inst)
+    print(f"[OK] Adaptateur Gamorréen II : {n_gam_it} .uti (ov_gam_adapt.uti) + {n_gam_utp} .utp (ov_gam_term.utp) + {n_gam_dlg} .dlg (ov_gam_conv.dlg)")
     n_crys = build_personal_crystals(inst)
     print(f"[OK] Cristal personnel de l'Exilé (3 paliers × 30 paires) : {n_crys} fichiers .uti (ov_crys_*.uti)")
     n_dlg = build_kreia_crystal_dlg(inst)
     print(f"[OK] Dialogue Cristal personnel Kreia (auto / choix manuel 6×5) : {n_dlg} fichier .dlg (kreia.dlg)")
     n_pt = build_plasma_torch_vanilla()
     print(f"[OK] Torche à plasma vanilla (1d1 + 1d6 Feu) : {n_pt} fichier .uti (plasmatorch.uti)")
-    n_ml = build_mining_lasers_k2cp(inst)
-    print(f"[OK] Lasers miniers K2CP (1d7 / 1d11) : {n_ml} fichiers .uti (mininglaser.uti, advancedminingla.uti)")
-    total = n_gear + n_unde + n_over + 2 + n_gam + n_wup + n_wslots + n_basew + n_crys + n_pt + n_ml
-    print(f"=== Jalon 2 BUILD OK ({total} .uti + {n_dlg} .dlg générés) ===")
+    total = n_gear + n_unde + n_over + 2 + n_gam + n_gam_it + n_wup + n_wslots + n_basew + n_crys + n_pt + n_ml
+    print(f"=== Jalon 2 BUILD OK ({total} .uti + {n_dlg + n_gam_dlg} .dlg générés) ===")
 
 
 if __name__ == "__main__":

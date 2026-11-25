@@ -104,7 +104,7 @@
 
 | Famille | Résistance signature (actée 22/11) | Faiblesse assumée | Réponse attendue du joueur | Levier technique |
 | :--- | :--- | :--- | :--- | :--- |
-| **Sith / Jedi obscurs** | **Robes réelles** équipées + Résistance à la Force (`15+Niv` Chevaliers / `20+Niv` Maîtres) + bonus Volonté (`+2/+4/+6` Apprenti/Chevalier/Maître) + ***Esquive Totale*** (20+) + **Drain de Force prioritaire si `PF < 30 %`** *(soins : statu quo vanilla — Maîtres Jedi via Guérison, Sith via Drain de vie / Champ de mort)* | RD nulle (en robe), Vigueur moyenne | Dégâts bruts / sabre, *Peste* (Vig), *Brèche de Force* / *Pouvoir Pénétrant* | Équipement UTC + peau + dons auto + `k_inc_generic` (`GetCurrentForcePoints`) |
+| **Sith / Jedi obscurs** | **Robes réelles** équipées + Résistance à la Force (`15+Niv` Chevaliers / `20+Niv` Maîtres) + bonus Volonté (`+2/+4/+6` Apprenti/Chevalier/Maître) + ***Esquive Totale*** (20+) + **Absorption de Force prioritaire si `PF < 30 %`** *(soins : statu quo vanilla — Maîtres Jedi via Guérison, Sith via Drain de vie / Champ de mort)* | RD nulle (en robe), Vigueur moyenne | Dégâts bruts / sabre, *Peste* (Vig), *Destruction de Force* / *Pouvoir Pénétrant* | Équipement UTC + peau + dons auto + `k_inc_generic` (`GetCurrentForcePoints`) |
 | **Soldats / Mercenaires** | **Armures légères/moyennes** réellement portées (CA + `RD 2/-` Moyenne) + **boucliers d'énergie** (`50/100 PV`) sur ~1 élite sur 3 (Mid+, lootables) + grenades existantes | Volonté basse, boucliers traversés par la mêlée | Mêlée/sabre, *Disrupteur*, *Insanité* / *Tourbillon* | Équipement UTC (armures + items boucliers, activés auto par l'IA) |
 | **Mandaloriens** | **Armure lourde** (`RD 4/-` native, 6/8 templates) + **résistance Laser (Énergie) & Feu `25 %` (Mid) / `35 %` (Late)** + boucliers élites + stim `OnSpawn` (`+2 FOR/CON`) | **Aucune résistance à la Force**, Volonté basse, vulnérables au physique/ion/sonique | Force (*Tempête*, *Insanité*, *Stase*), armes physiques/vibro/bris d'armure (*Traditionnelle* `-6 CA`) | Peau (`Résist %` Énergie/Feu) + équipement UTC + `OnSpawn` stim |
 | **Bêtes** | **RD physique/énergie légère** (`2/4/6/-` E/M/L sur grosses bêtes) + haute Vigueur + immunité *Peur* (apex) + régén lente hors combat | Volonté très basse (`-3` à `+2`), aucune résistance Énergie/Électrique/Feu | *Éclairs*, sabres, blasters, grenades incendiaires, contrôles mentaux | Peaux `g_i_crhide*` |
@@ -120,11 +120,11 @@
 - `damagemult` des boss réduit — acté (§3).
 - ***Esquive Totale*** pour les Jedi/Sith ennemis 20+ — actée (§7) : premier profil « anti-AoE » déjà en place.
 - Établi plafonné `+2/+5/+10` — acté (§3) : les résistances ci-dessus se calculent sur des dégâts joueurs déjà assainis.
-- Nerf des pouvoirs de Force en cours (chantier ① en suspens) : les résistances Force des Sith doivent être calibrées *après* ce chantier.
+- Rééquilibrage des pouvoirs de Force acté (21/11, `Spé Pouvoirs.csv`) : les résistances Force des Sith sont calibrées sur ces valeurs définitives.
 
 ---
 
-## 6. Décisions à trancher
+## 6. Décisions tranchées (archive des options D1–D8 — actées le 22/11, synthèse en §4)
 
 ### D1 — Échelle de résistance
 - **A.** Binaire seul (immunité 100 %) — simple mais frustrant.
@@ -187,13 +187,13 @@ Menu de mécaniques scriptées (1 à 2 par boss, déclenchées à 75/50/25 % PV)
 
 ---
 
-## 8. Workflow de validation proposé
+## 8. Workflow de validation
 
 1. ✅ Valider les **principes P1–P5** (§3).
-2. ⬜ Trancher **D1–D8** (§6).
-3. ⬜ Affiner la **matrice familiale** (§4) avec valeurs chiffrées par phase (E/M/L).
-4. ⬜ Pilote d'implémentation sur **une planète témoin** (ex. Péragus→Telos : droïdes + soldats + 1 sous-boss) et re-census.
-5. ⬜ Étendre, puis reporter les décisions dans [`decisions_finales.md`](decisions_finales.md) (+ annexes techniques dans [`decisions_annexes.md`](decisions_annexes.md)).
+2. ✅ Trancher **D1–D8** (§6 — acté le 22/11).
+3. ✅ Affiner la **matrice familiale** (§4) avec valeurs chiffrées par phase (E/M/L).
+4. ✅ Implémenter et vérifier les profils ennemis (`tools/build_enemies.py`).
+5. ✅ Reporter les décisions dans [`decisions_finales.md`](decisions_finales.md) (+ annexes techniques dans [`decisions_annexes.md`](decisions_annexes.md)).
 
 ---
 

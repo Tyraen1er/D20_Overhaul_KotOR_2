@@ -11,7 +11,7 @@
    - Avec le mod, vos armes à distance ajoutent désormais votre modificateur de DEX aux dégâts : **`150 % DEX`** en arme à une main seule (Duel) ou arme à deux mains, **`100 % / 50 % DEX`** à deux armes (Ambidextrie), et **`150 % / 50 % DEX`** sur les blasters à répétition. *(Ou votre **INT** si vous avez **Chasseur de prime Gand II**).*
 2. **Nouvelle catégorie : les Armes à deux mains (2M)**
    - Certaines armes lourdes (ex. *Vibro-épée*, *Hache gamorréenne*, *Pique de Force*, *Fusils blaster*, *Arbalète wookie*, *Fusil disrupteur*…) se tiennent désormais à deux mains : elles n'offrent pas d'attaque supplémentaire comme les armes doubles, mais infligent de base **`200 % FOR`** en mêlée ou **`150 % DEX`** à distance (extensible jusqu'à `250 % FOR` / `200 % DEX` avec la posture *Maniement d'Arme Lourde*).
-3. **Armes doubles et blasters à répétition (`D`)**
+3. **Armes haute cadence (`HC` — armes doubles et blasters à répétition)**
    - Toutes les armes doubles et blasters à répétition sont désormais **équilibrés** et ne subissent plus l'ancien malus d'attaque à deux armes (`-6/-10`). À la place, ils appliquent un **malus natif de `-5 CA`**, réductible jusqu'à `-1 CA` avec la posture *Maniement d'Arme haute cadence*.
 
 ---
@@ -26,19 +26,20 @@
 | :--- | :--- | :---: | :--- | :---: | :--- |
 | **Mains nues** | Impact | 1M | Physique `1d6` *(+Spé mains nues I–III : `+1d4/+2d4/+3d4` aux Niv. 4/12/19 ou Prestige 4)* | `19-20, ×2` | Aucun *(compte comme 1M pour Duel)* |
 | **Matraque paralysante** | Impact | 1M *(équil.)* | Contondant `1d8` | `18-20, ×2` | Poignée |
-| **Bâton** | Impact | Double *(équil.)* | Contondant `1d8` | `19-20, ×2` | Poignée |
+| **Torche à plasma** | Impact | 1M *(équil.)* | Contondant `1d1` + Feu `1d6` *(dégâts vanilla)* | `20, ×2` | Aucun *(outil Péragus)* |
+| **Bâton** | Impact | **HC** *(équil.)* | Contondant `1d8` | `19-20, ×2` | Poignée |
 | **Pique de Force** | Impact | **2M** | Contondant `2d8` | `20, ×3` | Poignée |
 | **Épée courte** | Traditionnelle | 1M *(équil.)* | Perforant `1d8` | `18-20, ×2` | Poignée, Lame |
 | **Épée longue** | Traditionnelle | 1M | Tranchant `1d12` | `19-20, ×2` | Poignée, Lame |
-| **Double-lame** | Traditionnelle | Double *(équil.)* | Tranchant `1d8` | `19-20, ×2` | Poignée, Lame |
+| **Double-lame** | Traditionnelle | **HC** *(équil.)* | Tranchant `1d8` | `19-20, ×2` | Poignée, Lame |
 | **Hache de guerre gamorréenne** | Traditionnelle | **2M** | Tranchant `2d8` | `20, ×3` | Poignée, Lame |
-| **Lame de guerre wookie** | Traditionnelle | Double *(équil.)* | Tranchant `1d10` | `20, ×3` | Poignée, Lame |
+| **Lame de guerre wookie** | Traditionnelle | **HC** *(équil.)* | Tranchant `1d10` | `20, ×3` | Poignée, Lame |
 | **Vibrolame** | Résonance | 1M *(équil.)* | Perforant `1d6` | `19-20, ×2` | Poignée, Lame, Cellule |
 | **Vibro-épée** | Résonance | **2M** | Tranchant `1d10` | `19-20, ×2` | Poignée, Lame, Cellule |
-| **Vibrolame double** | Résonance | Double *(équil.)* | Tranchant `1d8` | `20, ×2` | Poignée, Lame, Cellule |
+| **Vibrolame double** | Résonance | **HC** *(équil.)* | Tranchant `1d8` | `20, ×2` | Poignée, Lame, Cellule |
 | **Sabre laser court** | Laser | 1M *(équil.)* | Énergie `2d6` | `19-20, ×2` | Couleur, 2 Cristaux, Émetteur, Lentille, Cellule |
 | **Sabre laser** | Laser | 1M | Énergie `2d8` | `19-20, ×2` | Couleur, 2 Cristaux, Émetteur, Lentille, Cellule |
-| **Double sabre laser** | Laser | Double *(équil.)* | Énergie `2d8` | `20, ×2` | Couleur, 2 Cristaux, Émetteur, Lentille, Cellule |
+| **Double sabre laser** | Laser | **HC** *(équil.)* | Énergie `2d8` | `20, ×2` | Couleur, 2 Cristaux, Émetteur, Lentille, Cellule |
 
 ### Armes à Distance
 
@@ -46,11 +47,11 @@
 | :--- | :--- | :---: | :---: | :--- | :---: | :--- | :--- |
 | **Pistolet blaster** | Tir d'Assaut | 1M *(équil.)* | 23 m | Énergie `1d10` | `19-20, ×2` | — | Lunette, Pack |
 | **Carabine blaster** | Tir d'Assaut | **2M** | 25 m | Énergie `1d12` | `19-20, ×2` | — | Lunette, Pack |
-| **Blaster à répétition** | Tir d'Assaut | Répétition *(équil.)* | 28 m | Énergie `2d6` | `20, ×2` | — | Lunette, Pack |
+| **Blaster à répétition** | Tir d'Assaut | **HC** *(équil.)* | 28 m | Énergie `2d6` | `20, ×2` | — | Lunette, Pack |
 | **Blaster lourd** | Tir Pénétrant | 1M | 23 m | Énergie `1d12` | `19-20, ×2` | — | Lunette, Pack, Chambrage |
 | **Fusil blaster** | Tir Pénétrant | **2M** | 28 m | Énergie `1d12` | `19-20, ×2` | — | Lunette, Pack, Chambrage |
 | **Arbalète wookie** | Tir Pénétrant | **2M** | 28 m | Énergie `1d10` | `20, ×3` | — | Lunette, Pack, Chambrage |
-| **Blaster lourd à répétition** | Tir Pénétrant | Répétition *(équil.)* | 28 m | Énergie `2d6` | `20, ×2` | — | Lunette, Pack, Chambrage |
+| **Blaster lourd à répétition** | Tir Pénétrant | **HC** *(équil.)* | 28 m | Énergie `2d6` | `20, ×2` | — | Lunette, Pack, Chambrage |
 | **Blaster de poche** | Tir Assassin | 1M *(équil.)* | 23 m | Énergie `1d6` | `19-20, ×2` | Critiques massifs `+1d8` | Lunette, Pack |
 | **Pistolet disrupteur** | Tir Assassin | 1M | 23 m | Imparable `1d10` | `18-20, ×2` | Ignore la RD | Lunette, Pack |
 | **Fusil disrupteur** | Tir Assassin | **2M** | 28 m | Imparable `1d12` | `18-20, ×3` | Ignore la RD | Lunette, Pack |

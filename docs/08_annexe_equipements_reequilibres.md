@@ -110,7 +110,7 @@ Dans le jeu de base, certains objets de fin de jeu donnaient des bonus démesur�
 | **Intermédiaire** | **Armure de mailles électriques** | `RD Énergie +10/-` → **`+5/-`** |
 | **Intermédiaire** | **Armure de combat de Jamoh Hogra** | `CA +4` → **`CA +3`** |
 | **Lourde** | **Maille verpine en alliage zal** | `CA +4` → **`CA +3`** · `RD élém. +25/-` → **`+15/-`** |
-| **Lourde** | **M'uhk'gfa** | `RD Phys/Énergie +10/-` → **`+3/-`** |
+| **Lourde** | **M'uhk'gfa** | `RD Phys +10/-, Énergie +5/-` → **`+3/-`** |
 | **Lourde** | **Armure de combat mandalorienne** *(et Armure de Mandalore lourde)* | `RD Électrique +25/-` → **`+15/-`** |
 | **Lourde** | **Armure d'assaut mandalorienne** | `CA +4` → **`CA +3`** · `RD Froid/Feu +25/-` → **`+15/-`** |
 | **Lourde** | **Armure matrice** | `CA +4` → **`CA +3`** |

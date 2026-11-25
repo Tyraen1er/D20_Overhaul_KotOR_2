@@ -110,7 +110,7 @@ In vanilla KotOR 2, certain endgame items handed out inflated bonuses (`+5/+6` a
 | **Medium** | **Electromesh Armor** | `Energy DR +10/-` → **`+5/-`** |
 | **Medium** | **Jamoh Hogra's Battle Armor** | `AC +4` → **`AC +3`** |
 | **Heavy** | **Verpine Zal Alloy Mesh** | `AC +4` → **`AC +3`** · `Elemental DR +25/-` → **`+15/-`** |
-| **Heavy** | **M'uhk'gfa** | `Phys/Energy DR +10/-` → **`+3/-`** |
+| **Heavy** | **M'uhk'gfa** | `Phys DR +10/-, Energy DR +5/-` → **`+3/-`** |
 | **Heavy** | **Mandalorian Battle Armor** *(and Heavy Mandalore Armor)* | `Electrical DR +25/-` → **`+15/-`** |
 | **Heavy** | **Mandalorian Assault Armor** | `AC +4` → **`AC +3`** · `Cold/Fire DR +25/-` → **`+15/-`** |
 | **Heavy** | **Matrix Armor** | `AC +4` → **`AC +3`** |

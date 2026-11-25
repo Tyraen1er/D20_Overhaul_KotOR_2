@@ -15,10 +15,10 @@ Maintenant que tous les arbres de dons ont été présentés, voici le tableau r
 | **Postures : Ambidextrie, Arme Lourde, Haute cadence** *(Niv. 1 / 4 / 8)* | Toutes classes | Toutes classes *(Niv. 4+)* | **Toutes classes sauf classes de Force** *(Niv. 8+ ; interdit aux Consulaires, Maîtres Jedi et Seigneurs Sith)* |
 | **Spécialisations d'armes (8 familles)** | Toutes classes | Gardien, Sentinelle et leurs prestiges *(+ non-Jedi)* | **Maître d'Armes**, **Maraudeur Sith** *(+ non-Jedi Niv. 15+)* |
 | **Armure : Juggernaut** *(lourde)* | Tous (avec Port d'armure lourde) | Gardien, Maître d'Armes, Maraudeur *(+ Soldat)* | **Maître d'Armes**, **Maraudeur Sith** *(+ Soldat Niv. 15+)* |
-| **Armure : Armure Tactique** *(intermédiaire)* | Tous (avec Port d'armure interm.) | Sentinelle, Jedi Protecteur, Assassin *(+ Éclaireur, Voyou, Technicien)* | **Jedi Protecteur**, **Assassin Sith** *(+ Éclaireur, Voyou, Technicien Niv. 15+)* |
-| **Armure : Esquive Balistique** *(légère)* | Tous (avec Port d'armure légère) | Gardien, Sentinelle et leurs prestiges *(+ Soldat, Éclaireur, Voyou)* | **Maître d'Armes**, **Maraudeur**, **Jedi Protecteur**, **Assassin** *(+ Soldat, Éclaireur, Voyou Niv. 15+)* |
-| **Éveil de Force** *(Amplifié, Pénétrant)* | Tous Jedi / Sith | **Consulaire**, **Maître Jedi**, **Seigneur Sith** | **Maître Jedi**, **Seigneur Sith** |
-| **Esquive Totale** | — | — | **Jedi Protecteur**, **Assassin Sith** *(et Mira auto au Niv. 6)* |
+| **Armure : Armure Tactique** *(intermédiaire)* | Tous (avec Port d'armure interm.) | Sentinelle, Jedi Protecteur, Assassin *(+ Éclaireur, Voyou, Technicien)* | **Jedi Protecteur**, **Assassin Sith** *(+ Éclaireur, Voyou, Technicien Niv. 15+ ; Visas Niv. 15+)* |
+| **Armure : Esquive Balistique** *(légère)* | Tous (avec Port d'armure légère) | Gardien, Sentinelle et leurs prestiges *(+ Soldat, Éclaireur, Voyou)* | **Maître d'Armes**, **Maraudeur**, **Jedi Protecteur**, **Assassin** *(+ Soldat, Éclaireur, Voyou Niv. 15+ ; Visas Niv. 15+)* |
+| **Éveil de Force** *(Amplifié, Pénétrant)* | Tous Jedi / Sith | **Consulaire**, **Maître Jedi**, **Seigneur Sith** | **Maître Jedi**, **Seigneur Sith** *(+ Kreia Niv. 15+)* |
+| **Esquive Totale** | — | — | **Jedi Protecteur**, **Assassin Sith** *(+ Visas Niv. 15+ ; Mira auto au Niv. 6)* |
 
 ---
 

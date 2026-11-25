@@ -1,0 +1,672 @@
+﻿2DA ID,2DA Label,Name (EN),Category,Prerequisites (Vanilla),Effect (Vanilla / Description),Changes (Mod),Technical Notes (Agent Column),Description (Mod)
+1,ADVANCED_JEDI_DEFENSE,Advanced Jedi Defense,Défense & survie,Lvl 4 ; JEDI_DEFENSE,Blaster deflection redirect bonus +3 (auto Jedi),,,
+2,XXXX_ADVANCED_GUARD_STANCE,Advanced Guard Stance (cut),Caché / interne,,Hidden (XXXX) — unused,,,
+3,TWO_WEAPON_FIGHTING,Two-Weapon Fighting,Style & posture,,Dual wield penalty: -4/-8 (balanced weapon in off hand: -2/-6),supprimé,,
+4,ARMOUR_PROF_HEAVY,Armor Proficiency: Heavy,Défense & survie,ARMOUR_PROF_LIGHT ; ARMOUR_PROF_MEDIUM,Equip heavy armor without penalty,,,
+5,ARMOUR_PROF_LIGHT,Armor Proficiency: Light,Défense & survie,,Equip light armor without penalty,,,
+6,ARMOUR_PROF_MEDIUM,Armor Proficiency: Medium,Défense & survie,ARMOUR_PROF_LIGHT,Equip medium armor without penalty,,,
+7,CAUTIOUS,Caution,Compétence & utilitaire,,+1 Demolitions and Treat Injury,,,
+8,CRITICAL_STRIKE,Critical Strike,Actif — mêlée,,"Critical threat range ×2, -5 Defense ; stuns 1 round on failed Fortitude save (DC = Lvl + STR mod)",,,
+9,TWO_WEAPON_ADVANCED,Improved Two-Weapon Fighting,Style & posture,Lvl 4 ; TWO_WEAPON_FIGHTING,-2/-4 (0/-2 balanced),supprimé,,
+10,EMPATHY,Empathy,Compétence & utilitaire,,"+1 Persuade, Awareness, and Treat Injury",,,
+11,FLURRY,Flurry,Actif — mêlée,,"+1 attack/round ; -4 Atk, -4 Defense (that round)",,,
+12,GEAR_HEAD,Gear Head,Compétence & utilitaire,,"+1 Security, Computer Use, and Repair",,,
+13,CONDITIONING,Conditioning,Défense & survie,,+1 to all saving throws,,,
+14,XXXX_IMPLANT_LEVEL_1,Implant Level 1 (cut),Caché / interne,,Allows equipping Level 1 implants,,,
+15,XXXX_IMPLANT_LEVEL_2,Implant Level 2 (cut),Caché / interne,Lvl 4 ; XXXX_IMPLANT_LEVEL_1,Allows equipping Level 2 implants,,,
+16,XXXX_IMPLANT_LEVEL_3,Implant Level 3 (cut),Caché / interne,Lvl 8 ; XXXX_IMPLANT_LEVEL_1 ; XXXX_IMPLANT_LEVEL_2,Allows equipping Level 3 implants,,,
+17,IMPROVED_POWER_ATTACK,Improved Power Attack,Actif — mêlée,Lvl 4 ; POWER_ATTACK,"-3 Atk, +7 damage (+14 with 2 weapons/double)",,,
+18,IMPROVED_POWER_BLAST,Improved Power Blast,Actif — distance,Lvl 4 ; POWER_BLAST,"-3 Atk, +8 damage ; chance to knock down",,,
+19,IMPROVED_CRITICAL_STRIKE,Improved Critical Strike,Actif — mêlée,Lvl 4 ; CRITICAL_STRIKE,"Threat range ×3 (retains -5 Defense, stun)",,,
+20,IMPROVED_SNIPER_SHOT,Improved Sniper Shot,Actif — distance,Lvl 4 ; SNIPER_SHOT,"Threat range ×3 (retains -5 Defense, stun)",,,
+21,IMPROVED_CONDITIONING,Improved Conditioning,Défense & survie,Lvl 4 ; CONDITIONING,+2 to all saving throws,,,
+22,MASTER_CONDITIONING,Master Conditioning,Défense & survie,Lvl 8 ; CONDITIONING ; IMPROVED_CONDITIONING,+3 to all saving throws,,,
+24,MASTER_JEDI_DEFENSE,Master Jedi Defense,Défense & survie,Lvl 8 ; JEDI_DEFENSE ; ADVANCED_JEDI_DEFENSE,Blaster deflection redirect bonus +6 (auto Jedi),,,
+25,XXXX_MASTER_GUARD_STANCE,Master Guard Stance (cut),Caché / interne,,Hidden (XXXX) — unused,,,
+26,MULTI_SHOT,Master Rapid Shot,Actif — distance,Lvl 8 ; RAPID_SHOT ; IMPROVED_RAPID_SHOT,"+1 shot ; -1 Atk, -1 Defense",,,
+27,XXXX_PERCEPTIVE,Perceptive (cut),Caché / interne,,Hidden (XXXX) — unused,,,
+28,POWER_ATTACK,Power Attack,Actif — mêlée,,"Active mode: -3 Atk, +5 damage/hit (damage doubled with 2 weapons or double-bladed weapon: +10)",,,
+29,POWER_BLAST,Power Blast,Actif — distance,,"Active mode: -3 Atk, +5 damage/shot ; chance to knock down target",,,
+30,RAPID_SHOT,Rapid Shot,Actif — distance,,"+1 shot/round ; -4 Atk, -4 Defense",,,
+31,SNIPER_SHOT,Sniper Shot,Actif — distance,,"Critical threat range ×2, -5 Defense ; stuns on failed Fortitude save (DC = Lvl + INT mod)",,,
+32,WEAPON_FOCUS_BLASTER,Weapon Focus: Blaster Pistol,Maniement d'arme,WEAPON_PROF_BLASTER,+1 Atk with blaster pistols,supprimé,,
+33,WEAPON_FOCUS_BLASTER_RIFLE,Weapon Focus: Blaster Rifle,Maniement d'arme,WEAPON_PROF_BLASTER_RIFLE,+1 Atk with rifles,supprimé,,
+34,XXXX_WEAPON_FOCUS_GRENADE,Weapon Focus: Grenade (cut),Caché / interne,XXXX_WEAPON_PROF_GRENADE,Hidden (XXXX) — used by grenade-throwing NPCs,,,
+35,XXXX_WEAPON_FOCUS_HEAVY_WEAPONS,Weapon Focus: Heavy Weapons (cut),Caché / interne,XXXX_WEAPON_PROF_HEAVY_WEAPONS,Hidden (XXXX) — NPC,,,
+36,WEAPON_FOCUS_LIGHTSABER,Weapon Focus: Lightsaber,Maniement d'arme,WEAPON_PROF_LIGHTSABER,+1 Atk with lightsabers,supprimé,,
+37,WEAPON_FOCUS_MELEE_WEAPONS,Weapon Focus: Melee Weapons,Maniement d'arme,WEAPON_PROF_MELEE_WEAPONS,+1 Atk with melee weapons,supprimé,,
+38,XXXX_WEAPON_FOCUS_SIMPLE_WEAPONS,Weapon Focus: Simple Weapons (cut),Caché / interne,XXXX_WEAPON_PROF_SIMPLE_WEAPONS,Hidden (XXXX) — NPC,,,
+39,WEAPON_PROF_BLASTER,Weapon Proficiency: Blaster Pistol,Maniement d'arme,,Equip blaster pistols without non-proficiency penalty (-4 Atk),,,
+40,WEAPON_PROF_BLASTER_RIFLE,Weapon Proficiency: Blaster Rifle,Maniement d'arme,,Equip blaster rifles without penalty (-4 Atk),,,
+41,XXXX_WEAPON_PROF_GRENADE,Weapon Proficiency: Grenade (cut),Caché / interne,,Hidden (XXXX) — NPC,,,
+42,XXXX_WEAPON_PROF_HEAVY_WEAPONS,Weapon Proficiency: Heavy Weapons (cut),Caché / interne,,Hidden (XXXX) — NPC,,,
+43,WEAPON_PROF_LIGHTSABER,Weapon Proficiency: Lightsaber,Maniement d'arme,,Equip lightsabers without penalty (-4 Atk),,,
+44,WEAPON_PROF_MELEE_WEAPONS,Weapon Proficiency: Melee Weapons,Maniement d'arme,,Equip melee weapons without penalty (-4 Atk),,,
+45,XXXX_WEAPON_PROF_SIMPLE_WEAPONS,Weapon Proficiency: Simple Weapons (cut),Caché / interne,,Hidden (XXXX) — NPC,,,
+46,WEAPON_SPEC_BLASTER,Weapon Specialization: Blaster Pistol,Maniement d'arme,Lvl 4 ; WEAPON_PROF_BLASTER ; WEAPON_FOCUS_BLASTER,+2 damage with blaster pistols (Soldier/Guardian/martial prestige),supprimé,,
+47,WEAPON_SPEC_BLASTER_RIFLE,Weapon Specialization: Blaster Rifle,Maniement d'arme,Lvl 4 ; WEAPON_PROF_BLASTER_RIFLE ; WEAPON_FOCUS_BLASTER_RIFLE,+2 damage with rifles,supprimé,,
+48,XXXX_WEAPON_SPEC_GRENADE,Weapon Specialization: Grenade (cut),Caché / interne,XXXX_WEAPON_PROF_GRENADE ; XXXX_WEAPON_FOCUS_GRENADE,Hidden (XXXX) — NPC,supprimé,,
+49,XXXX_WEAPON_SPEC_HEAVY_WEAPONS,Weapon Specialization: Heavy Weapons (cut),Caché / interne,Lvl 4 ; XXXX_WEAPON_PROF_HEAVY_WEAPONS ; XXXX_WEAPON_FOCUS_HEAVY_WEAPONS,Hidden (XXXX) — NPC,supprimé,,
+50,WEAPON_SPEC_LIGHTSABER,Weapon Specialization: Lightsaber,Maniement d'arme,Lvl 4 ; WEAPON_PROF_LIGHTSABER ; WEAPON_FOCUS_LIGHTSABER,+2 damage with lightsabers,supprimé,,
+51,WEAPON_SPEC_MELEE_WEAPONS,Weapon Specialization: Melee Weapons,Maniement d'arme,Lvl 4 ; WEAPON_PROF_MELEE_WEAPONS ; WEAPON_FOCUS_MELEE_WEAPONS,+2 damage with melee weapons,supprimé,,
+52,XXXX_WEAPON_SPEC_SIMPLE_WEAPONS,Weapon Specialization: Simple Weapons (cut),Caché / interne,XXXX_WEAPON_PROF_SIMPLE_WEAPONS ; XXXX_WEAPON_FOCUS_SIMPLE_WEAPONS,Hidden (XXXX) — NPC,,,
+53,WHIRLWIND_ATTACK,Master Flurry,Actif — mêlée,Lvl 8 ; FLURRY ; IMPROVED_FLURRY,"+1 attack ; -1 Atk, -1 Defense",,,
+54,XXXX_GUARD_STANCE,Guard Stance (cut),Caché / interne,,Hidden (XXXX) — unused,,,
+55,JEDI_DEFENSE,Jedi Defense,Défense & survie,,Deflect blaster bolts (opposed roll); redirect bolt if margin ≥ 10 (auto Jedi),,,
+56,UNCANNY_DODGE_1,Uncanny Dodge I,Défense & survie,,Retains DEX mod to Defense even when flat-footed,,,
+57,UNCANNY_DODGE_2,Uncanny Dodge II,Défense & survie,UNCANNY_DODGE_1,Bonus aux saving throws contre les mines,,,
+58,XXXX_SKILL_FOCUS_COMPUTER_USE,Skill Focus: Computer Use (cut),Caché / interne,Lvl 0,Hidden (XXXX) — skill focus,,,
+60,SNEAK_ATTACK_1D6,Sneak Attack +1d6,Classe (auto),,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+61,SNEAK_ATTACK_2D6,Sneak Attack +2d6,Classe (auto),SNEAK_ATTACK_1D6,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+62,SNEAK_ATTACK_3D6,Sneak Attack +3d6,Classe (auto),SNEAK_ATTACK_1D6 ; SNEAK_ATTACK_2D6,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+63,SNEAK_ATTACK_4D6,Sneak Attack +4d6,Classe (auto),,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+64,SNEAK_ATTACK_5D6,Sneak Attack +5d6,Classe (auto),SNEAK_ATTACK_4D6,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+65,SNEAK_ATTACK_6D6,Sneak Attack +6d6,Classe (auto),SNEAK_ATTACK_4D6 ; SNEAK_ATTACK_5D6,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+66,SNEAK_ATTACK_7D6,Sneak Attack +7d6,Classe (auto),,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+67,SNEAK_ATTACK_8D6,Sneak Attack +8d6,Classe (auto),SNEAK_ATTACK_7D6,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+68,SNEAK_ATTACK_9D6,Sneak Attack +9d6,Classe (auto),SNEAK_ATTACK_7D6 ; SNEAK_ATTACK_8D6,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+69,SNEAK_ATTACK_10D6,Sneak Attack +10d6,Classe (auto),,+1d6 damage on flat-footed/flanked/incapacitated target (auto Scoundrel/Assassin/Shadow),,,
+70,XXXX_SKILL_FOCUS_DEMOLITIONS,Skill Focus: Demolitions (cut),Caché / interne,Lvl 0,Hidden (XXXX) — skill focus,,,
+71,XXXX_SKILL_FOCUS_STEALTH,Skill Focus: Stealth (cut),Caché / interne,Lvl 0,Hidden (XXXX) — skill focus,,,
+72,XXXX_SKILL_FOCUS_AWARENESS,Skill Focus: Awareness (cut),Caché / interne,Lvl 0,Hidden (XXXX) — skill focus,,,
+73,XXXX_SKILL_FOCUS_PERSUADE,Skill Focus: Persuade (cut),Caché / interne,,Hidden (XXXX) — skill focus,,,
+74,XXXX_SKILL_FOCUS_REPAIR,Skill Focus: Repair (cut),Caché / interne,,Hidden (XXXX) — skill focus,,,
+75,XXXX_SKILL_FOCUS_SECURITY,Skill Focus: Security (cut),Caché / interne,,Hidden (XXXX) — skill focus,,,
+76,XXXX_SKILL_FOCUS_TREAT_INJURY,Skill Focus: Treat Injury (cut),Caché / interne,,Hidden (XXXX) — skill focus,,,
+77,MASTER_SNIPER_SHOT,Master Sniper Shot,Actif — distance,Lvl 8 ; SNIPER_SHOT ; IMPROVED_SNIPER_SHOT,"Threat range ×4 (retains -5 Defense, stun)",,,
+78,DROID_UPGRADE_1,Droid Upgrade Class 1,Compagnon / PNJ,,+1 droid utility module slot,,,
+79,DROID_UPGRADE_2,Droid Upgrade Class 2,Compagnon / PNJ,DROID_UPGRADE_1,+1 slot,,,
+80,DROID_UPGRADE_3,Droid Upgrade Class 3,Compagnon / PNJ,DROID_UPGRADE_1 ; DROID_UPGRADE_2,+1 slot,,,
+81,MASTER_CRITICAL_STRIKE,Master Critical Strike,Actif — mêlée,Lvl 8 ; CRITICAL_STRIKE ; IMPROVED_CRITICAL_STRIKE,"Threat range ×4 (retains -5 Defense, stun)",,,
+82,MASTER_POWER_BLAST,Master Power Blast,Actif — distance,Lvl 8 ; POWER_BLAST ; IMPROVED_POWER_BLAST,"-3 Atk, +12 damage ; chance to knock down",,,
+83,MASTER_POWER_ATTACK,Master Power Attack,Actif — mêlée,Lvl 8 ; POWER_ATTACK ; IMPROVED_POWER_ATTACK,"-3 Atk, +10 damage (+20 with 2 weapons/double)",,,
+84,TOUGHNESS,Toughness,Défense & survie,,+1 Vitality point per character level,,,
+85,TWO_WEAPON_MASTERY,Master Two-Weapon Fighting,Style & posture,Lvl 8 ; TWO_WEAPON_FIGHTING ; TWO_WEAPON_ADVANCED,0/-2 (0/0 balanced),supprimé,,
+86,XXXX_FORCE_FOCUS_ALTER,Force Focus: Alter (cut),Caché / interne,,Hidden (XXXX),,,
+87,XXXX_FORCE_FOCUS_CONTROL,Force Focus: Control (cut),Caché / interne,,Hidden (XXXX),,,
+88,FORCE_FOCUS,Force Focus,Classe (auto),,Increased Force pool (auto Consular),,,
+89,FORCE_FOCUS_ADVANCED,Improved Force Focus,Classe (auto),Lvl 4 ; FORCE_FOCUS,Increased pool,,,
+90,FORCE_FOCUS_MASTERY,Master Force Focus,Classe (auto),Lvl 8 ; FORCE_FOCUS ; FORCE_FOCUS_ADVANCED,Increased pool,,,
+91,IMPROVED_FLURRY,Improved Flurry,Actif — mêlée,Lvl 4 ; FLURRY,"+1 attack ; -2 Atk, -2 Defense",,,
+92,IMPROVED_RAPID_SHOT,Improved Rapid Shot,Actif — distance,Lvl 4 ; RAPID_SHOT,"+1 shot ; -2 Atk, -2 Defense",,,
+93,PROFICIENCY_ALL,Weapon Proficiency: All,Caché / interne,,Internal — all proficiencies,,,
+94,BATTLE_MEDITATION,Battle Meditation,Caché — pouvoir de prestige,,Hidden — linked to Battle Meditation power (see WIP Force Powers Specialization.csv),,,
+95,WOOKIEE_TOUGHNESS,Wookiee Toughness I,Compagnon / PNJ,,+Vitality (Hanharr),,,
+96,BLASTER_INTEGRATION,Blaster Integration,Compagnon / PNJ,,Internal HK-47,,,
+97,XXXFORCE_CAMOFLAGE,Force Camouflage I (cut),Caché — pouvoir de prestige,,"Hidden — Sith Assassin / Jedi Watchman (stealth without generator, see WIP Force Powers Specialization.csv)",Refondu en « Spectre de la Force I » (exclusif Sith Assassin) : +4 Stealth + furtivité sans ceinture + Course furtive auto (cf. Spé Pouvoirs.csv ; Protecteur migré vers Affranchi de la Force),,"[Mod D20-Overhaul]
+
+Effects: +4 Stealth, furtivité sans ceinture et Course furtive automatique.
+
+Par sa nature de plaie béante dans la Force, l'Exilé constitue un angle mort dans la trame qui relie toute chose vivante. En laissant ce vide s'interposer entre lui et le monde, il devient tel un spectre aux yeux des Jedi comme du commun des mortels : nul instinct ne l'annonce, nul générateur n'est nécessaire pour effacer sa course. Frapper depuis cette absence sidère brutalement sa proie ; et chaque vie qu'il éteint creuse un peu plus l'écho de son vide, troublant la perception de ses adversaires tandis que sa lame trouve infailliblement la faille suivante."
+98,FORCE_IMMUNITY_FEAR,Force Immunity: Fear,Classe (auto),,Immunity: Fear (auto Sentinel),,,
+99,FORCE_IMMUNITY_STUN,Force Immunity: Stun,Classe (auto),FORCE_IMMUNITY_FEAR,Immunity to Stun,,,
+100,FORCE_IMMUNITY_PARALYSIS,Force Immunity: Paralysis,Classe (auto),FORCE_IMMUNITY_FEAR ; FORCE_IMMUNITY_STUN,Immunity to Paralysis,,,
+101,FORCE_JUMP,Force Jump,Classe (auto),,Attack leap to close distance (auto Guardian),,,
+102,FORCE_JUMP_ADVANCED,Improved Force Jump,Classe (auto),FORCE_JUMP,Improved range,,,
+103,FORCE_JUMP_MASTERY,Master Force Jump,Classe (auto),FORCE_JUMP ; FORCE_JUMP_ADVANCED,Maximum range,,,
+104,SCOUNDRELS_LUCK,Scoundrel's Luck,Classe (auto),,+1 Defense (auto Scoundrel),,,
+105,IMPROVED_SCOUNDRELS_LUCK,Improved Scoundrel's Luck,Classe (auto),SCOUNDRELS_LUCK,+2 Defense,,,
+106,MASTER_SCOUNDRELS_LUCK,Master Scoundrel's Luck,Classe (auto),SCOUNDRELS_LUCK ; IMPROVED_SCOUNDRELS_LUCK,+3 Defense,,,
+107,JEDI_SENSE,Jedi Sense,Classe (auto),,+2 Defense (auto Jedi),,,
+108,KNIGHT_SENSE,Knight Sense,Classe (auto),,+4 Defense,,,
+109,MASTER_SENSE,Master Sense,Classe (auto),,+6 Defense,,,
+110,LOGIC_UPGRADE_COMBAT,Logic Upgrade: Combat,Compagnon / PNJ,,T3-M4 — bonus de combat,,,
+111,LOGIC_UPGRADE_TACTICIAN,Logic Upgrade: Tactician,Compagnon / PNJ,LOGIC_UPGRADE_COMBAT,T3-M4,,,
+112,LOGIC_UPGRADE_BATTLE_DROID,Logic Upgrade: Battle Droid,Compagnon / PNJ,LOGIC_UPGRADE_COMBAT ; LOGIC_UPGRADE_TACTICIAN,T3-M4,,,
+113,DUELING,Dueling,Style & posture,,"1 single 1-handed weapon only: +1 Atk, +1 Defense",supprimé,,
+114,ADVANCED_DUELING,Improved Dueling,Style & posture,Lvl 4 ; DUELING,"+2 Atk, +2 Defense (1H weapon)",supprimé,,
+115,MASTER_DUELING,Master Dueling,Style & posture,Lvl 8 ; DUELING ; ADVANCED_DUELING,"+3 Atk, +3 Defense (1H weapon)",supprimé,,
+116,FORCE_SENSITIVE,Force Sensitive,Caché / interne,,Internal — Force sensitivity mark,,,
+117,IMPROVED_CAUTION,Improved Caution,Compétence & utilitaire,Lvl 4 ; CAUTIOUS,+2 Demolitions and Treat Injury,,,
+118,MASTER_CAUTION,Master Caution,Compétence & utilitaire,Lvl 8 ; CAUTIOUS ; IMPROVED_CAUTION,+3 Demolitions and Treat Injury,,,
+119,GEAR_HEAD_ADEPT,Improved Gear Head,Compétence & utilitaire,Lvl 4 ; GEAR_HEAD,+2 to all three skills,,,
+120,GEAR_HEAD_MASTER,Master Gear Head,Compétence & utilitaire,Lvl 8 ; GEAR_HEAD ; GEAR_HEAD_ADEPT,+3 to all three skills,,,
+121,IMPROVED_EMPATHY,Improved Empathy,Compétence & utilitaire,Lvl 4 ; EMPATHY,+2 to all three skills,,,
+122,MASTER__EMPATHY,Master Empathy,Compétence & utilitaire,Lvl 8 ; EMPATHY ; IMPROVED_EMPATHY,+3 to all three skills,,,
+123,IMPROVED_TOUGHNESS,Improved Toughness,Défense & survie,Lvl 4 ; TOUGHNESS,+1 additional Vitality/lvl AND DR 2/- on each incoming attack,,,
+124,MASTER_TOUGHNESS,Master Toughness,Défense & survie,Lvl 8 ; TOUGHNESS ; IMPROVED_TOUGHNESS,+1 additional Vitality/lvl (total +3 Vitality/lvl),,,
+125,EVASION,Evasion,Défense & survie,,Auto Scout lvl 6 ; successful Reflex save vs AoE → half damage,"Total Evasion : Réflexes réussie vs AoE → 0 dégât, échec → demi-dégâts ; sélectionnable pour les classes de prestige Jedi Watchman et Assassin (et Visas Lvl 15+) ; auto Jedi/Sith ennemis 20+ ; reste auto Éclaireur lvl 6 (Mira)",,"[Mod D20-Overhaul]
+
+Effects: Total Evasion : Réflexes réussie vs zone → 0 dégât, échec → demi-dégâts ; sélectionnable pour les classes de prestige Jedi Watchman et Assassin (et Visas Lvl 15+) ; auto Jedi/Sith ennemis 20+ ; reste auto Éclaireur lvl 6 (Mira)
+
+Grâce à des réflexes aiguisés par l'entraînement ou la Force, ce don permet d'anticiper les explosions et décharges de zone pour s'en extraire au dernier instant."
+126,TARGETING_1,Targeting I,Caché / interne,,Internal NPC — accuracy bonus (AI),,,
+127,TARGETING_2,Targeting II,Caché / interne,TARGETING_1,Internal NPC — accuracy bonus (AI),,,
+128,TARGETING_3,Targeting III,Caché / interne,TARGETING_1 ; TARGETING_2,Internal NPC — accuracy bonus (AI),,,
+129,TARGETING_4,Targeting IV,Caché / interne,,Internal NPC — accuracy bonus (AI),,,
+130,TARGETING_5,Targeting V,Caché / interne,TARGETING_4,Internal NPC — accuracy bonus (AI),,,
+131,TARGETING_6,Targeting VI,Caché / interne,TARGETING_4 ; TARGETING_5,Internal NPC — accuracy bonus (AI),,,
+132,TARGETING_7,Targeting VII,Caché / interne,,Internal NPC — accuracy bonus (AI),,,
+133,TARGETING_8,Targeting VIII,Caché / interne,TARGETING_7,Internal NPC — accuracy bonus (AI),,,
+134,XXXX_TARGETING_9,Targeting IX (cut),Caché / interne,,Internal NPC — accuracy bonus (AI),,,
+135,XXXX_TARGETING_10,Targeting X (cut),Caché / interne,,Internal NPC — accuracy bonus (AI),,,
+136,XXXPRECISE_SHOT_I,Precise Shot I (NPC cut),Caché / interne,Lvl 4,Hidden (XXX) — NPC version of Sniper Shot,,,
+137,XXXPRECISE_SHOT_II,Precise Shot II (NPC cut),Caché / interne,Lvl 8 ; XXXPRECISE_SHOT_I,Hidden (XXX) — NPC version of Sniper Shot,,,
+138,XXXPRECISE_SHOT_III,Precise Shot III (NPC cut),Caché / interne,Lvl 12 ; XXXPRECISE_SHOT_I ; XXXPRECISE_SHOT_II,Hidden (XXX) — NPC version of Sniper Shot,,,
+139,CLOSE_COMBAT,Close Combat,Actif — distance,Lvl 4,Reduces by 2 the -10 Defense penalty when shooting in melee range of an enemy,,,
+140,IMPROVED_CLOSE_COMBAT,Improved Close Combat,Actif — distance,Lvl 8 ; CLOSE_COMBAT,Reduces by 4 the -10 Defense penalty when shooting in melee range,,,
+141,XXXIMPROVED_FORCE_CAMOUFLAGE,Force Camouflage II (cut),Caché — pouvoir de prestige,XXXFORCE_CAMOFLAGE,"Hidden — Sith Assassin / Jedi Watchman (stealth without generator, see WIP Force Powers Specialization.csv)","Refondu en « Spectre de la Force II » (exclusif Sith Assassin) : +8 Stealth + embuscade +2d6 dégâts et Stun 1 round (Vig annule, DC 10 + Lvl + Attr)",,"[Mod D20-Overhaul]
+
+Effects: +8 Stealth, toute embuscade en sortie de furtivité inflige +2d6 dégâts et Érounddit 1 round (Fortitude negates, DC 10 + Lvl + Attr).
+
+Par sa nature de plaie béante dans la Force, l'Exilé constitue un angle mort dans la trame qui relie toute chose vivante. En laissant ce vide s'interposer entre lui et le monde, il devient tel un spectre aux yeux des Jedi comme du commun des mortels : nul instinct ne l'annonce, nul générateur n'est nécessaire pour effacer sa course. Frapper depuis cette absence sidère brutalement sa proie ; et chaque vie qu'il éteint creuse un peu plus l'écho de son vide, troublant la perception de ses adversaires tandis que sa lame trouve infailliblement la faille suivante."
+142,XXXMASTER_FORCE_CAMOUFLAGE,Force Camouflage III (cut),Caché — pouvoir de prestige,XXXFORCE_CAMOFLAGE ; XXXIMPROVED_FORCE_CAMOUFLAGE,"Hidden — Sith Assassin / Jedi Watchman (stealth without generator, see WIP Force Powers Specialization.csv)",Refondu en « Spectre de la Force III » (exclusif Sith Assassin) : +12 Stealth + chaque kill donne prochain coup critique confirmé (2 rounds) et +25 % esquive 2 rounds,,"[Mod D20-Overhaul]
+
+Effects: +12 Stealth, chaque élimination rend la prochaine attaque critique confirmé (dans les 2 rounds / 12 s) et octroie +25 % d'esquive pendant 2 rounds.
+
+Par sa nature de plaie béante dans la Force, l'Exilé constitue un angle mort dans la trame qui relie toute chose vivante. En laissant ce vide s'interposer entre lui et le monde, il devient tel un spectre aux yeux des Jedi comme du commun des mortels : nul instinct ne l'annonce, nul générateur n'est nécessaire pour effacer sa course. Frapper depuis cette absence sidère brutalement sa proie ; et chaque vie qu'il éteint creuse un peu plus l'écho de son vide, troublant la perception de ses adversaires tandis que sa lame trouve infailliblement la faille suivante."
+143,REGENERATE_FORCE_POINTS,Regenerate Force Points,Classe (auto),Lvl 4,Regenerates FP over time (internal),,,
+144,XXXX_CRUSH_OPPOSITION_I,Crush Opposition I (cut),Caché — pouvoir de prestige,,"Hidden — Sith Lord (AoE Atk/Will debuff, see WIP Force Powers Specialization.csv)","Refondu en « Déchirure de la Force I » (Sith Lord, lvl 1) : -2 Atk, Saves et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
+
+Effets (45 s, zone 15 m) : inflige -2 en Attaque, Saves et Défense (AC) à tous les ennemis à portée (Will negates).
+
+Même ceux qui ignorent la Force s'appuient sur elle à chaque battement de cœur, comme sur un sol invisible dont ils ne soupçonnent pas l'existence. En cessant de contenir l'écho de sa propre coupure, l'Exilé projette auround de lui la sourde réalité de son vide et déchire brièvement la trame qui soutient le champ de bataille. Plongés dans une absence qu'ils n'ont jamais appris à endurer, ses ennemis sentent leur instinct se dérober : leurs frappes perdent leur justesse, leur garde s'effondre et leur esprit vacille. Seule une volonté capable de se tenir debout par elle-même peut résister à ce silence."
+145,XXXX_CRUSH_OPPOSITION_II,Crush Opposition II (cut),Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_I,"Hidden — Sith Lord (AoE Atk/Will debuff, see WIP Force Powers Specialization.csv)","Refondu en « Déchirure de la Force II » (Sith Lord, lvl 5) : -4 Atk, Saves et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
+
+Effets (45 s, zone 15 m) : inflige -4 en Attaque, Saves et Défense (AC) à tous les ennemis à portée (Will negates).
+
+Même ceux qui ignorent la Force s'appuient sur elle à chaque battement de cœur, comme sur un sol invisible dont ils ne soupçonnent pas l'existence. En cessant de contenir l'écho de sa propre coupure, l'Exilé projette auround de lui la sourde réalité de son vide et déchire brièvement la trame qui soutient le champ de bataille. Plongés dans une absence qu'ils n'ont jamais appris à endurer, ses ennemis sentent leur instinct se dérober : leurs frappes perdent leur justesse, leur garde s'effondre et leur esprit vacille. Seule une volonté capable de se tenir debout par elle-même peut résister à ce silence."
+146,XXXX_CRUSH_OPPOSITION_III,Crush Opposition III (cut),Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_I ; XXXX_CRUSH_OPPOSITION_II,"Hidden — Sith Lord (AoE Atk/Will debuff, see WIP Force Powers Specialization.csv)","Refondu en « Déchirure de la Force III » (Sith Lord, lvl 9) : -6 Atk, Saves et Défense en zone 15 m pendant 45 s (Vol annule)",,"[Mod D20-Overhaul]
+
+Effets (45 s, zone 15 m) : inflige -6 en Attaque, Saves et Défense (AC) à tous les ennemis à portée (Will negates).
+
+Même ceux qui ignorent la Force s'appuient sur elle à chaque battement de cœur, comme sur un sol invisible dont ils ne soupçonnent pas l'existence. En cessant de contenir l'écho de sa propre coupure, l'Exilé projette auround de lui la sourde réalité de son vide et déchire brièvement la trame qui soutient le champ de bataille. Plongés dans une absence qu'ils n'ont jamais appris à endurer, ses ennemis sentent leur instinct se dérober : leurs frappes perdent leur justesse, leur garde s'effondre et leur esprit vacille. Seule une volonté capable de se tenir debout par elle-même peut résister à ce silence."
+147,XXXX_CRUSH_OPPOSITION_IV,Crush Opposition IV (cut),Caché — pouvoir de prestige,,"Hidden — Sith Lord (AoE Atk/Will debuff, see WIP Force Powers Specialization.csv)",supprimé / inutilisé (Déchirure de la Force uniformisé en 3 rangs max),,
+148,XXXX_CRUSH_OPPOSITION_V,Crush Opposition V (cut),Caché — pouvoir de prestige,XXXX_CRUSH_OPPOSITION_IV,"Hidden — Sith Lord (AoE Atk/Will debuff, see WIP Force Powers Specialization.csv)",supprimé / inutilisé (Déchirure de la Force uniformisé en 3 rangs max),,
+149,DARK_SIDE_CORRUPTION,Dark Side Corruption,Caché / interne,,Internal — corruption,,,
+150,IGNORE_PAIN_I,Ignore Pain I,Caché / interne,,Internal NPC — reduces damage taken,,,
+151,IGNORE_PAIN_II,Ignore Pain II,Caché / interne,IGNORE_PAIN_I,Internal NPC — reduces damage taken,,,
+152,IGNORE_PAIN_III,Ignore Pain III,Caché / interne,IGNORE_PAIN_I ; IGNORE_PAIN_II,Internal NPC — reduces damage taken,,,
+153,INCREASE_COMBAT_DAMAGE_I,Increase Combat Damage I,Caché / interne,,Internal NPC — damage bonus,,,
+154,INCREASE_COMBAT_DAMAGE_II,Increase Combat Damage II,Caché / interne,INCREASE_COMBAT_DAMAGE_I,Internal NPC — damage bonus,,,
+155,INCREASE_COMBAT_DAMAGE_III,Increase Combat Damage III,Caché / interne,INCREASE_COMBAT_DAMAGE_I ; INCREASE_COMBAT_DAMAGE_II,Internal NPC — damage bonus,,,
+156,SUPER_WEAPON_FOCUS_LIGHTSABER_I,Superior Weapon Focus: Lightsaber I,Maniement d'arme,WEAPON_SPEC_LIGHTSABER,+1 Atk with lightsabers (martial prestige),supprimé,,
+157,SUPER_WEAPON_FOCUS_LIGHTSABER_II,Superior Weapon Focus: Lightsaber II,Maniement d'arme,SUPER_WEAPON_FOCUS_LIGHTSABER_I,+2 Atk with lightsabers,supprimé,,
+158,SUPER_WEAPON_FOCUS_LIGHTSABER_III,Superior Weapon Focus: Lightsaber III,Maniement d'arme,SUPER_WEAPON_FOCUS_LIGHTSABER_I ; SUPER_WEAPON_FOCUS_LIGHTSABER_II,+3 Atk with lightsabers,supprimé,,
+159,SUPER_WEAPON_FOCUS_2_WEAPON_I,Superior Two-Weapon Fighting I,Style & posture,TWO_WEAPON_MASTERY,+1 Atk & Damage main hand (martial prestige classes),supprimé,,
+160,SUPER_WEAPON_FOCUS_2_WEAPON_II,Superior Two-Weapon Fighting II,Style & posture,SUPER_WEAPON_FOCUS_2_WEAPON_I,+2 Atk & Damage main hand,supprimé,,
+161,SUPER_WEAPON_FOCUS_2_WEAPON_III,Superior Two-Weapon Fighting III,Style & posture,SUPER_WEAPON_FOCUS_2_WEAPON_I ; SUPER_WEAPON_FOCUS_2_WEAPON_II,+3 Atk & Damage main hand,supprimé,,
+162,XXXX_INSPIRE_FOLLOWERS_I,Inspire Followers I (cut),Caché — pouvoir de prestige,,"Hidden — Weapon Master (party buff, see WIP Force Powers Specialization.csv)","Refondu en « Écho des Liens I » (Jedi Master, lvl 1, 30 s) : partage les buffs personnels avec l'allié le plus proche",,"[Mod D20-Overhaul]
+
+Effets (30 s) : partage vos améliorations personnelles avec l'allié le plus proche (sans restriction d'armure).
+
+Le vide que porte l'Exilé agit sur la Force comme une gravité silencieuse : tous ceux qui marchent dans son sillage finissent par se lier à lui, captifs de son écho. Là où un prédateur s'en servirait pour les vider de leur essence, l'Exilé inverse la polarité de ces Liens et fait de son absence une caisse de résonance. Chaque protection, chaque discipline et jusqu'à la guérison de sa propre chair se répercutent en ceux qui lui sont attachés — non par les courants ordinaires de la Force, mais par le Lien lui-même, franchissant ainsi toute entrave d'armure. Sans jamais commander, sa seule existence devient la mesure de ceux qui le suivent."
+163,XXXX_INSPIRE_FOLLOWERS_II,Inspire Followers II (cut),Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_I,"Hidden — Weapon Master (party buff, see WIP Force Powers Specialization.csv)","Refondu en « Écho des Liens II » (Jedi Master, lvl 5, 45 s) : partage les buffs personnels avec tout le groupe",,"[Mod D20-Overhaul]
+
+Effets (45 s) : partage vos améliorations personnelles avec tout le groupe (sans restriction d'armure).
+
+Le vide que porte l'Exilé agit sur la Force comme une gravité silencieuse : tous ceux qui marchent dans son sillage finissent par se lier à lui, captifs de son écho. Là où un prédateur s'en servirait pour les vider de leur essence, l'Exilé inverse la polarité de ces Liens et fait de son absence une caisse de résonance. Chaque protection, chaque discipline et jusqu'à la guérison de sa propre chair se répercutent en ceux qui lui sont attachés — non par les courants ordinaires de la Force, mais par le Lien lui-même, franchissant ainsi toute entrave d'armure. Sans jamais commander, sa seule existence devient la mesure de ceux qui le suivent."
+164,XXXX_INSPIRE_FOLLOWERS_III,Inspire Followers III (cut),Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_I ; XXXX_INSPIRE_FOLLOWERS_II,"Hidden — Weapon Master (party buff, see WIP Force Powers Specialization.csv)","Refondu en « Écho des Liens III » (Jedi Master, lvl 9, 60 s) : partage buffs personnels + soins avec tout le groupe (sans restriction d'armure)",,"[Mod D20-Overhaul]
+
+Effets (60 s) : partage vos améliorations personnelles et vos soins (pouvoirs, médipacs, régénération) avec tout le groupe (sans restriction d'armure).
+
+Le vide que porte l'Exilé agit sur la Force comme une gravité silencieuse : tous ceux qui marchent dans son sillage finissent par se lier à lui, captifs de son écho. Là où un prédateur s'en servirait pour les vider de leur essence, l'Exilé inverse la polarité de ces Liens et fait de son absence une caisse de résonance. Chaque protection, chaque discipline et jusqu'à la guérison de sa propre chair se répercutent en ceux qui lui sont attachés — non par les courants ordinaires de la Force, mais par le Lien lui-même, franchissant ainsi toute entrave d'armure. Sans jamais commander, sa seule existence devient la mesure de ceux qui le suivent."
+165,XXXX_INSPIRE_FOLLOWERS_IV,Inspire Followers IV (cut),Caché — pouvoir de prestige,,"Hidden — Weapon Master (party buff, see WIP Force Powers Specialization.csv)",supprimé / inutilisé (Écho des Liens uniformisé en 3 rangs max),,
+166,XXXX_INSPIRE_FOLLOWERS_V,Inspire Followers V (cut),Caché — pouvoir de prestige,XXXX_INSPIRE_FOLLOWERS_IV,"Hidden — Weapon Master (party buff, see WIP Force Powers Specialization.csv)",supprimé / inutilisé (Écho des Liens uniformisé en 3 rangs max),,
+167,LIGHT_SIDE_ENLIGHTENMENT,Light Side Enlightenment,Caché — pouvoir de prestige,,"Hidden — Jedi Master, unlocks Force Enlightenment (see WIP Force Powers Specialization.csv)",,,
+168,DEFLECT,Deflect,Caché / interne,,Internal — blaster bolt deflection,,,
+169,INNER_STRENGTH_I,Inner Strength I,Caché / interne,,Internal (to be documented),,,
+170,INNER_STRENGTH_II,Inner Strength II,Caché / interne,INNER_STRENGTH_I,Internal (to be documented),,,
+171,INNER_STRENGTH_III,Inner Strength III,Caché / interne,INNER_STRENGTH_I ; INNER_STRENGTH_II,Internal (to be documented),,,
+172,INCREASE_MELEE_DAMAGE_I,Increase Melee Damage I,Caché / interne,,Internal NPC — melee damage bonus,,,
+173,INCREASE_MELEE_DAMAGE_II,Increase Melee Damage II,Caché / interne,INCREASE_MELEE_DAMAGE_I,Internal NPC — melee damage bonus,,,
+174,INCREASE_MELEE_DAMAGE_III,Increase Melee Damage III,Caché / interne,INCREASE_MELEE_DAMAGE_I ; INCREASE_MELEE_DAMAGE_II,Internal NPC — melee damage bonus,,,
+175,CRAFT,Craft,Compétence & utilitaire,,Unused in K2 (workbench is freely accessible),,,
+176,MASTERCRAFT_WEAPONS_I,Mastercraft: Weapons I,Compétence & utilitaire,,Unused in K2 (workbench freely accessible),,,
+177,MASTERCRAFT_WEAPONS_II,Mastercraft: Weapons II,Compétence & utilitaire,MASTERCRAFT_WEAPONS_I,Unused in K2 (workbench freely accessible),,,
+178,MASTERCRAFT_WEAPONS_III,Mastercraft: Weapons III,Compétence & utilitaire,MASTERCRAFT_WEAPONS_I ; MASTERCRAFT_WEAPONS_II,Unused in K2 (workbench freely accessible),,,
+179,MASTERCRAFT_ARMOR_I,Mastercraft: Armor I,Compétence & utilitaire,,Unused in K2 (workbench freely accessible),,,
+180,MASTERCRAFT_ARMOR_II,Mastercraft: Armor II,Compétence & utilitaire,MASTERCRAFT_ARMOR_I,Unused in K2 (workbench freely accessible),,,
+181,MASTERCRAFT_ARMOR_III,Mastercraft: Armor III,Compétence & utilitaire,MASTERCRAFT_ARMOR_I ; MASTERCRAFT_ARMOR_II,Unused in K2 (workbench freely accessible),,,
+182,DROID_INTERFACE,Droid Interface,Compagnon / PNJ,,Internal droid,,,
+183,CLASS_SKILL_AWARENESS,Class Skill: Awareness,Compétence & utilitaire,,Converts skill into class skill (cost 1 pt at level up),,,
+184,CLASS_SKILL_COMPUTER_USE,Class Skill: Computer Use,Compétence & utilitaire,,Converts skill into class skill (cost 1 pt at level up),,,
+185,CLASS_SKILL_DEMOLITIONS,Class Skill: Demolitions,Compétence & utilitaire,,Converts skill into class skill (cost 1 pt at level up),,,
+186,CLASS_SKILL_REPAIR,Class Skill: Repair,Compétence & utilitaire,,Converts skill into class skill (cost 1 pt at level up),,,
+187,CLASS_SKILL_SECURITY,Class Skill: Security,Compétence & utilitaire,,Converts skill into class skill (cost 1 pt at level up),,,
+188,CLASS_SKILL_STEALTH,Class Skill: Stealth,Compétence & utilitaire,,Converts skill into class skill (cost 1 pt at level up),,,
+189,CLASS_SKILL_TREAT_INJURY,Class Skill: Treat Injury,Compétence & utilitaire,,Converts skill into class skill (cost 1 pt at level up),,,
+190,DUAL_STRIKE,Dual Strike,Style & posture,,Active mode 2 weapons: both weapons strike in a single action; Defense penalty,,,
+191,IMPROVED_DUAL_STRIKE,Improved Dual Strike,Style & posture,Lvl 4 ; DUAL_STRIKE,Reduced Defense penalty,,,
+192,MASTER_DUAL_STRIKE,Master Dual Strike,Style & posture,Lvl 8 ; DUAL_STRIKE ; IMPROVED_DUAL_STRIKE,Reduced Defense penalty,,,
+193,FINESSE_LIGHTSABERS,Weapon Finesse: Lightsabers,Maniement d'arme,,Uses DEX mod instead of STR on attack rolls with lightsabers if DEX > STR,supprimé,,
+194,FINESSE_MELEE_WEAPONS,Weapon Finesse: Melee Weapons,Maniement d'arme,,Uses DEX mod instead of STR on attack rolls with melee weapons if DEX > STR,supprimé,,
+195,XXXX_MOBILITY,Mobility (cut),Caché / interne,Lvl 4,Hidden (XXXX) — unused,,,
+196,REGENERATE_VITALITY_POINTS,Regenerate Vitality Points,Classe (auto),Lvl 4,Regenerates Vitality over time (internal),,,
+197,STEALTH_RUN,Stealth Run,Compétence & utilitaire,Lvl 4,Move faster in stealth mode,,,
+198,KINETIC_COMBAT,Kinetic Combat,Compagnon / PNJ,,Kreia — telekinetic lightsaber combat (NPC),,,
+199,SURVIVAL,Survival,Caché / interne,,Internal (unused — to be documented),,,
+200,MANDALORIAN_COURAGE,Mandalorian Courage,Compagnon / PNJ,,Mandalore — Fear immunity (to be verified),,,
+201,PERSONAL_CLOAKING_SHIELD,Personal Cloaking Shield,Compagnon / PNJ,,Internal — integrated stealth,,,
+202,MENTOR,Mentor,Compagnon / PNJ,,Internal (companion influence),,,
+203,IMPLANT_SWITCHING,Implant Switching,Caché / interne,,Internal — implant handling,,,
+204,SPIRIT,Spirit,Compagnon / PNJ,,Internal (to be documented),,,
+205,FORCE_CHAIN,Force Chain,Caché / interne,,Internal (Jedi Master),,,
+206,WAR_VETERAN,War Veteran,Compagnon / PNJ,,Internal companion,,,
+207,COMPLEX_UNARMED_ANIMS,Complex Unarmed Animations,Caché / interne,,Internal — animations,,,
+208,WEAPON_PROF_WRIST_MOUNTED,Weapon Proficiency: Wrist Launcher,Maniement d'arme,,Mandalore — equip wrist launcher without penalty,,,
+209,ECHANI_STRIKE_I,Echani Strike I,Compagnon / PNJ,,Bonus de combat (Servante),,,
+210,ECHANI_STRIKE_II,Echani Strike II,Compagnon / PNJ,ECHANI_STRIKE_I,Bonus accru,,,
+211,ECHANI_STRIKE_III,Echani Strike III,Compagnon / PNJ,ECHANI_STRIKE_I ; ECHANI_STRIKE_II,Bonus maximal,,,
+212,UNARMED_SPECIALIST_I,Unarmed Specialist I,Classe (auto),,Increased unarmed damage (auto progression),Calibrage mod (B4-1) : +1d4 dégâts à mains nues (auto Lvl 4 base / Lvl 1 prestige / Servante & Bao-Dur Lvl 4),,"[Mod D20-Overhaul]
+
+Conditions : Jedi, Servante ou Bao-Dur niveau 4 (accordé automatiquement).
+
+Spécialement formé au combat à mains nues, le personnage inflige +1d4 points de dégâts supplémentaires à toutes ses attaques sans arme."
+213,UNARMED_SPECIALIST_II,Unarmed Specialist II,Classe (auto),UNARMED_SPECIALIST_I,Increased unarmed damage (auto progression),Calibrage mod (B4-1) : +2d4 dégâts à mains nues (auto Lvl 12 base / Lvl 1 prestige / Servante & Bao-Dur Lvl 12),,"[Mod D20-Overhaul]
+
+Conditions : Jedi, Servante ou Bao-Dur niveau 12 (accordé automatiquement).
+
+Spécialement formé au combat à mains nues, le personnage inflige +2d4 points de dégâts supplémentaires à toutes ses attaques sans arme (remplace Spécialiste mains nues I)."
+214,UNARMED_SPECIALIST_III,Unarmed Specialist III,Classe (auto),UNARMED_SPECIALIST_I ; UNARMED_SPECIALIST_II,Increased unarmed damage (auto progression),Calibrage mod (B4-1) : +3d4 dégâts à mains nues — plafond final (auto Lvl 19 base / Lvl 4 prestige / Servante & Bao-Dur Lvl 19),,"[Mod D20-Overhaul]
+
+Conditions : Jedi, Servante ou Bao-Dur niveau 19 — ou classe de prestige niveau 4 (accordé automatiquement).
+
+Palier final de maîtrise du combat à mains nues : le personnage inflige +3d4 points de dégâts supplémentaires à toutes ses attaques sans arme (remplace Spécialiste mains nues II)."
+215,UNARMED_SPECIALIST_IV,Unarmed Specialist IV,Classe (auto),,Increased unarmed damage (auto progression),Supprimé (progression plafonnée au Rank III : +3d4 max),,
+216,UNARMED_SPECIALIST_V,Unarmed Specialist V,Classe (auto),UNARMED_SPECIALIST_IV,Increased unarmed damage (auto progression),Supprimé (progression plafonnée au Rank III : +3d4 max),,
+217,UNARMED_SPECIALIST_VI,Unarmed Specialist VI,Classe (auto),UNARMED_SPECIALIST_IV ; UNARMED_SPECIALIST_V,Increased unarmed damage (auto progression),Supprimé (progression plafonnée au Rank III : +3d4 max),,
+218,UNARMED_SPECIALIST_VII,Unarmed Specialist VII,Classe (auto),,Increased unarmed damage (auto progression),Supprimé (progression plafonnée au Rank III : +3d4 max),,
+219,UNARMED_SPECIALIST_VIII,Unarmed Specialist VIII,Classe (auto),UNARMED_SPECIALIST_VII,Final unarmed damage tier,Supprimé (progression plafonnée au Rank III : +3d4 max),,
+220,SHIELD_BREAKER,Shield Breaker,Compagnon / PNJ,,HK-47 — attack vs shields (internal),,,
+221,REPULSOR_STRIKE,Repulsor Strike,Compagnon / PNJ,,HK-47 — knockdown on impact (internal),,,
+222,ELECTRICAL_STRIKE,Electrical Strike,Compagnon / PNJ,REPULSOR_STRIKE,HK-47 — ion damage on impact (internal),,,
+223,GRAVITONIC_STRIKE,Gravitonic Strike,Compagnon / PNJ,REPULSOR_STRIKE ; ELECTRICAL_STRIKE,HK-47 — stun on impact (internal),,,
+224,WOOKIEE_TOUGHNESS_II,Wookiee Toughness II,Compagnon / PNJ,WOOKIEE_TOUGHNESS,+Vitality,,,
+225,WOOKIEE_TOUGHNESS_III,Wookiee Toughness III,Compagnon / PNJ,WOOKIEE_TOUGHNESS ; WOOKIEE_TOUGHNESS_II,+Vitality,,,
+226,XXXPRECISE_SHOT_IV,Precise Shot IV (NPC cut),Caché / interne,Lvl 16 ; XXXPRECISE_SHOT_III,Hidden (XXX) — NPC version of Sniper Shot,,,
+227,XXXPRECISE_SHOT_V,Precise Shot V (NPC cut),Caché / interne,Lvl 20 ; XXXPRECISE_SHOT_IV,Hidden (XXX) — NPC version of Sniper Shot,,,
+228,ASSASSIN_PROTOCOL_I,Assassin Protocols I,Compagnon / PNJ,Lvl 1,HK-47 — protocole de chasse,,,
+229,ASSASSIN_PROTOCOL_II,Assassin Protocols II,Compagnon / PNJ,Lvl 11 ; ASSASSIN_PROTOCOL_I,HK-47,,,
+230,ASSASSIN_PROTOCOL_III,Assassin Protocols III,Compagnon / PNJ,Lvl 17 ; ASSASSIN_PROTOCOL_I ; ASSASSIN_PROTOCOL_II,HK-47,,,
+231,WOOKIEE_RAGE_I,Wookiee Rage I,Compagnon / PNJ,Lvl 1,Rage de combat (Hanharr),,,
+232,WOOKIEE_RAGE_II,Wookiee Rage II,Compagnon / PNJ,Lvl 11 ; WOOKIEE_RAGE_I,Improved rage,,,
+233,WOOKIEE_RAGE_III,Wookiee Rage III,Compagnon / PNJ,Lvl 17 ; WOOKIEE_RAGE_I ; WOOKIEE_RAGE_II,Rage maximale,,,
+234,DROID_TRICK,Droid Trick,Compagnon / PNJ,Lvl 10,T3-M4 — droid hacking,,,
+235,DROID_CONFUSION,Droid Confusion,Compagnon / PNJ,Lvl 15 ; DROID_TRICK,T3-M4,,,
+236,FIGHTING_SPIRIT,Fighting Spirit,Compagnon / PNJ,Lvl 8 ; SPIRIT,Internal (to be documented),,,
+237,HEROIC_RESOLVE,Heroic Resolve,Compagnon / PNJ,Lvl 15 ; SPIRIT ; FIGHTING_SPIRIT,Internal (to be documented),,,
+238,MINE_IMMUNITY,Mine Immunity,Défense & survie,,"Does not trigger mines (auto, granted by script/class)",,,
+239,POINT_GUARD,Point Guard,Caché / interne,,Internal AI (Point Guard),,,
+240,PRECISE_SHOT_I,Precise Shot I,Actif — distance,Lvl 4,+1 Atk & Damage (ranged) ; +2 Defense vs blasters ; reduces shooting penalty on target in melee,,,
+241,PRECISE_SHOT_II,Precise Shot II,Actif — distance,Lvl 8 ; PRECISE_SHOT_I,+2 Atk & Damage ; +4 Defense vs blasters ; reduces penalty in melee,,,
+242,PRECISE_SHOT_III,Precise Shot III,Actif — distance,Lvl 12 ; PRECISE_SHOT_I ; PRECISE_SHOT_II,+3 Atk & Damage ; +6 Defense vs blasters ; reduces penalty in melee,,,
+243,PRECISE_SHOT_IV,Precise Shot IV,Actif — distance,Lvl 16 ; PRECISE_SHOT_III,+4 Atk & Damage ; +8 Defense vs blasters ; reduces penalty in melee,,,
+244,PRECISE_SHOT_V,Precise Shot V,Actif — distance,Lvl 20 ; PRECISE_SHOT_IV,+5 Atk & Damage ; +10 Defense vs blasters ; reduces penalty in melee,,,
+,,══ STYLES DE COMBAT — Style de combat.csv ══,,,,,,
+nouveau (246+),MOD_AMBIDEXTRY_1,Ambidexterity I,STYLES DE COMBAT,Lvl 1+ ; Une arme en main droite et une autre en main gauche équipées,CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atk -6/-6, +1 AC (malus de base sans le don : -6/-10 ; +2/0 si arme équilibrée en main gauche)",,"[Mod D20-Overhaul]
+
+Effects: Combat à deux armes : Atk -6/-6, +1 AC (malus de base sans le don : -6/-10 ; +2/0 si arme équilibrée en main gauche)
+
+Issu des disciplines de combat à deux lames et deux blasters de la Bordure Extérieure, cet entraînement coordonne main directrice et main faible pour transformer l'escrime double en véritable mur défensif."
+nouveau (246+),MOD_AMBIDEXTRY_2,Ambidexterity II,STYLES DE COMBAT,Lvl 4+ ; Rank I + deux armes équipées (une par main),CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atk -4/-4, +2 AC",,"[Mod D20-Overhaul]
+
+Effects: Combat à deux armes : Atk -4/-4, +2 AC
+
+Issu des disciplines de combat à deux lames et deux blasters de la Bordure Extérieure, cet entraînement coordonne main directrice et main faible pour transformer l'escrime double en véritable mur défensif."
+nouveau (246+),MOD_AMBIDEXTRY_3,Ambidexterity III,STYLES DE COMBAT,Lvl 8+ ; Rank II + deux armes équipées ; Tous sauf Mages (Guardian / Sentinel / prestiges non-mages),CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atk -2/-2, +3 AC",,"[Mod D20-Overhaul]
+
+Effects: Combat à deux armes : Atk -2/-2, +3 AC
+
+Issu des disciplines de combat à deux lames et deux blasters de la Bordure Extérieure, cet entraînement coordonne main directrice et main faible pour transformer l'escrime double en véritable mur défensif."
+nouveau (246+),MOD_HEAVY_WEAPON_1,Heavy Weapon Handling I,STYLES DE COMBAT,Lvl 1+ ; Arme 2H équipée,CUSTOM — absent du jeu vanilla,+1 Atk ; dégâts mêlée 215 % STR ; dégâts distance 165 % DEX (base moddée : 200 % STR / 150 % DEX),,"[Mod D20-Overhaul]
+
+Effects: +1 Atk ; dégâts mêlée 215 % STR ; dégâts distance 165 % DEX
+
+Le maniement d'une arme à deux mains exige un ancrage parfait et un transfert complet du poids du corps dans chaque frappe ou chaque rafale, libérant une puissance cinétique supérieure."
+nouveau (246+),MOD_HEAVY_WEAPON_2,Heavy Weapon Handling II,STYLES DE COMBAT,Lvl 4+ ; Maniement d'Arme Lourde I,CUSTOM — absent du jeu vanilla,+2 Atk ; dégâts mêlée 235 % STR ; dégâts distance 185 % DEX,,"[Mod D20-Overhaul]
+
+Effects: +2 Atk ; dégâts mêlée 235 % STR ; dégâts distance 185 % DEX
+
+Le maniement d'une arme à deux mains exige un ancrage parfait et un transfert complet du poids du corps dans chaque frappe ou chaque rafale, libérant une puissance cinétique supérieure."
+nouveau (246+),MOD_HEAVY_WEAPON_3,Heavy Weapon Handling III,STYLES DE COMBAT,Lvl 8+ ; Maniement d'Arme Lourde II ; Tous sauf Mages (Guardian / Sentinel / prestiges non-mages),CUSTOM — absent du jeu vanilla,+3 Atk ; dégâts mêlée 250 % STR ; dégâts distance 200 % DEX,,"[Mod D20-Overhaul]
+
+Effects: +3 Atk ; dégâts mêlée 250 % STR ; dégâts distance 200 % DEX
+
+Le maniement d'une arme à deux mains exige un ancrage parfait et un transfert complet du poids du corps dans chaque frappe ou chaque rafale, libérant une puissance cinétique supérieure."
+nouveau (246+),MOD_DUEL_1,Dueling I,STYLES DE COMBAT,Lvl 1+ ; Arme à une main ou mains nues,CUSTOM — absent du jeu vanilla,"+2 Atk, plage de critique +1",,"[Mod D20-Overhaul]
+
+Effects: +2 Atk, plage de critique +1
+
+École d'escrime et de tir de précision privilégiant une arme unique. La main libre assure équilibre, mobilité et recherche constante des failles dans la garde adverse."
+nouveau (246+),MOD_DUEL_2,Dueling II,STYLES DE COMBAT,Lvl 4+ ; Rank I + arme à une main ou mains nues,CUSTOM — absent du jeu vanilla,"+4 Atk, plage de critique +2",,"[Mod D20-Overhaul]
+
+Effects: +4 Atk, plage de critique +2
+
+École d'escrime et de tir de précision privilégiant une arme unique. La main libre assure équilibre, mobilité et recherche constante des failles dans la garde adverse."
+nouveau (246+),MOD_DUEL_3,Dueling III,STYLES DE COMBAT,Lvl 8+ ; Rank II + arme à une main ou mains nues (ouvert à tous),CUSTOM — absent du jeu vanilla,"+6 Atk, plage de critique +3","Synergie implicite : la plage élargie augmente la fréquence des procs sur critique des Spé d'arme (proc = plage / 20 par coup). Base native conservée : dégâts mêlée 150 % STR à une arme (règle moteur 1H, main gauche vide).","[Mod D20-Overhaul]
+
+Effects: +6 Atk, plage de critique +3
+
+École d'escrime et de tir de précision privilégiant une arme unique. La main libre assure équilibre, mobilité et recherche constante des failles dans la garde adverse."
+nouveau (246+),MOD_DOUBLE_WEAPON_1,High-Rate Weapon Handling I,STYLES DE COMBAT,Lvl 1+ ; Arme double ou blaster à répétition équipé,CUSTOM — absent du jeu vanilla,"Remplace le malus de 5 de AC d""utilisation des armes doubles par :
+Damage +1/+1 (chaque bout) ; malus de AC réduit à -3",,"[Mod D20-Overhaul]
+
+Effects: Damage +1/+1 (chaque bout) ; malus de AC réduit à -3
+
+Les armes doubles et blasters à haute cadence saturent l'adversaire par le volume de coups, au prix d'une garde exposée que seul un entraînement rigoureux permet de refermer."
+nouveau (246+),MOD_DOUBLE_WEAPON_2,High-Rate Weapon Handling II,STYLES DE COMBAT,Lvl 4+ ; Rank I,CUSTOM — absent du jeu vanilla,Damage +2/+2 ; malus de AC -2,,"[Mod D20-Overhaul]
+
+Effects: Damage +2/+2 ; malus de AC -2
+
+Les armes doubles et blasters à haute cadence saturent l'adversaire par le volume de coups, au prix d'une garde exposée que seul un entraînement rigoureux permet de refermer."
+nouveau (246+),MOD_DOUBLE_WEAPON_3,High-Rate Weapon Handling III,STYLES DE COMBAT,Lvl 8+ ; Rank II ; Tous sauf Mages (Guardian / Sentinel / prestiges non-mages),CUSTOM — absent du jeu vanilla,Damage +3/+3 ; malus de AC -1,,"[Mod D20-Overhaul]
+
+Effects: Damage +3/+3 ; malus de AC -1
+
+Les armes doubles et blasters à haute cadence saturent l'adversaire par le volume de coups, au prix d'une garde exposée que seul un entraînement rigoureux permet de refermer."
+,,══ WEAPON SPECIALIZATIONS BY FAMILY — Spécialisation d'arme.csv ══,,,CUSTOM — absent du jeu vanilla,,,
+nouveau (246+),MOD_SPEC_BLUNT_1,Impact Weapon Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes mêlée + arme d'impact équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (armes d'impact : mains nues, matraque, torche à plasma, bâton, pique de Force)",,"[Mod D20-Overhaul]
+
+Effects: +2 Atk et +2 Damage (armes d'impact : mains nues, matraque, torche à plasma, bâton, pique de Force)
+
+De la matraque de sécurité au combat à mains nues, la maîtrise des armes d'impact repose sur la force brute de percussion, capable de briser l'équilibre et de projeter l'adversaire au sol."
+nouveau (246+),MOD_SPEC_BLUNT_2,Impact Weapon Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + arme d'impact équipée ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD/TEC),CUSTOM — absent du jeu vanilla,Renversement 1 round (Fortitude negates). Proc = plage de menace de l'arme / 20 par coup ; DC = 10 + Lvl attaquant + mod. de la carac. directrice de l'arme,,"[Mod D20-Overhaul]
+
+Effects: Renversement 1 round (Fortitude negates). Déclenchement = plage de menace de l'arme / 20 par coup ; DC = 10 + Lvl attaquant + mod. de la carac. directrice de l'arme
+
+De la matraque de sécurité au combat à mains nues, la maîtrise des armes d'impact repose sur la force brute de percussion, capable de briser l'équilibre et de projeter l'adversaire au sol."
+nouveau (246+),MOD_SPEC_BLUNT_3,Impact Weapon Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II ; Weapon Master / Sith Marauder (ou SOL/SCT/SCD/TEC Lvl 15+),CUSTOM — absent du jeu vanilla,Renversement 2 rounds,,"[Mod D20-Overhaul]
+
+Effects: Renversement 2 rounds
+
+De la matraque de sécurité au combat à mains nues, la maîtrise des armes d'impact repose sur la force brute de percussion, capable de briser l'équilibre et de projeter l'adversaire au sol."
+nouveau (246+),MOD_SPEC_PRIM_1,Traditional Weapon Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes mêlée + arme traditionnelle équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (épées, hache, lames doubles traditionnelles)",,"[Mod D20-Overhaul]
+
+Effects: +2 Atk et +2 Damage (épées, hache, lames doubles traditionnelles)
+
+Forgées dans les alliages les plus denses de la galaxie, les lames traditionnelles compensent l'absence d'énergie par une masse redoutable qui fissure les plaques d'armure les plus épaisses."
+nouveau (246+),MOD_SPEC_PRIM_2,Traditional Weapon Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + arme traditionnelle équipée ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD/TEC),CUSTOM — absent du jeu vanilla,"Bris d'armure : -3 AC, 2 rounds (Fortitude negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme",,"[Mod D20-Overhaul]
+
+Effects: Bris d'armure : -3 AC, 2 rounds (Fortitude negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme
+
+Forgées dans les alliages les plus denses de la galaxie, les lames traditionnelles compensent l'absence d'énergie par une masse redoutable qui fissure les plaques d'armure les plus épaisses."
+nouveau (246+),MOD_SPEC_PRIM_3,Traditional Weapon Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II ; Weapon Master / Sith Marauder (ou SOL/SCT/SCD/TEC Lvl 15+),CUSTOM — absent du jeu vanilla,Bris d'armure aggravé : Cumulable ; +1 round,,"[Mod D20-Overhaul]
+
+Effects: Bris d'armure aggravé : Cumulable ; +1 round
+
+Forgées dans les alliages les plus denses de la galaxie, les lames traditionnelles compensent l'absence d'énergie par une masse redoutable qui fissure les plaques d'armure les plus épaisses."
+nouveau (246+),MOD_SPEC_VIBRO_1,Resonance Weapon Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes mêlée + arme à résonance équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (vibrolames, vibro-épées, vibrolames doubles)",,"[Mod D20-Overhaul]
+
+Effects: +2 Atk et +2 Damage (vibrolames, vibro-épées, vibrolames doubles)
+
+Les lames à résonance ultrasonique déchirent tendons et servomoteurs à chaque entaille, handicapant durablement la capacité de riposte de la cible."
+nouveau (246+),MOD_SPEC_VIBRO_2,Resonance Weapon Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + arme à résonance équipée ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD/TEC),CUSTOM — absent du jeu vanilla,"Ébranlement : -4 Atk et -4 Damage, 1 round (Reflex negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme.
+Chance de proc pour chaque attaque.",,"[Mod D20-Overhaul]
+
+Effects: Ébranlement : -4 Atk et -4 Damage, 1 round (Reflex negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme. Chance de déclenchement pour chaque attaque.
+
+Les lames à résonance ultrasonique déchirent tendons et servomoteurs à chaque entaille, handicapant durablement la capacité de riposte de la cible."
+nouveau (246+),MOD_SPEC_VIBRO_3,Resonance Weapon Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II ; Weapon Master / Sith Marauder (ou SOL/SCT/SCD/TEC Lvl 15+),CUSTOM — absent du jeu vanilla,"Ébranlement empilable : -2 supplémentaires par proc, plafond -8 Atk/Damage, durée rafraîchie 1 round",,"[Mod D20-Overhaul]
+
+Effects: Ébranlement empilable : -2 supplémentaires par déclenchement, plafond -8 Atk/Damage, durée rafraîchie 1 round
+
+Les lames à résonance ultrasonique déchirent tendons et servomoteurs à chaque entaille, handicapant durablement la capacité de riposte de la cible."
+nouveau (246+),MOD_SPEC_LASER_1,Laser Weapon Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes sabres + sabre équipé,CUSTOM — absent du jeu vanilla,+2 Atk et +2 Damage (sabres laser),,"[Mod D20-Overhaul]
+
+Effects: +2 Atk et +2 Damage (sabres laser)
+
+L'arme d'un Jedi ou d'un Sith n'est pas qu'une lame de plasma : son maniement érode la concentration et la volonté de ceux qui tentent de résister à son porteur."
+nouveau (246+),MOD_SPEC_LASER_2,Laser Weapon Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + sabre équipé ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin,CUSTOM — absent du jeu vanilla,"Bris de volonté : -4 aux sauvegardes, 2 rounds (Will negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme",,"[Mod D20-Overhaul]
+
+Effects: Bris de volonté : -4 aux sauvegardes, 2 rounds (Will negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme
+
+L'arme d'un Jedi ou d'un Sith n'est pas qu'une lame de plasma : son maniement érode la concentration et la volonté de ceux qui tentent de résister à son porteur."
+nouveau (246+),MOD_SPEC_LASER_3,Laser Weapon Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II ; Weapon Master / Sith Marauder,CUSTOM — absent du jeu vanilla,Bris de volonté aggravé : Plus de jet de sauvegarde pour résister à Bris de volonté.,,"[Mod D20-Overhaul]
+
+Effects: Bris de volonté aggravé : Plus de jet de sauvegarde pour résister à Bris de volonté.
+
+L'arme d'un Jedi ou d'un Sith n'est pas qu'une lame de plasma : son maniement érode la concentration et la volonté de ceux qui tentent de résister à son porteur."
+nouveau (246+),MOD_SPEC_ASSAULT_1,Assault Fire Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes : blasters + arme d'assaut équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (pistolet blaster, carabine blaster, blaster à répétition)",,"[Mod D20-Overhaul]
+
+Effects: +2 Atk et +2 Damage (pistolet blaster, carabine blaster, blaster à répétition)
+
+Entraînement de combat rapproché des commandos républicains, conçu pour maintenir un feu soutenu au blaster sans jamais céder de terrain, même au contact."
+nouveau (246+),MOD_SPEC_ASSAULT_2,Assault Fire Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + arme d'assaut équipée ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD/TEC/DRC/DRX),CUSTOM — absent du jeu vanilla,None malus en mêlée,,"[Mod D20-Overhaul]
+
+Effects: None malus en mêlée
+
+Entraînement de combat rapproché des commandos républicains, conçu pour maintenir un feu soutenu au blaster sans jamais céder de terrain, même au contact."
+nouveau (246+),MOD_SPEC_ASSAULT_3,Assault Fire Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II + arme d'assaut équipée ; Weapon Master / Sith Marauder (ou SOL/SCT/SCD/TEC/DRC Lvl 15+),CUSTOM — absent du jeu vanilla,+1 Atk par round main directrice,,"[Mod D20-Overhaul]
+
+Effects: +1 Atk par round main directrice
+
+Entraînement de combat rapproché des commandos républicains, conçu pour maintenir un feu soutenu au blaster sans jamais céder de terrain, même au contact."
+nouveau (246+),MOD_SPEC_HEAVY_1,Penetrating Fire Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes : fusils + arme pénétrante équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (blaster lourd, fusil blaster, arbalète wookie, blaster lourd à répétition)",,"[Mod D20-Overhaul]
+
+Effects: +2 Atk et +2 Damage (blaster lourd, fusil blaster, arbalète wookie, blaster lourd à répétition)
+
+Spécialité des tireurs lourds et chasseurs wookies, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
+nouveau (246+),MOD_SPEC_HEAVY_2,Penetrating Fire Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + arme pénétrante équipée ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD/TEC/DRC/DRX),CUSTOM — absent du jeu vanilla,"Repousse l'adversaire de 3 m (Fortitude negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme. Sauvegarde par coup qui touche ; l'effet ne s'applique qu'une fois par round, même après plusieurs échecs",,"[Mod D20-Overhaul]
+
+Effects: Repousse l'adversaire de 3 m (Fortitude negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme. Sauvegarde par coup qui touche ; l'effet ne s'applique qu'une fois par round, même après plusieurs échecs
+
+Spécialité des tireurs lourds et chasseurs wookies, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
+nouveau (246+),MOD_SPEC_HEAVY_3,Penetrating Fire Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II + arme pénétrante équipée ; Weapon Master / Sith Marauder (ou SOL/SCT/SCD/TEC/DRC Lvl 15+),CUSTOM — absent du jeu vanilla,+5 Damage,,"[Mod D20-Overhaul]
+
+Effects: +5 Damage
+
+Spécialité des tireurs lourds et chasseurs wookies, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
+nouveau (246+),MOD_SPEC_TAC_1,Tactical Fire Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes : blasters + arme tactique équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (pistolet à ions, fusil à ions, pistolet sonique, fusil sonique)",,"[Mod D20-Overhaul]
+
+Effects: +2 Atk et +2 Damage (pistolet à ions, fusil à ions, pistolet sonique, fusil sonique)
+
+Tactique d'interdiction combinant décharges ioniques et ondes soniques pour neutraliser aussi bien les droïdes de combat que les systèmes nerveux organiques."
+nouveau (246+),MOD_SPEC_TAC_2,Tactical Fire Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + arme tactique équipée ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD/TEC/DRC/DRX),CUSTOM — absent du jeu vanilla,Stun 1 round (Fortitude negates). Proc = plage de menace de l'arme / 20 par coup ; DC = 10 + Lvl attaquant + mod. de la carac. directrice de l'arme ; Stun droïde sur les ennemis mécaniques,,"[Mod D20-Overhaul]
+
+Effects: Stun 1 round (Fortitude negates). Déclenchement = plage de menace de l'arme / 20 par coup ; DC = 10 + Lvl attaquant + mod. de la carac. directrice de l'arme ; Stun droïde sur les ennemis mécaniques
+
+Tactique d'interdiction combinant décharges ioniques et ondes soniques pour neutraliser aussi bien les droïdes de combat que les systèmes nerveux organiques."
+nouveau (246+),MOD_SPEC_TAC_3,Tactical Fire Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II + arme tactique équipée ; Weapon Master / Sith Marauder (ou SOL/SCT/SCD/TEC/DRC Lvl 15+),CUSTOM — absent du jeu vanilla,Stun 2 rounds,,"[Mod D20-Overhaul]
+
+Effects: Stun 2 rounds
+
+Tactique d'interdiction combinant décharges ioniques et ondes soniques pour neutraliser aussi bien les droïdes de combat que les systèmes nerveux organiques."
+nouveau (246+),MOD_SPEC_ASSASSIN_1,Assassin Fire Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes : blasters + arme assassine équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (blaster de poche, pistolet disrupteur, fusil disrupteur)",,"[Mod D20-Overhaul]
+
+Effects: +2 Atk et +2 Damage (blaster de poche, pistolet disrupteur, fusil disrupteur)
+
+Doctrine des tueurs à gages et tireurs d'élite utilisant des armes discrètes ou disruptrices pour exploiter la moindre ouverture sur une cible surprise ou neutralisée."
+nouveau (246+),MOD_SPEC_ASSASSIN_2,Assassin Fire Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + arme assassine équipée ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD/TEC/DRC/DRX),CUSTOM — absent du jeu vanilla,Les attaques sournoises gagnent +2d6 de Damage. Donne la capacité d'en faire si nécessaire,,"[Mod D20-Overhaul]
+
+Effects: Les attaques sournoises gagnent +2d6 de Damage. Donne la capacité d'en faire si nécessaire
+
+Doctrine des tueurs à gages et tireurs d'élite utilisant des armes discrètes ou disruptrices pour exploiter la moindre ouverture sur une cible surprise ou neutralisée."
+nouveau (246+),MOD_SPEC_ASSASSIN_3,Assassin Fire Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II + arme assassine équipée ; Weapon Master / Sith Marauder (ou SOL/SCT/SCD/TEC/DRC Lvl 15+),CUSTOM — absent du jeu vanilla,Multiplicateur de critique +1,,"[Mod D20-Overhaul]
+
+Effects: Multiplicateur de critique +1
+
+Doctrine des tueurs à gages et tireurs d'élite utilisant des armes discrètes ou disruptrices pour exploiter la moindre ouverture sur une cible surprise ou neutralisée."
+,,"══ ARMURES — 3 arbres (§8.B, acté) ══",,,,,,
+nouveau (246+),MOD_ARMOR_LIGHT_1,Ballistic Evasion I,ARMURES,Lvl 1+ ; Port d'armure légère + Light Armor equipped,CUSTOM — absent du jeu vanilla,Esquive +10 % ; +1 AC,,"[Mod D20-Overhaul]
+
+Effects: Esquive +10 % ; +1 AC
+
+Les combattants en armure légère misent sur la lecture des lignes de tir et l'esquive mobile plutôt que sur l'épaisseur du blindage."
+nouveau (246+),MOD_ARMOR_LIGHT_2,Ballistic Evasion II,ARMURES,Lvl 8+ ; Rank I + Light Armor equipped ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD),CUSTOM — absent du jeu vanilla,Esquive +20 % ; +2 AC,,"[Mod D20-Overhaul]
+
+Effects: Esquive +20 % ; +2 AC
+
+Les combattants en armure légère misent sur la lecture des lignes de tir et l'esquive mobile plutôt que sur l'épaisseur du blindage."
+nouveau (246+),MOD_ARMOR_LIGHT_3,Ballistic Evasion III,ARMURES,Lvl 15+ ; Rank II + Light Armor equipped ; Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD Lvl 15+ ; Visas Lvl 15+),CUSTOM — absent du jeu vanilla,Esquive +30 % ; +3 AC,,"[Mod D20-Overhaul]
+
+Effects: Esquive +30 % ; +3 AC
+
+Les combattants en armure légère misent sur la lecture des lignes de tir et l'esquive mobile plutôt que sur l'épaisseur du blindage."
+nouveau (246+),MOD_ARMOR_MED_1,Tactical Armor I,ARMURES,Lvl 1+ ; Port d'Medium Armor + Medium Armor equipped,CUSTOM — absent du jeu vanilla,DR 3/- ; +1 AC ; durée des boucliers +100 % ; permet de devenir furtif même sans ceinture de camouflage sous armure intermédiaire,,"[Mod D20-Overhaul]
+
+Effects: DR 3/- ; +1 AC ; durée des boucliers +100 % ; permet de devenir furtif même sans ceinture de camouflage sous armure intermédiaire
+
+Conçue pour les éclaireurs, sentinelles et agents d'infiltration, cette formation optimise les générateurs de boucliers et la discrétion sous armure intermédiaire."
+nouveau (246+),MOD_ARMOR_MED_2,Tactical Armor II,ARMURES,Lvl 8+ ; Rank I + Medium Armor ; Sentinel / Jedi Watchman / Assassin (ou SCT/SCD/TEC),CUSTOM — absent du jeu vanilla,DR 4/- ; +2 AC ; absorption des boucliers doublée ; accès à Course furtive sous armure intermédiaire,,"[Mod D20-Overhaul]
+
+Effects: DR 4/- ; +2 AC ; absorption des boucliers doublée ; accès à Course furtive sous armure intermédiaire
+
+Conçue pour les éclaireurs, sentinelles et agents d'infiltration, cette formation optimise les générateurs de boucliers et la discrétion sous armure intermédiaire."
+nouveau (246+),MOD_ARMOR_MED_3,Tactical Armor III,ARMURES,Lvl 15+ ; Rank II + Medium Armor ; Jedi Watchman / Sith Assassin (ou SCT/SCD/TEC Lvl 15+ ; Visas Lvl 15+),CUSTOM — absent du jeu vanilla,DR 5/- ; +3 AC ; absorption des boucliers triplée,,"[Mod D20-Overhaul]
+
+Effects: DR 5/- ; +3 AC ; absorption des boucliers triplée
+
+Conçue pour les éclaireurs, sentinelles et agents d'infiltration, cette formation optimise les générateurs de boucliers et la discrétion sous armure intermédiaire."
+nouveau (246+),MOD_ARMOR_HEAVY_1,Juggernaut I,ARMURES,Lvl 1+ ; Port d'Heavy Armor + Heavy Armor equipped,CUSTOM — absent du jeu vanilla,DR 3/- ; immunité à tous les dégâts +10 %,,"[Mod D20-Overhaul]
+
+Effects: DR 3/- ; immunité à tous les dégâts +10 %
+
+Réservée aux soldats d'assaut et vétérans mandaloriens, cette discipline transforme une Heavy Armor en forteresse mobile capable d'encaisser les pires assauts."
+nouveau (246+),MOD_ARMOR_HEAVY_2,Juggernaut II,ARMURES,Lvl 8+ ; Rank I + Heavy Armor ; Guardian / Weapon Master / Marauder (ou SOL),CUSTOM — absent du jeu vanilla,DR 4/- ; immunité à tous les dégâts +20 %,,"[Mod D20-Overhaul]
+
+Effects: DR 4/- ; immunité à tous les dégâts +20 %
+
+Réservée aux soldats d'assaut et vétérans mandaloriens, cette discipline transforme une Heavy Armor en forteresse mobile capable d'encaisser les pires assauts."
+nouveau (246+),MOD_ARMOR_HEAVY_3,Juggernaut III,ARMURES,Lvl 15+ ; Rank II + Heavy Armor ; Weapon Master / Sith Marauder (ou SOL Lvl 15+),CUSTOM — absent du jeu vanilla,DR 5/- ; immunité à tous les dégâts +30 %,,"[Mod D20-Overhaul]
+
+Effects: DR 5/- ; immunité à tous les dégâts +30 %
+
+Réservée aux soldats d'assaut et vétérans mandaloriens, cette discipline transforme une Heavy Armor en forteresse mobile capable d'encaisser les pires assauts."
+,,══ FORCE AWAKENING (budget Consular) ══,,,,,,
+nouveau (246+),MOD_META_EMPOWER_1,Empowered Force I,FORCE AWAKENING,Lvl 1+ ; Jedi/Sith Class,,Damage des pouvoirs offensifs +15 % ; coût +2 FP,,"[Mod D20-Overhaul]
+
+Effects: Damage des pouvoirs offensifs +15 % ; coût +2 FP
+
+En puisant plus profondément dans les courants de la Force, le praticien amplifie l'intensité destructrice de ses pouvoirs offensifs au prix d'une dépense accrue."
+nouveau (246+),MOD_META_EMPOWER_2,Empowered Force II,FORCE AWAKENING,"Lvl 8+ ; Rank I
+Jedi Consular / Sith Lord / Jedi Master",,+30 % ; coût +4 FP,,"[Mod D20-Overhaul]
+
+Effects: +30 % ; coût +4 FP
+
+En puisant plus profondément dans les courants de la Force, le praticien amplifie l'intensité destructrice de ses pouvoirs offensifs au prix d'une dépense accrue."
+nouveau (246+),MOD_META_EMPOWER_3,Empowered Force III,FORCE AWAKENING,"Lvl 15+ ; Rank II
+Sith Lord / Jedi Master (ou Kreia Lvl 15+)",,+50 % ; coût +6 FP,,"[Mod D20-Overhaul]
+
+Effects: +50 % ; coût +6 FP
+
+En puisant plus profondément dans les courants de la Force, le praticien amplifie l'intensité destructrice de ses pouvoirs offensifs au prix d'une dépense accrue."
+nouveau (246+),MOD_META_PENETRATE_1,Penetrating Force I,FORCE AWAKENING,Lvl 1+ ; Jedi/Sith Class,,+2 au DC des pouvoirs offensifs et de contrôle,,"[Mod D20-Overhaul]
+
+Effects: +2 au DC des pouvoirs offensifs et de contrôle
+
+Une concentration implacable qui permet aux pouvoirs de la Force de fissurer les défenses mentales et physiques les plus résistantes."
+nouveau (246+),MOD_META_PENETRATE_2,Penetrating Force II,FORCE AWAKENING,"Lvl 8+ ; Rank I
+Jedi Consular / Sith Lord / Jedi Master",,+4 au DC,,"[Mod D20-Overhaul]
+
+Effects: +4 au DC
+
+Une concentration implacable qui permet aux pouvoirs de la Force de fissurer les défenses mentales et physiques les plus résistantes."
+nouveau (246+),MOD_META_PENETRATE_3,Penetrating Force III,FORCE AWAKENING,"Lvl 15+ ; Rank II
+Sith Lord / Jedi Master (ou Kreia Lvl 15+)",,+6 au DC,,"[Mod D20-Overhaul]
+
+Effects: +6 au DC
+
+Une concentration implacable qui permet aux pouvoirs de la Force de fissurer les défenses mentales et physiques les plus résistantes."
+nouveau (246+),MOD_META_EXTEND,Extended Force,FORCE AWAKENING,Lvl 1+ ; Jedi/Sith Class,,Durée de tous les buffs de Force ×2,,"[Mod D20-Overhaul]
+
+Effects: Durée de toutes les améliorations de Force ×2
+
+Une maîtrise sereine des flux de la Force permettant de maintenir plus longtemps ses protections et améliorations sans effort supplémentaire."
+,,"══ SPÉCIALISATIONS CARACTÉRISTIQUE — spé carac.csv (ordre canonique STR, DEX, CON, INT, WIS, CHA ; une par caractéristique, arbres exclusifs entre eux) ══",,,,,,
+nouveau (246+),MOD_GAMORREAN_1,Gamorrean Refinement I,SPÉCIALISATIONS CARACTÉRISTIQUE,Lvl 1+ (ouvert à tous),,+1 STR ; + ½ mod. STR en rangs sur toutes les compétences ; interdit les 5 autres arbres de carac,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+
+Effects: +1 STR ; + ½ mod. STR en rangs sur toutes les compétences ; interdit les 5 autres arbres de carac
+
+Inspirée de la puissance brute des guerriers de Gamorr, cette voie fait de la Force physique le socle de toute prouesse martiale, jusqu'à manier d'une seule main des armes colossales."
+nouveau (246+),MOD_GAMORREAN_2,Gamorrean Refinement II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank I ; Lvl 8+,,"+2 STR ; octroie l'Gamorrean Adapter (objet à usage illimité, utilisable en posture hors combat) permettant d'ouvrir un établi d'amélioration à tout moment (quelle que soit l'arme équipée) et de convertir toute arme 2H ou HR (mêlée ET distance) entre maniement 2H/HR et 1H ; une arme haute cadence (1H) tenue en main principale conserve +1 atq/round (0 AC, aucun bonus en main gauche) ; n'interdit plus les postures Arme Lourde (2H) et Arme haute cadence (HR)","Validé en jeu (25/11) : T1/T2 OK (baseitems.2da 104-123 avec equipableslots=0x00030, weaponwield=2/4, weaponsize=3, reqfeat0=MOD_GAMORREAN_2 + Use_Limitation_Feat prop 57) ; 69 jumeaux exacts ov1m_*.uti (mêlée et distance, dont Péragus) + Gamorrean Adapter (ov_gam_adapt.uti bi=54 + ov_gam_conv.dlg : établi portatif toujours accessible + conversion 2H/HR - 1H, GetIsInCombat bOnlyCountReal=TRUE). Option B validée : +1 atq main principale (EffectModifyAttacks, 0 AC) sur les armes haute cadence 1H en main droite uniquement (0 bonus en main gauche). Les postures Arme Lourde et Arme haute cadence restent pleinement utilisables.","[Mod D20-Overhaul]
+
+Effects: +2 STR ; octroie l'Gamorrean Adapter (objet à usage illimité, utilisable en posture hors combat) permettant d'ouvrir un établi d'amélioration à tout moment (indépendamment de l'arme équipée) et de convertir toute arme à deux mains (2H) ou haute cadence (HR) (mêlée et distance) entre maniement 2H/HR et maniement à une main (1H). Une arme haute cadence adaptée en 1H conserve +1 attaque supplémentaire par round uniquement en main principale (aucun bonus d'attaque en main gauche, sans malus de AC). Les armes converties en 1H requièrent Gamorrean Refinement II pour être équipées.
+
+Inspirée de la puissance brute des guerriers de Gamorr, cette voie fait de la Force physique le socle de toute prouesse martiale, jusqu'à manier d'une seule main des armes colossales."
+nouveau (246+),MOD_GAMORREAN_3,Gamorrean Refinement III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank II ; Lvl 15+,,+3 STR ; immunité au mental,,"[Mod D20-Overhaul]
+
+Effects: +3 STR ; immunité au mental
+
+Inspirée de la puissance brute des guerriers de Gamorr, cette voie fait de la Force physique le socle de toute prouesse martiale, jusqu'à manier d'une seule main des armes colossales."
+nouveau (246+),MOD_ECHANI_1,Echani Precision I,SPÉCIALISATIONS CARACTÉRISTIQUE,Lvl 1+ (ouvert à tous),,+1 DEX ; attaque mêlée : STR/DEX (si DEX > STR) ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+
+Effects: +1 DEX ; attaque mêlée : STR/DEX (si DEX > STR) ; interdit les 5 autres arbres
+
+Art martial ancestral des Echanis, pour qui le combat est un langage de grâce et d'anticipation où la Dextérité surpasse la force brute et libère le mouvement sous armure."
+nouveau (246+),MOD_ECHANI_2,Echani Precision II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank I ; Lvl 8+,,+2 DEX ; dégâts mêlée : STR/DEX (si DEX > STR),,"[Mod D20-Overhaul]
+
+Effects: +2 DEX ; dégâts mêlée : STR/DEX (si DEX > STR)
+
+Art martial ancestral des Echanis, pour qui le combat est un langage de grâce et d'anticipation où la Dextérité surpasse la force brute et libère le mouvement sous armure."
+nouveau (246+),MOD_ECHANI_3,Echani Precision III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank II ; Lvl 15+,,+3 DEX ; supprime le plafond de DEX des armures,,"[Mod D20-Overhaul]
+
+Effects: +3 DEX ; supprime le plafond de DEX des armures
+
+Art martial ancestral des Echanis, pour qui le combat est un langage de grâce et d'anticipation où la Dextérité surpasse la force brute et libère le mouvement sous armure."
+nouveau (246+),MOD_KRAITH_CON_1,Way of the Krayt Dragon I,SPÉCIALISATIONS CARACTÉRISTIQUE,Lvl 1+ (ouvert à tous),,+1 CON ; DR + ½ mod. CON (arrondi sup.) ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+
+Effects: +1 CON ; DR + ½ mod. CON (arrondi sup.) ; interdit les 5 autres arbres
+
+Discipline d'endurance nommée d'après le légendaire dragon krayt de Tatooine : le corps s'endurcit contre les coups et puise dans sa propre vitalité pour nourrir la Force."
+nouveau (246+),MOD_KRAITH_CON_2,Way of the Krayt Dragon II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank I ; Lvl 8+,,+2 CON ; toutes les 6 s : convertit 5 % des VP max en 5 % des FP max si FP < 50 % (jamais sous 75 % VP),,"[Mod D20-Overhaul]
+
+Effects: +2 CON ; toutes les 6 s : convertit 5 % des VP max en 5 % des FP max si FP < 50 % (jamais sous 75 % VP)
+
+Discipline d'endurance nommée d'après le légendaire dragon krayt de Tatooine : le corps s'endurcit contre les coups et puise dans sa propre vitalité pour nourrir la Force."
+nouveau (246+),MOD_KRAITH_CON_3,Way of the Krayt Dragon III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank II ; Lvl 15+,,+3 CON ; toutes les sauvegardes + mod. CON,,"[Mod D20-Overhaul]
+
+Effects: +3 CON ; toutes les sauvegardes + mod. CON
+
+Discipline d'endurance nommée d'après le légendaire dragon krayt de Tatooine : le corps s'endurcit contre les coups et puise dans sa propre vitalité pour nourrir la Force."
+nouveau (246+),MOD_GAND_1,Gand Findsman I,SPÉCIALISATIONS CARACTÉRISTIQUE,Lvl 1+ (ouvert à tous),,+1 INT ; dommages des grenades et mines +5 % par rang total de Demolitions ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres gérée par garde-fou scripté (LocalNumber). Scaling grenade/mine via GetSkillRank(SKILL_DEMOLITIONS, OBJECT_SELF) dans k_sup_grenade.nss / scripts mines.","[Mod D20-Overhaul]
+
+Effects: +1 INT ; dommages des grenades et mines +5 % par rang total de Demolitions ; interdit les 5 autres arbres
+
+Héritée des Trouveurs Gand, cette école associe sens tactique, démolition de précision et calcul balistique pour compenser l'instinct par l'Intelligence pure."
+nouveau (246+),MOD_GAND_2,Gand Findsman II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank I ; Lvl 8+,,+2 INT ; attaque et dégâts distance : DEX/INT (si INT > DEX),,"[Mod D20-Overhaul]
+
+Effects: +2 INT ; attaque et dégâts distance : DEX/INT (si INT > DEX)
+
+Héritée des Trouveurs Gand, cette école associe sens tactique, démolition de précision et calcul balistique pour compenser l'instinct par l'Intelligence pure."
+nouveau (246+),MOD_GAND_3,Gand Findsman III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank II ; Lvl 15+,,+3 INT ; rayon des grenades 4 m → 6 m ; perce Total Evasion (demi-dégâts min) ; 50 % de chance de ne pas consommer la grenade,"Implémentable 100 % dans k_sup_grenade.nss : rayon 6.0f, bypass du check FEAT_EVASION, et d2()==1 -> CreateItemOnObject pour restituer la grenade.","[Mod D20-Overhaul]
+
+Effects: +3 INT ; rayon des grenades 4 m → 6 m ; perce Total Evasion (demi-dégâts min) ; 50 % de chance de ne pas consommer la grenade
+
+Héritée des Trouveurs Gand, cette école associe sens tactique, démolition de précision et calcul balistique pour compenser l'instinct par l'Intelligence pure."
+nouveau (246+),MOD_MATUKAI_SAG_1,Matukai Discipline I,SPÉCIALISATIONS CARACTÉRISTIQUE,Lvl 1+ (ouvert à tous),,+1 WIS ; ajoute le mod. de WIS à l'attaque (s'ajoute à la carac directrice) ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+
+Effects: +1 WIS ; ajoute le mod. de WIS à l'attaque (s'ajoute à la carac directrice) ; interdit les 5 autres arbres
+
+Voie des adeptes Matukai, qui unissent discipline corporelle et Sagesse intérieure pour guider chaque frappe, esquiver par intuition et punir instantanément les attaques adverses."
+nouveau (246+),MOD_MATUKAI_SAG_2,Matukai Discipline II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank I ; Lvl 8+,,+2 WIS ; sauvegardes + ½ mod. WIS ; réussir une sauvegarde inflige le mod. de WIS en dégâts directs à l'attaquant,"Limitation : punition sur sauvegarde hookable uniquement pour les sauvegardes scriptées (k_inc_force, grenades) ; les saves internes moteur (iprp_onhit, ex. sonique DC 14) n'offrent aucune prise.","[Mod D20-Overhaul]
+
+Effects: +2 WIS ; sauvegardes + ½ mod. WIS ; réussir une sauvegarde inflige le mod. de WIS en dégâts directs à l'attaquant
+
+Voie des adeptes Matukai, qui unissent discipline corporelle et Sagesse intérieure pour guider chaque frappe, esquiver par intuition et punir instantanément les attaques adverses."
+nouveau (246+),MOD_MATUKAI_SAG_3,Matukai Discipline III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank II ; Lvl 15+,,+3 WIS ; la WIS remplace la DEX pour la AC ; tout ennemi vous ratant subit le mod. de WIS en dégâts directs par attaque échouée,"TODO test moteur T3 : détection des ratés — l'événement 1005 (OnAttacked) doit se déclencher à CHAQUE attaque subie (sinon reconstruction impossible) ; punition = compte(1005) - compte(1006) par attaquant, régularisée au 1003 ; ordre des événements non garanti. Validé (23/11, T4) : EffectACIncrease ne se cumule pas entre effets séparés -> tous les bonus de AC custom sont sommés dans un unique EffectACIncrease.","[Mod D20-Overhaul]
+
+Effects: +3 WIS ; la WIS remplace la DEX pour la AC ; tout ennemi vous ratant subit le mod. de WIS en dégâts directs par attaque échouée
+
+Voie des adeptes Matukai, qui unissent discipline corporelle et Sagesse intérieure pour guider chaque frappe, esquiver par intuition et punir instantanément les attaques adverses."
+nouveau (246+),MOD_NOMI_1,Nomi's Aura I,SPÉCIALISATIONS CARACTÉRISTIQUE,Lvl 1+ (ouvert à tous),,+1 CHA ; les compagnons gagnent 100 % de l'XP ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+
+Effects: +1 CHA ; les compagnons gagnent 100 % de l'XP ; interdit les 5 autres arbres
+
+Inspirée de la légendaire Jedi Master Nomi Sunrider, cette voie rayonne par la présence et le Charisme, inspirant les alliés et déviant les coups par la seule force de conviction."
+nouveau (246+),MOD_NOMI_2,Nomi's Aura II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank I ; Lvl 8+,,+2 CHA ; groupe : jets de sauvegarde + mod. CHA,,"[Mod D20-Overhaul]
+
+Effects: +2 CHA ; groupe : jets de sauvegarde + mod. CHA
+
+Inspirée de la légendaire Jedi Master Nomi Sunrider, cette voie rayonne par la présence et le Charisme, inspirant les alliés et déviant les coups par la seule force de conviction."
+nouveau (246+),MOD_NOMI_3,Nomi's Aura III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rank II ; Lvl 15+,,+3 CHA ; AC + mod. CHA,"Validé (23/11, T4) : EffectACIncrease ne se cumule pas entre effets séparés -> bonus de AC sommé dans un unique EffectACIncrease. (Note : Prémonition du combat a été remplacé par +10 % esquive mêlée dans Spé Pouvoirs.csv.)","[Mod D20-Overhaul]
+
+Effects: +3 CHA ; AC + mod. CHA
+
+Inspirée de la légendaire Jedi Master Nomi Sunrider, cette voie rayonne par la présence et le Charisme, inspirant les alliés et déviant les coups par la seule force de conviction."
+,,══ PASSIFS DE PRESTIGE — Spé Pouvoirs.csv ══,,,,,,
+nouveau (246+),MOD_UNBOUND_FORCE_1,Unbound by the Force I,Caché — pouvoir de prestige,Jedi Watchman (auto lvl 1 de prestige),CUSTOM — absent du jeu vanilla,"Passif toutes armures : +1 par tranche de 8 rangs combinés sur 4 paires — Attaque (Computer Use+Security), Damage (Demolitions+Repair), AC (Awareness+Stealth), Saves (Persuade+Premiers soins) ; plafond +3/axe",Remplace Camouflage de Force pour le Jedi Watchman (cf. Spé Pouvoirs.csv).,"[Mod D20-Overhaul]
+
+Effets (Passif, toutes armures) : +1 par tranche de 8 rangs combinés sur 4 paires de compétences — Attaque (Computer Use+Security), Damage (Demolitions+Repair), AC (Awareness+Stealth), Saves (Persuade+Premiers soins) ; plafond +3/axe.
+
+Ayant survécu à l'arrachement de la Force, l'Exilé est la preuve vivante que celle-ci n'est pas la vie, mais une béquille qui atrophie ceux qui s'y abandonnent. Plutôt que de réparer sa coupure, il l'érige en souveraineté : en se retirant volontairement du murmure qui dicte les pas des Jedi comme des Sith, il rend toute sa rigueur à l'esprit lucide. La technique, l'observation, la ruse et l'usage des outils matériels deviennent le prolongement direct de son combat ; et à mesure qu'il renonce à l'emprise invisible qui lie la galaxie, le silence qu'il entretient en lui finit par rendre la Force presque impuissante à l'atteindre."
+nouveau (246+),MOD_UNBOUND_FORCE_2,Unbound by the Force II,Caché — pouvoir de prestige,Jedi Watchman (auto lvl 5 de prestige),CUSTOM — absent du jeu vanilla,"Plafond +5/axe ; +25 % efficacité des consommables (medpacs, grenades, mines, boucliers)",,"[Mod D20-Overhaul]
+
+Effets (Passif) : plafond porté à +5/axe ; +25 % d'efficacité des consommables (médipacs, grenades, mines, boucliers).
+
+Ayant survécu à l'arrachement de la Force, l'Exilé est la preuve vivante que celle-ci n'est pas la vie, mais une béquille qui atrophie ceux qui s'y abandonnent. Plutôt que de réparer sa coupure, il l'érige en souveraineté : en se retirant volontairement du murmure qui dicte les pas des Jedi comme des Sith, il rend toute sa rigueur à l'esprit lucide. La technique, l'observation, la ruse et l'usage des outils matériels deviennent le prolongement direct de son combat ; et à mesure qu'il renonce à l'emprise invisible qui lie la galaxie, le silence qu'il entretient en lui finit par rendre la Force presque impuissante à l'atteindre."
+nouveau (246+),MOD_UNBOUND_FORCE_3,Unbound by the Force III,Caché — pouvoir de prestige,Jedi Watchman (auto lvl 9 de prestige),CUSTOM — absent du jeu vanilla,Plafond +7/axe ; Résistance à la Force passive (15 + Niveau),,"[Mod D20-Overhaul]
+
+Effets (Passif) : plafond porté à +7/axe ; Résistance à la Force passive (15 + Niveau).
+
+Ayant survécu à l'arrachement de la Force, l'Exilé est la preuve vivante que celle-ci n'est pas la vie, mais une béquille qui atrophie ceux qui s'y abandonnent. Plutôt que de réparer sa coupure, il l'érige en souveraineté : en se retirant volontairement du murmure qui dicte les pas des Jedi comme des Sith, il rend toute sa rigueur à l'esprit lucide. La technique, l'observation, la ruse et l'usage des outils matériels deviennent le prolongement direct de son combat ; et à mesure qu'il renonce à l'emprise invisible qui lie la galaxie, le silence qu'il entretient en lui finit par rendre la Force presque impuissante à l'atteindre."

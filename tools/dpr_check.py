@@ -1033,9 +1033,9 @@ def enumerate_configs(data: Data, feats: Feats, weapon_filter: str | None) -> li
         if w.wield == "1M":
             modes = ["single", "dual"]
         elif w.wield == "2M":
-            modes = ["single", "dual"] if gam2 else ["twohand"]
+            modes = ["twohand", "single", "dual"] if gam2 else ["twohand"]
         elif w.wield == "D":
-            modes = ["single", "dual"] if gam2 else ["double"]
+            modes = ["double", "single", "dual"] if gam2 else ["double"]
         for mode in modes:
             offs: list[str | None] = [None]
             if mode == "dual":
@@ -1061,7 +1061,8 @@ def spec_rank_for(feats: Feats, weapon: Weapon, data: Data) -> int:
 
 
 def effective_stats(data: Data, feats: Feats, base_stats: dict[str, int]) -> dict[str, int]:
-    """Applique aux modificateurs de base les bonus des arbres de Spé caractéristique."""
+    """Applique aux modificateurs de base le bonus du 1er arbre de Spé caractéristique
+    (mutualité stricte : en jeu, Ov_GetActiveCaracTree n'active qu'un seul arbre par personnage)."""
     stats = dict(base_stats)
     for carac_key, rank in feats.caracs.items():
         if rank > 0:
@@ -1070,6 +1071,7 @@ def effective_stats(data: Data, feats: Feats, base_stats: dict[str, int]) -> dic
             inc = cdef.get("stat_mod_by_rank", {}).get(str(rank), 0)
             if sname and inc:
                 stats[sname] = stats.get(sname, 0) + inc
+            break
     return stats
 
 
@@ -1221,11 +1223,23 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
                 brk = max(brk, 0.5 * abs(data.feats["familles"]["traditionnelle"]["rank2"]["armor_break"]))
     def_eff -= brk
 
-    # ---- attaques par round ----------------------------------------------------
-    n_main = 1 + active["attacks"] + char.speed_attacks
+    # ---- attaques par round (respecte le plafond moteur EffectModifyAttacks <= +2) ----
+    ema_bonus = char.speed_attacks
     if w.family == "assaut" and spec_rank_for(feats, w, data) >= 3:
-        n_main += data.feats["familles"]["assaut"]["rank3"]["extra_main_attack"]
-    n_off = 1 if cfg.mode in ("dual", "double") else 0
+        ema_bonus += data.feats["familles"]["assaut"]["rank3"]["extra_main_attack"]
+    if cfg.mode == "double" and w.ranged:
+        # Blasters à répétition 2M : +1 attaque via EffectModifyAttacks (0 off-hand)
+        ema_bonus += 1
+        n_off = 0
+    elif cfg.mode == "double":
+        # Double-lames mêlée 2M : 1 off-hand natif (weaponwield == 3)
+        n_off = 1
+    else:
+        # Option B (Gamorréen II, validée 25/11) : arme haute cadence 1M en main principale -> +1 atq MD (0 CA, 0 bonus en MG)
+        if cfg.mode in ("single", "dual") and w.wield == "D":
+            ema_bonus += 1
+        n_off = 1 if cfg.mode == "dual" else 0
+    n_main = 1 + active["attacks"] + min(2, ema_bonus)
 
     # ---- attaque totale par main ----------------------------------------------
     atq_common = char.bab + attr_atk + style_atq + active["attack"] + (char.gear_attack if char.use_gear else 0)

@@ -1,0 +1,485 @@
+[
+  {
+    "tag_2m": "advancedmininglaser",
+    "res_2m": "advancedminingla",
+    "tag_1m": "ov1m_001",
+    "res_1m": "ov1m_001",
+    "baseitem_label": "Adv_Mining_Laser"
+  },
+  {
+    "tag_2m": "d_hk47_01",
+    "res_2m": "d_hk47_01",
+    "tag_1m": "ov1m_002",
+    "res_1m": "ov1m_002",
+    "baseitem_label": "Disrupter_Rifle"
+  },
+  {
+    "tag_2m": "g1_w_dblsbr001",
+    "res_2m": "g1_w_dblsbr001",
+    "tag_1m": "ov1m_003",
+    "res_1m": "ov1m_003",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g1_w_dblsbr002",
+    "res_2m": "g1_w_dblsbr002",
+    "tag_1m": "ov1m_004",
+    "res_1m": "ov1m_004",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr001",
+    "res_2m": "g_w_dblsbr001",
+    "tag_1m": "ov1m_005",
+    "res_1m": "ov1m_005",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr002",
+    "res_2m": "g_w_dblsbr002",
+    "tag_1m": "ov1m_006",
+    "res_1m": "ov1m_006",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr003",
+    "res_2m": "g_w_dblsbr003",
+    "tag_1m": "ov1m_007",
+    "res_1m": "ov1m_007",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr004",
+    "res_2m": "g_w_dblsbr004",
+    "tag_1m": "ov1m_008",
+    "res_1m": "ov1m_008",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr005",
+    "res_2m": "g_w_dblsbr005",
+    "tag_1m": "ov1m_009",
+    "res_1m": "ov1m_009",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr007",
+    "res_2m": "g_w_dblsbr007",
+    "tag_1m": "ov1m_010",
+    "res_1m": "ov1m_010",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr008",
+    "res_2m": "g_w_dblsbr008",
+    "tag_1m": "ov1m_011",
+    "res_1m": "ov1m_011",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr009",
+    "res_2m": "g_w_dblsbr009",
+    "tag_1m": "ov1m_012",
+    "res_1m": "ov1m_012",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr010",
+    "res_2m": "g_w_dblsbr010",
+    "tag_1m": "ov1m_013",
+    "res_1m": "ov1m_013",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_dblsbr011",
+    "res_2m": "g_w_dblsbr011",
+    "tag_1m": "ov1m_014",
+    "res_1m": "ov1m_014",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_drkjdisbr002",
+    "res_2m": "g_w_drkjdisbr002",
+    "tag_1m": "ov1m_015",
+    "res_1m": "ov1m_015",
+    "baseitem_label": "Double_Bladed_Lightsaber"
+  },
+  {
+    "tag_2m": "g_w_fnaddblade",
+    "res_2m": "g_w_fnaddblade",
+    "tag_1m": "ov1m_016",
+    "res_1m": "ov1m_016",
+    "baseitem_label": "Double_Bladed_Sword"
+  },
+  {
+    "tag_2m": "g_w_qtrstaff01",
+    "res_2m": "g_w_qtrstaff002",
+    "tag_1m": "ov1m_017",
+    "res_1m": "ov1m_017",
+    "baseitem_label": "Quarter_Staff"
+  },
+  {
+    "tag_2m": "pl_sword",
+    "res_2m": "g_w_vbroswrd002",
+    "tag_1m": "ov1m_018",
+    "res_1m": "ov1m_018",
+    "baseitem_label": "Vibro_Sword"
+  },
+  {
+    "tag_2m": "guidonbeacon",
+    "res_2m": "guidonbeacon",
+    "tag_1m": "ov1m_019",
+    "res_1m": "ov1m_019",
+    "baseitem_label": "Quarter_Staff"
+  },
+  {
+    "tag_2m": "heavymininglaser",
+    "res_2m": "heavymininglaser",
+    "tag_1m": "ov1m_020",
+    "res_1m": "ov1m_020",
+    "baseitem_label": "Heavy_Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_brifle_01",
+    "res_2m": "w_brifle_01",
+    "tag_1m": "ov1m_021",
+    "res_1m": "ov1m_021",
+    "baseitem_label": "Blaster_Carbine"
+  },
+  {
+    "tag_2m": "w_brfile_02",
+    "res_2m": "w_brifle_02",
+    "tag_1m": "ov1m_022",
+    "res_1m": "ov1m_022",
+    "baseitem_label": "Ion_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_03",
+    "res_2m": "w_brifle_03",
+    "tag_1m": "ov1m_023",
+    "res_1m": "ov1m_023",
+    "baseitem_label": "Sonic_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_04",
+    "res_2m": "w_brifle_04",
+    "tag_1m": "ov1m_024",
+    "res_1m": "ov1m_024",
+    "baseitem_label": "Blaster_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_05",
+    "res_2m": "w_brifle_05",
+    "tag_1m": "ov1m_025",
+    "res_1m": "ov1m_025",
+    "baseitem_label": "Bowcaster"
+  },
+  {
+    "tag_2m": "w_brifle_06",
+    "res_2m": "w_brifle_06",
+    "tag_1m": "ov1m_026",
+    "res_1m": "ov1m_026",
+    "baseitem_label": "Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_brfile_07",
+    "res_2m": "w_brifle_07",
+    "tag_1m": "ov1m_027",
+    "res_1m": "ov1m_027",
+    "baseitem_label": "Ion_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_08",
+    "res_2m": "w_brifle_08",
+    "tag_1m": "ov1m_028",
+    "res_1m": "ov1m_028",
+    "baseitem_label": "Disrupter_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_09",
+    "res_2m": "w_brifle_09",
+    "tag_1m": "ov1m_029",
+    "res_1m": "ov1m_029",
+    "baseitem_label": "Sonic_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_10",
+    "res_2m": "w_brifle_10",
+    "tag_1m": "ov1m_030",
+    "res_1m": "ov1m_030",
+    "baseitem_label": "Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_brifle_11",
+    "res_2m": "w_brifle_11",
+    "tag_1m": "ov1m_031",
+    "res_1m": "ov1m_031",
+    "baseitem_label": "Bowcaster"
+  },
+  {
+    "tag_2m": "w_brifle_12",
+    "res_2m": "w_brifle_12",
+    "tag_1m": "ov1m_032",
+    "res_1m": "ov1m_032",
+    "baseitem_label": "Blaster_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_13",
+    "res_2m": "w_brifle_13",
+    "tag_1m": "ov1m_033",
+    "res_1m": "ov1m_033",
+    "baseitem_label": "Disrupter_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_14",
+    "res_2m": "w_brifle_14",
+    "tag_1m": "ov1m_034",
+    "res_1m": "ov1m_034",
+    "baseitem_label": "Sonic_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_15",
+    "res_2m": "w_brifle_15",
+    "tag_1m": "ov1m_035",
+    "res_1m": "ov1m_035",
+    "baseitem_label": "Ion_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_16",
+    "res_2m": "w_brifle_16",
+    "tag_1m": "ov1m_036",
+    "res_1m": "ov1m_036",
+    "baseitem_label": "Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_brifle_17",
+    "res_2m": "w_brifle_17",
+    "tag_1m": "ov1m_037",
+    "res_1m": "ov1m_037",
+    "baseitem_label": "Heavy_Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_brifle_18",
+    "res_2m": "w_brifle_18",
+    "tag_1m": "ov1m_038",
+    "res_1m": "ov1m_038",
+    "baseitem_label": "Blaster_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_19",
+    "res_2m": "w_brifle_19",
+    "tag_1m": "ov1m_039",
+    "res_1m": "ov1m_039",
+    "baseitem_label": "Blaster_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_20",
+    "res_2m": "w_brifle_20",
+    "tag_1m": "ov1m_040",
+    "res_1m": "ov1m_040",
+    "baseitem_label": "Ion_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_21",
+    "res_2m": "w_brifle_21",
+    "tag_1m": "ov1m_041",
+    "res_1m": "ov1m_041",
+    "baseitem_label": "Bowcaster"
+  },
+  {
+    "tag_2m": "w_brifle_22",
+    "res_2m": "w_brifle_22",
+    "tag_1m": "ov1m_042",
+    "res_1m": "ov1m_042",
+    "baseitem_label": "Heavy_Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_brifle_23",
+    "res_2m": "w_brifle_23",
+    "tag_1m": "ov1m_043",
+    "res_1m": "ov1m_043",
+    "baseitem_label": "Disrupter_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_24",
+    "res_2m": "w_brifle_24",
+    "tag_1m": "ov1m_044",
+    "res_1m": "ov1m_044",
+    "baseitem_label": "Blaster_Carbine"
+  },
+  {
+    "tag_2m": "w_brifle_26",
+    "res_2m": "w_brifle_26",
+    "tag_1m": "ov1m_045",
+    "res_1m": "ov1m_045",
+    "baseitem_label": "Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_brifle_27",
+    "res_2m": "w_brifle_27",
+    "tag_1m": "ov1m_046",
+    "res_1m": "ov1m_046",
+    "baseitem_label": "Sonic_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_28",
+    "res_2m": "w_brifle_28",
+    "tag_1m": "ov1m_047",
+    "res_1m": "ov1m_047",
+    "baseitem_label": "Heavy_Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_brifle_29",
+    "res_2m": "w_brifle_29",
+    "tag_1m": "ov1m_048",
+    "res_1m": "ov1m_048",
+    "baseitem_label": "Ion_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_30",
+    "res_2m": "w_brifle_30",
+    "tag_1m": "ov1m_049",
+    "res_1m": "ov1m_049",
+    "baseitem_label": "Blaster_Rifle"
+  },
+  {
+    "tag_2m": "w_brifle_hr_base",
+    "res_2m": "w_brifle_hr_base",
+    "tag_1m": "ov1m_050",
+    "res_1m": "ov1m_050",
+    "baseitem_label": "Heavy_Repeating_Blaster"
+  },
+  {
+    "tag_2m": "w_melee_04",
+    "res_2m": "w_melee_04",
+    "tag_1m": "ov1m_051",
+    "res_1m": "ov1m_051",
+    "baseitem_label": "Quarter_Staff"
+  },
+  {
+    "tag_2m": "w_melee_06",
+    "res_2m": "w_melee_06",
+    "tag_1m": "ov1m_052",
+    "res_1m": "ov1m_052",
+    "baseitem_label": "Vibro_Sword"
+  },
+  {
+    "tag_2m": "w_melee_07",
+    "res_2m": "w_melee_07",
+    "tag_1m": "ov1m_053",
+    "res_1m": "ov1m_053",
+    "baseitem_label": "Double_Bladed_Sword"
+  },
+  {
+    "tag_2m": "w_melee_09",
+    "res_2m": "w_melee_09",
+    "tag_1m": "ov1m_054",
+    "res_1m": "ov1m_054",
+    "baseitem_label": "Gammorean_Battleaxe"
+  },
+  {
+    "tag_2m": "w_melee_12",
+    "res_2m": "w_melee_12",
+    "tag_1m": "ov1m_055",
+    "res_1m": "ov1m_055",
+    "baseitem_label": "Vibro_Double_Blade"
+  },
+  {
+    "tag_2m": "w_melee_14",
+    "res_2m": "w_melee_14",
+    "tag_1m": "ov1m_056",
+    "res_1m": "ov1m_056",
+    "baseitem_label": "Force_Pike"
+  },
+  {
+    "tag_2m": "w_melee_15",
+    "res_2m": "w_melee_15",
+    "tag_1m": "ov1m_057",
+    "res_1m": "ov1m_057",
+    "baseitem_label": "Vibro_Double_Blade"
+  },
+  {
+    "tag_2m": "w_melee_16",
+    "res_2m": "w_melee_16",
+    "tag_1m": "ov1m_058",
+    "res_1m": "ov1m_058",
+    "baseitem_label": "Gammorean_Battleaxe"
+  },
+  {
+    "tag_2m": "w_melee_20",
+    "res_2m": "w_melee_20",
+    "tag_1m": "ov1m_059",
+    "res_1m": "ov1m_059",
+    "baseitem_label": "Vibro_Double_Blade"
+  },
+  {
+    "tag_2m": "w_melee_21",
+    "res_2m": "w_melee_21",
+    "tag_1m": "ov1m_060",
+    "res_1m": "ov1m_060",
+    "baseitem_label": "Vibro_Sword"
+  },
+  {
+    "tag_2m": "w_melee_22",
+    "res_2m": "w_melee_22",
+    "tag_1m": "ov1m_061",
+    "res_1m": "ov1m_061",
+    "baseitem_label": "Vibro_Sword"
+  },
+  {
+    "tag_2m": "w_melee_23",
+    "res_2m": "w_melee_23",
+    "tag_1m": "ov1m_062",
+    "res_1m": "ov1m_062",
+    "baseitem_label": "Force_Pike"
+  },
+  {
+    "tag_2m": "w_melee_25",
+    "res_2m": "w_melee_25",
+    "tag_1m": "ov1m_063",
+    "res_1m": "ov1m_063",
+    "baseitem_label": "Gammorean_Battleaxe"
+  },
+  {
+    "tag_2m": "w_melee_26",
+    "res_2m": "w_melee_26",
+    "tag_1m": "ov1m_064",
+    "res_1m": "ov1m_064",
+    "baseitem_label": "Quarter_Staff"
+  },
+  {
+    "tag_2m": "w_melee_28",
+    "res_2m": "w_melee_28",
+    "tag_1m": "ov1m_065",
+    "res_1m": "ov1m_065",
+    "baseitem_label": "Vibro_Double_Blade"
+  },
+  {
+    "tag_2m": "w_melee_30",
+    "res_2m": "w_melee_30",
+    "tag_1m": "ov1m_066",
+    "res_1m": "ov1m_066",
+    "baseitem_label": "Wookie_Warblade"
+  },
+  {
+    "tag_2m": "w_melee_ww_base",
+    "res_2m": "w_melee_ww_base",
+    "tag_1m": "ov1m_067",
+    "res_1m": "ov1m_067",
+    "baseitem_label": "Wookie_Warblade"
+  },
+  {
+    "tag_2m": "w_melee_x01",
+    "res_2m": "w_melee_x01",
+    "tag_1m": "ov1m_068",
+    "res_1m": "ov1m_068",
+    "baseitem_label": "Quarter_Staff"
+  },
+  {
+    "tag_2m": "w_melee_x12",
+    "res_2m": "w_melee_x12",
+    "tag_1m": "ov1m_069",
+    "res_1m": "ov1m_069",
+    "baseitem_label": "Vibro_Double_Blade"
+  }
+]

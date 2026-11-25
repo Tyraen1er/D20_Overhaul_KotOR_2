@@ -11,7 +11,7 @@
    - In **D20 Overhaul**, ranged weapons scale with DEX: **`150% DEX`** with a single one-handed pistol (Dueling) or a two-handed rifle, **`100% / 50% DEX`** when dual-wielding (Ambidexterity), and **`150% / 50% DEX`** on repeating blasters. *(Or **INT** with **Gand Findsman II**).*
 2. **New Category: Two-Handed Weapons (2H)**
    - Heavy weapons (e.g., *Vibrosword*, *Gamorrean Battleaxe*, *Force Pike*, *Blaster Rifles*, *Bowcaster*, *Disruptor Rifle*…) are now true Two-Handed weapons: no extra off-hand attack, but base damage scales at **`200% STR`** in melee or **`150% DEX`** at range (up to `250% STR` / `200% DEX` with *Heavy Weapon Handling*).
-3. **Double-Bladed Weapons & Repeating Blasters (`D`)**
+3. **High-Rate Weapons (`HR` — Double-Bladed Weapons & Repeating Blasters)**
    - All double-bladed weapons and repeating blasters are now **balanced** and no longer suffer the vanilla `-6/-10` two-weapon attack penalty. Instead, they carry a **native `-5 AC` penalty**, reducible down to `-1 AC` via *High-Rate Weapon Handling*.
 
 ---
@@ -26,19 +26,20 @@
 | :--- | :--- | :---: | :--- | :---: | :--- |
 | **Unarmed** | Impact | 1H | Physical `1d6` *(+Unarmed Specialist I–III: `+1d4/+2d4/+3d4` at Lvl 4/12/19 or Prestige 4)* | `19-20, ×2` | None *(counts as 1H for Dueling)* |
 | **Stun Baton** | Impact | 1H *(bal.)* | Bludgeoning `1d8` | `18-20, ×2` | Grip |
-| **Quarterstaff** | Impact | Double *(bal.)* | Bludgeoning `1d8` | `19-20, ×2` | Grip |
+| **Plasma Torch** | Impact | 1H *(bal.)* | Bludgeoning `1d1` + Fire `1d6` *(vanilla damage)* | `20, ×2` | None *(Peragus tool)* |
+| **Quarterstaff** | Impact | **HR** *(bal.)* | Bludgeoning `1d8` | `19-20, ×2` | Grip |
 | **Force Pike** | Impact | **2H** | Bludgeoning `2d8` | `20, ×3` | Grip |
 | **Short Sword** | Traditional | 1H *(bal.)* | Piercing `1d8` | `18-20, ×2` | Grip, Edge |
 | **Long Sword** | Traditional | 1H | Slashing `1d12` | `19-20, ×2` | Grip, Edge |
-| **Double-Bladed Sword** | Traditional | Double *(bal.)* | Slashing `1d8` | `19-20, ×2` | Grip, Edge |
+| **Double-Bladed Sword** | Traditional | **HR** *(bal.)* | Slashing `1d8` | `19-20, ×2` | Grip, Edge |
 | **Gamorrean Battleaxe** | Traditional | **2H** | Slashing `2d8` | `20, ×3` | Grip, Edge |
-| **Wookiee Warblade** | Traditional | Double *(bal.)* | Slashing `1d10` | `20, ×3` | Grip, Edge |
+| **Wookiee Warblade** | Traditional | **HR** *(bal.)* | Slashing `1d10` | `20, ×3` | Grip, Edge |
 | **Vibroblade** | Resonance | 1H *(bal.)* | Piercing `1d6` | `19-20, ×2` | Grip, Edge, Power Cell |
 | **Vibrosword** | Resonance | **2H** | Slashing `1d10` | `19-20, ×2` | Grip, Edge, Power Cell |
-| **Double-Bladed Vibrosword** | Resonance | Double *(bal.)* | Slashing `1d8` | `20, ×2` | Grip, Edge, Power Cell |
+| **Double-Bladed Vibrosword** | Resonance | **HR** *(bal.)* | Slashing `1d8` | `20, ×2` | Grip, Edge, Power Cell |
 | **Short Lightsaber** | Laser | 1H *(bal.)* | Energy `2d6` | `19-20, ×2` | Color, 2 Crystals, Emitter, Lens, Cell |
 | **Lightsaber** | Laser | 1H | Energy `2d8` | `19-20, ×2` | Color, 2 Crystals, Emitter, Lens, Cell |
-| **Double-Bladed Lightsaber** | Laser | Double *(bal.)* | Energy `2d8` | `20, ×2` | Color, 2 Crystals, Emitter, Lens, Cell |
+| **Double-Bladed Lightsaber** | Laser | **HR** *(bal.)* | Energy `2d8` | `20, ×2` | Color, 2 Crystals, Emitter, Lens, Cell |
 
 ### Ranged Weapons
 
@@ -46,11 +47,11 @@
 | :--- | :--- | :---: | :---: | :--- | :---: | :--- | :--- |
 | **Blaster Pistol** | Assault Fire | 1H *(bal.)* | 23 m | Energy `1d10` | `19-20, ×2` | — | Scope, Power Pack |
 | **Blaster Carbine** | Assault Fire | **2H** | 25 m | Energy `1d12` | `19-20, ×2` | — | Scope, Power Pack |
-| **Repeating Blaster** | Assault Fire | Repeating *(bal.)* | 28 m | Energy `2d6` | `20, ×2` | — | Scope, Power Pack |
+| **Repeating Blaster** | Assault Fire | **HR** *(bal.)* | 28 m | Energy `2d6` | `20, ×2` | — | Scope, Power Pack |
 | **Heavy Blaster** | Penetrating Fire | 1H | 23 m | Energy `1d12` | `19-20, ×2` | — | Scope, Power Pack, Firing Chamber |
 | **Blaster Rifle** | Penetrating Fire | **2H** | 28 m | Energy `1d12` | `19-20, ×2` | — | Scope, Power Pack, Firing Chamber |
 | **Bowcaster** | Penetrating Fire | **2H** | 28 m | Energy `1d10` | `20, ×3` | — | Scope, Power Pack, Firing Chamber |
-| **Heavy Repeating Blaster** | Penetrating Fire | Repeating *(bal.)* | 28 m | Energy `2d6` | `20, ×2` | — | Scope, Power Pack, Firing Chamber |
+| **Heavy Repeating Blaster** | Penetrating Fire | **HR** *(bal.)* | 28 m | Energy `2d6` | `20, ×2` | — | Scope, Power Pack, Firing Chamber |
 | **Hold-Out Blaster** | Assassin Fire | 1H *(bal.)* | 23 m | Energy `1d6` | `19-20, ×2` | Massive Crit `+1d8` | Scope, Power Pack |
 | **Disruptor Pistol** | Assassin Fire | 1H | 23 m | Unstoppable `1d10` | `18-20, ×2` | Ignores DR | Scope, Power Pack |
 | **Disruptor Rifle** | Assassin Fire | **2H** | 28 m | Unstoppable `1d12` | `18-20, ×3` | Ignores DR | Scope, Power Pack |

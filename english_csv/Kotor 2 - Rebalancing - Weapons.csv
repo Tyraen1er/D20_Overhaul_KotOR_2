@@ -1,0 +1,62 @@
+﻿Vanilla Weapon Type,Damage,Range,Critical Threat,Bonus,Category,Wielding,Upgrade Slots (Vanilla),Changes (Mod),Baseline Game Rule (No Feats)
+Blaster rifle,-,-,-,-,-,-,-,Lunette < Pack d'énergie < Chambrage,-
+Blaster carbines,Energy 1d12,25m,"19-20,x2",,Assaut,2H,None,"améliorable : Lunette, Pack d'énergie | Calibrage : Energy 1d12 (6.5), 19-20 x2",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Blaster rifles,Energy 1d12,28m,"19-20,x2",,Pénétrant,2H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie, Chambrage | Calibrage : Energy 1d12 (6.5), 19-20 x2",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Bowcasters,Energy 1d10,28m,"20-20,x3",,Pénétrant,2H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie, Chambrage | Calibrage : Energy 1d10 (5.5), 20-20 x3",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Repeating blasters,Energy 2d6,28m,"20-20,x2",,Assaut,HR (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Energy 2d6 (7.0), 20-20 x2, balanced","Arme à répétition : +150 %/+50 % DEX, malus natif de -5 AC (supprime le malus d'attaque à 2 armes vanilla)"
+Heavy repeating blasters,Energy 2d6,28m,"20-20,x2",,Pénétrant,HR (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie, Chambrage | Calibrage : Energy 2d6 (7.0), 20-20 x2, balanced","Arme à répétition : +150 %/+50 % DEX, malus natif de -5 AC (supprime le malus d'attaque à 2 armes vanilla)"
+Disruptor rifles,Unstoppable 1d12,28m,"18-20,x3",,Assassin,2H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Unstoppable 1d12 (6.5), 18-20 x3",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Ion rifles,Ion 2d6,28m,"19-20,x3",Ion: +1d10 vs. Droid,Tactique,2H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette | Calibrage : Ion 2d6 (7.0), 19-20 x3",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Sonic rifles,Sonic 2d6,28m,"18-20,x2",On Hit: -DEX (DC scalé),Tactique,2H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette | Calibrage : Sonic 2d6 (7.0), 18-20 x2, On-Hit DC scalé",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Blaster Rifle (craftable),Energy 1d12,28m,"19-20,x2",,Pénétrant,2H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie, Chambrage | Calibrage : Energy 1d12 (6.5), 19-20 x2",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Repeating Blaster Rifle (craftable),Energy 2d6,28m,"20-20,x2",,Assaut,HR (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Energy 2d6 (7.0), 20-20 x2, balanced","Arme à répétition : +150 %/+50 % DEX, malus natif de -5 AC (supprime le malus d'attaque à 2 armes vanilla)"
+Disruptor Rifle (craftable),Unstoppable 1d12,28m,"18-20,x3",,Assassin,2H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Unstoppable 1d12 (6.5), 18-20 x3",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Blaster pistol,-,-,-,-,-,-,-,Lunette < Pack d'énergie < Chambrage,-
+Blaster pistols,"Energy, 1d10",23m,"19-20,x2",,Assaut,1H (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Energy 1d10 (5.5), 19-20 x2, balanced",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Heavy blasters,"Energy, 1d12",23m,"19-20,x2",,Pénétrant,1H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie, Chambrage | Calibrage : Energy 1d12 (6.5), 19-20 x2",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Hold out blasters,"Energy, 1d6",23m,"19-20,x2",Massive Criticals: +1d8,Assassin,1H (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Energy 1d6 (3.5), 19-20 x2, Massive +1d8, balanced",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Disruptor pistols,"Unstoppable, 1d10",23m,"18-20,x2",,Assassin,1H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Unstoppable 1d10 (5.5), 18-20 x2",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Ion blasters,"Ion, 1d10",17m,"19-20,x3",Ion: +1d10 vs. Droid,Tactique,1H (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette | Calibrage : Ion 1d10 (5.5), 19-20 x3, balanced",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Sonic pistols,"Sonic, 1d10",17m,"18-20,x2",On Hit: -DEX (DC scalé),Tactique,1H (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette | Calibrage : Sonic 1d10 (5.5), 18-20 x2, On-Hit DC scalé, balanced",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Blaster Pistol (Craftable),Energy 1d10,23m,"19-20,x2",,Assaut,1H (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Energy 1d10 (5.5), 19-20 x2, balanced",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Hold Out Blaster (Craftable),Energy 1d6,23m,"19-20,x2",Massive Criticals: +1d8,Assassin,1H (balanced),"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Energy 1d6 (3.5), 19-20 x2, Massive +1d8, balanced",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Disruptor Pistol (Craftable),Unstoppable 1d10,23m,"18-20,x2",,Assassin,1H,"Chambrage, Cellule d'énergie, Viseur","améliorable : Lunette, Pack d'énergie | Calibrage : Unstoppable 1d10 (5.5), 18-20 x2",Arme 1H distance : +150 % DEX en Duel (+100 %/+50 % en Ambidextrie)
+Melee Weapon,-,-,-,-,-,-,-,Poignée < Lame < Cellule,-
+Unarmed,Physical 1d6,,"19-20,x2",,Impact Weapons,1H,None,"Calibrage : Physical 1d6 (progresse via Spé mains nues I-III : +1d4/+2d4/+3d4 aux Lvl 4/12/19 ou Prestige Lvl 4), 19-20 x2",Compte comme une arme 1H (bénéficie de la posture Duel de base : dégâts mêlée 150 % STR ; famille Impact Weapons)
+Stun batons,Bludgeoning 1d8,,"18-20,x2",,Impact Weapons,1H (balanced),None,"améliorable : Poignée | Calibrage : Bludgeoning 1d8 (4.5), 18-20 x2, balanced",
+Plasma Torch (Torche à plasma),Bludgeoning 1d1,,"20-20,x2",Fire: +1d6,Impact Weapons,1H (balanced),None,"Baseitem dédié Plasma_Torch (valeurs vanilla conservées : 1d1 + 1d6 Fire, 20-20 x2, non améliorable)",
+Short swords (craftable),Piercing 1d8,,"18-20,x2",,Traditionnelle,1H (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame | Calibrage : Piercing 1d8 (4.5), 18-20 x2, balanced",
+Vibroblades,Piercing 1d6,,"19-20,x2",,Arme à résonance,1H (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame, Cellule d'énergie | Calibrage : Piercing 1d6 (3.5), 19-20 x2, balanced",
+Long swords (craftable),Slashing 1d12,,"19-20,x2",,Traditionnelle,1H,"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame | Calibrage : Slashing 1d12 (6.5), 19-20 x2",
+Gamorrean battleaxes,Slashing 2d8,,"20-20,x3",,Traditionnelle,2H,None,"améliorable : Poignée, Lame | Calibrage : Slashing 2d8 (9.0), 20-20 x3",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Vibroswords (craftable),Slashing 1d10,,"19-20,x2",,Arme à résonance,2H,"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame, Cellule d'énergie | Calibrage : Slashing 1d10 (5.5), 19-20 x2",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Quarterstaffs,Bludgeoning 1d8,,"19-20,x2",,Impact Weapons,HR (balanced),None,"améliorable : Poignée | Calibrage : Bludgeoning 1d8 (4.5), 19-20 x2, balanced",Arme double : malus natif de -5 AC (supprime le malus d'attaque à 2 armes vanilla)
+Force pikes,Bludgeoning 2d8,,"20-20,x3",,Impact Weapons,2H,None,"améliorable : Poignée | Calibrage : Bludgeoning 2d8 (9.0), 20-20 x3",Arme 2H : dégâts de base 200 % STR (mêlée) ou 150 % DEX (distance) sans don
+Double-Bladed Sword,Slashing 1d8,,"19-20,x2",,Traditionnelle,HR (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame | Calibrage : Slashing 1d8 (4.5), 19-20 x2, balanced",Arme double : malus natif de -5 AC (supprime le malus d'attaque à 2 armes vanilla)
+Vibro double-blades (craftable),Slashing 1d8,,"20-20,x2",,Arme à résonance,HR (balanced),"Lame, Poignée, Cellule d'énergie","améliorable : Poignée, Lame, Cellule d'énergie | Calibrage : Slashing 1d8 (4.5), 20-20 x2, balanced",Arme double : malus natif de -5 AC (supprime le malus d'attaque à 2 armes vanilla)
+Wookie warblades,Slashing 1d10,,"20-20,x3",,Traditionnelle,HR (balanced),None,"améliorable : Poignée, Lame | Calibrage : Slashing 1d10 (5.5), 20-20 x3, balanced (épée double traditionnelle)",Arme double : malus natif de -5 AC (supprime le malus d'attaque à 2 armes vanilla)
+Gaffi sticks,"héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu",,"héritage de kotor 1
+retiré du jeu","héritage de kotor 1
+retiré du jeu",
+Short light Saber,Energy 2d6,,"19-20,x2",,Laser,1H (balanced),"Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie","améliorable : Cristal de couleur, 2 Cristaux, Émetteur, Lentille, Cellule d'énergie | Calibrage : Energy 2d6 (7.0), 19-20 x2, balanced",
+Light Saber,Energy 2d8,,"19-20,x2",,Laser,1H,"Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie","améliorable : Cristal de couleur, 2 Cristaux, Émetteur, Lentille, Cellule d'énergie | Calibrage : Energy 2d8 (9.0), 19-20 x2",
+Double Light Saber,Energy 2d8,,"20-20,x2",,Laser,HR (balanced),"Cristal de couleur, Cristal d'amélioration, Émetteur, Lentille, Cellule d'énergie","améliorable : Cristal de couleur, 2 Cristaux, Émetteur, Lentille, Cellule d'énergie | Calibrage : Energy 2d8 (9.0), 20-20 x2, balanced",Arme double : malus natif de -5 AC (supprime le malus d'attaque à 2 armes vanilla)
+Wrist launcher & Rockets,-,-,-,-,-,-,-,-,-
+Wrist launcher,,25m,,,consumable,none,None,,
+Rockets,Varies (20-60),25m,,,consumable,none,None,Fléchettes/Roquettes spécialisées : DC = 12 + Lvl + Mod INT,
+Grenades,,,,,consumable,none,,All grenades : DC = 10 + Lvl + Mod INT,
+Fragmentation grenades,Physical 20,25m,,DC 15 Refl half,consumable,none,None,DC = 10 + Lvl + Mod INT (Ref half),
+Stun grenades,,25m,,Stun 9s (DC 15 Will),consumable,none,None,DC = 10 + Lvl + Mod INT (Will),
+Thermal detonators,Energy 60,25m,,DC 15 Refl half,consumable,none,None,DC = 10 + Lvl + Mod INT (Ref half),
+Poison grenades,Poison,25m,,Poison 12s (DC 15 Fort),consumable,none,None,"DC = 10 + Lvl + Mod INT (Fort, scripted save)",
+Flash grenades,,25m,,Blind (DC 15 Refl),consumable,none,None,DC = 10 + Lvl + Mod INT (Ref),
+Sonic grenades,Sonic 20,25m,,AD Dex -6 30s (DC 15 Will),consumable,none,None,DC = 10 + Lvl + Mod INT (Will),
+Adhesive grenades,,25m,,Entangle 15s (DC 15 Refl),consumable,none,None,No save (Entangle 15s),
+Cryoban grenades,Cold 30,25m,,Freeze 6s (DC 15 Refl half),consumable,none,None,DC = 10 + Lvl + Mod INT (Ref half + negates freeze),
+Fire grenades,Fire 40,25m,,DC 15 Refl half,consumable,none,None,DC = 10 + Lvl + Mod INT (Ref half),
+Ion grenades,Ion 20,25m,,+40 vs Droid/Shield (DC 15 Refl),consumable,none,None,DC = 10 + Lvl + Mod INT (Ref half),

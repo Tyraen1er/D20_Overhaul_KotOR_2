@@ -122,6 +122,7 @@ def _build_dynamic_baseitem_helpers() -> tuple[str, str, str, str, str, str]:
         "Blaster_Carbine": 5,
         "Repeating_Blaster": 5,
         "Adv_Mining_Laser": 6,
+        "Adv_Mining_Laser_1M": 6,
         "Blaster_Rifle": 6,
         "Heavy_Repeating_Blaster": 6,
         "Bowcaster": 6,
@@ -151,6 +152,15 @@ def _build_dynamic_baseitem_helpers() -> tuple[str, str, str, str, str, str]:
     mirror_1m_ids = [idx for lbl, idx in sorted(mirror_map.items(), key=lambda kv: kv[1]) if lbl not in non_mirror_keys]
     mirror_1m_cond = " || ".join(f"nBI == {i}" for i in mirror_1m_ids) if mirror_1m_ids else "FALSE"
 
+    # 4b. Variantes miroirs 1M des armes Haute Cadence / Double (Option B : +1 atq en main principale uniquement, 0 CA)
+    hc_mirror_keys = {
+        "Quarter_Staff", "Double_Bladed_Sword", "Vibro_Double_Blade",
+        "Double_Bladed_Lightsaber", "Wookie_Warblade",
+        "Repeating_Blaster", "Heavy_Repeating_Blaster",
+    }
+    double_1m_ids = [idx for lbl, idx in sorted(mirror_map.items(), key=lambda kv: kv[1]) if lbl in hc_mirror_keys]
+    double_1m_cond = " || ".join(f"nBI == {i}" for i in double_1m_ids) if double_1m_ids else "FALSE"
+
     # 5. Plages de menace critiques exactes lues depuis baseitems.2da (+ Mains nues -1 -> 2 = 19-20)
     threat_lines = ["    if (nBI == -1) return 2; // Unarmed 19-20 x2"]
     all_weap_ids = sorted({i for ids in fam_ids.values() for i in ids if i >= 0})
@@ -168,11 +178,11 @@ def _build_dynamic_baseitem_helpers() -> tuple[str, str, str, str, str, str]:
         sonic_ids.append(mirror_map["Sonic_Rifle"])
     sonic_cond = " || ".join(f"nBI == {i}" for i in sonic_ids)
 
-    return dex_cap_body, fam_body, heavy_2h_cond, mirror_1m_cond, threat_body, sonic_cond
+    return dex_cap_body, fam_body, heavy_2h_cond, mirror_1m_cond, double_1m_cond, threat_body, sonic_cond
 
 
 def build_ov_inc_core(fids: dict[str, int], sids: dict[str, int]) -> str:
-    dex_cap_body, fam_body, heavy_2h_cond, mirror_1m_cond, threat_body, sonic_cond = _build_dynamic_baseitem_helpers()
+    dex_cap_body, fam_body, heavy_2h_cond, mirror_1m_cond, double_1m_cond, threat_body, sonic_cond = _build_dynamic_baseitem_helpers()
     code = f'''//:: ov_inc_core - KotOR 2 Overhaul Core Library (Passes 1, 2 & 3)
 
 int OV_GAM_1 = {fids["MOD_GAMORREAN_1"]};
@@ -303,6 +313,11 @@ int Ov_IsHeavy2HBaseItem(int nBI)
 int Ov_IsMirror1MBaseItem(int nBI)
 {{
     return ({mirror_1m_cond});
+}}
+
+int Ov_IsDouble1MMirrorBaseItem(int nBI)
+{{
+    return ({double_1m_cond});
 }}
 
 int Ov_IsSonicBaseItem(int nBI)
@@ -504,6 +519,29 @@ void Ov_EnsureAutoGrants(object oTarget)
     {{
         if (!GetHasFeat(FEAT_SNEAK_ATTACK_1D6, oTarget)) GrantFeat(FEAT_SNEAK_ATTACK_1D6, oTarget);
     }}
+
+    // 5. Adaptateur Gamorreen II (objet reutilisable bascule 2M / 1M + ShowUpgradeScreen)
+    // Auto-migre UNE SEULE FOIS (via LocalBoolean 21, sans conflit avec LocalNumber 14 !)
+    if (GetHasFeat(OV_GAM_2, oTarget))
+    {{
+        object oAd = GetItemPossessedBy(oPC, "ov_gam_adapt");
+        int bMig = GetLocalBoolean(oPC, 21);
+        int bHad = GetIsObjectValid(oAd);
+        if (bHad && (GetBaseItemType(oAd) != 54 || !bMig))
+        {{
+            DestroyObject(oAd);
+            oAd = OBJECT_INVALID;
+        }}
+        if (!GetIsObjectValid(oAd))
+        {{
+            SetLocalBoolean(oPC, 21, TRUE);
+            CreateItemOnObject("ov_gam_adapt", oPC, 1, bHad || bMig);
+        }}
+        else if (!bMig)
+        {{
+            SetLocalBoolean(oPC, 21, TRUE);
+        }}
+    }}
 }}
 
 void Ov_RefreshPassives(object oTarget)
@@ -638,6 +676,13 @@ void Ov_RefreshPassives(object oTarget)
         else if (GetHasFeat(OV_DUE_2, oTarget)) {{ nTotalAtk += 4; }}
         else if (GetHasFeat(OV_DUE_1, oTarget)) {{ nTotalAtk += 2; }}
         if (bRanged && nRngStat > 0) nTotalDmg += (nRngStat * 150) / 100; // +150% DEX/INT 1M Duel
+    }}
+
+    // Option B (Gamorreen II, validee 25/11) : arme haute cadence adaptee en 1M -> +1 attaque main droite
+    // uniquement si equipee en main principale (main droite), sans malus CA, aucun bonus en main gauche.
+    if (GetIsObjectValid(oRight) && Ov_IsDouble1MMirrorBaseItem(nBI))
+    {{
+        nExtraAttacks += 1;
     }}
 
     // 3b. 8 Specialisations d'arme
@@ -971,19 +1016,14 @@ void Ov_RefreshPassives(object oTarget)
     }}
 }}
 
-// Garde-fou 1x / 6 secondes pour le PJ et son groupe (elimine le bug heartbeat xN PNJ!)
-void Ov_UnlockPartyTick(object oPC)
-{{
-    if (GetIsObjectValid(oPC)) SetLocalNumber(oPC, 16, 0);
-}}
-
+// Garde-fou 1x / 6 secondes base sur l'horloge moteur (jamais coince apres save/load ou changement de zone!)
 void Ov_PartyTick6s()
 {{
     object oPC = GetFirstPC();
     if (!GetIsObjectValid(oPC) || !GetIsPlayerMadeCharacter(oPC)) return;
-    if (GetLocalNumber(oPC, 16) != 0) return;
-    SetLocalNumber(oPC, 16, 1);
-    DelayCommand(5.8, Ov_UnlockPartyTick(oPC));
+    int nSlot = ((GetTimeMinute() % 20) * 10) + (GetTimeSecond() / 6) + 1;
+    if (GetLocalNumber(oPC, 16) == nSlot) return;
+    SetLocalNumber(oPC, 16, nSlot);
 
     // Sondage furtivite groupe (une seule chaine par round, jamais xN!)
     Ov_PollStealth();
@@ -3183,6 +3223,215 @@ void main()
     compile_script("a_q_cryst_change", code)
 
 
+def build_gamorrean_swap_scripts(fids: dict[str, int]) -> None:
+    """Génère `ov_inc_gamswap.nss` (mapping bidirectionnel exact des 69 armes 2M/D <-> 1M depuis
+    `gamorrean_swap_map.json`) et compile les scripts de l'Adaptateur Gamorréen :
+      - ov_gam_use.ncs    (impactscript de l'item ov_gam_adapt -> crée ov_gam_term + ouvre ov_gam_conv)
+      - ov_gam_end.ncs    (détruit ov_gam_term en fin de dialogue)
+      - ov_gam_c_can.ncs  (StartingConditional : Gamorréen II + hors combat + arme main droite convertible)
+      - ov_gam_a_upgr.ncs (Option 1 : ouvre l'écran d'amélioration ShowUpgradeScreen, 0 globals)
+      - ov_gam_a_swap.ncs (Option 2 : convertit 2M/D <-> 1M, rééquipe, planifie ov_gam_a_ref)
+      - ov_gam_a_ref.ncs  (rafraîchit les passifs après conversion, 0 DelayCommand)"""
+    gam2_id = fids["MOD_GAMORREAN_2"]
+    swap_file = OUT_DIR / "gamorrean_swap_map.json"
+    entries: list[dict[str, str]] = json.loads(swap_file.read_text(encoding="utf-8")) if swap_file.exists() else []
+
+    lines: list[str] = [
+        "//:: ov_inc_gamswap - Table bidirectionnelle 2M/D <-> 1M Gamorreen II (auto-generee)",
+        "string Ov_GetGamMirrorResRef(string sTagLow)",
+        "{",
+    ]
+    for e in entries:
+        t2 = e["tag_2m"].replace('"', "")
+        r2 = e["res_2m"].replace('"', "")
+        t1 = e["tag_1m"].replace('"', "")
+        r1 = e["res_1m"].replace('"', "")
+        lines.append(f'    if (sTagLow == "{t2}") return "{r1}";')
+        lines.append(f'    if (sTagLow == "{t1}") return "{r2}";')
+    lines.extend([
+        '    return "";',
+        "}",
+        "",
+        "object Ov_GetGamAdapterUser()",
+        "{",
+        "    object oPC = GetFirstPC();",
+        "    if (!GetIsObjectValid(oPC)) return OBJECT_INVALID;",
+        "    int nIdx = GetLocalNumber(oPC, 13);",
+        "    object oU = GetPartyMemberByIndex(nIdx);",
+        "    if (GetIsObjectValid(oU)) return oU;",
+        "    return GetPartyLeader();",
+        "}",
+        "",
+        "// Verifie uniquement le vrai combat (bOnlyCountReal=TRUE), sans faux positif sur la posture arme degainee",
+        "int Ov_IsPartyInRealCombat(object oUser)",
+        "{",
+        "    if (GetIsInCombat(oUser, TRUE)) return TRUE;",
+        "    int i = 0;",
+        "    while (i < 3)",
+        "    {",
+        "        object oPM = GetPartyMemberByIndex(i);",
+        "        if (GetIsObjectValid(oPM) && GetIsInCombat(oPM, TRUE)) return TRUE;",
+        "        i += 1;",
+        "    }",
+        "    return FALSE;",
+        "}",
+        "",
+    ])
+    (SRC_DIR / "ov_inc_gamswap.nss").write_text("\n".join(lines), encoding="latin1")
+
+    use_code = '''//:: ov_gam_use - Activation de l'Adaptateur Gamorreen (2M <-> 1M)
+#include "ov_inc_core"
+
+void Ov_ReplenishGamAdapt()
+{
+    object oPC = GetFirstPC();
+    if (GetIsObjectValid(oPC) && !GetIsObjectValid(GetItemPossessedBy(oPC, "ov_gam_adapt")))
+    {
+        CreateItemOnObject("ov_gam_adapt", oPC, 1, TRUE);
+    }
+}
+
+void main()
+{
+    object oUser = GetSpellTargetObject();
+    if (!GetIsObjectValid(oUser)) oUser = OBJECT_SELF;
+    object oPC = GetFirstPC();
+    if (!GetIsObjectValid(oPC) || !GetIsObjectValid(oUser)) return;
+
+    // Garantir que l'adaptateur reste toujours en inventaire (reutilisable a l'infini)
+    Ov_ReplenishGamAdapt();
+    AssignCommand(oPC, DelayCommand(0.25, Ov_ReplenishGamAdapt()));
+
+    int nIdx = 0;
+    if (oUser == GetPartyMemberByIndex(1)) nIdx = 1;
+    else if (oUser == GetPartyMemberByIndex(2)) nIdx = 2;
+    SetLocalNumber(oPC, 13, nIdx);
+
+    // Nettoyer un eventuel ancien terminal invisible residuel
+    object oOld = GetObjectByTag("ov_gam_term");
+    if (GetIsObjectValid(oOld)) DestroyObject(oOld);
+
+    // Creer un terminal invisible a la position du personnage et ouvrir le dialogue COMPUTER
+    object oLead = GetPartyMemberByIndex(0);
+    if (!GetIsObjectValid(oLead)) oLead = oPC;
+    object oTerm = CreateObject(OBJECT_TYPE_PLACEABLE, "ov_gam_term", GetLocation(oUser), FALSE);
+    if (GetIsObjectValid(oTerm))
+    {
+        AssignCommand(oTerm, DelayCommand(0.05, ActionStartConversation(oLead, "ov_gam_conv", FALSE, CONVERSATION_TYPE_COMPUTER, TRUE)));
+    }
+}
+'''
+    compile_script("ov_gam_use", use_code)
+
+    end_code = '''//:: ov_gam_end - Detruit le terminal invisible temporaire en fin de dialogue
+void main()
+{
+    if (GetTag(OBJECT_SELF) == "ov_gam_term")
+    {
+        DelayCommand(0.5, DestroyObject(OBJECT_SELF));
+    }
+}
+'''
+    compile_script("ov_gam_end", end_code)
+
+    cond_code = '''//:: ov_gam_c_can - Verifie si l'arme en main droite peut etre convertie (2M / 1M)
+#include "ov_inc_core"
+#include "ov_inc_gamswap"
+int StartingConditional()
+{
+    object oUser = Ov_GetGamAdapterUser();
+    if (!GetIsObjectValid(oUser) || Ov_IsPartyInRealCombat(oUser)) return FALSE;
+    if (!GetHasFeat(OV_GAM_2, oUser)) return FALSE;
+    object oRight = GetItemInSlot(INVENTORY_SLOT_RIGHTWEAPON, oUser);
+    if (!GetIsObjectValid(oRight)) return FALSE;
+    string sMirror = Ov_GetGamMirrorResRef(GetStringLowerCase(GetTag(oRight)));
+    return (sMirror != "");
+}
+'''
+    compile_script("ov_gam_c_can", cond_code)
+
+    wb_cond_code = '''//:: ov_gam_c_wb - Etabli portatif toujours disponible hors combat (quelle que soit l'arme equipee)
+#include "ov_inc_core"
+#include "ov_inc_gamswap"
+int StartingConditional()
+{
+    object oUser = Ov_GetGamAdapterUser();
+    if (!GetIsObjectValid(oUser) || Ov_IsPartyInRealCombat(oUser)) return FALSE;
+    return GetHasFeat(OV_GAM_2, oUser);
+}
+'''
+    compile_script("ov_gam_c_wb", wb_cond_code)
+
+    # Nettoyer les anciens scripts obsoletes
+    for old_s in ("ov_gam_c_s2", "ov_gam_a_s1", "ov_gam_a_s2", "ov_gam_a_rst", "ov_gam_a_p3", "ov_gam_a_swup", "ov_gam_a_go", "ov_gam_a_p1", "ov_gam_a_p2"):
+        for p_old in (OVR_DIR / f"{old_s}.ncs", SRC_DIR / f"{old_s}.nss"):
+            if p_old.exists():
+                p_old.unlink()
+
+    upgr_code = '''//:: ov_gam_a_upgr - Ouvre l'ecran d'amelioration (ShowUpgradeScreen, 0 globals)
+void main()
+{
+    object oPC = GetFirstPC();
+    if (!GetIsObjectValid(oPC)) return;
+    AssignCommand(oPC, DelayCommand(0.20, ShowUpgradeScreen(OBJECT_INVALID, oPC, TRUE, FALSE)));
+}
+'''
+    compile_script("ov_gam_a_upgr", upgr_code)
+
+    swap_code = f'''//:: ov_gam_a_swap - Convertit l'arme en main droite (2M/D - 1M), la reequipe et rafraichit les passifs
+#include "ov_inc_gamswap"
+void main()
+{{
+    object oPC = GetFirstPC();
+    object oUser = Ov_GetGamAdapterUser();
+    if (!GetIsObjectValid(oUser) || !GetIsObjectValid(oPC)) return;
+    if (Ov_IsPartyInRealCombat(oUser) || !GetHasFeat({gam2_id}, oUser)) return;
+
+    object oRight = GetItemInSlot(INVENTORY_SLOT_RIGHTWEAPON, oUser);
+    if (!GetIsObjectValid(oRight)) return;
+    string sTagLow = GetStringLowerCase(GetTag(oRight));
+    string sMirrorRes = Ov_GetGamMirrorResRef(sTagLow);
+    if (sMirrorRes == "") return;
+
+    // Si on reconvertit une arme 1M en 2M/Double alors que la main gauche est occupee, liberer la main gauche
+    if (GetStringLeft(sTagLow, 5) == "ov1m_")
+    {{
+        object oLeft = GetItemInSlot(INVENTORY_SLOT_LEFTWEAPON, oUser);
+        if (GetIsObjectValid(oLeft))
+        {{
+            AssignCommand(oUser, ActionUnequipItem(oLeft, TRUE));
+        }}
+    }}
+
+    AssignCommand(oUser, ActionUnequipItem(oRight, TRUE));
+    DestroyObject(oRight);
+
+    object oNew = CreateItemOnObject(sMirrorRes, oUser, 1, FALSE);
+    if (GetIsObjectValid(oNew))
+    {{
+        AssignCommand(oUser, ActionEquipItem(oNew, INVENTORY_SLOT_RIGHTWEAPON, TRUE));
+        AssignCommand(oUser, DelayCommand(0.15, ActionEquipItem(oNew, INVENTORY_SLOT_RIGHTWEAPON, TRUE)));
+        AssignCommand(oPC, DelayCommand(0.35, ExecuteScript("ov_gam_a_ref", oPC)));
+    }}
+}}
+'''
+    compile_script("ov_gam_a_swap", swap_code)
+
+    ref_code = '''//:: ov_gam_a_ref - Rafraichit les passifs apres conversion 2M/D <-> 1M (0 DelayCommand)
+#include "ov_inc_core"
+#include "ov_inc_gamswap"
+void main()
+{
+    object oUser = Ov_GetGamAdapterUser();
+    if (GetIsObjectValid(oUser))
+    {
+        Ov_RefreshPassives(oUser);
+    }
+}
+'''
+    compile_script("ov_gam_a_ref", ref_code)
+
+
 def main() -> None:
     SRC_DIR.mkdir(parents=True, exist_ok=True)
     OVR_DIR.mkdir(parents=True, exist_ok=True)
@@ -3194,6 +3443,7 @@ def main() -> None:
     build_wrappers()
     build_support_scripts()
     build_personal_crystal_script()
+    build_gamorrean_swap_scripts(fids)
     print("=== Jalon 3 BUILD OK (tous les scripts compiles sans erreur) ===")
 
 

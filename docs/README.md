@@ -34,7 +34,7 @@ Si vous n'avez pas joué depuis longtemps, voici les abréviations que vous croi
 - **Vig / Réf / Vol** : Les trois jets de sauvegarde — *Vigueur*, *Réflexes* et *Volonté*.
 - **Notation en dés (`1d8`, `2d6`, etc.)** : Le mod remplace les plages du jeu de base (`1-8`, `2-12`) par la notation standard en dés : `2d6` signifie « lancer 2 dés à 6 faces » (soit de 2 à 12, avec une moyenne de 7).
 - **FOR / DEX / CON / INT / SAG / CHA** : Force, Dextérité, Constitution, Intelligence, Sagesse, Charisme.
-- **1M / 2M / D** : Arme à une main / Arme à deux mains / Arme double ou à répétition.
+- **1M / 2M / HC** : Arme à une main / Arme à deux mains / Arme haute cadence *(armes doubles en mêlée et blasters à répétition à distance)*.
 - **R1 / R2 / R3** : Rang 1, 2 ou 3 d'un don ou d'un pouvoir de la Force.
 - **AoE** : Pouvoir ou attaque à effet de zone (touche plusieurs ennemis à la fois).
 
@@ -63,7 +63,7 @@ Avant même de choisir le moindre don ou pouvoir, le mod modifie plusieurs règl
 
 - **Apparition des armes à deux mains (`2M`)** : les armes lourdes de mêlée (*Vibro-épée*, *Hache gamorréenne*, *Pique de Force*) et les fusils/arbalètes occupent les deux mains sans donner d'attaque supplémentaire, mais infligent de base **`200 % FOR`** en mêlée et **`150 % DEX`** à distance.
 - **Armes à distance indexées sur la Dextérité (`DEX`)** : contrairement au jeu de base où la DEX n'ajoutait aucun dégât aux blasters, vos tirs ajoutent désormais votre modificateur de DEX aux dégâts (**`150 % DEX`** en arme 1M seule ou 2M, **`100 % / 50 % DEX`** à deux armes, **`150 % / 50 % DEX`** sur les blasters à répétition).
-- **Armes doubles & blasters à répétition : malus de CA au lieu du malus d'attaque** : toutes les armes doubles et armes à répétition sont désormais équilibrées et perdent l'ancien malus d'attaque à deux armes (`-6 / -10`). À la place, elles appliquent un **malus natif de `-5 CA`** et infligent **`150 % / 50 %`** FOR (mêlée) ou DEX (distance).
+- **Armes haute cadence (`HC` — armes doubles & blasters à répétition) : malus de CA au lieu du malus d'attaque** : toutes les armes doubles et armes à répétition sont désormais équilibrées et perdent l'ancien malus d'attaque à deux armes (`-6 / -10`). À la place, elles appliquent un **malus natif de `-5 CA`** et infligent **`150 % / 50 %`** FOR (mêlée) ou DEX (distance).
 - **Critique confirmé garanti en furtivité** : la **première attaque** portée dans les **6 secondes** suivant la sortie du mode furtif bénéficie d'un bonus de **`+50` en Attaque** (garantissant la touche) et **duplique la totalité de ses dégâts (Attaque sournoise comprise)** afin de simuler un coup critique confirmé. En jeu, ces dégâts doublés s'affichent sur une **seconde ligne de dégâts** dans le journal de combat, juste après l'impact initial.
 - **Mains nues comptées comme une arme à une main** : combattre à mains nues profite nativement des règles d'une arme 1M seule (`150 % FOR` en mêlée et compatibilité avec la posture *Duel*).
 - **Réduction de Dégâts (RD) native sur les armures** : porter une **armure intermédiaire** confère nativement **`RD 2/-`** et une **armure lourde** **`RD 4/-`** (physique & énergie). De plus, chaque type d'armure possède ses propres emplacements à l'établi (1 Sous-couche légère en armure légère, 1 Sous-couche complète en lourde, et 2 emplacements en intermédiaire : Sous-couche complète + Sur-couche exclusive renforcée).

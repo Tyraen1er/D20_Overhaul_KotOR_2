@@ -1,0 +1,79 @@
+﻿ResRef,Name,Subtype,Min. Loot Level,Prerequisites,Attribute Bonus (Summary),Properties (Vanilla),Random Loot,Fixed Locations,Changes (Mod),Description (Mod)
+a_gloves_01,Gants isolants,Gauntlets,Lvl 6+ (rare 1+),—,,"Damage Immunity +30%, Damage Immunity +20%",tier 1 lvl 6+ (rare from 1),"Péragus - Dortoirs, Nar Shaddaa - FP atterri…, Péragus - Dortoirs, Nar Shaddaa - FP atterri… (+1 lieux)",,
+a_gloves_02,Gants de l'Echange,Gauntlets,Lvl 8+ (rare 3+),—,,"Skill Bonus +1, Skill Bonus +2, Skill Bonus +2",tier 2 lvl 8+ (rare from 3),—,Ajout : INT +1 (gants techniques de l'Échange),"[Mod D20-Overhaul]
+
+Notable properties:
+• INT +1 (gants techniques de l'Échange)"
+a_gloves_04,Gants de survie de Taris,Gauntlets,Lvl 12+ (rare 7+),—,,Improved Saving Throws +1,tier 4 lvl 12+ (rare from 7),—,,
+a_gloves_05,Gants de précision,Gauntlets,Lvl 14+ (rare 9+),—,,"Bonus Feat, Bonus Feat",tier 5 lvl 14+ (rare from 9),—,,
+a_gloves_06,Gamorrean Gauntlets,Gauntlets,Lvl 16+ (rare 11+),—,,"Attack Penalty +-1, Damage Bonus (Bludgeoning) +4",tier 6 lvl 16+ (rare from 11),—,Cap: Damage +4 → +2,"[Mod D20-Overhaul]
+
+Notable properties:
+• Bludgeoning Damage +2"
+a_gloves_07,Gants de travail de l'Echange,Gauntlets,Lvl 18+ (rare 13+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Skill Bonus +1, Skill Bonus +3, Skill Bonus +3",tier 7 lvl 18+ (rare from 13),—,,
+a_gloves_08,Gantelets de défense de la Czerka,Gauntlets,Lvl 20+ (rare 15+),—,,"Defense Bonus +1, Don requis",tier 8 lvl 20+ (rare from 15),—,,
+a_gloves_09,Detonator Gloves,Gauntlets,Lvl 22+ (rare 17+),—,,"Damage Immunity +25%, Damage Immunity +10%, Improved Saving Throws +2, Skill Bonus +3",tier 9 lvl 22+ (rare from 17),401dxn,Ajout : INT +2 (gants de démolition/détonateurs),"[Mod D20-Overhaul]
+
+Notable properties:
+• INT +2 (gants de démolition/détonateurs)"
+a_gloves_10,Gants de précision sans arme,Gauntlets,Lvl 24+ (rare 19+),—,,"Attack Bonus +1, Damage Bonus (Bludgeoning) +2, Improved Saving Throws +1",tier 10 lvl 24+ (rare from 19),—,,
+a_gloves_11,Gants d'infiltrateur,Gauntlets,Lvl 26+ (rare 21+),—,DEX +2,"Attribute Bonus (Dexterity) +2, Skill Bonus +4, Skill Bonus +4",tier 11 lvl 26+ (rare from 21),"Ondéron - Palais royal, Ondéron - Palais royal",,
+a_gloves_12,Jal Shey Perception Gloves,Gauntlets,Lvl 28+ (rare 23+),—,"DEX +1, WIS +1","Attribute Bonus (Dexterity) +1, Attribute Bonus (Wisdom) +1, Skill Bonus +1",tier 12 lvl 28+ (rare from 23),—,"Jal Shey lore rebalance: DEX +1, WIS +1 → CHA +1, WIS +1","[Mod D20-Overhaul]
+
+Notable properties:
+• CHA +1, WIS +1"
+a_gloves_13,Gamorrean Wargloves,Gauntlets,Lvl 30+ (rare 25+),—,,"Malus de caractéristique +-2, Defense Bonus +3, Don requis",tier 13 lvl 30+ (rare from 25),—,Cap: AC +3 → AC +2,"[Mod D20-Overhaul]
+
+Notable properties:
+• AC +2"
+a_gloves_14,Ampli. force physique ériadu,Gauntlets,Lvl 30+ (rare 27+),—,STR +2,Attribute Bonus (Strength) +2,tier 14 lvl 30+ (rare from 27),—,,
+a_gloves_15,Gantelets de Karakan,Gauntlets,Lvl 30+ (rare 29+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Improved Saving Throws +3",tier 15 lvl 30+ (rare from 29),—,,
+a_gloves_16,Gants de précision bothans,Gauntlets,Lvl 30+,—,DEX +1,"Attribute Bonus (Dexterity) +1, Damage Immunity +25%, Damage Immunity +15%, Damage Resistance (Fire) +5/-, Improved Saving Throws +2, Skill Bonus +6",tier 16 lvl 30+,—,,
+a_gloves_17,Gantelets de puissance Sith,Gauntlets,Lvl 30+,—,STR +3,Attribute Bonus (Strength) +3,tier 17 lvl 30+,—,,
+a_gloves_18,Gantelets de puissance gamorréens,Gauntlets,Lvl 30+,—,STR +2,"Attribute Bonus (Strength) +2, Damage Bonus (Bludgeoning) +2, Defense Bonus +1, Don requis, Don requis, On Hit +14",tier 18 lvl 30+,—,,
+a_gloves_19,Nagai Combat Gloves,Gauntlets,Lvl 30+,—,,"Damage Resistance (Energy) +5/-, Improved Saving Throws +2",tier 19 lvl 30+,—,Cap: DR +5/- → DR +2/- (Energy),"[Mod D20-Overhaul]
+
+Notable properties:
+• DR +2/- (Energy)"
+a_gloves_20,Kubaz Scoundrel Gloves,Gauntlets,Lvl 30+,—,DEX +5,"Attribute Bonus (Dexterity) +5, Class Restriction, Skill Bonus +6, Skill Bonus +6",tier 20 lvl 30+,—,Cap: DEX +5 → DEX +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• DEX +3"
+a_gloves_21,Automation Gloves,Gauntlets,Lvl 30+,—,DEX +3,"Attribute Bonus (Dexterity) +3, Skill Bonus +4, Skill Bonus +2",tier 21 lvl 30+,—,"Automation lore rebalance: DEX +3 → INT +2, DEX +1","[Mod D20-Overhaul]
+
+Notable properties:
+• INT +2, DEX +1"
+a_gloves_22,Jal Shey Meditation Gloves,Gauntlets,Lvl 30+,—,"DEX +2, WIS +2","Attribute Bonus (Dexterity) +2, Attribute Bonus (Wisdom) +2, Skill Bonus +2",tier 22 lvl 30+,—,"Jal Shey lore rebalance: DEX +2, WIS +2 → CHA +2, WIS +2","[Mod D20-Overhaul]
+
+Notable properties:
+• CHA +2, WIS +2"
+a_gloves_23,Echani Accuracy Gloves,Gauntlets,Lvl 30+,—,DEX +1,"Attack Bonus +1, Attribute Bonus (Dexterity) +1, Damage Bonus (Bludgeoning) +5",tier 23 lvl 30+,—,Cap: Damage +5 → +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• Bludgeoning Damage +3"
+a_gloves_24,Gants de Zeison Sha,Gauntlets,Lvl 30+,—,CON +2,"Attribute Bonus (Constitution) +2, Regeneration +1",tier 24 lvl 30+,—,,
+a_gloves_25,Dominator Gauntlets,Gauntlets,Lvl 30+,—,STR +5,Attribute Bonus (Strength) +5,tier 25 lvl 30+,—,Cap: STR +5 → STR +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• STR +3"
+a_gloves_26,Nikto Soldier Gloves,Gauntlets,Lvl 30+,—,"STR +3, DEX +2","Attribute Bonus (Dexterity) +2, Attribute Bonus (Strength) +3, Class Restriction",tier 26 lvl 30+,—,"Cap: STR +3, DEX +2 → STR +2, DEX +2","[Mod D20-Overhaul]
+
+Notable properties:
+• STR +2, DEX +2"
+a_gloves_27,Gants d'Ossluk,Gauntlets,Lvl 30+,—,"STR +2, DEX +1, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Dexterity) +1, Attribute Bonus (Strength) +2",tier 27 lvl 30+,—,,
+a_gloves_28,Disruption Gloves,Gauntlets,Lvl 30+,—,,Damage Bonus (Unstoppable) +1d10,tier 28 lvl 30+,—,Cap: Damage +1d10 → +1d6,"[Mod D20-Overhaul]
+
+Notable properties:
+• Unstoppable Damage +1d6"
+a_gloves_29,Improved Automation Gloves,Gauntlets,Lvl 30+,—,DEX +5,"Attribute Bonus (Dexterity) +5, Skill Bonus +6, Skill Bonus +4",tier 29 lvl 30+,—,"Cap & automation lore: DEX +5 → DEX +2, INT +2","[Mod D20-Overhaul]
+
+Notable properties:
+• DEX +2, INT +2"
+a_gloves_30,Lightning Gloves,Gauntlets,Lvl 30+,—,,"Attack Bonus +1, Damage Bonus (Electrical) +2d6, Damage Resistance (Electrical) +10/-",tier 30 lvl 30+,—,Cap: Damage +2d6 → +1d6,"[Mod D20-Overhaul]
+
+Notable properties:
+• Electrical Damage +1d6"
+ancientsithgaunt,Ancient Sith Gauntlet,Gauntlets,Fixed Loot / Quest,Alignment,STR +4,"Alignment Restriction, Attribute Bonus (Strength) +4, Immunity: Critical Hits",—,401dxn,Cap: STR +4 → STR +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• STR +3"

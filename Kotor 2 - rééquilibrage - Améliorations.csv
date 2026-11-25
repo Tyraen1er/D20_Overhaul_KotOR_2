@@ -6,7 +6,7 @@ Amélioration d'arme de mêlée — Lame (mêlée)
 
 Effets :
 • Coups critiques plus importants +1d4"
-u_m_edge_02,Cellule à décharge sonique T3 (mêlée),Lame (mêlée),2,"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d4",palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts contre Droïdes +1d4,,"[Mod D20-Overhaul]
+u_m_edge_02,Tranchant en ionite de base,Lame (mêlée),2,"Bonus aux dégâts (Ion) +1, Bonus aux dégâts contre Race +1d4",palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts contre Droïdes +1d4,,"[Mod D20-Overhaul]
 
 Amélioration d'arme de mêlée — Lame (mêlée)
 
@@ -103,7 +103,7 @@ Amélioration d'arme de mêlée — Cellule d'énergie (mêlée)
 
 Effets :
 • Bonus aux dégâts (ioniques) +1
-• Bonus aux dégâts contre Race +1d4"
+• Bonus aux dégâts contre Droïdes +1d4"
 u_m_cell_02,Cellule à vibrations,Cellule d'énergie (mêlée),2,"Bonus aux dégâts (Slashing) +1, Don requis",palier 2 niv. 8+ (rare dès 3),Bonus aux dégâts (Slashing) +1,,"[Mod D20-Overhaul]
 
 Amélioration d'arme de mêlée — Cellule d'énergie (mêlée)
@@ -129,7 +129,7 @@ Amélioration d'arme de mêlée — Cellule d'énergie (mêlée)
 
 Effets :
 • Bonus aux dégâts (ioniques) +2
-• Bonus aux dégâts contre Race +1d6"
+• Bonus aux dégâts contre Droïdes +1d6"
 u_m_cell_06,Cellule à vibrations T2,Cellule d'énergie (mêlée),6,"Malus à l'attaque +Penalty_-2, Bonus aux dégâts (Slashing) +1d10, Don requis",palier 6 niv. 16+ (rare dès 11),Bonus aux dégâts (Slashing) +1d4,,"[Mod D20-Overhaul]
 
 Amélioration d'arme de mêlée — Cellule d'énergie (mêlée)
@@ -155,7 +155,7 @@ Amélioration d'arme de mêlée — Cellule d'énergie (mêlée)
 
 Effets :
 • Bonus aux dégâts (ioniques) +1d6
-• Bonus aux dégâts contre Race +1d8"
+• Bonus aux dégâts contre Droïdes +1d8"
 u_m_cell_10,Cellule à vibrations T3,Cellule d'énergie (mêlée),10,"Malus à l'attaque +Penalty_-2, Bonus aux dégâts (Slashing) +2d6, Don requis",palier 10 niv. 24+ (rare dès 19),Bonus aux dégâts (Slashing) +1d6,,"[Mod D20-Overhaul]
 
 Amélioration d'arme de mêlée — Cellule d'énergie (mêlée)
@@ -181,7 +181,7 @@ Amélioration d'arme de mêlée — Cellule d'énergie (mêlée)
 
 Effets :
 • Bonus aux dégâts (ioniques) +4
-• Bonus aux dégâts contre Race +2d6"
+• Bonus aux dégâts contre Droïdes +2d6"
 u_m_cell_14,Cellule à vibrations T4,Cellule d'énergie (mêlée),14,"Malus à l'attaque +Penalty_-1, Bonus aux dégâts (Slashing) +2d8, Don requis",palier 14 niv. 30+ (rare dès 27),Bonus aux dégâts (Slashing) +5,,"[Mod D20-Overhaul]
 
 Amélioration d'arme de mêlée — Cellule d'énergie (mêlée)
@@ -788,7 +788,7 @@ Amélioration de sabre laser — Cellule d'énergie (sabre)
 
 Effets :
 • Bonus aux dégâts (ioniques) +1
-• Bonus aux dégâts contre Race +1d4
+• Bonus aux dégâts contre Droïdes +1d4
 • Coups critiques plus importants +1d3"
 u_l_cell_04,Cellule à décharge de Telgorn T1,Cellule d'énergie (sabre),4,Bonus aux dégâts (Electrical) +1d3,palier 4 niv. 18+ (rare dès 13),Bonus aux dégâts (Electrical) +1,,"[Mod D20-Overhaul]
 
@@ -815,7 +815,7 @@ Amélioration de sabre laser — Cellule d'énergie (sabre)
 
 Effets :
 • Bonus aux dégâts (ioniques) +1
-• Bonus aux dégâts contre Race +1d8
+• Bonus aux dégâts contre Droïdes +1d8
 • Coups critiques plus importants +1d4"
 u_l_cell_08,Cellule à décharge de Telgorn T2,Cellule d'énergie (sabre),8,Bonus aux dégâts (Electrical) +1d4,palier 8 niv. 26+ (rare dès 21),Bonus aux dégâts (Electrical) +2,,"[Mod D20-Overhaul]
 
@@ -842,7 +842,7 @@ Amélioration de sabre laser — Cellule d'énergie (sabre)
 
 Effets :
 • Bonus aux dégâts (ioniques) +2
-• Bonus aux dégâts contre Race +2d6
+• Bonus aux dégâts contre Droïdes +2d6
 • Coups critiques plus importants +1d6"
 u_l_cell_12,Cellule à décharge de Telgorn T3,Cellule d'énergie (sabre),12,Bonus aux dégâts (Electrical) +1d8,palier 12 niv. 30+ (rare dès 29),Bonus aux dégâts (Electrical) +1d6,,"[Mod D20-Overhaul]
 

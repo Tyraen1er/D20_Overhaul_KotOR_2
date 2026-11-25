@@ -205,8 +205,8 @@ def _allowed_classes_for_new_feat(label: str, cat: str, prereq_txt: str) -> tupl
             return ALL_LIST_COLS, 0
         return ALL_NON_MAGE, 0
 
-    # Métamagie (R3 : JMA/SLD + JCN bloqué par orreqfeat0=MOD_PRESTIGE_MAGE pour Kreia Niv. 15+)
-    if "metamagie" in c_n:
+    # Éveil de Force (R3 : JMA/SLD + JCN bloqué par orreqfeat0=MOD_PRESTIGE_MAGE pour Kreia Niv. 15+)
+    if "metamagie" in c_n or "eveil de force" in c_n:
         if "PROLONG" in lbl or rank == 1:
             return ALL_JEDI_BASE + MARTIAL_PRESTIGE + HYBRID_PRESTIGE + CASTER_PRESTIGE, 0
         if rank == 2:
@@ -304,7 +304,7 @@ INTERNAL_MARKER_FEATS: list[tuple[str, str, str, str, dict[str, str]]] = [
     (
         "MOD_PRESTIGE_MAGE",
         "Voie des Arcanes",
-        "[Mod D20-Overhaul]\nMaîtrise avancée de la Force ouvrant l'accès au Rang III de Métamagie (Maître Jedi, Seigneur Sith et Kreia Niv. 15+).",
+        "[Mod D20-Overhaul]\nMaîtrise avancée de la Force ouvrant l'accès au Rang III d'Éveil de Force (Maître Jedi, Seigneur Sith et Kreia Niv. 15+).",
         "if_focmaster",
         {"jma_granted": "1", "sld_granted": "1"},
     ),
@@ -725,12 +725,31 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
         new_dict["label"] = new_lbl
         new_dict["equipableslots"] = "0x00030"
         is_ranged = new_dict.get("rangedweapon") == "1"
-        new_dict["weaponwield"] = "5" if is_ranged else "2"
+        new_dict["weaponwield"] = "4" if is_ranged else "2"  # 4 = pistolet 1M (distance), 2 = lame 1M (mêlée)
         new_dict["weaponsize"] = "3"
         new_dict["reqfeat0"] = str(gam2_id)
+        for rf_col in ("reqfeat1", "reqfeat2", "reqfeat3", "reqfeat4"):
+            if rf_col in new_dict:
+                new_dict[rf_col] = ""
         new_idx = len(bi)
         bi.add_row(str(new_idx), new_dict)
         mirror_map[lbl] = new_idx
+
+    # Variante 1M dédiée pour Adv_Mining_Laser (Laser de forage évolué, 101per.mod)
+    if "Adv_Mining_Laser" in mirror_map:
+        aml_src = bi.get_row(mirror_map["Adv_Mining_Laser"])
+        aml_1m = {h: aml_src.get_string(h) for h in bi.get_headers()}
+        aml_1m["label"] = "Adv_Mining_Laser_1M"
+        aml_1m["equipableslots"] = "0x00030"
+        aml_1m["weaponwield"] = "4"
+        aml_1m["weaponsize"] = "3"
+        aml_1m["reqfeat0"] = str(gam2_id)
+        for rf_col in ("reqfeat1", "reqfeat2", "reqfeat3", "reqfeat4"):
+            if rf_col in aml_1m:
+                aml_1m[rf_col] = ""
+        aml_1m_idx = len(bi)
+        bi.add_row(str(aml_1m_idx), aml_1m)
+        mirror_map["Adv_Mining_Laser_1M"] = aml_1m_idx
 
     if "Stun_Baton" in by_label:
         src_row = bi.get_row(by_label["Stun_Baton"])
@@ -887,6 +906,30 @@ def build_spells() -> tuple[TwoDA, dict[str, int]]:
         sp.add_row(str(new_idx), sdict)
         scar_created.append(new_idx)
         spell_ids[slbl] = new_idx
+
+    # 2b. Ajouter le sort utilitaire ITEM_ABILITY_GAMORREAN_ADAPT (bascule 2M / 1M Gamorréen II)
+    # Cloné de row 75 (ITEM_ABILITY_COMBAT_SHOT_1, category=0x1808) — JAMAIS d'un medpac (bloqué à 100% PV) !
+    gam_src = sp.get_row(75)
+    gam_dict = {h: gam_src.get_string(h) for h in headers}
+    gam_name_ref = len(tlk)
+    tlk.add("Adaptation Gamorréenne (2M / 1M)")
+    gam_desc_ref = len(tlk)
+    tlk.add(
+        "[Mod D20-Overhaul]\nPermet à un personnage possédant Raffinement Gamorréen II d'ouvrir en posture "
+        "hors combat l'établi d'amélioration portatif à tout moment (indépendamment de l'arme équipée) ou de "
+        "convertir l'arme 2M / Double tenue en main droite vers son équivalent à une main (1M), et inversement."
+    )
+    gam_dict["label"] = "ITEM_ABILITY_GAMORREAN_ADAPT"
+    gam_dict["name"] = str(gam_name_ref)
+    gam_dict["spelldesc"] = str(gam_desc_ref)
+    gam_dict["impactscript"] = "ov_gam_use"
+    gam_dict["conjtime"] = "100"
+    gam_dict["casttime"] = "200"
+    gam_dict["forbiditemmask"] = "0x0000"
+    gam_dict["hostilesetting"] = "0"
+    gam_idx = len(sp)
+    sp.add_row(str(gam_idx), gam_dict)
+    spell_ids["ITEM_ABILITY_GAMORREAN_ADAPT"] = gam_idx
 
     # 3. Harmoniser les paliers 1/5/9 des pouvoirs de prestige & masquer les rangs IV–VI obsolètes
     prestige_schedules = [
@@ -1098,7 +1141,43 @@ def build_forceshields() -> TwoDA:
 
 
 # ============================================================================
-# 8. autobalance.2da (calibrage boss Set_5)
+# 8. iprp_resistcost.2da (paliers RD exacts +2/-, +3/-, +4/-, +6/-, +12/-)
+# ============================================================================
+
+def build_iprp_resistcost() -> TwoDA:
+    """Étend iprp_resistcost.2da (lignes vanilla 0..6 intactes) avec les paliers exacts :
+      - row  7 : Resist_2/-  (amount=2)
+      - row  8 : Resist_3/-  (amount=3)
+      - row  9 : Resist_4/-  (amount=4, bêtes Mid)
+      - row 10 : Resist_6/-  (amount=6, bêtes Late)
+      - row 11 : Resist_12/- (amount=12, armures élémentaires)"""
+    rc = read_2da(REF_2DA / "iprp_resistcost_tslrcm.2da")
+    tlk = read_tlk(OUT_DIR / "dialog.tlk")
+    extra_rows = [
+        ("Resist_2/-",  "2",  "0.3",  "Résistance 2/-"),
+        ("Resist_3/-",  "3",  "0.45", "Résistance 3/-"),
+        ("Resist_4/-",  "4",  "0.6",  "Résistance 4/-"),
+        ("Resist_6/-",  "6",  "0.9",  "Résistance 6/-"),
+        ("Resist_12/-", "12", "1.6",  "Résistance 12/-"),
+    ]
+    for lbl, amt, cost, fr_name in extra_rows:
+        nref = len(tlk)
+        tlk.add(fr_name)
+        rc.add_row(str(len(rc)), {
+            "name": str(nref),
+            "label": lbl,
+            "amount": amt,
+            "cost": cost,
+        })
+    assert_no_literal_stars(rc, "iprp_resistcost.2da")
+    write_2da(rc, OVR_DIR / "iprp_resistcost.2da")
+    write_tlk(tlk, OUT_DIR / "dialog.tlk")
+    print(f"[OK] iprp_resistcost.2da ({len(rc)} rows: +2/-, +3/-, +4/-, +6/-, +12/- ajoutés)")
+    return rc
+
+
+# ============================================================================
+# 9. autobalance.2da (calibrage boss Set_5)
 # ============================================================================
 
 def build_autobalance() -> TwoDA:
@@ -1123,6 +1202,7 @@ def main() -> None:
     build_itemcreate()
     build_itemcreatemira()
     build_forceshields()
+    build_iprp_resistcost()
     build_autobalance()
     print("=== Jalon 1 BUILD OK ===")
 

@@ -54,6 +54,7 @@ TABLE_NAMES = [
     "itemcreate.2da",
     "itemcreatemira.2da",
     "forceshields.2da",
+    "iprp_resistcost.2da",
     "autobalance.2da",
 ]
 
@@ -216,16 +217,24 @@ def build_installer() -> None:
     # 6. Copier les fichiers .uti, .utc, .ncs dans tslpatchdata/
     # Séparer les fichiers copiés directement ([install_folder0]) de ceux patchés par [GFFList]
     loose_files: list[str] = []
-    gff_baseitem_patches: list[tuple[str, int]] = []  # (filename, mem_id)
+    gff_baseitem_patches: list[tuple[str, list[tuple[str, str]]]] = []  # (filename, [(field, val), ...])
 
     for f in sorted(OVR_DIR.iterdir()):
-        if not f.is_file() or f.suffix.lower() not in {".uti", ".utc", ".ncs", ".dlg"}:
+        if not f.is_file() or f.suffix.lower() not in {".uti", ".utc", ".ncs", ".dlg", ".utp"}:
             continue
         shutil.copy2(f, TSL_DATA_DIR / f.name)
         if f.suffix.lower() == ".uti":
             uti = read_uti(f)
+            fields: list[tuple[str, str]] = []
             if uti.base_item in baseitem_row_to_mem:
-                gff_baseitem_patches.append((f.name, baseitem_row_to_mem[uti.base_item]))
+                fields.append(("BaseItem", f"2DAMEMORY{baseitem_row_to_mem[uti.base_item]}"))
+            if gam2_feat_idx is not None and gam2_feat_idx in feat_row_to_mem:
+                gam2_mem = feat_row_to_mem[gam2_feat_idx]
+                for p_idx, prop in enumerate(uti.properties):
+                    if prop.property_name == 57 and prop.subtype == gam2_feat_idx:
+                        fields.append((f"PropertiesList\\{p_idx}\\Subtype", f"2DAMEMORY{gam2_mem}"))
+            if fields:
+                gff_baseitem_patches.append((f.name, fields))
                 continue
         loose_files.append(f.name)
 
@@ -376,15 +385,13 @@ def build_installer() -> None:
             if mem_id is not None:
                 ini_lines.append(f"2DAMEMORY{mem_id}=RowIndex")
 
-    # 9. Sections [GFFList] pour les .uti à BaseItem dynamique
+    # 9. Sections [GFFList] pour les .uti à BaseItem / Use_Limitation_Feat dynamiques
     if gff_baseitem_patches:
-        ini_lines.extend(["", f"; {'=' * 67}", "; GFF Patches (BaseItem dynamique via 2DAMEMORY)"])
-        for fname, mem_id in gff_baseitem_patches:
-            ini_lines.extend([
-                "",
-                f"[{fname}]",
-                f"BaseItem=2DAMEMORY{mem_id}",
-            ])
+        ini_lines.extend(["", f"; {'=' * 67}", "; GFF Patches (BaseItem & Use_Limitation_Feat dynamiques via 2DAMEMORY)"])
+        for fname, fields in gff_baseitem_patches:
+            ini_lines.extend(["", f"[{fname}]"])
+            for fk, fv in fields:
+                ini_lines.append(f"{fk}={fv}")
 
     changes_ini_path = TSL_DATA_DIR / "changes.ini"
     with open(changes_ini_path, "w", encoding="windows-1252", errors="replace", newline="") as fh:

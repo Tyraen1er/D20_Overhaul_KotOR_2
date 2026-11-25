@@ -4,21 +4,21 @@ Ce document est le **contrat de game design** : chaque décision actée y figure
 Les justifications, la recherche (JdR papier, D&D, consensus communauté) et les notes d'implémentation sont dans **[`decisions_annexes.md`](decisions_annexes.md)**.
 
 > **Hiérarchie des sources (README §0)** : les CSV `Kotor 2 - rééquilibrage - *.csv` sont la référence opérationnelle côté utilisateur — ce contrat en est la **consolidation**. En cas de divergence, les CSV font foi ; ce document doit alors être resynchronisé.
-> **Dernière grosse consolidation : 19/11/2026** (cloisonnement strict des rôles par slot d'amélioration d'arme, *Tir d'Assaut* verrouillé à 2 slots, scaling des DD fixes grenades/fléchettes/armes ; scaling DEX `100 % / 50 %` et armures le 18/11 ; arbres d'armures le 17/11 ; refonte postures/spé d'arme/spé carac le 15/11/2026). Journal des arbitrages : annexes §9.
+> **Dernière grosse consolidation : 25/11/2026** (validation **Adaptateur Gamorréen II** `2M/HC ↔ 1M` + levée de l'interdiction des postures 2M/HC, extension `iprp_resistcost.2da` aux RD exactes `2/3/4/6/12` ; cloisonnement strict des rôles par slot d'amélioration d'arme le 19/11 ; scaling DEX `100 % / 50 %` et armures le 18/11 ; arbres d'armures le 17/11 ; refonte postures/spé d'arme/spé carac le 15/11/2026). Journal des arbitrages : annexes §9.
 
 | Domaine | Décision (résumé) | Détail |
 | :--- | :--- | :---: |
 | Progression des classes | Symétrie inverse Combattants ↔ Mages (dons ↔ pouvoirs) | §1 |
-| Pouvoirs de la Force | Aucun ajout ; nerf du haut du panier, buff des alternatives, restauration via Métamagie | §2 |
+| Pouvoirs de la Force | Aucun ajout ; nerf du haut du panier, buff des alternatives, restauration via Éveil de Force | §2 |
 | Établi & Boss | Plafonds `+2/+5/+10`, cloisonnement strict des rôles par slot (1 seul slot de dégâts bruts par catégorie), RD boss **`2/5/8`**, combats 5–10 rounds | §3 |
 | Postures & spécialisations d'armes | 4 postures (Duel, Ambidextrie, Arme Lourde, Arme haute cadence) × 8 familles (4 mêlée + 4 tir) ; dons vanilla Duel/TWF/Finesse/Focus/Spec **supprimés** | §4 |
 | Spécialisations de caractéristique | 6 arbres exclusifs (FOR, DEX, CON, INT, SAG, CHA) — un par caractéristique, ordre canonique | §5 |
 | Architecture de dons | Posture (3) + famille (3) + spé carac (3) + défenses ; budgets Niv. 30 : **22 / 18 / 15** dons (pouvoirs **12 / 16 / 24**), gating par classe/prestige sur Rangs II–III | §6 |
-| Dons transversaux | 7 dons de Métamagie + *Esquive Totale* (anti-AoE) | §7 |
-| Armures & Défenses | RD native (Interm. 2 / Lourde 4), upgrades combinées exclusives aux intermédiaires (`UpgradeLevel`), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique I–III* conservé vanilla | §8 |
-| Contrat mathématique | DPR nets et durées de boss cibles par phase de jeu (colonnes à remapper sur la nouvelle architecture) | §9 |
+| Dons transversaux | 7 dons d'Éveil de Force + *Esquive Totale* (anti-AoE) | §7 |
+| Armures & Défenses | RD native (Interm. 2 / Lourde 4), 30 sur-couches renforcées exclusives aux intermédiaires (`UpgradeLevel`), 3 arbres de dons par type, dégradé de pouvoirs, *Condition physique I–III* conservé vanilla | §8 |
+| Contrat mathématique | DPR nets et durées de boss cibles par phase de jeu | §9 |
 | Furtivité | Embuscade : première attaque depuis la furtivité = critique confirmé (simulation scriptée) | §10 |
-| Conventions & principes | DD Spé d'arme (`10`/`5` + Niv + carac), grenades (`10` + Niv + INT), fléchettes/roquettes (`12` + Niv + INT), *On-Hit* armes (`3/5/7/9` + Niv + carac à définir), procs `plage/20`, ordre canonique, « les synergies se trouvent » | §11 |
+| Conventions & principes | DD Spé d'arme (`10`/`5` + Niv + carac), grenades (`10` + Niv + INT), fléchettes/roquettes (`12` + Niv + INT), *On-Hit* armes (`3/5/7/9` + Niv + carac directrice de l'arme), procs `plage/20`, ordre canonique, « les synergies se trouvent » | §11 |
 
 ---
 
@@ -37,7 +37,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 ### 2. Philosophie des Pouvoirs de la Force
 
 1. **Aucun nouveau pouvoir de sélection classique** : rééquilibrage à 100 % dans `k_inc_force.nss` et `spells.csv` *(seuls les 6 pouvoirs de prestige sont refondus/complétés pour doter chaque classe de prestige d'une identité propre)*.
-2. **Hiérarchie :** *Éclair/Tempête* (zone) et *Blessure/Étranglement/Mise à mort* (monocible) restent les meilleurs DPS de Force — **nerfés à la base**, restaurables via **Métamagie**. Les alternatives sont boostées sans jamais dépasser ce plafond.
+2. **Hiérarchie :** *Éclair/Tempête* (zone) et *Blessure/Étranglement/Mise à mort* (monocible) restent les meilleurs DPS de Force — **nerfés à la base**, restaurables via **Éveil de Force**. Les alternatives sont boostées sans jamais dépasser ce plafond.
 3. **Alignement :** *Champ de Stase* reste un pouvoir du Côté Lumineux.
 4. **Pouvoirs de Prestige (uniformisés `L1 / L2 / L3` aux niv. 1/5/9 de prestige) & Ultimes d'alignement** *(source : `Spé Pouvoirs.csv`)* :
 
@@ -87,7 +87,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 | **Duel** | Dégâts mêlée `150 % FOR` (règle moteur 1M, main gauche vide) ; **distance 1M `150 % DEX`** | `+2/+4/+6 Atq` et **plage de critique +1/+2/+3** | Prérequis : arme à une main **ou mains nues** ; la plage élargie augmente la fréquence des procs des Spé d'arme (proc = plage/20 par coup) |
 | **Ambidextrie** | Dégâts `100 % / 50 % FOR` (mêlée) ou **`100 % / 50 % DEX` (distance)** ; malus 2 armes `-6/-10` (`+2/0` si arme équilibrée en main gauche) | `-6/-6 & +1 CA` → `-4/-4 & +2 CA` → `-2/-2 & +3 CA` | Identité parade/CA ; malus de main gauche remonte mais l'attaque s'achète de la Défense |
 | **Arme Lourde (2M)** | Mêlée `200 % FOR` / distance `150 % DEX` | `+1/+2/+3 Atq` ; mêlée **`215→235→250 % FOR`** ; distance **`165→185→200 % DEX`** | Prérequis : arme à deux mains non double — mêlée **et** distance |
-| **Arme haute cadence** (ex « Arme Double & Repeating ») | Dégâts `150 % / 50 % FOR` (arme double mêlée) ou **`150 % / 50 % DEX` (répétition distance)**, malus moddé **`-5 CA`** (au lieu de `-6/-10 Atq`) ; **toutes les armes `D` sont équilibrées (`balanced`)** | `+1/+1` & CA `-3` → `+2/+2` & `-2` → `+3/+3` & `-1` | Repeating et lourds à répétition partagent cette posture ; moteur : les repeating **ne sont pas** des armes doubles (`weaponwield 6 ≠ 3`) |
+| **Arme haute cadence** (ex « Arme Double & Repeating ») | Dégâts `150 % / 50 % FOR` (arme double mêlée) ou **`150 % / 50 % DEX` (répétition distance)**, malus moddé **`-5 CA`** (au lieu de `-6/-10 Atq`) ; **toutes les armes `HC` sont équilibrées (`balanced`)** | `+1/+1` & CA `-3` → `+2/+2` & `-2` → `+3/+3` & `-1` | Repeating et lourds à répétition partagent cette posture ; moteur : les repeating **ne sont pas** des armes doubles (`weaponwield 6 ≠ 3`) |
 
 **B. Les 8 familles de spécialisation** (*Spécialisation d'arme.csv* — rang I : `+2 Atq & +2 Dégâts` partout) :
 
@@ -106,46 +106,46 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 **C. Mains nues** (révisé 24/11) : la branche dédiée (*Arts Martiaux / Arts Mutaki*) reste **supprimée**. Les mains nues appartiennent désormais à la famille **Armes d'Impact** (accès à *Spécialisation Arme d'Impact I–III* et au Renversement), en plus de la **posture Duel** (les poings comptent comme arme 1M), de la chaîne *Spécialiste mains nues* **plafonnée au Rang III (`+1d4 / +2d4 / +3d4` aux Niv. 4 / 12 / 19 base ou Niv. 4 prestige ; Rangs IV–VIII supprimés)** et des Spé de caractéristique (Matukai).
 
-**D. L'axe distance/mêlée** : parité de viabilité, asymétrie de coûts — chaque posture/famille distance atteint les cibles DPR du §9 par son propre chemin (`100 % / 50 % DEX` en `1M`/`D`, `150 % → 250 % DEX` via Arme Lourde `2M`, `INT` via Gand II, utilitaires via les familles de tir) ; la mêlée paie en défense et approche, la distance paie en contreurs (boucliers d'énergie, déflexion). Équilibrage fin par le chantier ennemis.
+**D. L'axe distance/mêlée** : parité de viabilité, asymétrie de coûts — chaque posture/famille distance atteint les cibles DPR du §9 par son propre chemin (`150 % DEX` en `1M` seul, `100 % / 50 % DEX` en Ambidextrie, `150 % / 50 % DEX` en `HC`, `150 % → 200 % DEX` via Arme Lourde `2M`, `INT` via Gand II, utilitaires via les familles de tir) ; la mêlée paie en défense et approche, la distance paie en contreurs (boucliers d'énergie, déflexion). Équilibrage fin par le chantier ennemis.
 
 ### 5. Spécialisations de Caractéristique (refonte 13–14/11)
 
-**Un arbre par caractéristique, ordre canonique FOR, DEX, CON, INT, SAG, CHA. Les 6 arbres sont mutuellement exclusifs** (chaque rang I interdit les cinq autres — mécanisme : colonne `exclusion` de feat.2da à tester + garde-fou script, cf. annexes §5/§8). Source de vérité : *spé carac.csv*.
+**Un arbre par caractéristique, ordre canonique FOR, DEX, CON, INT, SAG, CHA. Les 6 arbres sont mutuellement exclusifs** (chaque rang I interdit les cinq autres — mécanisme : garde-fou scripté, la colonne `exclusion` de `feat.2da` ayant été testée KO le 23/11, cf. Partie 2 #1). Source de vérité : *WIP Feats.csv*.
 
 | Arbre (carac) | Rang I | Rang II | Rang III (signature) |
 | :--- | :--- | :--- | :--- |
-| **Raffinement Gamorréen** (FOR) | +1 FOR ; + ½ mod. FOR en rangs sur **toutes** les compétences | +2 FOR ; **tient toutes les armes à 1M** (mêlée et distance) ; interdit définitivement les postures **Arme Lourde et Haute cadence** | +3 FOR ; immunité au mental |
+| **Raffinement Gamorréen** (FOR) | +1 FOR ; + ½ mod. FOR en rangs sur **toutes** les compétences | +2 FOR ; **Adaptateur Gamorréen** (établi portatif toujours accessible + bascule en posture hors combat toute arme 2M/HC en **1M** et inversement, mêlée et distance) ; arme haute cadence 1M en **main principale** = **`+1` atq/round** (`0` CA, aucun bonus en main gauche) ; **n'interdit plus** les postures Arme Lourde (2M) et Haute cadence (HC) | +3 FOR ; immunité au mental |
 | **Techniques Echanis** (DEX) | +1 DEX ; attaque mêlée : FOR/DEX (si DEX > FOR) | +2 DEX ; dégâts mêlée : FOR/DEX | +3 DEX ; **supprime le plafond de DEX des armures** |
 | **Voie du dragon Krayt** (CON) | +1 CON ; RD + ½ mod. CON (arrondi sup.) | +2 CON ; **transfusion** : toutes les 6 s, 5 % PV max → 5 % PF max si PF < 50 % (jamais sous 75 % PV) | +3 CON ; toutes sauvegardes + mod. CON |
-| **Chasseur de prime Gand** (INT) | +1 INT ; **grenades `+5 %` dégâts / rang total de Démolition** | +2 INT ; attaque & dégâts distance : DEX/INT (si INT > DEX) | +3 INT ; **Maître Artificier** : rayon grenades `4→6 m`, perce *Esquive Totale*, `50 %` de non-consommation |
+| **Chasseur de prime Gand** (INT) | +1 INT ; **grenades et mines `+5 %` dégâts / rang total de Démolition** | +2 INT ; attaque & dégâts distance : DEX/INT (si INT > DEX) | +3 INT ; **Maître Artificier** : rayon grenades `4→6 m`, perce *Esquive Totale*, `50 %` de non-consommation |
 | **Maîtrise Matukai** (SAG) | +1 SAG ; **ajoute** le mod. de SAG à l'attaque (par-dessus la carac directrice) | +2 SAG ; sauvegardes + ½ SAG ; **réussir une sauvegarde inflige SAG dégâts à l'attaquant** | +3 SAG ; **SAG remplace DEX pour la CA** ; tout ennemi vous ratant subit SAG dégâts par attaque échouée |
 | **Héritage de Nomi** (CHA) | +1 CHA ; compagnons 100 % de l'XP | +2 CHA ; groupe : sauvegardes + mod. CHA | +3 CHA ; **Défense + mod. CHA** |
 
-Notes d'équilibrage : la transfusion Krayt échange invariablement **25 % PV ↔ 25 % PF** (rituel complet) ; les dégâts de punition Matukai contournent la RD (scriptés) et ne peuvent pas critiquer ; le cumul Nomi/Matukai + Précognition suppose des types de bonus distincts (plafond moteur à vérifier).
+Notes d'équilibrage : la transfusion Krayt échange invariablement **25 % PV ↔ 25 % PF** (rituel complet) ; les dégâts de punition Matukai contournent la RD (scriptés) et ne peuvent pas critiquer ; tous les bonus de CA custom (Nomi III, Matukai III, Esquive Balistique, Armure Tactique) sont sommés dans un unique `EffectACIncrease` (cf. Partie 2 #1 T4).
 
 ### 6. Architecture de Dons & Budgets
 
-**Nouvelle structure (post-15/11)** : chaque personnage combine **une posture** (3 rangs) + **une famille de Spé d'arme par catégorie d'armes utilisées** (3 rangs chacune) + **un arbre de Spé carac** (3 rangs, exclusif) + **défenses** (Robustesse 3, Condition physique 3 ou arbre d'armure 3) + **Métamagie** (7, profil caster) + dons actifs vanilla conservés (Déluge, Attaque en puissance, Coup critique, Décharge, Tir rapide, Sniper).
+**Nouvelle structure (post-15/11)** : chaque personnage combine **une posture** (3 rangs) + **une famille de Spé d'arme par catégorie d'armes utilisées** (3 rangs chacune) + **un arbre de Spé carac** (3 rangs, exclusif) + **défenses** (Robustesse 3, Condition physique 3 ou arbre d'armure 3) + **Éveil de Force** (7, profil caster) + dons actifs vanilla conservés (Déluge, Attaque en puissance, Coup critique, Décharge, Tir rapide, Sniper).
 
 **Budgets Niv. 30 (actés le 19/11)** : **22** (Gardien) / **18** (Sentinelle) / **15** (Consulaire), pour **12 / 16 / 24** pouvoirs.
-- Les arbres restent compacts en **3 rangs marquants** (pas de découpage massif en « demi-dons ») ; seul *Blindage de Combat* est candidat à séparer son volet Furtivité en armure.
+- Les arbres restent compacts en **3 rangs marquants** (pas de découpage massif en « demi-dons » ; le volet furtivité est intégré dans *Armure Tactique*).
 - **Paliers de niveau minimum (`mincharlevel`, actés le 22/11)** :
   - **Dons martiaux de base** (Actifs vanilla, Robustesse, **4 Postures**) : **`Niv. 1+ / 4+ / 8+`**.
-  - **Grands arbres de spécialisation** (**Spé Carac**, **Spé d'arme**, **Armures**, **Métamagie** Amplifié/Pénétrant) : **`Niv. 1+ / 8+ / 15+`** *(Pouvoir Prolongé = `Niv. 1+`)*.
-- **Gating par classe / classe de prestige** (acté le 19/11 — étend le modèle *Métamagie* aux grands arbres) :
-  - **Métamagie** : R1 tous Jedi/Sith · R2 **Consulaire / Maître Jedi / Seigneur Sith** · R3 **Maître Jedi / Seigneur Sith**.
+  - **Grands arbres de spécialisation** (**Spé Carac**, **Spé d'arme**, **Armures**, **Éveil de Force** Amplifié/Pénétrant) : **`Niv. 1+ / 8+ / 15+`** *(Pouvoir Prolongé = `Niv. 1+`)*.
+- **Gating par classe / classe de prestige** (acté le 19/11 — étend le modèle *Éveil de Force* aux grands arbres) :
+  - **Éveil de Force** : R1 tous Jedi/Sith · R2 **Consulaire / Maître Jedi / Seigneur Sith** · R3 **Maître Jedi / Seigneur Sith**.
   - **Spécialisations d'arme (8 familles)** : R1 tous · R2 **Gardien / Sentinelle** + leurs prestiges · R3 **Maître d'Armes / Maraudeur Sith**.
   - **Postures** : R1 & R2 tous · R3 *Duel* = tous, *Ambidextrie / Arme Lourde / Haute cadence* = **tous sauf Mages**.
   - **Armures** : R1 tous (si port) · **Juggernaut** R2 Gardien/prestiges martiaux, R3 **Maître d'Armes / Maraudeur Sith** · **Armure Tactique** R2 Sentinelle/prestiges hybrides, R3 **Jedi protecteur / Assassin Sith** · **Esquive Balistique** R2 Gardien/Sentinelle + prestiges, R3 **Maître d'Armes / Maraudeur / Jedi protecteur / Assassin**.
   - **Spécialisations de Caractéristique (6 arbres)** : **ouvertes à toutes les classes**, paliers par niveau (**Niv. 1+ / Niv. 8+ / Niv. 15+**).
   - **Compagnons (acté le 19/11 — gating par classe + 2 exceptions level-up)** :
     - Classes **non-Jedi** (`SOL`, `SCT`, `SCD`, `TEC`, `DRC`, `DRX`) : accès aux Rangs III martiaux/armures pertinents dès le **Niveau 15+** (`minattackbonus = 15` dans `feat.2da`, exact grâce à `CLS_ATK_1` `BAB 1.0`) — `SOL` (Spé d'arme III, Juggernaut III, Esquive Balistique III), `SCT/SCD` (Spé d'arme III, Esquive Balistique III, Armure Tactique III), `TEC` (Armure Tactique III, Spé d'arme III), `DRC` (Spé d'arme distance III), `DRX` (Spé d'arme distance II). Les compagnons convertis en Jedi suivent les règles normales de leur classe Jedi.
-    - **Exception Kreia (Niv. 15+)** : considérée comme **Maître Jedi** pour les dons sélectionnables en level-up (accès à toute la **Métamagie**, dont Rangs III).
+    - **Exception Kreia (Niv. 15+)** : considérée comme **Maître Jedi** pour les dons sélectionnables en level-up (accès à tout **Éveil de Force**, dont Rangs III).
     - **Exception Visas (Niv. 15+)** : considérée comme **Assassin Sith** pour les dons sélectionnables en level-up (accès aux dons sélectionnables d'Assassin Sith : *Armure Tactique III*, *Esquive Balistique III*, *Esquive Totale*).
 
-### 7. Dons Transversaux : Métamagie & Esquive Totale
+### 7. Dons Transversaux : Éveil de Force & Esquive Totale
 
-**A. Métamagie (7 dons, calibrés sur le budget du Consulaire)** :
+**A. Éveil de Force (7 dons, calibrés sur le budget du Consulaire)** :
 
 | Don | Rangs | Effet |
 | :--- | :---: | :--- |
@@ -155,7 +155,7 @@ Notes d'équilibrage : la transfusion Krayt échange invariablement **25 % PV �
 
 **B. Esquive Totale** (`FEAT_EVASION`, ligne 125) — contre-mesure anti-AoE :
 - Réussite du jet de sauvegarde face à une AoE → **0 dégât** ; échec → **dégâts ÷ 2**.
-- Sélectionnable uniquement à partir d'une classe de prestige (Niv. 15+) ; auto Éclaireur niv. 6 (Mira) ; octroyé à tous les Jedi/Sith ennemis 20+ (via `k_inc_force.nss`).
+- Sélectionnable au **Niv. 15+** par **Jedi Protecteur**, **Assassin Sith** et **Visas Marr** ; auto Éclaireur niv. 6 (Mira) ; octroyé à tous les Jedi/Sith ennemis 20+ (via `k_inc_force.nss`).
 
 ### 8. Armures : RD Native, 3 Arbres de Dons, Dégradé de Pouvoirs
 
@@ -183,15 +183,15 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 
 **RD cumulée max** (Juggernaut III + native lourde 4 + Robustesse II 2) : **RD 11 + 30 % d'immunité** (≈ −53 % sur un coup de 23, ≈ −40 % sur un coup de 68). **Pas de cap global d'immunité** (acté le 19/11 ; révisable ultérieurement selon les retours joueurs).
 
-**C. Dégradé des pouvoirs sous armure** (`forbiditemmask`) : robe = tous ; légère = vanilla + Vaillance I + Résistance *(aucune exception Force-friendly sur Ubese / Zeison Sha, décision 23/11)* ; interm. = vanilla + Résistance ; lourde = vanilla strict.
+**C. Dégradé des pouvoirs sous armure** (`forbiditemmask`, source : *Spé Pouvoirs.csv* & *Armures.csv*) : **bure** = tous ; **légère** = autorise *Talent de Force I–III*, *Suppression/Destruction de Force*, *Terreur/Horreur/Insanité*, *Cri de Force*, *Écrasement de Force* + pouvoirs interm./lourde (bloque *Vitesse*, *Armure de Force*, *Stase*, *Tempête*, *Mise à mort*, *Absorption de vie* ; aucune exception Force-friendly sur Ubese / Zeison Sha, décision 23/11) ; **interm.** = *Guérison/Soins*, *Revitalisation*, *Barrière de Force*, *Résistance à l'énergie*, *Peste*, *Poussée/Tourbillon/Vague*, *Méditation de combat*, *Destruction de droïde*, *Subterfuge/Confusion*, *Spectre de la Force*, *Grâce du côté Lumineux* + pouvoirs lourde ; **lourde** = *Corps de Force*, *Lancer de sabre*, *Résistance/Immunité Force*, *Absorption de Force*, *Parade/Renvoi*, *Contrôle de la respiration*, et 5 ultimes de prestige.
 
 **D. *Condition physique I–III* (`CONDITIONING` / `IMPROVED` / `MASTER`)** : **conservé en vanilla** (décision révisée le 23/11 : les 3 rangs `+1/+2/+3` aux sauvegardes restent intacts).
 
 ### 9. Contrat Mathématique (DPR nets & durées de boss cibles)
 
-Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), parité distance (`150 % DEX` en Duel 1M et `150 %/50 %` en `D`) et RD des boss recalibrée (**`2/5/8`**) — vérifié sous `tools/dpr_check.py` le 19/11 :
+Avec upgrades cloisonnées (`Améliorations.csv`), armes d20 (`Armes.csv`), parité distance (`150 % DEX` en Duel 1M et `150 %/50 %` en `HC`) et RD des boss recalibrée (**`2/5/8`**) — vérifié sous `tools/dpr_check.py` le 19/11 :
 
-| Phase (Boss étalon) | Duel (`1M`) | Ambidextrie (`2 armes`) | Arme Lourde (`2M`) | Haute Cadence (`D`) |
+| Phase (Boss étalon) | Duel (`1M`) | Ambidextrie (`2 armes`) | Arme Lourde (`2M`) | Haute Cadence (`HC`) |
 | :--- | :---: | :---: | :---: | :---: |
 | **EARLY** — Niv. 8 (120 PV, CA 20, **RD 2**) | 11–23 DPR (5–11 rds) | 9–18 DPR (7–14 rds) | 14–26 DPR (5–8 rds) | 17–30 DPR (4–7 rds) |
 | **MID** — Niv. 16 (280 PV, CA 29, **RD 5**) | 26–67 DPR (4–11 rds) | 23–65 DPR (4–12 rds) | 36–66 DPR (4–8 rds) | 36–81 DPR (3,5–8 rds) |
@@ -226,8 +226,9 @@ Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), pari
 
 1. **[TODO Tests moteur]** : ~~à tester en jeu.~~ **VÉRIFIÉ EN JEU (23/11 — `mods/04-engine-tests/`)** :
    - **T-excl (`exclusion` dans `feat.2da`)** : **KO** (ne bloque pas au level-up) → mutualité des 6 Spé Carac gérée par **garde-fou scripté** (premier arbre pris prioritaire).
-   - **T1 (Gamorréen II)** : **OK** (`equipableslots=0x00030` + `weaponwield=2` + `weaponsize=3` → double-maniement 1M propre, +100 % / +50 % FOR, 1 att/main, sans crash).
-   - **T2 (`reqfeat0` sur `baseitems.2da`)** : **OK** (bloque réellement l'équipement sans le don → permet de réserver les variantes 1M Gamorréen II).
+   - **T1 (Gamorréen II)** : **OK & VALIDÉ EN JEU (25/11)** (`equipableslots=0x00030` + `weaponwield=2/4` + `weaponsize=3` → **69** jumeaux exacts `ov1m_*.uti` mêlée & distance, incluant les 3 armes 2M/HC de Péragus `heavymininglaser`, `advancedminingla`, `guidonbeacon`, chacun verrouillé par `reqfeat0` + `Use_Limitation_Feat = MOD_GAMORREAN_2` + **Adaptateur Gamorréen** `ov_gam_adapt.uti` / `ov_gam_conv.dlg` avec 2 actions « Ouvrir l'établi » et « Convertir l'arme équipée » ; n'interdit plus les postures Arme Lourde et Haute cadence).
+   - **T2 (`reqfeat0` sur `baseitems.2da`)** : **OK** (bloque réellement l'équipement sans le don → réserve les 69 variantes 1M `ov1m_*.uti` aux porteurs de *Raffinement Gamorréen II*).
+   - **RD exactes équipement/bêtes (`iprp_resistcost.2da`)** : **VALIDÉ (25/11)** — lignes `7..11` ajoutées (`2/-`, `3/-`, `4/-`, `6/-`, `12/-`) pour respecter exactement tous les plafonds CSV d'équipement (`Casques`, `Implants`, `Gants`, `Ceintures`, `Brassards`, `Armures items`) et les peaux de bêtes (`4/-`, `6/-`).
    - **T4 (cumul `EffectACIncrease`)** : **non cumulable entre effets séparés** (seul le max s'applique : `+5` au lieu de `+15`) → **sommer tous les bonus de CA custom en un seul `EffectACIncrease(nTotalAC)`** dans le heartbeat.
    - **T5 (`level` dans `itemcreate.2da`)** : **OK** (verrouille nativement les recettes à l'établi par niveau de personnage — valide toute la grille `Craft.csv`).
    - **Architecture scripts (`pykotor`)** : ne jamais recompiler le gros `k_ai_master.ncs` vanilla ; toujours passer par les **petits wrappers `k_def_*` / `k_hen_*`** (`~140–214` instructions) qui appellent ensuite le vrai `k_ai_master` vanilla. *(T3 détection fine des ratés Matukai à confirmer par VFX/log au Jalon 3.)*
@@ -236,8 +237,8 @@ Avec upgrades cloisonnées  `Améliorations.csv`), armes d20 (`Armes.csv`), pari
 4. **[TODO Arbres d'armures §8.B]** : ~~revalider les 9 dons.~~ **ACTÉ (17–19/11) : *Juggernaut*, *Armure Tactique*, *Esquive Balistique* intégrés dans `Feats.csv`.**
 5. **[TODO Servante]** : ~~remplacer son don d'histoire *Prémonition du combat*.~~ **ACTÉ (19/11) : *Prémonition du combat* remplacé par `+10 %` d'esquive en mêlée.**
 6. **[TODO Équipement & Loot]** : ~~calibrage des armes & upgrades cloisonnées + refonte du Cristal personnel + stat *On-Hit*.~~ **ACTÉ (19–22/11)** dans `Armes.csv`, `Améliorations.csv`, `Armures.csv`, les 6 CSV d'équipement (`Casques`, `Implants`, `Gants`, `Ceintures`, `Brassards`, `Armures items` — plafond strict **`+1/+2`**, max **`+3`** légendaire sur une stat unique, couverture des **6 stats** sur les 5 slots majeurs, respect du lore ; suppression des 4 CSV redondants de dons mineurs), §3.A (Cristal personnel 3 paliers auto + Kreia + 2 effets classe de base/prestige) et §11.2 (*On-Hit* = `3/5/7/9 + Niv + Carac directrice de l'arme`). **Chantier Équipement clos.**
-7. **[TODO Craft & Établi]** : ~~recalibrer les seuils de niveau + ajouter armes de base & 24 upgrades doubles.~~ **ACTÉ (19/11) dans `Craft.csv`** : toutes les armes de base non-laser craftables (hors Sabres Laser), 24 upgrades doubles intermédiaires ajoutées, et verrou de niveau `itemcreate.2da` (**`Mk I = Niv. 1 / Mk II = Niv. 10 / Mk III = Niv. 15 / Mk IV-T5 = Niv. 20`**, `1 / 10 / 18` sur lignées 3 tiers ; test moteur de la colonne `level` à confirmer). *(Nettoyage des anciens tags `[Combinée Interm.]` effectué.)*
-8. **[TODO Ennemis]** : ~~trancher les décisions dans `equilibrage_ennemis.md`.~~ **ACTÉ (22/11)** dans [`equilibrage_ennemis.md`](equilibrage_ennemis.md) : **aucune phase de boss scriptée supplémentaire** (D4 — compat TSLRCM), **soins ennemis = statu quo vanilla** (D3 — Maîtres Jedi déjà sur *Guérison*, Sith sur *Drain de vie / Champ de mort*), échelle de résistances partielles `25/50/75 %` (100 % réservé aux droïdes), boucliers équipés sur ~1/3 élites soldats/droïdes (Mid+, lootables), **Sith/Jedi obscurs** (robes réelles + Rés. Force `15/20+Niv` + Vol `+2/+4/+6` + *Esquive Totale* 20+ + **Drain de Force prioritaire si `PF < 30 %`**), **Soldats** (armures légères/moyennes réelles + boucliers), **Mandaloriens** (armures lourdes `6/8` + **résistance Laser/Énergie & Feu `25/35 %`** + stim `OnSpawn`), **Bêtes** (`RD 2/4/6/-` grosses bêtes + haute Vig + immunité *Peur* apex + régén hors combat), **Droïdes** (statu quo + déflecteurs ~1/3 élites), **Assassins** (furtivité + Réf élevés + esquive distance `20–25 %`), rehausse PV Boss Mid (`~380–420 PV` Niv. 16). **Chantier Ennemis clos.**
+7. **[TODO Craft & Établi]** : ~~recalibrer les seuils de niveau + ajouter armes de base & 24 upgrades doubles.~~ **ACTÉ (19–24/11) dans `Craft.csv`** : toutes les armes de base non-laser craftables (hors Sabres Laser), 30 sur-couches exclusives renforcées pour armures intermédiaires + 30 sous-couches retravaillées, et verrou de niveau `itemcreate.2da` validé en jeu (T5) (**`Mk I = Niv. 1 / Mk II = Niv. 10 / Mk III = Niv. 15 / Mk IV-T5 = Niv. 20`**, `1 / 10 / 18` sur lignées 3 tiers). *(Nettoyage des anciens tags `[Combinée Interm.]` effectué.)*
+8. **[TODO Ennemis]** : ~~trancher les décisions dans `equilibrage_ennemis.md`.~~ **ACTÉ (22/11)** dans [`equilibrage_ennemis.md`](equilibrage_ennemis.md) : **aucune phase de boss scriptée supplémentaire** (D4 — compat TSLRCM), **soins ennemis = statu quo vanilla** (D3 — Maîtres Jedi déjà sur *Guérison*, Sith sur *Drain de vie / Champ de mort*), échelle de résistances partielles `25/50/75 %` (100 % réservé aux droïdes), boucliers équipés sur ~1/3 élites soldats/droïdes (Mid+, lootables), **Sith/Jedi obscurs** (robes réelles + Rés. Force `15/20+Niv` + Vol `+2/+4/+6` + *Esquive Totale* 20+ + **Absorption de Force prioritaire si `PF < 30 %`**), **Soldats** (armures légères/moyennes réelles + boucliers), **Mandaloriens** (armures lourdes `6/8` + **résistance Laser/Énergie & Feu `25/35 %`** + stim `OnSpawn`), **Bêtes** (`RD 2/4/6/-` grosses bêtes + haute Vig + immunité *Peur* apex + régén hors combat), **Droïdes** (statu quo + déflecteurs ~1/3 élites), **Assassins** (furtivité + Réf élevés + esquive distance `20–25 %`), rehausse PV Boss Mid (`~380–420 PV` Niv. 16). **Chantier Ennemis clos.**
 9. **[TODO Pouvoirs]** : ~~valider *Camouflage par la Force* et rééquilibrer les pouvoirs.~~ **ACTÉ (19–21/11) dans `Spé Pouvoirs.csv`** :
    - **Pouvoirs standards** : aucun cap de dés en L3, hiérarchie offensive par armure, Tempête `1d6/Niv` sans drain PF sur **Réflexes**, Mise à mort `1d8/Niv` sans 50 % PV max, Lancer de sabre `1d4/Niv` + Renversement Vig en L1 / ignore RD en L2, **Lenteur / Affliction / Peste** refondus en maladie contagieuse (`42 s` max, tick `6 s`, propagation `5 m` à la mort, ralenti + `½ Niv` dég/tick + `-3/-6/-9` caracs, jet de Vigueur chaque tick à DD `+0/+4/+8`), **Barrière & Résistance à l'énergie** alignés en **Armure moyenne** (`RD 4/8/12`, personnel, `60 s`, `15/25/35 PF`, sans effet groupe ni Poison), **Contrôle de la respiration** (`+4` saves vs Poison passif + actif immunité `240 s`), Talent `+2/+3/+4`, buffs des pouvoirs faibles ; **rééquilibrage DS/LS & sauvegardes (21/11)** : *Terreur/Horreur/Insanité* (Légère) refondu en DoT mental (`Niv` dég/rd) + `-4/-6/-8 Atq` sans perte d'action (`24 s` échec / `6 s` réussite Volonté), *Champ de stase* (Robe) jusqu'à `36 s` avec DD Vigueur dégressif `-3/rd`, *Vague de Force* (Moyenne) transformé en **Tourbillon AoE `6 m` / `12 s`** (`½` dégâts immédiats sur Réf réussie), *Absorption de vie / Champ de mort / Festin de mort* (`20/40/55 PF`) passé à `1d3/Niv` (soin = 100 % dégâts) avec **L3 *Festin de mort*** convertissant l'excédent en PV temporaires (`24 s`, non cumulable).
    - **Refonte complète des 6 Ultimes de Prestige (uniformisés L1/L2/L3 aux niv. 1/5/9 de prestige, philosophie Kreia) + 2 Ultimes d'alignement** :

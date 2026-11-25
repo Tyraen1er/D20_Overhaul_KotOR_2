@@ -211,7 +211,8 @@ def evaluate_build_vs_enemy(level: int, build: BuildConfig, enemy: EnemyStats) -
 
         n_main = 1 + build.extra_attacks
         p_hit_main = hit_probability(total_att, enemy.defense)
-        p_hit_off = hit_probability(total_att - 2, enemy.defense)  # TWF III offhand is -2
+        # D20 Overhaul : toutes les armes doubles (D) et armes légères MG sont balanced (0/0 avec Ambidextrie III)
+        p_hit_off = hit_probability(total_att, enemy.defense)
 
         dpr_main = n_main * main_hit_dmg * p_hit_main * (1.0 + p_hit_main * t_crit * (build.crit_mult - 1))
         dpr_off = 1 * off_hit_dmg * p_hit_off * (1.0 + p_hit_off * t_crit * (build.crit_mult - 1))
@@ -491,6 +492,18 @@ def cmd_sim_duel(args: argparse.Namespace) -> None:
                 bonus_flat_dmg=5.0,  # +3 Haute Cadence III + +2 Spé Laser I
                 crit_range=1,
                 extra_attacks=extra_att,
+            ),
+            BuildConfig(
+                name="Dbl-Sabre 1M + Court (Gam II B)",
+                style="dual",
+                base_weapon_dmg=wpn_dmg,
+                offhand_weapon_dmg=wpn_dmg - 2.0,  # Sabre court 2d6 (7.0) vs 2d8 (9.0)
+                str_or_dex_mod=str_mod + 1,  # +2/+3 FOR Gamorréen
+                bonus_attack_mod=2,  # +2 Spé Laser I (0/0 Ambidextrie III + balanced)
+                bonus_flat_dmg=2.0,
+                crit_range=1,
+                # Option B : +1 atq MD (EffectModifyAttacks capé à +2 avec Vitesse + Flurry +1)
+                extra_attacks=min(2, max(0, extra_att - 1) + 1) + 1,
             ),
         ]
 

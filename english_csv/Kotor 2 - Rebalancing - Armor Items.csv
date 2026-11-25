@@ -1,0 +1,185 @@
+﻿ResRef,Name,Type (2DA),AC (Vanilla),Max DEX (Vanilla),Min. Loot Level,Prerequisites,Attribute Bonus (Summary),Properties (Vanilla),Random Loot,Fixed Locations,Changes (Mod),Description (Mod)
+a_light_01,Combinaison de combat légère,Armor Class 4,4,+5,Lvl 6+ (rare 1+),armour_prof_light,,"Malus de défense +-1, Use Limitation",tier 1 lvl 6+ (rare from 1),—,,
+a_light_02,Combinaison de combat,Armor Class 4,4,+5,Lvl 8+ (rare 3+),armour_prof_light,,Use Limitation,tier 2 lvl 8+ (rare from 3),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
+a_light_04,Combinaison de combat mand.,Armor Class 4,4,+5,Lvl 12+ (rare 7+),armour_prof_light,,"Damage Immunity +10%, Damage Immunity +10%, Damage Immunity +10%, Malus de défense +-1, Use Limitation",tier 4 lvl 12+ (rare from 7),"Dxun - Atterrissage ×2, Dxun - Ruines mandalorie… ×2, Dxun - Atterrissage ×2, Dxun - Ruines mandalorie… ×2",,
+a_light_05,Combinaison de combat zabrak,Armor Class 4,4,+5,Lvl 14+ (rare 9+),armour_prof_light,,"Defense Bonus +1, Use Limitation",tier 5 lvl 14+ (rare from 9),—,,
+a_light_07,Echani Light Armor,Armor Class 4,4,+5,Lvl 18+ (rare 13+),armour_prof_light,,"Damage Resistance (Fire) +15/-, Defense Bonus +1, Use Limitation",tier 7 lvl 18+ (rare from 13),—,Echani lore addition: DEX +1,"[Mod D20-Overhaul]
+
+Notable properties:
+• DEX +1"
+a_light_08,Armure de cérémonie massassi,Armor Class 4,4,+5,Lvl 20+ (rare 15+),armour_prof_light,,"Defense Bonus +1, Immunity: Critical Hits, Use Limitation",tier 8 lvl 20+ (rare from 15),—,,
+a_light_09,Combinaison lourde mand.,Armor Class 4,4,+5,Lvl 22+ (rare 17+),armour_prof_light,,"Damage Immunity +10%, Damage Immunity +10%, Damage Immunity +10%, Defense Bonus +1, Use Limitation",tier 9 lvl 22+ (rare from 17),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",,
+a_light_x08,Armure de mailles électrique,Armor Class 4,4,+5,—,armour_prof_light,,"Damage Resistance (Energy) +5/-, Defense Bonus +1, Max DEX Bonus +2, Use Limitation",—,—,,
+beastriderflight,Armure de vol de bestiaire,Armor Class 4,4,+5,Fixed Loot / Quest,armour_prof_light,,"Damage Resistance (Cold) +5/-, Damage Resistance (Fire) +5/-, Use Limitation",—,401dxn,,
+onderonmilitarya,Armure militaire d'Ondéron,Armor Class 4,4,+5,Fixed Loot / Quest,armour_prof_light,,"Réduction des dégâts +Soak5, Use Limitation",—,401dxn,,
+a_light_03,Combinaison de combat lourde,Armor Class 5,5,+4,Lvl 10+ (rare 5+),armour_prof_light,,Use Limitation,tier 3 lvl 10+ (rare from 5),—,,
+a_light_06,Combinaison de alliage Bonadan,Armor Class 5,5,+4,Lvl 16+ (rare 11+),armour_prof_light,,"Defense Bonus +1, Use Limitation",tier 6 lvl 16+ (rare from 11),—,,
+a_light_10,Zabrak Battle Armor,Armor Class 5,5,+4,Lvl 24+ (rare 19+),armour_prof_light,,"Damage Resistance (Cold) +20/-, Defense Bonus +1, Use Limitation",tier 10 lvl 24+ (rare from 19),—,Cap: Cold DR +20/- → +12/-,"[Mod D20-Overhaul]
+
+Notable properties:
+• Cold DR +12/-"
+a_light_12,Echani Shield Suit,Armor Class 5,5,+4,Lvl 28+ (rare 23+),armour_prof_light,,"Damage Immunity +10%, Damage Immunity +10%, Defense Bonus +2, Use Limitation",tier 12 lvl 28+ (rare from 23),—,Echani lore addition: DEX +2,"[Mod D20-Overhaul]
+
+Notable properties:
+• DEX +2"
+a_light_13,Armure de fibre renforcée,Armor Class 5,5,+4,Lvl 30+ (rare 25+),armour_prof_light,,"Defense Bonus +2, Use Limitation",tier 13 lvl 30+ (rare from 25),—,,
+a_light_14,Zabrak War Suit,Armor Class 5,5,+4,Lvl 30+ (rare 27+),armour_prof_light,,"Damage Resistance (Cold) +30/-, Defense Bonus +2, Use Limitation",tier 14 lvl 30+ (rare from 27),—,Cap: Cold DR +30/- → +15/-,"[Mod D20-Overhaul]
+
+Notable properties:
+• Cold DR +15/-"
+a_light_15,Combinaison de mailles d'Ulic Qel Droma,Armor Class 5,5,+4,Lvl 30+ (rare 29+),armour_prof_light,,"Damage Resistance (Cold) +20/-, Damage Resistance (Fire) +20/-, Defense Bonus +3, Use Limitation",tier 15 lvl 30+ (rare from 29),—,Ulic Qel-Droma lore addition: CHA +2 ; Cap: Cold/Fire DR +20/- → +12/-,"[Mod D20-Overhaul]
+
+Notable properties:
+• CHA +2
+• Cold/Fire DR +12/-"
+beasthidearmor,Armure en peau de bête,Armor Class 5,5,+4,Fixed Loot / Quest,armour_prof_light,,"Damage Resistance (Piercing) +5/-, Damage Resistance (Slashing) +5/-, Defense Bonus +1, Use Limitation",—,401dxn,,
+a_khoonda,Armure de milicien de Khoonda,Armor Class 6,6,+3,—,armour_prof_medium / armour_prof_light,,—,—,—,,
+a_medium_01,Combinaison militaire,Armor Class 6,6,+3,Lvl 6+ (rare 1+),armour_prof_medium / armour_prof_light,,Use Limitation,tier 1 lvl 6+ (rare from 1),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
+a_medium_03,Armure de combat Echani,Armor Class 6,6,+3,Lvl 10+ (rare 5+),armour_prof_medium / armour_prof_light,,"Defense Bonus +1, Use Limitation",tier 3 lvl 10+ (rare from 5),—,,
+a_medium_04,Armure de guerre de Cinnagar,Armor Class 6,6,+3,Lvl 12+ (rare 7+),armour_prof_medium / armour_prof_light,,"Damage Resistance (Sonic) +15/-, Defense Bonus +1, Use Limitation",tier 4 lvl 12+ (rare from 7),—,,
+a_medium_05,Combinaison de combat Sith,Armor Class 6,6,+3,Lvl 14+ (rare 9+),armour_prof_medium / armour_prof_light,,"Defense Bonus +1, Max DEX Bonus +4, Use Limitation",tier 5 lvl 14+ (rare from 9),—,,
+a_medium_07,Maille en fibre verpine,Armor Class 6,6,+3,Lvl 18+ (rare 13+),armour_prof_medium / armour_prof_light,,"Defense Bonus +2, Use Limitation",tier 7 lvl 18+ (rare from 13),—,,
+a_medium_11,Armure de guerre légère d'Exar Kun,Armor Class 6,6,+3,Lvl 26+ (rare 21+),armour_prof_medium / armour_prof_light,,"Defense Bonus +3, Use Limitation",tier 11 lvl 26+ (rare from 21),—,,
+a_medium_12,Cinnagar War Suit,Armor Class 6,6,+3,Lvl 28+ (rare 23+),armour_prof_medium / armour_prof_light,,"Damage Resistance (Sonic) +20/-, Defense Bonus +3, Use Limitation",tier 12 lvl 28+ (rare from 23),—,Cap: Sonic DR +20/- → +12/-,"[Mod D20-Overhaul]
+
+Notable properties:
+• Sonic DR +12/-"
+a_medium_13,Verpine Fiber Ultramesh,Armor Class 6,6,+3,Lvl 30+ (rare 25+),armour_prof_medium / armour_prof_light,,"Defense Bonus +4, Use Limitation",tier 13 lvl 30+ (rare from 25),—,Cap: AC +4 → AC +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• AC +3"
+mandaloresarmor,Armure de Mandalore,Armor Class 6,6,+3,Fixed Loot / Quest,armour_prof_medium / armour_prof_light,,"Defense Bonus +3, Regeneration +4, Use Limitation",—,401dxn,,
+a_medium_02,Armure de combat légère,Armor Class 7,7,+2,Lvl 8+ (rare 3+),armour_prof_medium / armour_prof_light,,Use Limitation,tier 2 lvl 8+ (rare from 3),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
+a_medium_06,Armure de combat légère en bronzium,Armor Class 7,7,+2,Lvl 16+ (rare 11+),armour_prof_medium / armour_prof_light,,"Defense Bonus +1, Use Limitation",tier 6 lvl 16+ (rare from 11),—,,
+a_medium_08,Heavy Armor krath,Armor Class 7,7,+2,Lvl 20+ (rare 15+),armour_prof_medium / armour_prof_light,,"Defense Bonus +2, Use Limitation",tier 8 lvl 20+ (rare from 15),—,,
+a_medium_09,Powered Light Battle Armor,Armor Class 7,7,+2,Lvl 22+ (rare 17+),armour_prof_medium / armour_prof_light,STR +1,"Attribute Bonus (Strength) +1, Damage Resistance (Sonic) +25/-, Defense Bonus +1, Use Limitation",tier 9 lvl 22+ (rare from 17),—,Cap: Sonic DR +25/- → +15/-,"[Mod D20-Overhaul]
+
+Notable properties:
+• Sonic DR +15/-"
+a_medium_10,Krath Holy Battle Suit,Armor Class 7,7,+2,Lvl 24+ (rare 19+),armour_prof_medium / armour_prof_light,,"Damage Resistance (Cold) +15/-, Damage Resistance (Fire) +15/-, Damage Resistance (Sonic) +15/-, Defense Bonus +2, Use Limitation",tier 10 lvl 24+ (rare from 19),—,Ajout lore érudits Krath : INT +2,"[Mod D20-Overhaul]
+
+Notable properties:
+• INT +2"
+a_medium_14,Electromesh Armor,Armor Class 7,7,+2,Lvl 30+ (rare 27+),armour_prof_medium / armour_prof_light,,"Damage Resistance (Energy) +10/-, Max DEX Bonus +4, Use Limitation",tier 14 lvl 30+ (rare from 27),—,Cap: DR +10/- → DR +5/- (Energy),"[Mod D20-Overhaul]
+
+Notable properties:
+• DR +5/- (Energy)"
+a_medium_15,Jamoh Hogra's Battle Armor,Armor Class 7,7,+2,Lvl 30+ (rare 29+),armour_prof_medium / armour_prof_light,STR +1,"Attribute Bonus (Strength) +1, Defense Bonus +4, Immunity: Critical Hits, Use Limitation",tier 15 lvl 30+ (rare from 29),—,Cap: AC +4 → AC +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• AC +3"
+a_heavy_01,Armure de combat,Armor Class 8,8,+1,Lvl 6+ (rare 1+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,Use Limitation,tier 1 lvl 6+ (rare from 1),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
+a_heavy_03,Heavy Armor Echani,Armor Class 8,8,+1,Lvl 10+ (rare 5+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Defense Bonus +2, Use Limitation",tier 3 lvl 10+ (rare from 5),—,,
+a_heavy_05,Armure de combat à servomoteurs,Armor Class 8,8,+1,Lvl 14+ (rare 9+),armour_prof_heavy / armour_prof_light / armour_prof_medium,STR +1,"Attribute Bonus (Strength) +1, Defense Bonus +1, Use Limitation",tier 5 lvl 14+ (rare from 9),—,,
+a_heavy_09,Verpine Zal Alloy Mesh,Armor Class 8,8,+1,Lvl 22+ (rare 17+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Damage Resistance (Cold) +25/-, Damage Resistance (Fire) +25/-, Damage Resistance (Sonic) +25/-, Defense Bonus +4, Use Limitation",tier 9 lvl 22+ (rare from 17),"Ondéron - Rampe céleste, Ondéron - Rampe céleste","Cap: AC +4 → AC +3, Elemental DR +25/- → +15/-","[Mod D20-Overhaul]
+
+Notable properties:
+• AC +3
+• Elemental DR +15/-"
+a_heavy_11,Combinaison de puissance de Corellia,Armor Class 8,8,+1,Lvl 26+ (rare 21+),armour_prof_heavy / armour_prof_light / armour_prof_medium,STR +2,"Attribute Bonus (Strength) +2, Defense Bonus +2, Use Limitation",tier 11 lvl 26+ (rare from 21),—,,
+a_heavy_12,M'uhk'gfa,Armor Class 8,8,+1,Lvl 28+ (rare 23+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Damage Resistance (Bludgeoning) +10/-, Damage Resistance (Energy) +5/-, Damage Resistance (Piercing) +10/-, Damage Resistance (Slashing) +10/-, Use Limitation",tier 12 lvl 28+ (rare from 23),—,"Cap: Phys DR +10/-, Energy +5/- → DR +3/- (Phys+Energy)","[Mod D20-Overhaul]
+
+Notable properties:
+• DR +3/- (Phys+Energy)"
+a_heavy_13,Armure-exosquelette Iotran,Armor Class 8,8,+1,Lvl 30+ (rare 25+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus Feat, Bonus Feat, Defense Bonus +3, Use Limitation",tier 13 lvl 30+ (rare from 25),—,,
+a_heavy_02,Armure de combat lourde,Armor Class 9,9,+0,Lvl 8+ (rare 3+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,Use Limitation,tier 2 lvl 8+ (rare from 3),—,,
+a_heavy_04,Heavy Armor en duracier,Armor Class 9,9,+0,Lvl 12+ (rare 7+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Defense Bonus +1, Use Limitation",tier 4 lvl 12+ (rare from 7),"Quartier marchand, Quartier marchand",,
+a_heavy_06,Heavy Armor flexible,Armor Class 9,9,+0,Lvl 16+ (rare 11+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Defense Bonus +1, Max DEX Bonus +3, Use Limitation",tier 6 lvl 16+ (rare from 11),—,,
+a_heavy_07,Armure de combat mand.,Armor Class 9,9,+0,Lvl 18+ (rare 13+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Damage Resistance (Electrical) +25/-, Defense Bonus +2, Use Limitation",tier 7 lvl 18+ (rare from 13),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",Cap: Electrical DR +25/- → +15/-,"[Mod D20-Overhaul]
+
+Notable properties:
+• Electrical DR +15/-"
+a_heavy_08,Heavy Armor mand.,Armor Class 9,9,+0,Lvl 20+ (rare 15+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Defense Bonus +3, Immunity: Mind-Affecting, Use Limitation",tier 8 lvl 20+ (rare from 15),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",,
+a_heavy_10,Armure d'assaut mand.,Armor Class 9,9,+0,Lvl 24+ (rare 19+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Damage Resistance (Cold) +25/-, Damage Resistance (Fire) +25/-, Defense Bonus +4, Use Limitation",tier 10 lvl 24+ (rare from 19),—,"Cap: AC +4 → AC +3, Cold/Fire DR +25/- → +15/-","[Mod D20-Overhaul]
+
+Notable properties:
+• AC +3
+• Cold/Fire DR +15/-"
+a_heavy_14,Armure de Félénar,Armor Class 9,9,+0,Lvl 30+ (rare 27+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Defense Bonus +2, Max DEX Bonus +4, Use Limitation",tier 14 lvl 30+ (rare from 27),—,,
+a_heavy_15,Matrix Armor,Armor Class 9,9,+0,Lvl 30+ (rare 29+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Damage Resistance (Energy) +5/-, Defense Bonus +4, Use Limitation",tier 15 lvl 30+ (rare from 29),—,Cap: AC +4 → AC +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• AC +3"
+a_heavy_x01,Armure de Mandalore,Armor Class 9,9,+0,—,armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Damage Resistance (Electrical) +25/-, Defense Bonus +2, Use Limitation",—,—,Cap: Electrical DR +25/- → +15/-,"[Mod D20-Overhaul]
+
+Notable properties:
+• Electrical DR +15/-"
+a_light_11,Ubese Environmental Suit,Armor Armd Flight Suit,5,+4,Lvl 26+ (rare 21+),armour_prof_light,,"Damage Resistance (Cold) +10/-, Damage Resistance (Electrical) +10/-, Damage Resistance (Energy) +10/-, Damage Resistance (Fire) +10/-, Use Limitation",tier 11 lvl 26+ (rare from 21),—,Cap: DR +10/- → DR +3/- (Energy),"[Mod D20-Overhaul]
+
+Notable properties:
+• DR +3/- (Energy)"
+g_a_armrdfsuit,Armored Flight Suit,Armor Armd Flight Suit,5,+4,Fixed Loot / Quest,armour_prof_light,,Damage Resistance (Cold) +20/-,—,"Station Citadelle - Cant…, Ondéron - Rampe céleste, Station Citadelle - Cant…, Ondéron - Rampe céleste",Cap: Cold DR +20/- → +12/-,"[Mod D20-Overhaul]
+
+Notable properties:
+• Cold DR +12/-"
+a_robe_06,Zeison Sha Initiate Armor,Armor Zeison Sha,3,+4,Lvl 16+ (rare 11+),armour_prof_light,,"Defense Bonus +1, Improved Saving Throws +1, Use Limitation",tier 6 lvl 16+ (rare from 11),—,Zeison Sha lore addition (Yanibar survival): CON +1,"[Mod D20-Overhaul]
+
+Notable properties:
+• CON +1"
+a_robe_07,Armure de néophyte Jal Shey,Armor Zeison Sha,3,+4,Lvl 18+ (rare 13+),armour_prof_light,CHA +1,"Attribute Bonus (Charisma) +1, Skill Bonus +1, Use Limitation",tier 7 lvl 18+ (rare from 13),—,,
+a_robe_11,Armure de conseiller Jal Shey,Armor Zeison Sha,3,+4,Lvl 26+ (rare 21+),armour_prof_light,"WIS +1, CHA +2","Attribute Bonus (Charisma) +2, Attribute Bonus (Wisdom) +1, Skill Bonus +1, Use Limitation",tier 11 lvl 26+ (rare from 21),—,,
+a_robe_16,Zeison Sha Warrior Armor,Armor Zeison Sha,3,+4,Lvl 30+,armour_prof_light,,"Defense Bonus +2, Improved Saving Throws +1, Use Limitation",tier 16 lvl 30+,—,Zeison Sha lore addition (Yanibar survival): CON +2,"[Mod D20-Overhaul]
+
+Notable properties:
+• CON +2"
+a_robe_20,Jal Shey Mentor Armor,Armor Zeison Sha,3,+4,Lvl 30+,armour_prof_light,"WIS +1, CHA +4","Attribute Bonus (Charisma) +4, Attribute Bonus (Wisdom) +1, Defense Bonus +1, Skill Bonus +1, Use Limitation",tier 20 lvl 30+,—,"Cap: CHA +4, WIS +1 → CHA +3, WIS +1","[Mod D20-Overhaul]
+
+Notable properties:
+• CHA +3, WIS +1"
+a_robe_26,Darth Malak's Armor,Armor Zeison Sha,3,+4,Lvl 30+,"armour_prof_light, Alignment",STR +1,"Alignment Restriction, Attribute Bonus (Strength) +1, Defense Bonus +4, Regeneration +2, Use Limitation",tier 26 lvl 30+,—,Cap: AC +4 → AC +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• AC +3"
+a_robe_02,Robe de padawan,Jedi Robe,0,+-1,Lvl 8+ (rare 3+),jedi_defense,,"Defense Bonus +1, Use Limitation",tier 2 lvl 8+ (rare from 3),—,,
+a_robe_03,Robe de padawan Dark Side,Jedi Robe,0,+-1,Lvl 10+ (rare 5+),jedi_defense,,"Defense Bonus +1, Use Limitation",tier 3 lvl 10+ (rare from 5),—,,
+a_robe_04,Robe de novice Baran Do,Jedi Robe,0,+-1,Lvl 12+ (rare 7+),jedi_defense,WIS +1,"Attribute Bonus (Wisdom) +1, Damage Immunity +10%, Damage Immunity +10%, Defense Bonus +1, Use Limitation",tier 4 lvl 12+ (rare from 7),—,,
+a_robe_08,Robe de Jedi,Jedi Robe,0,+-1,Lvl 20+ (rare 15+),jedi_defense,,"Defense Bonus +1, Regenerate Force Points +1, Use Limitation",tier 8 lvl 20+ (rare from 15),Ebon Hawk - Intérieur,,
+a_robe_09,Robe de Jedi Dark Side,Jedi Robe,0,+-1,Lvl 22+ (rare 17+),jedi_defense,,"Defense Bonus +1, Regenerate Force Points +1, Use Limitation",tier 9 lvl 22+ (rare from 17),—,,
+a_robe_10,Robe de Norris,Jedi Robe,0,+-1,Lvl 24+ (rare 19+),jedi_defense,,"Damage Immunity +20%, Defense Bonus +2, Use Limitation",tier 10 lvl 24+ (rare from 19),—,,
+a_robe_19,Baran Do Sage Robe,Jedi Robe,0,+-1,Lvl 30+,jedi_defense,WIS +4,"Attribute Bonus (Wisdom) +4, Damage Immunity +20%, Damage Immunity +20%, Defense Bonus +2, Use Limitation",tier 19 lvl 30+,—,Cap: WIS +4 → WIS +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• WIS +3"
+a_robe_21,Ossus Keeper Robe,Jedi Robe,0,+-1,Lvl 30+,jedi_defense,"INT +4, WIS +4, CHA +2","Attribute Bonus (Charisma) +2, Attribute Bonus (Intelligence) +4, Attribute Bonus (Wisdom) +4, Defense Bonus +1, Use Limitation",tier 21 lvl 30+,—,"Cap & Ossus archives lore: INT +4, WIS +4, CHA +2 → INT +3, WIS +2","[Mod D20-Overhaul]
+
+Notable properties:
+• INT +3, WIS +2"
+a_robe_27,Jolee's Robe,Jedi Robe,0,+-1,Lvl 30+,"jedi_defense, Alignment",CHA +4,"Alignment Restriction, Attribute Bonus (Charisma) +4, Defense Bonus +3, Regenerate Force Points +1, Use Limitation",tier 27 lvl 30+,—,Cap: CHA +4 → CHA +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• CHA +3"
+masterarcasrobes,Master Arca's Robes,Jedi Robe,0,+-1,Fixed Loot / Quest,"jedi_defense, Alignment","STR +4, WIS +2","Alignment Restriction, Attribute Bonus (Strength) +4, Attribute Bonus (Wisdom) +2, Defense Bonus +3, Use Limitation",—,401dxn,"Cap: STR +4, WIS +2 → STR +2, WIS +2","[Mod D20-Overhaul]
+
+Notable properties:
+• STR +2, WIS +2"
+rcm_robe_99,*(rcm_robe_99)*,Jedi Robe,0,+-1,—,jedi_defense,,"Defense Bonus +1, Regenerate Force Points +1, Use Limitation",—,—,,
+a_robe_x01,Robe de la Servante,Jedi Knight Robe,0,+-1,—,PNJ only,CHA +2,"Attribute Bonus (Charisma) +2, Defense Bonus +3, Restriction PJ, Use Limitation",—,—,,
+a_robe_05,Robe d'apprenti Mutaki,Jedi Master Robe,0,+-1,Lvl 14+ (rare 9+),jedi_defense,"STR +1, DEX +1, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Dexterity) +1, Attribute Bonus (Strength) +1, Use Limitation",tier 5 lvl 14+ (rare from 9),—,,
+a_robe_12,Robe de Jedi gris,Jedi Master Robe,0,+-1,Lvl 28+ (rare 23+),jedi_defense,CHA +2,"Attribute Bonus (Charisma) +2, Defense Bonus +1, Regenerate Force Points +1, Use Limitation",tier 12 lvl 28+ (rare from 23),—,,
+a_robe_13,Robe de chevalier Jedi,Jedi Master Robe,0,+-1,Lvl 30+ (rare 25+),jedi_defense,,"Defense Bonus +2, Regenerate Force Points +1, Use Limitation",tier 13 lvl 30+ (rare from 25),—,,
+a_robe_14,Robe de chevalier Jedi Dark Side,Jedi Master Robe,0,+-1,Lvl 30+ (rare 27+),jedi_defense,,"Defense Bonus +2, Regenerate Force Points +1, Use Limitation",tier 14 lvl 30+ (rare from 27),—,,
+a_robe_15,Robe d'adepte Mutaki,Jedi Master Robe,0,+-1,Lvl 30+ (rare 29+),jedi_defense,"STR +2, DEX +2, CON +2","Attribute Bonus (Constitution) +2, Attribute Bonus (Dexterity) +2, Attribute Bonus (Strength) +2, Defense Bonus +1, Use Limitation",tier 15 lvl 30+ (rare from 29),—,"Cap: STR +2, DEX +2, CON +2 → STR +2, DEX +1, CON +2","[Mod D20-Overhaul]
+
+Notable properties:
+• STR +2, DEX +1, CON +2"
+a_robe_17,Robe de maître Jedi,Jedi Master Robe,0,+-1,Lvl 30+,jedi_defense,,"Defense Bonus +3, Regenerate Force Points +1, Use Limitation",tier 17 lvl 30+,—,,
+a_robe_18,Robe de maître Jedi Dark Side,Jedi Master Robe,0,+-1,Lvl 30+,jedi_defense,,"Defense Bonus +3, Regenerate Force Points +1, Use Limitation",tier 18 lvl 30+,—,,
+a_robe_22,Foulard de Natth,Jedi Master Robe,0,+-1,Lvl 30+,"jedi_defense, Alignment",STR +3,"Alignment Restriction, Attribute Bonus (Strength) +3, Defense Bonus +3, Use Limitation",tier 22 lvl 30+,—,,
+a_robe_23,Robe d'Arca Jeth,Jedi Master Robe,0,+-1,Lvl 30+,"jedi_defense, Alignment",WIS +2,"Alignment Restriction, Attribute Bonus (Wisdom) +2, Defense Bonus +2, Regenerate Force Points +3, Use Limitation",tier 23 lvl 30+,—,,
+a_robe_24,Aleema Keto's Robe,Jedi Master Robe,0,+-1,Lvl 30+,"jedi_defense, Alignment","STR +2, WIS +4","Alignment Restriction, Attribute Bonus (Strength) +2, Attribute Bonus (Wisdom) +4, Defense Bonus +3, Regenerate Force Points +1, Use Limitation",tier 24 lvl 30+,—,"Cap: WIS +4, STR +2 → WIS +3, STR +1","[Mod D20-Overhaul]
+
+Notable properties:
+• WIS +3, STR +1"
+a_robe_25,Sylvar's Robe,Jedi Master Robe,0,+-1,Lvl 30+,"jedi_defense, Alignment",DEX +2,"Alignment Restriction, Attribute Bonus (Dexterity) +2, Damage Resistance (Dark_Side) +15/-, Damage Resistance (Energy) +15/-, Defense Bonus +2, Use Limitation",tier 25 lvl 30+,—,Cap: DR +15/- → DR +5/- (Energy/Dark Side),"[Mod D20-Overhaul]
+
+Notable properties:
+• DR +5/- (Energy/Dark Side)"
+a_robe_28,Robe de Thon,Jedi Master Robe,0,+-1,Lvl 30+,"jedi_defense, Alignment",,"Alignment Restriction, Bonus Feat, Bonus Feat, Bonus Feat, Defense Bonus +3, Use Limitation",tier 28 lvl 30+,—,,
+a_robe_29,Crado's Robe,Jedi Master Robe,0,+-1,Lvl 30+,"jedi_defense, Alignment",STR +6,"Alignment Restriction, Attribute Bonus (Strength) +6, Malus de caractéristique +-2, Defense Bonus +2, Use Limitation",tier 29 lvl 30+,—,Cap: STR +6 → STR +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• STR +3"
+a_robe_30,Nomi's Robe,Jedi Master Robe,0,+-1,Lvl 30+,"jedi_defense, Alignment",WIS +4,"Alignment Restriction, Attribute Bonus (Wisdom) +4, Defense Bonus +3, Regenerate Force Points +3, Use Limitation",tier 30 lvl 30+,—,Cap: WIS +4 → WIS +3,"[Mod D20-Overhaul]
+
+Notable properties:
+• WIS +3"

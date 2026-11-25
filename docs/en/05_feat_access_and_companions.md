@@ -15,10 +15,10 @@ Now that every feat tree has been introduced, here is the full reference table s
 | **Stances: Ambidexterity, Heavy Weapon, High-Rate** *(Lvl 1 / 4 / 8)* | All classes | All classes *(Lvl 4+)* | **All except Force classes** *(Lvl 8+; locked for Consular, Jedi Master, Sith Lord)* |
 | **Weapon Specializations (8 families)** | All classes | Guardian, Sentinel & their prestiges *(+ non-Jedi)* | **Weapon Master**, **Sith Marauder** *(+ non-Jedi Lvl 15+)* |
 | **Armor: Juggernaut** *(Heavy)* | All (with Heavy Armor Prof.) | Guardian, Weapon Master, Marauder *(+ Soldier)* | **Weapon Master**, **Sith Marauder** *(+ Soldier Lvl 15+)* |
-| **Armor: Tactical Armor** *(Medium)* | All (with Medium Armor Prof.) | Sentinel, Watchman, Assassin *(+ Scout, Scoundrel, Tech Specialist)* | **Jedi Watchman**, **Sith Assassin** *(+ Scout, Scoundrel, Tech Specialist Lvl 15+)* |
-| **Armor: Ballistic Evasion** *(Light)* | All (with Light Armor Prof.) | Guardian, Sentinel & their prestiges *(+ Soldier, Scout, Scoundrel)* | **Weapon Master**, **Marauder**, **Watchman**, **Assassin** *(+ Soldier, Scout, Scoundrel Lvl 15+)* |
-| **Force Awakening** *(Empower, Penetrate)* | All Jedi / Sith | **Consular**, **Jedi Master**, **Sith Lord** | **Jedi Master**, **Sith Lord** |
-| **Total Evasion** | — | — | **Jedi Watchman**, **Sith Assassin** *(+ Mira auto at Lvl 6)* |
+| **Armor: Tactical Armor** *(Medium)* | All (with Medium Armor Prof.) | Sentinel, Watchman, Assassin *(+ Scout, Scoundrel, Tech Specialist)* | **Jedi Watchman**, **Sith Assassin** *(+ Scout, Scoundrel, Tech Specialist Lvl 15+; Visas Lvl 15+)* |
+| **Armor: Ballistic Evasion** *(Light)* | All (with Light Armor Prof.) | Guardian, Sentinel & their prestiges *(+ Soldier, Scout, Scoundrel)* | **Weapon Master**, **Marauder**, **Watchman**, **Assassin** *(+ Soldier, Scout, Scoundrel Lvl 15+; Visas Lvl 15+)* |
+| **Force Awakening** *(Empower, Penetrate)* | All Jedi / Sith | **Consular**, **Jedi Master**, **Sith Lord** | **Jedi Master**, **Sith Lord** *(+ Kreia Lvl 15+)* |
+| **Total Evasion** | — | — | **Jedi Watchman**, **Sith Assassin** *(+ Visas Lvl 15+; Mira auto at Lvl 6)* |
 
 ---
 

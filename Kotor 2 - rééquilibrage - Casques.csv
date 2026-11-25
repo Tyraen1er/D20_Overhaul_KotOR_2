@@ -49,11 +49,12 @@ Propriétés notables :
 a_helmet_28,Bouclier de Force,Mask,Niv. 30+,—,,"Malus de caractéristique +-6, Malus de caractéristique +-6, Résistance aux dégâts (Dark_Side) +5/-, Meilleure résistance à la Force +24, Jets de sauvegarde améliorés +5",palier 28 niv. 30+,—,"Plafonnement : RD +5/- → RD +3/- (Obscur), Saves +5 → Saves +4","[Mod D20-Overhaul]
 
 Propriétés notables :
-• RD +3/- (Obscur), Saves +5 → Saves +4"
+• RD Obscur +3/-
+• Sauvegardes +4"
 a_helmet_29,Visière d'absorption,Mask,Niv. 30+,—,,"Immunité contre dégâts +15%, Immunité contre dégâts +15%, Immunité contre dégâts +75%, Immunité contre dégâts +90%, Bonus défense +1, Don requis",palier 29 niv. 30+,—,Plafonnement : Immunité +75%/+90% → +30%,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +30%"
+• Immunités contre dégâts plafonnées à +30 %"
 a_helmet_30,Visière de Force,Mask,Niv. 30+,—,"SAG +4, CHA +1","Bonus de caractéristique (Charisma) +1, Bonus de caractéristique (Wisdom) +4, Régénération de points de Force +2",palier 30 niv. 30+,—,"Plafonnement : SAG +4, CHA +1 → SAG +2, CHA +2","[Mod D20-Overhaul]
 
 Propriétés notables :

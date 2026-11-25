@@ -6,7 +6,7 @@ a_light_05,Combinaison de combat zabrak,Armor Class 4,4,+5,Niv. 14+ (rare 9+),ar
 a_light_07,Armure légère Echani,Armor Class 4,4,+5,Niv. 18+ (rare 13+),armour_prof_light,,"Résistance aux dégâts (Fire) +15/-, Bonus défense +1, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),—,Ajout lore Echani : DEX +1,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• Ajout lore Echani : DEX +1"
+• DEX +1"
 a_light_08,Armure de cérémonie massassi,Armor Class 4,4,+5,Niv. 20+ (rare 15+),armour_prof_light,,"Bonus défense +1, Immunité (Critical_Hits), Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),—,,
 a_light_09,Combinaison lourde mand.,Armor Class 4,4,+5,Niv. 22+ (rare 17+),armour_prof_light,,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Immunité contre dégâts +10%, Bonus défense +1, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",,
 a_light_x08,Armure de mailles électrique,Armor Class 4,4,+5,—,armour_prof_light,,"Résistance aux dégâts (Energy) +5/-, Bonus défense +1, Bonus DEX max +2, Restriction utilisateur",—,—,,
@@ -17,21 +17,21 @@ a_light_06,Combinaison de alliage Bonadan,Armor Class 5,5,+4,Niv. 16+ (rare 11+)
 a_light_10,Armure de combat zabrak,Armor Class 5,5,+4,Niv. 24+ (rare 19+),armour_prof_light,,"Résistance aux dégâts (Cold) +20/-, Bonus défense +1, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,Plafonnement : RD Froid +20/- → +12/-,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +12/-"
+• RD Froid +12/-"
 a_light_12,Combinaison-bouclier Echani,Armor Class 5,5,+4,Niv. 28+ (rare 23+),armour_prof_light,,"Immunité contre dégâts +10%, Immunité contre dégâts +10%, Bonus défense +2, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Ajout lore Echani : DEX +2,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• Ajout lore Echani : DEX +2"
+• DEX +2"
 a_light_13,Armure de fibre renforcée,Armor Class 5,5,+4,Niv. 30+ (rare 25+),armour_prof_light,,"Bonus défense +2, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,,
 a_light_14,Armure de guerre zabrak,Armor Class 5,5,+4,Niv. 30+ (rare 27+),armour_prof_light,,"Résistance aux dégâts (Cold) +30/-, Bonus défense +2, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,Plafonnement : RD Froid +30/- → +15/-,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +15/-"
+• RD Froid +15/-"
 a_light_15,Combinaison de mailles d'Ulic Qel Droma,Armor Class 5,5,+4,Niv. 30+ (rare 29+),armour_prof_light,,"Résistance aux dégâts (Cold) +20/-, Résistance aux dégâts (Fire) +20/-, Bonus défense +3, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,Ajout lore Ulic Qel-Droma : CHA +2 ; Plafonnement : RD Froid/Feu +20/- → +12/-,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• Ajout lore Ulic Qel-Droma : CHA +2
-• +12/-"
+• CHA +2
+• RD Froid/Feu +12/-"
 beasthidearmor,Armure en peau de bête,Armor Class 5,5,+4,Loot fixe / Quête,armour_prof_light,,"Résistance aux dégâts (Piercing) +5/-, Résistance aux dégâts (Slashing) +5/-, Bonus défense +1, Restriction utilisateur",—,401dxn,,
 a_khoonda,Armure de milicien de Khoonda,Armor Class 6,6,+3,—,armour_prof_medium / armour_prof_light,,—,—,—,,
 a_medium_01,Combinaison militaire,Armor Class 6,6,+3,Niv. 6+ (rare 1+),armour_prof_medium / armour_prof_light,,Restriction utilisateur,palier 1 niv. 6+ (rare dès 1),"Nar Shaddaa - PF atterri…, Nar Shaddaa - PF atterri…, Dantooine - Plaine de Kh…",,
@@ -43,7 +43,7 @@ a_medium_11,Armure de guerre légère d'Exar Kun,Armor Class 6,6,+3,Niv. 26+ (ra
 a_medium_12,Armure de guerre lourde de Cinnagar,Armor Class 6,6,+3,Niv. 28+ (rare 23+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Sonic) +20/-, Bonus défense +3, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Plafonnement : RD Sonique +20/- → +12/-,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +12/-"
+• RD Sonique +12/-"
 a_medium_13,Ultramaille de fibre verpine,Armor Class 6,6,+3,Niv. 30+ (rare 25+),armour_prof_medium / armour_prof_light,,"Bonus défense +4, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,Plafonnement : CA +4 → CA +3,"[Mod D20-Overhaul]
 
 Propriétés notables :
@@ -55,11 +55,11 @@ a_medium_08,Armure lourde krath,Armor Class 7,7,+2,Niv. 20+ (rare 15+),armour_pr
 a_medium_09,Armure de combat légère à servomoteurs,Armor Class 7,7,+2,Niv. 22+ (rare 17+),armour_prof_medium / armour_prof_light,FOR +1,"Bonus de caractéristique (Strength) +1, Résistance aux dégâts (Sonic) +25/-, Bonus défense +1, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),—,Plafonnement : RD Sonique +25/- → +15/-,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +15/-"
+• RD Sonique +15/-"
 a_medium_10,Armure de guerre sacrée de Krath,Armor Class 7,7,+2,Niv. 24+ (rare 19+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Cold) +15/-, Résistance aux dégâts (Fire) +15/-, Résistance aux dégâts (Sonic) +15/-, Bonus défense +2, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,Ajout lore érudits Krath : INT +2,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• Ajout lore érudits Krath : INT +2"
+• INT +2"
 a_medium_14,Armure de mailles électriques,Armor Class 7,7,+2,Niv. 30+ (rare 27+),armour_prof_medium / armour_prof_light,,"Résistance aux dégâts (Energy) +10/-, Bonus DEX max +4, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,Plafonnement : RD +10/- → RD +5/- (Énergie),"[Mod D20-Overhaul]
 
 Propriétés notables :
@@ -74,9 +74,10 @@ a_heavy_05,Armure de combat à servomoteurs,Armor Class 8,8,+1,Niv. 14+ (rare 9+
 a_heavy_09,Maille verpine en alliage zal,Armor Class 8,8,+1,Niv. 22+ (rare 17+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Cold) +25/-, Résistance aux dégâts (Fire) +25/-, Résistance aux dégâts (Sonic) +25/-, Bonus défense +4, Restriction utilisateur",palier 9 niv. 22+ (rare dès 17),"Ondéron - Rampe céleste, Ondéron - Rampe céleste","Plafonnement : CA +4 → CA +3, RD élém. +25/- → +15/-","[Mod D20-Overhaul]
 
 Propriétés notables :
-• CA +3, RD élém. +25/- → +15/-"
+• CA +3
+• RD élémentaires +15/-"
 a_heavy_11,Combinaison de puissance de Corellia,Armor Class 8,8,+1,Niv. 26+ (rare 21+),armour_prof_heavy / armour_prof_light / armour_prof_medium,FOR +2,"Bonus de caractéristique (Strength) +2, Bonus défense +2, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,,
-a_heavy_12,M'uhk'gfa,Armor Class 8,8,+1,Niv. 28+ (rare 23+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Bludgeoning) +10/-, Résistance aux dégâts (Energy) +5/-, Résistance aux dégâts (Piercing) +10/-, Résistance aux dégâts (Slashing) +10/-, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,Plafonnement : RD +10/- → RD +3/- (Phys+Énergie),"[Mod D20-Overhaul]
+a_heavy_12,M'uhk'gfa,Armor Class 8,8,+1,Niv. 28+ (rare 23+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Bludgeoning) +10/-, Résistance aux dégâts (Energy) +5/-, Résistance aux dégâts (Piercing) +10/-, Résistance aux dégâts (Slashing) +10/-, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,"Plafonnement : RD Phys +10/-, Énergie +5/- → RD +3/- (Phys+Énergie)","[Mod D20-Overhaul]
 
 Propriétés notables :
 • RD +3/- (Phys+Énergie)"
@@ -87,12 +88,13 @@ a_heavy_06,Armure lourde flexible,Armor Class 9,9,+0,Niv. 16+ (rare 11+),armour_
 a_heavy_07,Armure de combat mand.,Armor Class 9,9,+0,Niv. 18+ (rare 13+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Electrical) +25/-, Bonus défense +2, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",Plafonnement : RD Élec +25/- → +15/-,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +15/-"
+• RD Électrique +15/-"
 a_heavy_08,Armure lourde mand.,Armor Class 9,9,+0,Niv. 20+ (rare 15+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +3, Immunité (MindSpells), Restriction utilisateur",palier 8 niv. 20+ (rare dès 15),"Dxun - Ruines mandalorie…, Dxun - Ruines mandalorie…",,
 a_heavy_10,Armure d'assaut mand.,Armor Class 9,9,+0,Niv. 24+ (rare 19+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Cold) +25/-, Résistance aux dégâts (Fire) +25/-, Bonus défense +4, Restriction utilisateur",palier 10 niv. 24+ (rare dès 19),—,"Plafonnement : CA +4 → CA +3, RD Froid/Feu +25/- → +15/-","[Mod D20-Overhaul]
 
 Propriétés notables :
-• CA +3, RD Froid/Feu +25/- → +15/-"
+• CA +3
+• RD Froid/Feu +15/-"
 a_heavy_14,Armure de Félénar,Armor Class 9,9,+0,Niv. 30+ (rare 27+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Bonus défense +2, Bonus DEX max +4, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,,
 a_heavy_15,Armure matrice,Armor Class 9,9,+0,Niv. 30+ (rare 29+),armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Energy) +5/-, Bonus défense +4, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,Plafonnement : CA +4 → CA +3,"[Mod D20-Overhaul]
 
@@ -101,7 +103,7 @@ Propriétés notables :
 a_heavy_x01,Armure de Mandalore,Armor Class 9,9,+0,—,armour_prof_heavy / armour_prof_light / armour_prof_medium,,"Résistance aux dégâts (Electrical) +25/-, Bonus défense +2, Restriction utilisateur",—,—,Plafonnement : RD Élec +25/- → +15/-,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +15/-"
+• RD Électrique +15/-"
 a_light_11,Combinaison anti-environnement ubèse,Armor Armd Flight Suit,5,+4,Niv. 26+ (rare 21+),armour_prof_light,,"Résistance aux dégâts (Cold) +10/-, Résistance aux dégâts (Electrical) +10/-, Résistance aux dégâts (Energy) +10/-, Résistance aux dégâts (Fire) +10/-, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,Plafonnement : RD +10/- → RD +3/- (Énergie),"[Mod D20-Overhaul]
 
 Propriétés notables :
@@ -109,17 +111,17 @@ Propriétés notables :
 g_a_armrdfsuit,Armure de guerre blindée,Armor Armd Flight Suit,5,+4,Loot fixe / Quête,armour_prof_light,,Résistance aux dégâts (Cold) +20/-,—,"Station Citadelle - Cant…, Ondéron - Rampe céleste, Station Citadelle - Cant…, Ondéron - Rampe céleste",Plafonnement : RD Froid +20/- → +12/-,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• +12/-"
+• RD Froid +12/-"
 a_robe_06,Armure d'initié Zeison Sha,Armor Zeison Sha,3,+4,Niv. 16+ (rare 11+),armour_prof_light,,"Bonus défense +1, Jets de sauvegarde améliorés +1, Restriction utilisateur",palier 6 niv. 16+ (rare dès 11),—,Ajout lore Zeison Sha (survie Yanibar) : CON +1,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• Ajout lore Zeison Sha (survie Yanibar) : CON +1"
+• CON +1"
 a_robe_07,Armure de néophyte Jal Shey,Armor Zeison Sha,3,+4,Niv. 18+ (rare 13+),armour_prof_light,CHA +1,"Bonus de caractéristique (Charisma) +1, Bonus de compétence +1, Restriction utilisateur",palier 7 niv. 18+ (rare dès 13),—,,
 a_robe_11,Armure de conseiller Jal Shey,Armor Zeison Sha,3,+4,Niv. 26+ (rare 21+),armour_prof_light,"SAG +1, CHA +2","Bonus de caractéristique (Charisma) +2, Bonus de caractéristique (Wisdom) +1, Bonus de compétence +1, Restriction utilisateur",palier 11 niv. 26+ (rare dès 21),—,,
 a_robe_16,Armure de guerrier Zeison Sha,Armor Zeison Sha,3,+4,Niv. 30+,armour_prof_light,,"Bonus défense +2, Jets de sauvegarde améliorés +1, Restriction utilisateur",palier 16 niv. 30+,—,Ajout lore Zeison Sha (survie Yanibar) : CON +2,"[Mod D20-Overhaul]
 
 Propriétés notables :
-• Ajout lore Zeison Sha (survie Yanibar) : CON +2"
+• CON +2"
 a_robe_20,Armure de mentor Jal Shey,Armor Zeison Sha,3,+4,Niv. 30+,armour_prof_light,"SAG +1, CHA +4","Bonus de caractéristique (Charisma) +4, Bonus de caractéristique (Wisdom) +1, Bonus défense +1, Bonus de compétence +1, Restriction utilisateur",palier 20 niv. 30+,—,"Plafonnement : CHA +4, SAG +1 → CHA +3, SAG +1","[Mod D20-Overhaul]
 
 Propriétés notables :

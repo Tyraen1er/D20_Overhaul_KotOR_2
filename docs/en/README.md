@@ -33,7 +33,7 @@ This guide is written specifically for **regular KotOR 2 players**: it contains 
 - **Fort / Ref / Will**: The three saving throws — *Fortitude*, *Reflex*, and *Will*.
 - **Dice notation (`1d8`, `2d6`, etc.)**: Replaces vanilla ranges (`1-8`, `2-12`). `2d6` means rolling two 6-sided dice (2 to 12, average 7).
 - **STR / DEX / CON / INT / WIS / CHA**: Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma.
-- **1H / 2H / D**: One-Handed / Two-Handed / Double-Bladed or Repeating weapon.
+- **1H / 2H / HR**: One-Handed / Two-Handed / High-Rate weapon *(double-bladed melee weapons and repeating blasters)*.
 - **T1 / T2 / T3**: Tier (rank) 1, 2, or 3 of a feat or Force power.
 - **AoE**: Area of Effect power or attack (hits multiple enemies at once).
 
@@ -62,7 +62,7 @@ Even before picking a single feat or Force power, **D20 Overhaul** changes sever
 
 - **New Two-Handed Weapons (`2H`)**: heavy melee weapons (*Vibrosword*, *Gamorrean Battleaxe*, *Force Pike*) and rifles/bowcasters now occupy both hands with no extra off-hand attack, dealing **`200% STR`** in melee and **`150% DEX`** at range by default.
 - **Ranged Weapons Scale with Dexterity (`DEX`)**: unlike vanilla where DEX added zero damage to blasters, ranged attacks now add your DEX modifier to damage (**`150% DEX`** with a single 1H pistol or 2H rifle, **`100% / 50% DEX`** dual-wielding, **`150% / 50% DEX`** with repeating blasters).
-- **Double-Bladed & Repeating Weapons: AC Penalty Instead of Attack Penalty**: all double weapons and repeating blasters are now balanced and no longer suffer the vanilla `-6 / -10` two-weapon attack penalty. Instead, they carry a **native `-5 AC` penalty** and deal **`150% / 50%`** STR (melee) or DEX (ranged).
+- **High-Rate Weapons (`HR` — Double-Bladed & Repeating): AC Penalty Instead of Attack Penalty**: all double weapons and repeating blasters are now balanced and no longer suffer the vanilla `-6 / -10` two-weapon attack penalty. Instead, they carry a **native `-5 AC` penalty** and deal **`150% / 50%`** STR (melee) or DEX (ranged).
 - **Guaranteed Confirmed Critical from Stealth**: your **first attack** made within **6 seconds** of leaving stealth receives **`+50` Attack** (guaranteeing a hit) and **duplicates its entire damage roll (including Sneak Attack dice)** to simulate a confirmed critical hit. In game, this bonus damage appears on a **second damage line** in the combat log right after the initial hit.
 - **Unarmed Counts as One-Handed**: fighting unarmed natively follows single 1H weapon rules (`150% STR` in melee and full compatibility with the *Dueling* stance).
 - **Native Armor Damage Reduction (DR)**: wearing **Medium armor** natively grants **`DR 2/-`** and **Heavy armor** grants **`DR 4/-`** (physical & energy). Each armor category also has its own workbench slot rules (1 Light Underlay for Light armor, 1 Full Underlay for Heavy armor, and 2 slots for Medium armor: Full Underlay + exclusive reinforced Overlay).
