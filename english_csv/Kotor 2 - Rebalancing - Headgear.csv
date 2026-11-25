@@ -1,67 +1,67 @@
 ﻿ResRef,Name,Subtype,Min. Loot Level,Prerequisites,Attribute Bonus (Summary),Properties (Vanilla),Random Loot,Fixed Locations,Changes (Mod),Description (Mod)
-100_mask01,Casque de repérage,Mask,Fixed Loot / Quest,—,,"Damage Resistance (Sonic) +5/-, Skill Bonus +1",—,"Péragus - Galeries, Péragus - Galeries",,
-a_helmet_01,Serre-tête neural,Mask,Lvl 6+ (rare 1+),—,,Improved Saving Throws +2,tier 1 lvl 6+ (rare from 1),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
-a_helmet_02,Masque respirateur,Mask,Lvl 8+ (rare 3+),—,,Immunity: Poison,tier 2 lvl 8+ (rare from 3),"Péragus - Dortoirs, Péragus - Dortoirs",,
-a_helmet_03,Serre-tête de Rakata,Mask,Lvl 10+ (rare 5+),—,WIS +1,Attribute Bonus (Wisdom) +1,tier 3 lvl 10+ (rare from 5),—,,
-a_helmet_04,Augmentateur de discrétion,Mask,Lvl 12+ (rare 7+),—,,"Don requis, Skill Bonus +4",tier 4 lvl 12+ (rare from 7),—,,
-a_helmet_05,Visière de perception bothan,Mask,Lvl 14+ (rare 9+),—,,"Don requis, Skill Bonus +3, Skill Bonus +2, Skill Bonus +2",tier 5 lvl 14+ (rare from 9),—,,
-a_helmet_06,Bloquants soniques,Mask,Lvl 16+ (rare 11+),—,,"Damage Resistance (Sonic) +10/-, Don requis",tier 6 lvl 16+ (rare from 11),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
-a_helmet_07,Interface Band,Mask,Lvl 18+ (rare 13+),—,,"Damage Resistance (Sonic) +5/-, Skill Bonus +2, Skill Bonus +2, Skill Bonus +2",tier 7 lvl 18+ (rare from 13),—,Ajout : INT +1 (interface informatique),"[Mod D20-Overhaul]
+100_mask01,Survey Gear,Mask,Fixed Loot / Quest,—,,"Damage Resistance (Sonic) +5/-, Skill Bonus +1",—,"Peragus - Mining Tunnels, Peragus - Mining Tunnels",,
+a_helmet_01,Neural Band,Mask,Lvl 6+ (rare 1+),—,,Improved Saving Throws +2,tier 1 lvl 6+ (rare from 1),"Nar Shaddaa - Landing Pad, Nar Shaddaa - Landing Pad, Dantooine - Khoonda Plains",,
+a_helmet_02,Breath Mask,Mask,Lvl 8+ (rare 3+),—,,Immunity: Poison,tier 2 lvl 8+ (rare from 3),"Peragus - Dormitories, Peragus - Dormitories",,
+a_helmet_03,Rakatan Band,Mask,Lvl 10+ (rare 5+),—,WIS +1,Attribute Bonus (Wisdom) +1,tier 3 lvl 10+ (rare from 5),—,,
+a_helmet_04,Stealth Field Enhancer,Mask,Lvl 12+ (rare 7+),—,,"Feat Required, Skill Bonus +4",tier 4 lvl 12+ (rare from 7),—,,
+a_helmet_05,Bothan Perception Visor,Mask,Lvl 14+ (rare 9+),—,,"Feat Required, Skill Bonus +3, Skill Bonus +2, Skill Bonus +2",tier 5 lvl 14+ (rare from 9),—,,
+a_helmet_06,Sonic Nullifiers,Mask,Lvl 16+ (rare 11+),—,,"Damage Resistance (Sonic) +10/-, Feat Required",tier 6 lvl 16+ (rare from 11),"Nar Shaddaa - Landing Pad, Nar Shaddaa - Landing Pad, Dantooine - Khoonda Plains",,
+a_helmet_07,Interface Band,Mask,Lvl 18+ (rare 13+),—,,"Damage Resistance (Sonic) +5/-, Skill Bonus +2, Skill Bonus +2, Skill Bonus +2",tier 7 lvl 18+ (rare from 13),—,Added: INT +1 (computer interface),"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +1 (interface informatique)"
-a_helmet_08,Visière de visée,Mask,Lvl 20+ (rare 15+),—,,"Attack Bonus +1, Improved Saving Throws +1",tier 8 lvl 20+ (rare from 15),"Dantooine - niveau soute…, Dantooine - niveau soute…",,
-a_helmet_09,Visière de protection,Mask,Lvl 22+ (rare 17+),—,,"Damage Immunity +5%, Damage Immunity +5%, Damage Immunity +5%, Defense Bonus +1, Don requis",tier 9 lvl 22+ (rare from 17),—,,
-a_helmet_10,Capteur de pilote spatial,Mask,Lvl 24+ (rare 19+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Bonus Feat, Bonus Feat",tier 10 lvl 24+ (rare from 19),—,,
-a_helmet_11,Visière royale,Mask,Lvl 26+ (rare 21+),—,CHA +1,"Attribute Bonus (Charisma) +1, Skill Bonus +2",tier 11 lvl 26+ (rare from 21),—,,
-a_helmet_12,Serre-tête de méditation,Mask,Lvl 28+ (rare 23+),—,WIS +1,"Attribute Bonus (Wisdom) +1, Damage Immunity +20%, Improved Saving Throws +1",tier 12 lvl 28+ (rare from 23),—,,
-a_helmet_13,Bothan Sensory Visor,Mask,Lvl 30+ (rare 25+),—,,"Don requis, Immunity: Critical Hits, Skill Bonus +4, Skill Bonus +3, Skill Bonus +3",tier 13 lvl 30+ (rare from 25),—,Ajout : INT +2 (capteurs d'analyse bothans),"[Mod D20-Overhaul]
+• INT +1 (computer interface)"
+a_helmet_08,Targeting Visor,Mask,Lvl 20+ (rare 15+),—,,"Attack Bonus +1, Improved Saving Throws +1",tier 8 lvl 20+ (rare from 15),"Dantooine - Sublevel, Dantooine - Sublevel",,
+a_helmet_09,Shielding Visor,Mask,Lvl 22+ (rare 17+),—,,"Damage Immunity +5%, Damage Immunity +5%, Damage Immunity +5%, Defense Bonus +1, Feat Required",tier 9 lvl 22+ (rare from 17),—,,
+a_helmet_10,Spacer Sensor,Mask,Lvl 24+ (rare 19+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Bonus Feat, Bonus Feat",tier 10 lvl 24+ (rare from 19),—,,
+a_helmet_11,Regal Visor,Mask,Lvl 26+ (rare 21+),—,CHA +1,"Attribute Bonus (Charisma) +1, Skill Bonus +2",tier 11 lvl 26+ (rare from 21),—,,
+a_helmet_12,Meditation Band,Mask,Lvl 28+ (rare 23+),—,WIS +1,"Attribute Bonus (Wisdom) +1, Damage Immunity +20%, Improved Saving Throws +1",tier 12 lvl 28+ (rare from 23),—,,
+a_helmet_13,Bothan Sensory Visor,Mask,Lvl 30+ (rare 25+),—,,"Feat Required, Immunity: Critical Hits, Skill Bonus +4, Skill Bonus +3, Skill Bonus +3",tier 13 lvl 30+ (rare from 25),—,Added: INT +2 (Bothan analysis sensors),"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +2 (capteurs d'analyse bothans)"
-a_helmet_14,Aveuglants arkaniens,Mask,Lvl 30+ (rare 27+),—,,"Damage Immunity +10%, Defense Bonus +1, Don requis, Immunity: Mind-Affecting",tier 14 lvl 30+ (rare from 27),—,,
-a_helmet_15,Capteur de combat,Mask,Lvl 30+ (rare 29+),—,DEX +2,"Attribute Bonus (Dexterity) +2, Bonus Feat, Bonus Feat",tier 15 lvl 30+ (rare from 29),—,,
-a_helmet_16,Multi-Spectral Target Assessor,Mask,Lvl 30+,—,,"Attack Bonus +3, Bonus Feat, Bonus Feat, Don requis, Don requis, Skill Bonus +4",tier 16 lvl 30+,—,Ajout : INT +2 (ordinateur de visée multispectral) ; Cap: Atk +3 → Atk +2,"[Mod D20-Overhaul]
+• INT +2 (Bothan analysis sensors)"
+a_helmet_14,Arkanian Blinders,Mask,Lvl 30+ (rare 27+),—,,"Damage Immunity +10%, Defense Bonus +1, Feat Required, Immunity: Mind-Affecting",tier 14 lvl 30+ (rare from 27),—,,
+a_helmet_15,Combat Sensor,Mask,Lvl 30+ (rare 29+),—,DEX +2,"Attribute Bonus (Dexterity) +2, Bonus Feat, Bonus Feat",tier 15 lvl 30+ (rare from 29),—,,
+a_helmet_16,Multi-Spectral Target Assessor,Mask,Lvl 30+,—,,"Attack Bonus +3, Bonus Feat, Bonus Feat, Feat Required, Feat Required, Skill Bonus +4",tier 16 lvl 30+,—,Added: INT +2 (multi-spectral targeting computer) ; Capped: Atk +3 → Atk +2,"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +2 (ordinateur de visée multispectral)
+• INT +2 (multi-spectral targeting computer)
 • Atk +2"
-a_helmet_17,Casque de conscience,Mask,Lvl 30+,—,CON +2,"Attribute Bonus (Constitution) +2, Defense Bonus +1, Don requis",tier 17 lvl 30+,—,,
-a_helmet_18,Respirateur,Mask,Lvl 30+,—,CON +1,"Attribute Bonus (Constitution) +1, Don requis, Immunity: Poison, Regeneration +1",tier 18 lvl 30+,—,,
-a_helmet_19,Masque de chasse de Das'skar,Mask,Lvl 30+,—,DEX +1,"Attack Bonus +1, Attribute Bonus (Dexterity) +1, Skill Bonus +2, Skill Bonus +2",tier 19 lvl 30+,—,,
-a_helmet_20,Masque de la Force,Mask,Lvl 30+,—,,"Malus de caractéristique +-4, Malus de caractéristique +-4, Meilleure résistance à la Force +16, Improved Saving Throws +4",tier 20 lvl 30+,—,,
-a_helmet_21,Sith Mask,Mask,Lvl 30+,—,,"Bonus Feat, Don requis, Immunity: Mind-Affecting, Regenerate Force Points +1",tier 21 lvl 30+,—,Ajout : STR +2 (Masque Sith),"[Mod D20-Overhaul]
+a_helmet_17,Awareness Mask,Mask,Lvl 30+,—,CON +2,"Attribute Bonus (Constitution) +2, Defense Bonus +1, Feat Required",tier 17 lvl 30+,—,,
+a_helmet_18,Rebreather Mask,Mask,Lvl 30+,—,CON +1,"Attribute Bonus (Constitution) +1, Feat Required, Immunity: Poison, Regeneration +1",tier 18 lvl 30+,—,,
+a_helmet_19,Das'skar Hunting Mask,Mask,Lvl 30+,—,DEX +1,"Attack Bonus +1, Attribute Bonus (Dexterity) +1, Skill Bonus +2, Skill Bonus +2",tier 19 lvl 30+,—,,
+a_helmet_20,Force Mask,Mask,Lvl 30+,—,,"Attribute Penalty +-4, Attribute Penalty +-4, Improved Force Resistance +16, Improved Saving Throws +4",tier 20 lvl 30+,—,,
+a_helmet_21,Sith Mask,Mask,Lvl 30+,—,,"Bonus Feat, Feat Required, Immunity: Mind-Affecting, Regenerate Force Points +1",tier 21 lvl 30+,—,Added: STR +2 (Sith Mask),"[Mod D20-Overhaul]
 
 Notable properties:
-• STR +2 (Masque Sith)"
-a_helmet_22,Masque stabilisant,Mask,Lvl 30+,—,,"Don requis, Immunity: Mind-Affecting, Improved Saving Throws +2",tier 22 lvl 30+,—,,
-a_helmet_23,Serre-tête de méditation Mutaki,Mask,Lvl 30+,—,WIS +2,"Attribute Bonus (Wisdom) +2, Damage Immunity +30%, Improved Saving Throws +2",tier 23 lvl 30+,—,,
-a_helmet_24,Evaluateur de cible,Mask,Lvl 30+,—,DEX +2,"Attack Bonus +2, Attribute Bonus (Dexterity) +2, Bonus Feat, Bonus Feat",tier 24 lvl 30+,—,,
-a_helmet_25,Circlet of Saresh,Mask,Lvl 30+,Alignment,WIS +5,"Alignment Restriction, Attribute Bonus (Wisdom) +5",tier 25 lvl 30+,—,Cap: WIS +5 → WIS +3,"[Mod D20-Overhaul]
+• STR +2 (Sith Mask)"
+a_helmet_22,Stabilizer Mask,Mask,Lvl 30+,—,,"Feat Required, Immunity: Mind-Affecting, Improved Saving Throws +2",tier 22 lvl 30+,—,,
+a_helmet_23,Matukai Meditation Band,Mask,Lvl 30+,—,WIS +2,"Attribute Bonus (Wisdom) +2, Damage Immunity +30%, Improved Saving Throws +2",tier 23 lvl 30+,—,,
+a_helmet_24,Target Assessor,Mask,Lvl 30+,—,DEX +2,"Attack Bonus +2, Attribute Bonus (Dexterity) +2, Bonus Feat, Bonus Feat",tier 24 lvl 30+,—,,
+a_helmet_25,Circlet of Saresh,Mask,Lvl 30+,Alignment,WIS +5,"Alignment Restriction, Attribute Bonus (Wisdom) +5",tier 25 lvl 30+,—,Capped: WIS +5 → WIS +3,"[Mod D20-Overhaul]
 
 Notable properties:
 • WIS +3"
-a_helmet_26,Serre-tête de Bindo,Mask,Lvl 30+,—,CHA +3,"Attribute Bonus (Charisma) +3, Damage Immunity +10%, Damage Immunity +10%",tier 26 lvl 30+,—,,
-a_helmet_27,Enhanced Shielding Visor,Mask,Lvl 30+,—,,"Damage Immunity +15%, Damage Immunity +15%, Damage Immunity +15%, Defense Bonus +3, Don requis",tier 27 lvl 30+,—,Cap: AC +3 → AC +2,"[Mod D20-Overhaul]
+a_helmet_26,Bindo's Band,Mask,Lvl 30+,—,CHA +3,"Attribute Bonus (Charisma) +3, Damage Immunity +10%, Damage Immunity +10%",tier 26 lvl 30+,—,,
+a_helmet_27,Enhanced Shielding Visor,Mask,Lvl 30+,—,,"Damage Immunity +15%, Damage Immunity +15%, Damage Immunity +15%, Defense Bonus +3, Feat Required",tier 27 lvl 30+,—,Capped: AC +3 → AC +2,"[Mod D20-Overhaul]
 
 Notable properties:
 • AC +2"
-a_helmet_28,Force Shield,Mask,Lvl 30+,—,,"Malus de caractéristique +-6, Malus de caractéristique +-6, Damage Resistance (Dark_Side) +5/-, Meilleure résistance à la Force +24, Improved Saving Throws +5",tier 28 lvl 30+,—,"Cap: DR +5/- → DR +3/- (Dark Side), Saves +5 → Saves +4","[Mod D20-Overhaul]
+a_helmet_28,Force Shield,Mask,Lvl 30+,—,,"Attribute Penalty +-6, Attribute Penalty +-6, Damage Resistance (Dark_Side) +5/-, Improved Force Resistance +24, Improved Saving Throws +5",tier 28 lvl 30+,—,"Capped: DR +5/- → DR +3/- (Dark Side), Saves +5 → Saves +4","[Mod D20-Overhaul]
 
 Notable properties:
 • Dark Side DR +3/-
 • Saves +4"
-a_helmet_29,Absorption Visor,Mask,Lvl 30+,—,,"Damage Immunity +15%, Damage Immunity +15%, Damage Immunity +75%, Damage Immunity +90%, Defense Bonus +1, Don requis",tier 29 lvl 30+,—,Cap: Immunity +75%/+90% → +30%,"[Mod D20-Overhaul]
+a_helmet_29,Absorption Visor,Mask,Lvl 30+,—,,"Damage Immunity +15%, Damage Immunity +15%, Damage Immunity +75%, Damage Immunity +90%, Defense Bonus +1, Feat Required",tier 29 lvl 30+,—,Capped: Immunity +75%/+90% → +30%,"[Mod D20-Overhaul]
 
 Notable properties:
-• Damage Immunities capped at +30 %"
-a_helmet_30,Force Focusing Visor,Mask,Lvl 30+,—,"WIS +4, CHA +1","Attribute Bonus (Charisma) +1, Attribute Bonus (Wisdom) +4, Regenerate Force Points +2",tier 30 lvl 30+,—,"Cap: WIS +4, CHA +1 → WIS +2, CHA +2","[Mod D20-Overhaul]
+• Damage Immunities capped at +30%"
+a_helmet_30,Force Focusing Visor,Mask,Lvl 30+,—,"WIS +4, CHA +1","Attribute Bonus (Charisma) +1, Attribute Bonus (Wisdom) +4, Regenerate Force Points +2",tier 30 lvl 30+,—,"Capped: WIS +4, CHA +1 → WIS +2, CHA +2","[Mod D20-Overhaul]
 
 Notable properties:
 • WIS +2, CHA +2"
-mandaloreshelmet,Casque de Mandalore,Mask,Fixed Loot / Quest,—,"STR +2, DEX +2","Attribute Bonus (Dexterity) +2, Attribute Bonus (Strength) +2, Immunity: Critical Hits, Skill Bonus +2, Use Limitation",—,401dxn,,
-mandaloriantacti,Mandalore's Tactical HUD,Mask,Fixed Loot / Quest,—,,"Bonus Feat, Skill Bonus +4",—,401dxn,Ajout : INT +2 (HUD tactique),"[Mod D20-Overhaul]
+mandaloreshelmet,Mandalore's Helmet,Mask,Fixed Loot / Quest,—,"STR +2, DEX +2","Attribute Bonus (Dexterity) +2, Attribute Bonus (Strength) +2, Immunity: Critical Hits, Skill Bonus +2, Use Limitation",—,401dxn,,
+mandaloriantacti,Mandalore's Tactical HUD,Mask,Fixed Loot / Quest,—,,"Bonus Feat, Skill Bonus +4",—,401dxn,Added: INT +2 (Tactical HUD),"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +2 (HUD tactique)"
-onderonmotiongog,Visière de détection de mouvement d'Ondéron,Mask,Fixed Loot / Quest,—,,Skill Bonus +6,—,401dxn,,
+• INT +2 (Tactical HUD)"
+onderonmotiongog,Onderon Motion Goggles,Mask,Fixed Loot / Quest,—,,Skill Bonus +6,—,401dxn,,

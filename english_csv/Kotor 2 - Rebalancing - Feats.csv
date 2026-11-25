@@ -293,7 +293,7 @@ Palier final de maîtrise du combat à mains nues : le personnage inflige +3d4 p
 242,PRECISE_SHOT_III,Precise Shot III,Actif — distance,Lvl 12 ; PRECISE_SHOT_I ; PRECISE_SHOT_II,+3 Atk & Damage ; +6 Defense vs blasters ; reduces penalty in melee,,,
 243,PRECISE_SHOT_IV,Precise Shot IV,Actif — distance,Lvl 16 ; PRECISE_SHOT_III,+4 Atk & Damage ; +8 Defense vs blasters ; reduces penalty in melee,,,
 244,PRECISE_SHOT_V,Precise Shot V,Actif — distance,Lvl 20 ; PRECISE_SHOT_IV,+5 Atk & Damage ; +10 Defense vs blasters ; reduces penalty in melee,,,
-,,══ STYLES DE COMBAT — Style de combat.csv ══,,,,,,
+,,══ STYLES DE COMBAT ══,,,,,,
 nouveau (246+),MOD_AMBIDEXTRY_1,Ambidexterity I,STYLES DE COMBAT,Lvl 1+ ; Une arme en main droite et une autre en main gauche équipées,CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atk -6/-6, +1 AC (malus de base sans le don : -6/-10 ; +2/0 si arme équilibrée en main gauche)",,"[Mod D20-Overhaul]
 
 Effects: Combat à deux armes : Atk -6/-6, +1 AC (malus de base sans le don : -6/-10 ; +2/0 si arme équilibrée en main gauche)
@@ -355,7 +355,7 @@ nouveau (246+),MOD_DOUBLE_WEAPON_3,High-Rate Weapon Handling III,STYLES DE COMBA
 Effects: Damage +3/+3 ; malus de AC -1
 
 Les armes doubles et blasters à haute cadence saturent l'adversaire par le volume de coups, au prix d'une garde exposée que seul un entraînement rigoureux permet de refermer."
-,,══ WEAPON SPECIALIZATIONS BY FAMILY — Spécialisation d'arme.csv ══,,,CUSTOM — absent du jeu vanilla,,,
+,,══ WEAPON SPECIALIZATIONS BY FAMILY ══,,,CUSTOM — absent du jeu vanilla,,,
 nouveau (246+),MOD_SPEC_BLUNT_1,Impact Weapon Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes mêlée + arme d'impact équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (armes d'impact : mains nues, matraque, torche à plasma, bâton, pique de Force)",,"[Mod D20-Overhaul]
 
 Effects: +2 Atk et +2 Damage (armes d'impact : mains nues, matraque, torche à plasma, bâton, pique de Force)
@@ -432,21 +432,21 @@ nouveau (246+),MOD_SPEC_ASSAULT_3,Assault Fire Specialization III,WEAPON SPECIAL
 Effects: +1 Atk par round main directrice
 
 Entraînement de combat rapproché des commandos républicains, conçu pour maintenir un feu soutenu au blaster sans jamais céder de terrain, même au contact."
-nouveau (246+),MOD_SPEC_HEAVY_1,Penetrating Fire Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes : fusils + arme pénétrante équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (blaster lourd, fusil blaster, arbalète wookie, blaster lourd à répétition)",,"[Mod D20-Overhaul]
+nouveau (246+),MOD_SPEC_HEAVY_1,Penetrating Fire Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes : fusils + arme pénétrante équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (blaster lourd, fusil blaster, arbalète wookiee, blaster lourd à répétition)",,"[Mod D20-Overhaul]
 
-Effects: +2 Atk et +2 Damage (blaster lourd, fusil blaster, arbalète wookie, blaster lourd à répétition)
+Effects: +2 Atk et +2 Damage (blaster lourd, fusil blaster, arbalète wookiee, blaster lourd à répétition)
 
-Spécialité des tireurs lourds et chasseurs wookies, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
+Spécialité des tireurs lourds et chasseurs wookiees, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
 nouveau (246+),MOD_SPEC_HEAVY_2,Penetrating Fire Specialization II,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 8+ ; Rank I + arme pénétrante équipée ; Guardian / Sentinel / Weapon Master / Marauder / Jedi Watchman / Assassin (ou SOL/SCT/SCD/TEC/DRC/DRX),CUSTOM — absent du jeu vanilla,"Repousse l'adversaire de 3 m (Fortitude negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme. Sauvegarde par coup qui touche ; l'effet ne s'applique qu'une fois par round, même après plusieurs échecs",,"[Mod D20-Overhaul]
 
 Effects: Repousse l'adversaire de 3 m (Fortitude negates). DC = 5 + Lvl attaquant + mod. de la carac. directrice de l'arme. Sauvegarde par coup qui touche ; l'effet ne s'applique qu'une fois par round, même après plusieurs échecs
 
-Spécialité des tireurs lourds et chasseurs wookies, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
+Spécialité des tireurs lourds et chasseurs wookiees, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
 nouveau (246+),MOD_SPEC_HEAVY_3,Penetrating Fire Specialization III,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 15+ ; Rank II + arme pénétrante équipée ; Weapon Master / Sith Marauder (ou SOL/SCT/SCD/TEC/DRC Lvl 15+),CUSTOM — absent du jeu vanilla,+5 Damage,,"[Mod D20-Overhaul]
 
 Effects: +5 Damage
 
-Spécialité des tireurs lourds et chasseurs wookies, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
+Spécialité des tireurs lourds et chasseurs wookiees, utilisant des décharges à fort recul capables de percer les protections et de repousser physiquement l'ennemi."
 nouveau (246+),MOD_SPEC_TAC_1,Tactical Fire Specialization I,WEAPON SPECIALIZATIONS BY FAMILY,Lvl 1+ ; Port d'armes : blasters + arme tactique équipée,CUSTOM — absent du jeu vanilla,"+2 Atk et +2 Damage (pistolet à ions, fusil à ions, pistolet sonique, fusil sonique)",,"[Mod D20-Overhaul]
 
 Effects: +2 Atk et +2 Damage (pistolet à ions, fusil à ions, pistolet sonique, fusil sonique)
@@ -563,7 +563,7 @@ nouveau (246+),MOD_META_EXTEND,Extended Force,FORCE AWAKENING,Lvl 1+ ; Jedi/Sith
 Effects: Durée de toutes les améliorations de Force ×2
 
 Une maîtrise sereine des flux de la Force permettant de maintenir plus longtemps ses protections et améliorations sans effort supplémentaire."
-,,"══ SPÉCIALISATIONS CARACTÉRISTIQUE — spé carac.csv (ordre canonique STR, DEX, CON, INT, WIS, CHA ; une par caractéristique, arbres exclusifs entre eux) ══",,,,,,
+,,"══ SPÉCIALISATIONS CARACTÉRISTIQUE (ordre canonique STR, DEX, CON, INT, WIS, CHA ; une par caractéristique, arbres exclusifs entre eux) ══",,,,,,
 nouveau (246+),MOD_GAMORREAN_1,Gamorrean Refinement I,SPÉCIALISATIONS CARACTÉRISTIQUE,Lvl 1+ (ouvert à tous),,+1 STR ; + ½ mod. STR en rangs sur toutes les compétences ; interdit les 5 autres arbres de carac,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
 
 Effects: +1 STR ; + ½ mod. STR en rangs sur toutes les compétences ; interdit les 5 autres arbres de carac

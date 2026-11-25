@@ -522,7 +522,7 @@ void Ov_EnsureAutoGrants(object oTarget)
 
     // 5. Adaptateur Gamorreen II (objet reutilisable bascule 2M / 1M + ShowUpgradeScreen)
     // Auto-migre UNE SEULE FOIS (via LocalBoolean 21, sans conflit avec LocalNumber 14 !)
-    if (GetHasFeat(OV_GAM_2, oTarget))
+    if (Ov_GetActiveCaracTree(oTarget) == 1 && GetHasFeat(OV_GAM_2, oTarget))
     {{
         object oAd = GetItemPossessedBy(oPC, "ov_gam_adapt");
         int bMig = GetLocalBoolean(oPC, 21);
@@ -679,8 +679,8 @@ void Ov_RefreshPassives(object oTarget)
     }}
 
     // Option B (Gamorreen II, validee 25/11) : arme haute cadence adaptee en 1M -> +1 attaque main droite
-    // uniquement si equipee en main principale (main droite), sans malus CA, aucun bonus en main gauche.
-    if (GetIsObjectValid(oRight) && Ov_IsDouble1MMirrorBaseItem(nBI))
+    // uniquement si equipee en main principale (main droite) et arbre Gamorreen actif, sans malus CA, aucun bonus en main gauche.
+    if (nTree == 1 && GetIsObjectValid(oRight) && Ov_IsDouble1MMirrorBaseItem(nBI))
     {{
         nExtraAttacks += 1;
     }}
@@ -3341,7 +3341,7 @@ int StartingConditional()
 {
     object oUser = Ov_GetGamAdapterUser();
     if (!GetIsObjectValid(oUser) || Ov_IsPartyInRealCombat(oUser)) return FALSE;
-    if (!GetHasFeat(OV_GAM_2, oUser)) return FALSE;
+    if (Ov_GetActiveCaracTree(oUser) != 1 || !GetHasFeat(OV_GAM_2, oUser)) return FALSE;
     object oRight = GetItemInSlot(INVENTORY_SLOT_RIGHTWEAPON, oUser);
     if (!GetIsObjectValid(oRight)) return FALSE;
     string sMirror = Ov_GetGamMirrorResRef(GetStringLowerCase(GetTag(oRight)));
@@ -3357,7 +3357,7 @@ int StartingConditional()
 {
     object oUser = Ov_GetGamAdapterUser();
     if (!GetIsObjectValid(oUser) || Ov_IsPartyInRealCombat(oUser)) return FALSE;
-    return GetHasFeat(OV_GAM_2, oUser);
+    return (Ov_GetActiveCaracTree(oUser) == 1 && GetHasFeat(OV_GAM_2, oUser));
 }
 '''
     compile_script("ov_gam_c_wb", wb_cond_code)
@@ -3385,7 +3385,8 @@ void main()
     object oPC = GetFirstPC();
     object oUser = Ov_GetGamAdapterUser();
     if (!GetIsObjectValid(oUser) || !GetIsObjectValid(oPC)) return;
-    if (Ov_IsPartyInRealCombat(oUser) || !GetHasFeat({gam2_id}, oUser)) return;
+    int nTreeU = GetLocalNumber(oUser, 22);
+    if ((nTreeU > 0 && nTreeU != 1) || Ov_IsPartyInRealCombat(oUser) || !GetHasFeat({gam2_id}, oUser)) return;
 
     object oRight = GetItemInSlot(INVENTORY_SLOT_RIGHTWEAPON, oUser);
     if (!GetIsObjectValid(oRight)) return;

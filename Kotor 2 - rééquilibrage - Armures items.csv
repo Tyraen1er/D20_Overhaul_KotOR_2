@@ -154,11 +154,11 @@ Propriétés notables :
 • FOR +2, SAG +2"
 rcm_robe_99,*(rcm_robe_99)*,Jedi Robe,0,+-1,—,jedi_defense,,"Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",—,—,,
 a_robe_x01,Bure de la Servante,Jedi Knight Robe,0,+-1,—,PNJ only,CHA +2,"Bonus de caractéristique (Charisma) +2, Bonus défense +3, Restriction PJ, Restriction utilisateur",—,—,,
-a_robe_05,Bure d'apprenti Mutaki,Jedi Master Robe,0,+-1,Niv. 14+ (rare 9+),jedi_defense,"FOR +1, DEX +1, CON +1","Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +1, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,,
+a_robe_05,Bure d'apprenti Matukai,Jedi Master Robe,0,+-1,Niv. 14+ (rare 9+),jedi_defense,"FOR +1, DEX +1, CON +1","Bonus de caractéristique (Constitution) +1, Bonus de caractéristique (Dexterity) +1, Bonus de caractéristique (Strength) +1, Restriction utilisateur",palier 5 niv. 14+ (rare dès 9),—,,
 a_robe_12,Bure de Jedi gris,Jedi Master Robe,0,+-1,Niv. 28+ (rare 23+),jedi_defense,CHA +2,"Bonus de caractéristique (Charisma) +2, Bonus défense +1, Régénération de points de Force +1, Restriction utilisateur",palier 12 niv. 28+ (rare dès 23),—,,
 a_robe_13,Bure de chevalier Jedi,Jedi Master Robe,0,+-1,Niv. 30+ (rare 25+),jedi_defense,,"Bonus défense +2, Régénération de points de Force +1, Restriction utilisateur",palier 13 niv. 30+ (rare dès 25),—,,
 a_robe_14,Bure de chevalier Jedi Obscur,Jedi Master Robe,0,+-1,Niv. 30+ (rare 27+),jedi_defense,,"Bonus défense +2, Régénération de points de Force +1, Restriction utilisateur",palier 14 niv. 30+ (rare dès 27),—,,
-a_robe_15,Bure d'adepte Mutaki,Jedi Master Robe,0,+-1,Niv. 30+ (rare 29+),jedi_defense,"FOR +2, DEX +2, CON +2","Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +2, Bonus défense +1, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,"Plafonnement : FOR +2, DEX +2, CON +2 → FOR +2, DEX +1, CON +2","[Mod D20-Overhaul]
+a_robe_15,Bure d'adepte Matukai,Jedi Master Robe,0,+-1,Niv. 30+ (rare 29+),jedi_defense,"FOR +2, DEX +2, CON +2","Bonus de caractéristique (Constitution) +2, Bonus de caractéristique (Dexterity) +2, Bonus de caractéristique (Strength) +2, Bonus défense +1, Restriction utilisateur",palier 15 niv. 30+ (rare dès 29),—,"Plafonnement : FOR +2, DEX +2, CON +2 → FOR +2, DEX +1, CON +2","[Mod D20-Overhaul]
 
 Propriétés notables :
 • FOR +2, DEX +1, CON +2"

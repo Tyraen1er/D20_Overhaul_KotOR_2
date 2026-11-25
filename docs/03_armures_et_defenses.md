@@ -1,6 +1,6 @@
 # 3. Armures, Boucliers & Défenses
 
-[← Page précédente : Dons & Spécialisations](02_dons_postures_et_specialisations.md) | [Sommaire](README.md) | [Page suivante : Pouvoirs de la Force →](04_pouvoirs_de_la_force.md)
+[← Page précédente : Dons & Spécialisations](02_dons_postures_et_specialisations.md) | [Introduction](README.md) | [Page suivante : Pouvoirs de la Force →](04_pouvoirs_de_la_force.md)
 
 ---
 
@@ -68,4 +68,4 @@ Chaque type d'armure dispose désormais de son propre arbre de **3 dons** (Niv. 
 
 ---
 
-[← Page précédente : Dons & Spécialisations](02_dons_postures_et_specialisations.md) | [Sommaire](README.md) | [Page suivante : Pouvoirs de la Force →](04_pouvoirs_de_la_force.md)
+[← Page précédente : Dons & Spécialisations](02_dons_postures_et_specialisations.md) | [Introduction](README.md) | [Page suivante : Pouvoirs de la Force →](04_pouvoirs_de_la_force.md)

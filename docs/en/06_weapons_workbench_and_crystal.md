@@ -98,7 +98,7 @@ In vanilla, stacking flat damage bonuses across every upgrade slot broke combat 
    - 18 new recipes were added to the workbench (*Repair* thresholds 2–8): *Short Sword*, *Stun Baton*, *Quarterstaff*, *Vibroblade*, *Double-Bladed Sword*, *Gamorrean Battleaxe*, *Force Pike*, *Wookiee Warblade*, *Blaster Pistol*, *Ion Blaster*, *Sonic Pistol*, *Disruptor Pistol*, *Heavy Blaster*, *Blaster Carbine*, *Ion Rifle*, *Sonic Rifle*, *Bowcaster*, and *Heavy Repeating Blaster*.
    - You never have to wait on random loot drops to play your preferred weapon family!
 2. **60 Reworked Armor Upgrades at the Workbench**
-   - **30 Underlays** (*6 lines, T1→T5*): 15 common underlays available from Light Armor onward (*Environmental*, *Biorestorative*, *Strengthening*) and 15 armored underlays for Heavy & Medium Armor (*Reinforcing*, *Flexible*, *Durasteel*).
+   - **30 Underlays** (*6 lines, T1→T5*): 15 common underlays available from Light Armor onward (*Environmental*, *Biorestorative*, *Armorweave*) and 15 armored underlays for Heavy & Medium Armor (*Strengthening*, *Flexible*, *Durasteel*).
    - **30 Reinforced Overlays Exclusive to Medium Armor** (*8 lines, T1→T4*) combining cross-immunities, saving throws, stealth, crowd-control immunities, and defensive reinforcements.
 3. **Character-Level Crafting Gates**
    - To prevent crafting endgame upgrades on the very first planet, workbench upgrade, shield, and rocket recipes now unlock progressively by **character level**:

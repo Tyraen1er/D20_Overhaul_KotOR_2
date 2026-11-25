@@ -31,7 +31,7 @@
 | **Droïdes** | 84 | 31 pistolets, 9 blasters lourds | **82 « peaux »** (immunités moteur + objets) | 13 modules utilitaires, 11 grenades à ion/poison, **8 boucliers** |
 | **Soldats / Divers** | 82 | 10 fusils, 6 vibro-épées, 6 vibrolames | 9/82 (surtout `a_heavy_01` ×7) | 10 grenades incendiaires en main + 89 grenades en inventaire |
 | **Bêtes** | 73 | 110 armes naturelles (griffes/croc) | 0 (CA naturelle 17–23 pour les grosses) | 16 peaux (dont RD/immunités éparses) |
-| **Sith / Jedi obscurs** | 66 | **26 sabres laser**, 9 vibro-épées, 7 fusils | **2/66** (2 robes `a_robe_09` !) | Mêlée 43 / distance 15 — mais **presque pas de robes** : CA naturelle |
+| **Sith / Jedi obscurs** | 66 | **26 sabres laser**, 9 vibro-épées, 7 fusils | **2/66** (2 bures `a_robe_09` !) | Mêlée 43 / distance 15 — mais **presque pas de bures** : CA naturelle |
 | **Mandaloriens** | 8 | 3 armes à distance, 1 épée | **4/8 blindages lourds + 4 casques** | 2 grenades ; **seule famille réellement « équipée »** |
 
 **Bilan armes :** mêlée vs distance — Sith/Jedi 43/15 · Soldats 22/27 · Droïdes 9/66 · Bêtes 100 % mêlée naturelle.
@@ -40,7 +40,7 @@
 
 - **Mandaloriens** : 4/8 (la seule famille cohérente avec son identité).
 - **Soldats** : 9/82 — des dizaines ont le don *Port d'armure* sans pièce équipée.
-- **Sith/Jedi** : **2/66** — les Jedi obscurs combattent quasiment tous « en pyjama » (CA naturelle), robes défensives inexistantes.
+- **Sith/Jedi** : **2/66** — les Jedi obscurs combattent quasiment tous « en pyjama » (CA naturelle), bures défensives inexistantes.
 - **Bêtes** : 0 (CA naturelle 17–23 pour les grandes).
 
 ### C. Boucliers utilisables en combat — catalogue et état des lieux
@@ -81,7 +81,7 @@
 
 1. **Le levier « bouclier » est prêt à l'emploi** : équipement d'un brassard = activation automatique en combat. Pas une ligne de script à écrire. Les seuls à en bénéficier sont 2 Mandaloriens et 8 droïdes.
 2. **Les valeurs existantes (RD 5–15, pool 50–100) sont cohérentes avec nos plafonds d'établi** : un bouclier Echani (RD 10, pool 50) absorbe ~2 à 4 coups de blaster — une gêne, pas un mur.
-3. **Les soldats et Jedi obscurs sont nus** : 102 dons de port d'armure pour 9 armures portées ; 66 Sith/Jedi pour 2 robes. Le « habillage » des familles est le chantier le plus rentable.
+3. **Les soldats et Jedi obscurs sont nus** : 102 dons de port d'armure pour 9 armures portées ; 66 Sith/Jedi pour 2 bures. Le « habillage » des familles est le chantier le plus rentable.
 4. La réponse joueur aux boucliers existe déjà (mêlée, sabres, disrupteurs) → conforme au principe **P1** (une réponse forcée par famille).
 
 ---
@@ -104,8 +104,8 @@
 
 | Famille | Résistance signature (actée 22/11) | Faiblesse assumée | Réponse attendue du joueur | Levier technique |
 | :--- | :--- | :--- | :--- | :--- |
-| **Sith / Jedi obscurs** | **Robes réelles** équipées + Résistance à la Force (`15+Niv` Chevaliers / `20+Niv` Maîtres) + bonus Volonté (`+2/+4/+6` Apprenti/Chevalier/Maître) + ***Esquive Totale*** (20+) + **Absorption de Force prioritaire si `PF < 30 %`** *(soins : statu quo vanilla — Maîtres Jedi via Guérison, Sith via Drain de vie / Champ de mort)* | RD nulle (en robe), Vigueur moyenne | Dégâts bruts / sabre, *Peste* (Vig), *Destruction de Force* / *Pouvoir Pénétrant* | Équipement UTC + peau + dons auto + `k_inc_generic` (`GetCurrentForcePoints`) |
-| **Soldats / Mercenaires** | **Armures légères/moyennes** réellement portées (CA + `RD 2/-` Moyenne) + **boucliers d'énergie** (`50/100 PV`) sur ~1 élite sur 3 (Mid+, lootables) + grenades existantes | Volonté basse, boucliers traversés par la mêlée | Mêlée/sabre, *Disrupteur*, *Insanité* / *Tourbillon* | Équipement UTC (armures + items boucliers, activés auto par l'IA) |
+| **Sith / Jedi obscurs** | **Bures réelles** équipées + Résistance à la Force (`15+Niv` Chevaliers / `20+Niv` Maîtres) + bonus Volonté (`+2/+4/+6` Apprenti/Chevalier/Maître) + ***Esquive Totale*** (20+) + **Absorption de Force prioritaire si `PF < 30 %`** *(soins : statu quo vanilla — Maîtres Jedi via Guérison, Sith via Drain de vie / Champ de mort)* | RD nulle (en bure), Vigueur moyenne | Dégâts bruts / sabre, *Peste* (Vig), *Destruction de Force* / *Pouvoir Pénétrant* | Équipement UTC + peau + dons auto + `k_inc_generic` (`GetCurrentForcePoints`) |
+| **Soldats / Mercenaires** | **Armures légères/intermédiaires** réellement portées (CA + `RD 2/-` Intermédiaire) + **boucliers d'énergie** (`50/100 PV`) sur ~1 élite sur 3 (Mid+, lootables) + grenades existantes | Volonté basse, boucliers traversés par la mêlée | Mêlée/sabre, *Disrupteur*, *Insanité* / *Tourbillon* | Équipement UTC (armures + items boucliers, activés auto par l'IA) |
 | **Mandaloriens** | **Armure lourde** (`RD 4/-` native, 6/8 templates) + **résistance Laser (Énergie) & Feu `25 %` (Mid) / `35 %` (Late)** + boucliers élites + stim `OnSpawn` (`+2 FOR/CON`) | **Aucune résistance à la Force**, Volonté basse, vulnérables au physique/ion/sonique | Force (*Tempête*, *Insanité*, *Stase*), armes physiques/vibro/bris d'armure (*Traditionnelle* `-6 CA`) | Peau (`Résist %` Énergie/Feu) + équipement UTC + `OnSpawn` stim |
 | **Bêtes** | **RD physique/énergie légère** (`2/4/6/-` E/M/L sur grosses bêtes) + haute Vigueur + immunité *Peur* (apex) + régén lente hors combat | Volonté très basse (`-3` à `+2`), aucune résistance Énergie/Électrique/Feu | *Éclairs*, sabres, blasters, grenades incendiaires, contrôles mentaux | Peaux `g_i_crhide*` |
 | **Droïdes** | **Statu quo binaire** (esprit/poison/drain, 82 peaux) + **déflecteurs droïdes** (`50–60 PV`) sur ~1/3 des droïdes de guerre/assaut élites (Mid+) | Ion, *Destruction de droïde*, Électrique | Armes/grenades ioniques, pouvoirs anti-droïdes | Peaux existantes + items déflecteurs UTC |

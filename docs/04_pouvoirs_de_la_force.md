@@ -1,6 +1,6 @@
 # 4. Pouvoirs de la Force
 
-[← Page précédente : Armures & Défenses](03_armures_et_defenses.md) | [Sommaire](README.md) | [Page suivante : Accès aux Dons & Compagnons →](05_acces_dons_et_compagnons.md)
+[← Page précédente : Armures & Défenses](03_armures_et_defenses.md) | [Introduction](README.md) | [Page suivante : Accès aux Dons & Compagnons →](05_acces_dons_et_compagnons.md)
 
 ---
 
@@ -85,4 +85,4 @@ Tous les pouvoirs de classes de prestige sont désormais uniformisés en **3 ran
 
 ---
 
-[← Page précédente : Armures & Défenses](03_armures_et_defenses.md) | [Sommaire](README.md) | [Page suivante : Accès aux Dons & Compagnons →](05_acces_dons_et_compagnons.md)
+[← Page précédente : Armures & Défenses](03_armures_et_defenses.md) | [Introduction](README.md) | [Page suivante : Accès aux Dons & Compagnons →](05_acces_dons_et_compagnons.md)

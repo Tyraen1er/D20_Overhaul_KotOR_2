@@ -1,6 +1,6 @@
 # 2. Feats: Stances, Weapon Specializations, Attributes & Force Awakening
 
-[← Previous: Classes & Progression](01_classes_and_progression.md) | [Table of Contents](README.md) | [Next: Armor & Defenses →](03_armor_and_defenses.md)
+[← Previous: Classes & Progression](01_classes_and_progression.md) | [Introduction](README.md) | [Next: Armor & Defenses →](03_armor_and_defenses.md)
 
 ---
 
@@ -107,4 +107,4 @@ Designed to give Consulars, Jedi Masters, and Sith Lords meaningful feat investm
 
 ---
 
-[← Previous: Classes & Progression](01_classes_and_progression.md) | [Table of Contents](README.md) | [Next: Armor & Defenses →](03_armor_and_defenses.md)
+[← Previous: Classes & Progression](01_classes_and_progression.md) | [Introduction](README.md) | [Next: Armor & Defenses →](03_armor_and_defenses.md)

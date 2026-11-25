@@ -10,7 +10,7 @@
    - Dans le jeu de base, la DEX n'augmentait jamais les dégâts des blasters.
    - Avec le mod, vos armes à distance ajoutent désormais votre modificateur de DEX aux dégâts : **`150 % DEX`** en arme à une main seule (Duel) ou arme à deux mains, **`100 % / 50 % DEX`** à deux armes (Ambidextrie), et **`150 % / 50 % DEX`** sur les blasters à répétition. *(Ou votre **INT** si vous avez **Chasseur de prime Gand II**).*
 2. **Nouvelle catégorie : les Armes à deux mains (2M)**
-   - Certaines armes lourdes (ex. *Vibro-épée*, *Hache gamorréenne*, *Pique de Force*, *Fusils blaster*, *Arbalète wookie*, *Fusil disrupteur*…) se tiennent désormais à deux mains : elles n'offrent pas d'attaque supplémentaire comme les armes doubles, mais infligent de base **`200 % FOR`** en mêlée ou **`150 % DEX`** à distance (extensible jusqu'à `250 % FOR` / `200 % DEX` avec la posture *Maniement d'Arme Lourde*).
+   - Certaines armes lourdes (ex. *Vibro-épée*, *Hache gamorréenne*, *Pique de Force*, *Fusils blaster*, *Arbalète wookiee*, *Fusil disrupteur*…) se tiennent désormais à deux mains : elles n'offrent pas d'attaque supplémentaire comme les armes doubles, mais infligent de base **`200 % FOR`** en mêlée ou **`150 % DEX`** à distance (extensible jusqu'à `250 % FOR` / `200 % DEX` avec la posture *Maniement d'Arme Lourde*).
 3. **Armes haute cadence (`HC` — armes doubles et blasters à répétition)**
    - Toutes les armes doubles et blasters à répétition sont désormais **équilibrés** et ne subissent plus l'ancien malus d'attaque à deux armes (`-6/-10`). À la place, ils appliquent un **malus natif de `-5 CA`**, réductible jusqu'à `-1 CA` avec la posture *Maniement d'Arme haute cadence*.
 
@@ -33,7 +33,7 @@
 | **Épée longue** | Traditionnelle | 1M | Tranchant `1d12` | `19-20, ×2` | Poignée, Lame |
 | **Double-lame** | Traditionnelle | **HC** *(équil.)* | Tranchant `1d8` | `19-20, ×2` | Poignée, Lame |
 | **Hache de guerre gamorréenne** | Traditionnelle | **2M** | Tranchant `2d8` | `20, ×3` | Poignée, Lame |
-| **Lame de guerre wookie** | Traditionnelle | **HC** *(équil.)* | Tranchant `1d10` | `20, ×3` | Poignée, Lame |
+| **Lame de guerre wookiee** | Traditionnelle | **HC** *(équil.)* | Tranchant `1d10` | `20, ×3` | Poignée, Lame |
 | **Vibrolame** | Résonance | 1M *(équil.)* | Perforant `1d6` | `19-20, ×2` | Poignée, Lame, Cellule |
 | **Vibro-épée** | Résonance | **2M** | Tranchant `1d10` | `19-20, ×2` | Poignée, Lame, Cellule |
 | **Vibrolame double** | Résonance | **HC** *(équil.)* | Tranchant `1d8` | `20, ×2` | Poignée, Lame, Cellule |
@@ -50,7 +50,7 @@
 | **Blaster à répétition** | Tir d'Assaut | **HC** *(équil.)* | 28 m | Énergie `2d6` | `20, ×2` | — | Lunette, Pack |
 | **Blaster lourd** | Tir Pénétrant | 1M | 23 m | Énergie `1d12` | `19-20, ×2` | — | Lunette, Pack, Chambrage |
 | **Fusil blaster** | Tir Pénétrant | **2M** | 28 m | Énergie `1d12` | `19-20, ×2` | — | Lunette, Pack, Chambrage |
-| **Arbalète wookie** | Tir Pénétrant | **2M** | 28 m | Énergie `1d10` | `20, ×3` | — | Lunette, Pack, Chambrage |
+| **Arbalète wookiee** | Tir Pénétrant | **2M** | 28 m | Énergie `1d10` | `20, ×3` | — | Lunette, Pack, Chambrage |
 | **Blaster lourd à répétition** | Tir Pénétrant | **HC** *(équil.)* | 28 m | Énergie `2d6` | `20, ×2` | — | Lunette, Pack, Chambrage |
 | **Blaster de poche** | Tir Assassin | 1M *(équil.)* | 23 m | Énergie `1d6` | `19-20, ×2` | Critiques massifs `+1d8` | Lunette, Pack |
 | **Pistolet disrupteur** | Tir Assassin | 1M | 23 m | Imparable `1d10` | `18-20, ×2` | Ignore la RD | Lunette, Pack |
@@ -95,7 +95,7 @@ Dans le jeu de base, on pouvait empiler des bonus de dégâts bruts sur chaque e
 ## Nouveautés de l'Établi & du Laboratoire (Artisanat)
 
 1. **Toutes les armes de base (hors Sabres Laser) sont fabricables dès le niveau 1 !**
-   - 18 nouvelles recettes ont été ajoutées à l'établi (seuils de *Réparation* de 2 à 8) : *Épée courte*, *Matraque paralysante*, *Bâton*, *Vibrolame*, *Double-lame*, *Hache gamorréenne*, *Pique de Force*, *Lame de guerre wookie*, *Pistolet blaster*, *Pistolet à ions*, *Pistolet sonique*, *Pistolet disrupteur*, *Blaster lourd*, *Carabine blaster*, *Fusil à ions*, *Fusil sonique*, *Arbalète wookie* et *Blaster lourd à répétition*.
+   - 18 nouvelles recettes ont été ajoutées à l'établi (seuils de *Réparation* de 2 à 8) : *Épée courte*, *Matraque paralysante*, *Bâton*, *Vibrolame*, *Double-lame*, *Hache gamorréenne*, *Pique de Force*, *Lame de guerre wookiee*, *Pistolet blaster*, *Pistolet à ions*, *Pistolet sonique*, *Pistolet disrupteur*, *Blaster lourd*, *Carabine blaster*, *Fusil à ions*, *Fusil sonique*, *Arbalète wookiee* et *Blaster lourd à répétition*.
    - Vous n'êtes plus dépendant du hasard du butin pour jouer la famille d'arme de votre choix dès Péragus ou Télos !
 2. **60 améliorations d'armures retravaillées à l'établi**
    - **30 Sous-couches** (*6 lignées T1→T5*) : 15 communes accessibles dès les Armures Légères (*Anti-environnement*, *Bio-restaurative*, *Fortificatrice*) et 15 blindées pour Armures Lourdes & Intermédiaires (*Renforçante*, *Flexible*, *Duracier*).

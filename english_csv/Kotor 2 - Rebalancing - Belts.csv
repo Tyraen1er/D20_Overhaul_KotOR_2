@@ -1,81 +1,81 @@
 ﻿ResRef,Name,Subtype,Min. Loot Level,Prerequisites,Attribute Bonus (Summary),Properties (Vanilla),Random Loot,Fixed Locations,Changes (Mod),Description (Mod)
-100_belt01,Harnais de sécurité,Belt,Fixed Loot / Quest,—,,Skill Bonus +1,—,"Péragus - Galeries, Péragus - Galeries",,
-a_belt_01,Amplificateur d'adrénaline,Belt,Lvl 6+ (rare 1+),—,,Improved Saving Throws +2,tier 1 lvl 6+ (rare from 1),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
-a_belt_02,Cardio-régulateur,Belt,Lvl 8+ (rare 3+),—,,Improved Saving Throws +2,tier 2 lvl 8+ (rare from 3),"Péragus - Galeries, Péragus - Galeries",,
-a_belt_04,Czerka Utility Belt,Belt,Lvl 12+ (rare 7+),—,,"Skill Bonus +2, Skill Bonus +2, Skill Bonus +2, Skill Bonus +3",tier 4 lvl 12+ (rare from 7),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…",Ajout : INT +1 (ceinture d'outillage Czerka),"[Mod D20-Overhaul]
+100_belt01,Safety Harness,Belt,Fixed Loot / Quest,—,,Skill Bonus +1,—,"Peragus - Mining Tunnels, Peragus - Mining Tunnels",,
+a_belt_01,Adrenaline Amplifier,Belt,Lvl 6+ (rare 1+),—,,Improved Saving Throws +2,tier 1 lvl 6+ (rare from 1),"Nar Shaddaa - Landing Pad, Nar Shaddaa - Landing Pad, Dantooine - Khoonda Plains",,
+a_belt_02,Cardio-Regulator,Belt,Lvl 8+ (rare 3+),—,,Improved Saving Throws +2,tier 2 lvl 8+ (rare from 3),"Peragus - Mining Tunnels, Peragus - Mining Tunnels",,
+a_belt_04,Czerka Utility Belt,Belt,Lvl 12+ (rare 7+),—,,"Skill Bonus +2, Skill Bonus +2, Skill Bonus +2, Skill Bonus +3",tier 4 lvl 12+ (rare from 7),"Nar Shaddaa - Landing Pad, Nar Shaddaa - Landing Pad",Added: INT +1 (Czerka utility belt),"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +1 (ceinture d'outillage Czerka)"
-a_belt_05,Ampli. d'adrénaline amélioré,Belt,Lvl 14+ (rare 9+),—,,Improved Saving Throws +3,tier 5 lvl 14+ (rare from 9),—,,
-a_belt_07,Augmentateur de force,Belt,Lvl 18+ (rare 13+),—,STR +1,"Attribute Bonus (Strength) +1, Improved Saving Throws +1",tier 7 lvl 18+ (rare from 13),—,,
-a_belt_08,Cardio-régulateur Systech,Belt,Lvl 20+ (rare 15+),—,CON +1,"Attribute Bonus (Constitution) +1, Improved Saving Throws +1",tier 8 lvl 20+ (rare from 15),—,,
-a_belt_09,Hyper-amplificateur d'adrénaline,Belt,Lvl 22+ (rare 17+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Improved Saving Throws +3",tier 9 lvl 22+ (rare from 17),—,,
-a_belt_11,Inhibiteur d'inertie,Belt,Lvl 26+ (rare 21+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Defense Bonus +1",tier 11 lvl 26+ (rare from 21),—,,
-a_belt_12,Electrical Capacitance Shield,Belt,Lvl 28+ (rare 23+),—,,Damage Immunity +75%,tier 12 lvl 28+ (rare from 23),—,Cap: Immunity +75% → +30%,"[Mod D20-Overhaul]
+• INT +1 (Czerka utility belt)"
+a_belt_05,Advanced Adrenaline Amplifier,Belt,Lvl 14+ (rare 9+),—,,Improved Saving Throws +3,tier 5 lvl 14+ (rare from 9),—,,
+a_belt_07,Strength Enhancer,Belt,Lvl 18+ (rare 13+),—,STR +1,"Attribute Bonus (Strength) +1, Improved Saving Throws +1",tier 7 lvl 18+ (rare from 13),—,,
+a_belt_08,Systech Cardio-Regulator,Belt,Lvl 20+ (rare 15+),—,CON +1,"Attribute Bonus (Constitution) +1, Improved Saving Throws +1",tier 8 lvl 20+ (rare from 15),—,,
+a_belt_09,Hyper-Adrenaline Amplifier,Belt,Lvl 22+ (rare 17+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Improved Saving Throws +3",tier 9 lvl 22+ (rare from 17),—,,
+a_belt_11,Inertial Inhibitor,Belt,Lvl 26+ (rare 21+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Defense Bonus +1",tier 11 lvl 26+ (rare from 21),—,,
+a_belt_12,Electrical Capacitance Shield,Belt,Lvl 28+ (rare 23+),—,,Damage Immunity +75%,tier 12 lvl 28+ (rare from 23),—,Capped: Immunity +75% → +30%,"[Mod D20-Overhaul]
 
 Notable properties:
 • Damage Immunity (Electrical) +30 %"
-a_belt_13,Thermal Shield Generator,Belt,Lvl 30+ (rare 25+),—,,Damage Immunity +75%,tier 13 lvl 30+ (rare from 25),—,Cap: Immunity +75% → +30%,"[Mod D20-Overhaul]
+a_belt_13,Thermal Shield Generator,Belt,Lvl 30+ (rare 25+),—,,Damage Immunity +75%,tier 13 lvl 30+ (rare from 25),—,Capped: Immunity +75% → +30%,"[Mod D20-Overhaul]
 
 Notable properties:
 • Damage Immunity (Fire) +30 %"
-a_belt_15,Augmentateur de force CNS,Belt,Lvl 30+ (rare 29+),—,STR +2,"Attribute Bonus (Strength) +2, Improved Saving Throws +2",tier 15 lvl 30+ (rare from 29),—,,
-a_belt_16,Ceinture multifonction de l'Echange,Belt,Lvl 30+,—,"STR +1, DEX +1","Attribute Bonus (Dexterity) +1, Attribute Bonus (Strength) +1, Skill Bonus +3, Skill Bonus +3, Skill Bonus +3, Skill Bonus +3",tier 16 lvl 30+,—,"Rééquilibrage lore tech : STR +1, DEX +1 → INT +1, DEX +1","[Mod D20-Overhaul]
+a_belt_15,CNS Strength Enhancer,Belt,Lvl 30+ (rare 29+),—,STR +2,"Attribute Bonus (Strength) +2, Improved Saving Throws +2",tier 15 lvl 30+ (rare from 29),—,,
+a_belt_16,Exchange Utility Belt,Belt,Lvl 30+,—,"STR +1, DEX +1","Attribute Bonus (Dexterity) +1, Attribute Bonus (Strength) +1, Skill Bonus +3, Skill Bonus +3, Skill Bonus +3, Skill Bonus +3",tier 16 lvl 30+,—,"Tech lore rebalance: STR +1, DEX +1 → INT +1, DEX +1","[Mod D20-Overhaul]
 
 Notable properties:
 • INT +1, DEX +1"
-a_belt_17,Immunity Belt,Belt,Lvl 30+,—,CON +1,"Attack Penalty +-1, Attribute Bonus (Constitution) +1, Damage Resistance (Bludgeoning) +5/-, Damage Resistance (Energy) +5/-, Damage Resistance (Piercing) +5/-, Damage Resistance (Slashing) +5/-",tier 17 lvl 30+,—,Cap: DR +5/- → DR +2/- (Phys+Energy),"[Mod D20-Overhaul]
+a_belt_17,Immunity Belt,Belt,Lvl 30+,—,CON +1,"Attack Penalty +-1, Attribute Bonus (Constitution) +1, Damage Resistance (Bludgeoning) +5/-, Damage Resistance (Energy) +5/-, Damage Resistance (Piercing) +5/-, Damage Resistance (Slashing) +5/-",tier 17 lvl 30+,—,Capped: DR +5/- → DR +2/- (Phys+Energy),"[Mod D20-Overhaul]
 
 Notable properties:
 • DR +2/- (Phys+Energy)"
-a_belt_18,Adrenaline Stimulator,Belt,Lvl 30+,—,DEX +2,"Attribute Bonus (Dexterity) +2, Improved Saving Throws +4",tier 18 lvl 30+,—,Cap: Saves +4 → Saves +3,"[Mod D20-Overhaul]
+a_belt_18,Adrenaline Stimulator,Belt,Lvl 30+,—,DEX +2,"Attribute Bonus (Dexterity) +2, Improved Saving Throws +4",tier 18 lvl 30+,—,Capped: Saves +4 → Saves +3,"[Mod D20-Overhaul]
 
 Notable properties:
 • Saves +3"
-a_belt_19,Ceinture d'amplification nerveuse,Belt,Lvl 30+,—,WIS +1,"Attribute Bonus (Wisdom) +1, Immunity: Mind-Affecting",tier 19 lvl 30+,—,,
-a_belt_20,Jal Shey Belt,Belt,Lvl 30+,—,WIS +1,"Attribute Bonus (Wisdom) +1, Meilleure résistance à la Force +14",tier 20 lvl 30+,—,"Ajout lore Jal Shey : WIS +1 → CHA +1, WIS +1","[Mod D20-Overhaul]
+a_belt_19,Nerve Amplifier Belt,Belt,Lvl 30+,—,WIS +1,"Attribute Bonus (Wisdom) +1, Immunity: Mind-Affecting",tier 19 lvl 30+,—,,
+a_belt_20,Jal Shey Belt,Belt,Lvl 30+,—,WIS +1,"Attribute Bonus (Wisdom) +1, Improved Force Resistance +14",tier 20 lvl 30+,—,"Jal Shey lore addition: WIS +1 → CHA +1, WIS +1","[Mod D20-Overhaul]
 
 Notable properties:
 • CHA +1, WIS +1"
-a_belt_21,Multishield Generator,Belt,Lvl 30+,—,,"Damage Immunity +50%, Damage Immunity +50%, Damage Immunity +15%",tier 21 lvl 30+,—,Cap: Immunity +50%/+50% → +25%/+25%,"[Mod D20-Overhaul]
+a_belt_21,Multishield Generator,Belt,Lvl 30+,—,,"Damage Immunity +50%, Damage Immunity +50%, Damage Immunity +15%",tier 21 lvl 30+,—,Capped: Immunity +50%/+50% → +25%/+25%,"[Mod D20-Overhaul]
 
 Notable properties:
 • Damage Immunities +25 % / +25 %"
-a_belt_24,Tech Specialist Belt,Belt,Lvl 30+,—,"STR +1, DEX +2","Attribute Bonus (Dexterity) +2, Attribute Bonus (Strength) +1, Skill Bonus +2, Skill Bonus +4, Skill Bonus +4, Skill Bonus +5 *(+2 autres, slots d'amélioration)*",tier 24 lvl 30+,—,"Rééquilibrage lore spécialiste tech : STR +1, DEX +2 → INT +3","[Mod D20-Overhaul]
+a_belt_24,Tech Specialist Belt,Belt,Lvl 30+,—,"STR +1, DEX +2","Attribute Bonus (Dexterity) +2, Attribute Bonus (Strength) +1, Skill Bonus +2, Skill Bonus +4, Skill Bonus +4, Skill Bonus +5 *(+2 more, upgrade slots)*",tier 24 lvl 30+,—,"Tech specialist lore rebalance: STR +1, DEX +2 → INT +3","[Mod D20-Overhaul]
 
 Notable properties:
 • INT +3"
-a_belt_25,Aratech Cardio-Regulator,Belt,Lvl 30+,—,"STR +1, CON +3","Attribute Bonus (Constitution) +3, Attribute Bonus (Strength) +1, Improved Saving Throws +1",tier 25 lvl 30+,—,"Cap: CON +3, STR +1 → CON +3","[Mod D20-Overhaul]
+a_belt_25,Aratech Cardio-Regulator,Belt,Lvl 30+,—,"STR +1, CON +3","Attribute Bonus (Constitution) +3, Attribute Bonus (Strength) +1, Improved Saving Throws +1",tier 25 lvl 30+,—,"Capped: CON +3, STR +1 → CON +3","[Mod D20-Overhaul]
 
 Notable properties:
 • CON +3"
-a_belt_26,GNS Strength Enhancer,Belt,Lvl 30+,—,STR +4,Attribute Bonus (Strength) +4,tier 26 lvl 30+,—,Cap: STR +4 → STR +3,"[Mod D20-Overhaul]
+a_belt_26,GNS Strength Enhancer,Belt,Lvl 30+,—,STR +4,Attribute Bonus (Strength) +4,tier 26 lvl 30+,—,Capped: STR +4 → STR +3,"[Mod D20-Overhaul]
 
 Notable properties:
 • STR +3"
-a_belt_27,Qel-Droma Belt,Belt,Lvl 30+,—,"WIS +1, CHA +1","Attribute Bonus (Charisma) +1, Attribute Bonus (Wisdom) +1, Damage Immunity +20%, Damage Immunity +20%",tier 27 lvl 30+,—,"Rééquilibrage lore Qel-Droma : WIS +1, CHA +1 → CHA +2, WIS +1","[Mod D20-Overhaul]
+a_belt_27,Qel-Droma Belt,Belt,Lvl 30+,—,"WIS +1, CHA +1","Attribute Bonus (Charisma) +1, Attribute Bonus (Wisdom) +1, Damage Immunity +20%, Damage Immunity +20%",tier 27 lvl 30+,—,"Qel-Droma lore rebalance: WIS +1, CHA +1 → CHA +2, WIS +1","[Mod D20-Overhaul]
 
 Notable properties:
 • CHA +2, WIS +1"
-a_belt_28,Immortality Belt,Belt,Lvl 30+,—,CON +1,"Attack Penalty +-2, Attribute Bonus (Constitution) +1, Damage Resistance (Bludgeoning) +10/-, Damage Resistance (Energy) +10/-, Damage Resistance (Piercing) +10/-, Damage Resistance (Slashing) +10/-",tier 28 lvl 30+,—,Cap: DR +10/- → DR +3/- (Phys+Energy),"[Mod D20-Overhaul]
+a_belt_28,Immortality Belt,Belt,Lvl 30+,—,CON +1,"Attack Penalty +-2, Attribute Bonus (Constitution) +1, Damage Resistance (Bludgeoning) +10/-, Damage Resistance (Energy) +10/-, Damage Resistance (Piercing) +10/-, Damage Resistance (Slashing) +10/-",tier 28 lvl 30+,—,Capped: DR +10/- → DR +3/- (Phys+Energy),"[Mod D20-Overhaul]
 
 Notable properties:
 • DR +3/- (Phys+Energy)"
-a_belt_30,Jal Shey Mentor Belt,Belt,Lvl 30+,—,WIS +2,"Attribute Bonus (Wisdom) +2, Meilleure résistance à la Force +20",tier 30 lvl 30+,—,"Ajout lore Jal Shey : WIS +2 → CHA +2, WIS +2","[Mod D20-Overhaul]
+a_belt_30,Jal Shey Mentor Belt,Belt,Lvl 30+,—,WIS +2,"Attribute Bonus (Wisdom) +2, Improved Force Resistance +20",tier 30 lvl 30+,—,"Jal Shey lore addition: WIS +2 → CHA +2, WIS +2","[Mod D20-Overhaul]
 
 Notable properties:
 • CHA +2, WIS +2"
-mandalorianutili,Ceinture multifonction de mand.,Belt,Fixed Loot / Quest,—,,"Damage Resistance (Cold) +5/-, Damage Resistance (Fire) +5/-, Improved Saving Throws +4",—,401dxn,Cap: Saves +4 → Saves +3,"[Mod D20-Overhaul]
+mandalorianutili,Mandalorian Utility Belt,Belt,Fixed Loot / Quest,—,,"Damage Resistance (Cold) +5/-, Damage Resistance (Fire) +5/-, Improved Saving Throws +4",—,401dxn,Capped: Saves +4 → Saves +3,"[Mod D20-Overhaul]
 
 Notable properties:
 • Saves +3"
-a_belt_03,Générateur de champ de camouflage,Stealth Unit,Lvl 10+ (rare 5+),—,,—,tier 3 lvl 10+ (rare from 5),"Péragus - Lvl administr…, Nar Shaddaa - FP atterri…, Dxun - Tombe, Péragus - Lvl administr… (+3 lieux)",,
-a_belt_06,Ceinture d'atténuation Aratech,Stealth Unit,Lvl 16+ (rare 11+),—,,"Damage Immunity +25%, Skill Bonus +2",tier 6 lvl 16+ (rare from 11),—,,
-a_belt_10,Diffuseur d'ombres de l'Echange,Stealth Unit,Lvl 24+ (rare 19+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Skill Bonus +2, Skill Bonus +4",tier 10 lvl 24+ (rare from 19),—,,
-a_belt_14,Générateur de camouflage ériadu,Stealth Unit,Lvl 30+ (rare 27+),—,DEX +2,"Attribute Bonus (Dexterity) +2, Skill Bonus +6",tier 14 lvl 30+ (rare from 27),"Korriban - Tombeau secret, Korriban - Tombeau secret",,
-a_belt_22,Caméléon defel,Stealth Unit,Lvl 30+,—,DEX +3,"Attribute Bonus (Dexterity) +3, Skill Bonus +8",tier 22 lvl 30+,—,,
-a_belt_23,Ceinture d'éclaireur frozian,Stealth Unit,Lvl 30+,—,DEX +3,"Attribute Bonus (Dexterity) +3, Defense Bonus +1, Skill Bonus +3",tier 23 lvl 30+,—,,
-a_belt_29,Aratech Echo Belt,Stealth Unit,Lvl 30+,—,DEX +4,"Attribute Bonus (Dexterity) +4, Skill Bonus +10",tier 29 lvl 30+,—,Cap: DEX +4 → DEX +3,"[Mod D20-Overhaul]
+a_belt_03,Stealth Field Generator,Stealth Unit,Lvl 10+ (rare 5+),—,,—,tier 3 lvl 10+ (rare from 5),"Peragus - Admin. Level, Nar Shaddaa - Landing Pad, Dxun - Tomb, Peragus - Admin. Level (+3 locations)",,
+a_belt_06,Aratech Dampening Belt,Stealth Unit,Lvl 16+ (rare 11+),—,,"Damage Immunity +25%, Skill Bonus +2",tier 6 lvl 16+ (rare from 11),—,,
+a_belt_10,Exchange Shadow Caster,Stealth Unit,Lvl 24+ (rare 19+),—,DEX +1,"Attribute Bonus (Dexterity) +1, Skill Bonus +2, Skill Bonus +4",tier 10 lvl 24+ (rare from 19),—,,
+a_belt_14,Eriadu Stealth Unit,Stealth Unit,Lvl 30+ (rare 27+),—,DEX +2,"Attribute Bonus (Dexterity) +2, Skill Bonus +6",tier 14 lvl 30+ (rare from 27),"Korriban - Secret Tomb, Korriban - Secret Tomb",,
+a_belt_22,Defel Mimicker,Stealth Unit,Lvl 30+,—,DEX +3,"Attribute Bonus (Dexterity) +3, Skill Bonus +8",tier 22 lvl 30+,—,,
+a_belt_23,Frozian Scout Belt,Stealth Unit,Lvl 30+,—,DEX +3,"Attribute Bonus (Dexterity) +3, Defense Bonus +1, Skill Bonus +3",tier 23 lvl 30+,—,,
+a_belt_29,Aratech Echo Belt,Stealth Unit,Lvl 30+,—,DEX +4,"Attribute Bonus (Dexterity) +4, Skill Bonus +10",tier 29 lvl 30+,—,Capped: DEX +4 → DEX +3,"[Mod D20-Overhaul]
 
 Notable properties:
 • DEX +3"

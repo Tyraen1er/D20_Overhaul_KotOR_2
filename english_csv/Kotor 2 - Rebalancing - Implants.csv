@@ -1,80 +1,80 @@
 ﻿ResRef,Name,Subtype,Min. Loot Level,Prerequisites,Attribute Bonus (Summary),Properties (Vanilla),Random Loot,Fixed Locations,Changes (Mod),Description (Mod)
-e_imp1_01,Pack de réflexes,Implant 1,Lvl 7+ (rare 2+),Attrt. ≥ 12,,"Restriction de caractéristique ≥ 12, Improved Saving Throws +1",tier 1 lvl 7+ (rare from 2),"Péragus - Dépôt carburant, Nar Shaddaa - FP atterri…, Péragus - Dépôt carburant, Nar Shaddaa - FP atterri… (+1 lieux)",,
-e_imp1_02,Pack de phéromones,Implant 1,Lvl 10+ (rare 5+),Attrt. ≥ 12,CHA +1,"Attribute Bonus (Charisma) +1, Restriction de caractéristique ≥ 12, Skill Bonus +1",tier 2 lvl 10+ (rare from 5),—,,
-e_imp1_03,Pack cardio-vasculaire,Implant 1,Lvl 13+ (rare 8+),Attrt. ≥ 12,CON +1,"Attribute Bonus (Constitution) +1, Restriction de caractéristique ≥ 12",tier 3 lvl 13+ (rare from 8),—,,
-e_imp1_04,Pack de force,Implant 1,Lvl 16+ (rare 11+),Attrt. ≥ 12,STR +1,"Attribute Bonus (Strength) +1, Restriction de caractéristique ≥ 12",tier 4 lvl 16+ (rare from 11),—,,
-e_imp1_05,Pack réaction,Implant 1,Lvl 19+ (rare 14+),Attrt. ≥ 12,DEX +1,"Attribute Bonus (Dexterity) +1, Restriction de caractéristique ≥ 12, Skill Bonus +1",tier 5 lvl 19+ (rare from 14),—,,
-e_imp1_06,Pack de condition physique,Implant 1,Lvl 22+ (rare 17+),Attrt. ≥ 12,"STR +1, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Strength) +1, Restriction de caractéristique ≥ 12",tier 6 lvl 22+ (rare from 17),—,,
-e_imp1_07,Skills Package,Implant 1,Lvl 25+ (rare 20+),Attrt. ≥ 12,,"Restriction de caractéristique ≥ 12, Skill Bonus +1, Skill Bonus +1, Skill Bonus +1, Skill Bonus +1, Skill Bonus +1 *(+3 autres, slots d'amélioration)*",tier 7 lvl 25+ (rare from 20),—,Ajout : INT +1 (Pack de compétences),"[Mod D20-Overhaul]
+e_imp1_01,Reflex Package,Implant 1,Lvl 7+ (rare 2+),Attr. ≥ 12,,"Attribute Restriction ≥ 12, Improved Saving Throws +1",tier 1 lvl 7+ (rare from 2),"Peragus - Fuel Depot, Nar Shaddaa - Landing Pad, Peragus - Fuel Depot, Nar Shaddaa - Landing Pad (+1 locations)",,
+e_imp1_02,Pheromone Package,Implant 1,Lvl 10+ (rare 5+),Attr. ≥ 12,CHA +1,"Attribute Bonus (Charisma) +1, Attribute Restriction ≥ 12, Skill Bonus +1",tier 2 lvl 10+ (rare from 5),—,,
+e_imp1_03,Cardio Package,Implant 1,Lvl 13+ (rare 8+),Attr. ≥ 12,CON +1,"Attribute Bonus (Constitution) +1, Attribute Restriction ≥ 12",tier 3 lvl 13+ (rare from 8),—,,
+e_imp1_04,Strength Package,Implant 1,Lvl 16+ (rare 11+),Attr. ≥ 12,STR +1,"Attribute Bonus (Strength) +1, Attribute Restriction ≥ 12",tier 4 lvl 16+ (rare from 11),—,,
+e_imp1_05,Response Package,Implant 1,Lvl 19+ (rare 14+),Attr. ≥ 12,DEX +1,"Attribute Bonus (Dexterity) +1, Attribute Restriction ≥ 12, Skill Bonus +1",tier 5 lvl 19+ (rare from 14),—,,
+e_imp1_06,Fitness Package,Implant 1,Lvl 22+ (rare 17+),Attr. ≥ 12,"STR +1, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Strength) +1, Attribute Restriction ≥ 12",tier 6 lvl 22+ (rare from 17),—,,
+e_imp1_07,Skills Package,Implant 1,Lvl 25+ (rare 20+),Attr. ≥ 12,,"Attribute Restriction ≥ 12, Skill Bonus +1, Skill Bonus +1, Skill Bonus +1, Skill Bonus +1, Skill Bonus +1 *(+3 more, upgrade slots)*",tier 7 lvl 25+ (rare from 20),—,Added: INT +1 (Skills Package),"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +1 (Pack de compétences)"
-e_imp1_08,Pack de santé,Implant 1,Lvl 28+ (rare 23+),Attrt. ≥ 12,CON +1,"Attribute Bonus (Constitution) +1, Restriction de caractéristique ≥ 12, Regeneration +1",tier 8 lvl 28+ (rare from 23),—,,
-e_imp1_09,Pack d'augmentation phys.,Implant 1,Lvl 30+ (rare 26+),Attrt. ≥ 12,"STR +1, DEX +1, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Dexterity) +1, Attribute Bonus (Strength) +1, Restriction de caractéristique ≥ 12",tier 9 lvl 30+ (rare from 26),—,,
-e_imp1_10,Pack d'augmentation mentale,Implant 1,Lvl 30+ (rare 29+),Attrt. ≥ 12,"INT +1, WIS +1, CHA +1","Attribute Bonus (Charisma) +1, Attribute Bonus (Intelligence) +1, Attribute Bonus (Wisdom) +1, Restriction de caractéristique ≥ 12",tier 10 lvl 30+ (rare from 29),—,,
-e_imp2_01,Implant de combat rétinien,Implant 2,Lvl 7+ (rare 2+),Attrt. ≥ 14,,"Restriction de caractéristique ≥ 14, Immunity: Critical Hits, Skill Bonus +1",tier 1 lvl 7+ (rare from 2),—,,
-e_imp2_02,Implant lornan,Implant 2,Lvl 10+ (rare 5+),Attrt. ≥ 14,,"Restriction de caractéristique ≥ 14, Damage Immunity +10%, Damage Immunity +5%",tier 2 lvl 10+ (rare from 5),—,,
-e_imp2_03,Implant biotech.,Implant 2,Lvl 13+ (rare 8+),Attrt. ≥ 14,,"Restriction de caractéristique ≥ 14, Regeneration +1",tier 3 lvl 13+ (rare from 8),—,,
-e_imp2_04,Implant de puissance,Implant 2,Lvl 16+ (rare 11+),Attrt. ≥ 14,STR +2,"Attribute Bonus (Strength) +2, Restriction de caractéristique ≥ 14, Improved Saving Throws +1",tier 4 lvl 16+ (rare from 11),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
-e_imp2_05,Implant de promptitude,Implant 2,Lvl 19+ (rare 14+),Attrt. ≥ 14,DEX +2,"Attribute Bonus (Dexterity) +2, Restriction de caractéristique ≥ 14, Improved Saving Throws +1",tier 5 lvl 19+ (rare from 14),—,,
-e_imp2_06,Implant de perspicacité,Implant 2,Lvl 22+ (rare 17+),Attrt. ≥ 14,WIS +2,"Attribute Bonus (Wisdom) +2, Restriction de caractéristique ≥ 14, Improved Saving Throws +1",tier 6 lvl 22+ (rare from 17),—,,
-e_imp2_07,Skills Implant,Implant 2,Lvl 25+ (rare 20+),Attrt. ≥ 14,,"Restriction de caractéristique ≥ 14, Skill Bonus +2, Skill Bonus +2, Skill Bonus +2, Skill Bonus +2, Skill Bonus +2 *(+3 autres, slots d'amélioration)*",tier 7 lvl 25+ (rare from 20),—,Ajout : INT +2 (Implant de compétences),"[Mod D20-Overhaul]
+• INT +1 (Skills Package)"
+e_imp1_08,Health Package,Implant 1,Lvl 28+ (rare 23+),Attr. ≥ 12,CON +1,"Attribute Bonus (Constitution) +1, Attribute Restriction ≥ 12, Regeneration +1",tier 8 lvl 28+ (rare from 23),—,,
+e_imp1_09,Physical Boost Package,Implant 1,Lvl 30+ (rare 26+),Attr. ≥ 12,"STR +1, DEX +1, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Dexterity) +1, Attribute Bonus (Strength) +1, Attribute Restriction ≥ 12",tier 9 lvl 30+ (rare from 26),—,,
+e_imp1_10,Mental Boost Package,Implant 1,Lvl 30+ (rare 29+),Attr. ≥ 12,"INT +1, WIS +1, CHA +1","Attribute Bonus (Charisma) +1, Attribute Bonus (Intelligence) +1, Attribute Bonus (Wisdom) +1, Attribute Restriction ≥ 12",tier 10 lvl 30+ (rare from 29),—,,
+e_imp2_01,Retinal Combat Implant,Implant 2,Lvl 7+ (rare 2+),Attr. ≥ 14,,"Attribute Restriction ≥ 14, Immunity: Critical Hits, Skill Bonus +1",tier 1 lvl 7+ (rare from 2),—,,
+e_imp2_02,Lornan Implant,Implant 2,Lvl 10+ (rare 5+),Attr. ≥ 14,,"Attribute Restriction ≥ 14, Damage Immunity +10%, Damage Immunity +5%",tier 2 lvl 10+ (rare from 5),—,,
+e_imp2_03,Biotech Implant,Implant 2,Lvl 13+ (rare 8+),Attr. ≥ 14,,"Attribute Restriction ≥ 14, Regeneration +1",tier 3 lvl 13+ (rare from 8),—,,
+e_imp2_04,Power Implant,Implant 2,Lvl 16+ (rare 11+),Attr. ≥ 14,STR +2,"Attribute Bonus (Strength) +2, Attribute Restriction ≥ 14, Improved Saving Throws +1",tier 4 lvl 16+ (rare from 11),"Nar Shaddaa - Landing Pad, Nar Shaddaa - Landing Pad, Dantooine - Khoonda Plains",,
+e_imp2_05,Alacrity Implant,Implant 2,Lvl 19+ (rare 14+),Attr. ≥ 14,DEX +2,"Attribute Bonus (Dexterity) +2, Attribute Restriction ≥ 14, Improved Saving Throws +1",tier 5 lvl 19+ (rare from 14),—,,
+e_imp2_06,Insight Implant,Implant 2,Lvl 22+ (rare 17+),Attr. ≥ 14,WIS +2,"Attribute Bonus (Wisdom) +2, Attribute Restriction ≥ 14, Improved Saving Throws +1",tier 6 lvl 22+ (rare from 17),—,,
+e_imp2_07,Skills Implant,Implant 2,Lvl 25+ (rare 20+),Attr. ≥ 14,,"Attribute Restriction ≥ 14, Skill Bonus +2, Skill Bonus +2, Skill Bonus +2, Skill Bonus +2, Skill Bonus +2 *(+3 more, upgrade slots)*",tier 7 lvl 25+ (rare from 20),—,Added: INT +2 (Skills Implant),"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +2 (Implant de compétences)"
-e_imp2_08,Durability Implant,Implant 2,Lvl 28+ (rare 23+),Attrt. ≥ 14,CON +1,"Attribute Bonus (Constitution) +1, Restriction de caractéristique ≥ 14, Damage Resistance (Electrical) +5/-, Damage Resistance (Energy) +5/-",tier 8 lvl 28+ (rare from 23),—,Cap: DR +5/- → DR +2/- (Energy),"[Mod D20-Overhaul]
+• INT +2 (Skills Implant)"
+e_imp2_08,Durability Implant,Implant 2,Lvl 28+ (rare 23+),Attr. ≥ 14,CON +1,"Attribute Bonus (Constitution) +1, Attribute Restriction ≥ 14, Damage Resistance (Electrical) +5/-, Damage Resistance (Energy) +5/-",tier 8 lvl 28+ (rare from 23),—,Capped: DR +5/- → DR +2/- (Energy),"[Mod D20-Overhaul]
 
 Notable properties:
 • DR +2/- (Energy)"
-e_imp2_09,Implant d'augmentation phys.,Implant 2,Lvl 30+ (rare 26+),Attrt. ≥ 14,"STR +2, DEX +2, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Dexterity) +2, Attribute Bonus (Strength) +2, Restriction de caractéristique ≥ 14",tier 9 lvl 30+ (rare from 26),—,,
-e_imp2_10,Implant d'augmentation mentale,Implant 2,Lvl 30+ (rare 29+),Attrt. ≥ 14,"INT +1, WIS +2, CHA +2","Attribute Bonus (Charisma) +2, Attribute Bonus (Intelligence) +1, Attribute Bonus (Wisdom) +2, Restriction de caractéristique ≥ 14",tier 10 lvl 30+ (rare from 29),—,,
-e_imp3_01,Système de bio-antidote,Implant 3,Lvl 7+ (rare 2+),Attrt. ≥ 16,CON +1,"Attribute Bonus (Constitution) +1, Restriction de caractéristique ≥ 16, Immunity: Poison",tier 1 lvl 7+ (rare from 2),—,,
-e_imp3_02,Système de régulation nerveuse,Implant 3,Lvl 10+ (rare 5+),Attrt. ≥ 16,,"Restriction de caractéristique ≥ 16, Immunity: Mind-Affecting",tier 2 lvl 10+ (rare from 5),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
-e_imp3_03,Système de réaction,Implant 3,Lvl 13+ (rare 8+),Attrt. ≥ 16,DEX +3,"Attribute Bonus (Dexterity) +3, Restriction de caractéristique ≥ 16",tier 3 lvl 13+ (rare from 8),—,,
-e_imp3_04,Système de combat amélioré,Implant 3,Lvl 16+ (rare 11+),Attrt. ≥ 16,,"Attack Bonus +1, Restriction de caractéristique ≥ 16, Bonus Feat, Bonus Feat, Bonus Feat, Bonus Feat",tier 4 lvl 16+ (rare from 11),—,,
-e_imp3_05,Système de force de Bavakar,Implant 3,Lvl 19+ (rare 14+),Attrt. ≥ 16,STR +3,"Attribute Bonus (Strength) +3, Restriction de caractéristique ≥ 16",tier 5 lvl 19+ (rare from 14),—,,
-e_imp3_06,Cardio Power System,Implant 3,Lvl 22+ (rare 17+),Attrt. ≥ 16,CON +4,"Attribute Bonus (Constitution) +4, Restriction de caractéristique ≥ 16",tier 6 lvl 22+ (rare from 17),—,Cap: CON +4 → CON +3,"[Mod D20-Overhaul]
+e_imp2_09,Physical Boost Implant,Implant 2,Lvl 30+ (rare 26+),Attr. ≥ 14,"STR +2, DEX +2, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Dexterity) +2, Attribute Bonus (Strength) +2, Attribute Restriction ≥ 14",tier 9 lvl 30+ (rare from 26),—,,
+e_imp2_10,Mental Boost Implant,Implant 2,Lvl 30+ (rare 29+),Attr. ≥ 14,"INT +1, WIS +2, CHA +2","Attribute Bonus (Charisma) +2, Attribute Bonus (Intelligence) +1, Attribute Bonus (Wisdom) +2, Attribute Restriction ≥ 14",tier 10 lvl 30+ (rare from 29),—,,
+e_imp3_01,Bio-Antidote System,Implant 3,Lvl 7+ (rare 2+),Attr. ≥ 16,CON +1,"Attribute Bonus (Constitution) +1, Attribute Restriction ≥ 16, Immunity: Poison",tier 1 lvl 7+ (rare from 2),—,,
+e_imp3_02,Nerve Enhancement System,Implant 3,Lvl 10+ (rare 5+),Attr. ≥ 16,,"Attribute Restriction ≥ 16, Immunity: Mind-Affecting",tier 2 lvl 10+ (rare from 5),"Nar Shaddaa - Landing Pad, Nar Shaddaa - Landing Pad, Dantooine - Khoonda Plains",,
+e_imp3_03,Reaction System,Implant 3,Lvl 13+ (rare 8+),Attr. ≥ 16,DEX +3,"Attribute Bonus (Dexterity) +3, Attribute Restriction ≥ 16",tier 3 lvl 13+ (rare from 8),—,,
+e_imp3_04,Advanced Combat System,Implant 3,Lvl 16+ (rare 11+),Attr. ≥ 16,,"Attack Bonus +1, Attribute Restriction ≥ 16, Bonus Feat, Bonus Feat, Bonus Feat, Bonus Feat",tier 4 lvl 16+ (rare from 11),—,,
+e_imp3_05,Bavakar Strength System,Implant 3,Lvl 19+ (rare 14+),Attr. ≥ 16,STR +3,"Attribute Bonus (Strength) +3, Attribute Restriction ≥ 16",tier 5 lvl 19+ (rare from 14),—,,
+e_imp3_06,Cardio Power System,Implant 3,Lvl 22+ (rare 17+),Attr. ≥ 16,CON +4,"Attribute Bonus (Constitution) +4, Attribute Restriction ≥ 16",tier 6 lvl 22+ (rare from 17),—,Capped: CON +4 → CON +3,"[Mod D20-Overhaul]
 
 Notable properties:
 • CON +3"
-e_imp3_07,Skills System,Implant 3,Lvl 25+ (rare 20+),Attrt. ≥ 16,,"Restriction de caractéristique ≥ 16, Skill Bonus +4, Skill Bonus +4, Skill Bonus +4, Skill Bonus +4, Skill Bonus +4 *(+3 autres, slots d'amélioration)*",tier 7 lvl 25+ (rare from 20),—,Ajout : INT +2 (Système de compétences),"[Mod D20-Overhaul]
+e_imp3_07,Skills System,Implant 3,Lvl 25+ (rare 20+),Attr. ≥ 16,,"Attribute Restriction ≥ 16, Skill Bonus +4, Skill Bonus +4, Skill Bonus +4, Skill Bonus +4, Skill Bonus +4 *(+3 more, upgrade slots)*",tier 7 lvl 25+ (rare from 20),—,Added: INT +2 (Skills System),"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +2 (Système de compétences)"
-e_imp3_08,Sensory Dampening System,Implant 3,Lvl 28+ (rare 23+),Attrt. ≥ 16,CON +2,"Attribute Bonus (Constitution) +2, Restriction de caractéristique ≥ 16, Damage Resistance (Bludgeoning) +5/-, Damage Resistance (Piercing) +5/-, Damage Resistance (Slashing) +5/-",tier 8 lvl 28+ (rare from 23),—,Cap: DR +5/- → DR +2/- (Physique),"[Mod D20-Overhaul]
+• INT +2 (Skills System)"
+e_imp3_08,Sensory Dampening System,Implant 3,Lvl 28+ (rare 23+),Attr. ≥ 16,CON +2,"Attribute Bonus (Constitution) +2, Attribute Restriction ≥ 16, Damage Resistance (Bludgeoning) +5/-, Damage Resistance (Piercing) +5/-, Damage Resistance (Slashing) +5/-",tier 8 lvl 28+ (rare from 23),—,Capped: DR +5/- → DR +2/- (Physical),"[Mod D20-Overhaul]
 
 Notable properties:
-• DR +2/- (Physique)"
-e_imp3_09,Système d'augmentation phys.,Implant 3,Lvl 30+ (rare 26+),Attrt. ≥ 16,"STR +2, DEX +3, CON +2","Attribute Bonus (Constitution) +2, Attribute Bonus (Dexterity) +3, Attribute Bonus (Strength) +2, Restriction de caractéristique ≥ 16",tier 9 lvl 30+ (rare from 26),—,"Cap: STR +2, DEX +3, CON +2 → STR +2, DEX +2, CON +1","[Mod D20-Overhaul]
+• DR +2/- (Physical)"
+e_imp3_09,Physical Boost System,Implant 3,Lvl 30+ (rare 26+),Attr. ≥ 16,"STR +2, DEX +3, CON +2","Attribute Bonus (Constitution) +2, Attribute Bonus (Dexterity) +3, Attribute Bonus (Strength) +2, Attribute Restriction ≥ 16",tier 9 lvl 30+ (rare from 26),—,"Capped: STR +2, DEX +3, CON +2 → STR +2, DEX +2, CON +1","[Mod D20-Overhaul]
 
 Notable properties:
 • STR +2, DEX +2, CON +1"
-e_imp3_10,Mental Boost System,Implant 3,Lvl 30+ (rare 29+),Attrt. ≥ 16,"INT +2, WIS +3, CHA +2","Attribute Bonus (Charisma) +2, Attribute Bonus (Intelligence) +2, Attribute Bonus (Wisdom) +3, Restriction de caractéristique ≥ 16",tier 10 lvl 30+ (rare from 29),—,"Cap: INT +2, WIS +3, CHA +2 → INT +2, WIS +2, CHA +1","[Mod D20-Overhaul]
+e_imp3_10,Mental Boost System,Implant 3,Lvl 30+ (rare 29+),Attr. ≥ 16,"INT +2, WIS +3, CHA +2","Attribute Bonus (Charisma) +2, Attribute Bonus (Intelligence) +2, Attribute Bonus (Wisdom) +3, Attribute Restriction ≥ 16",tier 10 lvl 30+ (rare from 29),—,"Capped: INT +2, WIS +3, CHA +2 → INT +2, WIS +2, CHA +1","[Mod D20-Overhaul]
 
 Notable properties:
 • INT +2, WIS +2, CHA +1"
-e_imp4_01,Pack-D de force,Implant 3,Lvl 7+ (rare 2+),Attrt. ≥ 18,"STR +1, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Strength) +1, Restriction de caractéristique ≥ 18",tier 1 lvl 7+ (rare from 2),"Nar Shaddaa - FP atterri…, Nar Shaddaa - FP atterri…, Dantooine - Plaine de Kh…",,
-e_imp4_02,Pack-D d'immunité,Implant 3,Lvl 10+ (rare 5+),Attrt. ≥ 18,,"Restriction de caractéristique ≥ 18, Immunity: Critical Hits, Immunity: Poison, Immunity: Mind-Affecting",tier 2 lvl 10+ (rare from 5),—,,
-e_imp4_03,Pack-D de perception,Implant 3,Lvl 13+ (rare 8+),Attrt. ≥ 18,"WIS +2, CHA +1","Attribute Bonus (Charisma) +1, Attribute Bonus (Wisdom) +2, Restriction de caractéristique ≥ 18",tier 3 lvl 13+ (rare from 8),—,,
-e_imp4_04,Pack-D d'augmentation,Implant 3,Lvl 16+ (rare 11+),Attrt. ≥ 18,,"Restriction de caractéristique ≥ 18, Bonus Feat, Bonus Feat, Bonus Feat, Bonus Feat, Bonus Feat *(+1 autres, slots d'amélioration)*",tier 4 lvl 16+ (rare from 11),"Nar Shaddaa - Tunnels Je…, Malachor V - Profondeurs, Nar Shaddaa - Tunnels Je…, Malachor V - Profondeurs",,
-e_imp4_05,Pack-D d'immortalité,Implant 3,Lvl 19+ (rare 14+),Attrt. ≥ 18,CON +3,"Attribute Bonus (Constitution) +3, Restriction de caractéristique ≥ 18, Bonus Feat, Bonus Feat, Bonus Feat",tier 5 lvl 19+ (rare from 14),—,,
-e_imp4_06,Quickness D-Package,Implant 3,Lvl 22+ (rare 17+),Attrt. ≥ 18,DEX +4,"Attribute Bonus (Dexterity) +4, Restriction de caractéristique ≥ 18, Defense Bonus +1",tier 6 lvl 22+ (rare from 17),—,Cap: DEX +4 → DEX +3,"[Mod D20-Overhaul]
+e_imp4_01,Strength D-Package,Implant 3,Lvl 7+ (rare 2+),Attr. ≥ 18,"STR +1, CON +1","Attribute Bonus (Constitution) +1, Attribute Bonus (Strength) +1, Attribute Restriction ≥ 18",tier 1 lvl 7+ (rare from 2),"Nar Shaddaa - Landing Pad, Nar Shaddaa - Landing Pad, Dantooine - Khoonda Plains",,
+e_imp4_02,Immunity D-Package,Implant 3,Lvl 10+ (rare 5+),Attr. ≥ 18,,"Attribute Restriction ≥ 18, Immunity: Critical Hits, Immunity: Poison, Immunity: Mind-Affecting",tier 2 lvl 10+ (rare from 5),—,,
+e_imp4_03,Perception D-Package,Implant 3,Lvl 13+ (rare 8+),Attr. ≥ 18,"WIS +2, CHA +1","Attribute Bonus (Charisma) +1, Attribute Bonus (Wisdom) +2, Attribute Restriction ≥ 18",tier 3 lvl 13+ (rare from 8),—,,
+e_imp4_04,Enhancement D-Package,Implant 3,Lvl 16+ (rare 11+),Attr. ≥ 18,,"Attribute Restriction ≥ 18, Bonus Feat, Bonus Feat, Bonus Feat, Bonus Feat, Bonus Feat *(+1 more, upgrade slots)*",tier 4 lvl 16+ (rare from 11),"Nar Shaddaa - Jekk'Jekk Tunnels, Malachor V - Depths, Nar Shaddaa - Jekk'Jekk Tunnels, Malachor V - Depths",,
+e_imp4_05,Immortality D-Package,Implant 3,Lvl 19+ (rare 14+),Attr. ≥ 18,CON +3,"Attribute Bonus (Constitution) +3, Attribute Restriction ≥ 18, Bonus Feat, Bonus Feat, Bonus Feat",tier 5 lvl 19+ (rare from 14),—,,
+e_imp4_06,Quickness D-Package,Implant 3,Lvl 22+ (rare 17+),Attr. ≥ 18,DEX +4,"Attribute Bonus (Dexterity) +4, Attribute Restriction ≥ 18, Defense Bonus +1",tier 6 lvl 22+ (rare from 17),—,Capped: DEX +4 → DEX +3,"[Mod D20-Overhaul]
 
 Notable properties:
 • DEX +3"
-e_imp4_07,Skills D-Package,Implant 3,Lvl 25+ (rare 20+),Attrt. ≥ 18,,"Restriction de caractéristique ≥ 18, Skill Bonus +6, Skill Bonus +6, Skill Bonus +6, Skill Bonus +6, Skill Bonus +6 *(+3 autres, slots d'amélioration)*",tier 7 lvl 25+ (rare from 20),—,Ajout : INT +3 (Pack-D de compétences),"[Mod D20-Overhaul]
+e_imp4_07,Skills D-Package,Implant 3,Lvl 25+ (rare 20+),Attr. ≥ 18,,"Attribute Restriction ≥ 18, Skill Bonus +6, Skill Bonus +6, Skill Bonus +6, Skill Bonus +6, Skill Bonus +6 *(+3 more, upgrade slots)*",tier 7 lvl 25+ (rare from 20),—,Added: INT +3 (Skills D-Package),"[Mod D20-Overhaul]
 
 Notable properties:
-• INT +3 (Pack-D de compétences)"
-e_imp4_08,Universal D-Package,Implant 3,Lvl 28+ (rare 23+),Attrt. ≥ 18,"STR +2, DEX +2, CON +2, INT +2, WIS +2, CHA +2","Attribute Bonus (Charisma) +2, Attribute Bonus (Constitution) +2, Attribute Bonus (Dexterity) +2, Attribute Bonus (Intelligence) +2, Attribute Bonus (Strength) +2, Attribute Bonus (Wisdom) +2 *(+1 autres, slots d'amélioration)*",tier 8 lvl 28+ (rare from 23),—,Cap: +2 partout (+12) → +1 aux 6 caracs (+6),"[Mod D20-Overhaul]
+• INT +3 (Skills D-Package)"
+e_imp4_08,Universal D-Package,Implant 3,Lvl 28+ (rare 23+),Attr. ≥ 18,"STR +2, DEX +2, CON +2, INT +2, WIS +2, CHA +2","Attribute Bonus (Charisma) +2, Attribute Bonus (Constitution) +2, Attribute Bonus (Dexterity) +2, Attribute Bonus (Intelligence) +2, Attribute Bonus (Strength) +2, Attribute Bonus (Wisdom) +2 *(+1 more, upgrade slots)*",tier 8 lvl 28+ (rare from 23),—,Capped: +2 all stats (+12) → +1 to all 6 attributes (+6),"[Mod D20-Overhaul]
 
 Notable properties:
-• +1 aux 6 caracs (+6)"
-e_imp4_09,Pack-D d'augmentation phys.,Implant 3,Lvl 30+ (rare 26+),Attrt. ≥ 18,"STR +3, DEX +3, CON +3","Attribute Bonus (Constitution) +3, Attribute Bonus (Dexterity) +3, Attribute Bonus (Strength) +3, Restriction de caractéristique ≥ 18",tier 9 lvl 30+ (rare from 26),—,"Cap: STR +3, DEX +3, CON +3 (+9) → STR +2, DEX +2, CON +2 (+6)","[Mod D20-Overhaul]
+• +1 to all 6 attributes (+6)"
+e_imp4_09,Physical Boost D-Package,Implant 3,Lvl 30+ (rare 26+),Attr. ≥ 18,"STR +3, DEX +3, CON +3","Attribute Bonus (Constitution) +3, Attribute Bonus (Dexterity) +3, Attribute Bonus (Strength) +3, Attribute Restriction ≥ 18",tier 9 lvl 30+ (rare from 26),—,"Capped: STR +3, DEX +3, CON +3 (+9) → STR +2, DEX +2, CON +2 (+6)","[Mod D20-Overhaul]
 
 Notable properties:
 • STR +2, DEX +2, CON +2 (+6)"
-e_imp4_10,Mental Boost D-Package,Implant 3,Lvl 30+ (rare 29+),Attrt. ≥ 18,"INT +3, WIS +3, CHA +3","Attribute Bonus (Charisma) +3, Attribute Bonus (Intelligence) +3, Attribute Bonus (Wisdom) +3, Restriction de caractéristique ≥ 18",tier 10 lvl 30+ (rare from 29),—,"Cap: INT +3, WIS +3, CHA +3 (+9) → INT +2, WIS +2, CHA +2 (+6)","[Mod D20-Overhaul]
+e_imp4_10,Mental Boost D-Package,Implant 3,Lvl 30+ (rare 29+),Attr. ≥ 18,"INT +3, WIS +3, CHA +3","Attribute Bonus (Charisma) +3, Attribute Bonus (Intelligence) +3, Attribute Bonus (Wisdom) +3, Attribute Restriction ≥ 18",tier 10 lvl 30+ (rare from 29),—,"Capped: INT +3, WIS +3, CHA +3 (+9) → INT +2, WIS +2, CHA +2 (+6)","[Mod D20-Overhaul]
 
 Notable properties:
 • INT +2, WIS +2, CHA +2 (+6)"

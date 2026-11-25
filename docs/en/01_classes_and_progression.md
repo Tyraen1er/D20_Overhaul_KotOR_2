@@ -1,6 +1,6 @@
 # 1. Classes & Progression
 
-[← Back to Table of Contents](README.md) | [Next: Feats, Stances & Specializations →](02_feats_stances_and_specializations.md)
+[← Back to Introduction](README.md) | [Next: Feats, Stances & Specializations →](02_feats_stances_and_specializations.md)
 
 ---
 

@@ -582,7 +582,8 @@ def reingest_upgrades(csv_path: Path, craft_path: Path = DEFAULT_CRAFT_CSV) -> d
         effects_n = norm(effects)
         if effects_n.startswith("—") or "aucun effet" in effects_n:
             effects_n = ""
-        dmg = sum(avg_dice(m) for m in re.findall(r"bonus aux degats \([^)]*\) \+(\d+d\d+|\d+)", effects_n))
+        # Note : iprp_damagecost.2da ne possède pas de ligne 1d2 -> build_items.py mappe 1d2 sur cost_value 14 (1d3 = 2.0)
+        dmg = sum(2.0 if m == "1d2" else avg_dice(m) for m in re.findall(r"bonus aux degats \([^)]*\) \+(\d+d\d+|\d+)", effects_n))
         atk = sum(int(m) for m in re.findall(r"bonus d attaque \+(-?\d+)", effects_n))
         atk -= sum(int(m) for m in re.findall(r"malus a l attaque (?:\+penalty_)?-(\d+)", effects_n))
         def_b = sum(int(m) for m in re.findall(r"bonus defense \+(-?\d+)", effects_n))
@@ -618,9 +619,9 @@ def reingest_pouvoirs(csv_path: Path) -> list[str]:
     """Resynchronise force_buffs[].armor_max depuis la colonne « Armure max autorisée »
     du CSV WIP Spé Pouvoirs.csv (les '?' sont conservés tels quels). Retourne les mises à jour."""
     armor_map = [
-        (("armure interdite", "interdite"), "sans"),
+        (("armure interdite", "interdite", "bure"), "sans"),
         (("armure legere", "legere"), "legere"),
-        (("armure moyenne", "moyenne"), "moyenne"),
+        (("armure moyenne", "armure intermediaire", "intermediaire", "moyenne"), "moyenne"),
         (("armure lourde", "lourde"), "lourde"),
     ]
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
@@ -736,25 +737,46 @@ def reingest_gear(root: Path = ROOT) -> int:
             if resref.lower().startswith("mandalores") or "Malus de caractéristique +-4" in props or "Malus de caractéristique +-6" in props:
                 continue
 
-            # Stats : base = Bonus Carac (résumé), puis appliquer Changement (mod)
+            # Stats : base = Bonus Carac (résumé), puis appliquer chaque segment ';' de Changement (mod)
             stats = _parse_stat_pairs(carac_sum)
             if mod_txt:
-                if "→" in mod_txt:
-                    rhs = mod_txt.split("→", 1)[1]
-                    if "+1 aux 6 caracs" in rhs:
-                        stats = {k: 1 for k in STAT_KEYS}
-                    else:
-                        parsed = _parse_stat_pairs(rhs)
-                        if parsed:
-                            stats = parsed
-                elif norm(mod_txt).startswith("ajout"):
-                    for k, v in _parse_stat_pairs(mod_txt).items():
-                        stats[k] = stats.get(k, 0) + v
+                for seg in [s.strip() for s in mod_txt.split(";") if s.strip()]:
+                    seg_n = norm(seg)
+                    if "→" in seg and (any(k in seg for k in STAT_KEYS) or "+1 aux 6 caracs" in seg_n):
+                        rhs = seg.split("→", 1)[1]
+                        if "+1 aux 6 caracs" in norm(rhs):
+                            stats = {k: 1 for k in STAT_KEYS}
+                        else:
+                            parsed = _parse_stat_pairs(rhs)
+                            if parsed:
+                                stats = parsed
+                    elif seg_n.startswith("ajout") and any(k in seg for k in STAT_KEYS):
+                        for k, v in _parse_stat_pairs(seg).items():
+                            stats[k] = stats.get(k, 0) + v
 
             props_n = norm(props)
             ac = sum(int(m) for m in re.findall(r"bonus defense \+(\d+)", props_n))
             ac -= sum(int(m) for m in re.findall(r"malus de defense \+-(\d+)", props_n))
             saves = sum(int(m) for m in re.findall(r"jets de sauvegarde ameliores \+(\d+)", props_n))
+            save_vig_b = save_ref_b = save_vol_b = 0
+            # Si le .uti compilé existe dans mods/overhaul/Override/, distinguer prop 27 All (sub=0) vs Vig/Réf/Vol (sub=1/2/3)
+            ovr_uti_p = root / "mods" / "overhaul" / "Override" / f"{resref.lower()}.uti"
+            if ovr_uti_p.exists() and saves > 0:
+                try:
+                    from pykotor.resource.generics.uti import read_uti as _read_uti
+                    _u = _read_uti(ovr_uti_p)
+                    _all_sv = _v_sv = _r_sv = _w_sv = 0
+                    for _p in _u.properties:
+                        if _p.property_name == 26 and _p.subtype == 0:
+                            _all_sv += _p.cost_value
+                        elif _p.property_name == 27:
+                            if _p.subtype == 0: _all_sv += _p.cost_value
+                            elif _p.subtype == 1: _v_sv += _p.cost_value
+                            elif _p.subtype == 2: _r_sv += _p.cost_value
+                            elif _p.subtype == 3: _w_sv += _p.cost_value
+                    saves, save_vig_b, save_ref_b, save_vol_b = _all_sv, _v_sv, _r_sv, _w_sv
+                except Exception:
+                    pass
             atk = sum(int(m) for m in re.findall(r"bonus d attaque \+(\d+)", props_n))
             atk -= sum(int(m) for m in re.findall(r"malus a l attaque \+-(\d+)", props_n))
             melee_dmg = sum(avg_dice(m) for m in re.findall(r"bonus aux degats \([^)]*\) \+(\d+d\d+|\d+)", props_n))
@@ -772,7 +794,7 @@ def reingest_gear(root: Path = ROOT) -> int:
                 if m_ac:
                     ac = int(m_ac.group(1))
                 m_sv = re.search(r"saves \+\d+ → saves \+(\d+)", mod_n)
-                if m_sv:
+                if m_sv and not ovr_uti_p.exists():
                     saves = int(m_sv.group(1))
                 m_at = re.search(r"atq \+\d+ → atq \+(\d+)", mod_n)
                 if m_at:
@@ -780,7 +802,7 @@ def reingest_gear(root: Path = ROOT) -> int:
                 m_dg = re.search(r"degats \+(?:\d+d\d+|\d+) → \+(\d+d\d+|\d+)", mod_n)
                 if m_dg:
                     melee_dmg = avg_dice(m_dg.group(1))
-                m_rd_mod = re.search(r"rd \+\d+/- → rd \+(\d+)/-", mod_n)
+                m_rd_mod = re.search(r"rd [^→]*→\s*(?:rd\s*)?\+(\d+)/-", mod_n)
                 if m_rd_mod and rd > 0:
                     rd = int(m_rd_mod.group(1))
 
@@ -797,6 +819,9 @@ def reingest_gear(root: Path = ROOT) -> int:
                 "stats": stats,
                 "ac": ac,
                 "saves": saves,
+                "save_vig": save_vig_b,
+                "save_ref": save_ref_b,
+                "save_vol": save_vol_b,
                 "attack": atk,
                 "melee_dmg": round(melee_dmg, 1),
                 "rd": rd,
@@ -867,6 +892,7 @@ def equip_best_gear(
     pools = data.raw.get("gear_pools", {})
     equipped: dict[str, str] = {}
     gear_ac = gear_saves = gear_atk = gear_rd = 0
+    gear_save_vig = gear_save_ref = gear_save_vol = 0
     gear_melee_dmg = 0.0
 
     def score_item(it: dict, slot: str) -> float:
@@ -881,7 +907,7 @@ def equip_best_gear(
         if is_melee:
             s += it.get("melee_dmg", 0.0) * 1.4
         s += it.get("ac", 0) * 2.0
-        s += it.get("saves", 0) * 0.8
+        s += it.get("saves", 0) * 0.8 + (it.get("save_vig", 0) + it.get("save_ref", 0) + it.get("save_vol", 0)) * 0.25
         s += it.get("rd", 0) * 1.0
         return s
 
@@ -901,6 +927,9 @@ def equip_best_gear(
             scores[k] = scores.get(k, 10) + v
         gear_ac += best.get("ac", 0)
         gear_saves += best.get("saves", 0)
+        gear_save_vig += best.get("save_vig", 0)
+        gear_save_ref += best.get("save_ref", 0)
+        gear_save_vol += best.get("save_vol", 0)
         gear_atk += best.get("attack", 0)
         gear_melee_dmg += best.get("melee_dmg", 0.0)
         gear_rd += best.get("rd", 0)
@@ -911,6 +940,9 @@ def equip_best_gear(
         "mods": mods,
         "gear_ac": gear_ac,
         "gear_saves": gear_saves,
+        "gear_save_vig": gear_save_vig,
+        "gear_save_ref": gear_save_ref,
+        "gear_save_vol": gear_save_vol,
         "gear_attack": gear_atk,
         "gear_melee_dmg": round(gear_melee_dmg, 1),
         "gear_rd": gear_rd,
@@ -952,10 +984,15 @@ class Char:
     class_ac: int = 0
     armor_tier: str = "sans"
     buff_ac: int = 0
+    speed_ac: int = 0
+    armor_force_ac: int = 0
     buff_rd: int = 0
     use_gear: bool = False
     gear_ac: int = 0
     gear_saves: int = 0
+    gear_save_vig: int = 0
+    gear_save_ref: int = 0
+    gear_save_vol: int = 0
     gear_attack: int = 0
     gear_melee_dmg: float = 0.0
     gear_rd: int = 0
@@ -1348,9 +1385,18 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
     tough_rd = data.feats["armures"]["robustesse"]["rd_by_rank"].get(str(tough_r), 0) if tough_r > 0 else 0
     tough_hp = data.feats["armures"]["robustesse"]["hp_per_level_by_rank"].get(str(tough_r), 0) if tough_r > 0 else 0
 
+    # Règle moteur T4 : les EffectACIncrease séparés (bundle ov_inc_core, Vitesse, Armure de Force)
+    # ne se cumulent pas (seul le maximum s'applique) ; un malus négatif s'applique intégralement.
+    passive_ac_bundle = style_ac + armor_feat_ac + nomi_ac
+    buff_dodge_max = max(char.speed_ac, char.armor_force_ac, char.buff_ac)
+    if passive_ac_bundle >= 0:
+        effect_ac_net = max(passive_ac_bundle, buff_dodge_max)
+    else:
+        effect_ac_net = passive_ac_bundle + buff_dodge_max
+
     player_ac = (
         10 + char.class_ac + armor_def["base_ac"] + item_ac + upg_ac
-        + ac_dex + style_ac + active_ac + armor_feat_ac + nomi_ac + char.buff_ac
+        + ac_dex + active_ac + effect_ac_net
     )
     player_rd = armor_def["native_rd"] + upg_rd + armor_feat_rd + tough_rd + kraith_rd + char.buff_rd + (char.gear_rd if char.use_gear else 0)
     imm_cap = data.model.get("immunity_cap")
@@ -1371,9 +1417,9 @@ def evaluate(cfg: Config, data: Data, feats: Feats, char: Char, phase_key: str,
         + (max(0, CH) if feats.rank("caracs", "nomi") >= 2 else 0)
         + (char.gear_saves if char.use_gear else 0)
     )
-    save_vig = b_vig + C + feat_save_all
-    save_ref = b_ref + D + feat_save_all
-    save_vol = b_vol + S + feat_save_all
+    save_vig = b_vig + C + feat_save_all + (char.gear_save_vig if char.use_gear else 0)
+    save_ref = b_ref + D + feat_save_all + (char.gear_save_ref if char.use_gear else 0)
+    save_vol = b_vol + S + feat_save_all + (char.gear_save_vol if char.use_gear else 0)
 
     player_hp = max(1, (char.vp_per_level + C + tough_hp) * char.level)
     shield_hp = armor_def.get("shield_hp_by_phase", {}).get(phase_key, 0) * shield_mult
@@ -1563,6 +1609,9 @@ def run_report(data: Data, feats: Feats, args) -> None:
             char.use_gear = True
             char.gear_ac = g["gear_ac"]
             char.gear_saves = g["gear_saves"]
+            char.gear_save_vig = g.get("gear_save_vig", 0)
+            char.gear_save_ref = g.get("gear_save_ref", 0)
+            char.gear_save_vol = g.get("gear_save_vol", 0)
             char.gear_attack = g["gear_attack"]
             char.gear_melee_dmg = g["gear_melee_dmg"]
             char.gear_rd = g["gear_rd"]
@@ -1574,7 +1623,9 @@ def run_report(data: Data, feats: Feats, args) -> None:
         char.stats["FOR"] += buffs["for_add"]
         char.stats["DEX"] += buffs.get("dex_add", 0)
         char.speed_attacks = buffs["attacks"]
-        char.buff_ac = buffs["speed_ac"] + buffs["armor_ac"]
+        char.speed_ac = buffs["speed_ac"]
+        char.armor_force_ac = buffs["armor_ac"]
+        char.buff_ac = max(buffs["speed_ac"], buffs["armor_ac"])
         char.buff_rd = buffs["barrier_rd"]
         if args.level:
             char.level = args.level

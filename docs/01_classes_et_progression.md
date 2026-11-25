@@ -1,6 +1,6 @@
 # 1. Classes & Progression
 
-[← Retour au Sommaire](README.md) | [Page suivante : Dons, Postures & Spécialisations →](02_dons_postures_et_specialisations.md)
+[← Retour à l'Introduction](README.md) | [Page suivante : Dons, Postures & Spécialisations →](02_dons_postures_et_specialisations.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # 2. Dons : Postures, Spécialisations, Caractéristiques & Éveil de Force
 
-[← Page précédente : Classes & Progression](01_classes_et_progression.md) | [Sommaire](README.md) | [Page suivante : Armures & Défenses →](03_armures_et_defenses.md)
+[← Page précédente : Classes & Progression](01_classes_et_progression.md) | [Introduction](README.md) | [Page suivante : Armures & Défenses →](03_armures_et_defenses.md)
 
 ---
 
@@ -49,7 +49,7 @@ Au lieu de simples bonus plats, toutes les armes du jeu sont désormais regroup�
 | Famille | Armes incluses | Rang II (Niv. 8+) | Rang III (Niv. 15+) |
 | :--- | :--- | :--- | :--- |
 | **Arme d'Impact** | Mains nues, Matraque, Bâton, Pique de Force | **Renversement** (1 tour) — *Vigueur annule (DD 10 + Niv + Carac ; chance = plage de critique / 20 par coup)* | Renversement porté à **2 tours** |
-| **Arme Traditionnelle** | Épée courte, Épée longue, Double-lame, Hache gamorréenne, Lame de guerre wookie | **Bris d'armure** : `-3 CA` pendant 2 tours — *Vigueur annule (DD 5 + Niv + Carac, sur chaque coup)* | Bris d'armure **cumulable** et dure **+1 tour** |
+| **Arme Traditionnelle** | Épée courte, Épée longue, Double-lame, Hache gamorréenne, Lame de guerre wookiee | **Bris d'armure** : `-3 CA` pendant 2 tours — *Vigueur annule (DD 5 + Niv + Carac, sur chaque coup)* | Bris d'armure **cumulable** et dure **+1 tour** |
 | **Arme à Résonance** | Vibrolame, Vibro-épée, Vibrolame double | **Ébranlement** : `-4` Attaque et `-4` Dégâts pendant 1 tour — *Réflexes annule (DD 5 + Niv + Carac, sur chaque coup)* | **Empilable** : `-2` supplémentaires par déclenchement (plafond `-8`), durée rafraîchie |
 | **Arme Laser** | Sabre laser court, Sabre laser, Double sabre laser | **Bris de volonté** : `-4` à toutes les sauvegardes pendant 2 tours — *Volonté annule (DD 5 + Niv + Carac, sur chaque coup)* | Bris de volonté **sans jet de sauvegarde** (s'applique automatiquement) |
 
@@ -58,7 +58,7 @@ Au lieu de simples bonus plats, toutes les armes du jeu sont désormais regroup�
 | Famille | Armes incluses | Rang II (Niv. 8+) | Rang III (Niv. 15+) |
 | :--- | :--- | :--- | :--- |
 | **Tir d'Assaut** | Pistolet blaster, Carabine blaster, Blaster à répétition | **Aucun malus en mêlée** (vous pouvez tirer au contact sans pénalité) | **`+1` attaque par round** avec la main directrice |
-| **Tir Pénétrant** | Blaster lourd, Fusil blaster, Arbalète wookie, Blaster lourd à répétition | **Repousse l'adversaire de 3 m** — *Vigueur annule (DD 5 + Niv + Carac ; testé par coup, 1 recul max par round)* | **`+5` Dégâts** fixes par tir |
+| **Tir Pénétrant** | Blaster lourd, Fusil blaster, Arbalète wookiee, Blaster lourd à répétition | **Repousse l'adversaire de 3 m** — *Vigueur annule (DD 5 + Niv + Carac ; testé par coup, 1 recul max par round)* | **`+5` Dégâts** fixes par tir |
 | **Tir Tactique** | Pistolet à ions, Fusil à ions, Pistolet sonique, Fusil sonique | **Étourdissement** (1 tour ; fonctionne aussi sur les droïdes) — *Vigueur annule (DD 10 + Niv + Carac ; chance = plage de critique / 20)* | Étourdissement porté à **2 tours** |
 | **Tir Assassin** | Blaster de poche, Pistolet disrupteur, Fusil disrupteur | **Attaques sournoises `+2d6`** *(donne la capacité d'en faire même si votre classe ne l'a pas)* | **Multiplicateur de critique `+1`** *(ex. ×2 → ×3, ×3 → ×4)* |
 
@@ -107,4 +107,4 @@ Calibré pour donner au Consulaire, au Maître Jedi et au Seigneur Sith de vrais
 
 ---
 
-[← Page précédente : Classes & Progression](01_classes_et_progression.md) | [Sommaire](README.md) | [Page suivante : Armures & Défenses →](03_armures_et_defenses.md)
+[← Page précédente : Classes & Progression](01_classes_et_progression.md) | [Introduction](README.md) | [Page suivante : Armures & Défenses →](03_armures_et_defenses.md)

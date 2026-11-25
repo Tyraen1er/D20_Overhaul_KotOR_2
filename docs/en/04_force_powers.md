@@ -1,6 +1,6 @@
 # 4. Force Powers
 
-[← Previous: Armor & Defenses](03_armor_and_defenses.md) | [Table of Contents](README.md) | [Next: Feat Access & Companions →](05_feat_access_and_companions.md)
+[← Previous: Armor & Defenses](03_armor_and_defenses.md) | [Introduction](README.md) | [Next: Feat Access & Companions →](05_feat_access_and_companions.md)
 
 ---
 
@@ -85,4 +85,4 @@ All Prestige Class powers are now standardized to **3 tiers**, automatically gra
 
 ---
 
-[← Previous: Armor & Defenses](03_armor_and_defenses.md) | [Table of Contents](README.md) | [Next: Feat Access & Companions →](05_feat_access_and_companions.md)
+[← Previous: Armor & Defenses](03_armor_and_defenses.md) | [Introduction](README.md) | [Next: Feat Access & Companions →](05_feat_access_and_companions.md)

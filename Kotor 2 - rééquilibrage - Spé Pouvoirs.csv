@@ -10,7 +10,7 @@ Le Jedi entoure son corps d'un champ protecteur de Force qui dévie les attaques
 
 R1 : +2 Défense et sauvegardes, 20 s R2 : +4 Défense et sauvegardes, 20 s (Niv. 6) R3 : +6 Défense et sauvegardes, 20 s (Niv. 12)"
 "Force Barrier / Improved / Master (LS)
-Barrière de Force / améliorée / de maître",Armure moyenne,15 / 25 / 35,"L1 : RD 4 physique (tranchant, contondant, perforant), 30 s (Niv. 6)
+Barrière de Force / améliorée / de maître",Armure intermédiaire,15 / 25 / 35,"L1 : RD 4 physique (tranchant, contondant, perforant), 30 s (Niv. 6)
 L2 : RD 8 physique, 45 s (Niv. 9)
 L3 : RD 15 physique, 60 s (Niv. 15)","RD 4 / 8 / 12 physique (personnel, 60 s)",Power selection,,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire
@@ -30,7 +30,7 @@ La Force vivante irrigue le lanceur et ses compagnons, élevant simultanément l
 
 +2 / +3 / +4 aux 6 caractéristiques (groupe) + immunité Poison (R2/R3)"
 "Cure / Heal / Master Heal (LS)
-Guérison / Soins améliorés / Soins de maître",Armure moyenne,20 / 35 / 50,"L1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6)
+Guérison / Soins améliorés / Soins de maître",Armure intermédiaire,20 / 35 / 50,"L1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6)
 L2 : 15 PV + mods, neutralise le Poison (Niv. 12)
 L3 : 15 PV + mods + 2 × Niveau, neutralise Poison et Étourdissement (Niv. 18)",,Power selection,,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire
@@ -40,7 +40,7 @@ En canalisant le côté Lumineux, le Jedi accélère la régénération cellulai
 
 R1 : soigne 5 PV + mod. SAG + mod. CHA + Niveau, groupe 15 m (Niv. 6) R2 : 15 PV + mods, neutralise le Poison (Niv. 12) R3 : 15 PV + mods + 2 × Niveau, neutralise Poison et Étourdissement (Niv. 18)"
 "Revitalize / Improved / Master (LS)
-Revitalisation / améliorée / de maître",Armure moyenne,35 / 50 / 65,"L1 : ranime l'allié le plus proche avec 5 % de ses PV max (Niv. 9)
+Revitalisation / améliorée / de maître",Armure intermédiaire,35 / 50 / 65,"L1 : ranime l'allié le plus proche avec 5 % de ses PV max (Niv. 9)
 L2 : ranime tous les alliés tombés, 5 % (Niv. 15)
 L3 : ranime tous les alliés tombés, 10 % (Niv. 21)","10 % lvl 1 - le membre le plus proche
 20 % lvl 2 - les deux membres les plus proches
@@ -62,7 +62,7 @@ Le Jedi fige le système nerveux de ses adversaires dans un champ de stase qui e
 
 R3 (zone 10 m) : durée max portée à 36 s (6 rounds) avec un jet de Vigueur chaque round à DD dégressif (-3 au DD/round) pour s'échapper (si jet initial réussi : ralenti 12 s)"
 "Stun Droid / Disable Droid / Destroy Droid (LS)
-Étourdissement / Désactivation / Destruction de droïde",Armure moyenne,10 / 20 / 35,"L1 : 1 droïde immobilisé 12 s, dégâts = Niveau (Vigueur : annule et ½ dégâts)
+Étourdissement / Désactivation / Destruction de droïde",Armure intermédiaire,10 / 20 / 35,"L1 : 1 droïde immobilisé 12 s, dégâts = Niveau (Vigueur : annule et ½ dégâts)
 L2 : tous les droïdes à 5 m de la cible, 12 s, dégâts = Niveau (Niv. 6)
 L3 : tous les droïdes à 6 m, 1-6 dégâts/Niveau, 12 s, Vigueur ½ (Niv. 12)",,Power selection,,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire
@@ -80,7 +80,7 @@ Une perception intuitive des intentions adverses guide la garde du Jedi au cœur
 
 Remplacé par +10 % d'esquive en mêlée (récompense Echani)"
 "Force Enlightenment (LS)
-Grâce du côté Lumineux",Armure moyenne,50,"Unique : active simultanément Vitesse, Armure et Talent de Force au rang max possédé, à coût réduit","Lancer instantané (coût 50 PF) ; lance les 3 buffs au rang max possédé (+1 cran d'armure en ultime), avec Vitesse plafonnée à +1 atq/round si une armure est portée (+2 atq/round uniquement en Robe)",Quete / Lumineux max,,"[Mod D20-Overhaul]
+Grâce du côté Lumineux",Armure intermédiaire,50,"Unique : active simultanément Vitesse, Armure et Talent de Force au rang max possédé, à coût réduit","Lancer instantané (coût 50 PF) ; lance les 3 buffs au rang max possédé (+1 cran d'armure en ultime), avec Vitesse plafonnée à +1 atq/round si une armure est portée (+2 atq/round uniquement en Bure)",Quete / Lumineux max,,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire
 Coût en Points de Force : 50
 
@@ -110,7 +110,7 @@ Une subtile inflexion de la Force oriente la pensée des esprits faibles lors de
 
 R1 : options de persuasion supplémentaires en dialogue (hors droïdes) R2 : Domination : version renforcée, résistance rare (Niv. 6)"
 "Battle Meditation / Improved / Master (neutre)
-Méditation de combat / améliorée / de maître",Armure moyenne,25 / 35 / 50,"L1 : groupe +2 Attaque, Dégâts et Volonté + régén. PV accélérée, 20 s (Niv. 6)
+Méditation de combat / améliorée / de maître",Armure intermédiaire,25 / 35 / 50,"L1 : groupe +2 Attaque, Dégâts et Volonté + régén. PV accélérée, 20 s (Niv. 6)
 L2 : + ennemis à 10 m : malus (Volonté annule) (Niv. 12)
 L3 : groupe +4 ; ennemis à 15 m (Niv. 18)","L1 : groupe +mod. CHA (Atq, Dég, Vol + régén. PV, non plafonné) ; L2 : ajoute malus ennemis -mod. CHA à 10 m (Volonté annule) ; L3 : +2 au bonus et au malus, portée 15 m (Volonté annule)",Power selection,,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire
@@ -130,7 +130,7 @@ La Force accélère les réflexes et la vélocité du Jedi bien au-delà des lim
 
 R1 : vitesse de déplacement ×2, +2 Défense, 36 s R2 : +4 Défense et +1 attaque/round (Niv. 9) R3 : +4 Défense et +2 attaques/round (Niv. 15)"
 "Energy Resistance / Improved / Master (neutre)
-Résistance à l'énergie / améliorée / de maître",Armure moyenne,15 / 25 / 35,"L1 : RD 6 (énergie, sonique, feu, froid, électricité), 120 s
+Résistance à l'énergie / améliorée / de maître",Armure intermédiaire,15 / 25 / 35,"L1 : RD 6 (énergie, sonique, feu, froid, électricité), 120 s
 L2 : RD 12 (Niv. 9)
 L3 : RD 20, tout le groupe (Niv. 17)","RD 4 / 8 / 12 (personnel, 60 s ; plus d'effet groupe ni d'immunité Poison)",Power selection,,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire
@@ -159,7 +159,7 @@ La Force permet de dévier les tirs de blaster à mains nues et d'éloigner les 
 
 Pare/renvoie sans sabre + +2 / +4 Défense contre les attaques à distance"
 "Force Push / Force Whirlwind / Force Wave (neutre)
-Poussée de Force / Tourbillon de Force / Vague de Force",Armure moyenne,15 / 25 / 40,"L1 : 1 cible repoussée 5 m, jetée au sol, étourdie 3 s, dégâts = Niveau (Réflexes : pas d'étourdissement, ½ dégâts)
+Poussée de Force / Tourbillon de Force / Vague de Force",Armure intermédiaire,15 / 25 / 40,"L1 : 1 cible repoussée 5 m, jetée au sol, étourdie 3 s, dégâts = Niveau (Réflexes : pas d'étourdissement, ½ dégâts)
 L2 : 1 cible immobilisée 12 s, dégâts 1/3 Niveau / 2 s (Réflexes annule tout) (Niv. 9)
 L3 : zone 15 m : ennemis repoussés 5 m, au sol, étourdis 12 s, dégâts 1,5 × Niveau (Réflexes : ½ et pas d'étourdissement) (Niv. 15)","L2 (Tourbillon, 1 cible) : Réflexes réussie inflige ½ dégâts immédiats (1 × Niv) au lieu de tout annuler ; L3 (Vague de Force) transformé en Tourbillon de zone 6 m, durée 12 s, 1/3 Niv toutes les 2 s (total 2 × Niv ; Réflexes réussie : ½ dégâts immédiats et non soulevé)",Power selection,,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire
@@ -187,7 +187,7 @@ Un souffle de rupture dissipe les protections et altérations de Force actives s
 
 R1 : dissipe les effets de rang I-III sur la cible (Aura, Talent, Vitesse, Résistances…) (Niv. 9) R2 : Destruction de Force : dissipe tous les effets de soutien (Niv. 15)"
 "Mind Trick / Confusion (neutre)
-Subterfuge / Confusion",Armure moyenne,15 / 35,"L1 : distrait une cible 30 s (passe inaperçu à côté d'elle)
+Subterfuge / Confusion",Armure intermédiaire,15 / 35,"L1 : distrait une cible 30 s (passe inaperçu à côté d'elle)
 L2 : Confusion : la cible combat pour vous 30 s (Niv. 6, prestige)",,Power selection (évolution d'Affect Mind),,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire
 Coût en Points de Force : 15 / 35
@@ -222,7 +222,7 @@ Une maîtrise métabolique complète neutralise les toxines et gaz nocifs dans l
 
 Passif : +4 aux jets de sauvegarde contre le Poison (permanent) ; Actif (15 PF) : immunité au Poison et aux gaz toxiques pendant 240 s"
 "Force Camouflage / Improved / Master (neutre)
-Camouflage par la Force / Science / Maîtrise du camouflage",Armure moyenne,0,"L1 : Discrétion sans générateur de camouflage (permanent)
+Camouflage par la Force / Science / Maîtrise du camouflage",Armure intermédiaire,0,"L1 : Discrétion sans générateur de camouflage (permanent)
 L2 : +4 en Discrétion (Niv. 7)
 L3 : +8 en Discrétion (Niv. 13)","Renommé « Spectre de la Force I–III » (exclusif Assassin Sith, niv. 1/5/9 de prestige) :
 L1 : +4 Discrétion + furtivité sans ceinture + Course furtive auto
@@ -300,7 +300,7 @@ Des arcs d'éclairs du côté Obscur foudroient les ennemis avec une violence é
 
 1d6/Niv sans cap en R3 (R1 cible, R2 cône, R3 zone 10 m) ; suppression du drain de PF ennemi ; sauvegarde passée de Volonté à Réflexes (½ dégâts, Esquive Totale s'applique)"
 "Slow / Affliction / Plague (DS)
-Lenteur / Affliction / Peste",Armure moyenne,15 / 25 / 35,"L1 : 1 action partielle/round, -2 Défense, Attaque, Dégâts et Réflexes, 30 s (Volonté annule)
+Lenteur / Affliction / Peste",Armure intermédiaire,15 / 25 / 35,"L1 : 1 action partielle/round, -2 Défense, Attaque, Dégâts et Réflexes, 30 s (Volonté annule)
 L2 : Affliction : -7 caracs (1 pt/3 s, 21 s) + ralenti (Vigueur DD 20) (Niv. 6)
 L3 : Peste : -12 toutes caracs (1 pt/s, 12 s) + ralenti, DD 100 impassable (Niv. 12)","Maladie (durée max 42 s, tick toutes les 6 s, se propage à 5 m à la mort de la cible) : ralenti (-50 % dépl.) + ½ Niv dégâts/tick + malus aux 6 caracs ; jet de Vigueur à chaque tick pour stopper la maladie — L1 : -3 caracs (DD normal) ; L2 : -6 caracs (DD +4) ; L3 : -9 caracs (DD +8)",Power selection,,"[Mod D20-Overhaul]
 Armure maximale : Armure intermédiaire

@@ -54,6 +54,7 @@ class EnemyStats:
     fort_save: int
     ref_save: int
     will_save: int
+    rd: int = 0
 
 
 # Base archetype templates (before autobalance scaling) for generic Set_1..Set_5 enemies
@@ -65,16 +66,16 @@ BASE_ARCHETYPES: dict[str, dict[str, float]] = {
     "Set_5": {"vp": 42, "def": 19, "att": 11, "dmg": 11.0, "save": 9, "str_dmg": 6},
 }
 
-# Named solo bosses from datas_kotor/ennemis_reference_kotor2.md at their typical encounter level
+# Named solo bosses from datas_kotor/ennemis_reference_kotor2.md at their typical encounter level (RD boss 2/5/8)
 NAMED_BOSS_PRESETS: dict[str, EnemyStats] = {
-    "brianna": EnemyStats("La Servante / Brianna (Telos 1v1)", 8, 8, 78, 16, 11, 9.0, 6, 7, 4),
-    "visas": EnemyStats("Visas Marr (Ebon Hawk 1v1)", 11, 10, 110, 23, 15, 14.0, 9, 12, 11),
-    "kelborn": EnemyStats("Kelborn / Bralor (Dxun 1v1 sans Force)", 15, 14, 150, 26, 20, 20.0, 15, 12, 10),
-    "atris": EnemyStats("Atris (Telos Academie 1v1)", 24, 21, 252, 43, 32, 30.0, 34, 33, 34),
-    "nihilus": EnemyStats("Darth Nihilus (Ravager)", 24, 21, 420, 37, 33, 35.0, 33, 34, 32),
-    "stormbeast": EnemyStats("Grande Bete d'Orage (Malachor Solo)", 26, 24, 480, 30, 35, 45.0, 36, 24, 22),
-    "sion": EnemyStats("Darth Sion (Trayus 1v1 - 4 phases)", 28, 26, 1200, 48, 40, 48.0, 44, 32, 35),
-    "traya": EnemyStats("Darth Traya (Noyau de Trayus 1v1)", 28, 28, 1180, 51, 42, 55.0, 42, 40, 58),
+    "brianna": EnemyStats("La Servante / Brianna (Telos 1v1)", 8, 8, 78, 16, 11, 9.0, 6, 7, 4, rd=2),
+    "visas": EnemyStats("Visas Marr (Ebon Hawk 1v1)", 11, 10, 110, 23, 15, 14.0, 9, 12, 11, rd=5),
+    "kelborn": EnemyStats("Kelborn / Bralor (Dxun 1v1 sans Force)", 15, 14, 150, 26, 20, 20.0, 15, 12, 10, rd=5),
+    "atris": EnemyStats("Atris (Telos Academie 1v1)", 24, 21, 252, 43, 32, 30.0, 34, 33, 34, rd=8),
+    "nihilus": EnemyStats("Darth Nihilus (Ravager)", 24, 21, 420, 37, 33, 35.0, 33, 34, 32, rd=8),
+    "stormbeast": EnemyStats("Grande Bete d'Orage (Malachor Solo)", 26, 24, 480, 30, 35, 45.0, 36, 24, 22, rd=8),
+    "sion": EnemyStats("Darth Sion (Trayus 1v1 - 4 phases)", 28, 26, 1200, 48, 40, 48.0, 44, 32, 35, rd=8),
+    "traya": EnemyStats("Darth Traya (Noyau de Trayus 1v1)", 28, 28, 1180, 51, 42, 55.0, 42, 40, 58, rd=8),
 }
 
 
@@ -95,6 +96,7 @@ def kotor2_enemy_stats(level: int, set_key: str = "Set_5") -> EnemyStats:
     dmg_mult = 1 + max(math.ceil((level - 1) * ab.damagemult), 1)
     damage = round(base["dmg"] * dmg_mult + base["str_dmg"], 1)
     save = int(base["save"] + math.floor(level * ab.savemult))
+    boss_rd = (2 if level <= 10 else (5 if level <= 18 else 8)) if set_key in ("Set_4", "Set_5") else 0
 
     return EnemyStats(
         name=f"KotOR 2 {ab.name} (Niv. joueur {level})",
@@ -107,6 +109,7 @@ def kotor2_enemy_stats(level: int, set_key: str = "Set_5") -> EnemyStats:
         fort_save=save + 2,
         ref_save=save,
         will_save=save + (4 if set_key == "Set_5" else 0),
+        rd=boss_rd,
     )
 
 
@@ -194,14 +197,20 @@ def evaluate_build_vs_enemy(level: int, build: BuildConfig, enemy: EnemyStats) -
     # In KotOR, a critical threat must be confirmed by a second roll against target Defense
     crit_factor = 1.0 + p_hit * t_crit * (build.crit_mult - 1)
 
+    def expected_hit(raw_dmg: float, prob_hit: float) -> float:
+        p_crit = prob_hit * t_crit
+        base_net = max(raw_dmg - enemy.rd, 0.0)
+        crit_net = max(raw_dmg * build.crit_mult - enemy.rd, 0.0)
+        return (prob_hit - p_crit) * base_net + p_crit * crit_net
+
     # Attribute damage bonus based on weapon style
     if build.style == "single":
         attr_dmg = build.str_or_dex_mod * (1.0 + build.duel_str_scaling)
         main_hit_dmg = build.base_weapon_dmg + attr_dmg + build.bonus_flat_dmg
         n_main = 1 + build.extra_attacks
-        dpr = n_main * main_hit_dmg * p_hit * crit_factor
+        dpr = n_main * expected_hit(main_hit_dmg, p_hit)
         total_attacks = n_main
-        avg_dmg_per_hit = main_hit_dmg
+        avg_dmg_per_hit = max(main_hit_dmg - enemy.rd, 0.0)
     elif build.style in ("dual", "double"):
         # Vanilla KotOR 2 bug/feature: double-bladed gets 1.5x STR on main hand; dual gets 1.0x main, 0.5x offhand
         main_str_mult = 1.5 if build.style == "double" else 1.0
@@ -214,19 +223,19 @@ def evaluate_build_vs_enemy(level: int, build: BuildConfig, enemy: EnemyStats) -
         # D20 Overhaul : toutes les armes doubles (D) et armes légères MG sont balanced (0/0 avec Ambidextrie III)
         p_hit_off = hit_probability(total_att, enemy.defense)
 
-        dpr_main = n_main * main_hit_dmg * p_hit_main * (1.0 + p_hit_main * t_crit * (build.crit_mult - 1))
-        dpr_off = 1 * off_hit_dmg * p_hit_off * (1.0 + p_hit_off * t_crit * (build.crit_mult - 1))
+        dpr_main = n_main * expected_hit(main_hit_dmg, p_hit_main)
+        dpr_off = 1 * expected_hit(off_hit_dmg, p_hit_off)
         dpr = dpr_main + dpr_off
         total_attacks = n_main + 1
-        avg_dmg_per_hit = (n_main * main_hit_dmg + off_hit_dmg) / total_attacks
+        avg_dmg_per_hit = (n_main * max(main_hit_dmg - enemy.rd, 0.0) + max(off_hit_dmg - enemy.rd, 0.0)) / total_attacks
     else:
         # Ranged or Unarmed
         attr_dmg = build.str_or_dex_mod * (1.0 + build.duel_str_scaling) if build.style == "unarmed" else (build.str_or_dex_mod * build.duel_str_scaling)
         main_hit_dmg = build.base_weapon_dmg + attr_dmg + build.bonus_flat_dmg
         n_main = 1 + build.extra_attacks
-        dpr = n_main * main_hit_dmg * p_hit * crit_factor
+        dpr = n_main * expected_hit(main_hit_dmg, p_hit)
         total_attacks = n_main
-        avg_dmg_per_hit = main_hit_dmg
+        avg_dmg_per_hit = max(main_hit_dmg - enemy.rd, 0.0)
 
     ttk = enemy.hp / dpr if dpr > 0 else 999.0
 

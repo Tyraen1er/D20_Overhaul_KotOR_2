@@ -1,6 +1,6 @@
 # 3. Armor, Shields & Defenses
 
-[← Previous: Feats & Specializations](02_feats_stances_and_specializations.md) | [Table of Contents](README.md) | [Next: Force Powers →](04_force_powers.md)
+[← Previous: Feats & Specializations](02_feats_stances_and_specializations.md) | [Introduction](README.md) | [Next: Force Powers →](04_force_powers.md)
 
 ---
 
@@ -26,8 +26,8 @@ In vanilla KotOR 2, wearing armor as a Jedi was almost always a trap: it blocked
 ## Why Does Medium Armor Have Exclusive Upgrades?
 
 Medium armor is designed around a distinct identity as **tactical, high-tech battle gear**: while Light armor prioritizes agility and Heavy armor focuses on raw plating, Medium armor's modular frame accommodates two complementary components. At the workbench, each category upgrades differently:
-- **Light Armor (1 slot — Light Underlay)**: access to the **15 light underlays** (*Environmental*, *Biorestorative*, *Strengthening*).
-- **Heavy Armor (1 slot — Full Underlay)**: access to all **30 underlays** (*common* + *Reinforcing STR/CON*, *Flexible Max DEX*, *Durasteel Physical*).
+- **Light Armor (1 slot — Light Underlay)**: access to the **15 light underlays** (*Environmental*, *Biorestorative*, *Armorweave*).
+- **Heavy Armor (1 slot — Full Underlay)**: access to all **30 underlays** (*common* + *Strengthening STR/CON*, *Flexible Max DEX*, *Durasteel Physical*).
 - **Medium Armor (2 slots — Full Underlay + exclusive reinforced Overlay)**: without needing any feat, Medium armor shares **all 30 underlays with Heavy armor** and adds exclusive access to **30 reinforced overlays** (*8 lines* combining cross-resistances/immunities, saves, stealth, crowd-control immunities, and defensive reinforcements). It is the ultimate versatile, modular armor!
 
 ---
@@ -68,4 +68,4 @@ Each armor category now has its own **3-tier feat tree** (Levels 1, 8, and 15). 
 
 ---
 
-[← Previous: Feats & Specializations](02_feats_stances_and_specializations.md) | [Table of Contents](README.md) | [Next: Force Powers →](04_force_powers.md)
+[← Previous: Feats & Specializations](02_feats_stances_and_specializations.md) | [Introduction](README.md) | [Next: Force Powers →](04_force_powers.md)
