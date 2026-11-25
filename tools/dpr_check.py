@@ -276,6 +276,8 @@ def resolve_buffs(data: Data, buff_ranks: dict[str, int], armor_tier: str,
     """Détermine les effets de buffs FINALEMENT actifs selon l'armure portée.
 
     Retourne {attacks, mod_all, for_add, speed_ac, armor_ac, barrier_rd, active[], blocked[], notes[]}.
+    barrier_rd = max(Barrière [physique], Résistance à l'énergie [énergie]) : types disjoints,
+    seul le pouvoir du type de dégâts du boss s'applique.
     Vitesse/Fureur non cumulables → on garde le meilleur nombre d'attaques
     (la Fureur l'emporte en cas d'égalité pour son bonus de FOR).
     --speed ≠ auto = override manuel qui bypass le gating (tests rapides).
@@ -365,13 +367,30 @@ def resolve_buffs(data: Data, buff_ranks: dict[str, int], armor_tier: str,
         active.append(f"{' + '.join(src)} (+{armor_ac} CA)")
 
     barrier_rd = 0
+    rd_sources: list[str] = []
     if buff_ranks.get("barriere") and "barriere" in fb:
         if buff_allowed(data, "barriere", armor_tier):
             r = min(buff_ranks["barriere"], max_r)
-            barrier_rd = fb["barriere"]["rd_by_rank"][str(r)]
-            active.append(f"Barrière de Force {r} (RD {barrier_rd})")
+            rd = fb["barriere"]["rd_by_rank"][str(r)]
+            barrier_rd = max(barrier_rd, rd)
+            rd_sources.append(f"Barrière de Force {r} (RD {rd} — physique)")
         else:
             blocked.append(f"Barrière de Force (armure max : {fb['barriere']['armor_max']})")
+    if buff_ranks.get("resistance_energie") and "resistance_energie" in fb:
+        if buff_allowed(data, "resistance_energie", armor_tier):
+            r = min(buff_ranks["resistance_energie"], max_r)
+            rd = fb["resistance_energie"]["rd_by_rank"][str(r)]
+            barrier_rd = max(barrier_rd, rd)
+            rd_sources.append(f"Résistance à l'énergie {r} (RD {rd} — énergie/feu/froid/sonique/électricité)")
+        else:
+            blocked.append(f"Résistance à l'énergie (armure max : {fb['resistance_energie']['armor_max']})")
+    if rd_sources:
+        # Types de dégâts disjoints : face à un boss donné seul le pouvoir du bon type
+        # s'applique — on retient le max (RD identiques par rang dans le design actuel).
+        if len(rd_sources) > 1:
+            notes.append("Barrière (physique) et Résistance à l'énergie couvrent des types disjoints → "
+                         "seul le pouvoir du type du boss s'applique (max retenu)")
+        active.extend(rd_sources)
 
     # Fureur / Stigmate de Force (non cumulable avec Vitesse)
     fur_att, fur_for, fur_dex, fury_used = 0, 0, 0, False
@@ -1771,10 +1790,16 @@ def selftest() -> None:
     r_unarmed_late = evaluate(Config("unarmed", None, "single", "none"), data, f_imp, c_sen, "late", enemy, "none", 0, 0.0)
     # Niv 26 = Spé mains nues III plafonné (+3d4 = +7.5) + base 3.5 + 1.5*FOR(7) + Spé Impact(+2) - RD(3)
     assert r_unarmed_late["dmg_hit_net"] == round(3.5 + 7.5 + 7 * 1.5 + 2 - 3, 1), r_unarmed_late
-    # --- Gamoréen II : interdit 2M/double mais ouvre 1M/dual mêlée ET distance -
+    # --- Gamoréen II : ouvre 1M/dual sur TOUTES les armes (mêlée ET distance) ---
+    # (levée d'interdiction des postures 2M/HC actée le 25/11 : l'Adaptateur permet
+    # de basculer librement, les postures Arme Lourde et Haute Cadence restent dispo)
     gam_cfgs = enumerate_configs(data, parse_feats(data, "Raffinement Gamoréen 2"), None)
-    assert all(c.mode not in ("twohand", "double") for c in gam_cfgs), "Gamoréen II doit interdire 2M/double"
+    assert any(c.main == "battleaxe" and c.mode == "single" for c in gam_cfgs), "Gamoréen II tient les 2M en 1M"
+    assert any(c.main == "battleaxe" and c.mode == "twohand" for c in gam_cfgs), "Gamoréen II garde la posture 2M"
+    assert any(c.main == "double_sword" and c.mode == "single" for c in gam_cfgs), "Gamoréen II tient les doubles en 1M"
     assert any(c.main == "blaster_rifle" and c.mode == "dual" for c in gam_cfgs), "Gamoréen II ouvre le dual distance"
+    no_gam = enumerate_configs(data, parse_feats(data, ""), None)
+    assert not any(c.main == "battleaxe" and c.mode in ("single", "dual") for c in no_gam), "sans Gam II, pas de 2M en 1M"
     # --- armure & buffs -------------------------------------------------------
     assert parse_armor("Robe") == "sans" and parse_armor("lourde") == "lourde"
     assert _armor_tier_from_type("Armor Zeison Sha", "a_robe_26") == "legere"
@@ -1803,6 +1828,15 @@ def selftest() -> None:
     # Barrière de Force 3 (Armure moyenne) → RD 12
     r_bar = resolve_buffs(data, {"barriere": 3}, "moyenne", data.phases["late"], "auto")
     assert r_bar["barrier_rd"] == 12, r_bar
+    # Résistance à l'énergie (RD 4/8/12 énergie/feu/froid/sonique/électrique, ≤ intermédiaire)
+    ranks_res, unk_res = parse_buffs(data, "Résistance à l'énergie 3")
+    assert ranks_res == {"resistance_energie": 3} and not unk_res, (ranks_res, unk_res)
+    r_res = resolve_buffs(data, {"resistance_energie": 2}, "sans", data.phases["late"], "auto")
+    assert r_res["barrier_rd"] == 8 and not r_res["blocked"], r_res
+    # Barrière (physique) + Résistance (énergie) = types disjoints → seul le pouvoir
+    # du type du boss s'applique → max retenu (12 ici, pas 24)
+    r_both = resolve_buffs(data, {"barriere": 3, "resistance_energie": 3}, "sans", data.phases["late"], "auto")
+    assert r_both["barrier_rd"] == 12 and any("disjoints" in n for n in r_both["notes"]), r_both
     # --- arbres d'armures, règle de CA, spé carac défensives & TTD ------------
     e_late = data.enemies["late"]
     boss_late = Enemy("boss", e_late["hp"], e_late["defense"], e_late["rd"],

@@ -1456,7 +1456,29 @@
         "1": 4,
         "2": 8,
         "3": 12
-      }
+      },
+      "dmg_types": [
+        "physique (tranchant, contondant, perforant)"
+      ]
+    },
+    "resistance_energie": {
+      "label": "Résistance à l'énergie",
+      "armor_max": "moyenne",
+      "csv_key": "Energy Resistance",
+      "aliases": [
+        "energy resistance",
+        "resistance a l energie",
+        "resistance energie",
+        "resistance energy"
+      ],
+      "rd_by_rank": {
+        "1": 4,
+        "2": 8,
+        "3": 12
+      },
+      "dmg_types": [
+        "énergie, sonique, feu, froid, électricité"
+      ]
     },
     "valor": {
       "label": "Talent de Force (Force Valor)",
