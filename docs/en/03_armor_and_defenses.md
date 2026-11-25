@@ -12,10 +12,10 @@ In vanilla KotOR 2, wearing armor as a Jedi was almost always a trap: it blocked
 
 | Category | Base AC *(before → after)* | Max DEX *(before → after)* | Native DR *(Physical & Energy)* | Workbench Upgrade Slots | Allowed Force Powers |
 | :--- | :---: | :---: | :---: | :--- | :--- |
-| **Robes & Clothing** *(Unarmored)* | `0` *(unchanged)* | Unlimited *(except restrictive robes +5)* | **0** | None *(0 slots)* | **All powers** |
-| **Light Armor** | `4–5` → **`6–7`** | `+4/+5` → **`+7 to +10`** | **0** | **1 slot**: Standard Overlay only | Light-compatible powers *(blocks Speed, Force Armor, Stasis, Storm, Kill, Drain Life)* |
-| **Medium Armor** | `6–7` → **`5–6`** | `+2/+3` → **`+3 to +6`** | **DR `2/-`** | **2 exclusive slots**: Combined Overlay + Combined Underlay | Medium-compatible powers *(Heal, Revitalize, Barrier, Energy Resistance, Plague, Push/Wave, Battle Meditation, Enlightenment…)* |
-| **Heavy Armor** | `8–9` → **`7–8`** | `0/+1` → **`0 to +2`** | **DR `4/-`** | **1 slot**: Standard Underlay only | Heavy-compatible powers *(Force Body, Throw Lightsaber, Force Resistance, Drain Force, Deflection, Prestige Ultimates)* |
+| **Robes & Clothing** *(Unarmored)* | `0` *(unchanged)* | Unlimited *(except restrictive robes +5)* | **0** | None *(0 slots)* | **All powers** *(defense relies on temporary buffs: Force Armor, Speed, Valor)* |
+| **Light Armor** | `4–5` → **`4–5`** | `+4/+5` → **`+14 to +16`** | **0** | **1 slot**: Light Underlay only *(15 pieces)* | Light-compatible powers *(blocks Speed, Force Armor, Stasis, Storm, Kill, Drain Life)* |
+| **Medium Armor** | `6–7` → **`6–7`** | `+2/+3` → **`+3 to +4`** | **DR `2/-`** | **2 slots**: Full Underlay *(same as Heavy)* + **exclusive reinforced Overlay** *(30 pieces)* | Medium-compatible powers *(Heal, Revitalize, Barrier, Energy Resistance, Plague, Push/Wave, Battle Meditation, Enlightenment…)* |
+| **Heavy Armor** | `8–9` → **`10–11`** | `0/+1` → **`+0 to +1`** | **DR `4/-`** | **1 slot**: Full Underlay *(30 pieces)* | Heavy-compatible powers *(Force Body, Throw Lightsaber, Force Resistance, Drain Force, Deflection, Prestige Ultimates)* |
 
 > **No More Light Armor Exceptions:** **Armored Flight Suits (Ubese)** and **Zeison Sha / Jal Shey Armors** no longer bypass Force power restrictions as they did in vanilla — they now follow the exact same rules as all other Light Armors.
 
@@ -25,10 +25,10 @@ In vanilla KotOR 2, wearing armor as a Jedi was almost always a trap: it blocked
 
 ## Why Does Medium Armor Have Exclusive Upgrades?
 
-Medium armor is designed around a distinct identity as **tactical, high-tech battle gear**: while Light armor prioritizes agility and Heavy armor focuses on raw plating, Medium armor's modular frame is built to integrate complex combined components. At the workbench, each category upgrades differently:
-- **Light Armor (1 slot — Standard Overlay)**: access to the 18 standard overlays (Defense, evasion, elemental resistances, skills).
-- **Heavy Armor (1 slot — Standard Underlay)**: access to the 18 standard underlays (physical DR, STR/CON, regeneration, critical/drain immunity).
-- **Medium Armor (2 slots — Exclusive Combined Upgrades)**: simply wearing Medium armor lets you install **both a Dual Overlay AND a Dual Underlay** (24 exclusive pieces that combine two standard upgrades into one, no feat required). Medium armor is the ultimate tech and versatility platform!
+Medium armor is designed around a distinct identity as **tactical, high-tech battle gear**: while Light armor prioritizes agility and Heavy armor focuses on raw plating, Medium armor's modular frame accommodates two complementary components. At the workbench, each category upgrades differently:
+- **Light Armor (1 slot — Light Underlay)**: access to the **15 light underlays** (*Environmental*, *Biorestorative*, *Strengthening*).
+- **Heavy Armor (1 slot — Full Underlay)**: access to all **30 underlays** (*common* + *Reinforcing STR/CON*, *Flexible Max DEX*, *Durasteel Physical*).
+- **Medium Armor (2 slots — Full Underlay + exclusive reinforced Overlay)**: without needing any feat, Medium armor shares **all 30 underlays with Heavy armor** and adds exclusive access to **30 reinforced overlays** (*8 lines* combining cross-resistances/immunities, saves, stealth, crowd-control immunities, and defensive reinforcements). It is the ultimate versatile, modular armor!
 
 ---
 

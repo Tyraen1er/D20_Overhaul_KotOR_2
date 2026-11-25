@@ -2,20 +2,21 @@
 """KotOR 2 Overhaul — Jalon 1 : Générateur des tables .2da + dialog.tlk.
 
 Génère dans `mods/overhaul/` (sans jamais modifier le jeu directement) :
-  - `dialog.tlk` (copie du backup FR + entrées ajoutées pour tous les nouveaux dons)
-  - `Override/feat.2da` (245 lignes TSLRCM intactes + 73 nouveaux dons, 29 supprimés masqués)
+  - `dialog.tlk` (copie du backup FR + entrées ajoutées pour dons & pouvoirs)
+  - `Override/feat.2da` (245 lignes TSLRCM intactes + 73 nouveaux dons + 5 marqueurs internes, 29 supprimés masqués)
   - `Override/featgain.2da` (budgets Niv. 30 : 22 / 18 / 15 dons)
-  - `Override/classpowergain.2da` (budgets Niv. 30 : 12 / 16 / 24 pouvoirs)
+  - `Override/classpowergain.2da` (budgets Niv. 30 : 12 / 16 / 24 pouvoirs, Gardien +2 au Niv. 1)
   - `Override/baseitems.2da` (armes d20, armures CA/DEX, variantes 1M Gamoréen II)
-  - `Override/spells.2da` (forbiditemmask par armure + coûts PF évolutifs)
-  - `Override/itemcreate.2da` (verrous level 1/10/15/20 + armes base + 24 upgrades combinées)
+  - `Override/spells.2da` (forbiditemmask, coûts PF, descriptions VF, noms prestige, Festin de mort L3, Cicatrice de Force I–III)
+  - `Override/itemcreate.2da` & `Override/itemcreatemira.2da` (verrous 1/10/15/20, armes base onglet 4, roquettes Mira)
+  - `Override/forceshields.2da` (paliers ×1,25 / ×2 / ×2,5 / ×3 / ×3,75 pour Armure Tactique II–III & Affranchi II)
   - `Override/autobalance.2da` (calibrage boss Set_5)
-  - `feat_ids.json` & `baseitem_1m_map.json` (index pour Jalons 2 & 3)
+  - `feat_ids.json`, `spell_ids.json` & `baseitem_1m_map.json` (index pour Jalons 2, 3 & 4)
 
 Règles strictes (README.md §2–§3) :
   - Cellules vides `pykotor.TwoDA` = `""` (JAMAIS `"****"`).
   - Base TSLRCM depuis `_reference/2da/*_tslrcm.2da` et `mods/04-engine-tests/backup/dialog.tlk.bak`.
-  - Aucune ligne vanilla supprimée dans `feat.2da` (compatibilité sauvegardes).
+  - Aucune ligne vanilla supprimée dans `feat.2da` ni `spells.2da` (compatibilité sauvegardes).
 """
 
 from __future__ import annotations
@@ -70,21 +71,18 @@ def assert_no_literal_stars(table: TwoDA, name: str) -> None:
 # 1. featgain.2da (budgets 22 / 18 / 15 sur 30 niveaux)
 # ============================================================================
 
-def _distribute_points(total_15: int, total_30: int, n_rows: int = 50) -> list[int]:
+def _distribute_points(total_15: int, total_30: int, n_rows: int = 50, lvl1_val: int = 1) -> list[int]:
     """Répartit `total_15` points sur les niveaux 1..15 et `total_30 - total_15` sur 16..30
-    (avec 1 point garanti au niv. 1, puis cadence régulière)."""
+    (avec `lvl1_val` points garantis au niv. 1, puis cadence régulière)."""
     vals = [0] * n_rows
-    # Niveaux 1..15 (indices 0..14)
-    vals[0] = 1
-    rem15 = total_15 - 1
+    vals[0] = lvl1_val
+    rem15 = total_15 - lvl1_val
     for k in range(rem15):
-        # Répartition uniforme sur indices 1..14
         idx = 1 + int(round((k + 0.5) * 14 / rem15)) - 1
         idx = max(1, min(14, idx))
         while vals[idx] > 0 and idx < 14:
             idx += 1
         vals[idx] += 1
-    # Niveaux 16..30 (indices 15..29)
     rem30 = total_30 - total_15
     for k in range(rem30):
         idx = 15 + int(round((k + 0.5) * 15 / rem30)) - 1
@@ -92,7 +90,6 @@ def _distribute_points(total_15: int, total_30: int, n_rows: int = 50) -> list[i
         while vals[idx] > 0 and idx < 29:
             idx += 1
         vals[idx] += 1
-    # Niveaux 31..50 (indices 30..49) : rythme standard (1 tous les 2 niveaux)
     for idx in range(30, n_rows):
         vals[idx] = 1 if (idx % 2 == 0) else 0
     assert sum(vals[:15]) == total_15, (sum(vals[:15]), total_15)
@@ -132,20 +129,21 @@ def build_featgain() -> TwoDA:
 def build_classpowergain() -> TwoDA:
     pg = read_2da(REF_2DA / "classpowergain_tslrcm.2da")
     n = len(pg)
+    # (total_15, total_30, lvl1_val) — Gardien : +2 pouvoirs au Niv. 1 (decisions_finales.md §1)
     plan = {
-        "jgd": (6, 12),
-        "jwm": (6, 12),
-        "sma": (6, 12),
-        "jsn": (8, 16),
-        "jwa": (8, 16),
-        "sas": (8, 16),
-        "jcn": (12, 24),
-        "jma": (12, 24),
-        "sld": (12, 24),
+        "jgd": (6, 12, 2),
+        "jwm": (6, 12, 1),
+        "sma": (6, 12, 1),
+        "jsn": (8, 16, 1),
+        "jwa": (8, 16, 1),
+        "sas": (8, 16, 1),
+        "jcn": (12, 24, 2),
+        "jma": (12, 24, 1),
+        "sld": (12, 24, 1),
     }
-    for col, (t15, t30) in plan.items():
+    for col, (t15, t30, l1) in plan.items():
         if col in pg.get_headers():
-            dist = _distribute_points(t15, t30, n)
+            dist = _distribute_points(t15, t30, n, lvl1_val=l1)
             for i in range(n):
                 pg.get_row(i).set_string(col, str(dist[i]))
     assert_no_literal_stars(pg, "classpowergain.2da")
@@ -154,7 +152,7 @@ def build_classpowergain() -> TwoDA:
 
 
 # ============================================================================
-# 3. feat.2da + dialog.tlk (245 lignes TSLRCM intactes + 73 nouveaux dons)
+# 3. feat.2da + dialog.tlk (245 lignes TSLRCM intactes + 73 dons + 5 marqueurs)
 # ============================================================================
 
 ALL_LIST_COLS = [
@@ -177,6 +175,8 @@ ALL_NON_MAGE = [
     "jgd_list", "jsn_list", "jwm_list", "sma_list", "jwa_list", "sas_list",
     "sol_list", "sct_list", "scd_list", "tec_list", "drc_list", "drx_list",
 ]
+ALL_NON_DROID = [c for c in ALL_LIST_COLS if c not in ("drc_list", "drx_list")]
+ALL_NON_MAGE_NON_DROID = [c for c in ALL_NON_MAGE if c not in ("drc_list", "drx_list")]
 
 
 def _parse_min_level(prereq_txt: str) -> int:
@@ -191,9 +191,9 @@ def _allowed_classes_for_new_feat(label: str, cat: str, prereq_txt: str) -> tupl
     p_n = norm(prereq_txt)
     rank = 3 if lbl.endswith("_3") else (2 if lbl.endswith("_2") else 1)
 
-    # Affranchi de la Force (pouvoir passif exclusif Jedi protecteur)
+    # Affranchi de la Force : accordé automatiquement aux niv. 1/5/9 du Jedi Protecteur (jamais sélectionnable)
     if "UNBOUND_FORCE" in lbl:
-        return ["jwa_list"], 0
+        return [], 0
 
     # Spécialisations de caractéristique : ouvertes à toutes les classes (paliers Niv. 1 / 8 / 15)
     if "caracteristique" in c_n:
@@ -203,27 +203,40 @@ def _allowed_classes_for_new_feat(label: str, cat: str, prereq_txt: str) -> tupl
     if "styles de combat" in c_n:
         if rank <= 2 or "DUEL" in lbl:
             return ALL_LIST_COLS, 0
-        # R3 Ambidextrie / Arme Lourde / Haute cadence : Tous sauf Mages
         return ALL_NON_MAGE, 0
 
-    # Métamagie
+    # Métamagie (R3 : JMA/SLD + JCN bloqué par orreqfeat0=MOD_PRESTIGE_MAGE pour Kreia Niv. 15+)
     if "metamagie" in c_n:
         if "PROLONG" in lbl or rank == 1:
             return ALL_JEDI_BASE + MARTIAL_PRESTIGE + HYBRID_PRESTIGE + CASTER_PRESTIGE, 0
         if rank == 2:
             return ["jcn_list"] + CASTER_PRESTIGE, 0
-        return CASTER_PRESTIGE, 0
+        return CASTER_PRESTIGE + ["jcn_list"], 0
 
-    # Spécialisations d'arme (8 familles)
+    # Spécialisations d'arme (8 familles) — gating strict Sabres / Mêlée / Distance / Droïdes
     if "specialisations" in c_n and "arme" in c_n or "spec_" in lbl.lower():
+        if "SPEC_LASER" in lbl:
+            if rank == 1:
+                return ALL_JEDI_BASE + MARTIAL_PRESTIGE + HYBRID_PRESTIGE + CASTER_PRESTIGE, 0
+            if rank == 2:
+                return ["jgd_list", "jsn_list"] + MARTIAL_PRESTIGE + HYBRID_PRESTIGE, 0
+            return MARTIAL_PRESTIGE, 0
+        if any(k in lbl for k in ("SPEC_BLUNT", "SPEC_PRIM", "SPEC_VIBRO")):
+            if rank == 1:
+                return ALL_NON_DROID, 0
+            if rank == 2:
+                return ALL_NON_MAGE_NON_DROID, 0
+            return MARTIAL_PRESTIGE + ["sol_list", "sct_list", "scd_list", "tec_list"], 0
+        # 4 familles Distance (ASSAULT, HEAVY, TAC, ASSASSIN) : drx jusqu'à R2, drc jusqu'à R3
         if rank == 1:
             return ALL_LIST_COLS, 0
         if rank == 2:
             return ALL_NON_MAGE, 0
-        # R3 : Maître d'Armes / Maraudeur + non-Jedi (SOL/SCT/SCD/TEC/DRC via minattackbonus=15)
         return MARTIAL_PRESTIGE + ["sol_list", "sct_list", "scd_list", "tec_list", "drc_list"], 0
 
-    # Armures (Juggernaut, Armure Tactique, Esquive Ballistique)
+    # Armures (Juggernaut, Armure Tactique, Esquive Balistique)
+    # Note : jsn_list sur Armure Tactique III et Esquive Balistique III est verrouillé via
+    # orreqfeat0=MOD_PRESTIGE_HYBRID (octroyé à Visas Niv. 15+, bloquant un PJ Sentinelle non prestige).
     if "armure" in c_n or "ARMOR_" in lbl:
         if rank == 1:
             return ALL_LIST_COLS, 0
@@ -234,13 +247,12 @@ def _allowed_classes_for_new_feat(label: str, cat: str, prereq_txt: str) -> tupl
         if "MED" in lbl:  # Armure Tactique
             if rank == 2:
                 return ["jsn_list", "jwa_list", "sas_list", "sct_list", "scd_list", "tec_list"], 0
-            return HYBRID_PRESTIGE + ["sct_list", "scd_list", "tec_list"], 0
-        if "LIGHT" in lbl:  # Esquive Ballistique
+            return HYBRID_PRESTIGE + ["jsn_list", "sct_list", "scd_list", "tec_list"], 0
+        if "LIGHT" in lbl:  # Esquive Balistique
             if rank == 2:
                 return ["jgd_list", "jsn_list", "jwm_list", "sma_list", "jwa_list", "sas_list", "sol_list", "sct_list", "scd_list"], 0
-            return MARTIAL_PRESTIGE + HYBRID_PRESTIGE + ["sol_list", "sct_list", "scd_list"], 0
+            return MARTIAL_PRESTIGE + HYBRID_PRESTIGE + ["jsn_list", "sol_list", "sct_list", "scd_list"], 0
 
-    # Fallback sûr
     if "tous sauf mages" in p_n:
         return ALL_NON_MAGE, 0
     return ALL_LIST_COLS, 0
@@ -287,12 +299,51 @@ def _pick_real_icon(label: str, cat: str) -> str:
     return f"if_duel{rank}"
 
 
+# 5 dons marqueurs internes (ajoutés APRÈS les 73 dons CSV pour préserver tous les index 245..317)
+INTERNAL_MARKER_FEATS: list[tuple[str, str, str, str, dict[str, str]]] = [
+    (
+        "MOD_PRESTIGE_MAGE",
+        "Voie des Arcanes",
+        "[Mod D20-Overhaul]\nMaîtrise avancée de la Force ouvrant l'accès au Rang III de Métamagie (Maître Jedi, Seigneur Sith et Kreia Niv. 15+).",
+        "if_focmaster",
+        {"jma_granted": "1", "sld_granted": "1"},
+    ),
+    (
+        "MOD_PRESTIGE_HYBRID",
+        "Voie de l'Ombre",
+        "[Mod D20-Overhaul]\nMaîtrise tactique et furtive ouvrant l'accès aux dons de prestige hybrides (Protecteur, Assassin, Visas Niv. 15+ et spécialistes).",
+        "if_focaware",
+        {"jwa_granted": "1", "sas_granted": "1", "sct_granted": "1", "scd_granted": "1", "tec_granted": "1"},
+    ),
+    (
+        "MOD_PRESTIGE_MARTIAL",
+        "Voie Martiale",
+        "[Mod D20-Overhaul]\nMaîtrise martiale avancée ouvrant l'accès aux spécialisations d'armure de Rang III (Maître d'Armes, Maraudeur et Soldat).",
+        "if_pattack03",
+        {"jwm_granted": "1", "sma_granted": "1", "sol_granted": "1"},
+    ),
+    (
+        "MOD_BOSS_RD",
+        "Endurance d'Élite",
+        "[Mod D20-Overhaul]\nRésistance aux dégâts passive de sous-boss et de boss (RD 2 / 5 / 8 selon le palier de niveau).",
+        "if_armprof03",
+        {},
+    ),
+    (
+        "MOD_BATTLE_PRECOG",
+        "Prémonition du combat (Echani)",
+        "[Mod D20-Overhaul]\nEnseignement de la Servante : accorde passivement +10 % d'esquive au corps à corps (remplace le bonus SAG à la CA).",
+        "if_finesse02",
+        {},
+    ),
+]
+
+
 def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
     feat = read_2da(REF_2DA / "feat_tslrcm.2da")
     tlk = read_tlk(BASE_TLK)
     rows = read_csv_rows(CSV_FEATS)
 
-    # Template de ligne propre (cellules vides = "", *_list = "4" = NON DISPONIBLE par défaut, allclassescanuse = "0")
     tmpl = {h: "" for h in feat.get_headers()}
     tmpl["icon"] = "if_duel01"
     tmpl["gainmultiple"] = "0"
@@ -305,8 +356,7 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
     for c in ALL_LIST_COLS:
         tmpl[c] = "4"
 
-    # 1. Masquer les 28 dons supprimés SANS supprimer leurs lignes (compatibilité sauvegardes !)
-    # En KotOR 2 feat.2da : *_list = "4" + allclassescanuse = "0" masque complètement le don.
+    # 1. Masquer les 28/29 dons supprimés SANS supprimer leurs lignes (compatibilité sauvegardes !)
     hidden_count = 0
     desc_col_idx = rows[0].index("Description (mod)") if rows and "Description (mod)" in rows[0] else -1
     vanilla_desc_updated = 0
@@ -332,8 +382,6 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
             vanilla_desc_updated += 1
 
     # 1b. Calibrage B4-1 : Spécialiste combat à mains nues plafonné au Rang III (+3d4) et harmonisé Prestige
-    #     Base Jedi / Servante / Bao-Dur : Niv. 4 / 12 / 19 ; Classes de prestige : Niv. 1 / 1 / 4 (= Niv. 19 total)
-    #     (Rangs IV-VIII lignes 215-219 déjà masqués + colonnes granted/handmaiden/baodur vidées via "Supprimé" ci-dessus.)
     unarmed_schedule = {
         212: (4, 1),   # UNARMED_SPECIALIST_I (+1d4)
         213: (12, 1),  # UNARMED_SPECIALIST_II (+2d4)
@@ -351,7 +399,14 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
                 if c in feat.get_headers():
                     frow.set_string(c, str(prest_lvl))
 
-    # 2. Ajouter les 73 nouveaux dons à partir de l'index 245+
+    # 1c. Renommer les anciens dons XXXFORCE_CAMOFLAGE (97, 141, 142) en Spectre de la Force I-III par cohérence TLK
+    for fid, nm in ((97, "Spectre de la Force I"), (141, "Spectre de la Force II"), (142, "Spectre de la Force III")):
+        if fid < len(feat):
+            nref = len(tlk)
+            tlk.add(nm)
+            feat.get_row(fid).set_string("name", str(nref))
+
+    # 2. Recenser les 73 nouveaux dons + 5 marqueurs internes afin de connaître tous les IDs avant chaînage
     feat_ids: dict[str, int] = {}
     new_rows_data: list[tuple[int, list[str]]] = []
     next_id = len(feat)
@@ -362,6 +417,46 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         feat_ids[label] = next_id
         new_rows_data.append((next_id, r))
         next_id += 1
+
+    marker_rows_data: list[tuple[int, tuple[str, str, str, str, dict[str, str]]]] = []
+    for mspec in INTERNAL_MARKER_FEATS:
+        feat_ids[mspec[0]] = next_id
+        marker_rows_data.append((next_id, mspec))
+        next_id += 1
+
+    id_prest_mage = feat_ids["MOD_PRESTIGE_MAGE"]
+    id_prest_hyb = feat_ids["MOD_PRESTIGE_HYBRID"]
+    id_prest_mart = feat_ids["MOD_PRESTIGE_MARTIAL"]
+
+    # 2b. Esquive Totale (FEAT_EVASION, ligne 125) :
+    #     Sélectionnable dès Niv. 15 pour JWA, SAS et Visas (jsn_list=1 verrouillé par MOD_PRESTIGE_HYBRID).
+    #     Mira conserve sct_granted="6".
+    if len(feat) > 125:
+        ev_row = feat.get_row(125)
+        ev_row.set_string("jwa_list", "1")
+        ev_row.set_string("sas_list", "1")
+        ev_row.set_string("jsn_list", "1")
+        ev_row.set_string("mincharlevel", "15")
+        ev_row.set_string("prereqfeat1", str(id_prest_hyb))
+
+    # Prérequis Rang I (port d'armure 4/5/6 & maîtrise d'arme 39/40/43/44)
+    r1_prereq_exact: dict[str, str] = {
+        "MOD_ARMOR_LIGHT_1": "5",   # ARMOUR_PROF_LIGHT
+        "MOD_ARMOR_MED_1":   "6",   # ARMOUR_PROF_MEDIUM
+        "MOD_ARMOR_HEAVY_1": "4",   # ARMOUR_PROF_HEAVY
+        "MOD_SPEC_BLUNT_1":  "44",  # WEAPON_PROF_MELEE_WEAPONS
+        "MOD_SPEC_PRIM_1":   "44",  # WEAPON_PROF_MELEE_WEAPONS
+        "MOD_SPEC_VIBRO_1":  "44",  # WEAPON_PROF_MELEE_WEAPONS
+        "MOD_SPEC_LASER_1":  "43",  # WEAPON_PROF_LIGHTSABER
+    }
+    r1_prereq_or_ranged = {
+        "MOD_SPEC_ASSAULT_1", "MOD_SPEC_HEAVY_1", "MOD_SPEC_TAC_1", "MOD_SPEC_ASSASSIN_1",
+    }
+    unbound_grant_lvls = {
+        "MOD_UNBOUND_FORCE_1": "1",
+        "MOD_UNBOUND_FORCE_2": "5",
+        "MOD_UNBOUND_FORCE_3": "9",
+    }
 
     for fid, r in new_rows_data:
         label = r[1].strip()
@@ -386,13 +481,10 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         entry["icon"] = _pick_real_icon(label, cat)
 
         min_lvl = _parse_min_level(prereq)
-        if min_lvl > 1:
+        if min_lvl > 1 and label not in unbound_grant_lvls:
             entry["mincharlevel"] = str(min_lvl)
 
-        # Chaînage exact vanilla KotOR 2 :
-        #   Rang I  : pre1="", pre2="", succ=Rang II
-        #   Rang II : pre1=Rang I, pre2="", succ=Rang III
-        #   Rang III: pre1=Rang I, pre2=Rang II, succ="" (obligatoire pour l'affichage UI!)
+        # Chaînage exact vanilla KotOR 2
         if label.endswith("_1") and (label[:-2] + "_2") in feat_ids:
             entry["successor"] = str(feat_ids[label[:-2] + "_2"])
             entry["pips"] = "1"
@@ -411,6 +503,26 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         else:
             entry["pips"] = "1"
 
+        # Prérequis R1 (armures & armes)
+        if label in r1_prereq_exact:
+            entry["prereqfeat1"] = r1_prereq_exact[label]
+        elif label in r1_prereq_or_ranged:
+            entry["orreqfeat0"] = "39"  # WEAPON_PROF_BLASTER
+            entry["orreqfeat1"] = "40"  # WEAPON_PROF_BLASTER_RIFLE
+
+        # Verrous prestige compagnons Kreia / Visas (via orreqfeat0 / orreqfeat1)
+        if label in ("MOD_META_EMPOWER_3", "MOD_META_PENETRATE_3"):
+            entry["orreqfeat0"] = str(id_prest_mage)
+        elif label == "MOD_ARMOR_MED_3":
+            entry["orreqfeat0"] = str(id_prest_hyb)
+        elif label == "MOD_ARMOR_LIGHT_3":
+            entry["orreqfeat0"] = str(id_prest_hyb)
+            entry["orreqfeat1"] = str(id_prest_mart)
+
+        # Affranchi de la Force I–III : octroyé automatiquement au Jedi Protecteur aux niv. 1 / 5 / 9
+        if label in unbound_grant_lvls:
+            entry["jwa_granted"] = unbound_grant_lvls[label]
+
         allowed_cols, min_bab = _allowed_classes_for_new_feat(label, cat, prereq)
         for c in allowed_cols:
             if c in entry:
@@ -420,11 +532,30 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
 
         feat.add_row(str(fid), entry)
 
+    # 3. Ajouter les 5 dons marqueurs internes
+    for fid, (mlbl, mname, mdesc, micon, mgrants) in marker_rows_data:
+        name_ref = len(tlk)
+        tlk.add(mname)
+        desc_ref = len(tlk)
+        tlk.add(mdesc)
+        entry = dict(tmpl)
+        entry["label"] = mlbl
+        entry["name"] = str(name_ref)
+        entry["description"] = str(desc_ref)
+        entry["icon"] = micon
+        for gcol, glvl in mgrants.items():
+            if gcol in entry:
+                entry[gcol] = glvl
+        feat.add_row(str(fid), entry)
+
     assert_no_literal_stars(feat, "feat.2da")
     write_2da(feat, OVR_DIR / "feat.2da")
     write_tlk(tlk, OUT_DIR / "dialog.tlk")
     (OUT_DIR / "feat_ids.json").write_text(json.dumps(feat_ids, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"[OK] feat.2da ({len(feat)} rows: {hidden_count} masqués, {len(new_rows_data)} ajoutés) + dialog.tlk ({len(tlk)} entrées)")
+    print(
+        f"[OK] feat.2da ({len(feat)} rows: {hidden_count} masqués, {len(new_rows_data)} dons + "
+        f"{len(marker_rows_data)} marqueurs ajoutés) + dialog.tlk ({len(tlk)} entrées)"
+    )
     return feat, feat_ids
 
 
@@ -462,13 +593,11 @@ GAMORREAN_MIRROR_LABELS = [
     "Wookie_Warblade",
 ]
 
-# Armes de mêlée 2M non-doubles (Armes.csv) : main droite uniquement (0x00010), 1 attaque/rd (wield=2), taille 2M (4)
 MELEE_2H_BASEITEMS = (
     "Vibro_Sword",
     "Gammorean_Battleaxe",
     "Force_Pike",
 )
-
 
 WEAPON_CSV_TO_BASEITEM = {
     "blaster carbines": "Blaster_Carbine",
@@ -506,9 +635,6 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
     bi = read_2da(REF_2DA / "baseitems_tslrcm.2da")
     by_label = {bi.get_row(i).get_string("label"): i for i in range(len(bi))}
 
-    # 1. Armures : CA base & DEX max actés (22/11)
-    # + Armor_Zeison_Sha (row 102) : itemtype 38 (Robe) -> 31 (Armure légère AC4) pour griser
-    # nativement les pouvoirs interdits en armure tout en conservant bodyvar=M (modèles 3D intacts).
     arm_updated = 0
     for lbl, (ac, max_dex) in ARMOR_BASEITEM_MAP.items():
         if lbl in by_label:
@@ -519,7 +645,6 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
                 r.set_string("itemtype", "31")
             arm_updated += 1
 
-    # 2. Armes : dégâts d20 & critique depuis Armes.csv (mapping exact 1-à-1)
     weap_rows = read_csv_rows(CSV_WEAPONS)
     weap_updated = 0
     for r in weap_rows[1:]:
@@ -541,8 +666,6 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
             brow.set_string("crithitmult", m_crit.group(2))
         weap_updated += 1
 
-    # 2a. Maniement 2M des armes de mêlée lourdes (Vibro_Sword, Gammorean_Battleaxe, Force_Pike) :
-    #     equipableslots=0x00010 (bloque la main gauche sans Gamoréen II), weaponwield=2 (1 att/rd, pas double), weaponsize=4.
     for lbl in MELEE_2H_BASEITEMS:
         if lbl in by_label:
             brow = bi.get_row(by_label[lbl])
@@ -550,8 +673,6 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
             brow.set_string("weaponwield", "2")
             brow.set_string("weaponsize", "4")
 
-    # 2b. Compatibilité K2CP : Creature_Item_Slash (row 81) + Mining_Laser (row 104) & Adv_Mining_Laser (row 105)
-    # Placés AVANT nos variantes 1M afin que leurs index (104, 105) coïncident exactement avec K2CP v1.6.3.
     if len(bi) > 81:
         bi.get_row(81).set_string("droidorhuman", "0")
 
@@ -592,7 +713,6 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
         bi.add_row(str(aml_idx), aml_dict)
         mirror_map["Adv_Mining_Laser"] = aml_idx
 
-    # 3. Variantes miroirs 1M pour Gamoréen II (validé T1 + T2)
     gam2_id = feat_ids.get("MOD_GAMORREAN_2") or feat_ids.get("MOD_GAMORRAN_2")
     assert gam2_id is not None, f"MOD_GAMORREAN_2 introuvable dans {list(feat_ids.keys())[:10]}"
     for lbl in GAMORREAN_MIRROR_LABELS:
@@ -612,7 +732,6 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
         bi.add_row(str(new_idx), new_dict)
         mirror_map[lbl] = new_idx
 
-    # 4. Baseitem dédié pour la Torche à plasma (dégâts vanilla 1d1 + 1d6 Feu de l'UTI, sans toucher aux Matraques 1d8)
     if "Stun_Baton" in by_label:
         src_row = bi.get_row(by_label["Stun_Baton"])
         pt_dict = {h: src_row.get_string(h) for h in bi.get_headers()}
@@ -633,7 +752,7 @@ def build_baseitems(feat_ids: dict[str, int]) -> TwoDA:
 
 
 # ============================================================================
-# 5. spells.2da (forbiditemmask + coûts PF évolutifs depuis Spé Pouvoirs.csv)
+# 5. spells.2da (forbiditemmask + coûts PF + Festin de mort L3 + Cicatrice I–III)
 # ============================================================================
 
 ARMOR_MASK_MAP = [
@@ -643,52 +762,182 @@ ARMOR_MASK_MAP = [
     (("armure lourde", "lourde"), "0x0000"),
 ]
 
+ALL_SPELL_CLASS_COLS = (
+    "guardian", "consular", "sentinel",
+    "weapmstr", "jedimaster", "watchman",
+    "marauder", "sithlord", "assassin",
+)
 
-# Mapping explicite ligne Spé Pouvoirs.csv (clé VO normalisée) -> [L1, L2, L3] labels exacts dans spells.2da
+# Mapping exhaustif & vérifié : clé VO normalisée (Spé Pouvoirs.csv) -> labels EXACTS dans spells.2da
 POWER_FAMILY_SPELLS: list[tuple[str, list[str]]] = [
-    ("force aura",         ["FORCE_POWER_FORCE_AURA", "FORCE_POWER_FORCE_SHIELD", "FORCE_POWER_FORCE_ARMOR"]),
-    ("force barrier",      ["FORCE_POWER_FORCE_BARRIER", "FORCE_POWER_IMPROVED_FORCE_BARRIER", "FORCE_POWER_MASTER_FORCE_BARRIER"]),
-    ("force valor",        ["FORCE_POWER_FORCE_VALOR", "FORCE_POWER_KNIGHT_VALOR", "FORCE_POWER_MASTER_VALOR"]),
-    ("cure / heal",        ["FORCE_POWER_CURE", "FORCE_POWER_HEAL", "FORCE_POWER_MASTER_HEAL"]),
-    ("revitalize",         ["FORCE_POWER_REVITALIZE", "FORCE_POWER_IMPROVED_REVITALIZE", "FORCE_POWER_MASTER_REVITALIZE"]),
-    ("stun / stasis",      ["FORCE_POWER_STUN", "FORCE_POWER_STASIS", "FORCE_POWER_STASIS_FIELD"]),
-    ("stun droid",         ["FORCE_POWER_STUN_DROID", "FORCE_POWER_DISABLE_DROID", "FORCE_POWER_DESTROY_DROID"]),
-    ("inspire followers",  ["FORCE_POWER_INSPIRE_FOLLOWERS_I", "FORCE_POWER_INSPIRE_FOLLOWERS_II", "FORCE_POWER_INSPIRE_FOLLOWERS_III"]),
-    ("force enlightenment",["FORCE_POWER_FORCE_ENLIGHTENMENT"]),
-    ("burst of speed",     ["FORCE_POWER_SPEED_BURST", "FORCE_POWER_KNIGHT_SPEED", "FORCE_POWER_MASTER_SPEED"]),
-    ("energy resistance",  ["FORCE_POWER_ENERGY_RESISTANCE", "FORCE_POWER_IMPROVED_ENERGY_RESISTANCE", "FORCE_POWER_MASTER_ENERGY_RESISTANCE"]),
-    ("force resistance",   ["FORCE_POWER_FORCE_RESISTANCE", "FORCE_POWER_FORCE_IMMUNITY"]),
-    ("force suppression",  ["FORCE_POWER_SUPPRESS_FORCE", "FORCE_POWER_FORCE_BREACH"]),
-    ("battle meditation",  ["FORCE_POWER_BATTLE_MEDITATION", "FORCE_POWER_IMPROVED_BATTLE_MEDITATION", "FORCE_POWER_MASTER_BATTLE_MEDITATION"]),
-    ("force push",         ["FORCE_POWER_FORCE_PUSH", "FORCE_POWER_FORCE_WHIRLWIND", "FORCE_POWER_FORCE_WAVE"]),
-    ("throw lightsaber",   ["FORCE_POWER_LIGHT_SABER_THROW", "FORCE_POWER_LIGHT_SABER_THROW_ADVANCED"]),
-    ("affect mind",        ["FORCE_POWER_AFFECT_MIND", "FORCE_POWER_DOMINATE_MIND"]),
-    ("force confusion",    ["FORCE_POWER_CONFUSION"]),
-    ("beast trick",        ["FORCE_POWER_BEAST_TRICK", "FORCE_POWER_BEAST_CONFUSION"]),
-    ("breath control",     ["FORCE_POWER_BREATH_CONTROL"]),
-    ("force camouflage",   ["FORCE_POWER_FORCE_CAMOFLAGE", "FORCE_POWER_IMPROVED_FORCE_CAMOFLAGE", "FORCE_POWER_MASTER_FORCE_CAMOFLAGE"]),
-    ("force sight",        ["FORCE_POWER_FORCE_SIGHT"]),
-    ("drain force",        ["FORCE_POWER_DRAIN_FORCE", "FORCE_POWER_IMPROVED_DRAIN_FORCE", "FORCE_POWER_MASTER_DRAIN_FORCE"]),
-    ("drain life",         ["FORCE_POWER_DRAIN_LIFE", "FORCE_POWER_DEATH_FIELD"]),
-    ("fear / horror",      ["FORCE_POWER_FEAR", "FORCE_POWER_HORROR", "FORCE_POWER_INSANITY"]),
-    ("force scream",       ["FORCE_POWER_FORCE_SCREAM", "FORCE_POWER_IMPROVED_FORCE_SCREAM", "FORCE_POWER_MASTER_FORCE_SCREAM"]),
-    ("shock / force",      ["FORCE_POWER_SHOCK", "FORCE_POWER_FORCE_LIGHTNING", "FORCE_POWER_FORCE_STORM"]),
-    ("slow / affliction",  ["FORCE_POWER_SLOW", "FORCE_POWER_AFFLICTION", "FORCE_POWER_PLAGUE"]),
-    ("wound / choke",      ["FORCE_POWER_WOUND", "FORCE_POWER_CHOKE", "FORCE_POWER_KILL"]),
-    ("crush opposition",   ["FORCE_POWER_CRUSH_OPPOSITION_I", "FORCE_POWER_CRUSH_OPPOSITION_II", "FORCE_POWER_CRUSH_OPPOSITION_III"]),
-    ("force crush",        ["FORCE_POWER_FORCE_CRUSH"]),
-    ("fury / improved",    ["FORCE_POWER_FURY", "FORCE_POWER_IMPROVED_FURY", "FORCE_POWER_MASTER_FURY"]),
+    ("force aura",            ["FORCE_POWER_FORCE_AURA", "FORCE_POWER_FORCE_SHIELD", "FORCE_POWER_FORCE_ARMOR"]),
+    ("force barrier",         ["FORCE_POWER_FORCE_BARRIER", "FORCE_POWER_IMPROVED_FORCE_BARRIER", "FORCE_POWER_MASTER_FORCE_BARRIER"]),
+    ("force valor",           ["FORCE_POWER_FORCE_VALOR", "FORCE_POWER_KNIGHT_VALOR", "FORCE_POWER_MASTER_VALOR"]),
+    ("cure / heal",           ["FORCE_POWER_CURE", "FORCE_POWER_HEAL", "FORCE_POWER_MASTER_HEAL"]),
+    ("revitalize",            ["FORCE_POWER_REVITALIZE", "FORCE_POWER_IMPROVED_REVITALIZE", "FORCE_POWER_MASTER_REVITALIZE"]),
+    ("stun / stasis",         ["FORCE_POWER_STUN", "FORCE_POWER_STASIS", "FORCE_POWER_MASS_STASIS"]),
+    ("stun droid",            ["FORCE_POWER_DROID_STUN", "FORCE_POWER_DROID_DISABLE", "FORCE_POWER_DROID_DESTROY"]),
+    ("battle precognition",   ["FORCE_POWER_BATTLE_PRECOGNITION"]),
+    ("force enlightenment",   ["FORCE_POWER_FORCE_ENLIGHTENMENT"]),
+    ("inspire followers",     ["FORCE_POWER_INSPIRE_FOLLOWERS_I", "FORCE_POWER_INSPIRE_FOLLOWERS_II", "FORCE_POWER_INSPIRE_FOLLOWERS_III"]),
+    ("affect mind",           ["FORCE_POWER_AFFECT_MIND", "FORCE_POWER_DOMINATE"]),
+    ("battle meditation",     ["FORCE_POWER_BATTLE_MEDITATION_PC", "FORCE_POWER_IMPROVED_BATTLE_MEDITATION_PC", "FORCE_POWER_MASTER_BATTLE_MEDITATION_PC"]),
+    ("burst of speed",        ["FORCE_POWER_SPEED_BURST", "FORCE_POWER_KNIGHT_SPEED", "FORCE_POWER_SPEED_MASTERY"]),
+    ("energy resistance",     ["FORCE_POWER_RESIST_ENERGY_1", "FORCE_POWER_RESIST_ENERGY_2", "FORCE_POWER_MASTER_ENERGY_RESISTANCE"]),
+    ("force body",            ["FORCE_POWER_FORCE_BODY", "FORCE_POWER_IMPROVED_FORCE_BODY", "FORCE_POWER_MASTER_FORCE_BODY"]),
+    ("force deflection",      ["FORCE_POWER_FORCE_REPULSION", "FORCE_POWER_FORCE_REDIRECTION"]),
+    ("force push",            ["FORCE_POWER_FORCE_PUSH", "FORCE_POWER_FORCE_WHIRLWIND", "FORCE_POWER_FORCE_WAVE"]),
+    ("force resistance",      ["FORCE_POWER_RESIST_FORCE", "FORCE_POWER_FORCE_IMMUNITY"]),
+    ("force suppression",     ["FORCE_POWER_SUPRESS_FORCE", "FORCE_POWER_FORCE_BREACH"]),
+    ("mind trick / confusion",["FORCE_POWER_MIND_TRICK", "FORCE_POWER_CONFUSION"]),
+    ("throw lightsaber",      ["FORCE_POWER_LIGHT_SABER_THROW", "FORCE_POWER_LIGHT_SABER_THROW_ADVANCED"]),
+    ("beast trick",           ["FORCE_POWER_BEAST_TRICK", "FORCE_POWER_BEAST_CONFUSION"]),
+    ("breath control",        ["FORCE_POWER_BREATH_CONTROL"]),
+    ("force camouflage",      ["FORCE_POWER_FORCE_CAMOUFLAGE", "FORCE_POWER_IMPROVED_FORCE_CAMOUFLAGE", "FORCE_POWER_MASTER_FORCE_CAMOUFLAGE"]),
+    ("force sight",           ["FORCE_POWER_FORCE_SIGHT"]),
+    ("precognition (",        ["FORCE_POWER_PRECOGNITION"]),
+    ("drain force",           ["FORCE_POWER_DRAIN_FORCE", "FORCE_POWER_IMPROVED_DRAIN_FORCE", "FORCE_POWER_MASTER_DRAIN_FORCE"]),
+    ("drain life",            ["FORCE_POWER_DRAIN_LIFE", "FORCE_POWER_DEATH_FIELD", "FORCE_POWER_DEATH_FEAST"]),
+    ("fear / horror",         ["FORCE_POWER_FEAR", "FORCE_POWER_HORROR", "FORCE_POWER_INSANITY"]),
+    ("force scream",          ["FORCE_POWER_FORCE_SCREAM", "FORCE_POWER_IMPROVED_FORCE_SCREAM", "FORCE_POWER_MASTER_FORCE_SCREAM"]),
+    ("shock / force",         ["FORCE_POWER_SHOCK", "FORCE_POWER_LIGHTNING", "FORCE_POWER_FORCE_STORM"]),
+    ("slow / affliction",     ["FORCE_POWER_SLOW", "FORCE_POWER_AFFLICTION", "FORCE_POWER_PLAGUE"]),
+    ("wound / choke",         ["FORCE_POWER_WOUND", "FORCE_POWER_CHOKE", "FORCE_POWER_KILL"]),
+    ("crush opposition",      ["FORCE_POWER_CRUSH_OPPOSITION_I", "FORCE_POWER_CRUSH_OPPOSITION_II", "FORCE_POWER_CRUSH_OPPOSITION_III"]),
+    ("force crush",           ["FORCE_POWER_FORCE_CRUSH"]),
+    ("fury / improved",       ["FORCE_POWER_FURY", "FORCE_POWER_IMPROVED_FURY", "FORCE_POWER_MASTER_FURY"]),
+    ("force scar",            ["FORCE_POWER_FORCE_SCAR_I", "FORCE_POWER_FORCE_SCAR_II", "FORCE_POWER_FORCE_SCAR_III"]),
 ]
 
+SPELL_RENAME_FR: dict[str, str] = {
+    "FORCE_POWER_INSPIRE_FOLLOWERS_I":       "Écho des Liens I",
+    "FORCE_POWER_INSPIRE_FOLLOWERS_II":      "Écho des Liens II",
+    "FORCE_POWER_INSPIRE_FOLLOWERS_III":     "Écho des Liens III",
+    "FORCE_POWER_CRUSH_OPPOSITION_I":        "Déchirure de la Force I",
+    "FORCE_POWER_CRUSH_OPPOSITION_II":       "Déchirure de la Force II",
+    "FORCE_POWER_CRUSH_OPPOSITION_III":      "Déchirure de la Force III",
+    "FORCE_POWER_FURY":                      "Stigmate de Force I",
+    "FORCE_POWER_IMPROVED_FURY":             "Stigmate de Force II",
+    "FORCE_POWER_MASTER_FURY":               "Stigmate de Force III",
+    "FORCE_POWER_FORCE_CAMOUFLAGE":          "Spectre de la Force I",
+    "FORCE_POWER_IMPROVED_FORCE_CAMOUFLAGE": "Spectre de la Force II",
+    "FORCE_POWER_MASTER_FORCE_CAMOUFLAGE":   "Spectre de la Force III",
+    "FORCE_POWER_FORCE_SCAR_I":              "Cicatrice de Force I",
+    "FORCE_POWER_FORCE_SCAR_II":             "Cicatrice de Force II",
+    "FORCE_POWER_FORCE_SCAR_III":            "Cicatrice de Force III",
+    "FORCE_POWER_DEATH_FEAST":               "Festin de mort",
+}
 
-def build_spells() -> TwoDA:
+
+def build_spells() -> tuple[TwoDA, dict[str, int]]:
     sp = read_2da(REF_2DA / "spells_tslrcm.2da")
     tlk = read_tlk(OUT_DIR / "dialog.tlk")
+    headers = sp.get_headers()
+    spell_ids: dict[str, int] = {}
+
+    # 1. Ajouter Festin de mort (L3 de Absorption de vie / Champ de mort)
+    df_row = sp.get_row(11)  # FORCE_POWER_DEATH_FIELD
+    for col in ALL_SPELL_CLASS_COLS + ("inate",):
+        if col in headers:
+            df_row.set_string(col, "15")  # L2 Niv. 15 (Spé Pouvoirs.csv)
+    df_row.set_string("pips", "2")
+
+    feast_dict = {h: df_row.get_string(h) for h in headers}
+    feast_dict["label"] = "FORCE_POWER_DEATH_FEAST"
+    feast_dict["prerequisites"] = "15_11"
+    feast_dict["pips"] = "3"
+    feast_dict["forcepoints"] = "55"
+    feast_dict["forbiditemmask"] = "0x003f"
+    for col in ALL_SPELL_CLASS_COLS + ("inate",):
+        if col in feast_dict:
+            feast_dict[col] = "18"
+    feast_idx = len(sp)
+    sp.add_row(str(feast_idx), feast_dict)
+    spell_ids["FORCE_POWER_DEATH_FEAST"] = feast_idx
+
+    # 2. Ajouter Cicatrice de Force I–III (miroir LS Maître d'Armes de Stigmate de Force / Fury)
+    scar_icons = [
+        sp.get_row(135).get_string("iconresref") or "ip_forcebar01",
+        sp.get_row(136).get_string("iconresref") or "ip_forcebar02",
+        sp.get_row(137).get_string("iconresref") or "ip_forcebar03",
+    ]
+    scar_lvls = ("1", "5", "9")
+    scar_fps = ("20", "30", "40")
+    scar_src_rows = (164, 165, 166)
+    scar_created: list[int] = []
+    for i, (src_r, slbl) in enumerate(zip(scar_src_rows, ("FORCE_POWER_FORCE_SCAR_I", "FORCE_POWER_FORCE_SCAR_II", "FORCE_POWER_FORCE_SCAR_III"))):
+        base_r = sp.get_row(src_r)
+        sdict = {h: base_r.get_string(h) for h in headers}
+        sdict["label"] = slbl
+        sdict["goodevil"] = "G"
+        sdict["forbiditemmask"] = "0x0000"
+        sdict["forcepoints"] = scar_fps[i]
+        sdict["iconresref"] = scar_icons[i]
+        sdict["pips"] = str(i + 1)
+        for col in ALL_SPELL_CLASS_COLS:
+            if col in sdict:
+                sdict[col] = scar_lvls[i] if col == "weapmstr" else "-1"
+        if i == 0:
+            sdict["prerequisites"] = ""
+        elif i == 1:
+            sdict["prerequisites"] = str(scar_created[0])
+        else:
+            sdict["prerequisites"] = f"{scar_created[0]}_{scar_created[1]}"
+        new_idx = len(sp)
+        sp.add_row(str(new_idx), sdict)
+        scar_created.append(new_idx)
+        spell_ids[slbl] = new_idx
+
+    # 3. Harmoniser les paliers 1/5/9 des pouvoirs de prestige & masquer les rangs IV–VI obsolètes
+    prestige_schedules = [
+        ((167, 168, 169), "jedimaster"),  # Écho des Liens I–III
+        ((144, 145, 146), "sithlord"),    # Déchirure de la Force I–III
+        ((164, 165, 166), "marauder"),    # Stigmate de Force I–III
+        ((156, 157, 158), "assassin"),    # Spectre de la Force I–III (retiré à watchman)
+    ]
+    for r_ids, target_col in prestige_schedules:
+        for idx_i, rid in enumerate(r_ids):
+            srow = sp.get_row(rid)
+            for col in ALL_SPELL_CLASS_COLS:
+                if col in headers:
+                    srow.set_string(col, ("1", "5", "9")[idx_i] if col == target_col else "-1")
+            srow.set_string("pips", str(idx_i + 1))
+
+    # Masquer rangs IV–VI (147–149 Crush Opposition IV–VI, 170–172 Inspire Followers IV–VI)
+    for dead_rid in (147, 148, 149, 170, 171, 172):
+        if dead_rid < len(sp):
+            drow = sp.get_row(dead_rid)
+            drow.set_string("prerequisites", "")
+            for col in ALL_SPELL_CLASS_COLS + ("inate",):
+                if col in headers:
+                    drow.set_string(col, "-1")
+
+    # Grâce du côté Lumineux (180) : lancer instantané (conjtime=0, casttime=0)
+    if len(sp) > 180:
+        enl = sp.get_row(180)
+        enl.set_string("conjtime", "0")
+        enl.set_string("casttime", "0")
+
+    # 4. Synchroniser 100 % des lignes de Spé Pouvoirs.csv (vérification stricte d'existence de chaque label)
     by_label = {sp.get_row(i).get_string("label"): i for i in range(len(sp))}
+    for _, slbls in POWER_FAMILY_SPELLS:
+        for slbl in slbls:
+            assert slbl in by_label, f"Label spells.2da introuvable : {slbl}"
+
+    # Renommage TLK VF des pouvoirs de prestige et nouveaux sorts
+    renamed = 0
+    for slbl, fr_name in SPELL_RENAME_FR.items():
+        if slbl in by_label:
+            nref = len(tlk)
+            tlk.add(fr_name)
+            sp.get_row(by_label[slbl]).set_string("name", str(nref))
+            renamed += 1
+
     rows = read_csv_rows(CSV_POWERS)
     desc_idx = rows[0].index("Description (mod)") if rows and "Description (mod)" in rows[0] else -1
     updated = 0
     desc_updated = 0
+    matched_families: set[str] = set()
     for r in rows[1:]:
         if len(r) < 3:
             continue
@@ -707,38 +956,43 @@ def build_spells() -> TwoDA:
 
         for needle, spell_labels in POWER_FAMILY_SPELLS:
             if needle in name_n:
+                matched_families.add(needle)
                 desc_ref: int | None = None
                 if desc_mod:
                     desc_ref = len(tlk)
                     tlk.add(desc_mod)
                 for tier_i, slbl in enumerate(spell_labels):
-                    if slbl not in by_label:
-                        continue
                     srow = sp.get_row(by_label[slbl])
                     if mask is not None:
                         srow.set_string("forbiditemmask", mask)
                     if pf_vals:
                         cost = pf_vals[min(tier_i, len(pf_vals) - 1)]
                         srow.set_string("forcepoints", str(cost))
-                    if desc_ref is not None and "spelldesc" in sp.get_headers():
+                    if desc_ref is not None and "spelldesc" in headers:
                         srow.set_string("spelldesc", str(desc_ref))
                         desc_updated += 1
                     updated += 1
                 break
 
+    missing_fam = {n for n, _ in POWER_FAMILY_SPELLS} - matched_families
+    assert not missing_fam, f"Familles Spé Pouvoirs non matchées : {missing_fam}"
+
     assert_no_literal_stars(sp, "spells.2da")
     write_2da(sp, OVR_DIR / "spells.2da")
     write_tlk(tlk, OUT_DIR / "dialog.tlk")
-    print(f"[OK] spells.2da ({len(sp)} rows, {updated} pouvoirs synchronisés, {desc_updated} descriptions dans dialog.tlk)")
-    return sp
+    (OUT_DIR / "spell_ids.json").write_text(json.dumps(spell_ids, indent=2) + "\n", encoding="utf-8")
+    print(
+        f"[OK] spells.2da ({len(sp)} rows, {updated} pouvoirs synchronisés sur {len(matched_families)} familles, "
+        f"{renamed} renommés, {desc_updated} descriptions, {len(spell_ids)} nouveaux sorts)"
+    )
+    return sp, spell_ids
 
 
 # ============================================================================
-# 6. itemcreate.2da (verrous level 1/10/15/20 depuis Craft.csv)
+# 6. itemcreate.2da & itemcreatemira.2da (verrous 1/10/15/20 + armes onglet 4)
 # ============================================================================
 
-def build_itemcreate() -> TwoDA:
-    ic = read_2da(REF_2DA / "itemcreate_tslrcm.2da")
+def _apply_craft_csv_to_table(ic: TwoDA, include_mira_rockets: bool) -> tuple[int, int]:
     by_label = {ic.get_row(i).get_string("label").lower(): i for i in range(len(ic))}
     rows = read_csv_rows(CSV_CRAFT)
     mod_idx = rows[0].index("Changement (mod)") if rows and "Changement (mod)" in rows[0] else 9
@@ -751,47 +1005,104 @@ def build_itemcreate() -> TwoDA:
         resref = r[0].strip().lower()
         if not resref or resref.startswith("—"):
             continue
-        # Éviter tout doublon c01..c12
         if "_c0" in resref or "_c1" in resref:
             continue
+        station = r[2].strip().lower()
+        is_mira_only = "mira" in station
+        if is_mira_only and not include_mira_rockets:
+            continue
+
         lvl_txt = r[mod_idx].strip() if len(r) > mod_idx else ""
         m_lvl = re.search(r"Niv\.\s*(\d+)", lvl_txt, re.I)
         lvl = int(m_lvl.group(1)) if m_lvl else 0
         if lvl == 1:
-            lvl = 0  # Niv. 1+ = disponible dès le début (0 dans itemcreate.2da)
+            lvl = 0
 
         if resref in by_label:
             ic.get_row(by_label[resref]).set_string("level", str(lvl))
             updated += 1
-        elif resref not in seen_new and (resref.startswith("u_a_over_") or resref.startswith("u_a_unde_") or resref.startswith("w_")):
+        elif resref not in seen_new and resref.startswith("w_") and not is_mira_only:
             seen_new.add(resref)
-            skill_val = "10" if lvl == 0 else ("16" if lvl <= 10 else ("22" if lvl <= 15 else "26"))
-            grp = "2" if resref.startswith("u_a_") else "0"
+            skill_txt = r[5].strip()
+            skill_val = skill_txt if skill_txt.isdigit() else "4"
             ic.add_row(str(len(ic)), {
                 "label": resref,
                 "skill": skill_val,
-                "group": grp,
+                "group": "4",      # Onglet 4 : Armes & Utilitaires (PAS 0 = Armures !)
                 "level": str(lvl),
                 "align": "0",
-                "base_skill": "5",
+                "base_skill": "5", # Réparation
                 "dunno": "0",
                 "overridetag": "",
             })
             added += 1
+    return updated, added
 
+
+def build_itemcreate() -> TwoDA:
+    ic = read_2da(REF_2DA / "itemcreate_tslrcm.2da")
+    updated, added = _apply_craft_csv_to_table(ic, include_mira_rockets=False)
     assert_no_literal_stars(ic, "itemcreate.2da")
     write_2da(ic, OVR_DIR / "itemcreate.2da")
-    print(f"[OK] itemcreate.2da ({len(ic)} rows: {updated} paliers mis à jour, {added} recettes ajoutées)")
+    print(f"[OK] itemcreate.2da ({len(ic)} rows: {updated} paliers mis à jour, {added} armes base onglet 4 ajoutées)")
     return ic
 
 
+def build_itemcreatemira() -> TwoDA:
+    icm = read_2da(REF_2DA / "itemcreatemira_tslrcm.2da")
+    updated, added = _apply_craft_csv_to_table(icm, include_mira_rockets=True)
+    assert_no_literal_stars(icm, "itemcreatemira.2da")
+    write_2da(icm, OVR_DIR / "itemcreatemira.2da")
+    print(f"[OK] itemcreatemira.2da ({len(icm)} rows: {updated} paliers dont roquettes Mira, {added} armes base ajoutées)")
+    return icm
+
+
 # ============================================================================
-# 7. autobalance.2da (calibrage boss Set_5)
+# 7. forceshields.2da (paliers ×1,25 / ×2 / ×2,5 / ×3 / ×3,75 pour boucliers)
+# ============================================================================
+
+def build_forceshields() -> TwoDA:
+    """Duplique les 21 boucliers vanilla en 5 blocs (+21 chacun) pour Armure Tactique II–III
+    et Affranchi de la Force II (+25 %) :
+      - rows   0..20 : base (×1.00)
+      - rows  21..41 : Affranchi II (+25 % -> ×1.25)
+      - rows  42..62 : Armure Tactique II (×2.00)
+      - rows  63..83 : Armure Tactique II + Affranchi II (×2.50)
+      - rows  84..104 : Armure Tactique III (×3.00)
+      - rows 105..125 : Armure Tactique III + Affranchi II (×3.75)"""
+    fs = read_2da(REF_2DA / "forceshields_tslrcm.2da")
+    base_len = len(fs)
+    assert base_len == 21, f"forceshields_tslrcm.2da attendu 21 lignes, trouvé {base_len}"
+    headers = fs.get_headers()
+    base_rows = [{h: fs.get_row(i).get_string(h) for h in headers} for i in range(base_len)]
+
+    tiers = [
+        ("OV_UNB2_",       1.25),
+        ("OV_TACT2_",      2.00),
+        ("OV_TACT2_UNB2_", 2.50),
+        ("OV_TACT3_",      3.00),
+        ("OV_TACT3_UNB2_", 3.75),
+    ]
+    for prefix, mult in tiers:
+        for base_d in base_rows:
+            d = dict(base_d)
+            d["label"] = prefix + base_d["label"]
+            amt = int(base_d["amount"]) if base_d["amount"].isdigit() else 0
+            d["amount"] = str(int(round(amt * mult)))
+            fs.add_row(str(len(fs)), d)
+
+    assert_no_literal_stars(fs, "forceshields.2da")
+    write_2da(fs, OVR_DIR / "forceshields.2da")
+    print(f"[OK] forceshields.2da ({len(fs)} rows: 21 base + 5 blocs ×1.25/×2/×2.5/×3/×3.75)")
+    return fs
+
+
+# ============================================================================
+# 8. autobalance.2da (calibrage boss Set_5)
 # ============================================================================
 
 def build_autobalance() -> TwoDA:
     ab = read_2da(REF_2DA / "autobalance_tslrcm.2da")
-    # Set_5 (ligne 5) : vpmult 0.80 -> 0.95 (rehausse PV Boss Mid/Late), damagemult 0.175 -> 0.155
     r5 = ab.get_row(5)
     r5.set_string("vpmult", "0.95")
     r5.set_string("damagemult", "0.155")
@@ -803,15 +1114,17 @@ def build_autobalance() -> TwoDA:
 
 def main() -> None:
     OVR_DIR.mkdir(parents=True, exist_ok=True)
-    print(f"=== Build Jalon 1 -> {OUT_DIR} ===")
+    print(f"=== Build Jalon 1 (.2da + dialog.tlk) -> {OUT_DIR} ===")
     build_featgain()
     build_classpowergain()
     _, feat_ids = build_feats_and_tlk()
     build_baseitems(feat_ids)
     build_spells()
     build_itemcreate()
+    build_itemcreatemira()
+    build_forceshields()
     build_autobalance()
-    print("=== Jalon 1 BUILD OK (0 erreur, 0 '****' littéral) ===")
+    print("=== Jalon 1 BUILD OK ===")
 
 
 if __name__ == "__main__":

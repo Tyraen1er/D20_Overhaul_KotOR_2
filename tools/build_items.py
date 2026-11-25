@@ -22,11 +22,14 @@ import unicodedata
 from pathlib import Path
 
 from pykotor.common.language import Gender, Language, LocalizedString
+from pykotor.common.misc import ResRef
 from pykotor.extract.installation import Installation, SearchLocation
 from pykotor.resource.formats.erf import read_erf
+from pykotor.resource.formats.gff import GFFList, read_gff, write_gff
 from pykotor.resource.formats.key import read_key
 from pykotor.resource.generics.uti import UTIProperty, read_uti, write_uti
 from pykotor.resource.type import ResourceType
+import copy
 
 ROOT = Path(__file__).resolve().parent.parent
 GAME_PATH = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
@@ -275,9 +278,23 @@ def _apply_weapon_b2_balance(rr: str, uti, default_ulvl: int) -> tuple[int, bool
         return relic_ulvl, True
 
     uti.upgrade_level = default_ulvl
+    modified = False
+
+    # Uniformisation Hold_Out_Blaster (baseitem 14) : Massive Criticals >= +1d8 (cost_value 8 ; préserve 2d6=10 sur w_blaste_27)
+    if uti.base_item == 14:
+        mc_props = [p for p in uti.properties if p.property_name == 49]
+        if not mc_props:
+            uti.properties.append(make_prop(49, 0, 4, 8))
+            modified = True
+        else:
+            for p in mc_props:
+                if DMG_CV_AVG.get(p.cost_value, 0.0) < DMG_CV_AVG[8]:
+                    p.cost_value = 8
+                    modified = True
+
     dmg_props = [p for p in uti.properties if p.property_name == 11]
     if not dmg_props:
-        return default_ulvl, False
+        return default_ulvl, modified
 
     tier = _weapon_tier_from_resref(rr)
     best = max(dmg_props, key=lambda p: DMG_CV_AVG.get(p.cost_value, 0.0))
@@ -298,8 +315,8 @@ def _apply_weapon_b2_balance(rr: str, uti, default_ulvl: int) -> tuple[int, bool
         else:
             new_cv = orig_cv
 
-    modified = (len(dmg_props) > 1) or (new_cv != orig_cv)
-    if modified:
+    dmg_changed = (len(dmg_props) > 1) or (new_cv != orig_cv)
+    if dmg_changed:
         best.cost_value = new_cv
         kept = False
         new_props = []
@@ -311,7 +328,7 @@ def _apply_weapon_b2_balance(rr: str, uti, default_ulvl: int) -> tuple[int, bool
             else:
                 new_props.append(p)
         uti.properties = new_props
-    return default_ulvl, modified
+    return default_ulvl, (modified or dmg_changed)
 
 
 def norm(s: str) -> str:
@@ -362,9 +379,9 @@ def apply_mod_to_uti(uti, mod_txt: str) -> bool:
         seg_n = norm(seg)
 
         # 1. Stats primaires : remplacement "→ ..." ou "Ajout : ..."
-        if "→" in seg and any(k in seg for k in STAT_TO_SUB):
+        if "→" in seg and (any(k in seg for k in STAT_TO_SUB) or "+1 aux 6 caracs" in seg_n):
             rhs = seg.split("→", 1)[1]
-            if "+1 aux 6 caracs" in rhs:
+            if "+1 aux 6 caracs" in norm(rhs):
                 new_stats = {k: 1 for k in STAT_TO_SUB}
             else:
                 new_stats = _parse_stat_pairs(rhs)
@@ -741,6 +758,10 @@ def _parse_upgrade_props(mod_txt: str, old_props: list[UTIProperty]) -> list[UTI
         if m:
             out.append(make_prop(55, 0, 1, int(m.group(1))))
             continue
+        m = re.match(r"parade tirs de blaster -(\d+)", s)
+        if m:
+            out.append(make_prop(56, 0, 21, int(m.group(1))))
+            continue
         m = re.match(r"bonus de caracteristique \((\w+)\) \+(\d+)", s)
         if m:
             out.append(make_prop(0, ABILITY_EN_SUB.get(m.group(1), 0), 1, int(m.group(2))))
@@ -972,10 +993,201 @@ def build_mining_lasers_k2cp(inst: Installation) -> int:
     return count
 
 
+def build_craftable_base_weapons(inst: Installation) -> int:
+    """Génère les 2 armes de base craftables ajoutées dans Craft.csv / itemcreate.2da
+    qui n'ont pas de modèle de base propre dans vanilla :
+      - w_melee_ww_base.uti (Lame de guerre wookie, baseitem 79, ulvl 2, sans bonus de relique)
+      - w_brifle_hr_base.uti (Blaster lourd à répétition, baseitem 24, ulvl 3, sans bonus gratuit)"""
+    specs = [
+        (
+            "w_melee_30",
+            "w_melee_ww_base",
+            79,
+            2,
+            "Lame de guerre wookie",
+            "[Mod D20-Overhaul]\nLame de guerre wookie de facture standard (arme double, 2 slots : Poignée + Lame).",
+        ),
+        (
+            "w_brifle_17",
+            "w_brifle_hr_base",
+            24,
+            3,
+            "Blaster lourd à répétition",
+            "[Mod D20-Overhaul]\nBlaster lourd à répétition de série (arme à répétition, 3 slots : Lunette + Pack + Chambrage).",
+        ),
+    ]
+    count = 0
+    for src_rr, dst_rr, bi_id, ulvl, name_fr, desc_fr in specs:
+        res = inst.resource(src_rr, ResourceType.UTI, order=[SearchLocation.CHITIN]) or inst.resource(src_rr, ResourceType.UTI)
+        if not res:
+            continue
+        uti = read_uti(res.data)
+        uti.base_item = bi_id
+        uti.upgrade_level = ulvl
+        uti.properties = []
+        uti.cost = 100
+        uti.additional_cost = 0
+        uti.resref.set_data(dst_rr)
+        uti.tag = dst_rr
+        ls_name = LocalizedString.from_invalid()
+        ls_name.set_data(Language.FRENCH, Gender.MALE, name_fr)
+        ls_name.set_data(Language.ENGLISH, Gender.MALE, name_fr)
+        uti.name = ls_name
+        set_uti_desc(uti, desc_fr)
+        write_uti(uti, OVR_DIR / f"{dst_rr}.uti")
+        count += 1
+    return count
+
+
+def build_kreia_crystal_dlg(inst: Installation) -> int:
+    """Patch kreia.dlg autour d'EntryList[288] pour offrir un choix au joueur lors de
+    l'accordage du Cristal personnel avec Kreia :
+      - Automatique (2 meilleures caractéristiques de base, ActionParam1=0, ActionParam2=0)
+      - Manuel (choix de la caractéristique principale + secondaire -> ActionParam1=s1+1, ActionParam2=s2+1)
+    Préserve la voix VO (gblkreia054) et tout le reste du dialogue TSLRCM intact."""
+    res = inst.resource("kreia", ResourceType.DLG, order=[SearchLocation.OVERRIDE, SearchLocation.CHITIN])
+    if not res:
+        return 0
+    gff = read_gff(res.data)
+    entries = gff.root.get_list("EntryList")
+    replies = gff.root.get_list("ReplyList")
+    if len(entries) <= 289 or len(replies) <= 309:
+        return 0
+
+    e288 = entries.at(288)
+    if str(e288.get_resref("Script")).lower() != "a_q_cryst_change":
+        # Sécurité : chercher l'entrée portant a_q_cryst_change si l'index différait
+        found_idx = None
+        for idx in range(len(entries)):
+            if str(entries.at(idx).get_resref("Script")).lower() == "a_q_cryst_change":
+                found_idx = idx
+                break
+        if found_idx is None:
+            return 0
+        e288 = entries.at(found_idx)
+
+    orig_replies = e288.get_list("RepliesList")
+    if len(orig_replies) == 0:
+        return 0
+    tmpl_rep_link = copy.deepcopy(orig_replies.at(0))
+    orig_ridx = tmpl_rep_link.get_uint32("Index")
+    tmpl_reply = copy.deepcopy(replies.at(orig_ridx))
+    orig_entries = tmpl_reply.get_list("EntriesList")
+    if len(orig_entries) == 0:
+        return 0
+    tmpl_ent_link = copy.deepcopy(orig_entries.at(0))
+    next_entry_idx = tmpl_ent_link.get_uint32("Index")  # EntryList[289]
+
+    def _make_loc(txt: str) -> LocalizedString:
+        ls = LocalizedString.from_invalid()
+        ls.set_data(Language.FRENCH, Gender.MALE, txt)
+        ls.set_data(Language.ENGLISH, Gender.MALE, txt)
+        return ls
+
+    def _make_link(tmpl, target_idx: int, pos_idx: int):
+        lk = copy.deepcopy(tmpl)
+        lk.struct_id = pos_idx
+        lk.set_uint32("Index", target_idx)
+        lk.set_resref("Active", ResRef(""))
+        if lk.exists("Active2"):
+            lk.set_resref("Active2", ResRef(""))
+        return lk
+
+    def _make_entry(txt: str, reply_indices: list[int]) -> int:
+        ent = copy.deepcopy(e288)
+        new_idx = len(entries)
+        ent.struct_id = new_idx
+        ent.set_locstring("Text", _make_loc(txt))
+        ent.set_resref("VO_ResRef", ResRef(""))
+        ent.set_resref("Sound", ResRef(""))
+        if ent.exists("SoundExists"):
+            ent.set_uint8("SoundExists", 0)
+        ent.set_resref("Script", ResRef(""))
+        ent.set_int32("ActionParam1", 0)
+        ent.set_int32("ActionParam2", 0)
+        rl = GFFList()
+        for pos_i, r_i in enumerate(reply_indices):
+            rl._structs.append(_make_link(tmpl_rep_link, r_i, pos_i))
+        ent.set_list("RepliesList", rl)
+        entries._structs.append(ent)
+        return new_idx
+
+    def _make_reply(txt: str, entry_idx: int, script_name: str = "", p1: int = 0, p2: int = 0) -> int:
+        rep = copy.deepcopy(tmpl_reply)
+        new_idx = len(replies)
+        rep.struct_id = new_idx
+        rep.set_locstring("Text", _make_loc(txt))
+        rep.set_resref("Script", ResRef(script_name))
+        if rep.exists("ActionParam1"):
+            rep.set_int32("ActionParam1", p1)
+        if rep.exists("ActionParam2"):
+            rep.set_int32("ActionParam2", p2)
+        el = GFFList()
+        el._structs.append(_make_link(tmpl_ent_link, entry_idx, 0))
+        rep.set_list("EntriesList", el)
+        replies._structs.append(rep)
+        return new_idx
+
+    stat_names = ["Force", "Dextérité", "Constitution", "Intelligence", "Sagesse", "Charisme"]
+
+    # Option 1 : Automatique (2 meilleures caractéristiques)
+    r_auto = _make_reply(
+        "Laissez la Force guider l'accord automatiquement (2 meilleures caractéristiques).",
+        next_entry_idx,
+        script_name="a_q_cryst_change",
+        p1=0,
+        p2=0,
+    )
+
+    # Option 2 : Choix manuel (6 primaires × 5 secondaires)
+    r_prim_list: list[int] = []
+    for s1 in range(6):
+        r_sec_list: list[int] = []
+        for s2 in range(6):
+            if s2 == s1:
+                continue
+            r_s2 = _make_reply(
+                f"{stat_names[s2]} (caractéristique secondaire)",
+                next_entry_idx,
+                script_name="a_q_cryst_change",
+                p1=s1 + 1,
+                p2=s2 + 1,
+            )
+            r_sec_list.append(r_s2)
+        e_ask2 = _make_entry(
+            f"Caractéristique principale : {stat_names[s1]}. Quelle caractéristique secondaire souhaitez-vous y associer ?",
+            r_sec_list,
+        )
+        r_s1 = _make_reply(f"{stat_names[s1]} (caractéristique principale)", e_ask2)
+        r_prim_list.append(r_s1)
+
+    r_prim_list.append(r_auto)
+    e_ask1 = _make_entry(
+        "Très bien. Quelle caractéristique principale souhaitez-vous ancrer dans votre cristal ?",
+        r_prim_list,
+    )
+    r_manual = _make_reply(
+        "Je souhaite choisir moi-même les deux caractéristiques de mon cristal.",
+        e_ask1,
+    )
+
+    # Remplacer le script immédiat sur EntryList[288] par le menu de choix
+    e288.set_resref("Script", ResRef(""))
+    new_rl = GFFList()
+    new_rl._structs.append(_make_link(tmpl_rep_link, r_auto, 0))
+    new_rl._structs.append(_make_link(tmpl_rep_link, r_manual, 1))
+    e288.set_list("RepliesList", new_rl)
+
+    gff.root.set_list("EntryList", entries)
+    gff.root.set_list("ReplyList", replies)
+    write_gff(gff, OVR_DIR / "kreia.dlg")
+    return 1
+
+
 def main() -> None:
     OVR_DIR.mkdir(parents=True, exist_ok=True)
     inst = Installation(GAME_PATH)
-    print(f"=== Build Jalon 2 (items .uti) -> {OVR_DIR} ===")
+    print(f"=== Build Jalon 2 (items .uti + kreia.dlg) -> {OVR_DIR} ===")
     n_gear, n_arm = build_gear_utis(inst)
     print(f"[OK] Équipement (6 CSV) : {n_gear} fichiers .uti générés (dont {n_arm} armures cloisonnées level 0/1/2/6)")
     n_unde, n_over = build_armor_upgrades(inst)
@@ -993,14 +1205,18 @@ def main() -> None:
         f"(reliques ulvl 0={w_by_lvl[0]}, ulvl 1={w_by_lvl[1]}, ulvl 2={w_by_lvl[2]}, ulvl 3={w_by_lvl[3]} ; "
         f"{n_b2} armes calibrées B2-1a)"
     )
+    n_basew = build_craftable_base_weapons(inst)
+    print(f"[OK] Armes de base craftables ajoutées : {n_basew} fichiers .uti (w_melee_ww_base, w_brifle_hr_base)")
     n_crys = build_personal_crystals(inst)
     print(f"[OK] Cristal personnel de l'Exilé (3 paliers × 30 paires) : {n_crys} fichiers .uti (ov_crys_*.uti)")
+    n_dlg = build_kreia_crystal_dlg(inst)
+    print(f"[OK] Dialogue Cristal personnel Kreia (auto / choix manuel 6×5) : {n_dlg} fichier .dlg (kreia.dlg)")
     n_pt = build_plasma_torch_vanilla()
     print(f"[OK] Torche à plasma vanilla (1d1 + 1d6 Feu) : {n_pt} fichier .uti (plasmatorch.uti)")
     n_ml = build_mining_lasers_k2cp(inst)
     print(f"[OK] Lasers miniers K2CP (1d7 / 1d11) : {n_ml} fichiers .uti (mininglaser.uti, advancedminingla.uti)")
-    total = n_gear + n_unde + n_over + 2 + n_gam + n_wup + n_wslots + n_crys + n_pt + n_ml
-    print(f"=== Jalon 2 BUILD OK ({total} .uti générés) ===")
+    total = n_gear + n_unde + n_over + 2 + n_gam + n_wup + n_wslots + n_basew + n_crys + n_pt + n_ml
+    print(f"=== Jalon 2 BUILD OK ({total} .uti + {n_dlg} .dlg générés) ===")
 
 
 if __name__ == "__main__":

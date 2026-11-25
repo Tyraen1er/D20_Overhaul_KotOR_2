@@ -52,6 +52,8 @@ TABLE_NAMES = [
     "baseitems.2da",
     "spells.2da",
     "itemcreate.2da",
+    "itemcreatemira.2da",
+    "forceshields.2da",
     "autobalance.2da",
 ]
 
@@ -95,8 +97,10 @@ def generate_info_rtf() -> str:
         "  - Armures légères, moyennes et lourdes rééquilibrées avec bonus de DEX max et CA d20.\n"
         "  - Levée des restrictions de Force sous armure légère pour les pouvoirs adaptés.\n\n"
         "3. FABRICATION & ÉQUIPEMENT :\n"
-        "  - Établi d'artisanat enrichi avec armes de base et 24 nouvelles améliorations combinées.\n"
-        "  - Plafonds de stats lore pour tous les casques, gants, implants et ceintures.\n\n"
+        "  - Établi d'artisanat enrichi avec 18 armes de base, verrous de niveau et 60 améliorations d'armures\n"
+        "    (30 sous-couches + 30 sur-couches exclusives Armure intermédiaire).\n"
+        "  - Plafonds de stats lore pour tous les casques, gants, implants et ceintures.\n"
+        "  - Cristal personnel de l'Exilé personnalisable auprès de Kreia (auto ou choix manuel).\n\n"
         "4. ÉQUILIBRAGE DU BESTIAIRE :\n"
         "  - Autobalance calibrée pour des affrontements plus tactiques et stimulants.\n\n"
         "COMPATIBILITÉ :\n"
@@ -215,7 +219,7 @@ def build_installer() -> None:
     gff_baseitem_patches: list[tuple[str, int]] = []  # (filename, mem_id)
 
     for f in sorted(OVR_DIR.iterdir()):
-        if not f.is_file() or f.suffix.lower() not in {".uti", ".utc", ".ncs"}:
+        if not f.is_file() or f.suffix.lower() not in {".uti", ".utc", ".ncs", ".dlg"}:
             continue
         shutil.copy2(f, TSL_DATA_DIR / f.name)
         if f.suffix.lower() == ".uti":

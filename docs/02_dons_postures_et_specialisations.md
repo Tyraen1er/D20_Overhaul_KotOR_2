@@ -63,7 +63,7 @@ Au lieu de simples bonus plats, toutes les armes du jeu sont désormais regroup�
 | **Tir Assassin** | Blaster de poche, Pistolet disrupteur, Fusil disrupteur | **Attaques sournoises `+2d6`** *(donne la capacité d'en faire même si votre classe ne l'a pas)* | **Multiplicateur de critique `+1`** *(ex. ×2 → ×3, ×3 → ×4)* |
 
 > **Et le combat à mains nues ?**
-> Les poings appartiennent à la famille **Arme d'Impact** (et profitent donc de *Spécialisation Arme d'Impact I–III* et du Renversement). Le style mains nues s'appuie en plus sur la posture **Duel** (les poings comptent comme une arme 1M), la progression automatique **Spécialiste mains nues I–VIII**, les gants dédiés et, si vous le souhaitez, l'arbre de caractéristique **Maîtrise Matukai**.
+> Les poings appartiennent à la famille **Arme d'Impact** (et profitent donc de *Spécialisation Arme d'Impact I–III* et du Renversement). Le style mains nues s'appuie en plus sur la posture **Duel** (les poings comptent comme une arme 1M), la progression automatique **Spécialiste mains nues I–III** (`+1d4 / +2d4 / +3d4`), les gants dédiés et, si vous le souhaitez, l'arbre de caractéristique **Maîtrise Matukai**.
 
 ---
 

@@ -18,13 +18,13 @@
 
 ## Weapon Catalog (Melee, Lightsabers & Ranged)
 
-> **Family Balance Principle:** Weapon families with **fewer upgrade slots** (1 or 2 instead of 3) compensate with **higher base damage dice**, **wider critical threat ranges**, or **`×3` critical multipliers**.
+> **Family Balance Principle:** Weapon families with **fewer upgrade slots** (1 or 2 instead of 3) compensate with **higher base damage dice**, **wider critical threat ranges**, or **`×3` critical multipliers**. Flat damage bonuses on named/loot weapons are capped by tier (**`+2`** in T1–14, **`+1d4` / `+3`** in T15–22, **`+1d6` / `+4`** in T23–30) while preserving their unique effects, and the **6 endgame legendary relics** (*Arg'garok*, *Freyyr's Warblade*, *Geonosian Electro-Staff*, *Freedon Nadd's Blaster*, *Zabrak Heavy Blaster*, *Onderon Repeating Carbine*) remain non-upgradeable at the workbench with bonuses capped at **`+1d8` / `+1d10`**.
 
 ### Melee Weapons & Lightsabers
 
 | Weapon | Family | Wielding | Damage | Critical | Upgrade Slots |
 | :--- | :--- | :---: | :--- | :---: | :--- |
-| **Unarmed** | Impact | 1H | Physical `1d6` *(auto-scales)* | `19-20, ×2` | None *(counts as 1H for Dueling)* |
+| **Unarmed** | Impact | 1H | Physical `1d6` *(+Unarmed Specialist I–III: `+1d4/+2d4/+3d4` at Lvl 4/12/19 or Prestige 4)* | `19-20, ×2` | None *(counts as 1H for Dueling)* |
 | **Stun Baton** | Impact | 1H *(bal.)* | Bludgeoning `1d8` | `18-20, ×2` | Grip |
 | **Quarterstaff** | Impact | Double *(bal.)* | Bludgeoning `1d8` | `19-20, ×2` | Grip |
 | **Force Pike** | Impact | **2H** | Bludgeoning `2d8` | `20, ×3` | Grip |
@@ -47,11 +47,11 @@
 | **Blaster Pistol** | Assault Fire | 1H *(bal.)* | 23 m | Energy `1d10` | `19-20, ×2` | — | Scope, Power Pack |
 | **Blaster Carbine** | Assault Fire | **2H** | 25 m | Energy `1d12` | `19-20, ×2` | — | Scope, Power Pack |
 | **Repeating Blaster** | Assault Fire | Repeating *(bal.)* | 28 m | Energy `2d6` | `20, ×2` | — | Scope, Power Pack |
-| **Heavy Blaster** | Penetrating Fire | 1H | 23 m | Energy `1d10` | `19-20, ×2` | — | Scope, Power Pack, Firing Chamber |
+| **Heavy Blaster** | Penetrating Fire | 1H | 23 m | Energy `1d12` | `19-20, ×2` | — | Scope, Power Pack, Firing Chamber |
 | **Blaster Rifle** | Penetrating Fire | **2H** | 28 m | Energy `1d12` | `19-20, ×2` | — | Scope, Power Pack, Firing Chamber |
 | **Bowcaster** | Penetrating Fire | **2H** | 28 m | Energy `1d10` | `20, ×3` | — | Scope, Power Pack, Firing Chamber |
 | **Heavy Repeating Blaster** | Penetrating Fire | Repeating *(bal.)* | 28 m | Energy `2d6` | `20, ×2` | — | Scope, Power Pack, Firing Chamber |
-| **Hold-Out Blaster** | Assassin Fire | 1H *(bal.)* | 23 m | Energy `1d8` | `19-20, ×2` | Massive Crit `+1d8` | Scope, Power Pack |
+| **Hold-Out Blaster** | Assassin Fire | 1H *(bal.)* | 23 m | Energy `1d6` | `19-20, ×2` | Massive Crit `+1d8` | Scope, Power Pack |
 | **Disruptor Pistol** | Assassin Fire | 1H | 23 m | Unstoppable `1d10` | `18-20, ×2` | Ignores DR | Scope, Power Pack |
 | **Disruptor Rifle** | Assassin Fire | **2H** | 28 m | Unstoppable `1d12` | `18-20, ×3` | Ignores DR | Scope, Power Pack |
 | **Ion Blaster** | Tactical Fire | 1H *(bal.)* | 17 m | Ion `1d10` | `19-20, ×3` | `+1d10` vs Droids | Scope |
@@ -96,9 +96,9 @@ In vanilla, stacking flat damage bonuses across every upgrade slot broke combat 
 1. **Every base non-lightsaber weapon is craftable from Level 1!**
    - 18 new recipes were added to the workbench (*Repair* thresholds 2–8): *Short Sword*, *Stun Baton*, *Quarterstaff*, *Vibroblade*, *Double-Bladed Sword*, *Gamorrean Battleaxe*, *Force Pike*, *Wookiee Warblade*, *Blaster Pistol*, *Ion Blaster*, *Sonic Pistol*, *Disruptor Pistol*, *Heavy Blaster*, *Blaster Carbine*, *Ion Rifle*, *Sonic Rifle*, *Bowcaster*, and *Heavy Repeating Blaster*.
    - You never have to wait on random loot drops to play your preferred weapon family!
-2. **24 New Exclusive Combined Upgrade Recipes for Medium Armor**
-   - **12 Dual Overlays** (*Ablative*, *Ballistic*, *Tactical*, *Environmental* — Mk I, II, III via *Repair* 6 / 14 / 22).
-   - **12 Dual Underlays** (*Bio-Reinforced*, *Fortified Durasteel*, *Tactical Joints*, *Bio-Environmental* — Mk I, II, III via *Treat Injury* 6 / 14 / 22).
+2. **60 Reworked Armor Upgrades at the Workbench**
+   - **30 Underlays** (*6 lines, T1→T5*): 15 common underlays available from Light Armor onward (*Environmental*, *Biorestorative*, *Strengthening*) and 15 armored underlays for Heavy & Medium Armor (*Reinforcing*, *Flexible*, *Durasteel*).
+   - **30 Reinforced Overlays Exclusive to Medium Armor** (*8 lines, T1→T4*) combining cross-immunities, saving throws, stealth, crowd-control immunities, and defensive reinforcements.
 3. **Character-Level Crafting Gates**
    - To prevent crafting endgame upgrades on the very first planet, workbench upgrade, shield, and rocket recipes now unlock progressively by **character level**:
      - **Mk I**: **Level 1**

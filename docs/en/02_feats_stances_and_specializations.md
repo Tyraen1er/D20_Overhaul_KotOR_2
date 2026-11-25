@@ -63,7 +63,7 @@ Every weapon in the game now belongs to one of **8 families** (4 melee, 4 ranged
 | **Assassin Fire** | Hold-out blaster, Disruptor pistol, Disruptor rifle | **Sneak Attack `+2d6`** *(grants Sneak Attack even if your class doesn't have it)* | **Critical multiplier `+1`** *(e.g., ×2 → ×3, ×3 → ×4)* |
 
 > **What about Unarmed Combat?**
-> Unarmed strikes belong to the **Impact Weapons** family (gaining access to *Impact Weapon Specialization I–III* and Knockdown). Unarmed builds also use the **Dueling** stance (fists count as 1H), the automatic **Unarmed Specialist I–VIII** progression, unarmed gloves, and optionally the **Matukai Mastery** attribute tree.
+> Unarmed strikes belong to the **Impact Weapons** family (gaining access to *Impact Weapon Specialization I–III* and Knockdown). Unarmed builds also use the **Dueling** stance (fists count as 1H), the automatic **Unarmed Specialist I–III** progression (`+1d4 / +2d4 / +3d4` at Levels 4 / 12 / 19 or Prestige 4), unarmed gloves, and optionally the **Matukai Mastery** attribute tree.
 
 ---
 
