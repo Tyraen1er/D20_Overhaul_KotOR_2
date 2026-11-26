@@ -27,12 +27,6 @@ Chaque posture comporte **3 rangs** (accessibles aux **niveaux 1, 4 et 8**). Ell
 | **Maniement d'Arme Lourde** | Arme à **deux mains (`2M`)** *(mêlée ou distance)* | Dégâts : **200 % FOR** (mêlée) ou **150 % DEX** (distance) | `+1` Attaque<br>Mêlée **215 % FOR**<br>Distance **165 % DEX** | `+2` Attaque<br>Mêlée **235 % FOR**<br>Distance **185 % DEX** | `+3` Attaque<br>Mêlée **250 % FOR**<br>Distance **200 % DEX** *(sauf classes de Force)* |
 | **Maniement d'Arme haute cadence** | Armes **haute cadence (`HC`)** *(armes doubles en mêlée et blasters à répétition à distance)* | Dégâts : **150 % / 50 %** FOR (mêlée) ou DEX (distance)<br>Toutes équilibrées ; malus natif de **`-5 CA`** *(plus de malus d'attaque à 2 armes)* | Dégâts **`+1 / +1`**<br>Malus réduit à **`-3 CA`** | Dégâts **`+2 / +2`**<br>Malus réduit à **`-2 CA`** | Dégâts **`+3 / +3`**<br>Malus réduit à **`-1 CA`** *(sauf classes de Force)* |
 
-> **Astuce tactique :**
-> - **Duel** mise sur la précision et les coups critiques fréquents.
-> - **Ambidextrie** transforme le combat à deux armes en style de parade qui augmente votre Défense (CA).
-> - **Arme Lourde** délivre les coups individuels les plus puissants du jeu (idéal pour percer la Réduction de Dégâts des boss).
-> - **Arme haute cadence** échange un peu de Défense contre un volume de coups très agressif.
-
 ---
 
 ## Les 8 Familles de Spécialisations d'armes
@@ -71,7 +65,7 @@ Au lieu de simples bonus plats, toutes les armes du jeu sont désormais regroup�
 
 Le mod introduit **6 arbres de spécialisation** — un pour chacune des six caractéristiques (**FOR, DEX, CON, INT, SAG, CHA**).
 - **Ouverts à toutes les classes**, aux **niveaux 1, 8 et 15**.
-- **Mutuellement exclusifs :** dès que vous choisissez le Rang I d'un arbre, **les cinq autres arbres vous sont fermés** pour toute la partie. Choisissez bien l'identité de votre personnage !
+- **Mutuellement exclusifs :** le **premier Rang I** choisi fixe votre arbre actif **pour toute la partie**. Les cinq autres arbres restent *sélectionnables* dans l'écran de montée de niveau (le moteur ne peut pas y masquer les dons), mais **leurs rangs n'ont aucun effet** : seul l'arbre actif s'applique. Choisissez bien l'identité de votre personnage dès le Rang I !
 
 | Arbre (Carac.) | Rang I (Niv. 1+) | Rang II (Niv. 8+) | Rang III (Niv. 15+) |
 | :--- | :--- | :--- | :--- |

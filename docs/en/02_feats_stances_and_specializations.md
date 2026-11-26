@@ -27,12 +27,6 @@ Each stance has **3 tiers** (available at **Levels 1, 4, and 8**) and enhances h
 | **Heavy Weapon Handling** | **Two-handed (`2H`)** weapon *(melee or ranged)* | Damage: **200% STR** (melee) or **150% DEX** (ranged) | `+1` Attack<br>Melee **215% STR**<br>Ranged **165% DEX** | `+2` Attack<br>Melee **235% STR**<br>Ranged **185% DEX** | `+3` Attack<br>Melee **250% STR**<br>Ranged **200% DEX** *(except Force classes)* |
 | **High-Rate Weapon Handling** | **High-Rate (`HR`)** weapons *(double-bladed melee & repeating blasters)* | Damage: **150% / 50%** STR (melee) or DEX (ranged)<br>All balanced; native **`-5 AC`** penalty *(no two-weapon attack penalty)* | Damage **`+1 / +1`**<br>AC penalty **`-3`** | Damage **`+2 / +2`**<br>AC penalty **`-2`** | Damage **`+3 / +3`**<br>AC penalty **`-1`** *(except Force classes)* |
 
-> **Tactical note:**
-> - **Dueling** focuses on high accuracy and frequent critical hits.
-> - **Ambidexterity** turns dual-wielding into a defensive parrying style that boosts your AC.
-> - **Heavy Weapon Handling** delivers the hardest single hits in the game (ideal for punching through boss DR).
-> - **High-Rate Weapon Handling** trades a bit of Defense for relentless attack volume.
-
 ---
 
 ## The 8 Weapon Specialization Families
@@ -71,7 +65,7 @@ Every weapon in the game now belongs to one of **8 families** (4 melee, 4 ranged
 
 The mod adds **6 specialization trees** — one for each attribute (**STR, DEX, CON, INT, WIS, CHA**).
 - **Open to all classes** at **Levels 1, 8, and 15**.
-- **Mutually exclusive:** once you pick Tier I of one tree, **the other five trees are locked out** for the rest of your playthrough.
+- **Mutually exclusive:** the **first Tier I** you pick sets your active tree **for the rest of your playthrough**. The other five trees remain *selectable* on the level-up screen (the engine cannot hide feats there), but **their tiers have no effect**: only the active tree applies. Choose your character's identity carefully at Tier I!
 
 | Tree (Attribute) | Tier I (Lvl 1+) | Tier II (Lvl 8+) | Tier III (Lvl 15+) |
 | :--- | :--- | :--- | :--- |

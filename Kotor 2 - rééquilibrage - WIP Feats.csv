@@ -564,9 +564,9 @@ Effets : Durée de toutes les améliorations de Force ×2
 
 Une maîtrise sereine des flux de la Force permettant de maintenir plus longtemps ses protections et améliorations sans effort supplémentaire."
 ,,"══ SPÉCIALISATIONS CARACTÉRISTIQUE (ordre canonique FOR, DEX, CON, INT, SAG, CHA ; une par caractéristique, arbres exclusifs entre eux) ══",,,,,,
-nouveau (245+),MOD_GAMORREAN_1,Raffinement Gamorréen I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 FOR ; + ½ mod. FOR en rangs sur toutes les compétences ; interdit les 5 autres arbres de carac,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+nouveau (245+),MOD_GAMORREAN_1,Raffinement Gamorréen I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 FOR ; + ½ mod. FOR en rangs sur toutes les compétences ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet),"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
 
-Effets : +1 FOR ; + ½ mod. FOR en rangs sur toutes les compétences ; interdit les 5 autres arbres de carac
+Effets : +1 FOR ; + ½ mod. FOR en rangs sur toutes les compétences ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet)
 
 Inspirée de la puissance brute des guerriers de Gamorr, cette voie fait de la Force physique le socle de toute prouesse martiale, jusqu'à manier d'une seule main des armes colossales."
 nouveau (245+),MOD_GAMORREAN_2,Raffinement Gamorréen II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I ; Niv. 8+,,"+2 FOR ; octroie l'Adaptateur Gamorréen (objet à usage illimité, utilisable en posture hors combat) permettant d'ouvrir un établi d'amélioration à tout moment (quelle que soit l'arme équipée) et de convertir toute arme 2M ou HC (mêlée ET distance) entre maniement 2M/HC et 1M ; une arme haute cadence (1M) tenue en main principale conserve +1 atq/round (0 CA, aucun bonus en main gauche) ; n'interdit plus les postures Arme Lourde (2M) et Arme haute cadence (HC)","Validé en jeu (25/11) : T1/T2 OK (baseitems.2da 104-123 avec equipableslots=0x00030, weaponwield=2/4, weaponsize=3, reqfeat0=MOD_GAMORREAN_2 + Use_Limitation_Feat prop 57) ; 69 jumeaux exacts ov1m_*.uti (mêlée et distance, dont Péragus) + Adaptateur Gamorréen (ov_gam_adapt.uti bi=54 + ov_gam_conv.dlg : établi portatif toujours accessible + conversion 2M/HC - 1M, GetIsInCombat bOnlyCountReal=TRUE). Option B validée : +1 atq main principale (EffectModifyAttacks, 0 CA) sur les armes haute cadence 1M en main droite uniquement (0 bonus en main gauche). Les postures Arme Lourde et Arme haute cadence restent pleinement utilisables.","[Mod D20-Overhaul]
@@ -579,9 +579,9 @@ nouveau (245+),MOD_GAMORREAN_3,Raffinement Gamorréen III,SPÉCIALISATIONS CARAC
 Effets : +3 FOR ; immunité au mental
 
 Inspirée de la puissance brute des guerriers de Gamorr, cette voie fait de la Force physique le socle de toute prouesse martiale, jusqu'à manier d'une seule main des armes colossales."
-nouveau (245+),MOD_ECHANI_1,Techniques Echanis I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 DEX ; attaque mêlée : FOR/DEX (si DEX > FOR) ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+nouveau (245+),MOD_ECHANI_1,Techniques Echanis I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 DEX ; attaque mêlée : FOR/DEX (si DEX > FOR) ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet),"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
 
-Effets : +1 DEX ; attaque mêlée : FOR/DEX (si DEX > FOR) ; interdit les 5 autres arbres
+Effets : +1 DEX ; attaque mêlée : FOR/DEX (si DEX > FOR) ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet)
 
 Art martial ancestral des Echanis, pour qui le combat est un langage de grâce et d'anticipation où la Dextérité surpasse la force brute et libère le mouvement sous armure."
 nouveau (245+),MOD_ECHANI_2,Techniques Echanis II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I ; Niv. 8+,,+2 DEX ; dégâts mêlée : FOR/DEX (si DEX > FOR),,"[Mod D20-Overhaul]
@@ -594,9 +594,9 @@ nouveau (245+),MOD_ECHANI_3,Techniques Echanis III,SPÉCIALISATIONS CARACTÉRIST
 Effets : +3 DEX ; supprime le plafond de DEX des armures
 
 Art martial ancestral des Echanis, pour qui le combat est un langage de grâce et d'anticipation où la Dextérité surpasse la force brute et libère le mouvement sous armure."
-nouveau (245+),MOD_KRAITH_CON_1,Voie du dragon Krayt I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 CON ; RD + ½ mod. CON (arrondi sup.) ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+nouveau (245+),MOD_KRAITH_CON_1,Voie du dragon Krayt I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 CON ; RD + ½ mod. CON (arrondi sup.) ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet),"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
 
-Effets : +1 CON ; RD + ½ mod. CON (arrondi sup.) ; interdit les 5 autres arbres
+Effets : +1 CON ; RD + ½ mod. CON (arrondi sup.) ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet)
 
 Discipline d'endurance nommée d'après le légendaire dragon krayt de Tatooine : le corps s'endurcit contre les coups et puise dans sa propre vitalité pour nourrir la Force."
 nouveau (245+),MOD_KRAITH_CON_2,Voie du dragon Krayt II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I ; Niv. 8+,,+2 CON ; toutes les 6 s : convertit 5 % des PV max en 5 % des PF max si PF < 50 % (jamais sous 75 % PV),,"[Mod D20-Overhaul]
@@ -609,9 +609,9 @@ nouveau (245+),MOD_KRAITH_CON_3,Voie du dragon Krayt III,SPÉCIALISATIONS CARACT
 Effets : +3 CON ; toutes les sauvegardes + mod. CON
 
 Discipline d'endurance nommée d'après le légendaire dragon krayt de Tatooine : le corps s'endurcit contre les coups et puise dans sa propre vitalité pour nourrir la Force."
-nouveau (245+),MOD_GAND_1,Chasseur de prime Gand I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 INT ; dommages des grenades et mines +5 % par rang total de Démolition ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres gérée par garde-fou scripté (LocalNumber). Scaling grenade/mine via GetSkillRank(SKILL_DEMOLITIONS, OBJECT_SELF) dans k_sup_grenade.nss / scripts mines.","[Mod D20-Overhaul]
+nouveau (245+),MOD_GAND_1,Chasseur de prime Gand I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 INT ; dommages des grenades et mines +5 % par rang total de Démolition ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet),"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres gérée par garde-fou scripté (LocalNumber). Scaling grenade/mine via GetSkillRank(SKILL_DEMOLITIONS, OBJECT_SELF) dans k_sup_grenade.nss / scripts mines.","[Mod D20-Overhaul]
 
-Effets : +1 INT ; dommages des grenades et mines +5 % par rang total de Démolition ; interdit les 5 autres arbres
+Effets : +1 INT ; dommages des grenades et mines +5 % par rang total de Démolition ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet)
 
 Héritée des Trouveurs Gand, cette école associe sens tactique, démolition de précision et calcul balistique pour compenser l'instinct par l'Intelligence pure."
 nouveau (245+),MOD_GAND_2,Chasseur de prime Gand II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I ; Niv. 8+,,+2 INT ; attaque et dégâts distance : DEX/INT (si INT > DEX),,"[Mod D20-Overhaul]
@@ -624,9 +624,9 @@ nouveau (245+),MOD_GAND_3,Chasseur de prime Gand III,SPÉCIALISATIONS CARACTÉRI
 Effets : +3 INT ; rayon des grenades 4 m → 6 m ; perce Esquive Totale (demi-dégâts min) ; 50 % de chance de ne pas consommer la grenade
 
 Héritée des Trouveurs Gand, cette école associe sens tactique, démolition de précision et calcul balistique pour compenser l'instinct par l'Intelligence pure."
-nouveau (245+),MOD_MATUKAI_SAG_1,Maîtrise Matukai I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 SAG ; ajoute le mod. de SAG à l'attaque (s'ajoute à la carac directrice) ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+nouveau (245+),MOD_MATUKAI_SAG_1,Maîtrise Matukai I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 SAG ; ajoute le mod. de SAG à l'attaque (s'ajoute à la carac directrice) ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet),"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
 
-Effets : +1 SAG ; ajoute le mod. de SAG à l'attaque (s'ajoute à la carac directrice) ; interdit les 5 autres arbres
+Effets : +1 SAG ; ajoute le mod. de SAG à l'attaque (s'ajoute à la carac directrice) ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet)
 
 Voie des adeptes Matukai, qui unissent discipline corporelle et Sagesse intérieure pour guider chaque frappe, esquiver par intuition et punir instantanément les attaques adverses."
 nouveau (245+),MOD_MATUKAI_SAG_2,Maîtrise Matukai II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I ; Niv. 8+,,+2 SAG ; sauvegardes + ½ mod. SAG ; réussir une sauvegarde inflige le mod. de SAG en dégâts directs à l'attaquant,"Limitation : punition sur sauvegarde hookable uniquement pour les sauvegardes scriptées (k_inc_force, grenades) ; les saves internes moteur (iprp_onhit, ex. sonique DD 14) n'offrent aucune prise.","[Mod D20-Overhaul]
@@ -639,9 +639,9 @@ nouveau (245+),MOD_MATUKAI_SAG_3,Maîtrise Matukai III,SPÉCIALISATIONS CARACTÉ
 Effets : +3 SAG ; la SAG remplace la DEX pour la CA ; tout ennemi vous ratant subit le mod. de SAG en dégâts directs par attaque échouée
 
 Voie des adeptes Matukai, qui unissent discipline corporelle et Sagesse intérieure pour guider chaque frappe, esquiver par intuition et punir instantanément les attaques adverses."
-nouveau (245+),MOD_NOMI_1,Héritage de Nomi I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 CHA ; les compagnons gagnent 100 % de l'XP ; interdit les 5 autres arbres,"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
+nouveau (245+),MOD_NOMI_1,Héritage de Nomi I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 CHA ; les compagnons gagnent 100 % de l'XP ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet),"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]
 
-Effets : +1 CHA ; les compagnons gagnent 100 % de l'XP ; interdit les 5 autres arbres
+Effets : +1 CHA ; les compagnons gagnent 100 % de l'XP ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet)
 
 Inspirée de la légendaire Maître Jedi Nomi Sunrider, cette voie rayonne par la présence et le Charisme, inspirant les alliés et déviant les coups par la seule force de conviction."
 nouveau (245+),MOD_NOMI_2,Héritage de Nomi II,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang I ; Niv. 8+,,+2 CHA ; groupe : jets de sauvegarde + mod. CHA,,"[Mod D20-Overhaul]

@@ -564,9 +564,9 @@ Effects: duration of all Force buffs ×2
 
 A serene mastery of the flows of the Force that maintains protections and enhancements longer without extra effort."
 ,,"══ ATTRIBUTE SPECIALIZATIONS (canonical order STR, DEX, CON, INT, WIS, CHA ; one per attribute, mutually exclusive trees) ══",,,,,,
-new (245+),MOD_GAMORREAN_1,Gamorrean Refinement I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 STR ; adds ½ STR mod as bonus ranks to all skills ; locks out the other 5 attribute trees,"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
+new (245+),MOD_GAMORREAN_1,Gamorrean Refinement I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 STR ; adds ½ STR mod as bonus ranks to all skills ; sets your active tree (the other 5 trees remain selectable but have no effect),"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
 
-Effects: +1 STR ; adds ½ STR mod as bonus ranks to all skills ; locks out the other 5 attribute trees
+Effects: +1 STR ; adds ½ STR mod as bonus ranks to all skills ; sets your active tree (the other 5 trees remain selectable but have no effect)
 
 Inspired by the brute strength of Gamorr's warriors, this path makes physical might the foundation of every martial feat, up to wielding colossal weapons single-handed."
 new (245+),MOD_GAMORREAN_2,Gamorrean Refinement II,ATTRIBUTE SPECIALIZATIONS,Rank I ; Lvl 8+,,"+2 STR ; grants the Gamorrean Adapter (unlimited-use item, usable out of combat) that opens an upgrade workbench at any time (regardless of the equipped weapon) and converts any 2H or HR weapon (melee AND ranged) between 2H/HR and 1H handling ; a high-rate (1H) weapon held in the main hand keeps +1 attack/round (0 AC, no bonus in the off hand) ; no longer locks out the Heavy Weapon (2H) and High-Rate Weapon (HR) stances","Validated in game (25/11): T1/T2 OK (baseitems.2da 104-123 with equipableslots=0x00030, weaponwield=2/4, weaponsize=3, reqfeat0=MOD_GAMORREAN_2 + Use_Limitation_Feat prop 57) ; 69 exact twins ov1m_*.uti (melee and ranged, incl. Peragus) + Gamorrean Adapter (ov_gam_adapt.uti bi=54 + ov_gam_conv.dlg: portable workbench always accessible + 2H/HR - 1H conversion, GetIsInCombat bOnlyCountReal=TRUE). Option B validated: +1 main-hand attack (EffectModifyAttacks, 0 AC) on 1H high-rate weapons in the right hand only (0 bonus in the left hand). The Heavy Weapon and High-Rate Weapon stances remain fully usable.","[Mod D20-Overhaul]
@@ -579,9 +579,9 @@ new (245+),MOD_GAMORREAN_3,Gamorrean Refinement III,ATTRIBUTE SPECIALIZATIONS,Ra
 Effects: +3 STR ; immunity to mind-affecting effects
 
 Inspired by the brute strength of Gamorr's warriors, this path makes physical might the foundation of every martial feat, up to wielding colossal weapons single-handed."
-new (245+),MOD_ECHANI_1,Echani Precision I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 DEX ; melee attack: STR/DEX (if DEX > STR) ; locks out the other 5 trees,"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
+new (245+),MOD_ECHANI_1,Echani Precision I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 DEX ; melee attack: STR/DEX (if DEX > STR) ; sets your active tree (the other 5 trees remain selectable but have no effect),"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
 
-Effects: +1 DEX ; melee attack: STR/DEX (if DEX > STR) ; locks out the other 5 trees
+Effects: +1 DEX ; melee attack: STR/DEX (if DEX > STR) ; sets your active tree (the other 5 trees remain selectable but have no effect)
 
 An ancestral martial art of the Echani, for whom combat is a language of grace and anticipation where Dexterity outshines brute strength and frees movement under armor."
 new (245+),MOD_ECHANI_2,Echani Precision II,ATTRIBUTE SPECIALIZATIONS,Rank I ; Lvl 8+,,+2 DEX ; melee damage: STR/DEX (if DEX > STR),,"[Mod D20-Overhaul]
@@ -594,9 +594,9 @@ new (245+),MOD_ECHANI_3,Echani Precision III,ATTRIBUTE SPECIALIZATIONS,Rank II ;
 Effects: +3 DEX ; removes the Max DEX cap on armor
 
 An ancestral martial art of the Echani, for whom combat is a language of grace and anticipation where Dexterity outshines brute strength and frees movement under armor."
-new (245+),MOD_KRAITH_CON_1,Way of the Krayt Dragon I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 CON ; DR + ½ CON mod (rounded up) ; locks out the other 5 trees,"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
+new (245+),MOD_KRAITH_CON_1,Way of the Krayt Dragon I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 CON ; DR + ½ CON mod (rounded up) ; sets your active tree (the other 5 trees remain selectable but have no effect),"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
 
-Effects: +1 CON ; DR + ½ CON mod (rounded up) ; locks out the other 5 trees
+Effects: +1 CON ; DR + ½ CON mod (rounded up) ; sets your active tree (the other 5 trees remain selectable but have no effect)
 
 An endurance discipline named after the legendary krayt dragon of Tatooine: the body hardens against blows and draws on its own vitality to feed the Force."
 new (245+),MOD_KRAITH_CON_2,Way of the Krayt Dragon II,ATTRIBUTE SPECIALIZATIONS,Rank I ; Lvl 8+,,+2 CON ; every 6 s: converts 5% max VP into 5% max FP if FP < 50% (never below 75% VP),,"[Mod D20-Overhaul]
@@ -609,9 +609,9 @@ new (245+),MOD_KRAITH_CON_3,Way of the Krayt Dragon III,ATTRIBUTE SPECIALIZATION
 Effects: +3 CON ; all saving throws + CON mod
 
 An endurance discipline named after the legendary krayt dragon of Tatooine: the body hardens against blows and draws on its own vitality to feed the Force."
-new (245+),MOD_GAND_1,Gand Findsman I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 INT ; grenade and mine damage +5% per total Demolitions rank ; locks out the other 5 trees,"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 trees handled by a scripted guard (LocalNumber). Grenade/mine scaling via GetSkillRank(SKILL_DEMOLITIONS, OBJECT_SELF) in k_sup_grenade.nss / mine scripts.","[Mod D20-Overhaul]
+new (245+),MOD_GAND_1,Gand Findsman I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 INT ; grenade and mine damage +5% per total Demolitions rank ; sets your active tree (the other 5 trees remain selectable but have no effect),"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 trees handled by a scripted guard (LocalNumber). Grenade/mine scaling via GetSkillRank(SKILL_DEMOLITIONS, OBJECT_SELF) in k_sup_grenade.nss / mine scripts.","[Mod D20-Overhaul]
 
-Effects: +1 INT ; grenade and mine damage +5% per total Demolitions rank ; locks out the other 5 trees
+Effects: +1 INT ; grenade and mine damage +5% per total Demolitions rank ; sets your active tree (the other 5 trees remain selectable but have no effect)
 
 Inherited from the Gand Findsmen, this school combines tactical sense, precision demolition, and ballistic calculation to offset instinct with pure Intelligence."
 new (245+),MOD_GAND_2,Gand Findsman II,ATTRIBUTE SPECIALIZATIONS,Rank I ; Lvl 8+,,+2 INT ; ranged attack and damage: DEX/INT (if INT > DEX),,"[Mod D20-Overhaul]
@@ -624,9 +624,9 @@ new (245+),MOD_GAND_3,Gand Findsman III,ATTRIBUTE SPECIALIZATIONS,Rank II ; Lvl 
 Effects: +3 INT ; grenade radius 4 m → 6 m ; pierces Total Evasion (minimum half damage) ; 50% chance not to consume the grenade
 
 Inherited from the Gand Findsmen, this school combines tactical sense, precision demolition, and ballistic calculation to offset instinct with pure Intelligence."
-new (245+),MOD_MATUKAI_SAG_1,Matukai Discipline I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 WIS ; adds WIS mod to attack (on top of the primary weapon attribute) ; locks out the other 5 trees,"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
+new (245+),MOD_MATUKAI_SAG_1,Matukai Discipline I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 WIS ; adds WIS mod to attack (on top of the primary weapon attribute) ; sets your active tree (the other 5 trees remain selectable but have no effect),"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
 
-Effects: +1 WIS ; adds WIS mod to attack (on top of the primary weapon attribute) ; locks out the other 5 trees
+Effects: +1 WIS ; adds WIS mod to attack (on top of the primary weapon attribute) ; sets your active tree (the other 5 trees remain selectable but have no effect)
 
 The way of the Matukai adepts, who unite bodily discipline and inner Wisdom to guide every strike, evade by intuition, and instantly punish enemy attacks."
 new (245+),MOD_MATUKAI_SAG_2,Matukai Discipline II,ATTRIBUTE SPECIALIZATIONS,Rank I ; Lvl 8+,,+2 WIS ; saves + ½ WIS mod ; succeeding at a saving throw deals WIS mod as direct damage to the attacker,"Limitation: save-based punishment hooks only for scripted saves (k_inc_force, grenades) ; engine-internal saves (iprp_onhit, e.g. sonic DC 14) offer no handle.","[Mod D20-Overhaul]
@@ -639,9 +639,9 @@ new (245+),MOD_MATUKAI_SAG_3,Matukai Discipline III,ATTRIBUTE SPECIALIZATIONS,Ra
 Effects: +3 WIS ; WIS replaces DEX for AC ; any enemy that misses you takes WIS mod as direct damage per failed attack
 
 The way of the Matukai adepts, who unite bodily discipline and inner Wisdom to guide every strike, evade by intuition, and instantly punish enemy attacks."
-new (245+),MOD_NOMI_1,Nomi's Aura I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 CHA ; companions earn 100% XP ; locks out the other 5 trees,"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
+new (245+),MOD_NOMI_1,Nomi's Aura I,ATTRIBUTE SPECIALIZATIONS,Lvl 1+ (open to all classes),,+1 CHA ; companions earn 100% XP ; sets your active tree (the other 5 trees remain selectable but have no effect),"Validated in game (23/11): feat.2da exclusion = KO -> mutual exclusivity of the 6 attribute trees handled by a scripted guard (first tree acquired stored in a LocalNumber, the others ignored).","[Mod D20-Overhaul]
 
-Effects: +1 CHA ; companions earn 100% XP ; locks out the other 5 trees
+Effects: +1 CHA ; companions earn 100% XP ; sets your active tree (the other 5 trees remain selectable but have no effect)
 
 Inspired by the legendary Jedi Master Nomi Sunrider, this path radiates through presence and Charisma, inspiring allies and deflecting blows through sheer force of conviction."
 new (245+),MOD_NOMI_2,Nomi's Aura II,ATTRIBUTE SPECIALIZATIONS,Rank I ; Lvl 8+,,+2 CHA ; party: saving throws + CHA mod,,"[Mod D20-Overhaul]
