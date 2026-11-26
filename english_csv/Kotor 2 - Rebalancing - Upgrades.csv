@@ -1067,12 +1067,12 @@ Armor Upgrade — Overlay (Medium Armor only)
 Effects:
 • Damage Immunity (Fire/Cold) +15%
 • Damage Resistance (Fire/Cold) +5/-"
-u_a_over_02,Armorply Plating Mark I,Overlay (Armor),2,Skill Bonus +2,tier 2 lvl 8+ (rare from 3),"Skill Bonus (Discrétion) +2, Improved Saving Throws +1",,"[Mod D20-Overhaul]
+u_a_over_02,Armorply Plating Mark I,Overlay (Armor),2,Skill Bonus +2,tier 2 lvl 8+ (rare from 3),"Skill Bonus (Stealth) +2, Improved Saving Throws +1",,"[Mod D20-Overhaul]
 
 Armor Upgrade — Overlay (Medium Armor only)
 
 Effects:
-• Skill Bonus (Discrétion) +2
+• Skill Bonus (Stealth) +2
 • Improved Saving Throws +1"
 u_a_over_03,Sound Dampening Mark I,Overlay (Armor),3,Damage Immunity +10%,tier 3 lvl 10+ (rare from 5),"Damage Immunity (Sonic/Electrical) +15%, Damage Resistance (Sonic/Electrical) +5/-",,"[Mod D20-Overhaul]
 
@@ -1125,12 +1125,12 @@ Effects:
 • Damage Immunity (Fire/Cold) +20%
 • Damage Resistance (Fire/Cold) +10/-
 • Improved Saving Throws +1"
-u_a_over_10,Armorply Plating Mark II,Overlay (Armor),10,"Improved Saving Throws +1, Skill Bonus +4",tier 10 lvl 24+ (rare from 19),"Skill Bonus (Discrétion) +4, Improved Saving Throws +2, Attribute Bonus (Dexterity) +1",,"[Mod D20-Overhaul]
+u_a_over_10,Armorply Plating Mark II,Overlay (Armor),10,"Improved Saving Throws +1, Skill Bonus +4",tier 10 lvl 24+ (rare from 19),"Skill Bonus (Stealth) +4, Improved Saving Throws +2, Attribute Bonus (Dexterity) +1",,"[Mod D20-Overhaul]
 
 Armor Upgrade — Overlay (Medium Armor only)
 
 Effects:
-• Skill Bonus (Discrétion) +4
+• Skill Bonus (Stealth) +4
 • Improved Saving Throws +2
 • Attribute Bonus (Dexterity) +1"
 u_a_over_11,Sound Dampening Mark II,Overlay (Armor),11,Damage Immunity +15%,tier 11 lvl 26+ (rare from 21),"Damage Immunity (Sonic/Electrical) +20%, Damage Resistance (Sonic/Electrical) +10/-, Immunity: Fear",,"[Mod D20-Overhaul]
@@ -1188,12 +1188,12 @@ Effects:
 • Damage Immunity (Fire/Cold) +25%
 • Damage Resistance (Fire/Cold) +10/-
 • Improved Saving Throws +2"
-u_a_over_18,Armorply Plating Mark III,Overlay (Armor),18,"Attribute Bonus (Dexterity) +1, Improved Saving Throws +1, Skill Bonus +6",tier 18 lvl 30+ (rare from 30),"Skill Bonus (Discrétion) +6, Improved Saving Throws +3, Attribute Bonus (Dexterity) +1, Defense Bonus +1",,"[Mod D20-Overhaul]
+u_a_over_18,Armorply Plating Mark III,Overlay (Armor),18,"Attribute Bonus (Dexterity) +1, Improved Saving Throws +1, Skill Bonus +6",tier 18 lvl 30+ (rare from 30),"Skill Bonus (Stealth) +6, Improved Saving Throws +3, Attribute Bonus (Dexterity) +1, Defense Bonus +1",,"[Mod D20-Overhaul]
 
 Armor Upgrade — Overlay (Medium Armor only)
 
 Effects:
-• Skill Bonus (Discrétion) +6
+• Skill Bonus (Stealth) +6
 • Improved Saving Throws +3
 • Attribute Bonus (Dexterity) +1
 • Defense Bonus +1"
@@ -1258,12 +1258,12 @@ Effects:
 • Damage Immunity (Fire/Cold) +30%
 • Damage Resistance (Fire/Cold) +15/-
 • Improved Saving Throws +3"
-u_a_over_26,Armorply Plating Mark IV,Overlay (Armor),26,"Attribute Bonus (Dexterity) +2, Improved Saving Throws +1, Skill Bonus +8",tier 26 lvl 30+ (rare from 30),"Skill Bonus (Discrétion) +8, Improved Saving Throws +4, Attribute Bonus (Dexterity) +2, Defense Bonus +1",,"[Mod D20-Overhaul]
+u_a_over_26,Armorply Plating Mark IV,Overlay (Armor),26,"Attribute Bonus (Dexterity) +2, Improved Saving Throws +1, Skill Bonus +8",tier 26 lvl 30+ (rare from 30),"Skill Bonus (Stealth) +8, Improved Saving Throws +4, Attribute Bonus (Dexterity) +2, Defense Bonus +1",,"[Mod D20-Overhaul]
 
 Armor Upgrade — Overlay (Medium Armor only)
 
 Effects:
-• Skill Bonus (Discrétion) +8
+• Skill Bonus (Stealth) +8
 • Improved Saving Throws +4
 • Attribute Bonus (Dexterity) +2
 • Defense Bonus +1"
