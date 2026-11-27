@@ -58,7 +58,7 @@
 | `a_shield_07` | Prototype verpine | Énergie, sonique, froid, feu | 10 | 100 |
 | `d_shield_01..06` | Déflecteurs droïde | Énergie (T1–T3) / environnement | variable | variable |
 
-**Mécanique moteur** ([`k_sup_bands.nss`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/_reference/scripts/k_sup_bands.nss)) :
+**Mécanique moteur** ([`k_sup_bands.nss`](_reference/scripts/k_sup_bands.nss)) :
 - `EffectForceShield(type)` : réduit chaque coup des types protégés de la RD indiquée, jusqu'à épuisement du **pool total** (50 ou 100).
 - **Durée : 200 s + 2 s/rang de Réparation** — pratiquement tout le combat.
 - Une seule activation par spawn (drapeau IA `SW_FLAG_SHIELD_USED`).
@@ -100,17 +100,17 @@
 
 ## 4. Matrice des profils défensifs par famille (proposition de travail)
 
-> Valeurs indicatives à chiffrer ensuite ; phases **E**arly (niv. 1–10) / **M**id (11–18) / **L**ate (19+).
+> Formules continues indexées sur le **niveau du joueur (`Niv. PJ`)** (actées le 27/11 — alignées sur la logique d'`autobalance.2da`, sans rupture Early/Mid/Late).
 
-| Famille | Résistance signature (actée 22/11) | Faiblesse assumée | Réponse attendue du joueur | Levier technique |
+| Famille | Résistance signature (actée 27/11 — scaling continu sur `Niv. PJ`) | Faiblesse assumée | Réponse attendue du joueur | Levier technique |
 | :--- | :--- | :--- | :--- | :--- |
-| **Sith / Jedi obscurs** | **Bures réelles** équipées + Résistance à la Force (`15+Niv` Chevaliers / `20+Niv` Maîtres) + bonus Volonté (`+2/+4/+6` Apprenti/Chevalier/Maître) + ***Esquive Totale*** (20+) + **Absorption de Force prioritaire si `PF < 30 %`** *(soins : statu quo vanilla — Maîtres Jedi via Guérison, Sith via Drain de vie / Champ de mort)* | RD nulle (en bure), Vigueur moyenne | Dégâts bruts / sabre, *Peste* (Vig), *Destruction de Force* / *Pouvoir Pénétrant* | Équipement UTC + peau + dons auto + `k_inc_generic` (`GetCurrentForcePoints`) |
-| **Soldats / Mercenaires** | **Armures légères/intermédiaires** réellement portées (CA + `RD 2/-` Intermédiaire) + **boucliers d'énergie** (`50/100 PV`) sur ~1 élite sur 3 (Mid+, lootables) + grenades existantes | Volonté basse, boucliers traversés par la mêlée | Mêlée/sabre, *Disrupteur*, *Insanité* / *Tourbillon* | Équipement UTC (armures + items boucliers, activés auto par l'IA) |
-| **Mandaloriens** | **Armure lourde** (`RD 4/-` native, 6/8 templates) + **résistance Laser (Énergie) & Feu `25 %` (Mid) / `35 %` (Late)** + boucliers élites + stim `OnSpawn` (`+2 FOR/CON`) | **Aucune résistance à la Force**, Volonté basse, vulnérables au physique/ion/sonique | Force (*Tempête*, *Insanité*, *Stase*), armes physiques/vibro/bris d'armure (*Traditionnelle* `-6 CA`) | Peau (`Résist %` Énergie/Feu) + équipement UTC + `OnSpawn` stim |
-| **Bêtes** | **RD physique/énergie légère** (`2/4/6/-` E/M/L sur grosses bêtes) + haute Vigueur + immunité *Peur* (apex) + régén lente hors combat | Volonté très basse (`-3` à `+2`), aucune résistance Énergie/Électrique/Feu | *Éclairs*, sabres, blasters, grenades incendiaires, contrôles mentaux | Peaux `g_i_crhide*` |
-| **Droïdes** | **Statu quo binaire** (esprit/poison/drain, 82 peaux) + **déflecteurs droïdes** (`50–60 PV`) sur ~1/3 des droïdes de guerre/assaut élites (Mid+) | Ion, *Destruction de droïde*, Électrique | Armes/grenades ioniques, pouvoirs anti-droïdes | Peaux existantes + items déflecteurs UTC |
-| **Assassins Sith / Traqueurs** | Furtivité + *Esquive instinctive* + Réflexes élevés + **esquive à distance `20–25 %`** (Mid/Late) | PV faibles, RD nulle, Vigueur basse | Corps-à-corps direct, *Peste* / *Stase* (Vig) | Dons UTC + peau |
-| **Boss majeurs (`Set_5`)** | **Aucune phase scriptée supplémentaire (D4)** — profil familial + `RD 2/5/8` actée + rehausse PV Mid (`~380–420 PV` Niv. 16) | Selon famille | S'appuie sur l'existant TSLRCM sans conflit | `autobalance.2da` + profils familiaux |
+| **Sith / Jedi obscurs** | **Bures réelles** équipées + Résistance à la Force **`10 + 1,40 × Niv`** + bonus Volonté **`1 + 0,20 × Niv`** *(max `+6`)* + ***Esquive Totale*** *(Niv. PJ ≥ 20)* + **Absorption de Force prioritaire si `PF < 30 %`** | RD nulle (en bure), Vigueur moyenne | Dégâts bruts / sabre, *Peste* (Vig), *Destruction de Force* / *Pouvoir Pénétrant* | Peau marqueur + `ov_inc_core.nss` + `k_inc_generic` |
+| **Soldats / Mercenaires** | **Armures légères/intermédiaires** réellement portées (`RD 2/-` Interm.) + **résistance Énergie & Feu `5 % + 1,0 % × Niv`** *(max **`35 %`**)* + **boucliers d'énergie** (`50/100 PV`) sur ~1 élite sur 3 (lootables) | Volonté basse, vulnérables au physique/ion/sonique | Mêlée physique, *Disrupteur*, *Insanité* / *Tourbillon* | Peau marqueur `ov_hide_soldier` + `ov_inc_core.nss` + UTC |
+| **Mandaloriens** | **Armure lourde** (`RD 4/-` native) + **résistance Énergie & Feu `30 % + 1,5 % × Niv`** *(max **`75 %`**)* + boucliers élites + stim combat (`+2 FOR/CON`) | **Aucune résistance à la Force**, Volonté basse, vulnérables au **physique / ion / sonique** | Force (*Tempête*, *Insanité*, *Stase*), armes physiques/vibro/bris d'armure (*Traditionnelle*), armes ioniques/soniques | Peau marqueur `ov_hide_mando_*` + `ov_inc_core.nss` + UTC |
+| **Bêtes** | **RD Physique uniquement `1 + 0,50 × Niv`** *(max **`15/-`**, pas de RD Énergie)* + haute Vigueur + immunité *Peur* (`CR ≥ 8`) + régén lente hors combat (apex) | Volonté très basse (`-3` à `+2`), **aucune résistance ni RD contre l'Énergie, l'Électricité ou le Feu** | **Sabres laser, blasters**, *Éclairs*, grenades incendiaires/plasma, contrôles mentaux | Peaux marqueurs `ov_hide_beast_*` + `ov_inc_core.nss` |
+| **Droïdes** | **Statu quo binaire** (esprit/poison/drain, 82 peaux) + **déflecteurs droïdes** (`50–60 PV`) sur ~1/3 des droïdes de guerre/assaut élites | Ion, *Destruction de droïde*, Électrique | Armes/grenades ioniques, pouvoirs anti-droïdes | Peaux existantes + items déflecteurs UTC |
+| **Assassins Sith / Traqueurs** | Furtivité + *Esquive instinctive* + **esquive `10 % + 0,5 % × Niv`** *(max **`25 %`**)* + **Réflexes `1 + 0,15 × Niv`** *(max **`+5`**)* | PV faibles, RD nulle, Vigueur basse | *Peste* / *Stase* (Vig), dégâts garantis | Peau marqueur `ov_hide_assn` + `ov_inc_core.nss` |
+| **Boss majeurs (`Set_4`/`Set_5`)** | **Aucune phase scriptée supplémentaire (D4)** — profil familial + **RD passive `1 + 0,25 × Niv`** *(max **`RD 8/-`**, Phys & Énergie)* + `Set_5 vpmult = 0,95` | Selon famille | S'appuie sur l'existant TSLRCM sans conflit | `autobalance.2da` + `ov_inc_core.nss` |
 
 ---
 

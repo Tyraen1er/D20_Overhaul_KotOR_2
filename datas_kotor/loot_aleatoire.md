@@ -2,7 +2,7 @@
 
 > Le moteur TSL ne possède **pas de `randomitem.2da`** (c'était KotOR 1) : tout le loot aléatoire est généré
 > par scripts (`PlaceTreasure` / `PlaceTreasureDisposable` de [`k_inc_treas_k2.nss`](
-file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/_reference/scripts/k_inc_treas_k2.nss)).
+../_reference/scripts/k_inc_treas_k2.nss)).
 
 ## 1. Mécanique générale
 

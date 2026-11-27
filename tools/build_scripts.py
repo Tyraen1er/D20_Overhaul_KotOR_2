@@ -562,9 +562,13 @@ void Ov_RefreshPassives(object oTarget)
 
     int nTotalAC = 0;
     int nTotalRD = 0;
+    int nTotalPhysRD = 0;
     int nTotalImm = 0;
+    int nEnerFireImm = 0;
     int nTotalDodge = 0;
     int nTotalSaves = 0;
+    int nWillBonus = 0;
+    int nRefBonus = 0;
     int nTotalAtk = 0;
     int nTotalDmg = 0;
     int nExtraAttacks = 0;
@@ -845,51 +849,90 @@ void Ov_RefreshPassives(object oTarget)
         }}
     }}
 
-    // 8. Traits runtime du Bestiaire & RD Boss Set_4/Set_5 (uniquement PNJ hostiles hors groupe)
+    // 8. Traits runtime du Bestiaire & RD Boss Set_4/Set_5 (scaling continu sur Niv. PJ - unifie avec autobalance)
     if (!Ov_IsPartyMember(oTarget) && GetIsObjectValid(oPC) && GetIsEnemy(oTarget, oPC))
     {{
         int nHD = GetHitDice(oTarget);
+        int nPcLvl = GetHitDice(oPC);
+        if (nPcLvl < 1) nPcLvl = 1;
         string sLowTag = GetStringLowerCase(GetTag(oTarget));
+        object oHide = GetItemInSlot(INVENTORY_SLOT_CARMOUR, oTarget);
+        string sHide = GetIsObjectValid(oHide) ? GetStringLowerCase(GetTag(oHide)) : "";
 
-        // 8a. Boss / Sous-boss : RD passive 2 (<=10) / 5 (11..18) / 8 (19+)
+        // 8a. Boss / Sous-boss : RD passive (Physique & Energie) = 1 + 0.25 * Niv. PJ (max 8)
         if (Ov_IsBoss(oTarget))
         {{
-            int nPcLvl = GetHitDice(oPC);
-            int nBossRD = (nPcLvl <= 10) ? 2 : ((nPcLvl <= 18) ? 5 : 8);
+            int nBossRD = 1 + (nPcLvl / 4);
+            if (nBossRD > 8) nBossRD = 8;
             nTotalRD += nBossRD;
         }}
 
-        // 8b. Sith / Jedi Obscurs : Resistance a la Force dynamique 15+Niv (Mid) / 20+Niv (Late) + Esquive Totale 20+
-        if (GetMaxForcePoints(oTarget) > 0)
+        // 8b. Sith / Jedi Obscurs : Volonte 1 + 0.20*Niv (max 6), SR 10 + 1.40*Niv, Esquive Totale Niv >= 20
+        int bIsSith = (sHide == "ov_hide_sith_l1" || sHide == "ov_hide_sith_l2" || sHide == "ov_hide_sith_l3" || GetMaxForcePoints(oTarget) > 0);
+        if (bIsSith)
         {{
-            int nSithSR = 0;
-            if (nHD >= 14) nSithSR = 20 + nHD;
-            else if (nHD >= 8) nSithSR = 15 + nHD;
+            int nSithWill = 1 + (nPcLvl / 5);
+            if (nSithWill > 6) nSithWill = 6;
+            if (nSithWill > nWillBonus) nWillBonus = nSithWill;
+
+            int nSithSR = 10 + ((nPcLvl * 7) / 5);
             if (nSithSR > nForceRes) nForceRes = nSithSR;
-            if (nHD >= 20 && !GetHasFeat(FEAT_EVASION, oTarget)) GrantFeat(FEAT_EVASION, oTarget);
+
+            if (nPcLvl >= 20 && !GetHasFeat(FEAT_EVASION, oTarget)) GrantFeat(FEAT_EVASION, oTarget);
         }}
 
-        // 8c. Mandaloriens : Stim de combat (+2 FOR / +2 CON, 60s) declenche une fois a l'engagement
-        if (GetIsInCombat(oTarget) && GetLocalNumber(oTarget, 15) == 0 && FindSubString(sLowTag, "mando") >= 0)
+        // 8c. Mandaloriens : Resist. Energie & Feu = 30% + 1.5% * Niv. PJ (max 75%) + Stim (+2 FOR/CON, 60s)
+        int bIsMando = (sHide == "ov_hide_mando_m" || sHide == "ov_hide_mando_l" || FindSubString(sLowTag, "mandalor") >= 0);
+        if (bIsMando)
         {{
-            SetLocalNumber(oTarget, 15, 1);
-            effect eStim = EffectLinkEffects(EffectAbilityIncrease(ABILITY_STRENGTH, 2), EffectAbilityIncrease(ABILITY_CONSTITUTION, 2));
-            ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eStim, oTarget, 60.0);
+            int nMandoImm = 30 + ((nPcLvl * 3) / 2);
+            if (nMandoImm > 75) nMandoImm = 75;
+            if (nMandoImm > nEnerFireImm) nEnerFireImm = nMandoImm;
+
+            if (GetIsInCombat(oTarget) && GetLocalNumber(oTarget, 15) == 0)
+            {{
+                SetLocalNumber(oTarget, 15, 1);
+                effect eStim = EffectLinkEffects(EffectAbilityIncrease(ABILITY_STRENGTH, 2), EffectAbilityIncrease(ABILITY_CONSTITUTION, 2));
+                ApplyEffectToObject(DURATION_TYPE_TEMPORARY, eStim, oTarget, 60.0);
+            }}
         }}
 
-        // 8d. Assassins Sith : Esquive 20% (Mid) / 25% (Late)
-        if (FindSubString(sLowTag, "sithass") >= 0 || FindSubString(sLowTag, "assassin") >= 0)
+        // 8d. Soldats & Mercenaires : Resist. Energie & Feu = 5% + 1.0% * Niv. PJ (max 35%)
+        if (!bIsMando && sHide == "ov_hide_soldier")
         {{
-            nTotalDodge += (nHD >= 14) ? 25 : 20;
+            int nSoldImm = 5 + nPcLvl;
+            if (nSoldImm > 35) nSoldImm = 35;
+            if (nSoldImm > nEnerFireImm) nEnerFireImm = nSoldImm;
         }}
 
-        // 8e. Betes apex : regeneration lente HORS COMBAT uniquement
-        if (!GetIsInCombat(oTarget) && nHD >= 12 && GetCurrentHitPoints(oTarget) < GetMaxHitPoints(oTarget))
+        // 8e. Assassins Sith : Esquive = 10% + 0.5% * Niv. PJ (max 25%) + Reflexes = 1 + 0.15 * Niv. PJ (max 5)
+        if (sHide == "ov_hide_assn" ||
+            (GetRacialType(oTarget) != RACIAL_TYPE_DROID &&
+             (FindSubString(sLowTag, "sithass") >= 0 || FindSubString(sLowTag, "sith_ass") >= 0 || FindSubString(sLowTag, "assassin") >= 0)))
         {{
-            if (FindSubString(sLowTag, "boma") >= 0 || FindSubString(sLowTag, "zakkeg") >= 0 ||
-                FindSubString(sLowTag, "drexl") >= 0 || FindSubString(sLowTag, "tukata") >= 0 ||
-                FindSubString(sLowTag, "rancor") >= 0 || FindSubString(sLowTag, "stormbeast") >= 0 ||
-                FindSubString(sLowTag, "hssiss") >= 0 || FindSubString(sLowTag, "kinrath") >= 0)
+            int nAssnDodge = 10 + (nPcLvl / 2);
+            if (nAssnDodge > 25) nAssnDodge = 25;
+            nTotalDodge += nAssnDodge;
+
+            int nAssnRef = 1 + ((nPcLvl * 3) / 20);
+            if (nAssnRef > 5) nAssnRef = 5;
+            if (nAssnRef > nRefBonus) nRefBonus = nAssnRef;
+        }}
+
+        // 8f. Betes & Creatures : RD Physique uniquement = 1 + 0.5 * Niv. PJ (max 15) + regen hors combat apex
+        int bIsBeast = (sHide == "ov_hide_beast_s" || sHide == "ov_hide_beast_m" || sHide == "ov_hide_beast_l" ||
+            FindSubString(sLowTag, "boma") >= 0 || FindSubString(sLowTag, "zakkeg") >= 0 ||
+            FindSubString(sLowTag, "drexl") >= 0 || FindSubString(sLowTag, "tukata") >= 0 ||
+            FindSubString(sLowTag, "rancor") >= 0 || FindSubString(sLowTag, "stormbeast") >= 0 ||
+            FindSubString(sLowTag, "hssiss") >= 0 || FindSubString(sLowTag, "kinrath") >= 0 ||
+            FindSubString(sLowTag, "krayt") >= 0);
+        if (bIsBeast)
+        {{
+            int nBeastRD = 1 + (nPcLvl / 2);
+            if (nBeastRD > 15) nBeastRD = 15;
+            nTotalPhysRD += nBeastRD;
+
+            if (!GetIsInCombat(oTarget) && (sHide == "ov_hide_beast_l" || nHD >= 12) && GetCurrentHitPoints(oTarget) < GetMaxHitPoints(oTarget))
             {{
                 int nReg = GetMaxHitPoints(oTarget) / 40;
                 if (nReg < 2) nReg = 2;
@@ -915,14 +958,29 @@ void Ov_RefreshPassives(object oTarget)
         eBundle = EffectACDecrease(-nTotalAC);
         bHasAny = TRUE;
     }}
-    if (nTotalRD > 0)
+    if (nTotalRD > 0 || nTotalPhysRD > 0)
     {{
-        effect eR1 = EffectDamageResistance(DAMAGE_TYPE_BLUDGEONING, nTotalRD);
-        effect eR2 = EffectDamageResistance(DAMAGE_TYPE_PIERCING, nTotalRD);
-        effect eR3 = EffectDamageResistance(DAMAGE_TYPE_SLASHING, nTotalRD);
-        effect eR4 = EffectDamageResistance(DAMAGE_TYPE_BLASTER, nTotalRD);
-        effect eRAll = EffectLinkEffects(EffectLinkEffects(eR1, eR2), EffectLinkEffects(eR3, eR4));
-        if (bHasAny) eBundle = EffectLinkEffects(eBundle, eRAll); else eBundle = eRAll;
+        int nPhysRD = nTotalRD + nTotalPhysRD;
+        if (nPhysRD > 0)
+        {{
+            effect eR1 = EffectDamageResistance(DAMAGE_TYPE_BLUDGEONING, nPhysRD);
+            effect eR2 = EffectDamageResistance(DAMAGE_TYPE_PIERCING, nPhysRD);
+            effect eR3 = EffectDamageResistance(DAMAGE_TYPE_SLASHING, nPhysRD);
+            effect eRPhys = EffectLinkEffects(EffectLinkEffects(eR1, eR2), eR3);
+            if (bHasAny) eBundle = EffectLinkEffects(eBundle, eRPhys); else eBundle = eRPhys;
+            bHasAny = TRUE;
+        }}
+        if (nTotalRD > 0)
+        {{
+            effect eR4 = EffectDamageResistance(DAMAGE_TYPE_BLASTER, nTotalRD);
+            if (bHasAny) eBundle = EffectLinkEffects(eBundle, eR4); else eBundle = eR4;
+            bHasAny = TRUE;
+        }}
+    }}
+    if (nEnerFireImm > 0)
+    {{
+        effect eEF = EffectLinkEffects(EffectDamageImmunityIncrease(DAMAGE_TYPE_BLASTER, nEnerFireImm), EffectDamageImmunityIncrease(DAMAGE_TYPE_FIRE, nEnerFireImm));
+        if (bHasAny) eBundle = EffectLinkEffects(eBundle, eEF); else eBundle = eEF;
         bHasAny = TRUE;
     }}
     if (nTotalImm > 0)
@@ -948,6 +1006,18 @@ void Ov_RefreshPassives(object oTarget)
     {{
         effect eSv = EffectSavingThrowIncrease(SAVING_THROW_ALL, nTotalSaves);
         if (bHasAny) eBundle = EffectLinkEffects(eBundle, eSv); else eBundle = eSv;
+        bHasAny = TRUE;
+    }}
+    if (nWillBonus > 0)
+    {{
+        effect eWl = EffectSavingThrowIncrease(SAVING_THROW_WILL, nWillBonus);
+        if (bHasAny) eBundle = EffectLinkEffects(eBundle, eWl); else eBundle = eWl;
+        bHasAny = TRUE;
+    }}
+    if (nRefBonus > 0)
+    {{
+        effect eRf = EffectSavingThrowIncrease(SAVING_THROW_REFLEX, nRefBonus);
+        if (bHasAny) eBundle = EffectLinkEffects(eBundle, eRf); else eBundle = eRf;
         bHasAny = TRUE;
     }}
     if (bBreathPass)

@@ -11,7 +11,7 @@ from pykotor.resource.formats.twoda import read_2da
 from pykotor.resource.generics.utc import read_utc
 from pykotor.resource.generics.uti import read_uti
 
-ROOT = Path(r"C:\Users\emman\Desktop\dev\Kotor 2 Mods")
+ROOT = Path(__file__).resolve().parent.parent
 MOD = ROOT / "mods" / "overhaul"
 OVR = MOD / "Override"
 SRC = MOD / "src"
@@ -116,18 +116,15 @@ for rrr, exp_lv in [("w_rocket_01", "0"), ("w_rocket_02", "10"), ("w_rocket_03",
     check(rrr in icm_map and icm_map[rrr].get_string("level") == exp_lv,
           f"itemcreatemira.2da {rrr}: level={icm_map[rrr].get_string('level')}({exp_lv})")
 
-# 1.4 Enemy hides fixed (prop 25, subtype 5, no combat regen on beast_l, no phys imm on assn)
-for hrr, exp_prop in [("ov_hide_sith_l2", 25), ("ov_hide_sith_l3", 25)]:
+# 1.4 Enemy hides (continuous Niv. PJ scaling in ov_inc_core.nss; hides carry fixed Fear imm on beasts m/l & serve as family markers)
+for hrr in ("ov_hide_sith_l1", "ov_hide_sith_l2", "ov_hide_sith_l3", "ov_hide_mando_m", "ov_hide_mando_l", "ov_hide_soldier", "ov_hide_beast_s", "ov_hide_assn"):
     u = read_uti(OVR / f"{hrr}.uti")
-    props = [p.property_name for p in u.properties]
-    check(exp_prop in props and 39 not in props, f"{hrr}: props={props} (25 present, 39 absent)")
+    check(len(u.properties) == 0, f"{hrr}: clean marker hide (scaling in runtime, 0 static props)")
 for hrr in ("ov_hide_beast_m", "ov_hide_beast_l"):
     u = read_uti(OVR / f"{hrr}.uti")
     imm_subs = [p.subtype for p in u.properties if p.property_name == 24]
     has_regen = any(p.property_name == 35 for p in u.properties)
-    check(imm_subs == [5] and not has_regen, f"{hrr}: imm_subs={imm_subs} regen={has_regen}")
-u_assn = read_uti(OVR / "ov_hide_assn.uti")
-check(not any(p.property_name == 14 for p in u_assn.properties), f"ov_hide_assn: no phys immunity")
+    check(imm_subs == [5] and not has_regen and len(u.properties) == 1, f"{hrr}: Fear immunity only (RD phys scaled in runtime)")
 
 # 1.5 Items fixed (e_imp4_08 + 5 saber deflect penalties + Hold_Out_Blaster Massive Crits)
 u_imp = read_uti(OVR / "e_imp4_08.uti")
@@ -287,7 +284,6 @@ rd_expected = [
     ("e_imp2_08", 7), ("e_imp3_08", 7), ("a_gloves_19", 7), ("a_belt_17", 7),
     ("a_helmet_28", 8), ("a_belt_28", 8), ("g_i_cermshield", 8), ("a_heavy_12", 8), ("a_light_11", 8),
     ("a_light_10", 11), ("a_light_15", 11), ("a_medium_12", 11), ("g_a_armrdfsuit", 11),
-    ("ov_hide_beast_m", 9), ("ov_hide_beast_l", 10),
 ]
 for rrr, exp_cv in rd_expected:
     u = read_uti(OVR / f"{rrr}.uti")
@@ -352,6 +348,10 @@ import re
 base_tlk_len = len(read_tlk(ROOT / "mods" / "04-engine-tests" / "backup" / "dialog.tlk.bak"))
 bad_tlk_tokens = [i for i in range(base_tlk_len, len(tlk)) if re.search(r"<[^>]*>", tlk.get(i).text)]
 check(not bad_tlk_tokens, f"Zero <...> pseudo-tokens in all added TLK strings (bad={bad_tlk_tokens})")
+bad_cp1252_q = [i for i in range(base_tlk_len, len(tlk)) if re.search(r"(?:\s\?\s|\?\s*\d)", tlk.get(i).text)]
+check(not bad_cp1252_q, f"Zero CP1252 '?' corruption in added TLK strings (bad={bad_cp1252_q})")
+check('sHide == "ov_hide_mando_m"' in core_txt and 'sHide == "ov_hide_assn"' in core_txt and 'sHide == "ov_hide_beast_l"' in core_txt,
+      "Enemy runtime traits in ov_inc_core match creature hides (mando/assn/beast_l) cleanly")
 bad_gff_tokens = []
 for ext in ("*.uti", "*.dlg", "*.utp"):
     for pf in sorted(OVR.glob(ext)):

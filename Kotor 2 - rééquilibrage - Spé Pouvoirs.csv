@@ -349,7 +349,7 @@ Coût en Points de Force : 20 / 30 / 40
 
 Plutôt que de contenir le vide qui le traverse, l'Exilé en écarte délibérément les bords pour faire de son être un siphon. La dépression qu'il ouvre dans la Force aspire violemment l'énergie qui l'entoure — ainsi que sa propre substance vitale — pour la convertir en vigueur et en vélocité brutes, brisant au passage toute stase ou entrave qui prétendrait le figer. Contrairement à ceux que leur faim finit par posséder, l'Exilé demeure souverain face à l'abîme : il accepte que la faille ronge sa chair pour arracher la victoire, et la referme de lui-même avant qu'elle ne l'efface.
 
-Effets (30 s) : +2 / +4 / +6 FOR et DEX, immunité Stase & Paralysie, +1 attaque/round dès le R1 (non cumulable avec Vitesse) ; consomme -5 % PV max par round (arrêt automatique à ≤ 25 % PV)."
+Effets (30 s) : +2 / +4 / +6 FOR et DEX, immunité Stase & Paralysie, +1 attaque/round dès le R1 (non cumulable avec Vitesse) ; consomme -5 % PV max par round (arrêt automatique à <= 25 % PV)."
 "Force Scar I-III (LS)
 Cicatrice de Force I-III",Armure lourde,20 / 30 / 40,(Nouveau pouvoir de prestige — miroir de Fureur Sith),"L1/L2/L3 (niv. 1/5/9 de prestige, 30 s) : soin +2 % / +4 % / +6 % PV max par round + +1/+2/+3 aux sauvegardes + immunité Peur/Étourdissement (L2) et Paralysie (L3)",Prestige Maître d'armes Jedi,,"[Mod D20-Overhaul]
 Armure maximale : Armure lourde

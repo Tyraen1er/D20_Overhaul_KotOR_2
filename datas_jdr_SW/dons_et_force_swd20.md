@@ -3,9 +3,9 @@
 Ce document analyse les différences d'équilibrage entre le JdR sur table ***Star Wars Roleplaying Game – Revised Core Rulebook (WotC, 2002)*** et son adaptation dans *KotOR 2*, ainsi que les pistes de mods qu'on peut en tirer.
 
 > **Catalogues complets de référence (descriptifs intégraux du JdR) :**
-> * **Tous les Dons du JdR (Généraux, Martiaux & Force Feats) :** [`_reference/jdr/dons_swd20.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/_reference/jdr/dons_swd20.md)
-> * **Tous les Pouvoirs de la Force du JdR (Control, Sense, Alter, Dark Side) :** [`_reference/jdr/pouvoirs_swd20.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/_reference/jdr/pouvoirs_swd20.md)
-> * **Système VP/WP, Armures (DR) & Armes (Multifire/Autofire) :** [`datas_jdr_SW/systeme_et_equipement_swd20.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/datas_jdr_SW/systeme_et_equipement_swd20.md)
+> * **Tous les Dons du JdR (Généraux, Martiaux & Force Feats) :** [`_reference/jdr/dons_swd20.md`](../_reference/jdr/dons_swd20.md)
+> * **Tous les Pouvoirs de la Force du JdR (Control, Sense, Alter, Dark Side) :** [`_reference/jdr/pouvoirs_swd20.md`](../_reference/jdr/pouvoirs_swd20.md)
+> * **Système VP/WP, Armures (DR) & Armes (Multifire/Autofire) :** [`datas_jdr_SW/systeme_et_equipement_swd20.md`](systeme_et_equipement_swd20.md)
 
 ---
 

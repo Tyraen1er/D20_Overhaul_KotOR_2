@@ -1,6 +1,6 @@
 # Ennemis & Boss du JdR *Star Wars d20 (RCR)* — Comparatif Statistique avec *KotOR 2*
 
-Ce document répertorie les statistiques officielles d'ennemis et de boss emblématiques du jeu de rôle sur table ***Star Wars Roleplaying Game – Revised Core Rulebook (WotC, 2002)*** et de ses suppléments officiels (*The Dark Side Sourcebook*, *Power of the Jedi*, *Ultimate Adversaries*), et les compare directement **à niveau équivalent** avec les boss de *KotOR 2* ([`datas_kotor/ennemis_reference_kotor2.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/datas_kotor/ennemis_reference_kotor2.md)).
+Ce document répertorie les statistiques officielles d'ennemis et de boss emblématiques du jeu de rôle sur table ***Star Wars Roleplaying Game – Revised Core Rulebook (WotC, 2002)*** et de ses suppléments officiels (*The Dark Side Sourcebook*, *Power of the Jedi*, *Ultimate Adversaries*), et les compare directement **à niveau équivalent** avec les boss de *KotOR 2* ([`datas_kotor/ennemis_reference_kotor2.md`](../datas_kotor/ennemis_reference_kotor2.md)).
 
 ---
 
@@ -32,7 +32,7 @@ Dans le JdR papier *Star Wars d20 (Revised)*, le niveau maximum standard est **2
 
 ## 2. Tableau Comparatif Direct : JdR *Star Wars d20* vs *KotOR 2* à Niveau Équivalent
 
-Voici le face-à-face entre un boss du JdR papier et son homologue exact dans *KotOR 2* (stats issues de [`datas_kotor/ennemis_reference_kotor2.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/datas_kotor/ennemis_reference_kotor2.md)) :
+Voici le face-à-face entre un boss du JdR papier et son homologue exact dans *KotOR 2* (stats issues de [`datas_kotor/ennemis_reference_kotor2.md`](../datas_kotor/ennemis_reference_kotor2.md)) :
 
 | Palier / Archétype | Référence JdR Papier (*Star Wars d20 RCR*) | Référence *KotOR 2* (avec `autobalance.2da`) | Écart & Constat Mathématique |
 | :--- | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ Voici le face-à-face entre un boss du JdR papier et son homologue exact dans *K
 
 ## 3. Les 4 Grandes Différences Mathématiques révélées par le Comparatif
 
-Ce comparatif entre [`ennemis_reference_kotor2.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/datas_kotor/ennemis_reference_kotor2.md) et le JdR *Star Wars d20* explique **tous les problèmes d'équilibrage de KotOR 2** :
+Ce comparatif entre [`ennemis_reference_kotor2.md`](../datas_kotor/ennemis_reference_kotor2.md) et le JdR *Star Wars d20* explique **tous les problèmes d'équilibrage de KotOR 2** :
 
 ### 1. Pourquoi les PV des boss de KotOR 2 sont multipliés par ×6 (1 180 PV vs 188 PV)
 * **Dans le JdR papier :** Un Jedi niveau 18 (comme Vader) fait au maximum **3 à 4 attaques par round** (en prenant `-5`, `-10`, `-15` sur ses attaques itératives : `+21/+16/+11/+6`), dont seules 2 ou 3 touchent pour ~28 dégâts, soit **~60 à 80 dégâts par round**. Un boss à **180 PV** survit donc **3 rounds complets**.

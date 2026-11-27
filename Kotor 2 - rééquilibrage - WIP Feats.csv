@@ -127,7 +127,7 @@ Par sa nature de plaie béante dans la Force, l'Exilé constitue un angle mort d
 124,MASTER_TOUGHNESS,Robustesse III,Défense & survie,Niv. 8 ; TOUGHNESS ; IMPROVED_TOUGHNESS,+1 PV/niv suppl. (total +3 PV/niv),,,
 125,EVASION,Esquive (Evasion),Défense & survie,,Auto Éclaireur niv. 6 ; sauvegarde de Réflexes réussie contre une AoE → 0 dégât (échec → 100 % dégâts),"Esquive Totale : Réflexes réussie vs AoE → 0 dégât, échec → demi-dégâts ; sélectionnable pour les classes de prestige Jedi protecteur et Assassin (et Visas Niv. 15+) ; auto Jedi/Sith ennemis 20+ ; reste auto Éclaireur niv. 6 (Mira)",,"[Mod D20-Overhaul]
 
-Effets : Esquive Totale : Réflexes réussie vs zone → 0 dégât, échec → demi-dégâts ; sélectionnable pour les classes de prestige Jedi protecteur et Assassin (et Visas Niv. 15+) ; auto Jedi/Sith ennemis 20+ ; reste auto Éclaireur niv. 6 (Mira)
+Effets : Esquive Totale : Réflexes réussie vs zone -> 0 dégât, échec -> demi-dégâts ; sélectionnable pour les classes de prestige Jedi protecteur et Assassin (et Visas Niv. 15+) ; auto Jedi/Sith ennemis 20+ ; reste auto Éclaireur niv. 6 (Mira)
 
 Grâce à des réflexes aiguisés par l'entraînement ou la Force, ce don permet d'anticiper les explosions et décharges de zone pour s'en extraire au dernier instant."
 126,TARGETING_1,Visée 1,Caché / interne,,Interne PNJ — bonus de précision (IA),,,
@@ -621,7 +621,7 @@ Effets : +2 INT ; attaque et dégâts distance : DEX/INT (si INT > DEX)
 Héritée des Trouveurs Gand, cette école associe sens tactique, démolition de précision et calcul balistique pour compenser l'instinct par l'Intelligence pure."
 nouveau (245+),MOD_GAND_3,Chasseur de prime Gand III,SPÉCIALISATIONS CARACTÉRISTIQUE,Rang II ; Niv. 15+,,+3 INT ; rayon des grenades 4 m → 6 m ; perce Esquive Totale (demi-dégâts min) ; 50 % de chance de ne pas consommer la grenade,"Implémentable 100 % dans k_sup_grenade.nss : rayon 6.0f, bypass du check FEAT_EVASION, et d2()==1 -> CreateItemOnObject pour restituer la grenade.","[Mod D20-Overhaul]
 
-Effets : +3 INT ; rayon des grenades 4 m → 6 m ; perce Esquive Totale (demi-dégâts min) ; 50 % de chance de ne pas consommer la grenade
+Effets : +3 INT ; rayon des grenades 4 m -> 6 m ; perce Esquive Totale (demi-dégâts min) ; 50 % de chance de ne pas consommer la grenade
 
 Héritée des Trouveurs Gand, cette école associe sens tactique, démolition de précision et calcul balistique pour compenser l'instinct par l'Intelligence pure."
 nouveau (245+),MOD_MATUKAI_SAG_1,Maîtrise Matukai I,SPÉCIALISATIONS CARACTÉRISTIQUE,Niv. 1+ (ouvert à tous),,+1 SAG ; ajoute le mod. de SAG à l'attaque (s'ajoute à la carac directrice) ; fixe l'arbre actif (les 5 autres arbres restent sélectionnables mais sans effet),"Validé en jeu (23/11) : exclusion de feat.2da = KO -> mutualité des 6 arbres carac gérée par garde-fou scripté (premier arbre acquis enregistré en LocalNumber, les autres ignorés).","[Mod D20-Overhaul]

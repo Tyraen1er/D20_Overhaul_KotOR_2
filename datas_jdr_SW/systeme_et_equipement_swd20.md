@@ -3,9 +3,9 @@
 Ce document synthétise les règles officielles du jeu de rôle sur table ***Star Wars Roleplaying Game – Revised Core Rulebook* (Wizards of the Coast, 2002)** dont est directement tiré KotOR, en mettant en évidence **les mécaniques originales supprimées ou simplifiées par BioWare/Obsidian** et comment elles peuvent servir de modèles pour rééquilibrer KotOR 2.
 
 > **Catalogues complets de référence (descriptifs intégraux du JdR) :**
-> * **Tous les Dons du JdR (Généraux, Martiaux & Force Feats) :** [`_reference/jdr/dons_swd20.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/_reference/jdr/dons_swd20.md)
-> * **Tous les Pouvoirs de la Force du JdR (Control, Sense, Alter, Dark Side) :** [`_reference/jdr/pouvoirs_swd20.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/_reference/jdr/pouvoirs_swd20.md)
-> * **Analyse comparative Dons & Force (JdR vs KotOR 2) :** [`datas_jdr_SW/dons_et_force_swd20.md`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/datas_jdr_SW/dons_et_force_swd20.md)
+> * **Tous les Dons du JdR (Généraux, Martiaux & Force Feats) :** [`_reference/jdr/dons_swd20.md`](../_reference/jdr/dons_swd20.md)
+> * **Tous les Pouvoirs de la Force du JdR (Control, Sense, Alter, Dark Side) :** [`_reference/jdr/pouvoirs_swd20.md`](../_reference/jdr/pouvoirs_swd20.md)
+> * **Analyse comparative Dons & Force (JdR vs KotOR 2) :** [`datas_jdr_SW/dons_et_force_swd20.md`](dons_et_force_swd20.md)
 
 ---
 

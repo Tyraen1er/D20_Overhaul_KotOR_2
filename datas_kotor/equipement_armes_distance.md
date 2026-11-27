@@ -1,7 +1,7 @@
 # Équipement — Armes à Distance (pistolets, fusils, grenades, fusées)
 
 > Généré automatiquement depuis les fichiers du jeu (installation telle que jouée : vanilla + mods installés)
-> par [`tools/extract_items.py`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/tools/extract_items.py).
+> par [`tools/extract_items.py`](../tools/extract_items.py).
 > **Prérequis de niveau :** dans TSL, *aucun objet n'a de niveau minimum* — la disponibilité passe par :
 > le **palier de loot aléatoire** (indexé sur le niveau du PJ, colonne « Loot »), le **don de port d'armure**,
 > les **prérequis de caractéristique** (implants) et les restrictions d'alignement/classe.

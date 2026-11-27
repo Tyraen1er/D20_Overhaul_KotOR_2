@@ -3,7 +3,7 @@
 
 Génère dans `mods/overhaul/` (sans jamais modifier le jeu directement) :
   - `dialog.tlk` (copie du backup FR + entrées ajoutées pour dons & pouvoirs)
-  - `Override/feat.2da` (245 lignes TSLRCM intactes + 73 nouveaux dons + 5 marqueurs internes, 29 supprimés masqués)
+  - `Override/feat.2da` (245 lignes TSLRCM intactes + 73 nouveaux dons + 5 marqueurs internes, 33 supprimés masqués)
   - `Override/featgain.2da` (budgets Niv. 30 : 22 / 18 / 15 dons)
   - `Override/classpowergain.2da` (budgets Niv. 30 : 12 / 16 / 24 pouvoirs, Gardien +2 au Niv. 1)
   - `Override/baseitems.2da` (armes d20, armures CA/DEX, variantes 1M Gamoréen II)
@@ -41,10 +41,23 @@ if not BASE_TLK.exists():
     BASE_TLK = ROOT / "mods" / "00-test-feat" / "backup" / "dialog.tlk.bak"
 
 CSV_FEATS = ROOT / "Kotor 2 - rééquilibrage - WIP Feats.csv"
-CSV_WEAPONS = ROOT / "Kotor 2 - rééquilibrage - Armes.csv"
+CSV_WEAPONS = ROOT / "Kotor 2 - rééquilibrage - armes.csv"
 CSV_ARMORS = ROOT / "Kotor 2 - rééquilibrage - Armures.csv"
 CSV_POWERS = ROOT / "Kotor 2 - rééquilibrage - Spé Pouvoirs.csv"
 CSV_CRAFT = ROOT / "Kotor 2 - rééquilibrage - Craft.csv"
+
+_CP1252_FALLBACKS = str.maketrans({
+    "\u2192": "->",   # →
+    "\u2194": "<->",  # ↔
+    "\u2264": "<=",   # ≤
+    "\u2265": ">=",   # ≥
+    "\u2212": "-",    # −
+})
+
+
+def sanitize_tlk(text: str) -> str:
+    """Remplace les caractères Unicode absents de CP1252 pour éviter les '?' en jeu."""
+    return text.translate(_CP1252_FALLBACKS)
 
 
 def norm(s: str) -> str:
@@ -377,7 +390,7 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
             hidden_count += 1
         elif desc_col_idx >= 0 and len(r) > desc_col_idx and r[desc_col_idx].strip() and fid < len(feat):
             desc_ref = len(tlk)
-            tlk.add(r[desc_col_idx].strip())
+            tlk.add(sanitize_tlk(r[desc_col_idx].strip()))
             feat.get_row(fid).set_string("description", str(desc_ref))
             vanilla_desc_updated += 1
 
@@ -470,9 +483,9 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         )
 
         name_ref = len(tlk)
-        tlk.add(nom)
+        tlk.add(sanitize_tlk(nom))
         desc_ref = len(tlk)
-        tlk.add(desc_mod)
+        tlk.add(sanitize_tlk(desc_mod))
 
         entry = dict(tmpl)
         entry["label"] = label
@@ -1003,7 +1016,7 @@ def build_spells() -> tuple[TwoDA, dict[str, int]]:
                 desc_ref: int | None = None
                 if desc_mod:
                     desc_ref = len(tlk)
-                    tlk.add(desc_mod)
+                    tlk.add(sanitize_tlk(desc_mod))
                 for tier_i, slbl in enumerate(spell_labels):
                     srow = sp.get_row(by_label[slbl])
                     if mask is not None:

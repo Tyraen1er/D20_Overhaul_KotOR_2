@@ -5,7 +5,7 @@ from pykotor.resource.generics.uti import read_uti
 
 GAME_DIR = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
 GAME_OVR = GAME_DIR / "Override"
-MOD_DIR = Path(r"C:\Users\emman\Desktop\dev\Kotor 2 Mods\mods\overhaul")
+MOD_DIR = Path(__file__).resolve().parent.parent / "mods" / "overhaul"
 MOD_OVR = MOD_DIR / "Override"
 
 # 1. Nettoyer les anciens fichiers fantômes de la v0 (m_w_*_1m.uti et anciens scripts ov_gam_*)

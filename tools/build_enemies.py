@@ -50,53 +50,33 @@ def make_prop(prop_id: int, subtype: int, cost_table: int, cost_value: int) -> U
 
 
 def build_creature_hides(inst: Installation) -> int:
-    """Crée les 8 peaux de créature familiales (`ov_hide_*.uti`) à partir de `g_i_crhide001`.
-    IDs itempropdef.2da vérifiés :
-      - prop 27 = SavingThrowSpecific (sub 2=Reflex, 3=Will ; cost_tbl 2)
-      - prop 25 = ImprovedMagicResist (cost_tbl 11 : 4=18, 7=24) — complété en runtime par 15+Niv / 20+Niv
-      - prop 14 = DamageImmunity (sub: 8=Fire, 12=Energy ; cost_tbl 5 : 3=25%, 10=30%)
-      - prop 17 = DamageResist (cost_tbl 7 : 1=5/-)
-      - prop 24 = Immunity (sub 5 = Fear)
+    """Crée les peaux de créature familiales (`ov_hide_*.uti`) à partir de `g_i_crhide001`.
+    Les résistances/RD/bonus qui scalent en continu avec le niveau du joueur (`Niv. PJ`) sont
+    appliqués en runtime dans `ov_inc_core.nss` (aucun doublon avec les `.uti`) :
+      - `ov_hide_sith_l1..l3` : marqueur Sith (Volonté, SR, Esquive Totale en runtime)
+      - `ov_hide_mando_m/l`   : marqueur Mandalorien (Résist. Énergie/Feu 30 % + 1,5 %/niv max 75 % + stim en runtime)
+      - `ov_hide_soldier`     : marqueur Soldat/Mercenaire (Résist. Énergie/Feu 5 % + 1 %/niv max 35 % en runtime)
+      - `ov_hide_beast_s/m/l` : marqueur Bête (RD Physique 1 + 0,5/niv max 15 en runtime ; Peur imm. sur m/l ; régén HC sur l)
+      - `ov_hide_assn`        : marqueur Assassin Sith (Esquive 10 % + 0,5 %/niv max 25 % + Réflexes en runtime)
     """
     res = inst.resource("g_i_crhide001", ResourceType.UTI)
     assert res, "g_i_crhide001 introuvable"
 
     hides: dict[str, list[UTIProperty]] = {
-        "ov_hide_sith_l1": [
-            make_prop(27, 3, 2, 2),   # Volonté +2
-        ],
-        "ov_hide_sith_l2": [
-            make_prop(27, 3, 2, 4),   # Volonté +4
-            make_prop(25, 0, 11, 4),  # ImprovedMagicResist (SR 18 base ; runtime 15+Niv)
-        ],
-        "ov_hide_sith_l3": [
-            make_prop(27, 3, 2, 6),   # Volonté +6
-            make_prop(25, 0, 11, 7),  # ImprovedMagicResist (SR 24 base ; runtime 20+Niv)
-        ],
-        "ov_hide_mando_m": [
-            make_prop(14, 12, 5, 3),  # Immunité Énergie (Laser) 25%
-            make_prop(14, 8, 5, 3),   # Immunité Feu 25%
-        ],
-        "ov_hide_mando_l": [
-            make_prop(14, 12, 5, 10), # Immunité Énergie (Laser) 30%
-            make_prop(14, 8, 5, 10),  # Immunité Feu 30%
-        ],
+        "ov_hide_sith_l1": [],
+        "ov_hide_sith_l2": [],
+        "ov_hide_sith_l3": [],
+        "ov_hide_mando_m": [],
+        "ov_hide_mando_l": [],
+        "ov_hide_soldier": [],
+        "ov_hide_beast_s": [],
         "ov_hide_beast_m": [
-            make_prop(17, 0, 7, 9),   # RD Contondant 4/- (iprp_resistcost row 9)
-            make_prop(17, 1, 7, 9),   # RD Perforant 4/-
-            make_prop(17, 2, 7, 9),   # RD Tranchant 4/-
             make_prop(24, 5, 0, 0),   # Immunité Peur (subtype 5 = Fear)
         ],
         "ov_hide_beast_l": [
-            make_prop(17, 0, 7, 10),  # RD Contondant 6/- (iprp_resistcost row 10)
-            make_prop(17, 1, 7, 10),  # RD Perforant 6/-
-            make_prop(17, 2, 7, 10),  # RD Tranchant 6/-
-            make_prop(17, 12, 7, 10), # RD Énergie 6/- (apex)
             make_prop(24, 5, 0, 0),   # Immunité Peur (subtype 5 = Fear ; régén hors combat gérée en runtime)
         ],
-        "ov_hide_assn": [
-            make_prop(27, 2, 2, 2),   # Réflexes +2 (esquive 20/25% gérée en runtime)
-        ],
+        "ov_hide_assn": [],
     }
 
     for rr, props in hides.items():
@@ -285,9 +265,6 @@ def build_enemy_utcs(inst: Installation) -> dict[str, int]:
                 hide = "ov_hide_sith_l3" if cr >= 14 else ("ov_hide_sith_l2" if cr >= 8 else "ov_hide_sith_l1")
                 u.equipment[EquipmentSlot.HIDE] = InventoryItem(ResRef(hide), droppable=False)
                 dirty = True
-            if cr >= 15 and FEAT_EVASION not in u.feats:
-                u.feats.append(FEAT_EVASION)
-                dirty = True
 
         elif fam == "soldier":
             if EquipmentSlot.ARMOR not in u.equipment:
@@ -298,6 +275,9 @@ def build_enemy_utcs(inst: Installation) -> dict[str, int]:
                 elif FEAT_ARMOR_LIGHT in u.feats:
                     u.equipment[EquipmentSlot.ARMOR] = InventoryItem(ResRef("a_light_02"), droppable=False)
                     dirty = True
+            if EquipmentSlot.HIDE not in u.equipment:
+                u.equipment[EquipmentSlot.HIDE] = InventoryItem(ResRef("ov_hide_soldier"), droppable=False)
+                dirty = True
             if cr >= 7 and EquipmentSlot.LEFT_ARM not in u.equipment:
                 soldier_elite_idx += 1
                 if soldier_elite_idx % 3 == 0:
@@ -324,8 +304,8 @@ def build_enemy_utcs(inst: Installation) -> dict[str, int]:
                     dirty = True
 
         elif fam == "beast":
-            if cr >= 8 and EquipmentSlot.HIDE not in u.equipment:
-                hide = "ov_hide_beast_l" if cr >= 12 else "ov_hide_beast_m"
+            if EquipmentSlot.HIDE not in u.equipment:
+                hide = "ov_hide_beast_l" if cr >= 12 else ("ov_hide_beast_m" if cr >= 8 else "ov_hide_beast_s")
                 u.equipment[EquipmentSlot.HIDE] = InventoryItem(ResRef(hide), droppable=False)
                 dirty = True
 

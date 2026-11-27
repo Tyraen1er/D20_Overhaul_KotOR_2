@@ -91,7 +91,7 @@ def generate_info_rtf() -> str:
         "1. DONS & POUVOIRS :\n"
         "  - 73 nouveaux dons d20 (Familles d'armes Laser, Assaut, Lourdes, etc., Styles de combat, "
         "Dons de Caractéristiques rééquilibrés).\n"
-        "  - 29 dons redondants ou déséquilibrés masqués proprement.\n"
+        "  - 33 dons redondants ou déséquilibrés masqués proprement.\n"
         "  - Progression des dons et pouvoirs réétalonnée (budgets 22/18/15 dons sur 30 niveaux).\n\n"
         "2. ARMES & ARMURES :\n"
         "  - Refonte d20 des profils d'armes (dégâts, plages de coups critiques, maniement 1M/2M).\n"

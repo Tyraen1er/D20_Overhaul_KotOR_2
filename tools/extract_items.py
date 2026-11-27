@@ -625,7 +625,7 @@ def phase5(ctx: Ctx):
 
     HEADER = (
         "> Généré automatiquement depuis les fichiers du jeu (installation telle que jouée : vanilla + mods installés)\n"
-        "> par [`tools/extract_items.py`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/tools/extract_items.py).\n"
+        "> par [`tools/extract_items.py`](../tools/extract_items.py).\n"
         "> **Prérequis de niveau :** dans TSL, *aucun objet n'a de niveau minimum* — la disponibilité passe par :\n"
         "> le **palier de loot aléatoire** (indexé sur le niveau du PJ, colonne « Loot »), le **don de port d'armure**,\n"
         "> les **prérequis de caractéristique** (implants) et les restrictions d'alignement/classe.\n\n"
@@ -667,7 +667,7 @@ def phase5(ctx: Ctx):
     L = ["# Loot Aléatoire — Système de Trésor de KotOR 2 (`k_inc_treas_k2.nss`)", "",
          "> Le moteur TSL ne possède **pas de `randomitem.2da`** (c'était KotOR 1) : tout le loot aléatoire est généré",
          "> par scripts (`PlaceTreasure` / `PlaceTreasureDisposable` de [`k_inc_treas_k2.nss`](",
-         "file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/_reference/scripts/k_inc_treas_k2.nss)).", "",
+         "../_reference/scripts/k_inc_treas_k2.nss)).", "",
          "## 1. Mécanique générale", "",
          "1. **Niveau d'objet** : `niveau PJ + Random(8) − 5` (borné 1–30). Le niveau du PJ est la variable globale `G_PC_LEVEL`.",
          "2. **Rareté (objets d'équipement)** : jet `Random(95) + 000_RareItemChance` ; si `> 100` → objet **rare** (+5 niveaux d'objet).",

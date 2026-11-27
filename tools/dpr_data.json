@@ -3693,7 +3693,7 @@
       },
       {
         "resref": "a_helmet_23",
-        "name": "Serre-tête de méditation Mutaki",
+        "name": "Serre-tête de méditation Matukai",
         "level_req": 30,
         "con_req": 0,
         "stats": {
@@ -6944,7 +6944,7 @@
       },
       {
         "resref": "a_robe_05",
-        "name": "Bure d'apprenti Mutaki",
+        "name": "Bure d'apprenti Matukai",
         "level_req": 9,
         "con_req": 0,
         "stats": {
@@ -7014,7 +7014,7 @@
       },
       {
         "resref": "a_robe_15",
-        "name": "Bure d'adepte Mutaki",
+        "name": "Bure d'adepte Matukai",
         "level_req": 29,
         "con_req": 0,
         "stats": {

@@ -291,7 +291,7 @@ def phase2():
     A("# État des Lieux Défensif des Ennemis — Immunités, Résistances, Dons défensifs")
     A("")
     A("> Extrait de **tous les templates de créatures hostiles** (`FactionID = 1`) des fichiers du jeu")
-    A("> (chitin.key + modules, installation telle que jouée) par [`tools/extract_enemies.py`](file:///C:/Users/emman/Desktop/dev/Kotor%202%20Mods/tools/extract_enemies.py).")
+    A("> (chitin.key + modules, installation telle que jouée) par [`tools/extract_enemies.py`](../tools/extract_enemies.py).")
     A("> Compagnon de [`ennemis_reference_kotor2.md`](ennemis_reference_kotor2.md) (autobalance, PV/CA des boss).")
     A("> **Limites :** les bonus appliqués par scripts (`OnSpawn`, dialogues) ne sont pas comptés ; stats des templates *avant* scaling autobalance.")
     A("")
