@@ -466,7 +466,7 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         ev_row.set_string("sas_list", "1")
         ev_row.set_string("jsn_list", "1")
         ev_row.set_string("mincharlevel", "15")
-        ev_row.set_string("prereqfeat1", str(id_prest_hyb))
+        ev_row.set_string("prereqfeat2", str(id_prest_hyb))
 
     # Prérequis Rang I (port d'armure 4/5/6 & maîtrise d'arme 39/40/43/44)
     r1_prereq_exact: dict[str, str] = {
@@ -532,9 +532,11 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
         else:
             entry["pips"] = "1"
 
-        # Prérequis R1 (armures & armes)
+        # Prérequis R1 (armures & armes) : placés dans prereqfeat2 (JAMAIS prereqfeat1),
+        # car le GUI de montée de niveau KotOR 2 utilise prereqfeat1 pour grouper les rangs sur une même ligne
+        # (convention vanilla : SUPER_WEAPON_FOCUS_LIGHTSABER_I, PRECISE_SHOT_IV).
         if label in r1_prereq_exact:
-            entry["prereqfeat1"] = r1_prereq_exact[label]
+            entry["prereqfeat2"] = r1_prereq_exact[label]
         elif label in r1_prereq_or_ranged:
             entry["orreqfeat0"] = "39"  # WEAPON_PROF_BLASTER
             entry["orreqfeat1"] = "40"  # WEAPON_PROF_BLASTER_RIFLE
