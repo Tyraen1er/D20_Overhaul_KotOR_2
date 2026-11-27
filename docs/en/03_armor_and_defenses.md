@@ -17,6 +17,8 @@ In vanilla KotOR 2, wearing armor as a Jedi was almost always a trap: it blocked
 | **Medium Armor** | `6–7` → **`6–7`** | `+2/+3` → **`+3 to +4`** | **DR `2/-`** | **2 slots**: Full Underlay *(same as Heavy)* + **exclusive reinforced Overlay** *(30 pieces)* | Medium-compatible powers *(Heal, Revitalize, Barrier, Energy Resistance, Plague, Push/Wave, Battle Meditation, Enlightenment…)* |
 | **Heavy Armor** | `8–9` → **`10–11`** | `0/+1` → **`+0 to +1`** | **DR `4/-`** | **1 slot**: Full Underlay *(30 pieces)* | Heavy-compatible powers *(Force Body, Throw Lightsaber, Force Resistance, Drain Force, Deflection, Prestige Ultimates)* |
 
+> **Free Starting Armor Proficiencies (Level 1):** Jedi classes now start with armor proficiencies automatically — **Jedi Guardian** (*Light, Medium, and Heavy*), **Jedi Sentinel** (*Light and Medium*), and **Jedi Consular** (*Light*).
+
 > **No More Light Armor Exceptions:** **Armored Flight Suits (Ubese)** and **Zeison Sha / Jal Shey Armors** no longer bypass Force power restrictions as they did in vanilla — they now follow the exact same rules as all other Light Armors.
 
 > **Droid Plating** (T3-M4, HK-47, G0-T0): unchanged from vanilla.

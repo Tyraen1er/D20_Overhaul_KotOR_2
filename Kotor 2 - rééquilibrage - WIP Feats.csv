@@ -2,9 +2,9 @@
 1,ADVANCED_JEDI_DEFENSE,Défense de Jedi II,Défense & survie,Niv. 4 ; JEDI_DEFENSE,Bonus de renvoi +3 (auto Jedi),,,
 2,XXXX_ADVANCED_GUARD_STANCE,Posture de garde améliorée,Caché / interne,,Caché (XXXX) — non utilisé,,,
 3,TWO_WEAPON_FIGHTING,Combat à deux armes I,Style & posture,,Malus 2 armes : -4/-8 (arme équilibrée en main gauche : -2/-6),supprimé,,
-4,ARMOUR_PROF_HEAVY,Port d'armure lourde,Défense & survie,ARMOUR_PROF_LIGHT ; ARMOUR_PROF_MEDIUM,Porter les armures lourdes sans pénalité,,,
-5,ARMOUR_PROF_LIGHT,Port d'armure légère,Défense & survie,,Porter les armures légères sans pénalité,,,
-6,ARMOUR_PROF_MEDIUM,Port d'armure intermédiaire,Défense & survie,ARMOUR_PROF_LIGHT,Porter les armures intermédiaires sans pénalité,,,
+4,ARMOUR_PROF_HEAVY,Port d'armure lourde,Défense & survie,ARMOUR_PROF_LIGHT ; ARMOUR_PROF_MEDIUM,Porter les armures lourdes sans pénalité,Gratuit au Niv. 1 pour Gardien Jedi,feat.2da ligne 4 : jgd_list=3 jgd_granted=1,
+5,ARMOUR_PROF_LIGHT,Port d'armure légère,Défense & survie,,Porter les armures légères sans pénalité,"Gratuit au Niv. 1 pour Gardien, Sentinelle et Consulaire Jedi",feat.2da ligne 5 : jgd/jsn/jcn_list=3 granted=1,
+6,ARMOUR_PROF_MEDIUM,Port d'armure intermédiaire,Défense & survie,ARMOUR_PROF_LIGHT,Porter les armures intermédiaires sans pénalité,Gratuit au Niv. 1 pour Gardien et Sentinelle Jedi,feat.2da ligne 6 : jgd/jsn_list=3 granted=1,
 7,CAUTIOUS,Prudence I,Compétence & utilitaire,,+1 Démolition et Premiers soins,,,
 8,CRITICAL_STRIKE,Coup critique I,Actif — mêlée,,"Plage de menace ×2, -5 CA ; étourdit 1 round si Vigueur échouée (DD = Niv. + Mod. FOR)",,,
 9,TWO_WEAPON_ADVANCED,Combat à deux armes II,Style & posture,Niv. 4 ; TWO_WEAPON_FIGHTING,-2/-4 (0/-2 équilibrée),supprimé,,
@@ -294,19 +294,19 @@ Palier final de maîtrise du combat à mains nues : le personnage inflige +3d4 p
 243,PRECISE_SHOT_IV,Tir de précision IV,Actif — distance,Niv. 16 ; PRECISE_SHOT_III,+4 Atq & Dégâts ; +8 CA vs blasters ; réduit le malus en mêlée,,,
 244,PRECISE_SHOT_V,Tir de précision V,Actif — distance,Niv. 20 ; PRECISE_SHOT_IV,+5 Atq & Dégâts ; +10 CA vs blasters ; réduit le malus en mêlée,,,
 ,,══ STYLES DE COMBAT ══,,,,,,
-nouveau (245+),MOD_AMBIDEXTRY_1,Ambidextrie I,STYLES DE COMBAT,Niv. 1+ ; Une arme en main droite et une autre en main gauche équipées,CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atq -6/-6, +1 CA (malus de base sans le don : -6/-10 ; +2/0 si arme équilibrée en main gauche)",,"[Mod D20-Overhaul]
+nouveau (245+),MOD_AMBIDEXTRY_1,Ambidextrie I,STYLES DE COMBAT,Niv. 1+ ; Une arme en main droite et une autre en main gauche équipées,CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atq -6/-6, +2 CA (malus de base sans le don : -6/-10 ; +2/0 si arme équilibrée en main gauche)",,"[Mod D20-Overhaul]
 
-Effets : Combat à deux armes : Atq -6/-6, +1 CA (malus de base sans le don : -6/-10 ; +2/0 si arme équilibrée en main gauche)
-
-Issu des disciplines de combat à deux lames et deux blasters de la Bordure Extérieure, cet entraînement coordonne main directrice et main faible pour transformer l'escrime double en véritable mur défensif."
-nouveau (245+),MOD_AMBIDEXTRY_2,Ambidextrie II,STYLES DE COMBAT,Niv. 4+ ; Rang I + deux armes équipées (une par main),CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atq -4/-4, +2 CA",,"[Mod D20-Overhaul]
-
-Effets : Combat à deux armes : Atq -4/-4, +2 CA
+Effets : Combat à deux armes : Atq -6/-6, +2 CA (malus de base sans le don : -6/-10 ; +2/0 si arme équilibrée en main gauche)
 
 Issu des disciplines de combat à deux lames et deux blasters de la Bordure Extérieure, cet entraînement coordonne main directrice et main faible pour transformer l'escrime double en véritable mur défensif."
-nouveau (245+),MOD_AMBIDEXTRY_3,Ambidextrie III,STYLES DE COMBAT,Niv. 8+ ; Rang II + deux armes équipées ; Tous sauf Mages (Gardien / Sentinelle / prestiges non-mages),CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atq -2/-2, +3 CA",,"[Mod D20-Overhaul]
+nouveau (245+),MOD_AMBIDEXTRY_2,Ambidextrie II,STYLES DE COMBAT,Niv. 4+ ; Rang I + deux armes équipées (une par main),CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atq -4/-4, +4 CA",,"[Mod D20-Overhaul]
 
-Effets : Combat à deux armes : Atq -2/-2, +3 CA
+Effets : Combat à deux armes : Atq -4/-4, +4 CA
+
+Issu des disciplines de combat à deux lames et deux blasters de la Bordure Extérieure, cet entraînement coordonne main directrice et main faible pour transformer l'escrime double en véritable mur défensif."
+nouveau (245+),MOD_AMBIDEXTRY_3,Ambidextrie III,STYLES DE COMBAT,Niv. 8+ ; Rang II + deux armes équipées ; Tous sauf Mages (Gardien / Sentinelle / prestiges non-mages),CUSTOM — absent du jeu vanilla,"Combat à deux armes : Atq -2/-2, +6 CA",,"[Mod D20-Overhaul]
+
+Effets : Combat à deux armes : Atq -2/-2, +6 CA
 
 Issu des disciplines de combat à deux lames et deux blasters de la Bordure Extérieure, cet entraînement coordonne main directrice et main faible pour transformer l'escrime double en véritable mur défensif."
 nouveau (245+),MOD_HEAVY_WEAPON_1,Maniement d'Arme Lourde I,STYLES DE COMBAT,Niv. 1+ ; Arme 2M équipée,CUSTOM — absent du jeu vanilla,+1 Atq ; dégâts mêlée 215 % FOR ; dégâts distance 165 % DEX (base moddée : 200 % FOR / 150 % DEX),,"[Mod D20-Overhaul]

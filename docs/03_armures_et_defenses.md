@@ -17,6 +17,8 @@ Le mod redéfinit **chaque type d'armure** autour d'un rôle précis, avec une *
 | **Armure Intermédiaire** | `6–7` → **`6–7`** | `+2/+3` → **`+3 à +4`** | **RD `2/-`** | **2 emplacements** : Sous-couche complète *(identique Lourde)* + **Sur-couche exclusive renforcée** *(30 pièces)* | Pouvoirs autorisés en intermédiaire *(Soins, Revitalisation, Barrière, Résistance Énergie, Peste, Poussée/Vague, Méditation, Grâce LS…)* |
 | **Armure Lourde** | `8–9` → **`10–11`** | `0/+1` → **`+0 à +1`** | **RD `4/-`** | **1 emplacement** : Sous-couche complète *(30 pièces)* | Pouvoirs autorisés en lourde *(Corps de Force, Lancer de sabre, Résistance Force, Absorption Force, Parade/Renvoi, Ultimes de prestige)* |
 
+> **Ports d'armure gratuits dès le niveau 1 :** pour éviter de dépenser des dons dès Péragus, les classes Jedi débutent désormais avec le **Gardien** équipé de tous les ports d'armure (*Légère, Intermédiaire et Lourde*), la **Sentinelle** avec *Légère et Intermédiaire*, et le **Consulaire** avec *Légère*.
+
 > **Fin des passe-droits sur les armures légères :** les **Combinaisons Ubese / de vol blindées** et les **Armures Zeison Sha / Jal Shey** ne bénéficient plus de leur passe-droit du jeu de base — elles suivent désormais exactement les mêmes restrictions de pouvoirs de la Force que toutes les autres armures légères.
 
 > **Blindages Droïdes** (T3-M4, HK-47, G0-T0) : inchangés dans leur fonctionnement de base.

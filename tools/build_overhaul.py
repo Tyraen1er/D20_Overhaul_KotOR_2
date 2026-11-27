@@ -419,6 +419,22 @@ def build_feats_and_tlk() -> tuple[TwoDA, dict[str, int]]:
             tlk.add(nm)
             feat.get_row(fid).set_string("name", str(nref))
 
+    # 1d. Ports d'armure gratuits au Niveau 1 par classe Jedi (décision 27/11) :
+    #     Gardien = Légère + Interm. + Lourde | Sentinelle = Légère + Interm. | Consulaire = Légère
+    armor_prof_grants = {
+        5: ("jgd", "jsn", "jcn"),  # ARMOUR_PROF_LIGHT
+        6: ("jgd", "jsn"),         # ARMOUR_PROF_MEDIUM
+        4: ("jgd",),               # ARMOUR_PROF_HEAVY
+    }
+    for fid, prefixes in armor_prof_grants.items():
+        if fid < len(feat):
+            frow = feat.get_row(fid)
+            for pref in prefixes:
+                if f"{pref}_list" in feat.get_headers():
+                    frow.set_string(f"{pref}_list", "3")
+                if f"{pref}_granted" in feat.get_headers():
+                    frow.set_string(f"{pref}_granted", "1")
+
     # 2. Recenser les 73 nouveaux dons + 5 marqueurs internes afin de connaître tous les IDs avant chaînage
     feat_ids: dict[str, int] = {}
     new_rows_data: list[tuple[int, list[str]]] = []

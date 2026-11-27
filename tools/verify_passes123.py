@@ -250,11 +250,41 @@ if dlg_path.exists():
     dlg_obj = read_dlg(dlg_path)
     check(len(dlg_obj.starters) > 0, f"kreia.dlg loads cleanly via read_dlg (starters={len(dlg_obj.starters)})")
 
-# Installer checks
-check((TSL / "forceshields.2da").exists() and (TSL / "itemcreatemira.2da").exists() and (TSL / "kreia.dlg").exists(),
-      "Installer tslpatchdata contains forceshields.2da, itemcreatemira.2da, kreia.dlg")
-info_rtf = (TSL / "info.rtf").read_text(encoding="ascii")
-check("24 nouvelles" not in info_rtf and "60 am" in info_rtf, "info.rtf updated (no obsolete '24 combinées')")
+# Installer checks (multilingual EN + FR via namespaces.ini)
+check(
+    (TSL / "namespaces.ini").exists()
+    and (TSL / "changes_en.ini").exists()
+    and (TSL / "changes_fr.ini").exists()
+    and (TSL / "append_en.tlk").exists()
+    and (TSL / "append_fr.tlk").exists()
+    and (TSL / "forceshields.2da").exists()
+    and (TSL / "itemcreatemira.2da").exists()
+    and (TSL / "kreia_en.dlg").exists()
+    and (TSL / "kreia_fr.dlg").exists(),
+    "Installer tslpatchdata contains multilingual namespaces.ini, changes/append/kreia EN+FR, forceshields.2da, itemcreatemira.2da",
+)
+info_fr = (TSL / "info_fr.rtf").read_text(encoding="ascii")
+info_en = (TSL / "info_en.rtf").read_text(encoding="ascii")
+check("24 nouvelles" not in info_fr and "60 am" in info_fr and "60 armor upgrades" in info_en,
+      "info_fr.rtf & info_en.rtf updated (no obsolete '24 combinées')")
+
+# EN/FR parity checks on installer TLK, dialogues & custom UTIs
+tlk_en_app = read_tlk(TSL / "append_en.tlk")
+tlk_fr_app = read_tlk(TSL / "append_fr.tlk")
+check(len(tlk_en_app) == len(tlk_fr_app), f"append_en.tlk ({len(tlk_en_app)}) == append_fr.tlk ({len(tlk_fr_app)})")
+en_amb_ok = (
+    any("+2 AC" in tlk_en_app.get(i).text and "Atk -6/-6" in tlk_en_app.get(i).text for i in range(len(tlk_en_app)))
+    and any("+4 AC" in tlk_en_app.get(i).text and "Atk -4/-4" in tlk_en_app.get(i).text for i in range(len(tlk_en_app)))
+    and any("+6 AC" in tlk_en_app.get(i).text and "Atk -2/-2" in tlk_en_app.get(i).text for i in range(len(tlk_en_app)))
+)
+check(en_amb_ok, "append_en.tlk Ambidexterity I-III synced to +2/+4/+6 AC")
+gam_en_dlg = read_dlg(TSL / "ov_gam_conv_en.dlg")
+gam_en_fr_leaks = [
+    r.text.get(Language.ENGLISH, Gender.MALE)
+    for r in gam_en_dlg.all_replies()
+    if r.text.stringref == -1 and any(w in (r.text.get(Language.ENGLISH, Gender.MALE) or "") for w in ("Ouvrir", "Fermer", "Annuler", "Convertir"))
+]
+check(not gam_en_fr_leaks, f"ov_gam_conv_en.dlg has zero untranslated French replies (leaks={gam_en_fr_leaks})")
 
 # No literal **** in any Override 2DA
 for p2da in sorted(OVR.glob("*.2da")):
@@ -290,8 +320,15 @@ for rrr, exp_cv in rd_expected:
     rd_cvs = {p.cost_value for p in u.properties if p.property_name == 17}
     check(rd_cvs == {exp_cv}, f"{rrr} RD cost_values={rd_cvs} (expected {{{exp_cv}}})")
 
-check((TSL / "iprp_resistcost.2da").exists() and (TSL / "ov_gam_adapt.uti").exists() and (TSL / "ov_gam_term.utp").exists() and (TSL / "ov_gam_conv.dlg").exists() and (TSL / "ov_gam_end.ncs").exists(),
-      "Installer includes iprp_resistcost.2da, ov_gam_adapt.uti, ov_gam_term.utp, ov_gam_conv.dlg, ov_gam_end.ncs")
+check(
+    (TSL / "iprp_resistcost.2da").exists()
+    and (TSL / "ov_gam_adapt.uti").exists()
+    and (TSL / "ov_gam_term.utp").exists()
+    and (TSL / "ov_gam_conv_en.dlg").exists()
+    and (TSL / "ov_gam_conv_fr.dlg").exists()
+    and (TSL / "ov_gam_end.ncs").exists(),
+    "Installer includes iprp_resistcost.2da, ov_gam_adapt.uti, ov_gam_term.utp, ov_gam_conv_en/fr.dlg, ov_gam_end.ncs",
+)
 
 u_adapt = read_uti(OVR / "ov_gam_adapt.uti")
 adapt_name_fr = u_adapt.name.get(Language.FRENCH, Gender.MALE) or ""

@@ -636,9 +636,9 @@ void Ov_RefreshPassives(object oTarget)
     if (GetIsObjectValid(oRight) && GetIsObjectValid(oLeft))
     {{
         // Ambidextrie (2 armes)
-        if (GetHasFeat(OV_AMB_3, oTarget)) {{ nTotalAC += 3; nTotalAtk += 6; }}
-        else if (GetHasFeat(OV_AMB_2, oTarget)) {{ nTotalAC += 2; nTotalAtk += 4; }}
-        else if (GetHasFeat(OV_AMB_1, oTarget)) {{ nTotalAC += 1; nTotalAtk += 2; }}
+        if (GetHasFeat(OV_AMB_3, oTarget)) {{ nTotalAC += 6; nTotalAtk += 6; }}
+        else if (GetHasFeat(OV_AMB_2, oTarget)) {{ nTotalAC += 4; nTotalAtk += 4; }}
+        else if (GetHasFeat(OV_AMB_1, oTarget)) {{ nTotalAC += 2; nTotalAtk += 2; }}
         if (bRanged && nRngStat > 0) nTotalDmg += nRngStat; // +100% DEX/INT distance
     }}
     else if (GetIsObjectValid(oRight) && Ov_IsDoubleBaseItem(nBI) && !bIsMirror1M)

@@ -6,3 +6,8 @@ tools/KSE_353/
 # Sorties de build regenerables (tools/build_*.py) et bac a sable des tests moteur (Jalon 0)
 mods/overhaul/
 mods/04-engine-tests/
+
+# Artefacts d'execution de test de TSLPatcher dans installer/
+installer/backup/
+installer/uninstall/
+installer/installlog.txt

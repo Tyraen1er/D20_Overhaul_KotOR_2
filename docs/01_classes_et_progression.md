@@ -10,11 +10,11 @@ Dans le jeu de base, un Gardien Jedi ou un Maraudeur Sith finissait avec près d
 
 Le mod rétablit une **symétrie claire** entre les trois grandes familles de classes Jedi et Sith, calculée sur une progression jusqu'au **niveau 30** :
 
-| Famille de classes | Rythme de Pouvoirs | Total Pouvoirs (Niv. 30) | Rythme de Dons | Total Dons (Niv. 30) | Rôle principal |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Gardien Jedi** / **Maître d'Armes** / **Maraudeur Sith** | 1 tous les 3 niveaux *(+2 au Niv. 1)* | **12** | ~2 tous les 3 niveaux + bonus | **22** | **Maître Martial** |
-| **Sentinelle Jedi** / **Jedi Protecteur** / **Assassin Sith** | 1 tous les 2 niveaux | **16** | ~3 tous les 5 niveaux | **18** | **Hybride Tactique** |
-| **Consulaire Jedi** / **Maître Jedi** / **Seigneur Sith** | 4 tous les 5 niveaux | **24** | 1 tous les 2 niveaux | **15** | **Maître de la Force** |
+| Famille de classes | Rythme de Pouvoirs | Total Pouvoirs (Niv. 30) | Rythme de Dons | Total Dons (Niv. 30) | Ports d'armure gratuits (Niv. 1) | Rôle principal |
+| :--- | :---: | :---: | :---: | :---: | :--- | :--- |
+| **Gardien Jedi** / **Maître d'Armes** / **Maraudeur Sith** | 1 tous les 3 niveaux *(+2 au Niv. 1)* | **12** | ~2 tous les 3 niveaux + bonus | **22** | **Légère, Intermédiaire, Lourde** | **Maître Martial** |
+| **Sentinelle Jedi** / **Jedi Protecteur** / **Assassin Sith** | 1 tous les 2 niveaux | **16** | ~3 tous les 5 niveaux | **18** | **Légère, Intermédiaire** | **Hybride Tactique** |
+| **Consulaire Jedi** / **Maître Jedi** / **Seigneur Sith** | 4 tous les 5 niveaux | **24** | 1 tous les 2 niveaux | **15** | **Légère** | **Maître de la Force** |
 
 > **À retenir :**
 > - Un **Gardien** choisit ses pouvoirs avec soin (buffs essentiels, quelques utilitaires), mais dispose d'un énorme budget de **22 dons** pour maîtriser armes, postures et armures.

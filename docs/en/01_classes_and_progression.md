@@ -10,11 +10,11 @@ In vanilla KotOR 2, a Jedi Guardian or Sith Marauder ended up with nearly 30 For
 
 **D20 Overhaul** establishes a **clean inverse symmetry** across the three Jedi and Sith class archetypes, calibrated up to **level 30**:
 
-| Class Family | Power Gain Rate | Total Powers (Lvl 30) | Feat Gain Rate | Total Feats (Lvl 30) | Primary Role |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Jedi Guardian** / **Weapon Master** / **Sith Marauder** | 1 every 3 levels *(+2 at Lvl 1)* | **12** | ~2 every 3 levels + bonuses | **22** | **Martial Master** |
-| **Jedi Sentinel** / **Jedi Watchman** / **Sith Assassin** | 1 every 2 levels | **16** | ~3 every 5 levels | **18** | **Tactical Hybrid** |
-| **Jedi Consular** / **Jedi Master** / **Sith Lord** | 4 every 5 levels | **24** | 1 every 2 levels | **15** | **Force Master** |
+| Class Family | Power Gain Rate | Total Powers (Lvl 30) | Feat Gain Rate | Total Feats (Lvl 30) | Free Armor Proficiencies (Lvl 1) | Primary Role |
+| :--- | :---: | :---: | :---: | :---: | :--- | :--- |
+| **Jedi Guardian** / **Weapon Master** / **Sith Marauder** | 1 every 3 levels *(+2 at Lvl 1)* | **12** | ~2 every 3 levels + bonuses | **22** | **Light, Medium, Heavy** | **Martial Master** |
+| **Jedi Sentinel** / **Jedi Watchman** / **Sith Assassin** | 1 every 2 levels | **16** | ~3 every 5 levels | **18** | **Light, Medium** | **Tactical Hybrid** |
+| **Jedi Consular** / **Jedi Master** / **Sith Lord** | 4 every 5 levels | **24** | 1 every 2 levels | **15** | **Light** | **Force Master** |
 
 > **Key takeaways:**
 > - A **Guardian** picks Force powers selectively (essential buffs and key utilities) but enjoys a huge budget of **22 feats** to master weapons, stances, and armor.

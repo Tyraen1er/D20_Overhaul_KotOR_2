@@ -2,9 +2,9 @@
 1,ADVANCED_JEDI_DEFENSE,Advanced Jedi Defense,Defense & survival,Lvl 4 ; JEDI_DEFENSE,Redirect bonus +3 (auto Jedi),,,
 2,XXXX_ADVANCED_GUARD_STANCE,Advanced Guard Stance (cut),Hidden / internal,,Hidden (XXXX) — unused,,,
 3,TWO_WEAPON_FIGHTING,Two-Weapon Fighting,Style & stance,,Two-weapon penalty: -4/-8 (balanced off-hand weapon: -2/-6),removed,,
-4,ARMOUR_PROF_HEAVY,Armor Proficiency: Heavy,Defense & survival,ARMOUR_PROF_LIGHT ; ARMOUR_PROF_MEDIUM,Wear heavy armor without penalty,,,
-5,ARMOUR_PROF_LIGHT,Armor Proficiency: Light,Defense & survival,,Wear light armor without penalty,,,
-6,ARMOUR_PROF_MEDIUM,Armor Proficiency: Medium,Defense & survival,ARMOUR_PROF_LIGHT,Wear medium armor without penalty,,,
+4,ARMOUR_PROF_HEAVY,Armor Proficiency: Heavy,Defense & survival,ARMOUR_PROF_LIGHT ; ARMOUR_PROF_MEDIUM,Wear heavy armor without penalty,Free at Lvl 1 for Jedi Guardian,feat.2da row 4: jgd_list=3 jgd_granted=1,
+5,ARMOUR_PROF_LIGHT,Armor Proficiency: Light,Defense & survival,,Wear light armor without penalty,"Free at Lvl 1 for Jedi Guardian, Sentinel, and Consular",feat.2da row 5: jgd/jsn/jcn_list=3 granted=1,
+6,ARMOUR_PROF_MEDIUM,Armor Proficiency: Medium,Defense & survival,ARMOUR_PROF_LIGHT,Wear medium armor without penalty,Free at Lvl 1 for Jedi Guardian and Sentinel,feat.2da row 6: jgd/jsn_list=3 granted=1,
 7,CAUTIOUS,Caution,Skill & utility,,+1 Demolitions and Treat Injury,,,
 8,CRITICAL_STRIKE,Critical Strike,Active — melee,,"Threat range ×2, -5 AC ; stuns for 1 round on a failed Fortitude save (DC = Level + STR mod)",,,
 9,TWO_WEAPON_ADVANCED,Improved Two-Weapon Fighting,Style & stance,Lvl 4 ; TWO_WEAPON_FIGHTING,-2/-4 (0/-2 if balanced),removed,,
@@ -294,19 +294,19 @@ Final tier of unarmed combat mastery: the character deals +3d4 extra points of d
 243,PRECISE_SHOT_IV,Precise Shot IV,Active — ranged,Lvl 16 ; PRECISE_SHOT_III,+4 Attack & Damage ; +8 AC vs blasters ; reduced melee penalty,,,
 244,PRECISE_SHOT_V,Precise Shot V,Active — ranged,Lvl 20 ; PRECISE_SHOT_IV,+5 Attack & Damage ; +10 AC vs blasters ; reduced melee penalty,,,
 ,,══ COMBAT STYLES ══,,,,,,
-new (245+),MOD_AMBIDEXTRY_1,Ambidexterity I,COMBAT STYLES,Lvl 1+ ; one weapon in each hand equipped,CUSTOM — not present in the vanilla game,"Two-weapon combat: Atk -6/-6, +1 AC (baseline penalty without the feat: -6/-10 ; +2/0 with a balanced off-hand weapon)",,"[Mod D20-Overhaul]
+new (245+),MOD_AMBIDEXTRY_1,Ambidexterity I,COMBAT STYLES,Lvl 1+ ; one weapon in each hand equipped,CUSTOM — not present in the vanilla game,"Two-weapon combat: Atk -6/-6, +2 AC (baseline penalty without the feat: -6/-10 ; +2/0 with a balanced off-hand weapon)",,"[Mod D20-Overhaul]
 
-Effects: two-weapon combat: Atk -6/-6, +1 AC (baseline penalty without the feat: -6/-10 ; +2/0 with a balanced off-hand weapon)
-
-Born of the two-blade and twin-blaster disciplines of the Outer Rim, this training coordinates main hand and off hand to turn dual wielding into a true defensive wall."
-new (245+),MOD_AMBIDEXTRY_2,Ambidexterity II,COMBAT STYLES,Lvl 4+ ; Rank I + two weapons equipped (one per hand),CUSTOM — not present in the vanilla game,"Two-weapon combat: Atk -4/-4, +2 AC",,"[Mod D20-Overhaul]
-
-Effects: two-weapon combat: Atk -4/-4, +2 AC
+Effects: two-weapon combat: Atk -6/-6, +2 AC (baseline penalty without the feat: -6/-10 ; +2/0 with a balanced off-hand weapon)
 
 Born of the two-blade and twin-blaster disciplines of the Outer Rim, this training coordinates main hand and off hand to turn dual wielding into a true defensive wall."
-new (245+),MOD_AMBIDEXTRY_3,Ambidexterity III,COMBAT STYLES,Lvl 8+ ; Rank II + two weapons equipped ; all except Force classes (Guardian / Sentinel / non-Force prestige classes),CUSTOM — not present in the vanilla game,"Two-weapon combat: Atk -2/-2, +3 AC",,"[Mod D20-Overhaul]
+new (245+),MOD_AMBIDEXTRY_2,Ambidexterity II,COMBAT STYLES,Lvl 4+ ; Rank I + two weapons equipped (one per hand),CUSTOM — not present in the vanilla game,"Two-weapon combat: Atk -4/-4, +4 AC",,"[Mod D20-Overhaul]
 
-Effects: two-weapon combat: Atk -2/-2, +3 AC
+Effects: two-weapon combat: Atk -4/-4, +4 AC
+
+Born of the two-blade and twin-blaster disciplines of the Outer Rim, this training coordinates main hand and off hand to turn dual wielding into a true defensive wall."
+new (245+),MOD_AMBIDEXTRY_3,Ambidexterity III,COMBAT STYLES,Lvl 8+ ; Rank II + two weapons equipped ; all except Force classes (Guardian / Sentinel / non-Force prestige classes),CUSTOM — not present in the vanilla game,"Two-weapon combat: Atk -2/-2, +6 AC",,"[Mod D20-Overhaul]
+
+Effects: two-weapon combat: Atk -2/-2, +6 AC
 
 Born of the two-blade and twin-blaster disciplines of the Outer Rim, this training coordinates main hand and off hand to turn dual wielding into a true defensive wall."
 new (245+),MOD_HEAVY_WEAPON_1,Heavy Weapon Handling I,COMBAT STYLES,Lvl 1+ ; two-handed (2H) weapon equipped,CUSTOM — not present in the vanilla game,+1 Attack ; melee damage 215% STR ; ranged damage 165% DEX (modded baseline: 200% STR / 150% DEX),,"[Mod D20-Overhaul]

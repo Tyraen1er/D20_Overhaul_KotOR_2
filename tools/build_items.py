@@ -346,13 +346,13 @@ def norm(s: str) -> str:
     return re.sub(r"\s+", " ", s.lower()).strip()
 
 
-def set_uti_desc(uti, desc_txt: str) -> None:
-    """Injecte une description VF (depuis `Description (mod)` des CSV) dans un UTI."""
+def set_uti_desc(uti, desc_txt: str, desc_en: str | None = None) -> None:
+    """Injecte une description VF (et EN si fournie) dans un UTI."""
     if not desc_txt:
         return
     ls = LocalizedString.from_invalid()
     ls.set_data(Language.FRENCH, Gender.MALE, desc_txt)
-    ls.set_data(Language.ENGLISH, Gender.MALE, desc_txt)
+    ls.set_data(Language.ENGLISH, Gender.MALE, desc_en if desc_en is not None else desc_txt)
     uti.description = ls
 
 
@@ -699,6 +699,8 @@ def build_gamorrean_1m_utis(inst: Installation) -> int:
 
     bi_table = read_2da(OVR_DIR / "baseitems.2da")
     tlk = read_tlk(OUT_DIR / "dialog.tlk")
+    en_tlk_path = ROOT / "_reference" / "autres_mods" / "Ultimate Balancing Mod" / "dialog.tlk"
+    en_tlk = read_tlk(en_tlk_path) if en_tlk_path.exists() else None
     fids: dict[str, int] = json.loads(FEAT_IDS_FILE.read_text(encoding="utf-8")) if FEAT_IDS_FILE.exists() else {}
     gam2_id = fids.get("MOD_GAMORREAN_2") or fids.get("MOD_GAMORRAN_2")
     assert gam2_id is not None, "MOD_GAMORREAN_2 absent de feat_ids.json"
@@ -759,14 +761,19 @@ def build_gamorrean_1m_utis(inst: Installation) -> int:
         idx += 1
         dst_rr = f"ov1m_{idx:03d}"
 
-        # Résoudre le nom VF d'origine pour ajouter " (1M)" lisiblement dans l'inventaire
-        orig_name = uti.name.get(Language.FRENCH, Gender.MALE) or uti.name.get(Language.ENGLISH, Gender.MALE)
-        if not orig_name and uti.name.stringref is not None and 0 <= uti.name.stringref < len(tlk):
-            orig_name = tlk.get(uti.name.stringref).text
-        if orig_name:
+        # Résoudre le nom VF et EN d'origine pour ajouter " (1M)" / " (1H)" lisiblement dans l'inventaire
+        orig_name_fr = uti.name.get(Language.FRENCH, Gender.MALE) or uti.name.get(Language.ENGLISH, Gender.MALE)
+        if not orig_name_fr and uti.name.stringref is not None and 0 <= uti.name.stringref < len(tlk):
+            orig_name_fr = tlk.get(uti.name.stringref).text
+        orig_name_en = uti.name.get(Language.ENGLISH, Gender.MALE)
+        if not orig_name_en and en_tlk is not None and uti.name.stringref is not None and 0 <= uti.name.stringref < len(en_tlk):
+            orig_name_en = re.sub(r"\{[^}]*\}", "", en_tlk.get(uti.name.stringref).text).strip()
+        if not orig_name_en:
+            orig_name_en = orig_name_fr
+        if orig_name_fr:
             ls_nm = LocalizedString.from_invalid()
-            ls_nm.set_data(Language.FRENCH, Gender.MALE, f"{orig_name} (1M)")
-            ls_nm.set_data(Language.ENGLISH, Gender.MALE, f"{orig_name} (1M)")
+            ls_nm.set_data(Language.FRENCH, Gender.MALE, f"{orig_name_fr} (1M)")
+            ls_nm.set_data(Language.ENGLISH, Gender.MALE, f"{orig_name_en} (1H)")
             uti.name = ls_nm
 
         uti.base_item = src_to_1m_bi[bi_lbl]
@@ -781,17 +788,27 @@ def build_gamorrean_1m_utis(inst: Installation) -> int:
             "Double_Bladed_Lightsaber", "Wookie_Warblade",
             "Repeating_Blaster", "Heavy_Repeating_Blaster",
         }:
-            orig_desc = uti.description.get(Language.FRENCH, Gender.MALE) or uti.description.get(Language.ENGLISH, Gender.MALE)
-            if not orig_desc and uti.description.stringref is not None and 0 <= uti.description.stringref < len(tlk):
-                orig_desc = tlk.get(uti.description.stringref).text
-            hc_note = (
+            orig_desc_fr = uti.description.get(Language.FRENCH, Gender.MALE) or uti.description.get(Language.ENGLISH, Gender.MALE)
+            if not orig_desc_fr and uti.description.stringref is not None and 0 <= uti.description.stringref < len(tlk):
+                orig_desc_fr = tlk.get(uti.description.stringref).text
+            orig_desc_en = uti.description.get(Language.ENGLISH, Gender.MALE)
+            if not orig_desc_en and en_tlk is not None and uti.description.stringref is not None and 0 <= uti.description.stringref < len(en_tlk):
+                orig_desc_en = re.sub(r"\{[^}]*\}", "", en_tlk.get(uti.description.stringref).text).strip()
+            hc_note_fr = (
                 "[Mod D20-Overhaul — Arme haute cadence (1M)]\n"
                 "En main principale (main droite), cette arme conserve +1 attaque supplémentaire par round "
                 "(plafond moteur +2 avec Vitesse de Force ou Tir d'Assaut III, sans malus de CA). "
                 "Équipée en main gauche, elle n'octroie pas d'attaque supplémentaire."
             )
-            full_desc = f"{orig_desc.rstrip()}\n\n{hc_note}" if orig_desc and orig_desc.strip() else hc_note
-            set_uti_desc(uti, full_desc)
+            hc_note_en = (
+                "[Mod D20-Overhaul — High-Rate Weapon (1H)]\n"
+                "When equipped in your main hand (right hand), this weapon retains +1 extra attack per round "
+                "(engine cap +2 with Force Speed or Assault Fire III, with no AC penalty). "
+                "When equipped in your off-hand, it grants no extra attack."
+            )
+            full_desc_fr = f"{orig_desc_fr.rstrip()}\n\n{hc_note_fr}" if orig_desc_fr and orig_desc_fr.strip() else hc_note_fr
+            full_desc_en = f"{orig_desc_en.rstrip()}\n\n{hc_note_en}" if orig_desc_en and orig_desc_en.strip() else hc_note_en
+            set_uti_desc(uti, full_desc_fr, full_desc_en)
 
         uti.resref.set_data(dst_rr)
         uti.tag = dst_rr
@@ -855,6 +872,19 @@ def build_gamorrean_adapter_item_and_dlg(inst: Installation) -> tuple[int, int, 
         "ATTENTION : retirez toujours les améliorations de votre arme à l'établi AVANT de la convertir "
         "(sinon elles seront définitivement perdues), puis remontez-les après conversion. "
         "Les armes converties en 1M requièrent le don Raffinement Gamorréen II pour être équipées.",
+        "[Mod D20-Overhaul]\n"
+        "The Gamorreans' insatiable appetite for warfare led them to cobble together this crude yet "
+        "indestructible field workbench, built to tune, strip down, and rebalance any heavy armament "
+        "in the field, anywhere.\n\n"
+        "---\n"
+        "Instructions (Gamorrean Refinement II):\n"
+        "Infinitely reusable item, usable out of combat (from the HUD Stims slot or Inventory):\n"
+        "- Opens the portable upgrade workbench at any time, regardless of equipped weapon;\n"
+        "- Converts the two-handed (2H) or high-rate / double-bladed (D) weapon held in your main hand "
+        "(melee or ranged) into its one-handed (1H) version, and vice versa.\n\n"
+        "WARNING: Always remove all upgrades from your weapon at the workbench BEFORE converting it "
+        "(otherwise they will be permanently lost), then reinstall them afterward. "
+        "Weapons converted to 1H require the Gamorrean Refinement II feat to equip.",
     )
     write_uti(uti, OVR_DIR / "ov_gam_adapt.uti")
 
@@ -1358,7 +1388,9 @@ def build_craftable_base_weapons(inst: Installation) -> int:
             79,
             2,
             "Lame de guerre wookie",
+            "Wookiee Warblade",
             "[Mod D20-Overhaul]\nLame de guerre wookie de facture standard (arme double, 2 slots : Poignée + Lame).",
+            "[Mod D20-Overhaul]\nStandard-issue Wookiee warblade (double-bladed weapon, 2 slots: Grip + Edge).",
         ),
         (
             "w_brifle_17",
@@ -1366,11 +1398,13 @@ def build_craftable_base_weapons(inst: Installation) -> int:
             24,
             3,
             "Blaster lourd à répétition",
+            "Heavy Repeating Blaster",
             "[Mod D20-Overhaul]\nBlaster lourd à répétition de série (arme à répétition, 3 slots : Lunette + Pack + Chambrage).",
+            "[Mod D20-Overhaul]\nStandard-issue heavy repeating blaster (repeating weapon, 3 slots: Scope + Power Pack + Firing Chamber).",
         ),
     ]
     count = 0
-    for src_rr, dst_rr, bi_id, ulvl, name_fr, desc_fr in specs:
+    for src_rr, dst_rr, bi_id, ulvl, name_fr, name_en, desc_fr, desc_en in specs:
         res = inst.resource(src_rr, ResourceType.UTI, order=[SearchLocation.CHITIN]) or inst.resource(src_rr, ResourceType.UTI)
         if not res:
             continue
@@ -1384,9 +1418,9 @@ def build_craftable_base_weapons(inst: Installation) -> int:
         uti.tag = dst_rr
         ls_name = LocalizedString.from_invalid()
         ls_name.set_data(Language.FRENCH, Gender.MALE, name_fr)
-        ls_name.set_data(Language.ENGLISH, Gender.MALE, name_fr)
+        ls_name.set_data(Language.ENGLISH, Gender.MALE, name_en)
         uti.name = ls_name
-        set_uti_desc(uti, desc_fr)
+        set_uti_desc(uti, desc_fr, desc_en)
         write_uti(uti, OVR_DIR / f"{dst_rr}.uti")
         count += 1
     return count

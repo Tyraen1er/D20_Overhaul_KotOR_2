@@ -30,9 +30,9 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 
 | Famille de Classes | Gain de Pouvoirs | Total Pouvoirs (Niv. 30) | Gain de Dons | Total Dons (Niv. 30) | Identité |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Gardien / Maître d'Armes / Maraudeur Sith** | `1/3` niveaux (+2 Niv. 1) | **12** | `~2/3` niveaux + bonus | **22** | Maître Martial |
-| **Sentinelle / Jedi protecteur / Assassin Sith** | `1/2` niveaux | **16** | `~3/5` niveaux | **18** | Hybride Tactique |
-| **Consulaire / Maître Jedi / Seigneur Sith** | `4/5` niveaux | **24** | `1/2` niveaux | **15** | Archimage |
+| **Gardien / Maître d'Armes / Maraudeur Sith** | `1/3` niveaux (+2 Niv. 1) | **12** | `~2/3` niveaux + bonus | **22** | Maître Martial *(Ports d'armure Niv. 1 : Légère, Intermédiaire, Lourde)* |
+| **Sentinelle / Jedi protecteur / Assassin Sith** | `1/2` niveaux | **16** | `~3/5` niveaux | **18** | Hybride Tactique *(Ports d'armure Niv. 1 : Légère, Intermédiaire)* |
+| **Consulaire / Maître Jedi / Seigneur Sith** | `4/5` niveaux | **24** | `1/2` niveaux | **15** | Maître de la Force *(Port d'armure Niv. 1 : Légère)* |
 
 ### 2. Philosophie des Pouvoirs de la Force
 
@@ -85,7 +85,7 @@ Symétrie inverse calibrée sur le volume réel de pouvoirs utiles (révisée le
 | Posture | Base moddée | Rang I → III | Notes |
 | :--- | :--- | :--- | :--- |
 | **Duel** | Dégâts mêlée `150 % FOR` (règle moteur 1M, main gauche vide) ; **distance 1M `150 % DEX`** | `+2/+4/+6 Atq` et **plage de critique +1/+2/+3** | Prérequis : arme à une main **ou mains nues** ; la plage élargie augmente la fréquence des procs des Spé d'arme (proc = plage/20 par coup) |
-| **Ambidextrie** | Dégâts `100 % / 50 % FOR` (mêlée) ou **`100 % / 50 % DEX` (distance)** ; malus 2 armes `-6/-10` (`+2/0` si arme équilibrée en main gauche) | `-6/-6 & +1 CA` → `-4/-4 & +2 CA` → `-2/-2 & +3 CA` | Identité parade/CA ; malus de main gauche remonte mais l'attaque s'achète de la Défense |
+| **Ambidextrie** | Dégâts `100 % / 50 % FOR` (mêlée) ou **`100 % / 50 % DEX` (distance)** ; malus 2 armes `-6/-10` (`+2/0` si arme équilibrée en main gauche) | `-6/-6 & +2 CA` → `-4/-4 & +4 CA` → `-2/-2 & +6 CA` | Identité parade/CA ; malus de main gauche remonte mais l'attaque s'achète de la Défense |
 | **Arme Lourde (2M)** | Mêlée `200 % FOR` / distance `150 % DEX` | `+1/+2/+3 Atq` ; mêlée **`215→235→250 % FOR`** ; distance **`165→185→200 % DEX`** | Prérequis : arme à deux mains non double — mêlée **et** distance |
 | **Arme haute cadence** (ex « Arme Double & Repeating ») | Dégâts `150 % / 50 % FOR` (arme double mêlée) ou **`150 % / 50 % DEX` (répétition distance)**, malus moddé **`-5 CA`** (au lieu de `-6/-10 Atq`) ; **toutes les armes `HC` sont équilibrées (`balanced`)** | `+1/+1` & CA `-3` → `+2/+2` & `-2` → `+3/+3` & `-1` | Repeating et lourds à répétition partagent cette posture ; moteur : les repeating **ne sont pas** des armes doubles (`weaponwield 6 ≠ 3`) |
 
