@@ -30,21 +30,18 @@ from pathlib import Path
 from pykotor.resource.formats.tlk import read_tlk, write_tlk
 from pykotor.resource.formats.twoda import TwoDA, read_2da, write_2da
 
-ROOT = Path(__file__).resolve().parent.parent
-REF_2DA = ROOT / "_reference" / "2da"
-OUT_DIR = ROOT / "mods" / "overhaul"
-OVR_DIR = OUT_DIR / "Override"
-
-# Backup FR propre du dialog.tlk (TSLRCM)
-BASE_TLK = ROOT / "mods" / "04-engine-tests" / "backup" / "dialog.tlk.bak"
-if not BASE_TLK.exists():
-    BASE_TLK = ROOT / "mods" / "00-test-feat" / "backup" / "dialog.tlk.bak"
-
-CSV_FEATS = ROOT / "Kotor 2 - rééquilibrage - WIP Feats.csv"
-CSV_WEAPONS = ROOT / "Kotor 2 - rééquilibrage - armes.csv"
-CSV_ARMORS = ROOT / "Kotor 2 - rééquilibrage - Armures.csv"
-CSV_POWERS = ROOT / "Kotor 2 - rééquilibrage - Spé Pouvoirs.csv"
-CSV_CRAFT = ROOT / "Kotor 2 - rééquilibrage - Craft.csv"
+from paths import (
+    BASE_TLK,
+    CSV_ARMORS,
+    CSV_CRAFT,
+    CSV_FEATS,
+    CSV_POWERS,
+    CSV_WEAPONS,
+    OUT_MOD as OUT_DIR,
+    OVR_DIR,
+    REF_2DA,
+    ROOT,
+)
 
 _CP1252_FALLBACKS = str.maketrans({
     "\u2192": "->",   # →

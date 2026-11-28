@@ -3,9 +3,12 @@ __pycache__/
 .venv/
 tools/KSE_353/
 
-# Sorties de build regenerables (tools/build_*.py) et bac a sable des tests moteur (Jalon 0)
+# Logs d'execution locaux (pykotor) et etat local du canevas Trieste
+logs/*.log
+.trieste-nests/
+
+# Sorties de build regenerables (tools/build_*.py)
 mods/overhaul/
-mods/04-engine-tests/
 
 # Artefacts d'execution de test de TSLPatcher dans installer/
 installer/backup/

@@ -22,10 +22,9 @@ from pykotor.resource.formats.tlk import read_tlk
 from pykotor.resource.formats.twoda import read_2da
 from pykotor.resource.type import ResourceType
 
+from paths import CSV_CRAFT as DST, CSV_UPGRADES as UPG_CSV, ROOT
+
 GAME = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
-ROOT = Path(__file__).resolve().parent.parent
-DST = ROOT / "Kotor 2 - rééquilibrage - Craft.csv"
-UPG_CSV = ROOT / "Kotor 2 - rééquilibrage - Améliorations.csv"
 
 SKILL_FR = {
     "0": "Informatique",

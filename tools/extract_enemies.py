@@ -21,10 +21,10 @@ from pykotor.resource.formats.tlk import read_tlk
 from pykotor.resource.formats.twoda import read_2da
 from pykotor.resource.type import ResourceType
 
+from paths import REF_ANALYSES_KOTOR as DATAS, ROOT, TABLEAU_ENNEMIS_MD
+
 GAME = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
-ROOT = Path(__file__).resolve().parent.parent
 CACHE = Path(r"C:\Users\emman\AppData\Local\Temp\opencode\itemdb")
-DATAS = ROOT / "datas_kotor"
 RT = ResourceType
 
 # dons défensifs -> catégorie d'analyse (labels feat.2da)
@@ -583,7 +583,7 @@ def phase3():
         "| :-- | :-- | :-- | :-- | :-- | :-- |",
     ]
     block = "\n".join(header + rows) + "\n"
-    target = ROOT / "equilibrage_ennemis.md"
+    target = TABLEAU_ENNEMIS_MD
     txt = target.read_text(encoding="utf-8")
     BEGIN = "<!-- TABLEAU_ENNEMIS_DEBUT -->"
     END = "<!-- TABLEAU_ENNEMIS_FIN -->"

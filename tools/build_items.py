@@ -34,24 +34,20 @@ from pykotor.resource.generics.utp import read_utp, write_utp
 from pykotor.resource.type import ResourceType
 import copy
 
-ROOT = Path(__file__).resolve().parent.parent
+from paths import (
+    CSV_FR_DIR,
+    CSV_UPGRADES,
+    GEAR_CSV_NAMES as GEAR_CSVS,
+    OUT_MOD as OUT_DIR,
+    OVR_DIR,
+    ROOT,
+)
+
 GAME_PATH = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
-OVR_DIR = ROOT / "mods" / "overhaul" / "Override"
-OUT_DIR = ROOT / "mods" / "overhaul"
 MIRROR_MAP_FILE = OUT_DIR / "baseitem_1m_map.json"
 FEAT_IDS_FILE = OUT_DIR / "feat_ids.json"
 SPELL_IDS_FILE = OUT_DIR / "spell_ids.json"
 GAM_SWAP_MAP_FILE = OUT_DIR / "gamorrean_swap_map.json"
-
-GEAR_CSVS = [
-    "Kotor 2 - rééquilibrage - Casques.csv",
-    "Kotor 2 - rééquilibrage - Implants.csv",
-    "Kotor 2 - rééquilibrage - Gants.csv",
-    "Kotor 2 - rééquilibrage - Ceintures.csv",
-    "Kotor 2 - rééquilibrage - Brassards.csv",
-    "Kotor 2 - rééquilibrage - Armures items.csv",
-]
-CSV_UPGRADES = ROOT / "Kotor 2 - rééquilibrage - Améliorations.csv"
 
 STAT_TO_SUB = {"FOR": 0, "DEX": 1, "CON": 2, "INT": 3, "SAG": 4, "CHA": 5}
 DMG_COST_MAP = {
@@ -472,7 +468,7 @@ def build_gear_utis(inst: Installation) -> tuple[int, int]:
     modified_items = 0
     tiered_armors = 0
     for fname in GEAR_CSVS:
-        path = ROOT / fname
+        path = CSV_FR_DIR / fname
         with open(path, encoding="utf-8-sig", newline="") as fh:
             rows = list(csv.reader(fh))
         h = {c.strip(): i for i, c in enumerate(rows[0])}

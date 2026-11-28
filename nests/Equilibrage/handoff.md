@@ -1,0 +1,11 @@
+# Handoff — Équilibrage
+
+## Session du 2026-11-28 — initialisation + réparation de l'encodage du rapport DPR (aucun CSV ni fichier du mod modifié)
+
+- Nest lu en entier : 6 fichiers canoniques, `documentation.md`, les 4 fiches de `documentation/` et `content/dpr_review_2026-11-26.md`. `inbox.md` et `choices.md` vides ; `plan.md` sans chantier (v1.0 publiée).
+- Vérifié : les 12 CSV de `csv/fr/` et les 4 outils (`dpr_check.py`, `dpr_data.json`, `dpr_review.py`, `k2balance.py`) sont présents ; les liens de `documentation.md` et des fiches sont valides.
+- **Fait à la demande de l'utilisateur** : `content/dpr_review_2026-11-26.md` converti en UTF-8 sans BOM, LF (16 472 → 8 164 octets, 71 lignes, contenu inchangé). Le fichier d'origine était de l'UTF-16 LE dont les accents étaient déjà corrompus (UTF-8 décodé en CP850) : réparé depuis le blob git (`HEAD:logs/dpr_review_2026-11-26.md`), le résultat est identique octet pour octet à la sortie `stdout` d'origine du simulateur. Piège consigné dans `documentation.md` ; la bonne manière de régénérer un rapport y est décrite (capture `stdout` en octets depuis Python).
+- **Observation non traitée** : le simulateur actuel ne diffère du rapport que sur les 6 lignes *Ambidextrie* (CA et TTD plus élevés de `+2/+3` CA, DPR/TTK identiques) — règle de posture modifiée après le 26/11. Le rapport est donc légèrement périmé sur la survie en *Ambidextrie* ; le bilan `22/35` et les 13 écarts sont inchangés. Rapport non regénéré (hors demande) : à proposer si l'utilisateur veut un rapport daté du jour.
+- **Question posée à l'utilisateur, sans décision prise** : 13 écarts au contrat (Early Ambidextrie / 2M / HC au-dessus, TTK jusqu'à 3,0 rds ; Late Duel / Ambidextrie / 2M en dessous, TTK jusqu'à 19,3 rds) alors que la case « cibles DPR/TTK respectées » d'`intent.md` est cochée et que `plan.md` dit « aucun chantier ». À trancher par l'utilisateur : écarts acceptés en v1.0, ou chantier à rouvrir ? Ne pas y toucher sans arbitrage.
+- Le « Contrat §9 » cité par le rapport et par `dpr_review.py` désigne la table de la section 1 de `documentation/contrat_mathematique.md`.
+- Dépôt en restructuration par `Organisateur` (dépôts de renommages en index, `tools/dpr_check.py` modifié non commité) : ne pas écraser ces changements.

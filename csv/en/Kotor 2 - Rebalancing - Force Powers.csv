@@ -1,0 +1,368 @@
+﻿Force Power (EN / FR),Max Armor Allowed,FP Cost (R1/R2/R3),Effects by Rank (Game Extract),Changes (Mod),Acquisition,Baseline Game Rule (No Feats),Description (Mod)
+"Force Aura / Force Shield / Force Armor (LS)
+Aura de Force / Bouclier de Force / Armure de Force",Robes only,15 / 25 / 35,"R1: +2 Defense and saves, 20 s
+R2: +4 Defense and saves, 20 s (Lvl 6)
+R3: +6 Defense and saves, 20 s (Lvl 12)",,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Robes only
+Force Point Cost: 15 / 25 / 35
+
+The Jedi surrounds their body with a protective field of Force that deflects attacks and strengthens their resistance.
+
+R1: +2 Defense and saves, 20 s R2: +4 Defense and saves, 20 s (Lvl 6) R3: +6 Defense and saves, 20 s (Lvl 12)"
+"Force Barrier / Improved / Master (LS)
+Barrière de Force / améliorée / de maître",Medium Armor,15 / 25 / 35,"R1: Physical DR 4 (slashing, bludgeoning, piercing), 30 s (Lvl 6)
+R2: Physical DR 8, 45 s (Lvl 9)
+R3: Physical DR 15, 60 s (Lvl 15)","Physical DR 4 / 8 / 12 (self only, 60 s)",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 15 / 25 / 35
+
+A dense kinetic barrier absorbs part of the energy of the impacts and blades directed against the caster.
+
+Physical DR 4 / 8 / 12 (self only, 60 s)"
+"Force Valor / Knight Valor / Master Valor (LS)
+Talent de Force / Talent de chevalier / Talent de maître",Light Armor,15 / 30 / 45,"R1: +2 physical attributes and saves, party, 20 s
+R2: +3 and Poison immunity, party, 20 s (Lvl 9)
+R3: +5 and Poison immunity, party, 20 s (Lvl 15)",+2 / +3 / +4 to all 6 attributes (party) + Poison immunity (R2/R3),Power selection,,"[Mod D20-Overhaul]
+Max Armor: Light Armor
+Force Point Cost: 15 / 30 / 45
+
+The living Force flows through the caster and their companions, simultaneously elevating their physical and mental abilities.
+
++2 / +3 / +4 to all 6 attributes (party) + Poison immunity (R2/R3)"
+"Cure / Heal / Master Heal (LS)
+Guérison / Soins améliorés / Soins de maître",Medium Armor,20 / 35 / 50,"R1: heals 5 VP + WIS mod + CHA mod + Level, party 15 m (Lvl 6)
+R2: 15 VP + mods, neutralizes Poison (Lvl 12)
+R3: 15 VP + mods + 2 × Level, neutralizes Poison and Stun (Lvl 18)",,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 20 / 35 / 50
+
+By channeling the Light Side, the Jedi speeds up cellular regeneration and closes the party's wounds.
+
+R1: heals 5 VP + WIS mod + CHA mod + Level, party 15 m (Lvl 6) R2: 15 VP + mods, neutralizes Poison (Lvl 12) R3: 15 VP + mods + 2 × Level, neutralizes Poison and Stun (Lvl 18)"
+"Revitalize / Improved / Master (LS)
+Revitalisation / améliorée / de maître",Medium Armor,35 / 50 / 65,"R1: revives the nearest ally with 5% of their max VP (Lvl 9)
+R2: revives all fallen allies, 5% (Lvl 15)
+R3: revives all fallen allies, 10% (Lvl 21)","10% rank 1 — the nearest party member
+20% rank 2 — the two nearest party members
+30% rank 3 — the entire party",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 35 / 50 / 65
+
+A wave of radiant energy calls fallen companions back to the fight and restores a share of their vitality.
+
+R1: 10% — the nearest party member R2: 20% — the two nearest party members R3: 30% — the entire party"
+"Stun / Stasis / Stasis Field (LS)
+Étourdissement / Stase / Champ de stase",Robes only,15 / 30 / 50,"R1: 1 target stunned 9 s (successful Fortitude save: slowed), DC 5 + Lvl + WIS + CHA
+R2: 1 target in stasis 12 s (Fortitude: slowed) (Lvl 9)
+R3: all enemies within 10 m of the target, 12 s (Lvl 15)",R3 (10 m radius): max duration raised to 36 s (6 rounds) with a Fortitude save each round at a decaying DC (-3 to the DC/round) to break free (if the initial save succeeds: slowed 12 s),Power selection,,"[Mod D20-Overhaul]
+Max Armor: Robes only
+Force Point Cost: 15 / 30 / 50
+
+The Jedi freezes their opponents' nervous systems in a stasis field that impedes all movement.
+
+R3 (10 m radius): max duration raised to 36 s (6 rounds) with a Fortitude save each round at a decaying DC (-3 to the DC/round) to break free (if the initial save succeeds: slowed 12 s)"
+"Stun Droid / Disable Droid / Destroy Droid (LS)
+Étourdissement / Désactivation / Destruction de droïde",Medium Armor,10 / 20 / 35,"R1: 1 droid immobilized 12 s, damage = Level (Fortitude: negates and half damage)
+R2: all droids within 5 m of the target, 12 s, damage = Level (Lvl 6)
+R3: all droids within 6 m, 1-6 damage/Level, 12 s, Fort half (Lvl 12)",,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 10 / 20 / 35
+
+A pulse of the Force disrupts internal circuits and overloads the processors of droid units.
+
+R1: 1 droid immobilized 12 s, damage = Level (Fortitude: negates and half damage) R2: all droids within 5 m of the target, 12 s, damage = Level (Lvl 6) R3: all droids within 6 m, 1d6 damage/Level, 12 s, Fort half (Lvl 12)"
+"Battle Precognition (LS)
+Prémonition du combat",Heavy Armor,0,Unique: adds the Wisdom modifier to Defense (passive),Replaced by +10% melee dodge (Echani reward),Quest,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 0
+
+An intuitive perception of enemy intentions guides the Jedi's guard in the thick of melee.
+
+Replaced by +10% melee dodge (Echani reward)"
+"Force Enlightenment (LS)
+Grâce du côté Lumineux",Medium Armor,50,"Unique: simultaneously activates Speed, Force Armor and Force Valor at the highest rank known, at reduced cost","Instant cast (cost 50 FP) ; casts the 3 buffs at the highest rank known (+1 armor tier at ultimate), with Speed capped at +1 attack/round when wearing armor (+2 attacks/round in Robes only)",Quest / max Light Side,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 50
+
+In a moment of absolute lucidity at the heart of the Force, the Exile awakens his highest Light Side protections all at once.
+
+Instant cast (cost 50 FP) ; casts the 3 buffs at the highest rank known, with Speed capped at +1 attack/round when wearing armor (+2 attacks/round in Robes only)"
+"Inspire Followers I-VI (LS)
+Inspiration des disciples I-VI",Heavy Armor,25 / 35 / 45,"R1: +1 Attack, Damage and Will (party, 45 s, excluding droids)
+R2: +2 (Jedi Master lvl 5)
+R3: +3 (lvl 9)
+R4: +4 (lvl 13)
+R5: +5 (lvl 17)
+R6: +6 (lvl 21)","Reworked into ""Echo of Bonds I–III"" (prestige levels 1/5/9): R1 (30 s) shares the Jedi Master's personal buffs with the nearest ally ; R2 (45 s) with the entire party ; R3 (60 s) personal buffs + healing (powers/medpacs/regen) shared with the entire party (no armor restriction on allies, like Kreia)",Prestige Jedi Master,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 25 / 35 / 45
+
+The void the Exile carries acts on the Force like a silent gravity: all who walk in his wake end up bound to him, captives of his echo. Where a predator would use it to drain them of their essence, the Exile reverses the polarity of those Bonds and turns his absence into a resonating chamber. Every protection, every discipline, even the healing of his own flesh echoes in those attached to him — not through the ordinary currents of the Force, but through the Bond itself, overcoming any armor restriction. Never once commanding, his mere existence becomes the measure of those who follow him.
+
+Effects: R1 (30 s) shares your personal buffs with the nearest ally ; R2 (45 s) with the entire party ; R3 (60 s) shares your personal buffs and your healing (powers, medpacs, regeneration) with the entire party, no armor restriction on your allies."
+"Affect Mind / Domination (neutre)
+Influence / Domination",Heavy Armor,0,"R1: extra persuasion options in dialogue (excluding droids)
+R2: Domination: strengthened version, resistance rare (Lvl 6)",,Dialogue,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 0
+
+A subtle inflection of the Force steers the thoughts of weak minds during exchanges.
+
+R1: extra persuasion options in dialogue (excluding droids) R2: Domination: strengthened version, resistance rare (Lvl 6)"
+"Battle Meditation / Improved / Master (neutre)
+Méditation de combat / améliorée / de maître",Medium Armor,25 / 35 / 50,"R1: party +2 Attack, Damage and Will + accelerated VP regen, 20 s (Lvl 6)
+R2: + enemies within 10 m: penalty (Will negates) (Lvl 12)
+R3: party +4; enemies within 15 m (Lvl 18)","R1: party +CHA mod (Atk, Dmg, Will + VP regen, uncapped) ; R2: adds a -CHA mod penalty to enemies within 10 m (Will negates) ; R3: +2 to both the bonus and the penalty, 15 m range (Will negates)",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 25 / 35 / 50
+
+A rare art of mental coordination that galvanizes allies' precision and morale while undermining the enemy's.
+
+R1: party +CHA mod (Atk, Dmg, Will + VP regen, uncapped) ; R2: adds a -CHA mod penalty to enemies within 10 m (Will negates) ; R3: +2 to both the bonus and the penalty, 15 m range (Will negates)"
+"Burst of Speed / Knight Speed / Master Speed (neutre)
+Pointe de vitesse / Vitesse de chevalier / Vitesse de maître",Robes only,15 / 30 / 45,"R1: movement speed ×2, +2 Defense, 36 s
+R2: +4 Defense and +1 attack/round (Lvl 9)
+R3: +4 Defense and +2 attacks/round (Lvl 15)",,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Robes only
+Force Point Cost: 15 / 30 / 45
+
+The Force quickens the Jedi's reflexes and speed far beyond normal biological limits.
+
+R1: movement speed ×2, +2 Defense, 36 s R2: +4 Defense and +1 attack/round (Lvl 9) R3: +4 Defense and +2 attacks/round (Lvl 15)"
+"Energy Resistance / Improved / Master (neutre)
+Résistance à l'énergie / améliorée / de maître",Medium Armor,15 / 25 / 35,"R1: DR 6 (energy, sonic, fire, cold, electrical), 120 s
+R2: DR 12 (Lvl 9)
+R3: DR 20, entire party (Lvl 17)","DR 4 / 8 / 12 (self only, 60 s ; no more party effect or Poison immunity)",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 15 / 25 / 35
+
+An energy veil dissipates heat, cold, blaster discharges, and sonic waves.
+
+DR 4 / 8 / 12 (self only, 60 s ; no more party effect or Poison immunity)"
+"Force Body / Improved / Master (neutre)
+Corps de Force / amélioré / de maître",Heavy Armor,0,"R1: costs paid 50% FP / 50% VP, 30 s
+R2: 40% / 40% (Lvl 9)
+R3: 30% / 30% (Lvl 15)",Costs paid 50/40/30% VP + +2 / +4 / +6 to the DC of powers usable in armor,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 0
+
+The practitioner draws directly on their own vitality to fuel their powers and heighten their grip.
+
+Costs paid 50/40/30% VP + +2 / +4 / +6 to the DC of powers usable in armor"
+"Force Deflection / Force Redirection (neutre)
+Parade grâce à la Force / Renvoi grâce à la Force",Heavy Armor,0,"R1: deflects blaster bolts without a lightsaber (permanent) (Lvl 6)
+R2: deflects and redirects bolts, +3 to deflection rolls (Lvl 12)",Parries/redirects without a lightsaber + +2 / +4 Defense vs ranged attacks,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 0
+
+The Force allows blaster bolts to be deflected bare-handed and enemy projectiles to be turned aside.
+
+Parries/redirects without a lightsaber + +2 / +4 Defense vs ranged attacks"
+"Force Push / Force Whirlwind / Force Wave (neutre)
+Poussée de Force / Tourbillon de Force / Vague de Force",Medium Armor,15 / 25 / 40,"R1: 1 target pushed back 5 m, knocked down, stunned 3 s, damage = Level (Reflex: no stun, half damage)
+R2: 1 target immobilized 12 s, damage 1/3 Level per 2 s (Reflex negates everything) (Lvl 9)
+R3: 15 m radius: enemies pushed back 5 m, knocked down, stunned 12 s, damage 1.5 × Level (Reflex: half and no stun) (Lvl 15)","R2 (Whirlwind, 1 target): a successful Reflex save still deals half immediate damage (1 × Lvl) instead of negating everything ; R3 (Force Wave) transformed into a 6 m radius AoE Whirlwind, 12 s duration, 1/3 Lvl every 2 s (total 2 × Lvl ; successful Reflex save: half immediate damage and not lifted)",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 15 / 25 / 40
+
+A telekinetic wave hurls opponents away or lifts them into an uncontrollable whirlwind.
+
+R2 (Whirlwind, 1 target): a successful Reflex save still deals half immediate damage (1 × Lvl) instead of negating everything ; R3 (Force Wave) transformed into a 6 m radius AoE Whirlwind, 12 s duration, 1/3 Lvl every 2 s (total 2 × Lvl ; successful Reflex save: half immediate damage and not lifted)"
+"Force Resistance / Force Immunity (neutre)
+Résistance à la Force / Immunité contre la Force",Heavy Armor,20 / 35,"R1: the attacker rolls 1d20 + their Level vs DC 10 + defender Level, otherwise no effect, 60 s (Lvl 9)
+R2: Immunity: DC 15 + Level (Lvl 15)",,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 20 / 35
+
+A mental and spiritual rampart raises a barrier against hostile Force powers.
+
+R1: the attacker rolls 1d20 + their Level vs DC 10 + defender Level, otherwise no effect, 60 s (Lvl 9) R2: Immunity: DC 15 + Level (Lvl 15)"
+"Force Suppression / Force Breach (neutre)
+Suppression de Force / Destruction de Force",Light Armor,20 / 35,"R1: dispels rank I-III effects on the target (Aura, Valor, Speed, Resistance…) (Lvl 9)
+R2: Force Breach: dispels all supportive effects (Lvl 15)",,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Light Armor
+Force Point Cost: 20 / 35
+
+A breaking gust dispels the Force protections and alterations active on the target.
+
+R1: dispels rank I-III effects on the target (Aura, Valor, Speed, Resistance…) (Lvl 9) R2: Force Breach: dispels all supportive effects (Lvl 15)"
+"Mind Trick / Confusion (neutre)
+Subterfuge / Confusion",Medium Armor,15 / 35,"R1: distracts a target 30 s (you pass unnoticed next to them)
+R2: Confusion: the target fights for you 30 s (Lvl 6, prestige class)",,Power selection (upgrade of Affect Mind),,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 15 / 35
+
+A mental fog blurs the opponent's perception until it turns them against their own allies.
+
+R1: distracts a target 30 s (you pass unnoticed next to them) R2: Confusion: the target fights for you 30 s (Lvl 6, prestige class)"
+"Throw Lightsaber / Advanced (neutre)
+Lancer de sabre laser / amélioré",Heavy Armor,15 / 30,"R1: 1 target at 5 m+, automatic hit, 1-6 damage / 2 Levels (lightsaber required)
+R2: chains up to 3 targets (5 m apart) (Lvl 9)","R1: auto-hit, 1d4/Lvl + Knockdown 1 round (Fort negates) ; R2: chains up to 3 targets, 1d4/Lvl + ignores DR",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 15 / 30
+
+Guided by the Force, the lightsaber traces a deadly arc at range before returning to its wielder's hand.
+
+R1: auto-hit, 1d4/Lvl + Knockdown 1 round (Fort negates) ; R2: chains up to 3 targets, 1d4/Lvl + ignores DR"
+"Beast Trick / Beast Confusion (neutre)
+Subterfuge contre les bêtes / Confusion des bêtes",Heavy Armor,10 / 20,"R1: distracts a ferocious beast 30 s
+R2: the beast fights for you 30 s (prestige class)",,Quest / Dialogue (Kreia on Dxun),,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 10 / 20
+
+The Jedi soothes or diverts the primal instinct of wild creatures.
+
+R1: distracts a ferocious beast 30 s R2: the beast fights for you 30 s (prestige class)"
+"Breath Control (neutre)
+Contrôle de la respiration",Heavy Armor,15,"Unique: immunity to Poison and toxic gases, 240 s",Passive: +4 to saving throws vs Poison (permanent) ; Active (15 FP): immunity to Poison and toxic gases for 240 s,Quest / Dialogue (Kreia before the Jekk'Jekk Tarr on Nar Shaddaa),,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 15
+
+Complete metabolic mastery neutralizes toxins and harmful gases within the body.
+
+Passive: +4 to saving throws vs Poison (permanent) ; Active (15 FP): immunity to Poison and toxic gases for 240 s"
+"Force Camouflage / Improved / Master (neutre)
+Camouflage par la Force / Science / Maîtrise du camouflage",Medium Armor,0,"R1: Stealth without a stealth generator (permanent)
+R2: +4 Stealth (Lvl 7)
+R3: +8 Stealth (Lvl 13)","Renamed ""Force Wraith I–III"" (Sith Assassin exclusive, prestige levels 1/5/9):
+R1: +4 Stealth + belt-free stealth + auto Stealth Run
+R2: +8 Stealth + ambush (from stealth) deals +2d6 damage and Stuns 1 round (Fort negates, DC 10 + Lvl + Attr)
+R3: +12 Stealth + each kill grants: next attack = confirmed critical (if delivered within 2 rounds / 12 s) and +25% dodge for 2 rounds (non-stacking, resettable)",Prestige Sith Assassin,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 0
+
+By its very nature as an open wound in the Force, the Exile is a blind spot in the weave that binds every living thing. Letting that void slip between himself and the world, he becomes a wraith in the eyes of Jedi and common mortals alike: no instinct heralds him, no generator is needed to erase his passing. Striking from that absence brutally stuns his prey; and each life he snuffs out deepens the echo of his void a little further, clouding his enemies' perception while his blade unerringly finds the next opening.
+
+Effects (Passive): R1: +4 Stealth, belt-free stealth and automatic Stealth Run. R2: +8 Stealth, any ambush from stealth deals +2d6 damage and Stuns for 1 round (Fort negates, DC 10 + Lvl + Attr). R3: +12 Stealth, each kill makes your next attack a confirmed critical (within 2 rounds / 12 s) and grants +25% dodge for 2 rounds (non-stacking, resettable)."
+"Force Sight (neutre)
+Vision de Force",Heavy Armor,10,"Unique: sees through some obstacles, detects beings and camouflage (permanent)",,Quest / Dialogue (Visas Marr with high influence),,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 10
+
+Sight through the Force reveals the alignment and presence of living beings beyond obstacles.
+
+Unique: sees through some obstacles, detects beings and camouflage (permanent)"
+"Precognition (neutre)
+Prémonition",Heavy Armor,0,"Unique: alerts the Jedi to imminent great danger (contextual, passive)",,Quest / Dialogue (main story with Kreia),,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 0
+
+Flashes of prescience warn the bearer of imminent dangers.
+
+Unique: alerts the Jedi to imminent great danger (contextual, passive)"
+"Drain Force / Improved / Master (DS)
+Absorption de Force / améliorée / de maître",Heavy Armor,5 / 10 / 15,"R1: 1 target loses 10 FP, recovered by the Jedi (Will half)
+R2: 20 FP (Lvl 9)
+R3: 10 m radius: all enemies lose 30 FP (Lvl 15)",Drains 15 / 30 / 45 + Level FP and deals half as direct damage to Force users,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 5 / 10 / 15
+
+The Dark Side tears the spiritual energy from opponents to refill the caster's reserve.
+
+Drains 15 / 30 / 45 + Level FP and deals half as direct damage to Force users"
+"Drain Life / Death Field / Death Feast (DS)
+Absorption de vie / Champ de mort / Festin de mort",Robes only,20 / 40 / 55,"R1: 1 target: 1-4 VP / Level drained and heals the Jedi (Fort half) (Lvl 9)
+R2: Death Field: 10 m radius (Lvl 18)","R1 (Lvl 9, 1 target) & R2 (Lvl 15, 10 m radius): 1d3/Lvl uncapped, 100% of damage heals you (Fort half) ; R3 ""Death Feast"" (Lvl 18, 10 m radius): 1d3/Lvl, 100% of damage heals you + surplus beyond max VP converted into Temporary VP (EffectTemporaryHitpoints) for 24 s (non-stacking, refreshed on each cast ; Fort half)",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Robes only
+Force Point Cost: 20 / 40 / 55
+
+A dark siphon drains the life essence of living beings to heal the caster's wounds.
+
+R1 (Lvl 9, 1 target) & R2 (Lvl 15, 10 m radius): 1d3/Lvl uncapped, 100% of damage heals you (Fort half) ; R3 ""Death Feast"" (Lvl 18, 10 m radius): 1d3/Lvl, 100% of damage heals you + surplus beyond max VP converted into Temporary VP for 24 s (non-stacking, refreshed on each cast ; Fort half)"
+"Fear / Horror / Insanity (DS)
+Terreur / Horreur / Insanité",Light Armor,15 / 25 / 45,"R1: 1 target flees for 6 s (Will negates)
+R2: enemies within 5 m of the target frozen in terror 12 s (Lvl 6)
+R3: enemies within 10 m frozen in terror 18 s (Lvl 12)","No more action loss: mental DoT + heavy Attack penalty — R1 (1 target) -4 Atk, R2 (5 m) -6 Atk, R3 (10 m) -8 Atk + Level mental damage/round for 24 s (4 rounds) on a failed Will save ; reduced to 6 s (1 round) on a successful Will save",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Light Armor
+Force Point Cost: 15 / 25 / 45
+
+An icy terror seeps into the minds of opponents, gnawing at their psyche and unsettling their attacks.
+
+No more action loss: mental DoT + heavy Attack penalty — R1 (1 target) -4 Atk, R2 (5 m) -6 Atk, R3 (10 m) -8 Atk + Level mental damage/round for 24 s (4 rounds) on a failed Will save ; reduced to 6 s (1 round) on a successful Will save"
+"Force Scream / Improved / Master (DS)
+Cri de Force / amélioré / de maître",Light Armor,15 / 25 / 40,"R1: 3d6 sonic damage + -2 attributes, 10 m cone, 30 s (Will: half and negates the penalty, DC 10 + Lvl + WIS + CHA)
+R2: 5d6 + -4 attributes (Lvl 9)
+R3: 7d6 + -6 attributes (Lvl 15)",R1: 1d3/Lvl (-2 attributes) ; R2: 1d4/Lvl (-4 attributes) ; R3: 1d4/Lvl uncapped (-6 attributes) ; Will: half damage and negates the penalty,Power selection,,"[Mod D20-Overhaul]
+Max Armor: Light Armor
+Force Point Cost: 15 / 25 / 40
+
+A scream charged with dark energy shakes the body and defenses of all nearby enemies.
+
+R1: 1d3/Lvl (-2 attributes) ; R2: 1d4/Lvl (-4 attributes) ; R3: 1d4/Lvl uncapped (-6 attributes) ; Will: half damage and negates the penalty"
+"Shock / Force Lightning / Force Storm (DS)
+Choc / Foudre / Tempête de Force",Robes only,15 / 30 / 50,"R1: 1 target: 1-6 damage / Level (Will half)
+R2: Lightning: 16 m cone, 1-6/Level, max 10-60 (Lvl 9)
+R3: Storm: 10 m radius + drains 1-6 FP / Level (Lvl 18)","1d6/Lvl uncapped at R3 (R1 single target, R2 cone, R3 10 m radius) ; removed the enemy FP drain ; saving throw changed from Will to Reflex (half damage, Total Evasion applies)",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Robes only
+Force Point Cost: 15 / 30 / 50
+
+Arcs of Dark Side lightning strike enemies down with ever-growing electrical violence.
+
+1d6/Lvl uncapped at R3 (R1 single target, R2 cone, R3 10 m radius) ; removed the enemy FP drain ; saving throw changed from Will to Reflex (half damage, Total Evasion applies)"
+"Slow / Affliction / Plague (DS)
+Lenteur / Affliction / Peste",Medium Armor,15 / 25 / 35,"R1: 1 partial action/round, -2 Defense, Attack, Damage and Reflex, 30 s (Will negates)
+R2: Affliction: -7 attributes (1 pt/3 s, 21 s) + slow (Fortitude DC 20) (Lvl 6)
+R3: Plague: -12 all attributes (1 pt/s, 12 s) + slow, unsaveable DC 100 (Lvl 12)","Disease (max duration 42 s, ticks every 6 s, spreads 5 m when the host dies): slow (-50% movement) + ½ Lvl damage/tick + penalty to all 6 attributes ; Fortitude save each tick to end the disease — R1: -3 attributes (normal DC) ; R2: -6 attributes (DC +4) ; R3: -9 attributes (DC +8)",Power selection,,"[Mod D20-Overhaul]
+Max Armor: Medium Armor
+Force Point Cost: 15 / 25 / 35
+
+An insidious corruption progressively weakens the target's body and spreads to nearby enemies.
+
+Disease (max duration 42 s, ticks every 6 s, spreads 5 m when the host dies): slow (-50% movement) + ½ Lvl damage/tick + penalty to all 6 attributes ; Fortitude save each tick to end the disease — R1: -3 attributes (normal DC) ; R2: -6 attributes (DC +4) ; R3: -9 attributes (DC +8)"
+"Wound / Choke / Kill (DS)
+Blessure / Etouffement / Mise à mort",Robes only,15 / 30 / 45,"R1: damage 2/3 Level per 2 s for 6 s (Fort negates)
+R2: Choke: target stunned 6 s + damage 2/3 Level per 2 s (Lvl 9)
+R3: Kill: target chokes 6 s and loses 50% of their max VP (Fortitude: damage reduced to Level, no choking) (Lvl 12)",Removed the 50% max VP loss ; R1: 1d4/Lvl (Fort half) ; R2: 1d6/Lvl + stun 6 s ; R3: 1d8/Lvl uncapped + stun 6 s (Fort half and negates stun),Power selection,,"[Mod D20-Overhaul]
+Max Armor: Robes only
+Force Point Cost: 15 / 30 / 45
+
+Dark telekinesis compresses the target's internal organs, inflicting paralyzing pain.
+
+Removed the 50% max VP loss ; R1: 1d4/Lvl (Fort half) ; R2: 1d6/Lvl + stun 6 s ; R3: 1d8/Lvl uncapped + stun 6 s (Fort half and negates stun)"
+"Crush Opposition I-VI (DS)
+Annihilation de l'opposition I-VI",Heavy Armor,25 / 35 / 45,"R1: -1 Attack and Will, enemies in 15 m radius, 45 s (Will negates)
+R2: -2 (Sith Lord lvl 5)
+R3: -3 (lvl 9)
+R4: -4 (lvl 13)
+R5: -5 (lvl 17)
+R6: -6 (lvl 21)","Renamed ""Force Rend I–III"" and standardized to R3 max (prestige levels 1/5/9): -2 / -4 / -6 Attack, Saves and Defense to enemies in a 15 m radius for 45 s (Will negates)",Prestige Sith Lord,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 25 / 35 / 45
+
+Even those who are blind to the Force lean on it with every heartbeat, like an invisible ground whose existence they never suspect. By ceasing to contain the echo of his own severance, the Exile projects the muffled reality of his void around him and briefly tears the weave that upholds the battlefield. Plunged into an absence they have never learned to endure, his enemies feel their instinct give way: their strikes lose their accuracy, their guard collapses, and their mind wavers. Only a will able to stand on its own can resist that silence.
+
+Effects (45 s, 15 m radius): inflicts -2 / -4 / -6 Attack, Saves and Defense (AC) on all enemies in range (Will negates)."
+"Force Crush (DS)
+Ecrasement de Force",Light Armor,60,"Unique: 1-10 pure damage / Level, most defenses ineffective (Fort half)",1d8/Lvl uncapped pure damage (ignores DR and elemental resistances) + immobilization 6 s (Fort half damage and negates immobilization),Quest / max Dark Side,,"[Mod D20-Overhaul]
+Max Armor: Light Armor
+Force Point Cost: 60
+
+The Exile focuses the full weight of his wound in the Force on a single opponent, crushing them through telekinesis and paralyzing them under relentless pressure.
+
+1d8/Lvl uncapped pure damage (ignores DR and elemental resistances) + immobilization 6 s (Fort half damage and negates immobilization)"
+"Fury / Improved / Master (DS)
+Fureur / améliorée / de maître",Heavy Armor,20 / 30 / 40,"R1: +2 STR, +1 VP/Level, +1 Fortitude and Will, immune to Stasis and Paralysis, kills feed Fury
+R2: +4 STR, +2 VP/Level, +2 Fort/Will (Marauder lvl 5)
+R3: +6 STR, +3 VP/Level, +3 Fort/Will (lvl 9)","Renamed ""Force Stigma I–III"" and standardized R1/R2/R3 (prestige levels 1/5/9, 30 s): +2/+4/+6 STR and DEX, immunity to Stasis/Paralysis, +1 attack/round from R1 (does not stack with Speed) ; cost -5% max VP/round (auto-stops at ≤ 25% max VP)",Prestige Sith Marauder,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 20 / 30 / 40
+
+Rather than containing the void that runs through him, the Exile deliberately parts its edges to turn his very being into a siphon. The depression he opens in the Force violently sucks in the energy around him — along with his own vital substance — converting it into raw vigor and speed, shattering on the way any stasis or snare that would freeze him in place. Unlike those whose hunger ends up possessing them, the Exile remains sovereign before the abyss: he accepts that the fissure gnaw at his flesh to snatch victory, and closes it himself before it can erase him.
+
+Effects (30 s): +2 / +4 / +6 STR and DEX, immunity to Stasis & Paralysis, +1 attack/round from R1 (does not stack with Speed) ; consumes -5% max VP per round (auto-stops at <= 25% VP)."
+"Force Scar I-III (LS)
+Cicatrice de Force I-III",Heavy Armor,20 / 30 / 40,(New prestige power — mirror of Sith Fury),"R1/R2/R3 (prestige levels 1/5/9, 30 s): heals +2% / +4% / +6% max VP per round + +1/+2/+3 to saves + immunity to Fear/Stun (R2) and Paralysis (R3)",Prestige Jedi Weapon Master,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 20 / 30 / 40
+
+The Force abhors the void: wherever the absence the Exile carries persists, its currents stream in endlessly, trying to fill it. By sealing his wound rather than drowning in it, the Exile turns that constant pressure into a living rampart. The flow that breaks against his inner silence closes his flesh with every moment, while the nothingness he masters swallows fear, shock, and paralysis before they reach his mind. He asks nothing of the Force: he compels even his own lack to preserve him.
+
+Effects (30 s): heals +2% / +4% / +6% max VP per round, +1 / +2 / +3 to all saves, immunity to Fear & Stun (R2) and Paralysis (R3)."
+"Unbound from the Force I-III (LS)
+Affranchi de la Force I-III",Heavy Armor,0,(New prestige passive — replaces Force Wraith for the Jedi Watchman),"Passive R1/R2/R3 (prestige levels 1/5/9, all armors): +1 per 8 combined ranks across 4 pairs — Attack (Computer Use+Security), Damage (Demolitions+Repair), AC (Awareness+Stealth), Saves (Persuade+Treat Injury) ; cap per axis +3 (R1) / +5 (R2) / +7 (R3) ; R2: +25% effectiveness of consumables (medpacs, grenades, mines, shields) ; R3: passive Force Resistance (15 + Level)",Prestige Jedi Watchman,,"[Mod D20-Overhaul]
+Max Armor: Heavy Armor
+Force Point Cost: 0
+
+Having survived the tearing away of the Force, the Exile is living proof that it is not life itself, but a crutch that withers those who abandon themselves to it. Rather than repair his severance, he raises it into sovereignty: by willfully withdrawing from the whisper that dictates the steps of Jedi and Sith alike, he restores full rigor to the lucid mind. Technique, observation, cunning, and the use of material tools become the direct extension of his fight; and as he renounces the invisible grip that binds the galaxy, the silence he keeps within ends up leaving the Force almost powerless to reach him.
+
+Effects (Passive, all armors): +1 per 8 combined ranks across 4 skill pairs — Attack (Computer Use+Security), Damage (Demolitions+Repair), AC (Awareness+Stealth), Saves (Persuade+Treat Injury) — cap +3 (R1) / +5 (R2) / +7 (R3). R2: +25% effectiveness of consumables (medpacs, grenades, mines, shields). R3: passive Force Resistance (15 + Level)."

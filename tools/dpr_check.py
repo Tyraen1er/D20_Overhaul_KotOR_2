@@ -55,11 +55,16 @@ from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from paths import (
+    CSV_CRAFT as DEFAULT_CRAFT_CSV,
+    CSV_FR_DIR,
+    CSV_POWERS as DEFAULT_POWERS_CSV,
+    CSV_UPGRADES as DEFAULT_UPGRADES_CSV,
+    ROOT,
+)
+
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
 DATA_FILE = HERE / "dpr_data.json"
-DEFAULT_UPGRADES_CSV = ROOT / "Kotor 2 - rééquilibrage - Améliorations.csv"
-DEFAULT_CRAFT_CSV = ROOT / "Kotor 2 - rééquilibrage - Craft.csv"
 
 ROMAN = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5}
 TIER_ORDER = {"sans": 0, "legere": 1, "moyenne": 2, "lourde": 3}
@@ -732,7 +737,9 @@ def reingest_gear(root: Path = ROOT) -> int:
     pools: dict[str, list[dict]] = {}
     total = 0
     for slot, fname in GEAR_CSVS:
-        path = root / fname
+        path = CSV_FR_DIR / fname
+        if not path.exists():
+            path = root / fname
         if not path.exists():
             continue
         items: list[dict] = []
@@ -1900,7 +1907,7 @@ def main() -> None:
     ap.add_argument("--list-weapons", action="store_true", help="Lister les armes et quitter")
     ap.add_argument("--reingest-upgrades", nargs="?", const=str(DEFAULT_UPGRADES_CSV), type=str,
                     help="Régénère upgrade_pools depuis le CSV Améliorations (chemin optionnel)")
-    ap.add_argument("--reingest-pouvoirs", nargs="?", const=str(ROOT / "Kotor 2 - rééquilibrage - Spé Pouvoirs.csv"), type=str,
+    ap.add_argument("--reingest-pouvoirs", nargs="?", const=str(DEFAULT_POWERS_CSV), type=str,
                     help="Resynchronise les armures max de force_buffs depuis le CSV Spé Pouvoirs")
     ap.add_argument("--reingest-gear", action="store_true",
                     help="Ingère les 6 CSV d'équipement (Casques/Implants/Gants/Ceintures/Brassards/Armures items) dans dpr_data.json")
@@ -1924,14 +1931,14 @@ def main() -> None:
     if args.reingest_upgrades is not None:
         path = Path(args.reingest_upgrades)
         if not path.is_absolute():
-            path = (ROOT / path.name) if not path.exists() else path
+            path = (CSV_FR_DIR / path.name) if not path.exists() else path
         n = reingest_upgrades(path)
         print(f"upgrade_pools régénérés ({n} objets) → {DATA_FILE}")
         return
     if args.reingest_pouvoirs is not None:
         path = Path(args.reingest_pouvoirs)
         if not path.is_absolute():
-            path = (ROOT / path.name) if not path.exists() else path
+            path = (CSV_FR_DIR / path.name) if not path.exists() else path
         for line in reingest_pouvoirs(path):
             print(f"  • {line}")
         print(f"force_buffs resynchronisés → {DATA_FILE}")

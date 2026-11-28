@@ -11,11 +11,10 @@ from pykotor.resource.formats.twoda import read_2da
 from pykotor.resource.generics.utc import read_utc
 from pykotor.resource.generics.uti import read_uti
 
-ROOT = Path(__file__).resolve().parent.parent
-MOD = ROOT / "mods" / "overhaul"
-OVR = MOD / "Override"
+from paths import BASE_TLK, INSTALLER_DIR, OUT_MOD as MOD, OVR_DIR as OVR, ROOT
+
 SRC = MOD / "src"
-TSL = ROOT / "installer" / "tslpatchdata"
+TSL = INSTALLER_DIR / "tslpatchdata"
 
 errors: list[str] = []
 passed: list[str] = []
@@ -147,12 +146,12 @@ for hrr, min_cv in [("w_blaste_03", 8), ("w_blaste_07", 8), ("g_w_hldoblstr002",
 ft = read_2da(OVR / "feat.2da")
 ft_by_lbl = {ft.get_row(i).get_string("label"): i for i in range(len(ft))}
 
-# Evasion selectable JWA/SAS/JSN(Visas) at Lv 15
+# Evasion selectable JWA/SAS/JSN(Visas) at Lv 15; its prerequisite sits in prereqfeat2, never prereqfeat1 (see R1 note below)
 r_ev = ft.get_row(125)
-check(r_ev.get_string("jwa_list") == "1" and r_ev.get_string("sas_list") == "1"
+check(r_ev.get_string("jwa_list") == "1" and r_ev.get_string("sas_list") == "1" and r_ev.get_string("jsn_list") == "1"
       and r_ev.get_string("mincharlevel") == "15"
-      and r_ev.get_string("prereqfeat1") == str(fids["MOD_PRESTIGE_HYBRID"]),
-      "FEAT_EVASION configured for JWA/SAS/Visas Lv15")
+      and r_ev.get_string("prereqfeat2") == str(fids["MOD_PRESTIGE_HYBRID"]) and r_ev.get_string("prereqfeat1") == "",
+      "FEAT_EVASION configured for JWA/SAS/Visas Lv15 (prereq MOD_PRESTIGE_HYBRID in prereqfeat2)")
 
 # Unbound Force auto-granted 1/5/9
 for i, lvl in enumerate(("1", "5", "9"), 1):
@@ -160,12 +159,24 @@ for i, lvl in enumerate(("1", "5", "9"), 1):
     check(r.get_string("jwa_list") == "4" and r.get_string("jwa_granted") == lvl,
           f"MOD_UNBOUND_FORCE_{i}: auto-granted jwa_granted={r.get_string('jwa_granted')}")
 
-# R1 prereqs & Droid/Laser gating
-check(ft.get_row(fids["MOD_ARMOR_LIGHT_1"]).get_string("prereqfeat1") == "5", "MOD_ARMOR_LIGHT_1 prereq=5")
-check(ft.get_row(fids["MOD_ARMOR_MED_1"]).get_string("prereqfeat1") == "6", "MOD_ARMOR_MED_1 prereq=6")
-check(ft.get_row(fids["MOD_ARMOR_HEAVY_1"]).get_string("prereqfeat1") == "4", "MOD_ARMOR_HEAVY_1 prereq=4")
-check(ft.get_row(fids["MOD_SPEC_LASER_1"]).get_string("prereqfeat1") == "43", "MOD_SPEC_LASER_1 prereq=43")
-check(ft.get_row(fids["MOD_SPEC_BLUNT_1"]).get_string("prereqfeat1") == "44", "MOD_SPEC_BLUNT_1 prereq=44")
+# R1 prereqs (armor & weapon proficiencies) live in prereqfeat2, NEVER in prereqfeat1: the KotOR 2 level-up GUI
+# uses prereqfeat1 to group the ranks of a feat on a single line (vanilla convention: SUPER_WEAPON_FOCUS_LIGHTSABER_I,
+# PRECISE_SHOT_IV), so an external prerequisite there conflicts with the vanilla GUI (commit 40416c6).
+r1_prereq = {
+    "MOD_ARMOR_LIGHT_1": "5",   # ARMOUR_PROF_LIGHT
+    "MOD_ARMOR_MED_1": "6",     # ARMOUR_PROF_MEDIUM
+    "MOD_ARMOR_HEAVY_1": "4",   # ARMOUR_PROF_HEAVY
+    "MOD_SPEC_BLUNT_1": "44",   # WEAPON_PROF_MELEE_WEAPONS
+    "MOD_SPEC_PRIM_1": "44",    # WEAPON_PROF_MELEE_WEAPONS
+    "MOD_SPEC_VIBRO_1": "44",   # WEAPON_PROF_MELEE_WEAPONS
+    "MOD_SPEC_LASER_1": "43",   # WEAPON_PROF_LIGHTSABER
+}
+for lbl, exp in r1_prereq.items():
+    r = ft.get_row(fids[lbl])
+    check(r.get_string("prereqfeat2") == exp and r.get_string("prereqfeat1") == "",
+          f"{lbl} prereqfeat2={r.get_string('prereqfeat2')}({exp}), prereqfeat1={r.get_string('prereqfeat1')!r} (must stay empty)")
+
+# Droid/Laser gating
 check(ft.get_row(fids["MOD_SPEC_ASSAULT_1"]).get_string("orreqfeat0") == "39"
       and ft.get_row(fids["MOD_SPEC_ASSAULT_1"]).get_string("orreqfeat1") == "40", "MOD_SPEC_ASSAULT_1 orreq 39|40")
 
@@ -382,7 +393,7 @@ check("GetLocalBoolean(oPC, 21)" in core_txt,
 
 # Global zero-<Unrecognized Token> check across ALL added TLK strings & Override UTI/DLG/UTP
 import re
-base_tlk_len = len(read_tlk(ROOT / "mods" / "04-engine-tests" / "backup" / "dialog.tlk.bak"))
+base_tlk_len = len(read_tlk(BASE_TLK))
 bad_tlk_tokens = [i for i in range(base_tlk_len, len(tlk)) if re.search(r"<[^>]*>", tlk.get(i).text)]
 check(not bad_tlk_tokens, f"Zero <...> pseudo-tokens in all added TLK strings (bad={bad_tlk_tokens})")
 bad_cp1252_q = [i for i in range(base_tlk_len, len(tlk)) if re.search(r"(?:\s\?\s|\?\s*\d)", tlk.get(i).text)]

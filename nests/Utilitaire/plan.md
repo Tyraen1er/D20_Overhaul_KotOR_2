@@ -1,0 +1,10 @@
+# Plan — Utilitaire (Conversion & Respec `.exe`)
+
+1. Trancher avec l'utilisateur les choix d'amorçage : framework graphique [D1] et langue de l'interface [D2] (emplacement déjà acté par `Organisateur` : `tools/utilitaire/` avec le `.venv` commun).
+2. Monter le socle : package source, dépendances figées dans un fichier propre à l'outil, textes d'interface regroupés dans un seul fichier, fenêtre vide, puis build `PyInstaller --onefile --windowed` de contrôle pour valider la chaîne de packaging avant tout développement.
+3. Couche d'accès aux sauvegardes en lecture seule : détection du dossier des sauvegardes (`saves/` et `cloudsaves/<compte>/`, plus parcours manuel), lecture de `SAVEGAME.sav` / `PARTYTABLE.res` / `.utc` de l'Exilé et des compagnons, détection automatique du profil `Vanilla` ou `D20-Overhaul` ; valider sur des copies des sauvegardes locales l'aller-retour lecture/écriture à l'identique.
+4. Écriture sûre : backup complet horodaté automatique avant toute modification, puis enregistrement dans la sauvegarde.
+5. Moteur de règles d20 (`Vanilla` et `D20-Overhaul` lus dans les tables de l'installation du joueur) et algorithme de reconstruction déterministe niveau par niveau des choix déjà présents sur le personnage.
+6. Assistant de Respec pas-à-pas : sélection sauvegarde/personnage, puis niveau 1 à N avec pré-sélection et bouton `Multiclassage` libre.
+7. Conversions : `Vanilla -> D20-Overhaul` (retrait des dons supprimés par le mod, recalibrage des quotas, ouverture du respec en mode Overhaul) et `D20-Overhaul -> Vanilla` (retrait des dons et pouvoirs custom, des variables locales du mod, traitement des objets custom [D3]) ; définir avec l'utilisateur la portée du nettoyage (personnages choisis ou toutes les créatures de la sauvegarde).
+8. Constituer avec l'utilisateur un jeu de sauvegardes d'essai vanilla (TSLRCM) et Overhaul, tester sur l'Exilé et les compagnons, packager l'exécutable final et le transmettre à `Distribution` (avec sa notice relue par `Rédacteur-en-chef`).

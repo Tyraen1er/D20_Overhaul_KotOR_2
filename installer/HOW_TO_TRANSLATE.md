@@ -44,7 +44,7 @@ tslpatchdata/
    - `tslpatchdata/kreia_en.dlg` → `tslpatchdata/kreia_de.dlg`
    - `tslpatchdata/ov_gam_conv_en.dlg` → `tslpatchdata/ov_gam_conv_de.dlg`
 2. Open each `.dlg` in **Holocron Toolset** or **DLGEditor**:
-   - **`ov_gam_conv_de.dlg`**: translate the 3 Entries and 3 Replies (portable Gamorrean workbench menu).
+   - **`ov_gam_conv_de.dlg`**: translate the 3 Entries and 6 Replies (portable Gamorrean workbench menu).
    - **`kreia_de.dlg`**: translate only the custom entries/replies with `StrRef = -1` (the personal crystal stat-selection branch at the end of the dialogue). Leave all vanilla `StrRef` nodes untouched!
 3. Tip: Write your translated text into **both** your target language slot AND the `English (Male)` slot of each custom `LocalizedString`, so it displays properly even on English-base fan-translated installs.
 
@@ -79,7 +79,7 @@ Description=Installiert KotOR 2 D20 Overhaul auf Deutsch.
 ### Step 5 — (Optional) Translate `.uti` item descriptions
 If you also want to translate the ~304 custom equipment/upgrade descriptions:
 - Either add your language slot (`Language.GERMAN`, `SPANISH`, `ITALIAN`, `POLISH`) directly into the `.uti` files in `tslpatchdata/` using Holocron Toolset or a short `pykotor` script;
-- Or translate the CSV files in `english_csv/` and submit a Pull Request so the build script generates your language automatically!
+- Or translate the CSV files in `csv/en/` and submit a Pull Request so the build script generates your language automatically!
 
 ---
 

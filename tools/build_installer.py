@@ -34,20 +34,22 @@ from pykotor.resource.formats.twoda import read_2da
 from pykotor.resource.generics.dlg import read_dlg, write_dlg
 from pykotor.resource.generics.uti import read_uti, write_uti
 
-ROOT = Path(__file__).resolve().parent.parent
-BASE_TLK = ROOT / "mods" / "04-engine-tests" / "backup" / "dialog.tlk.bak"
-if not BASE_TLK.exists():
-    BASE_TLK = ROOT / "mods" / "00-test-feat" / "backup" / "dialog.tlk.bak"
+from build_overhaul import sanitize_tlk  # repli CP1252 (→, ↔, ≤, ≥, −) : le TLK EN est encode en Windows-1252
+from paths import (
+    BASE_TLK,
+    CSV_EN_DIR as EN_CSV_DIR,
+    CSV_POWERS,
+    DIST_DIR,
+    INSTALLER_DIR,
+    OUT_MOD,
+    OVR_DIR,
+    REF_2DA,
+    ROOT,
+)
 
-REF_2DA = ROOT / "_reference" / "2da"
-OUT_MOD = ROOT / "mods" / "overhaul"
-OVR_DIR = OUT_MOD / "Override"
 MOD_TLK = OUT_MOD / "dialog.tlk"
-EN_CSV_DIR = ROOT / "english_csv"
 
-INSTALLER_DIR = ROOT / "installer"
 TSL_DATA_DIR = INSTALLER_DIR / "tslpatchdata"
-DIST_DIR = ROOT / "dist"
 RELEASE_ZIP_NAME = "KotOR2_D20_Overhaul_v1.0.zip"
 PDF_GUIDES = [
     ROOT / "docs" / "KotOR2_D20_Overhaul_Guide_Joueur_FR.pdf",
@@ -268,7 +270,7 @@ def generate_info_rtf(lang: str = "fr") -> str:
             "rigorous d20 Star Wars Roleplaying Game (WotC) mathematical balance:\n\n"
             "1. FEATS & FORCE POWERS:\n"
             "  - 78 new d20 feats (Weapon family specializations, combat styles, attribute feats)\n"
-            "    and 5 new Force powers.\n"
+            "    and the 6 Prestige Class powers completely overhauled (including 2 brand-new powers).\n"
             "  - 33 redundant or unbalanced vanilla feats cleanly hidden.\n"
             "  - Rebalanced feat & power progression budgets (22/18/15 feats over 30 levels).\n\n"
             "2. WEAPONS, ARMOR & SHIELDS:\n"
@@ -301,7 +303,8 @@ def generate_info_rtf(lang: str = "fr") -> str:
             "une fidélité mathématique rigoureuse aux règles d20 Star Wars Roleplaying Game (WotC) :\n\n"
             "1. DONS & POUVOIRS :\n"
             "  - 78 nouveaux dons d20 (Familles d'armes Laser, Assaut, Lourdes, etc., Styles de combat,\n"
-            "    Dons de Caractéristiques rééquilibrés) et 5 nouveaux pouvoirs de Force.\n"
+            "    Dons de Caractéristiques rééquilibrés) et les 6 pouvoirs de classe de prestige entièrement\n"
+            "    refondus (avec 2 pouvoirs inédits).\n"
             "  - 33 dons redondants ou déséquilibrés masqués proprement.\n"
             "  - Progression des dons et pouvoirs réétalonnée (budgets 22/18/15 dons sur 30 niveaux).\n\n"
             "2. ARMES, ARMURES & BOUCLIERS :\n"
@@ -385,7 +388,7 @@ def build_append_tlks_and_map() -> tuple[TLK, TLK, dict[int, str], int]:
                         en_feat_by_id[int(fid_s)] = (name_en, desc_en)
 
     fr_to_en_spell_desc: dict[str, str] = {}
-    fr_pow_csv = ROOT / "Kotor 2 - rééquilibrage - Spé Pouvoirs.csv"
+    fr_pow_csv = CSV_POWERS
     en_pow_csv = EN_CSV_DIR / "Kotor 2 - Rebalancing - Force Powers.csv"
     if fr_pow_csv.exists() and en_pow_csv.exists():
         with open(fr_pow_csv, encoding="utf-8-sig", newline="") as f1, open(en_pow_csv, encoding="utf-8-sig", newline="") as f2:
@@ -430,7 +433,8 @@ def build_append_tlks_and_map() -> tuple[TLK, TLK, dict[int, str], int]:
         if not en_text:
             en_text = fr_text
             en_fallback_count += 1
-        append_en.add(en_text, voice)
+        # TLK EN encode en Windows-1252 : un symbole hors CP1252 (≤, ≥, →…) y deviendrait un « ? » en jeu.
+        append_en.add(sanitize_tlk(en_text), voice)
         strref_map[i] = f"StrRef{idx_append}"
 
     if en_fallback_count:

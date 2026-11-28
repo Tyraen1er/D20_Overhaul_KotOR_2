@@ -21,22 +21,17 @@ from pykotor.resource.formats.tlk import read_tlk
 from pykotor.resource.generics.uti import read_uti
 from pykotor.resource.type import ResourceType
 
-ROOT = Path(__file__).resolve().parent.parent
+from paths import (
+    CSV_FEATS as FEATS_CSV,
+    CSV_POWERS as POWERS_CSV,
+    CSV_UPGRADES as UPGRADES_CSV,
+    GEAR_CSVS,
+    ROOT,
+)
+
 GAME_PATH = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
 
 HEADER_TAG = "[Mod D20-Overhaul]"
-
-UPGRADES_CSV = ROOT / "Kotor 2 - rééquilibrage - Améliorations.csv"
-FEATS_CSV = ROOT / "Kotor 2 - rééquilibrage - WIP Feats.csv"
-POWERS_CSV = ROOT / "Kotor 2 - rééquilibrage - Spé Pouvoirs.csv"
-GEAR_CSVS = [
-    ROOT / "Kotor 2 - rééquilibrage - Casques.csv",
-    ROOT / "Kotor 2 - rééquilibrage - Implants.csv",
-    ROOT / "Kotor 2 - rééquilibrage - Gants.csv",
-    ROOT / "Kotor 2 - rééquilibrage - Ceintures.csv",
-    ROOT / "Kotor 2 - rééquilibrage - Brassards.csv",
-    ROOT / "Kotor 2 - rééquilibrage - Armures items.csv",
-]
 
 STAT_LINE_PREFIXES = (
     "spécial", "special", "bonus", "malus", "dégâts", "degats", "attaque",

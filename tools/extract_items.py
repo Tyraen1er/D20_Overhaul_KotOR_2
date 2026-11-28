@@ -24,10 +24,10 @@ from pykotor.resource.formats.twoda import read_2da
 from pykotor.resource.generics.uti import read_uti, UTI, UTIProperty
 from pykotor.resource.type import ResourceType
 
+from paths import REF_ANALYSES_KOTOR as DATAS, ROOT
+
 GAME = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Knights of the Old Republic II")
-ROOT = Path(__file__).resolve().parent.parent
 CACHE = Path(r"C:\Users\emman\AppData\Local\Temp\opencode\itemdb")
-DATAS = ROOT / "datas_kotor"
 
 TWO_DA_TABLES = [
     "itemprops", "itempropdef", "itemvalue", "iprp_amount", "iprp_abilities",
