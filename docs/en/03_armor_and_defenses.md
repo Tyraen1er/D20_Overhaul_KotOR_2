@@ -21,6 +21,8 @@ In vanilla KotOR 2, wearing armor as a Jedi was almost always a trap: it blocked
 
 > **No More Light Armor Exceptions:** **Armored Flight Suits (Ubese)** and **Zeison Sha / Jal Shey Armors** no longer bypass Force power restrictions as they did in vanilla — they now follow the exact same rules as all other Light Armors.
 
+> **Dancer's Outfit (`Slave_Outfit`):** this unarmored outfit has a unique exception — it applies your **Charisma (CHA) modifier** to AC instead of Dexterity *(when CHA > DEX)*, while allowing all Force powers.
+
 > **Droid Plating** (T3-M4, HK-47, G0-T0): unchanged from vanilla.
 
 ---

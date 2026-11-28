@@ -123,6 +123,7 @@ Dans le jeu de base, certains objets de fin de jeu donnaient des bonus démesur�
 | **Bure Jedi** | **Bure de Sylvar** | `RD Énergie/Obscur +15/-` → **`+5/-`** |
 | **Bure Jedi** | **Bure de Crado** | `FOR +6` → **`FOR +3`** |
 | **Bure Jedi** | **Bure de Nomi** | `SAG +4` → **`SAG +3`** |
+| **Sans armure** | **Tenue de danse** | **Exception :** bonus de CA basé sur le **`CHA`** plutôt que la `DEX` *(si `CHA > DEX`)* |
 
 
 ---

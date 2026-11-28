@@ -2,7 +2,7 @@
 -,Bures & Tenues (Sans armure),-,-,-,-,-,-,-,-,-
 85,Basic_Clothing (Vêtements de base),0,Illimité,Aucun,Sans armure,0,Aucun (0 slot),Tous,Inchangé,Aucun malus ; DEX illimitée ; tous les pouvoirs de Force autorisés
 103,Miner_Uniform (Tenue de mineur),1,Illimité,Aucun,Sans armure,0,Aucun (0 slot),Tous,Inchangé,Aucun malus ; DEX illimitée ; tous les pouvoirs de Force autorisés
-100,Slave_Outfit (Tenue de danseuse),0,Illimité,Aucun,Sans armure,0,Aucun (0 slot),Tous,Inchangé,Aucun malus ; DEX illimitée ; tous les pouvoirs de Force autorisés
+100,Slave_Outfit (Tenue de danseuse),0,Illimité,Aucun,Sans armure,0,Aucun (0 slot),Tous,"Exception : utilise le mod. de CHA à la place de la DEX pour la CA (si CHA > DEX)","Aucun malus ; bonus de CA basé sur le CHA plutôt que la DEX (si CHA > DEX) ; tous les pouvoirs de Force autorisés"
 35,Jedi_Robe (Bure Jedi),0,Illimité,Défense de Jedi I,Sans armure,0,Aucun (0 slot),Tous,Inchangé,Aucun malus ; DEX illimitée ; tous les pouvoirs de Force autorisés
 36,Jedi_Knight_Robe (Bure de Chevalier Jedi),0,Illimité,Aucun,Sans armure,0,Aucun (0 slot),Tous,Inchangé,Aucun malus ; DEX illimitée ; tous les pouvoirs de Force autorisés
 37,Jedi_Master_Robe (Bure de Maître Jedi),0,Illimité,Défense de Jedi I,Sans armure,0,Aucun (0 slot),Tous,Inchangé,Aucun malus ; DEX illimitée ; tous les pouvoirs de Force autorisés

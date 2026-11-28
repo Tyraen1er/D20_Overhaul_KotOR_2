@@ -2,7 +2,7 @@
 -,Robes & Clothing (Unarmored),-,-,-,-,-,-,-,-,-
 85,Basic_Clothing (Basic Clothing),0,Unlimited,None,Unarmored,0,None (0 slots),All,Unchanged,No penalty; unlimited DEX; all Force powers allowed
 103,Miner_Uniform (Miner Uniform),1,Unlimited,None,Unarmored,0,None (0 slots),All,Unchanged,No penalty; unlimited DEX; all Force powers allowed
-100,Slave_Outfit (Dancer Outfit),0,Unlimited,None,Unarmored,0,None (0 slots),All,Unchanged,No penalty; unlimited DEX; all Force powers allowed
+100,Slave_Outfit (Dancer Outfit),0,Unlimited,None,Unarmored,0,None (0 slots),All,"Exception: uses CHA mod. instead of DEX for AC (if CHA > DEX)","No penalty; AC bonus uses CHA rather than DEX (if CHA > DEX); all Force powers allowed"
 35,Jedi_Robe (Jedi Robe),0,Unlimited,Jedi Defense I,Unarmored,0,None (0 slots),All,Unchanged,No penalty; unlimited DEX; all Force powers allowed
 36,Jedi_Knight_Robe (Jedi Knight Robe),0,Unlimited,None,Unarmored,0,None (0 slots),All,Unchanged,No penalty; unlimited DEX; all Force powers allowed
 37,Jedi_Master_Robe (Jedi Master Robe),0,Unlimited,Jedi Defense I,Unarmored,0,None (0 slots),All,Unchanged,No penalty; unlimited DEX; all Force powers allowed

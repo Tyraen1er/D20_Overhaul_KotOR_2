@@ -171,6 +171,8 @@ Décisions actées (08/11/2026) — justifications dans [`decisions_annexes.md`]
 
 *Hiérarchie CA validée (25/11/2026)* : **Nue** : Légère (`19–20`) > Lourde (`11`) > Intermédiaire (`10`) · **En jeu (upgradée + dons + buffs)** : Légère (`+Esquive Bal.`) ≈ Bure *full buff* (*Armure +6, Vitesse +4, Talent +2*) > Intermédiaire upgradée (`+2 CA Sur-couche +2 DEX Flexible + Armure Tactique`) > Lourde (`RD 11/- + 30 % imm.`). Sans ses buffs temporaires, la Bure chute sous l'Intermédiaire upgradée (viabilité conditionnée aux buffs).
 
+*Exception — Tenue de danse (`Slave_Outfit` / `g_danceroutfit`, ID `100`)* : classée Sans armure (`0` CA de base, `0` RD, `0` slot, tous pouvoirs autorisés), son bonus de caractéristique à la CA utilise le **CHA plutôt que la DEX** (le meilleur des deux : `CHA` si `CHA > DEX`, à implémenter dans `Ov_RefreshPassives()`).
+
 *Note technique (17–24/11)* : `swkotor2.exe` limite en dur les armures à **1 slot sur-couche (`upgradetype 10`) + 1 slot sous-couche (`upgradetype 11`)** et vérifie linéairement `upgrade.UpgradeLevel <= item.UpgradeLevel` (`0x4cbcd0`). En plaçant les sous-couches légères à `1`, les sous-couches blindées à `2`, et **toutes les 30 sur-couches à `6`**, les armures légères (`1`) et lourdes (`2`) n'ont chacune accès qu'à 1 slot (Sous-couche, avec pool réduit sur Légère et complet sur Lourde), tandis que les armures intermédiaires (`6`) partagent le pool complet de sous-couches de la Lourde et détiennent l'exclusivité absolue des 30 sur-couches renforcées (sans aucun don requis).
 
 **B. Trois arbres de dons** (3 dons chacun, arbitrage du 17/11 — source : *WIP Feats.csv*) :

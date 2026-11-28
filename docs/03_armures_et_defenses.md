@@ -21,6 +21,8 @@ Le mod redéfinit **chaque type d'armure** autour d'un rôle précis, avec une *
 
 > **Fin des passe-droits sur les armures légères :** les **Combinaisons Ubese / de vol blindées** et les **Armures Zeison Sha / Jal Shey** ne bénéficient plus de leur passe-droit du jeu de base — elles suivent désormais exactement les mêmes restrictions de pouvoirs de la Force que toutes les autres armures légères.
 
+> **Tenue de danse (`Slave_Outfit`) :** cette tenue sans armure bénéficie d'une exception unique — elle applique le **modificateur de Charisme (CHA)** à la CA plutôt que la Dextérité *(si CHA > DEX)*, tout en autorisant tous les pouvoirs de la Force.
+
 > **Blindages Droïdes** (T3-M4, HK-47, G0-T0) : inchangés dans leur fonctionnement de base.
 
 ---

@@ -123,6 +123,7 @@ In vanilla KotOR 2, certain endgame items handed out inflated bonuses (`+5/+6` a
 | **Jedi Robe** | **Sylvar's Robe** | `Energy/Dark Side DR +15/-` → **`+5/-`** |
 | **Jedi Robe** | **Crado's Robe** | `STR +6` → **`STR +3`** |
 | **Jedi Robe** | **Nomi's Robe** | `WIS +4` → **`WIS +3`** |
+| **Unarmored** | **Dancer's Outfit** | **Exception:** AC bonus uses **`CHA`** instead of `DEX` *(if `CHA > DEX`)* |
 
 
 ---
